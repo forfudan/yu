@@ -6535,6 +6535,7 @@ anat	玄
 anat	亭台楼阁
 anat	楼台亭阁
 anat	⽞
+anat	
 anau	杭州市
 anau	桫椤
 anax	夜长梦多
@@ -37963,8 +37964,8 @@ dwwo	电脑包
 dwww	调出
 dwww	𪄞
 dwww	𬧺
-dwwy	閏臘月
 dwwy	閏四月
+dwwy	閏臘月
 dwwy	輣
 dwwy	𪂙
 dwxi	调转
@@ -54838,8 +54839,8 @@ fiqn	擦背
 fiqn	晋察冀
 fiqo	抄送
 fiqo	一类
-fiqo	一拳
 fiqo	一卷
+fiqo	一拳
 fiqo	一关
 fiqo	按类
 fiqp	开小差
@@ -68718,8 +68719,8 @@ gfeh	𮥶
 gfei	笑看风云
 gfej	観
 gfek	每一位
-gfek	第一代
 gfek	第一位
+gfek	第一代
 gfek	第一件事
 gfem	卸任
 gfem	䇘
@@ -90486,8 +90487,8 @@ iiaq	炎帝
 iiaq	炒楼
 iias	减字木兰花
 iias	𫸢
-iiat	𰻞𰻞麵
 iiat	𰻞𰻞麪
+iiat	𰻞𰻞麵
 iiay	𤑓
 iiay	𨟏
 iiba	𪹀
@@ -95194,8 +95195,8 @@ iref	客从何处来
 ireh	冷傲
 ireh	二伏
 ireh	𘱭
-irek	二位
 irek	二代
+irek	二位
 irek	二倍
 irel	密保
 irel	二段
@@ -109333,6 +109334,7 @@ jvv	𛄠
 jvv	ᅩ
 jvv	ㅗ
 jvv	𘮜
+jvv	
 jvv	
 jvva	环顾
 jvvc	璆
