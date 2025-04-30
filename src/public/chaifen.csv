@@ -11624,7 +11624,7 @@ char,division,division_tw,region
 梻,木亻弓,,CJK
 梽,木士心,,CJK
 棃,禾勹丿木,,CJK
-棄,亠厶卄未,七丶卄未,CJK
+棄,亠厶艹未,七丶艹未,CJK
 棅,木禾彐,,CJK
 棆,木人一,,CJK
 棇,木八厶心,,CJK
@@ -55272,7 +55272,7 @@ char,division,division_tw,region
 𦰦,艹己夊,,CJK-B
 𦰧,艹一厶木,,CJK-B
 𦰨,艹一日又,,CJK-B
-𦰩,卄一口夫,,CJK-B
+𦰩,艹口夫,,CJK-B
 𦰪,艹氵囗人,,CJK-B
 𦰫,艹氵尸匕,,CJK-B
 𦰬,艹白巾,,CJK-B
@@ -93165,7 +93165,7 @@ char,division,division_tw,region
 𱒅,口屮,,CJK-H
 𱒆,口一大,,CJK-H
 𱒇,口⺊了,,CJK-H
-𱒈,口日,,CJK-H
+𱒈,口曰,,CJK-H
 𱒉,口山乙,,CJK-H
 𱒊,口亻二,,CJK-H
 𱒋,乂乂口,,CJK-H
@@ -118845,6 +118845,8 @@ char,division,division_tw,region
 ,卄三,,宇浩字根
 ,土八,,宇浩字根
 ,丌,,宇浩字根
+,艹二,,宇浩字根
+,卄一口夫,,宇浩字根
 ,⺊,,宇浩字根
 ,,,宇浩字根
 ,丬,,宇浩字根
@@ -118929,6 +118931,7 @@ char,division,division_tw,region
 ,人一,,宇浩字根
 ,,,宇浩字根
 ,,,宇浩字根
+,爪冖,,宇浩字根
 ,,,宇浩字根
 ,,,宇浩字根
 ,,,宇浩字根
