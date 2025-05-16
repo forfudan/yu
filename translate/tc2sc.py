@@ -20,6 +20,7 @@ paths_of_docs = [
     "/docs/guji.md",
     "/docs/yuniversus.md",
     "/docs/light.md",
+    "/docs/sunmoon.md",
     "/docs/joy.md",
     "/docs/tianma.md",
     "/docs/yima.md",

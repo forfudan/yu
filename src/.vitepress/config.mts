@@ -117,6 +117,10 @@ export default defineConfig({
               link: '/docs/light',
             },
             {
+              text: '宇浩·日月',
+              link: '/docs/sunmoon',
+            },
+            {
               text: '卿云输入法',
               link: '/docs/joy',
             },
@@ -494,6 +498,10 @@ export default defineConfig({
                 {
                   text: '宇浩·光華',
                   link: '/zht/docs/light',
+                },
+                {
+                  text: '宇浩·日月',
+                  link: '/zht/docs/sunmoon',
                 },
                 {
                   text: '卿雲輸入法',
