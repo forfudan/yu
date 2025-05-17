@@ -87,30 +87,30 @@
 以下爲本方案的字根表，以供參考：
 
 ```md
-┌──────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ dama ┆ root                                                                                                                                                       │
-╞══════╪════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╡
-│ b    ┆ 亦Bi 馬Bma 示Bki 鹵Blu 虎Bhu 卜Bbu 爪Bsa 瓜Bga                                                                                                             │
-│ c    ┆ 來Cle 氵Cko 生Cke 禾Che 世Cki 女Cne 飛Cfo Co 乚Ci 乙Ci 癶Cbo 又Cu                                                                                         │
-│ d    ┆ 甲Dja 宀Dma ⺍Dxi 电Dda 钅Djo 长Dre 口Dke 〇Dli 己Dji 已Di 末Dmo 未Do 母Dmu 彑Dji 言Da                                                                     │
-│ f    ┆ 矢Fki 乃Fne 廴Fo 丿Fpe 𰀁Fka 鱼Fe 手Fke 壴Fsu 一Fi 牙Fa 匚Ffe 而Fo 面Fma 𠁁Fde Fo                                                                         │
-│ g    ┆ 扌Gke 革Gge 豕Gki 九Gju 儿Go 夭Gi 牛Gnu 疒Gbi 广Ggo Go 罒Go 皿Gmo 目Gmu 貝Gbo 頁Ge 麻Gma 鹿Glu                                                            │
-│ h    ┆ 其Hqi 田Hta 自Hzi 走Hze 𠂤Hdo 亥Hhe 辰Hre 忄Hxo 习Hxi 魚He 舟Hse 丁Hdi 下Hxa 乌Hu 鸟Hni 勹Hbi 冊Hce 冂Hji 止Hsi 齒Hri 贝Hbo 页He 門Hme 鬥Hde               │
-│ j    ┆ 𬺰Jo 丰Jfe 刀Jdi Jo 饣Jki 心Jxo 夕Jxi 見Jja 上Jke 巴Jba 巳Jsi 日Ji 曰Je 早Jzi 爿Jpa 片Jpa 鬼Jgo 甶Jfu 寸Jci                                               │
-│ k    ┆ 千Kqa 入Ke 里Kli 囗Ko 且Kqe 之Ksi 甫Kfu 丬Kqo 辛Kxo 三Ksa 八Kba 马Kma 纟Ksi 弓Kgi 古Kgu 凵Kka 屮Kci 戊Ku 戈Kge 弋Ki 彡Kka 彳Kri Ko 臼Kju 白Kbe 𦣞Ki 臣Kre │
-│ l    ┆ 向Lxo 干Lga 正Lse 幺Li 糸Lsi 非Lfo 曲Lqe 欠Lqa 匕Lbi 兀Lu 丨Lgi 小Lxi 辶Lro 穴Lxe 方Lfe 了Lle 亠Lte Lo 高Lgi 𣎆Llo 亡Lo 子Lzi 予Le 長Lre 髟Lbi            │
-│ m    ┆ 虫Mri 不Mbu 耳Mo 艮Mge 𠂇Mzo 𫝀Mu 丑Mre コMko 七Mqi 乜Mme 也Me 瓦Ma 工Mgi Mo 艹Mci 卅Msa 風Mfe                                                            │
-│ n    ┆ 壬No 足Nzu 厶Nsi 缶Nfe No 月Ne 亍Nru 丶Nda No 冖Nmi 丆Nre 厂Nre 巛Nri 川Nri                                                                              │
-│ p    ┆ 雨Pe 夫Pfu 大Pda 𡗗Pdi 犭Pqi 犬Pqi 豸Psi                                                                                                                   │
-│ q    ┆ 殳Qku 几Qji 卯Qmi 丱Qgi 丩Qju 𠂎Qo                                                                                                                         │
-│ r    ┆ 王Ro 门Rme 車Rre 黑Rho 㔾Rje 文Ri 身Rke 丌Rji 毛Rmi 石Rki 立Rli 鳥Rni 烏Ru                                                                                 │
-│ s    ┆ 丂Ski 尸Ski 至Ssi 户Shu So 舌Ske 用Si 二So So 冫So ⺀So 尤Su 尢So 隶Sli 彐Sji 肀Se 木Smu                                                                 │
-│ t    ┆ 皮Tpi 火Tho 尚Tke 巾Tjo 由Tu 十Tki 夂Tpu 攵Tpu 衤Ti To 𧘇To                                                                                               │
-│ v    ┆ 讠Va 业Ve 山Vka 见Vja 车Vre 米Vmi 乂Vi 士Vki Vo 土Vdu 耂Vli 龶Vke 斤Vjo 𠂆Vi 戶Vhu                                                                        │
-│ w    ┆ 力Wli 禺We 水Wko 申Wke 僉Wqa 合Whe 人Wo 亻Wo 隹Wco 咼Wga 骨Wgu                                                                                             │
-│ x    ┆ 金Xjo 食Xki 丷Xba 䒑Xci 羊Xo 𢆉Xo                                                                                                                          │
-│ y    ┆ 刂Ydi 灬Ybi 阝Yfu 气Yqi 竹Ysu 𠂉Yo 酉Yu 西Yxi                                                                                                              │
-└──────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌──────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ dama ┆ root                                                                                                                     │
+╞══════╪══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╡
+│ b    ┆ 亦i 馬ma 示ki 虎hu 卜bu 瓜ga 爪sa                                                                                        │
+│ c    ┆ 氵ko 女ne 來le 世ki 飛fo 乙i 又u 生ke 禾he                                                                               │
+│ d    ┆ 长re 钅jo 宀ma 口ke 已i 己ji 末mo 未o 母mu 甲ja 电da 言a                                                                 │
+│ f    ┆ 矢ki 丿pe 乃ne 廴o 手ke 一i 鱼e 匚fe 牙a 而o 面ma                                                                        │
+│ g    ┆ 夭i 革ge 牛nu 儿o 九ju 扌ke 豕ki 广go 疒bi 皿mo 頁e 目mu 貝bo 鹿lu 麻ma                                                  │
+│ h    ┆ 走ze 亥he 舟se 自zi 忄xo 其qi 辰re 丁di 下xa 鸟ni 乌u 勹bi 冊ce 冂ji 习xi 齒ri 止si 田ta 魚e 贝bo 页e 鬥de 門me          │
+│ j    ┆ 夕xi 丰fe 見ja 饣ki 心xo 刀di 上ke 寸ci 巴ba 巳si 日i 早zi 曰e 爿pa 片pa 鬼go                                            │
+│ k    ┆ 之si 辛xo 丬qo 纟si 里li 弓gi 马ma 甫fu 囗o 千qa 古gu 且qe 三sa 入e 八ba 屮ci 凵ka 戊u 弋i 戈ge 彳ri 彡ka 臼ju 白be 臣re │
+│ l    ┆ 幺i 穴xe 非fo 欠qa 向xo 匕bi 辶ro 糸si 丨gi 正se 干ga 兀u 小xi 曲qe 子zi 予e 了le 亠te 亡o 方fe 高gi 髟bi 長re           │
+│ m    ┆ 不bu 虫ri 耳o 艮ge 丑re 七qi 乜me 也e 瓦a 工gi 艹ci 卅sa 風fe                                                            │
+│ n    ┆ 亍ru 厶si 足zu 壬o 缶fe 月e 丶da 冖mi 厂re 川ri 巛ri                                                                     │
+│ p    ┆ 雨e 夫fu 大da 犬qi 豸si 犭qi                                                                                             │
+│ q    ┆ 几ji 殳ku 卯mi                                                                                                           │
+│ r    ┆ 立li 王o 丌ji 文i 身ke 毛mi 黑ho 门me 車re 石ki 鳥ni 烏u                                                                 │
+│ s    ┆ 用i 户hu 至si 尸ki 舌ke 二o 冫o 尢o 尤u 肀e 隶li 彐ji 木mu                                                               │
+│ t    ┆ 巾jo 火ho 由u 皮pi 尚ke 十ki 攵pu 夂pu 衤i                                                                               │
+│ v    ┆ 山ka 业e 米mi 讠a 见ja 车re 乂i 士ki 土du 戶hu 斤jo                                                                      │
+│ w    ┆ 水ko 力li 合he 人o 亻o 隹co 骨gu 申ke 禺e                                                                                │
+│ x    ┆ 羊o 食ki 金jo                                                                                                            │
+│ y    ┆ 阝fu 灬bi 刂di 竹su 气qi 西xi 酉u                                                                                        │
+└──────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ## 優缺點
@@ -121,7 +121,8 @@
 
 - 字根大碼隨機，初始學習難度較大，同鍵位字根之間的字形關係不強，難以進行相似字形聯想記憶。
 - 單字最高碼長爲五碼，碼長較長，不適合追求极致碼長的用户。
-- 本方案只專注於單字，不設詞庫。
+- 只專注於單字，不設詞庫。
+- 簡碼不是全碼的前綴。
 
 ### 優點
 
