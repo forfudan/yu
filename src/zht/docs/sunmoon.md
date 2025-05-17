@@ -106,7 +106,7 @@
 │ r    ┆ 王Ro 门Rme 車Rre 黑Rho 㔾Rje 文Ri 身Rke 丌Rji 毛Rmi 石Rki 立Rli 鳥Rni 烏Ru                                                                                 │
 │ s    ┆ 丂Ski 尸Ski 至Ssi 户Shu So 舌Ske 用Si 二So So 冫So ⺀So 尤Su 尢So 隶Sli 彐Sji 肀Se 木Smu                                                                 │
 │ t    ┆ 皮Tpi 火Tho 尚Tke 巾Tjo 由Tu 十Tki 夂Tpu 攵Tpu 衤Ti To 𧘇To                                                                                               │
-│ v    ┆ 讠Va 业Ve 山Vka 见Vja 车Vre 米Vmi 乂Vi 士Vki Vo 土Vtu 耂Vli 龶Vke 斤Vjo 𠂆Vi 戶Vhu                                                                        │
+│ v    ┆ 讠Va 业Ve 山Vka 见Vja 车Vre 米Vmi 乂Vi 士Vki Vo 土Vdu 耂Vli 龶Vke 斤Vjo 𠂆Vi 戶Vhu                                                                        │
 │ w    ┆ 力Wli 禺We 水Wko 申Wke 僉Wqa 合Whe 人Wo 亻Wo 隹Wco 咼Wga 骨Wgu                                                                                             │
 │ x    ┆ 金Xjo 食Xki 丷Xba 䒑Xci 羊Xo 𢆉Xo                                                                                                                          │
 │ y    ┆ 刂Ydi 灬Ybi 阝Yfu 气Yqi 竹Ysu 𠂉Yo 酉Yu 西Yxi                                                                                                              │

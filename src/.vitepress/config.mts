@@ -285,6 +285,15 @@ export default defineConfig({
           ]
         },
         {
+          text: '日月有常',
+          items: [
+            {
+              text: '日月字根',
+              link: '/practice/root_sunmoon'
+            },
+          ]
+        },
+        {
           text: '吉旦饼',
           items: [
             {
@@ -665,6 +674,15 @@ export default defineConfig({
                 {
                   text: '卿雲·作品高頻字',
                   link: '/zht/practice/char_joy_zhu'
+                },
+              ]
+            },
+            {
+              text: '日月有常',
+              items: [
+                {
+                  text: '日月字根',
+                  link: '/zht/practice/root_sunmoon'
                 },
               ]
             },
