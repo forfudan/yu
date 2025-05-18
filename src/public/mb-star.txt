@@ -37963,8 +37963,8 @@ dwwo	电脑包
 dwww	调出
 dwww	𪄞
 dwww	𬧺
-dwwy	閏臘月
 dwwy	閏四月
+dwwy	閏臘月
 dwwy	輣
 dwwy	𪂙
 dwxi	调转
@@ -42617,8 +42617,8 @@ ejej	做做
 ejej	𩑏
 ejek	何以
 ejek	但凡
-ejek	几位
 ejek	几倍
+ejek	几位
 ejek	几代
 ejek	几份
 ejek	作福作威
@@ -54837,8 +54837,8 @@ fiqn	擦背
 fiqn	晋察冀
 fiqo	抄送
 fiqo	一类
-fiqo	一卷
 fiqo	一拳
+fiqo	一卷
 fiqo	一关
 fiqo	按类
 fiqp	开小差
@@ -90484,8 +90484,8 @@ iiaq	炎帝
 iiaq	炒楼
 iias	减字木兰花
 iias	𫸢
-iiat	𰻞𰻞麵
 iiat	𰻞𰻞麪
+iiat	𰻞𰻞麵
 iiay	𤑓
 iiay	𨟏
 iiba	𪹀
@@ -156018,8 +156018,8 @@ ndfl	澳元
 ndfl	洉
 ndfl	𣾬
 ndfn	𤄝
-ndfo	皆反求诸己
 ndfo	灔
+ndfo	皆反求诸己
 ndfo	𣺣
 ndfo	𰜫
 ndfq	澧
@@ -156589,9 +156589,9 @@ nenn	没治
 neno	泥他沽酒拔金钗
 nenp	沿江
 nenq	疑信参半
+nens	淥
 nens	没有能力
 nens	洞在清溪何处边
-nens	淥
 nent	𪶠
 nenu	𥂖
 nenw	没能
