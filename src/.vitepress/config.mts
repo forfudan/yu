@@ -291,6 +291,10 @@ export default defineConfig({
               text: '日月字根',
               link: '/practice/root_sunmoon'
             },
+            {
+              text: '日月字根大码',
+              link: '/practice/root_sunmoon_dama'
+            },
           ]
         },
         {
@@ -683,6 +687,10 @@ export default defineConfig({
                 {
                   text: '日月字根',
                   link: '/zht/practice/root_sunmoon'
+                },
+                {
+                  text: '日月字根大碼',
+                  link: '/zht/practice/root_sunmoon_dama'
                 },
               ]
             },
