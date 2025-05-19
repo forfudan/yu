@@ -46,12 +46,12 @@ font,ma
 甲,dja
 电,dda
 言,da
-钅,djo
+金,djo
 丿,fpe
 乃,fne
 壴,fsu
 廴,fo
-矢,fki
+水,fko
 一,fi
 鱼,fe
 匚,ffe
@@ -60,6 +60,7 @@ font,ma
 龵,fke
 而,fo
 面,fma
+食,fki
 ,fo
 ,fo
 ,fo
@@ -114,14 +115,13 @@ font,ma
 田,hta
 贝,hbo
 页,he
-門,hme
-鬥,hde
 丰,jfe
 刀,jdi
 夕,jxi
 心,jxo
+矢,jki
 見,jja
-饣,jki
+门,jme
 ,jo
 丄,jke
 上,jke
@@ -151,6 +151,7 @@ font,ma
 甫,kfu
 辛,kxo
 里,kli
+饣,kki
 马,kma
 三,ksa
 且,kqe
@@ -275,7 +276,6 @@ font,ma
 石,rki
 立,rli
 身,rke
-门,rme
 黑,rho
 㔾,rje
 卩,rje
@@ -287,6 +287,8 @@ font,ma
 叀,rre
 車,rre
 ,rre
+門,rme
+鬥,rde
 丂,ski
 用,si
 至,ssi
@@ -337,7 +339,6 @@ font,ma
 戶,vhu
 斤,vjo
 力,wli
-水,wko
 人,wo
 僉,wqa
 合,whe
@@ -357,8 +358,7 @@ font,ma
 羊,xo
 ,xba
 ,xo
-金,xjo
-食,xki
+钅,xjo
 刂,ydi
 阝,yfu
 ⺮,ysu
