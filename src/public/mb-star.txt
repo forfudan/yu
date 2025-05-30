@@ -34522,8 +34522,8 @@ dlwn	𮬦
 dlwr	軦
 dlww	误删
 dlww	𪕾
-dlwy	閏三月
 dlwy	閏正月
+dlwy	閏三月
 dlwy	𦟲
 dlwy	𨌉
 dlwy	𫚼
@@ -42617,8 +42617,8 @@ ejej	做做
 ejej	𩑏
 ejek	何以
 ejek	但凡
-ejek	几倍
 ejek	几位
+ejek	几倍
 ejek	几代
 ejek	几份
 ejek	作福作威
@@ -95192,8 +95192,8 @@ iref	客从何处来
 ireh	冷傲
 ireh	二伏
 ireh	𘱭
-irek	二代
 irek	二位
+irek	二代
 irek	二倍
 irel	密保
 irel	二段
@@ -126128,22 +126128,22 @@ kkru	릪
 kkru	릫
 kkru	ruàn
 kkru	ruán
+kkru	ruì
+kkru	ruí
 kkru	ruān
+kkru	ruī
 kkru	ruǎn
+kkru	ruǐ
 kkru	rù
-kkru	rùi
 kkru	rùn
 kkru	rùo
 kkru	rú
-kkru	rúi
 kkru	rún
 kkru	rúo
 kkru	rū
-kkru	rūi
 kkru	rūn
 kkru	rūo
 kkru	rǔ
-kkru	rǔi
 kkru	rǔn
 kkru	rǔo
 kkru	🇷🇺
@@ -197732,8 +197732,8 @@ rwbg	人困马乏
 rwbk	𲌍
 rwby	𢝁
 rwc	惚
-rwcg	𡢣
 rwcj	𢝻
+rwck	𡢣
 rwcp	𢗘
 rwcp	𤬱
 rwcr	惚
@@ -230230,7 +230230,6 @@ vuwt	不收
 vuww	不出
 vuww	不期然而然
 vuww	磞
-vuww	𠩀
 vuxa	不怨
 vuxb	不争
 vuxb	不轻
@@ -230972,6 +230971,7 @@ vwwd	胃腺
 vwwh	𫩑
 vwwk	础
 vwwk	𠔱
+vwwk	𠩀
 vwwk	𠩉
 vwwk	𤱟
 vwwk	𩶌

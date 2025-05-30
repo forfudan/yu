@@ -1,5 +1,4 @@
 font,ma
-亦,bi
 ⺊,bbu
 卜,bbu
 虍,bhu
@@ -14,6 +13,7 @@ font,ma
 ,bma
 爪,bsa
 瓜,bga
+亦,bi
 示,bki
 世,cki
 來,cle
@@ -45,7 +45,7 @@ font,ma
 ,do
 ,do
 甲,dja
-电,dda
+电,ddi
 言,da
 金,djo
 丿,fpe
@@ -113,7 +113,7 @@ font,ma
 走,hze
 齒,hri
 龰,hsi
-田,hta
+田,hti
 贝,hbo
 页,he
 丰,jfe
@@ -145,7 +145,7 @@ font,ma
 ⺽,kju
 丬,kqo
 之,ksi
-千,kqa
+千,kqi
 古,kgu
 囗,ko
 弓,kgi
@@ -179,7 +179,7 @@ font,ma
 匕,lbi
 干,lga
 曲,lqe
-欠,lqa
+欠,lqi
 正,lse
 穴,lxe
 〢,lo
@@ -241,8 +241,8 @@ font,ma
 足,nzu
 ,no
 ,ne
-丶,nda
-乀,nda
+丶,ndi
+乀,ndi
 ⺈,nmi
 冖,nmi
 ,no
@@ -316,7 +316,7 @@ font,ma
 由,tu
 皮,tpi
 十,tki
-夊,tpu
+夊,tpe
 尚,tke
 龸,to
 衤,ti
@@ -341,7 +341,7 @@ font,ma
 斤,vjo
 力,wli
 人,wo
-僉,wqa
+僉,wqi
 合,whe
 ,wo
 ,wo
