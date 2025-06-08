@@ -30468,7 +30468,6 @@ ddgg	反反复复
 ddgg	认认真真
 ddgg	说说笑笑
 ddgg	诚诚恳恳
-ddgh	慧黠
 ddgi	牌
 ddgi	䡟
 ddgi	䰦
@@ -31100,7 +31099,6 @@ deiw	𮝥
 dej	讥
 dejc	䡄
 dejd	𠙋
-dejf	谁是
 dejf	𨵀
 dejl	谁知
 dejl	𨵅
@@ -37963,8 +37961,8 @@ dwwo	电脑包
 dwww	调出
 dwww	𪄞
 dwww	𬧺
-dwwy	閏四月
 dwwy	閏臘月
+dwwy	閏四月
 dwwy	輣
 dwwy	𪂙
 dwxi	调转
@@ -42617,8 +42615,8 @@ ejej	做做
 ejej	𩑏
 ejek	何以
 ejek	但凡
-ejek	几位
 ejek	几倍
+ejek	几位
 ejek	几代
 ejek	几份
 ejek	作福作威
@@ -54419,8 +54417,8 @@ figd	一筹
 figd	𭡮
 figf	热火朝天
 figg	𫼼
-figh	一篇
 figh	一等
+figh	一篇
 figh	擦黑
 figh	攩
 figi	抖
@@ -54837,8 +54835,8 @@ fiqn	擦背
 fiqn	晋察冀
 fiqo	抄送
 fiqo	一类
-fiqo	一拳
 fiqo	一卷
+fiqo	一拳
 fiqo	一关
 fiqo	按类
 fiqp	开小差
@@ -55480,8 +55478,8 @@ fjij	打爆
 fjij	无影灯
 fjij	看灯
 fjij	提灯
-fjik	看守
 fjik	打字
+fjik	看守
 fjik	打进
 fjik	按时完成
 fjil	打光
@@ -68716,8 +68714,8 @@ gfeh	𮥶
 gfei	笑看风云
 gfej	観
 gfek	每一位
-gfek	第一代
 gfek	第一位
+gfek	第一代
 gfek	第一件事
 gfem	卸任
 gfem	䇘
@@ -80213,6 +80211,7 @@ hk	城市
 hk	城镇
 hkab	越权
 hkae	教练机
+hkae	𠤶
 hkaf	赫本
 hkaf	教本
 hkag	培植
@@ -80247,7 +80246,6 @@ hkau	城市
 hkau	地级市
 hkaw	猛击
 hkaw	𡎭
-hkay	𠤶
 hkaz	𧺍
 hkba	城建
 hkba	肈
@@ -89090,7 +89088,6 @@ ifmk	宠辱
 ifml	宣和
 ifml	宣召
 ifml	𪸳
-ifmm	额手称庆
 ifmn	火烈鸟
 ifmq	完税
 ifmr	𠖾
@@ -90484,8 +90481,8 @@ iiaq	炎帝
 iiaq	炒楼
 iias	减字木兰花
 iias	𫸢
-iiat	𰻞𰻞麪
 iiat	𰻞𰻞麵
+iiat	𰻞𰻞麪
 iiay	𤑓
 iiay	𨟏
 iiba	𪹀
@@ -95209,7 +95206,6 @@ irev	𰍩
 irew	客心何事转凄然
 irew	𡧬
 irfa	密报
-irfa	完全一样
 irfa	凃
 irfa	𡨀
 irfa	𥥸
@@ -95218,7 +95214,6 @@ irfb	二五
 irfc	二两
 irfc	㷍
 irfc	𠗣
-irfd	完全一致
 irff	客从远方来
 irff	𡩃
 irfg	密技
@@ -173071,7 +173066,6 @@ oxdd	𫃧
 oxdd	𱍃
 oxdf	民兵
 oxdf	民丰
-oxdg	民计
 oxdi	𦁵
 oxdj	𰾌
 oxdk	民谚
@@ -224206,7 +224200,6 @@ vcdp	碘片
 vcdp	不得到辽西
 vcdq	不如说
 vcdq	不好说
-vcdw	不同的
 vcee	𮬙
 vceh	礭
 vcel	不同凡响
