@@ -24098,7 +24098,6 @@ ckcm	贼赃
 ckcn	霎
 ckcn	𡞘
 ckco	行乐须及春
-ckco	𭼾
 ckcr	奴颜媚骨
 ckcr	婚内
 ckcr	𭁮
@@ -29106,7 +29105,6 @@ cyaj	䨯
 cyaj	𭒜
 cyay	娜
 cybb	𭆬
-cybb	𮍍
 cybj	页眉
 cybj	𮗘
 cycp	𰋸
@@ -34239,6 +34237,7 @@ dlfl	反咬一口
 dlfl	卑鄙无耻
 dlfl	𪕀
 dlfo	误
+dlfo	𪡲
 dlfp	𪕣
 dlfs	𪔾
 dlfv	輺
@@ -34350,6 +34349,7 @@ dll	闆
 dlla	𬤨
 dllb	𪕚
 dllb	𭮼
+dllc	𪡢
 dlld	误听
 dlld	谁听呢喃语
 dlle	輯
@@ -34520,8 +34520,8 @@ dlwn	𮬦
 dlwr	軦
 dlww	误删
 dlww	𪕾
-dlwy	閏正月
 dlwy	閏三月
+dlwy	閏正月
 dlwy	𦟲
 dlwy	𨌉
 dlwy	𫚼
@@ -37961,8 +37961,8 @@ dwwo	电脑包
 dwww	调出
 dwww	𪄞
 dwww	𬧺
-dwwy	閏臘月
 dwwy	閏四月
+dwwy	閏臘月
 dwwy	輣
 dwwy	𪂙
 dwxi	调转
@@ -41291,7 +41291,6 @@ egln	𪝁
 egls	作别
 eglv	伤口
 eglv	𠱧
-eglw	什么叫
 egmb	伤痛
 egmb	作痛
 egmf	伤病
@@ -42615,8 +42614,8 @@ ejej	做做
 ejej	𩑏
 ejek	何以
 ejek	但凡
-ejek	几倍
 ejek	几位
+ejek	几倍
 ejek	几代
 ejek	几份
 ejek	作福作威
@@ -54417,8 +54416,8 @@ figd	一筹
 figd	𭡮
 figf	热火朝天
 figg	𫼼
-figh	一等
 figh	一篇
+figh	一等
 figh	擦黑
 figh	攩
 figi	抖
@@ -61539,7 +61538,6 @@ fsrf	手拿
 fsrf	开悟
 fsrf	描叙
 fsrg	手骨
-fsrg	𢹕
 fsrh	搭
 fsrh	开合
 fsrh	更加众志成城
@@ -61554,6 +61552,7 @@ fsrl	死节从来岂顾勋
 fsrp	抗药性
 fsrp	两面性
 fsrq	打草惊蛇
+fsrr	𢹕
 fsrs	㧫
 fsrs	𢺊
 fsrt	形骸
@@ -68038,7 +68037,6 @@ gcyh	南陵
 gcyi	南飞
 gcyi	南院
 gcyj	南阳
-gcyj	𮨈
 gcyq	𱂡
 gd	籍
 gd	籍贯
@@ -68714,8 +68712,8 @@ gfeh	𮥶
 gfei	笑看风云
 gfej	観
 gfek	每一位
-gfek	第一位
 gfek	第一代
+gfek	第一位
 gfek	第一件事
 gfem	卸任
 gfem	䇘
@@ -69229,7 +69227,6 @@ gglj	𥯔
 gglj	𪑴
 ggll	真真正正
 gglo	么么哒
-gglw	𠚟
 ggmr	十年磨剑
 ggmr	十年磨一剑
 ggms	筵席
@@ -73336,6 +73333,7 @@ gscn	𡜦
 gscn	𘔸
 gscn	𘔺
 gsco	𭑟
+gsco	𭼾
 gscr	协力同心
 gscs	𗏎
 gscs	𘔳
@@ -73570,6 +73568,7 @@ gskl	𪒯
 gskn	𗏕
 gskn	𗬟
 gskn	𗬠
+gskq	𭽁
 gskr	升入
 gsks	升为
 gsks	𗬚
@@ -74424,7 +74423,9 @@ guxx	𧖪
 guya	𨈏
 guyf	䘏
 guyg	𨈐
+guyi	𤋅
 guyi	𘡸
+guyj	𮨈
 guyk	𗢁
 guyl	怎敢
 guyl	𨈑
@@ -75099,7 +75100,6 @@ gyy	⼵
 gyy	𘯝
 gyy	
 gyy	
-gyyi	𤋅
 gyyk	𘮣
 gyyt	乞降
 gyyy	卖书
@@ -86338,7 +86338,6 @@ hymd	城隍庙
 hyna	𡍅
 hync	场长
 hyni	𡏈
-hynl	𫎷
 hynp	嘉陵江
 hynq	袁隆平
 hynu	邪淫
@@ -90481,8 +90480,8 @@ iiaq	炎帝
 iiaq	炒楼
 iias	减字木兰花
 iias	𫸢
-iiat	𰻞𰻞麵
 iiat	𰻞𰻞麪
+iiat	𰻞𰻞麵
 iiay	𤑓
 iiay	𨟏
 iiba	𪹀
@@ -95189,8 +95188,8 @@ iref	客从何处来
 ireh	冷傲
 ireh	二伏
 ireh	𘱭
-irek	二位
 irek	二代
+irek	二位
 irek	二倍
 irel	密保
 irel	二段
@@ -112082,7 +112081,6 @@ kdbs	𩛇
 kdbu	𪾗
 kdby	统计局
 kdbz	𪦺
-kdcb	𮍐
 kdcc	公诸同好
 kdcm	𮝉
 kdcr	事到如今
@@ -112309,6 +112307,7 @@ kdtu	公证处
 kdtu	𰬫
 kdub	餿
 kdub	𠭦
+kdub	𮍐
 kdui	事到临头
 kduj	绵
 kdun	𱷭
@@ -116810,6 +116809,7 @@ kkch	칰
 kkch	칱
 kkch	칲
 kkch	칳
+kkch	×
 kkch	÷
 kkch	Ĉ
 kkch	Χ
@@ -137036,7 +137036,6 @@ ldfl	㖃
 ldfl	𫩲
 ldfn	响指
 ldfo	𡅩
-ldfo	𪡲
 ldfq	听来
 ldfq	𡂛
 ldfr	三申五令
@@ -137127,7 +137126,6 @@ ldkx	𠲐
 ldky	听成
 ldkz	正电子
 ldlb	听取
-ldlc	𪡢
 ldld	听听
 ldld	噢噢
 ldle	𡁒
@@ -150461,6 +150459,7 @@ mlxq	𤶺
 mlxs	和解
 mlxs	鹿角
 mlxs	唇角
+mlxw	𠚟
 mlxx	𬓩
 mlxx	𱶃
 mly	邵
@@ -169592,7 +169591,6 @@ ojqo	奇美
 ojqo	𨙥
 ojqp	奇差
 ojqq	蠢
-ojqq	也知道
 ojqs	組
 ojqv	钉螺
 ojr	春
@@ -191865,7 +191863,6 @@ rfrf	愈来愈
 rfrf	斜斜
 rfrf	命途
 rfrg	忧愤
-rfrg	𠍘
 rfrh	愈合
 rfrh	𡉡
 rfri	恒心
@@ -192245,7 +192242,6 @@ rgkl	恨事
 rgkl	𢤝
 rgkm	骨盆
 rgko	悔过
-rgkq	𭽁
 rgks	必为
 rgku	𭟬
 rgkw	必纠
@@ -195041,6 +195037,7 @@ rnrk	𰑯
 rnrn	怦怦
 rnrp	合法性
 rnrq	怡悦
+rnrr	𠍘
 rnsa	惨杀
 rnse	氽
 rnse	𱥯
@@ -209679,10 +209676,8 @@ tcpj	釤
 tcpu	㣊
 tcpu	𭐝
 tcq	鋼
-tcqc	𮔇
 tcqe	妄断
 tcqi	妄自
-tcqm	𮇓
 tcqm	𮢪
 tcqo	𨪯
 tcqo	𰶮
@@ -211768,6 +211763,9 @@ tkcj	𨥇
 tkcn	𧱙
 tkcn	𨨧
 tkcp	𢒔
+tkcq	𮇓
+tkcq	𮔇
+tkct	𭽂
 tkde	𘱓
 tkdf	𬫣
 tkdg	𩳥
@@ -223589,6 +223587,7 @@ uyur	𡾯
 uyvd	旧书不厌百回读
 uyww	临阵脱逃
 uyyb	𮍌
+uyyb	𮍍
 uyyu	𭾆
 uyyu	𭾋
 uyyu	𭾏
@@ -239246,7 +239245,6 @@ xckm	负分
 xcks	七零八落
 xcks	负义
 xcks	七零八散
-xckt	𭽂
 xckv	七零八碎
 xckv	鱼肉乡里
 xckw	转败为胜
@@ -248738,6 +248736,7 @@ ynio	𢀾
 ynip	陆海空
 ynir	𠄘
 ynir	𠄪
+ynir	𫎷
 ynit	书法家
 yniu	𱀫
 ynje	𨻺

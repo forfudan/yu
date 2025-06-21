@@ -106,13 +106,13 @@
 
 本方案**全字集低重、繁简通打**，其关键数据如下：
 
-- GB2312 重码数 188
-- 国字常用字重码数 68
-- GBK 重码数 2608
-- 简体动态选重率 0.023%
-- 繁体动态选重率 0.035%
-- 繁简混合动态选重率 0.037%
-- 全码速度当量 1.249
+- GB2312 重码数 186
+- 国字常用字重码数 56
+- GBK 重码数 2658
+- 简体动态选重率 0.021%
+- 繁体动态选重率 0.032%
+- 繁简混合动态选重率 0.034%
+- 全码速度当量 1.239
 
 详见[《常见输入法重码数据》](./statistics.md)
 
@@ -132,62 +132,89 @@
 
 :::
 
-```md
-┌──────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ 大码 ┆ 字根                                                                                                                          │
-╞══════╪═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╡
-│ b    ┆ 虎hu 卜bu 鱼e 灬bi 马ma 爪sa 瓜ga 亦i 示ki                                                                                    │
-│ c    ┆ 世ki 女ne 氵ko 来le 乙i 乚i 飞fo 又u 生ke 禾he                                                                                │
-│ d    ┆ 宀ma 长re 口ke 已i 己ji 末mo 未o 母me 电di 甲ja 言a 金jo 皮pi                                                                 │
-│ f    ┆ 乃ne 廴o 水ko 丿pe 鱼e 一i 匚fe 丂ki 牙a 手ke 面ma 而o 食ki                                                                   │
-│ g    ┆ 九ju 扌ke 革ge 夭i 儿o 疒bi 鹿lu 麻ma 广go 牛nu 贝bo 页e 皿mo 目me 豕ki                                                       │
-│ h    ┆ 辰re 其qi 自zi 亥he 下xa 丁丅di 习xi 勹冂o 乌u 鸟ni 页e 贝bo 册ce 走ze 齿ri 止si 田ti                                         │
-│ j    ┆ 刀di 门me 丰fe 见ja 夕xi 矢ki 心忄xo 上ke 寸ci 巳si 巴ba 早zi 曰e 日i 片pa 爿pa 鬼go 舟se                                     │
-│ k    ┆ 辛xo 饣ki 甫fu 丬qo 弓gi 之si 马ma 里li 古gu 千qi 囗o 三sa 且qe 入e 八ba 凵ka 屮ci 戈ge 戊u 弋i 彳ri 彡ka 臼ju 白be 纟si 臣re │
-│ l    ┆ 曲qe 兀u 欠qi 干ga 匕bi 正se 穴xe 丨gi 非fo 子zi 予e 了le 高gi 方fe 亡o 亠te 向xo 小xi 糸si 幺i 辶ro 髟bi 长re                │
-│ m    ┆ 艮ge 耳o 不bu 丑re 七qi 乜me 也e 工gi 瓦a 艹ci 卅sa 虫ri 风fe 冖⺈mo                                                          │
-│ n    ┆ 足zu 缶fe 壬o 亍ru 厶si 丶di 厂丆re 巛ri 川ri 月e                                                                             │
-│ p    ┆ 雨e 大da 夫fu 犭qi 豸si 犬qi                                                                                                  │
-│ q    ┆ 几ji 殳ku 卯mi 丱gi 丩o                                                                                                       │
-│ r    ┆ 立li 黑ho 石ki 王o 丌ji 身ke 毛mi 文i 鸟ni 乌u 车re 门me 斗de                                                                 │
-│ s    ┆ 至si 用i 舌ke 二o 冫o 尢o 尤u 户hu 尸ki 隶li 肀e 彐ji 木me                                                                    │
-│ t    ┆ 皮pi 火ho 由u 巾jo 十ki 夂pe 攵pe 尚ke 衤i                                                                                    │
-│ v    ┆ 见ja 山ka 业e 米mi 讠a 车re 乂i 士ki 土du 斤jo 户hu                                                                           │
-│ w    ┆ 力li 合he 人o 隹co 亻o 骨gu 申ke 禺e                                                                                          │
-│ x    ┆ 䒑丷ci 羊o 钅jo                                                                                                               │
-│ y    ┆ 刂di 阝fu 竹su 气qi 西xi 酉u                                                                                                  │
-└──────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-```
+::: details 20250622 更新
+
+1. 丁下 -> K
+1. 呙骨 -> J
+1. 厂丆 -> K
+1. 臣 -> J
+1. 片爿 -> S
+1. 末未 -> B
+1. 甲电 -> F
+1. 廴 -> D
+1.  -> D ~ 口
+
+:::
+
+::: tip 字根表
+
+<!-- do not translate -->
+<div class="yuniversus">
+
+| 大碼 | 字根                                                                                                                                        |
+| :--- | :------------------------------------------------------------------------------------------------------------------------------------------ |
+| 上排 |                                                                                                                                             |
+| q    | 几ji 殳ku 卯mi 丱gi 丩o                                                                                                                     |
+| w    | 力li 合he 人亻o 隹co 申ke 禺e                                                                                                               |
+| r    | 立li 黑ho 石ki 王o 丌ji 身ke 毛mi 文i 鳥ni 烏u 車re 門me 鬥de                                                                               |
+| t    | 火ho 由u 巾jo 十ki 夂pe 攵pe 尚ke 衤i                                                                                                       |
+| y    | 刂di 阝fu 竹su 气qi 西xi 酉u                                                                                                                |
+| p    | 雨e 大da 夫fu 犭qi 豸si 犬qi                                                                                                                |
+| 中排 |                                                                                                                                             |
+| s    | 至si 用i 舌ke 二o 冫o 尢o 尤u 户hu 尸ki 隶li 肀e 彐ji 木me 片pe 爿pa                                                                        |
+| d    | 口ke o 宀ma 长re 已i 己ji 廴o 母me 言a 金jo 皮pi                                                                                           |
+| f    | 一i 匚fe 丂ki 牙a 丿pe 乃ne 手ke 水ko 电di 甲ja 鱼e 面ma 而o 食ki                                                                           |
+| g    | 九ju 扌ke 革ge 夭i 儿o 疒bi 鹿lu 麻ma 广go 牛nu 貝bo 頁e 皿mo 目me 豕ki                                                                     |
+| h    | 辰re 其qi 自zi 亥he 习xi 勹冂o 乌u 鸟ni 页e 贝bo 冊ce 走ze 齒ri 止si 田ti                                                                   |
+| j    | 刀di 门me 丰fe 見ja 夕xi 矢ki 心忄xo 上ke 寸ci 巳si 巴ba 臣re 早zi 曰e 日i 鬼go 舟se 骨gu 咼ga                                              |
+| k    | 辛xo 饣ki 甫fu 丬qo 弓gi 之si 马ma 里li 古gu 千qi 囗o 三sa 且qe 下xa 丁丅di 厂丆re 入e 八ba 凵ka 屮ci 戈ge 戊u 弋i 彳ri 彡ka 臼ju 白be 纟si |
+| l    | 曲qe 兀u 欠qi 干ga 匕bi 正se 穴xe 丨gi 非fo 子zi 予e 了le 高gi 方fe 亡o 亠te 向xo 小xi 糸si 幺i 辶ro 髟bi 長re                              |
+| 下排 |                                                                                                                                             |
+| x    | 䒑丷ci 羊o 钅jo                                                                                                                          |
+| c    | 世ki 女ne 氵ko 來le 乙i 乚i 飛fo 又u 生ke 禾he                                                                                              |
+| v    | 见je 山ka 业e 米mi 讠e 车re 乂i 士ki 土du 斤jo 戶hu                                                                                         |
+| b    | 虎hu 卜bu 魚e 灬bi 馬ma 爪sa 瓜ga 亦i 示ki 末mo 未o                                                                                         |
+| n    | 足zu 缶fe 壬o 亍ru 厶si 丶di 巛ri 川ri 月e                                                                                                  |
+| m    | 艮ge 耳o 不bu 丑re 七qi 乜me 也e 工gi 瓦a 艹ci 卅sa 虫ri 風fe 冖⺈mo                                                                         |
+
+</div>
+<!-- do not translate -->
+
+:::
+
+::: details 字根表(txt)
 
 ```md
-┌──────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ 大码 ┆ 字根                                                                                                                          │
-╞══════╪═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╡
-│ 上排 ┆                                                                                                                               │
-│ q    ┆ 几ji 殳ku 卯mi 丱gi 丩o                                                                                                       │
-│ w    ┆ 力li 合he 人o 隹co 亻o 骨gu 申ke 禺e                                                                                          │
-│ r    ┆ 立li 黑ho 石ki 王o 丌ji 身ke 毛mi 文i 鸟ni 乌u 车re 门me 斗de                                                                 │
-│ t    ┆ 火ho 由u 巾jo 十ki 夂pe 攵pe 尚ke 衤i                                                                                         │
-│ y    ┆ 刂di 阝fu 竹su 气qi 西xi 酉u                                                                                                  │
-│ p    ┆ 雨e 大da 夫fu 犭qi 豸si 犬qi                                                                                                  │
-│ 中排 ┆                                                                                                                               │
-│ s    ┆ 至si 用i 舌ke 二o 冫o 尢o 尤u 户hu 尸ki 隶li 肀e 彐ji 木me                                                                    │
-│ d    ┆ 宀ma 长re 口ke 已i 己ji 末mo 未o 母me 电di 甲ja 言a 金jo 皮pi                                                                 │
-│ f    ┆ 乃ne 廴o 水ko 丿pe 鱼e 一i 匚fe 丂ki 牙a 手ke 面ma 而o 食ki                                                                   │
-│ g    ┆ 九ju 扌ke 革ge 夭i 儿o 疒bi 鹿lu 麻ma 广go 牛nu 贝bo 页e 皿mo 目me 豕ki                                                       │
-│ h    ┆ 辰re 其qi 自zi 亥he 下xa 丁丅di 习xi 勹冂o 乌u 鸟ni 页e 贝bo 册ce 走ze 齿ri 止si 田ti                                         │
-│ j    ┆ 刀di 门me 丰fe 见ja 夕xi 矢ki 心忄xo 上ke 寸ci 巳si 巴ba 早zi 曰e 日i 片pa 爿pa 鬼go 舟se                                     │
-│ k    ┆ 辛xo 饣ki 甫fu 丬qo 弓gi 之si 马ma 里li 古gu 千qi 囗o 三sa 且qe 入e 八ba 凵ka 屮ci 戈ge 戊u 弋i 彳ri 彡ka 臼ju 白be 纟si 臣re │
-│ l    ┆ 曲qe 兀u 欠qi 干ga 匕bi 正se 穴xe 丨gi 非fo 子zi 予e 了le 高gi 方fe 亡o 亠te 向xo 小xi 糸si 幺i 辶ro 髟bi 长re                │
-│ 下排 ┆                                                                                                                               │
-│ x    ┆ 䒑丷ci 羊o 钅jo                                                                                                               │
-│ c    ┆ 世ki 女ne 氵ko 来le 乙i 乚i 飞fo 又u 生ke 禾he                                                                                │
-│ v    ┆ 见je 山ka 业e 米mi 讠e 车re 乂i 士ki 土du 斤jo 户hu                                                                           │
-│ b    ┆ 虎hu 卜bu 鱼e 灬bi 马ma 爪sa 瓜ga 亦i 示ki                                                                                    │
-│ n    ┆ 足zu 缶fe 壬o 亍ru 厶si 丶di 厂丆re 巛ri 川ri 月e                                                                             │
-│ m    ┆ 艮ge 耳o 不bu 丑re 七qi 乜me 也e 工gi 瓦a 艹ci 卅sa 虫ri 风fe 冖⺈mo                                                          │
-└──────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌──────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 大码 ┆ 字根                                                                                                                                        │
+╞══════╪═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╡
+│ 上排 ┆                                                                                                                                             │
+│ q    ┆ 几ji 殳ku 卯mi 丱gi 丩o                                                                                                                     │
+│ w    ┆ 力li 合he 人亻o 隹co 申ke 禺e                                                                                                               │
+│ r    ┆ 立li 黑ho 石ki 王o 丌ji 身ke 毛mi 文i 鸟ni 乌u 车re 门me 斗de                                                                               │
+│ t    ┆ 火ho 由u 巾jo 十ki 夂pe 攵pe 尚ke 衤i                                                                                                       │
+│ y    ┆ 刂di 阝fu 竹su 气qi 西xi 酉u                                                                                                                │
+│ p    ┆ 雨e 大da 夫fu 犭qi 豸si 犬qi                                                                                                                │
+│ 中排 ┆                                                                                                                                             │
+│ s    ┆ 至si 用i 舌ke 二o 冫o 尢o 尤u 户hu 尸ki 隶li 肀e 彐ji 木me 片pe 爿pa                                                                        │
+│ d    ┆ 口ke 宀ma 长re 已i 己ji 廴o 母me 言a 金jo 皮pi                                                                                              │
+│ f    ┆ 乃ne 水ko 丿pe 电di 甲ja 鱼e 一i 匚fe 丂ki 牙a 手ke 面ma 而o 食ki                                                                           │
+│ g    ┆ 九ju 扌ke 革ge 夭i 儿o 疒bi 鹿lu 麻ma 广go 牛nu 贝bo 页e 皿mo 目me 豕ki                                                                     │
+│ h    ┆ 辰re 其qi 自zi 亥he 习xi 勹冂o 乌u 鸟ni 页e 贝bo 册ce 走ze 齿ri 止si 田ti                                                                   │
+│ j    ┆ 刀di 门me 丰fe 见ja 夕xi 矢ki 心忄xo 上ke 寸ci 巳si 巴ba 臣re 早zi 曰e 日i 鬼go 舟se 骨gu 呙ga                                              │
+│ k    ┆ 辛xo 饣ki 甫fu 丬qo 弓gi 之si 马ma 里li 古gu 千qi 囗o 三sa 且qe 下xa 丁丅di 厂丆re 入e 八ba 凵ka 屮ci 戈ge 戊u 弋i 彳ri 彡ka 臼ju 白be 纟si │
+│ l    ┆ 曲qe 兀u 欠qi 干ga 匕bi 正se 穴xe 丨gi 非fo 子zi 予e 了le 高gi 方fe 亡o 亠te 向xo 小xi 糸si 幺i 辶ro 髟bi 长re                              │
+│ 下排 ┆                                                                                                                                             │
+│ x    ┆ 䒑丷ci 羊o 钅jo                                                                                                                             │
+│ c    ┆ 世ki 女ne 氵ko 来le 乙i 乚i 飞fo 又u 生ke 禾he                                                                                              │
+│ v    ┆ 见je 山ka 业e 米mi 讠e 车re 乂i 士ki 土du 斤jo 户hu                                                                                         │
+│ b    ┆ 虎hu 卜bu 鱼e 灬bi 马ma 爪sa 瓜ga 亦i 示ki 末mo 未o                                                                                         │
+│ n    ┆ 足zu 缶fe 壬o 亍ru 厶si 丶di 巛ri 川ri 月e                                                                                                  │
+│ m    ┆ 艮ge 耳o 不bu 丑re 七qi 乜me 也e 工gi 瓦a 艹ci 卅sa 虫ri 风fe 冖⺈mo                                                                        │
+└──────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
+
+:::
 
 ## 简码和词语
 
@@ -243,7 +270,7 @@
 
 ## 设计思路
 
-形码方案中的离散问题，主要在于多根字。多根字的离散问题，主要在于首根和末根。为什么这么讲？注意到，通过更换部首或部件，我们可以排列组合出大量汉字，如：「问问吝各束杏回可台呇扣和吉召吕唇知否喜可右启叵扣名占句售告如」，都是由一个部件搭配「口」字根组成的。一旦任意两个首根位于同一键位上，则会产生重码。这个例子中，共有30个字，也就是有30个首根，但按键一般是26个，根据抽屉原理，必然会在一个按键上有两个字根，这就说必然会有两个字的编码相同。常见的汉字部首大约一百个，为了避免出现重码，必须要有足够的按键数量或编码空间来容纳它们。对称地，末根的离散问题也同样存在。
+形码方案中的离散问题，主要在于多根字。多根字的离散问题，主要在于首根和末根。为什么这么讲？注意到，通过更换部首或部件，我们可以排列组合出大量汉字，如：「<!-- do not translate -->問问吝各束杏回可台呇扣和吉召吕唇知否喜可右启叵釦名占句售告如<!-- do not translate -->」，都是由一个部件搭配「口」字根组成的。一旦任意两个首根位于同一键位上，则会产生重码。这个例子中，共有30个字，也就是有30个首根，但按键一般是26个，根据抽屉原理，必然会在一个按键上有两个字根，这就说必然会有两个字的编码相同。常见的汉字部首大约一百个，为了避免出现重码，必须要有足够的按键数量或编码空间来容纳它们。对称地，末根的离散问题也同样存在。
 
 如何解决首根和末根的离散问题？在这方面，前人有多种探索：
 
