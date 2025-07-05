@@ -13298,7 +13298,6 @@ bgfs	弓手
 bgfs	弓箭手
 bgg	弓
 bgg	𢎗
-bgg	𢎜
 bgg	⼸
 bggi	許
 bggi	双簧管
@@ -43412,6 +43411,7 @@ ekeu	住在
 ekeu	凡在
 ekev	雄才伟略
 ekew	凡有
+ekew	伊朗伊斯兰共和国
 ekez	𠈋
 ekfa	𠈟
 ekfb	仗义执言
@@ -54416,8 +54416,8 @@ figd	一筹
 figd	𭡮
 figf	热火朝天
 figg	𫼼
-figh	一篇
 figh	一等
+figh	一篇
 figh	擦黑
 figh	攩
 figi	抖
@@ -54834,8 +54834,8 @@ fiqn	擦背
 fiqn	晋察冀
 fiqo	抄送
 fiqo	一类
-fiqo	一卷
 fiqo	一拳
+fiqo	一卷
 fiqo	一关
 fiqo	按类
 fiqp	开小差
@@ -62431,6 +62431,7 @@ fufd	一般来说
 fufd	摧折
 fufd	一般来讲
 fufd	摆拍
+fufe	𢎜
 fufe	판
 fufe	팬
 fufe	퍈
@@ -68712,8 +68713,8 @@ gfeh	𮥶
 gfei	笑看风云
 gfej	観
 gfek	每一位
-gfek	第一代
 gfek	第一位
+gfek	第一代
 gfek	第一件事
 gfem	卸任
 gfem	䇘
@@ -74881,6 +74882,7 @@ gxol	𫧫
 gxom	𫦎
 gxos	索
 gxos	索
+gxow	朝鲜民主主义人民共和国
 gxpc	索要
 gxpx	卖东西
 gxqh	㱄
@@ -90480,8 +90482,8 @@ iiaq	炎帝
 iiaq	炒楼
 iias	减字木兰花
 iias	𫸢
-iiat	𰻞𰻞麪
 iiat	𰻞𰻞麵
+iiat	𰻞𰻞麪
 iiay	𤑓
 iiay	𨟏
 iiba	𪹀
@@ -95188,8 +95190,8 @@ iref	客从何处来
 ireh	冷傲
 ireh	二伏
 ireh	𘱭
-irek	二代
 irek	二位
+irek	二代
 irek	二倍
 irel	密保
 irel	二段
@@ -118028,6 +118030,7 @@ kkfh	＼
 kkfh	/
 kkfh	🇫🇭
 kkfi	丝
+kkfi	🔥
 kkfi	🇫🇮
 kkfj	孤立无助
 kkfj	🇫🇯
@@ -119240,6 +119243,7 @@ kkhu	힄
 kkhu	힅
 kkhu	힆
 kkhu	힇
+kkhu	🔥
 kkhu	huà
 kkhu	huài
 kkhu	huàn
@@ -122607,22 +122611,22 @@ kklu	luàn
 kklu	luán
 kklu	luè
 kklu	lué
+kklu	luò
+kklu	luó
 kklu	luān
 kklu	luē
 kklu	luě
+kklu	luō
 kklu	luǎn
+kklu	luǒ
 kklu	lù
 kklu	lùn
-kklu	lùo
 kklu	lú
 kklu	lún
-kklu	lúo
 kklu	lū
 kklu	lūn
-kklu	lūo
 kklu	lǔ
 kklu	lǔn
-kklu	lǔo
 kklu	🇱🇺
 kklv	缄口
 kklv	餢
@@ -122986,6 +122990,7 @@ kkmo	묔
 kkmo	묕
 kkmo	묖
 kkmo	묗
+kkmo	🔥
 kkmo	mò
 kkmo	mòu
 kkmo	mó

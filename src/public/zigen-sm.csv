@@ -16,8 +16,8 @@ font,ma
 爪,bsa
 瓜,bga
 亦,bi
-示,bki
-世,cki
+示,bku
+世,cku
 來,cle
 女,cne
 氵,cko
@@ -35,8 +35,6 @@ font,ma
 宀,dme
 廴,do
 皮,dpi
-⺍,dxi
-,do
 〇,dli
 口,dke
 ,do
@@ -45,7 +43,7 @@ font,ma
 彑,dji
 母,dme
 ,do
-,do
+,dji
 言,de
 金,djo
 长,dre
@@ -64,7 +62,7 @@ font,ma
 鱼,fe
 而,fo
 面,fme
-食,fki
+食,fku
 ,fo
 ,fo
 ,fo
@@ -78,7 +76,7 @@ font,ma
 儿,go
 ,go
 广,ggo
-疒,gbi
+疒,gne
 鹿,glu
 麻,gma
 ,glu
@@ -87,11 +85,12 @@ font,ma
 皿,gmo
 目,gme
 罒,go
+見,gje
 貝,gbo
 頁,ge
 ,go
-豕,gki
-,gki
+豕,gku
+,gku
 亥,hhe
 其,hqi
 自,hzi
@@ -117,9 +116,8 @@ font,ma
 丰,jfe
 刀,jdi
 夕,jxi
-矢,jki
+矢,jku
 舟,jse
-見,jje
 门,jme
 ,jo
 丄,jke
@@ -130,6 +128,11 @@ font,ma
 骨,jgu
 寸,jci
 ,jo
+巛,jri
+巜,jri
+川,jri
+工,jgi
+瓦,ja
 巳,jsi
 巴,jba
 心,jxo
@@ -156,7 +159,7 @@ font,ma
 甫,kfu
 辛,kxo
 里,kli
-饣,kki
+饣,kku
 马,kma
 三,ksa
 且,kqe
@@ -206,8 +209,10 @@ font,ma
 向,lxo
 ,lxo
 ⺌,lxi
+⺍,lxi
 小,lxi
 ,lxi
+,lxi
 幺,li
 糸,lsi
 ⻍,lro
@@ -229,8 +234,6 @@ font,ma
 ⺈,mo
 冖,mo
 ,mo
-工,mgi
-瓦,ma
 卄,mci
 卅,msa
 卌,mxi
@@ -251,9 +254,6 @@ font,ma
 ,ne
 丶,ndi
 乀,ndi
-巛,nri
-巜,nri
-川,nri
 月,ne
 ,no
 雨,pe
@@ -277,7 +277,7 @@ font,ma
 文,ri
 毛,rmi
 王,ro
-石,rki
+石,rku
 立,rli
 身,rke
 黑,rho
@@ -303,10 +303,10 @@ font,ma
 ,so
 尢,so
 尤,su
-尸,ski
+尸,sku
 户,shu
 戸,shu
-,ski
+,sku
 彐,sji
 肀,se
 隶,sli
@@ -318,7 +318,7 @@ font,ma
 巾,tjo
 火,tho
 由,tu
-十,tki
+十,tku
 夊,tpe
 尚,tke
 龸,to
@@ -335,7 +335,7 @@ font,ma
 乂,vi
 ,vi
 土,vdu
-士,vki
+士,vku
 耂,vli
 龶,vke
 ,vo
