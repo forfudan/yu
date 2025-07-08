@@ -28,32 +28,32 @@
 
 下表为拼音、韵码对应表：
 
-| A     | O                   | E         | I             | U       |
-| :---- | :------------------ | :-------- | :------------ | :------ |
-| a     | o uo wo             | e ê       | i yi          | u* wu   |
-|       | er                  | ü u*      |               |         |
-|       | ei                  | ai        |               |         |
-|       |                     | ou        | ao            |         |
-| ia ya |                     | ie ye     | iao yao       | iu you  |
-| ua wa | ui wei              | üe ue yue |               |         |
-| an    | in yin              | en ian*   | ian* uan uen  |         |
-|       | iang yang uang wang | ang       | ing iong yong |         |
-|       | uang wang           | eng       |               |         |
-|       | ren                 | ru        | ri            | (sh)ri* |
+| A     | O                   | E         | I             | U        |
+| :---- | :------------------ | :-------- | :------------ | :------- |
+| a     | o uo wo             | e ê       | i yi          | u\* wu   |
+|       | er                  | ü u\*     |               |          |
+|       | ei                  | ai        |               |          |
+|       |                     | ou        | ao            |          |
+| ia ya |                     | ie ye     | iao yao       | iu you   |
+| ua wa | ui wei              | üe ue yue |               |          |
+| an    | in yin              | en ian\*  | ian\* uan uen |          |
+|       | iang yang uang wang | ang       | ing iong yong |          |
+|       | uang wang           | eng       |               |          |
+|       | ren                 | ru        | ri            | (sh)ri\* |
 
 下表为注音、韵码对应表：
 
-| A    | O         | E        | I                    | U       |
-| :--- | :-------- | :------- | :------------------- | :------ |
-| ㄚ   | ㄛ ㄨㄛ   | ㄜ ㄝ    | 〡                   | ㄨ*     |
-|      | ㄦ        | ㄩ ㄨ*   |                      |         |
-|      | ㄟ        | ㄞ       |                      |         |
-|      |           | ㄡ       | ㄠ                   |         |
-| 〡ㄚ |           | 〡ㄝ     | 〡ㄠ                 | 〡ㄡ    |
-| ㄨㄚ | ㄨㄟ      | ㄩㄝ     |                      |         |
-| ㄢ   | 〡ㄣ      | ㄣ 〡ㄢ* | 〡ㄢ* ㄨㄢ ㄩㄢ ㄩㄣ |         |
-|      | 〡ㄤ ㄨㄤ | ㄤ ㄥ    | 〡ㄥ ㄩㄥ            |         |
-|      | ㄖㄣ      | ㄖㄨ     | ㄖ                   | (ㄕ)ㄖ* |
+| A    | O         | E         | I                     | U        |
+| :--- | :-------- | :-------- | :-------------------- | :------- |
+| ㄚ   | ㄛ ㄨㄛ   | ㄜ ㄝ     | 〡                    | ㄨ\*     |
+|      | ㄦ        | ㄩ ㄨ\*   |                       |          |
+|      | ㄟ        | ㄞ        |                       |          |
+|      |           | ㄡ        | ㄠ                    |          |
+| 〡ㄚ |           | 〡ㄝ      | 〡ㄠ                  | 〡ㄡ     |
+| ㄨㄚ | ㄨㄟ      | ㄩㄝ      |                       |          |
+| ㄢ   | 〡ㄣ      | ㄣ 〡ㄢ\* | 〡ㄢ\* ㄨㄢ ㄩㄢ ㄩㄣ |          |
+|      | 〡ㄤ ㄨㄤ | ㄤ ㄥ     | 〡ㄥ ㄩㄥ             |          |
+|      | ㄖㄣ      | ㄖㄨ      | ㄖ                    | (ㄕ)ㄖ\* |
 
 下表为拼音、注音、韵码对应表：
 
@@ -87,7 +87,7 @@
 | uan          | ㄨㄢ   | I    | 川     |            |
 | uang         | ㄨㄤ   | O    | 王     |            |
 | uen          | ㄨㄣ   | I    | 文     |            |
-| uo           | ㄨㄛ   | O    | 𠂇      |            |
+| uo           | ㄨㄛ   | O    | 𠂇     |            |
 | üan          | ㄩㄢ   | I    | 犬     |            |
 | üê           | ㄩㄝ   | E    | 月     |            |
 | ü            | ㄩ     | V    | 鱼 Be  |            |
@@ -119,46 +119,6 @@
 
 以下为本方案的字根表，以供参考：
 
-::: details 20250618 更新
-
-1. 丂 -> Fki ~ 匚
-1. 丅 = 丁 -> Ddi
-1. 勹 = 冂 -> Ho
-1. 忄 = 心 -> Jxo
-1. 舟 -> Jse
-1. 冖 = ⺈ -> Mo
-1. 䒑丷 -> Xci
-1. 皮 -> Dpi
-1. 丩 = <span class="yuniversus"></span> -> Qo
-
-:::
-
-::: details 20250622 更新
-
-1. 丁下 -> K
-1. 呙骨 -> J
-1. 厂丆 -> K
-1. 臣 -> J
-1. 片爿 -> S
-1. 末未 -> B
-1. 甲电 -> F
-1. 廴 -> D
-1.  -> D ~ 口
-
-:::
-
-::: details 20250630 更新
-
-1. <ruby>疒<rt>nè</rt></ruby> -> Gne
-1. ⺍<span class="yuniversus"></span> -> Lxi ~ 小
-1. <span class="yuniversus"></span> -> Dji ~ ⺔ （避免 ⺔<span class="yuniversus"></span> - <span class="yuniversus"></span>豕 编码不一致）
-1. 川巛ㄍ -> Jri (同指不位移优先)
-1. 工 -> Jgi (同指不位移优先)
-1. 瓦 -> Ja (同指不位移优先)
-1. 见 -> GJe ~ 目 (聚类)
-
-:::
-
 ::: tip 字根表
 
 <!-- do not translate -->
@@ -188,10 +148,48 @@
 | v    | 见je 山ka 业e 米mi 讠e 车re 乂i 士ku 土du 斤jo 戶hu                                                                                         |
 | b    | 虎hu 卜bu 魚e 灬bi 馬ma 爪sa 瓜ga 亦i 示ku 末mo 未o                                                                                         |
 | n    | 足zu 缶fe 壬o 亍ru 厶si 丶di 月e                                                                                                            |
-| m    | 艮ge 耳o 不bu 丑re 七qi 乜me 也e 艹ci 卅sa 虫ri 風fe 冖⺈mo                                                                                  |
+| m    | 艮ge 耳o 不bu 丑re 七qi 乜me 也e 艹ci 卅sa 虫ri 風fe 冖⺈mo                                                                                 |
 
 </div>
 <!-- do not translate -->
+
+:::
+
+::: details 更新
+
+20250618 更新
+
+1. 丂 -> Fki ~ 匚
+1. 丅 = 丁 -> Ddi
+1. 勹 = 冂 -> Ho
+1. 忄 = 心 -> Jxo
+1. 舟 -> Jse
+1. 冖 = ⺈ -> Mo
+1. 䒑丷 -> Xci
+1. 皮 -> Dpi
+1. 丩 = <span class="yuniversus"></span> -> Qo
+
+20250622 更新
+
+1. 丁下 -> K
+1. 呙骨 -> J
+1. 厂丆 -> K
+1. 臣 -> J
+1. 片爿 -> S
+1. 末未 -> B
+1. 甲电 -> F
+1. 廴 -> D
+1.  -> D ~ 口
+
+20250630 更新
+
+1. <ruby>疒<rt>nè</rt></ruby> -> Gne
+1. ⺍<span class="yuniversus"></span> -> Lxi ~ `小`
+1. <span class="yuniversus"></span> -> Dji ~ `⺔` （避免 ⺔<span class="yuniversus"></span> - <span class="yuniversus"></span>豕 编码不一致）
+1. `川巛ㄍ` -> Jri (同指不位移优先)
+1. `工` -> Jgi (同指不位移优先)
+1. `瓦` -> Ja (同指不位移优先)
+1. `見` -> GJe ~ `目` (聚类)
 
 :::
 

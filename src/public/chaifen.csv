@@ -5563,7 +5563,7 @@ char,division,division_tw,region
 矸,石干,,CJK
 讵,讠匚,,CJK
 枋,木方,,CJK
-璺,⺽冂一丶,,CJK
+璺,⺽冂一丶,冂一丅丶,CJK
 啭,口车二丶,,CJK
 澌,氵其斤,,CJK
 鞣,革予丿木,,CJK
@@ -6231,7 +6231,7 @@ char,division,division_tw,region
 橼,木纟彑,,CJK
 淏,氵日一大,,CJK
 伋,亻乃乀,亻丿乙又,CJK
-爨,⺽冂一火,,CJK
+爨,⺽冂一火,冂一丅火,CJK
 狃,犭丑,,CJK
 萩,艹禾火,,CJK
 诼,讠豕丶,,CJK
@@ -13154,7 +13154,7 @@ char,division,division_tw,region
 燿,火习习隹,,CJK
 爀,火土八,,CJK
 爁,火臣皿,火臣皿,CJK
-爂,⺽冂一火,,CJK
+爂,⺽冂一火,冂一丅火,CJK
 爃,火火火木,,CJK
 爄,火厂艹禺,,CJK
 爅,火黑土,,CJK
@@ -18011,7 +18011,7 @@ char,division,division_tw,region
 轞,車臣皿,車臣皿,CJK
 轟,車車車,,CJK
 轠,車田田田,,CJK
-轡,糸車糸口,,CJK
+轡,糸車糸口,車糸糸口,CJK
 轢,車白幺木,,CJK
 轣,車厂禾止,,CJK
 轤,車虍田皿,,CJK
@@ -38184,7 +38184,7 @@ char,division,division_tw,region
 𢥦,日羊心,,CJK-B
 𢥧,厂白小心,,CJK-B
 𢥨,夊貝頁心,,CJK-B
-𢥩,糸車糸心,,CJK-B
+𢥩,糸車糸心,車糸糸心,CJK-B
 𢥪,忄卄一隹,,CJK-B
 𢥫,立日口心,,CJK-B
 𢥬,忄一鹿,,CJK-B
@@ -39905,7 +39905,7 @@ char,division,division_tw,region
 𣀟,巴口十夊,,CJK-B
 𣀠,日龷八夊,,CJK-B
 𣀡,田田田夊,,CJK-B
-𣀢,言火火夊,,CJK-B
+𣀢,火言火夊,言火火夊,CJK-B
 𣀣,戊一口又,戊一口夊,CJK-B
 𣀤,亠罒水又,,CJK-B
 𣀥,厂禾禾又,,CJK-B
@@ -39974,7 +39974,7 @@ char,division,division_tw,region
 𣁤,日文文,,CJK-B
 𣁥,文臣皿,文臣皿,CJK-B
 𣁦,文一弋王,,CJK-B
-𣁧,言火火文,,CJK-B
+𣁧,火言火文,言火火文,CJK-B
 𣁨,丆月冖文,,CJK-B
 𣁩,木文木マ,,CJK-B
 𣁪,文目目且,,CJK-B
@@ -42046,7 +42046,7 @@ char,division,division_tw,region
 𣡼,⺊囗人木,,CJK-B
 𣡽,木木木木,,CJK-B
 𣡾,日木日木,,CJK-B
-𣡿,木⺽冂火,,CJK-B
+𣡿,木⺽冂火,木冂一火,CJK-B
 𣢀,卩欠,,CJK-B
 𣢁,尸欠,,CJK-B
 𣢂,尸欠,,CJK-B
@@ -45320,7 +45320,7 @@ char,division,division_tw,region
 𤕆,爪缶巛巴,缶巛巴,CJK-B
 𤕇,爪女爪女,,CJK-B
 𤕈,爪口,,CJK-B
-𤕉,爪⺽冂火,,CJK-B
+𤕉,爪⺽冂火,爪冂一火,CJK-B
 𤕊,爪⺽冂且,爪冂一且,CJK-B
 𤕋,⺌丿乚白,,CJK-B
 𤕌,爪マ冂田,,CJK-B
@@ -48279,7 +48279,7 @@ char,division,division_tw,region
 𥃕,士冖皿,,CJK-B
 𥃖,⺽⺽一皿,⺽⺽二皿,CJK-B
 𥃗,食戈戈皿,,CJK-B
-𥃘,⺽冂一皿,,CJK-B
+𥃘,⺽冂一皿,冂一丅皿,CJK-B
 𥃙,⺷皿丷日,,CJK-B
 𥃚,立日舟皿,,CJK-B
 𥃛,舟殳皿日,,CJK-B
@@ -48995,7 +48995,7 @@ char,division,division_tw,region
 𥎡,予丿目隹,,CJK-B
 𥎢,予丿木灬,,CJK-B
 𥎣,予丿穴,,CJK-B
-𥎤,予丿⺽火,,CJK-B
+𥎤,予丿⺽火,予丿冂火,CJK-B
 𥎥,予丿亠火,,CJK-B
 𥎦,厂矢,,CJK-B
 𥎧,矢十,,CJK-B
@@ -50381,7 +50381,7 @@ char,division,division_tw,region
 𥤋,耳耳耳禾,,CJK-B
 𥤌,禾习习八,,CJK-B
 𥤍,禾自穴辶,禾自宀辶,CJK-B
-𥤎,禾⺽冂火,,CJK-B
+𥤎,禾⺽冂火,禾冂一火,CJK-B
 𥤏,禾木罒寸,,CJK-B
 𥤐,禾田田土,,CJK-B
 𥤑,禾丿米丨,,CJK-B
@@ -52564,7 +52564,7 @@ char,division,division_tw,region
 𦆒,糸丿丂,,CJK-B
 𦆓,糸一几,糸一儿,CJK-B
 𦆔,糸爪冖夊,,CJK-B
-𦆕,糸車糸,,CJK-B
+𦆕,糸車糸,車糸糸,CJK-B
 𦆖,糸大丷火,,CJK-B
 𦆗,亻人人丶,,CJK-B
 𦆘,糸白臼儿,,CJK-B
@@ -61358,7 +61358,7 @@ char,division,division_tw,region
 𨏬,車一口車,,CJK-B
 𨏭,車門木丷,,CJK-B
 𨏮,⺽車一車,車⺽一車,CJK-B
-𨏯,亠糸車口,,CJK-B
+𨏯,亠糸車口,亠車糸口,CJK-B
 𨏰,車亠丷車,,CJK-B
 𨏱,車阝爪心,,CJK-B
 𨏲,車尸艹車,,CJK-B
@@ -65360,7 +65360,7 @@ char,division,division_tw,region
 𩎎,革木冂冂,,CJK-B
 𩎏,革高囗巴,,CJK-B
 𩎐,革艹鹿馬,,CJK-B
-𩎑,革⺽冂火,,CJK-B
+𩎑,革⺽冂火,革冂一火,CJK-B
 𩎒,口㐄干,,CJK-B
 𩎓,口㐄犬,,CJK-B
 𩎔,口㐄乂,,CJK-B
@@ -68395,7 +68395,7 @@ char,division,division_tw,region
 𩽩,魚目目隹,,CJK-B
 𩽪,魚耳耳耳,,CJK-B
 𩽫,羊工魚日,,CJK-B
-𩽬,魚⺽冂火,,CJK-B
+𩽬,魚⺽冂火,魚冂一火,CJK-B
 𩽭,魚艹臣皿,,CJK-B
 𩽮,魚艹戈臣,,CJK-B
 𩽯,魚⺽火,,CJK-B
@@ -78491,7 +78491,7 @@ char,division,division_tw,region
 𬜁,⺽刀口又,,CJK-E
 𬜂,⺽木木酉,,CJK-E
 𬜃,⺽冂一頁,冂一口頁,CJK-E
-𬜄,⺽木木儿,,CJK-E
+𬜄,⺽木木儿,木木⺽儿,CJK-E
 𬜅,舌⺊口,,CJK-E
 𬜆,舌丿之,,CJK-E
 𬜇,舌言,,CJK-E
@@ -83036,7 +83036,7 @@ char,division,division_tw,region
 𭣐,扌弓一乂,,CJK-F
 𭣑,王王心匕,,CJK-F
 𭣒,麻手人朩,,CJK-F
-𭣓,扌⺽冂火,,CJK-F
+𭣓,扌⺽冂火,扌冂一火,CJK-F
 𭣔,十又丶,,CJK-F
 𭣕,丅乙又丿,,CJK-F
 𭣖,丬十又,,CJK-F
@@ -86470,7 +86470,7 @@ char,division,division_tw,region
 𮘺,言艹二八,,CJK-F
 𮘻,厂亻隹言,,CJK-F
 𮘼,言日耂日,,CJK-F
-𮘽,言火火又,,CJK-F
+𮘽,火言火又,,CJK-F
 𮘾,言十冂犬,,CJK-F
 𮘿,言雨人マ,,CJK-F
 𮙀,言爪冖夊,,CJK-F
@@ -86779,7 +86779,7 @@ char,division,division_tw,region
 𮝯,車里灬土,,CJK-F
 𮝰,車夫夫貝,,CJK-F
 𮝱,車齒,,CJK-F
-𮝲,糸車糸亡,,CJK-F
+𮝲,糸車糸亡,車糸糸亡,CJK-F
 𮝳,车亠八,,CJK-F
 𮝴,车瓜,,CJK-F
 𮝵,车而,,CJK-F
@@ -91605,7 +91605,7 @@ char,division,division_tw,region
 𰹨,車山而辶,,CJK-G
 𰹩,車宀一貝,,CJK-G
 𰹪,車广䒑灬,車广八灬,CJK-G
-𰹫,糸車糸山,,CJK-G
+𰹫,糸車糸山,車糸糸山,CJK-G
 𰹬,車艹戈臣,,CJK-G
 𰹭,車⺮土夊,,CJK-G
 𰹮,車艹門灬,,CJK-G
@@ -93604,7 +93604,7 @@ char,division,division_tw,region
 𱘼,大一丂女,,CJK-H
 𱘽,艹土厶大,,CJK-H
 𱘾,大魚禾,,CJK-H
-𱘿,糸車糸大,,CJK-H
+𱘿,糸車糸大,車糸糸大,CJK-H
 𱙀,大忄木貝,,CJK-H
 𱙁,女一,,CJK-H
 𱙂,女儿,,CJK-H
@@ -94871,7 +94871,7 @@ char,division,division_tw,region
 𱬯,龷由灬匕,,CJK-H
 𱬰,⺽冂二灬,,CJK-H
 𱬱,䒑火,䒑火,CJK-H
-𱬲,⺽冂一火,,CJK-H
+𱬲,⺽冂一火,冂一火,CJK-H
 𱬳,隹灬隹灬,,CJK-H
 𱬴,丿灬,,CJK-H
 𱬵,爪,,CJK-H
@@ -98887,7 +98887,7 @@ char,division,division_tw,region
 𤉣,火巛一田,,兼容文字補充
 熜,火夊心,火心,兼容文字補充
 𤎫,火火龷人,,兼容文字補充
-爨,⺽冂一火,,兼容文字補充
+爨,⺽冂一火,冂一丅火,兼容文字補充
 爵,爪罒彐寸,,兼容文字補充
 牐,片千臼,片干臼,兼容文字補充
 𤘈,牙臼,,兼容文字補充

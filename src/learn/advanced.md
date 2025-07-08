@@ -224,7 +224,7 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 ::: tip 例
 
-`为`字的两点不可以被视为字根`两点`，因为它们非连续写成、且被半包围结构分割。  
+`为`字的两点不可以被视为字根`两点`，因为它们非连续写成、且被半包围结构分割。
 <div class="flex justify-left flex-wrap">
 <Chaifen char='为' :parts='[1,2,1]' />
 ✅

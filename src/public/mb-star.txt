@@ -14107,7 +14107,6 @@ bii	談
 biib	燮
 biib	𤈫
 biib	𧩮
-biib	𮘽
 biid	观察室
 biie	㞑
 biie	𩙜
@@ -14141,8 +14140,6 @@ biit	观察家
 biit	观光客
 biit	夑
 biit	𡳉
-biit	𣀢
-biit	𣁧
 biiv	弱小
 biiw	𡲶
 biiw	𡲺
@@ -34519,8 +34516,8 @@ dlwn	𮬦
 dlwr	軦
 dlww	误删
 dlww	𪕾
-dlwy	閏三月
 dlwy	閏正月
+dlwy	閏三月
 dlwy	𦟲
 dlwy	𨌉
 dlwy	𫚼
@@ -54834,8 +54831,8 @@ fiqn	擦背
 fiqn	晋察冀
 fiqo	抄送
 fiqo	一类
-fiqo	一拳
 fiqo	一卷
+fiqo	一拳
 fiqo	一关
 fiqo	按类
 fiqp	开小差
@@ -68713,8 +68710,8 @@ gfeh	𮥶
 gfei	笑看风云
 gfej	観
 gfek	每一位
-gfek	第一位
 gfek	第一代
+gfek	第一位
 gfek	第一件事
 gfem	卸任
 gfem	䇘
@@ -86978,6 +86975,7 @@ ibib	当官
 ibib	当当
 ibib	炔烃
 ibib	煆
+ibib	𮘽
 ibib	𱫂
 ibic	决案
 ibid	实验室
@@ -87004,6 +87002,8 @@ ibir	𤆾
 ibis	决赛
 ibit	当家
 ibit	官家
+ibit	𣀢
+ibit	𣁧
 ibix	当次
 ibiy	窟窿
 ibiy	穹窿
@@ -90482,8 +90482,8 @@ iiaq	炎帝
 iiaq	炒楼
 iias	减字木兰花
 iias	𫸢
-iiat	𰻞𰻞麵
 iiat	𰻞𰻞麪
+iiat	𰻞𰻞麵
 iiay	𤑓
 iiay	𨟏
 iiba	𪹀
@@ -95190,8 +95190,8 @@ iref	客从何处来
 ireh	冷傲
 ireh	二伏
 ireh	𘱭
-irek	二位
 irek	二代
+irek	二位
 irek	二倍
 irel	密保
 irel	二段

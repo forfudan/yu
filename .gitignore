@@ -4,3 +4,5 @@ local
 ___*
 src/.vitepress/cache
 .DS_Store
+.vscode
+.zed

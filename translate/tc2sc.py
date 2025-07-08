@@ -1,8 +1,7 @@
 # %%
-import distutils.dir_util
-import opencc
 import re
-import shutil
+
+import opencc
 
 t2s = opencc.OpenCC("t2s")
 
