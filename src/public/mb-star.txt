@@ -54413,8 +54413,8 @@ figd	一筹
 figd	𭡮
 figf	热火朝天
 figg	𫼼
-figh	一等
 figh	一篇
+figh	一等
 figh	擦黑
 figh	攩
 figi	抖
@@ -54831,8 +54831,8 @@ fiqn	擦背
 fiqn	晋察冀
 fiqo	抄送
 fiqo	一类
-fiqo	一卷
 fiqo	一拳
+fiqo	一卷
 fiqo	一关
 fiqo	按类
 fiqp	开小差
@@ -68710,8 +68710,8 @@ gfeh	𮥶
 gfei	笑看风云
 gfej	観
 gfek	每一位
-gfek	第一代
 gfek	第一位
+gfek	第一代
 gfek	第一件事
 gfem	卸任
 gfem	䇘
