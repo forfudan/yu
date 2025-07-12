@@ -34516,8 +34516,8 @@ dlwn	𮬦
 dlwr	軦
 dlww	误删
 dlww	𪕾
-dlwy	閏正月
 dlwy	閏三月
+dlwy	閏正月
 dlwy	𦟲
 dlwy	𨌉
 dlwy	𫚼
@@ -42117,7 +42117,6 @@ eii	𘠉
 eii	𘯧
 eii	𘳀
 eii	𘳋
-eii	✅
 eiia	左宗棠
 eiia	儝
 eiib	灰烬
@@ -54413,8 +54412,8 @@ figd	一筹
 figd	𭡮
 figf	热火朝天
 figg	𫼼
-figh	一篇
 figh	一等
+figh	一篇
 figh	擦黑
 figh	攩
 figi	抖
@@ -54831,8 +54830,8 @@ fiqn	擦背
 fiqn	晋察冀
 fiqo	抄送
 fiqo	一类
-fiqo	一拳
 fiqo	一卷
+fiqo	一拳
 fiqo	一关
 fiqo	按类
 fiqp	开小差
@@ -68710,8 +68709,8 @@ gfeh	𮥶
 gfei	笑看风云
 gfej	観
 gfek	每一位
-gfek	第一位
 gfek	第一代
+gfek	第一位
 gfek	第一件事
 gfem	卸任
 gfem	䇘
@@ -201964,7 +201963,6 @@ sii	𘠘
 sii	𘱌
 sii	
 sii	×
-sii	❌
 siia	𦾵
 siib	甘当
 siib	䩳
