@@ -30263,7 +30263,6 @@ cxkk	下顎
 cxkk	下颚
 cxkk	下品
 cxkm	下面
-cxko	下吧
 cxks	下手
 cxks	𠙏
 cxkv	祐
@@ -32853,7 +32852,6 @@ dcve	𦽎
 dcve	通讯录
 dcvh	共來百越文身地
 dcvj	줕
-dcvl	又來了
 dcvr	敲邊鼓
 dcwe	花邊新聞
 dcwf	줊
@@ -36425,7 +36423,6 @@ dfvj	𦵻
 dfvj	즡
 dfvk	允执厥中
 dfvl	帶了
-dfvl	又来了
 dfvm	𤾷
 dfvn	萐
 dfvn	𦱥
@@ -90170,7 +90167,6 @@ gfno	轻描淡写
 gfnp	䣃
 gfnq	敞开心扉
 gfnr	第一流
-gfnt	皮爾洛
 gfnu	𨓴
 gfnv	𩛒
 gfnz	𦈢
@@ -95061,7 +95057,6 @@ gons	乘涼
 gons	乞巧
 gont	连绵不断
 gont	连续不断
-gont	皮尔洛
 gonu	利齿
 gonu	卸妆油
 gonx	悡
@@ -128570,7 +128565,6 @@ jfwy	出于意外
 jfxh	昏天黑地
 jfxh	曬黑
 jfxl	印在
-jfxl	量在
 jfxn	𱉗
 jfxo	暈頭轉向
 jfxo	昏頭轉向
@@ -211179,7 +211173,6 @@ nwvi	不失爲
 nwvi	必爲
 nwvj	𣽮
 nwvl	不得了
-nwvl	消失了
 nwvl	不行了
 nwvl	不好了
 nwvo	不好受
@@ -219017,6 +219010,7 @@ ojoh	绘影绘声
 ojoi	𩸹
 ojoj	𠃧
 ojoj	𨑀
+ojoj	𩙱
 ojoj	𮸽
 ojoj	纤纤
 ojoj	冥冥
@@ -219047,7 +219041,6 @@ ojot	那日绣帘相见处
 ojou	纠缠
 ojov	鰻魚
 ojov	鯧魚
-ojow	𩙱
 ojox	买盘
 ojox	飞向
 ojox	飞盘
@@ -224795,9 +224788,9 @@ otor	继续
 otot	𢎙
 otot	𮸽
 otot	𠃧
+otot	𩙱
 otot	缕缕
 otov	鱸魚
-otow	𩙱
 otow	故乡
 otow	故鄉
 otoy	𦠷
@@ -289354,7 +289347,6 @@ uumc	纖長
 uumc	人亡政息
 uumd	紅綠燈
 uume	終身大事
-uume	众泰
 uumf	𲄟
 uumf	令人髮指
 uuml	康庄大道
@@ -297945,7 +297937,6 @@ vofk	受損
 vofl	愛拼
 vofl	爱拼
 vofm	受災
-vofm	舜天
 vofq	爱护
 voft	𱭃
 vofu	톲
@@ -314816,7 +314807,6 @@ wxlw	𡤆
 wxm	血
 wxm	𥁅
 wxm	⾎
-wxme	衆泰
 wxmo	微軟公司
 wxn	𫁡
 wxna	血汗
@@ -316405,7 +316395,6 @@ xelw	𥊽
 xem	𲃔
 xemb	𨁺
 xemb	𨍄
-xeme	眾泰
 xemh	𮝯
 xemi	有關規定
 xemj	踏春

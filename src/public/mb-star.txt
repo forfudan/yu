@@ -12783,7 +12783,6 @@ bfkc	弙
 bfkc	㜷
 bfkc	𤿍
 bfke	马拉维
-bfke	又来了
 bfke	𣪫
 bfkf	屈打成招
 bfkf	骊威
@@ -20069,7 +20068,6 @@ bxnl	观象台
 bxnr	欢洽
 bxns	弥满
 bxns	𢑙
-bxnt	皮尔洛
 bxob	𦫔
 bxob	𦫗
 bxob	𧧘
@@ -100909,7 +100907,6 @@ jfeq	玩伴
 jfer	可操作性
 jfer	𫺄
 jfes	球风
-jfeu	量在
 jfev	玩偶
 jfey	𫑚
 jfey	𰻢
@@ -110375,7 +110372,6 @@ jxll	下颚
 jxll	下品
 jxll	量角器
 jxln	𬍹
-jxlo	下吧
 jxlo	𱯤
 jxlq	下联
 jxls	𣈳
@@ -157306,7 +157302,6 @@ ngkd	汲
 ngkd	海绵
 ngkd	𰝑
 ngke	干了
-ngke	消失了
 ngke	㵶
 ngkf	干线
 ngkf	海线
@@ -196373,7 +196368,6 @@ rroc	𰻉
 rrog	坐镇
 rroi	人情之常
 rron	惊人之举
-rron	众泰
 rror	人心大快
 rros	𦁞
 rrpg	𢘐
@@ -223010,7 +223004,6 @@ uxfk	𧷁
 uxfl	受损
 uxfl	䜭
 uxfm	岁末
-uxfo	舜天
 uxfq	爱拼
 uxfq	羁危万里身
 uxfr	受挫
@@ -247518,6 +247511,7 @@ yiqc	𮶻
 yiqd	飞蝗
 yiqe	买断
 yiqg	飞蛾
+yiqi	𩙱
 yiqj	买单
 yiqj	阳光普照
 yiqj	买着
@@ -247670,7 +247664,6 @@ yixj	买车
 yixr	飞轮
 yixu	院外
 yixv	飞鱼
-yiyg	𩙱
 yiyi	𠃧
 yiyi	𮸽
 yiyy	买书
