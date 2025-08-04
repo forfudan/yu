@@ -65,7 +65,33 @@ export default defineConfig({
             {
               text: '背景故事',
               link: '/docs/background',
-            },]
+            },
+          ]
+        },
+        {
+          text: '系列',
+          items: [
+            {
+              text: '宇浩·星陈',
+              link: '/docs/star',
+            },
+            {
+              text: '宇浩·光华',
+              link: '/docs/light',
+            },
+            {
+              text: '宇浩·日月',
+              link: '/docs/sunmoon',
+            },
+            {
+              text: '卿云',
+              link: '/docs/joy',
+            },
+            {
+              text: '吉旦餅',
+              link: '/zht/docs/wafel',
+            },
+          ]
         },
         {
           text: '技术',
@@ -92,6 +118,10 @@ export default defineConfig({
           text: '杂谈',
           items: [
             {
+              text: '琼林撷芳：常用概念术语',
+              link: '/docs/concepts',
+            },
+            {
               text: '常见输入法测评数据',
               link: '/docs/statistics',
             },
@@ -112,18 +142,6 @@ export default defineConfig({
         {
           text: '大观',
           items: [
-            {
-              text: '宇浩·光华',
-              link: '/docs/light',
-            },
-            {
-              text: '宇浩·日月',
-              link: '/docs/sunmoon',
-            },
-            {
-              text: '卿云输入法',
-              link: '/docs/joy',
-            },
             {
               text: '宇浩诗韵拼音',
               link: '/docs/sypy',
@@ -362,7 +380,7 @@ export default defineConfig({
     sidebarMenuLabel: "全部頁面列表",
     outline: {
       level: "deep",
-      label: "本页大纲"
+      label: "本頁大綱"
     },
     search: {
       provider: "local",
@@ -457,7 +475,33 @@ export default defineConfig({
                 {
                   text: '背景故事',
                   link: '/zht/docs/background',
-                },]
+                },
+              ]
+            },
+            {
+              text: '系列',
+              items: [
+                {
+                  text: '宇浩·星陳',
+                  link: '/zht/docs/star',
+                },
+                {
+                  text: '宇浩·光華',
+                  link: '/zht/docs/light',
+                },
+                {
+                  text: '宇浩·日月',
+                  link: '/zht/docs/sunmoon',
+                },
+                {
+                  text: '卿雲',
+                  link: '/zht/docs/joy',
+                },
+                {
+                  text: '吉旦餅',
+                  link: '/zht/docs/wafel',
+                },
+              ]
             },
             {
               text: '技術',
@@ -484,6 +528,10 @@ export default defineConfig({
               text: '雜談',
               items: [
                 {
+                  text: '瓊林擷芳：常用概念術語',
+                  link: '/zht/docs/concepts',
+                },
+                {
                   text: '常見輸入法測評數據',
                   link: '/zht/docs/statistics',
                 },
@@ -504,18 +552,6 @@ export default defineConfig({
             {
               text: '大觀',
               items: [
-                {
-                  text: '宇浩·光華',
-                  link: '/zht/docs/light',
-                },
-                {
-                  text: '宇浩·日月',
-                  link: '/zht/docs/sunmoon',
-                },
-                {
-                  text: '卿雲輸入法',
-                  link: '/zht/docs/joy',
-                },
                 {
                   text: '宇浩詩韻拼音',
                   link: '/zht/docs/sypy',
