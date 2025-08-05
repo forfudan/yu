@@ -118,7 +118,7 @@ export default defineConfig({
           text: '杂谈',
           items: [
             {
-              text: '琼林撷芳：常用概念术语',
+              text: '琼林撷英：常用概念术语',
               link: '/docs/concepts',
             },
             {
@@ -528,7 +528,7 @@ export default defineConfig({
               text: '雜談',
               items: [
                 {
-                  text: '瓊林擷芳：常用概念術語',
+                  text: '瓊林擷英：常用概念術語',
                   link: '/zht/docs/concepts',
                 },
                 {
