@@ -7381,6 +7381,7 @@ alad	析構
 alae	栏
 alae	櫻桃
 alae	李冰
+alaf	𩐊
 alaf	標本
 alah	平板
 alah	𡐨
@@ -247886,7 +247887,6 @@ rlfc	欺师灭祖
 rlfd	劑型
 rlfe	訴求
 rlfe	商报
-rlff	𩐊
 rlff	孕婴
 rlfh	商贩
 rlfh	謙順

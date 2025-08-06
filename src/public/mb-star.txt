@@ -9069,6 +9069,7 @@ auht	㯇
 auhy	市场
 auie	高山安可仰
 auif	敲定
+auif	𩐊
 auif	𪳢
 auif	𬴠
 auig	𧝻
@@ -74106,7 +74107,6 @@ guey	失业保险
 guez	𫁺
 gufb	𫩈
 gufd	𬼐
-guff	𩐊
 gufg	𮆙
 gufh	血亏
 gufj	乍看
