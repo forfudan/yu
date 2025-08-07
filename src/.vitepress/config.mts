@@ -72,24 +72,28 @@ export default defineConfig({
           text: '系列',
           items: [
             {
-              text: '宇浩·星陈',
-              link: '/docs/star',
+              text: '综览',
+              link: '/docs/series',
             },
             {
-              text: '宇浩·光华',
+              text: '光华',
               link: '/docs/light',
             },
             {
-              text: '宇浩·日月',
-              link: '/docs/sunmoon',
+              text: '吉旦餅',
+              link: '/docs/wafel',
+            },
+            {
+              text: '星陈',
+              link: '/docs/star',
             },
             {
               text: '卿云',
               link: '/docs/joy',
             },
             {
-              text: '吉旦餅',
-              link: '/zht/docs/wafel',
+              text: '日月',
+              link: '/docs/sunmoon',
             },
           ]
         },
@@ -482,24 +486,28 @@ export default defineConfig({
               text: '系列',
               items: [
                 {
-                  text: '宇浩·星陳',
-                  link: '/zht/docs/star',
+                  text: '總覽',
+                  link: '/zht/docs/series',
                 },
                 {
-                  text: '宇浩·光華',
+                  text: '光華',
                   link: '/zht/docs/light',
                 },
                 {
-                  text: '宇浩·日月',
-                  link: '/zht/docs/sunmoon',
+                  text: '吉旦餅',
+                  link: '/zht/docs/wafel',
+                },
+                {
+                  text: '星陳',
+                  link: '/zht/docs/star',
                 },
                 {
                   text: '卿雲',
                   link: '/zht/docs/joy',
                 },
                 {
-                  text: '吉旦餅',
-                  link: '/zht/docs/wafel',
+                  text: '日月',
+                  link: '/zht/docs/sunmoon',
                 },
               ]
             },
