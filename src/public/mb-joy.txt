@@ -145406,6 +145406,8 @@ kkbk	戰國
 kkbk	🇧🇰
 kkbl	戰慄
 kkbl	呼啦圈
+kkbl	～
+kkbl	~
 kkbl	🇧🇱
 kkbm	骂
 kkbm	咖啡因
@@ -152707,8 +152709,6 @@ kklg	🇱🇬
 kklh	😅
 kklh	😓
 kklh	😥
-kklh	～
-kklh	~
 kklh	🇱🇭
 kkli	〦
 kkli	㊅

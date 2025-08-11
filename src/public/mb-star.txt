@@ -115696,6 +115696,8 @@ kkbj	音乐剧
 kkbj	🇧🇯
 kkbk	欲为圣明除弊事
 kkbk	🇧🇰
+kkbl	～
+kkbl	~
 kkbl	🇧🇱
 kkbm	童子鸡
 kkbm	纸马
@@ -122513,8 +122515,6 @@ kklg	🇱🇬
 kklh	😅
 kklh	😓
 kklh	😥
-kklh	～
-kklh	~
 kklh	🇱🇭
 kkli	〦
 kkli	㊅
