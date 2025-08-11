@@ -38,6 +38,8 @@ font,ma
 〇,dli
 口,dke
 ,do
+ㄩ,do
+屮,do
 己,dji
 已,di
 彑,dji
@@ -95,9 +97,6 @@ font,ma
 其,hqi
 自,hzi
 辰,hre
-乌,hu
-鸟,hni
-,hni
 习,hxi
 冂,ho
 冊,hce
@@ -168,8 +167,6 @@ font,ma
 下,kxa
 入,ke
 八,kba
-ㄩ,kka
-屮,kci
 丆,kre
 厂,kre
 弋,ki
@@ -355,6 +352,9 @@ font,ma
 䒑,xci
 丷,xci
 ,xci
+乌,xu
+鸟,xni
+,xni
 ⺷,xo
 羊,xo
 ,xo
