@@ -11,14 +11,14 @@ const p = defineProps<{
     chaifen: Chaifen,
     zigenMap: ZigenMap,
     supplement: boolean,
+    ming: boolean,
 }>()
 
 const uriText = computed(() => encodeURIComponent(p.chaifen.char))
 const unicode = computed(() => p.chaifen.char.codePointAt(0).toString(16).toUpperCase())
 
-const codes = computed(() => makeCodesFromDivision(p.chaifen.division, p.zigenMap, p.supplement))
-
-const codes_tw = computed(() => p.chaifen.division_tw == '' ? '' : makeCodesFromDivision(p.chaifen.division_tw, p.zigenMap))
+const codes = computed(() => makeCodesFromDivision(p.chaifen.division, p.zigenMap, p.supplement, p.ming))
+const codes_tw = computed(() => p.chaifen.division_tw == '' ? '' : makeCodesFromDivision(p.chaifen.division_tw, p.zigenMap, p.supplement, p.ming))
 
 </script>
 

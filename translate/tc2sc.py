@@ -63,6 +63,7 @@ paths_of_docs = [
     "/chaifen/index.md",
     "/chaifen/light.md",
     "/chaifen/joy.md",
+    "/chaifen/ming.md",
     # 天碼
     "/sky/index.md",
     "/sky/search.md",

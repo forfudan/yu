@@ -7,6 +7,7 @@ const p = defineProps<{
     chaifenMap: ChaifenMap,
     zigenMap: ZigenMap,
     supplement: boolean,
+    ming: boolean,
     /** 是否启用URL里的搜索Params */
     searchParam?: boolean,
 }>()
@@ -50,15 +51,15 @@ const poet: string = poets[ind];
         <input type="text" class="grow" placeholder="輸入文本查詢拆分" v-model="userInput" />
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70">
             <path fill-rule="evenodd"
-                  d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                  clip-rule="evenodd" />
+                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                clip-rule="evenodd" />
         </svg>
     </label>
 
     <div v-if="!userInput" class="opacity-40 text-center p-9 tracking-widest">{{ poet }}</div>
     <div class="flex justify-center flex-wrap my-8" v-else>
         <Card v-for="zigen in searchZigens" :key="zigen" :chaifen="chaifenMap.get(zigen)" :zigenMap
-              :supplement="p.supplement" />
+            :supplement="p.supplement" :ming="p.ming" />
     </div>
 
 </template>

@@ -20,25 +20,49 @@ export type ZigenMap = Map<string, Zigen>
 export type ChaifenMap = Map<string, Chaifen>
 
 /** 根据拆分表生成编码 */
-export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, supplement: boolean) {
-
-    // 依次取一、二、三、末根大码
+export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, supplement: boolean, ming: boolean) {
     const divisionArray = [...division]
-    let result = divisionArray.map(zigen => zigenMap.get(zigen)?.ma?.[0] || '?')
 
-    // 不足四码时，补上末根小码。
-    if (result.length < 4) {
-        const lastZigen = divisionArray[divisionArray.length - 1]
-        result.push(zigenMap.get(lastZigen)?.ma?.[1] || '?')
-    }
-
-    // 仍然不足四码时，补上首根小码。
-    if ((result.length < 4) && supplement) {
+    if (ming) {
+        let result: string[] = []
         const firstZigen = divisionArray[0]
-        result.push(zigenMap.get(firstZigen)?.ma?.[1] || '?')
+        const lastZigen = divisionArray[divisionArray.length - 1]
+
+        // 取首根大、聲
+        if (divisionArray.length == 1) {
+            result.push((zigenMap.get(firstZigen)?.ma?.[0] || '?').toUpperCase())
+        }
+        else {
+            result.push((zigenMap.get(firstZigen)?.ma?.slice(0, -1) || '?').toUpperCase())
+        }
+        // 取剩餘所有根大碼
+        result.push(...divisionArray.slice(1).map(zigen => (zigenMap.get(zigen)?.ma?.[0] || '?').toUpperCase()))
+        // 取末根聲、韻
+        const capitalizeFirstIfTwoLetters = (str: string) =>
+            str.length === 2 ? str[0].toUpperCase() + str[1] : str
+        result.push(capitalizeFirstIfTwoLetters(zigenMap.get(lastZigen)?.ma?.slice(1) || '?'))
+
+        return result.join('')
     }
 
-    return result.join('')
+    else {
+        // 依次取一、二、三、末根大码
+        let result = divisionArray.map(zigen => zigenMap.get(zigen)?.ma?.[0] || '?')
+
+        // 不足四码时，补上末根小码。
+        if (result.length < 4) {
+            const lastZigen = divisionArray[divisionArray.length - 1]
+            result.push(zigenMap.get(lastZigen)?.ma?.[1] || '?')
+        }
+
+        // 仍然不足四码时，补上首根小码。
+        if ((result.length < 4) && supplement) {
+            const firstZigen = divisionArray[0]
+            result.push(zigenMap.get(firstZigen)?.ma?.[1] || '?')
+        }
+
+        return result.join('')
+    }
 }
 
 /**

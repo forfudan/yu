@@ -347,6 +347,10 @@ export default defineConfig({
           text: '卿云',
           link: '/chaifen/joy'
         },
+        {
+          text: '日月',
+          link: '/chaifen/ming'
+        },
       ],
       '/sky': [
         {
@@ -761,6 +765,10 @@ export default defineConfig({
             {
               text: '卿雲',
               link: '/zht/chaifen/joy'
+            },
+            {
+              text: '日月',
+              link: '/zht/chaifen/ming'
             },
           ],
           '/zht/sky': [
