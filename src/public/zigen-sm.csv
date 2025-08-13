@@ -52,8 +52,6 @@ font,ma
 长,dre
 丿,fpe
 乃,fne
-壴,fsu
-水,fko
 一,fi
 丂,fki
 匚,ffe
@@ -65,7 +63,6 @@ font,ma
 鱼,fe
 而,fo
 面,fme
-食,fka
 ,fo
 ,fo
 ,fo
@@ -78,6 +75,8 @@ font,ma
 革,gge
 儿,go
 ,go
+丆,ga
+厂,ga
 广,ggo
 疒,gne
 鹿,glu
@@ -167,8 +166,6 @@ font,ma
 下,kxa
 入,ke
 八,kba
-丆,kre
-厂,kre
 弋,ki
 戈,kge
 戊,ku
@@ -241,8 +238,6 @@ font,ma
 ,mci
 ,mo
 ,mzo
-虫,mri
-風,mfe
 亍,nru
 厶,nsi
 壬,no
@@ -262,6 +257,8 @@ font,ma
 豸,psi
 几,qji
 殳,qku
+虫,qho
+風,qfe
 丩,qo
 丱,qgi
 卯,qmi
@@ -333,13 +330,15 @@ font,ma
 ,vi
 土,vdu
 士,vke
-耂,vli
+壴,vsu
+耂,vo
 龶,vke
 ,vo
 ⺁,vi
 戶,vhu
 斤,vjo
 力,wli
+水,wko
 人,wo
 僉,wqi
 合,whe
@@ -349,6 +348,7 @@ font,ma
 隹,wco
 申,wke
 禺,we
+食,wka
 䒑,xci
 丷,xci
 ,xci
