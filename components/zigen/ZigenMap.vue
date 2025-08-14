@@ -456,16 +456,36 @@ onMounted(() => {
                     </div>
 
                     <!-- 无字根提示 -->
-                    <div v-else-if="!emptyKeys.includes(key)" class="text-xs text-gray-400">
-                        <div v-if="key === '/'" class="text-center">
+                    <div v-else-if="!emptyKeys.includes(key)" class="text-xs text-gray-400 no-zigen-text">
+                        <div v-if="key === '/'" class="vertical-text">
                             <div>引導特殊符號</div>
                             <div>切換多重註解</div>
                         </div>
-                        <div v-else-if="key === 'z'" class="text-center">
+                        <div v-else-if="key === 'z'" class="vertical-text">
                             <div>引導拼音反查</div>
                             <div>引導歷史輸入</div>
                         </div>
-                        <div v-else>
+                        <div v-else-if="key === 'a'" class="vertical-text">
+                            <div></div>
+                            <div>一碼上屏字　了</div>
+                        </div>
+                        <div v-else-if="key === 'e'" class="vertical-text">
+                            <div></div>
+                            <div>一碼上屏字　的</div>
+                        </div>
+                        <div v-else-if="key === 'i'" class="vertical-text">
+                            <div></div>
+                            <div>一碼上屏字　是</div>
+                        </div>
+                        <div v-else-if="key === 'o'" class="vertical-text">
+                            <div></div>
+                            <div>一碼上屏字　我</div>
+                        </div>
+                        <div v-else-if="key === 'u'" class="vertical-text">
+                            <div></div>
+                            <div>一碼上屏字　不</div>
+                        </div>
+                        <div v-else class="vertical-text single-line">
                             {{ getKeyLabel(key) }}
                         </div>
                     </div>
@@ -694,6 +714,30 @@ onMounted(() => {
     font-size: 0.4rem;
     color: var(--fallback-nc, oklch(var(--nc)/0.5));
     margin-left: 0.1rem;
+}
+
+/* 无字根文字竖排样式 */
+.no-zigen-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.vertical-text.single-line {
+    /* 单行文字的特殊处理 */
+    letter-spacing: 0.1em;
+}
+
+.vertical-text div {
+    margin: 0.1rem 0;
 }
 
 /* ===== 字根字體樣式 ===== */
