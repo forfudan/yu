@@ -643,13 +643,13 @@ onMounted(() => {
 .zigen-list {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr)) !important;
-    justify-items: center !important;
+    justify-items: start !important;
     align-items: start !important;
     gap: 0.05rem !important;
     width: 100% !important;
     margin-top: 0.1rem;
     line-height: 1.2;
-    /* 使用 CSS Grid 强制居中对齐，解决不同方案的对齐问题 */
+    /* 使用 CSS Grid 靠左对齐 */
 }
 
 .zigen-list::after {
@@ -659,7 +659,7 @@ onMounted(() => {
 
 .zigen-item {
     display: block !important;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding: 0.01rem 0.01rem;
     /* 移除背景色，让字根显示更清爽 */
     border-radius: 0.2rem;
@@ -669,8 +669,8 @@ onMounted(() => {
     cursor: pointer;
     border: 1px solid transparent;
     line-height: 1.0;
-    margin: 0.01rem auto !important;
-    text-align: center !important;
+    margin: 0.01rem 0 !important;
+    text-align: left !important;
 }
 
 .zigen-item:hover {
