@@ -126,23 +126,33 @@ const zigenByKey = computed(() => {
 
     console.log(`Found ${validZigens.length} valid zigens`);
 
-    // 按按键分组并处理相同编码
-    for (const zigen of validZigens) {
+    // 按按键分组并处理连续相同编码的字根
+    for (let i = 0; i < validZigens.length; i++) {
+        const zigen = validZigens[i];
         const { font, ma, firstLetter, code } = zigen;
 
         if (!result[firstLetter]) {
             result[firstLetter] = { visible: [], hidden: [] };
         }
 
-        // 检查是否已经有相同编码的字根
+        // 检查前一个字根是否有相同的编码和按键
+        const prevZigen = i > 0 ? validZigens[i - 1] : null;
+        const isPrevSameCodeAndKey = prevZigen &&
+            prevZigen.code === code &&
+            prevZigen.firstLetter === firstLetter;
+
+        // 检查是否已经有相同编码的字根在visible中
         const existingWithSameCode = result[firstLetter].visible.find(item => item.code === code);
 
         if (!existingWithSameCode) {
             // 第一个具有此编码的字根，放在visible中
             result[firstLetter].visible.push({ font, code });
-        } else {
-            // 已有相同编码的字根，放在hidden中
+        } else if (isPrevSameCodeAndKey) {
+            // 只有当前字根与前一个字根编码相同且连续时，才放在hidden中
             result[firstLetter].hidden.push({ font, code });
+        } else {
+            // 编码相同但不连续，作为新的visible字根显示
+            result[firstLetter].visible.push({ font, code });
         }
     }
 
