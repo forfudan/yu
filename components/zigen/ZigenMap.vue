@@ -423,7 +423,8 @@ onMounted(() => {
                     <div class="key-label">{{ key.toUpperCase() }}</div>
 
                     <!-- 字根显示 - 只显示可见的字根 -->
-                    <div v-if="!emptyKeys.includes(key) && zigenByKey[key]?.visible.length > 0" class="zigen-list">
+                    <div v-if="!emptyKeys.includes(key) && zigenByKey[key]?.visible.length > 0"
+                        class="zigen-list text-indigo-800 dark:text-indigo-300">
                         <span v-for="(zigen, index) in zigenByKey[key].visible" :key="index" class="zigen-item"
                             @mouseenter="handleZigenHover($event, zigen)" @mouseleave="handleZigenLeave"
                             @click="handleZigenClick($event, zigen)">
@@ -454,7 +455,7 @@ onMounted(() => {
                     </h3>
 
                     <!-- 字根列表 - 每個字根一行，例字在同一行 -->
-                    <div class="zigen-rows">
+                    <div class="zigen-rows text-indigo-800 dark:text-indigo-300">
                         <!-- 可見字根 -->
                         <div v-for="(zigen, index) in hoveredZigenInfo.visible" :key="`visible-${index}`"
                             class="zigen-row-inline">
@@ -497,13 +498,13 @@ onMounted(() => {
                 <div class="popup-body">
                     <div class="popup-header">
                         <h3 class="popup-title">
-                            字根 "{{ pinnedZigen }}" 的同编码字根
+                            編碼 "{{ pinnedZigenInfo.visible[0]?.code || pinnedZigen }}" 上的歸併字根
                         </h3>
                         <button @click="closePinnedPopup" class="close-btn">✕</button>
                     </div>
 
                     <!-- 字根列表 - 每個字根一行，例字在同一行 -->
-                    <div class="zigen-rows">
+                    <div class="zigen-rows text-indigo-800 dark:text-indigo-300">
                         <!-- 可見字根 -->
                         <div v-for="(zigen, index) in pinnedZigenInfo.visible" :key="`pinned-visible-${index}`"
                             class="zigen-row-inline">
@@ -635,20 +636,13 @@ onMounted(() => {
     padding: 0.01rem 0.01rem;
     background: var(--fallback-n, oklch(var(--n)/0.05));
     border-radius: 0.2rem;
-    color: var(--fallback-nc, oklch(var(--nc)/0.7));
+    /* 移除默认颜色，让内部字根字体优先 */
     transition: all 0.15s ease;
     white-space: nowrap;
     cursor: pointer;
     border: 1px solid transparent;
     line-height: 1.0;
     margin: 0.01rem;
-}
-
-/* 在亮色模式下為 zigen-item 設置深色文字 */
-@media (prefers-color-scheme: light) {
-    .zigen-item {
-        color: rgb(0 0 0) !important;
-    }
 }
 
 .zigen-item:hover {
@@ -664,52 +658,15 @@ onMounted(() => {
     margin-left: 0.1rem;
 }
 
+/* ===== 字根字體樣式 ===== */
 .zigen-font {
-    color: #45237c !important;
     font-weight: normal;
-    /* 使用正常字重，保持宋體的細緻感 */
     font-size: inherit;
-    /* 保持全局 zigen-font 的字體族設置，不覆蓋 font-family */
-}
-
-/* 在亮色模式下使用深藍色字體，與 Card.vue 保持一致 */
-@media (prefers-color-scheme: light) {
-    .zigen-font {
-        color: rgb(55 48 163) !important;
-        /* indigo-800 深藍色，與 Card.vue 相同 */
-    }
-}
-
-/* 也針對 zigen-item 內的字根字體設置 */
-@media (prefers-color-scheme: light) {
-    .zigen-item .zigen-font {
-        color: rgb(55 48 163) !important;
-        /* indigo-800 深藍色，與 Card.vue 相同 */
-    }
-}
-
-/* 針對鍵盤佈局中的所有字根字體 */
-@media (prefers-color-scheme: light) {
-    .keyboard-layout .zigen-font {
-        color: rgb(55 48 163) !important;
-        /* indigo-800 深藍色，與 Card.vue 相同 */
-    }
-}
-
-/* 在深色模式下使用主題色 */
-.dark .zigen-font {
-    color: var(--fallback-p, oklch(var(--p)/var(--tw-text-opacity))) !important;
+    /* 不定义颜色，继承父容器的颜色 */
 }
 
 .zigen-item:hover .zigen-font {
-    color: var(--fallback-pc, oklch(var(--pc)/var(--tw-text-opacity)));
-}
-
-/* 懸停時在亮色模式下使用白色字體 */
-@media (prefers-color-scheme: light) {
-    .zigen-item:hover .zigen-font {
-        color: white;
-    }
+    color: white !important;
 }
 
 .zigen-code {
@@ -1091,6 +1048,5 @@ onMounted(() => {
 
 .zigen-header.other-zigen .zigen-font {
     color: inherit;
-    /* 使用繼承的顏色 */
 }
 </style>
