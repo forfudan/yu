@@ -605,6 +605,13 @@ onMounted(() => {
     margin: 0.01rem;
 }
 
+/* 在亮色模式下為 zigen-item 設置深色文字 */
+@media (prefers-color-scheme: light) {
+    .zigen-item {
+        color: rgb(0 0 0) !important;
+    }
+}
+
 .zigen-item:hover {
     background: var(--fallback-p, oklch(var(--p)/0.1));
     color: var(--fallback-p, oklch(var(--p)/1));
@@ -620,20 +627,71 @@ onMounted(() => {
 
 .zigen-font {
     font-family: 'Yuniversus', sans-serif;
-    color: var(--fallback-p, oklch(var(--p)/var(--tw-text-opacity)));
+    color: #45237c !important;
+    /* 直接使用十六進制黑色並強制優先級 */
     font-weight: 500;
     font-size: inherit;
+}
+
+/* 在亮色模式下使用深色字體 */
+@media (prefers-color-scheme: light) {
+    .zigen-font {
+        color: rgb(0 0 0) !important;
+        /* 純黑色，使用 !important 提高優先級 */
+    }
+}
+
+/* 也針對 zigen-item 內的字根字體設置 */
+@media (prefers-color-scheme: light) {
+    .zigen-item .zigen-font {
+        color: rgb(0 0 0) !important;
+    }
+}
+
+/* 針對鍵盤佈局中的所有字根字體 */
+@media (prefers-color-scheme: light) {
+    .keyboard-layout .zigen-font {
+        color: rgb(0 0 0) !important;
+    }
+}
+
+/* 在深色模式下使用主題色 */
+.dark .zigen-font {
+    color: var(--fallback-p, oklch(var(--p)/var(--tw-text-opacity))) !important;
 }
 
 .zigen-item:hover .zigen-font {
     color: var(--fallback-pc, oklch(var(--pc)/var(--tw-text-opacity)));
 }
 
+/* 懸停時在亮色模式下使用白色字體 */
+@media (prefers-color-scheme: light) {
+    .zigen-item:hover .zigen-font {
+        color: white;
+    }
+}
+
 .zigen-code {
     font-family: monospace;
     font-size: inherit;
-    color: var(--fallback-bc, oklch(var(--bc)/0.6));
+    color: #666666 !important;
+    /* 直接使用灰色並強制優先級 */
     font-weight: 400;
+}
+
+/* 在亮色模式下使用更深的顏色 */
+@media (prefers-color-scheme: light) {
+    .zigen-code {
+        color: rgb(55 65 81) !important;
+        /* 更深的灰色，使用 !important */
+    }
+}
+
+/* 針對 zigen-item 內的編碼 */
+@media (prefers-color-scheme: light) {
+    .zigen-item .zigen-code {
+        color: rgb(55 65 81) !important;
+    }
 }
 
 .zigen-item:hover .zigen-code {
