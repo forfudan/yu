@@ -27,14 +27,11 @@ hero:
 ---
 
 <script setup>
-import Search from '@/search/OptimizedFetchSearch.vue'
-import Chaifen from '@/chaifen/Chaifen.vue'
-import MultiChaifen from '@/chaifen/MultiChaifen.vue'
-import IME from '@/ime/FetchInput.vue'
+import TabbedSearch from '@/search/TabbedSearch.vue'
 </script>
 
 <div class="zigen-font">
-<Search chaifenUrl="/chaifen.csv" zigenUrl="/zigen-star.csv" :supplement="true" />
+<TabbedSearch defaultScheme="star" />
 </div>
 
 <!-- <MultiChaifen chars="卿雲爛兮糾縵縵兮" :size="35" />
