@@ -41,7 +41,7 @@ onMounted(async () => {
 
   cards.value = chaifenValues.map(cf => ({
     name: cf.char,
-    key: makeCodesFromDivision(cf.division, zigenMap, p.supplement, p.ming).toLowerCase()
+    key: makeCodesFromDivision(cf.division, zigenMap, p.supplement, p.ming)
   }))
 
   cache[cardsName] = cards.value

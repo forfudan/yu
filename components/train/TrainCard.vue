@@ -49,8 +49,9 @@ watch(userKeys, (newKeys) => {
 
 function checkNextItem(answer: string) {
     const answerLowercase = answer.toLowerCase()
+    const keyLowercase = card.value.key.toLowerCase()
     let next: { item: Card; isFirst: boolean };
-    if (answerLowercase === card.value.key) {
+    if (answerLowercase === keyLowercase) {
         next = thisSchedule.nextSuccess();
         isCorrect.value = true
     } else {
