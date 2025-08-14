@@ -36,8 +36,8 @@ const keyboardLayout = [
     ['z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/']
 ];
 
-// 需要显示但暂时留空的键
-const emptyKeys = [',', '.', '/', ';', "'"];
+// 需要显示但暂时留空的键（移除 ,./; 四个键，让它们显示字根）
+const emptyKeys = ["'"];
 
 // 支持的方案
 const schemes: ZigenScheme[] = [
@@ -272,6 +272,16 @@ function handleZigenLeave() {
     }
 }
 
+// 获取键位标注文本
+function getKeyLabel(key: string): string {
+    switch (key) {
+        case ';': return '次選';
+        case ',': return '逗號';
+        case '.': return '句號';
+        default: return '无字根';
+    }
+}
+
 // 處理字根點擊 - 固定彈窗
 async function handleZigenClick(event: MouseEvent, zigen: { font: string, code: string }) {
     event.stopPropagation();
@@ -437,7 +447,17 @@ onMounted(() => {
 
                     <!-- 无字根提示 -->
                     <div v-else-if="!emptyKeys.includes(key)" class="text-xs text-gray-400">
-                        无字根
+                        <div v-if="key === '/'" class="text-center">
+                            <div>引導特殊符號</div>
+                            <div>切換多重註解</div>
+                        </div>
+                        <div v-else-if="key === 'z'" class="text-center">
+                            <div>引導拼音反查</div>
+                            <div>引導歷史輸入</div>
+                        </div>
+                        <div v-else>
+                            {{ getKeyLabel(key) }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -589,6 +609,7 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     overflow: hidden;
 }
 
@@ -620,21 +641,27 @@ onMounted(() => {
 }
 
 .zigen-list {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 0.1rem;
-    width: 100%;
-    margin-top: 0.15rem;
-    line-height: 1.0;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr)) !important;
+    justify-items: center !important;
+    align-items: start !important;
+    gap: 0.05rem !important;
+    width: 100% !important;
+    margin-top: 0.1rem;
+    line-height: 1.2;
+    /* 使用 CSS Grid 强制居中对齐，解决不同方案的对齐问题 */
+}
+
+.zigen-list::after {
+    content: "";
+    flex: auto;
 }
 
 .zigen-item {
+    display: block !important;
     font-size: 0.8rem;
     padding: 0.01rem 0.01rem;
-    background: var(--fallback-n, oklch(var(--n)/0.05));
+    /* 移除背景色，让字根显示更清爽 */
     border-radius: 0.2rem;
     /* 移除默认颜色，让内部字根字体优先 */
     transition: all 0.15s ease;
@@ -642,7 +669,8 @@ onMounted(() => {
     cursor: pointer;
     border: 1px solid transparent;
     line-height: 1.0;
-    margin: 0.01rem;
+    margin: 0.01rem auto !important;
+    text-align: center !important;
 }
 
 .zigen-item:hover {

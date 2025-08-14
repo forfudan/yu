@@ -138,7 +138,7 @@ function restartTraining() {
                 要不要再來一輪？
             </button>
             <div class="text-sm text-gray-500">
-                繼續聯繫以巩固記憶
+                繼續練習以巩固記憶
             </div>
         </div>
     </div>
