@@ -6,3 +6,8 @@ src/.vitepress/cache
 .DS_Store
 .vscode
 .zed
+
+# Generated files (created during build)
+src/public/*.json
+src/public/build-info.json
+!src/public/mb-*.txt

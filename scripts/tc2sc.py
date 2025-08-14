@@ -75,7 +75,7 @@ paths_of_docs = [
 ]
 
 for path_of_doc in paths_of_docs:
-    with open("../src/zht" + path_of_doc, mode="r", encoding="utf8") as temp:
+    with open("src/zht" + path_of_doc, mode="r", encoding="utf8") as temp:
         doc = temp.read()
     if not doc.startswith("<!-- do not translate -->"):
         pat = re.compile(
@@ -94,5 +94,5 @@ for path_of_doc in paths_of_docs:
         output = doc
         print(path_of_doc, "not translated.")
     output = output.replace("/zht/", "/")
-    with open("../src" + path_of_doc, mode="w", encoding="utf8") as temp:
+    with open("src" + path_of_doc, mode="w", encoding="utf8") as temp:
         temp.write(output)

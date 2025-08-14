@@ -27,7 +27,7 @@ hero:
 ---
 
 <script setup>
-import Search from '@/search/FetchSearch.vue'
+import Search from '@/search/OptimizedFetchSearch.vue'
 import Chaifen from '@/chaifen/Chaifen.vue'
 import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 import IME from '@/ime/FetchInput.vue'
