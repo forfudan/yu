@@ -10,7 +10,7 @@
 -->
 
 <script setup lang="ts">
-import { ref, computed, watch, onMounted } from "vue";
+import { ref, computed, onMounted, watch, toRef } from 'vue'
 import { fetchZigen } from "../search/share";
 import ChaiDataLoader from "../search/ChaiDataLoader";
 import type { ZigenMap as ZigenMapType, ChaifenMap, Chaifen } from "../search/share";
@@ -18,9 +18,17 @@ import type { ZigenMap as ZigenMapType, ChaifenMap, Chaifen } from "../search/sh
 const props = defineProps<{
     defaultScheme?: string
     hideSchemeButtons?: boolean
+    columnMinWidth?: string
 }>()
 
 const { hideSchemeButtons } = props
+const columnMinWidth = toRef(props, 'columnMinWidth')
+
+// Dynamic grid template columns based on columnMinWidth parameter
+const gridTemplateColumns = computed(() => {
+    const width = columnMinWidth.value || '2rem'
+    return `repeat(auto-fill, minmax(${width}, max-content))`
+})
 
 interface ZigenScheme {
     id: string
@@ -68,7 +76,8 @@ const schemes: ZigenScheme[] = [
 ];
 
 // 响应式状态
-const activeScheme = ref(props.defaultScheme || 'star');
+// 使用传入的 defaultScheme 或默认值，但不创建独立的响应式状态
+const activeScheme = computed(() => props.defaultScheme || 'star');
 const zigenMap = ref<ZigenMapType>();
 const chaifenLoader = ref<ChaiDataLoader>();
 const isLoading = ref(false);
@@ -84,16 +93,15 @@ const pinnedZigenInfo = ref<{ visible: Array<{ font: string, code: string }>, hi
 const pinnedZigenExampleChars = ref<{ [zigenFont: string]: string[] }>({});
 const isPinned = ref(false);
 
-// 監聽 props.defaultScheme 的變化
-watch(() => props.defaultScheme, (newScheme) => {
-    if (newScheme && newScheme !== activeScheme.value) {
-        activeScheme.value = newScheme;
-    }
-}, { immediate: true });
-
 // 当前方案
 const currentScheme = computed(() => {
     return schemes.find(s => s.id === activeScheme.value) || schemes[0];
+});
+
+// 监听方案变化，清除拆分数据缓存
+watch(() => props.defaultScheme, () => {
+    // 清除已緩存的拆分數據加載器，讓新方案在第一次懸停時重新加載
+    chaifenLoader.value = null;
 });
 
 // 按键分组的字根 - 优化版本，合并相同编码的字根
@@ -375,11 +383,6 @@ function findSameCodeZigens(targetFont: string, targetFullCode: string) {
     }
 
     return { visible, hidden };
-}// 切换方案
-function switchScheme(schemeId: string) {
-    activeScheme.value = schemeId;
-    // 清除已緩存的拆分數據加載器，讓新方案在第一次懸停時重新加載
-    chaifenLoader.value = null;
 }
 
 // 获取方案对应的汉字
@@ -415,7 +418,7 @@ onMounted(() => {
     <div class="zigen-map-container">
         <!-- 方案切换圆形按钮 -->
         <div v-if="!hideSchemeButtons" class="flex justify-center mb-6 space-x-4">
-            <button v-for="scheme in schemes" :key="scheme.id" @click="switchScheme(scheme.id)" :class="[
+            <button v-for="scheme in schemes" :key="scheme.id" :class="[
                 'scheme-button',
                 { 'scheme-button-active': activeScheme === scheme.id }
             ]" :title="scheme.name">
@@ -444,7 +447,7 @@ onMounted(() => {
 
                     <!-- 字根显示 - 只显示可见的字根 -->
                     <div v-if="!emptyKeys.includes(key) && zigenByKey[key]?.visible.length > 0"
-                        class="zigen-list text-indigo-800 dark:text-indigo-300">
+                        class="zigen-list text-indigo-800 dark:text-indigo-300" :style="{ gridTemplateColumns }">
                         <span v-for="(zigen, index) in zigenByKey[key].visible" :key="index" class="zigen-item"
                             @mouseenter="handleZigenHover($event, zigen)" @mouseleave="handleZigenLeave"
                             @click="handleZigenClick($event, zigen)">
@@ -457,35 +460,35 @@ onMounted(() => {
 
                     <!-- 无字根提示 -->
                     <div v-else-if="!emptyKeys.includes(key)" class="text-xs text-gray-400 no-zigen-text">
-                        <div v-if="key === '/'" class="vertical-text">
+                        <div v-if="key === '/'" class="vertical-text zigen-font">
                             <div>引導特殊符號</div>
                             <div>切換多重註解</div>
                         </div>
-                        <div v-else-if="key === 'z'" class="vertical-text">
+                        <div v-else-if="key === 'z'" class="vertical-text zigen-font">
                             <div>引導拼音反查</div>
                             <div>引導歷史輸入</div>
                         </div>
-                        <div v-else-if="key === 'a'" class="vertical-text">
+                        <div v-else-if="key === 'a'" class="vertical-text zigen-font">
                             <div></div>
                             <div>一碼上屏字　了</div>
                         </div>
-                        <div v-else-if="key === 'e'" class="vertical-text">
+                        <div v-else-if="key === 'e'" class="vertical-text zigen-font">
                             <div></div>
                             <div>一碼上屏字　的</div>
                         </div>
-                        <div v-else-if="key === 'i'" class="vertical-text">
+                        <div v-else-if="key === 'i'" class="vertical-text zigen-font">
                             <div></div>
                             <div>一碼上屏字　是</div>
                         </div>
-                        <div v-else-if="key === 'o'" class="vertical-text">
+                        <div v-else-if="key === 'o'" class="vertical-text zigen-font">
                             <div></div>
                             <div>一碼上屏字　我</div>
                         </div>
-                        <div v-else-if="key === 'u'" class="vertical-text">
+                        <div v-else-if="key === 'u'" class="vertical-text zigen-font">
                             <div></div>
                             <div>一碼上屏字　不</div>
                         </div>
-                        <div v-else class="vertical-text single-line">
+                        <div v-else class="vertical-text single-line zigen-font">
                             {{ getKeyLabel(key) }}
                         </div>
                     </div>
@@ -501,7 +504,7 @@ onMounted(() => {
             <div class="popup-container">
                 <div class="popup-body">
                     <h3 class="popup-title">
-                        編碼 "{{ hoveredZigenInfo.visible[0]?.code || hoveredZigen }}" 上的歸併字根
+                        編碼 {{ hoveredZigenInfo.visible[0]?.code || hoveredZigen }} 上的歸併字根
                     </h3>
 
                     <!-- 字根列表 - 每個字根一行，例字在同一行 -->
@@ -548,7 +551,7 @@ onMounted(() => {
                 <div class="popup-body">
                     <div class="popup-header">
                         <h3 class="popup-title">
-                            編碼 "{{ pinnedZigenInfo.visible[0]?.code || pinnedZigen }}" 上的歸併字根
+                            編碼 {{ pinnedZigenInfo.visible[0]?.code || pinnedZigen }} 上的歸併字根
                         </h3>
                         <button @click="closePinnedPopup" class="close-btn">✕</button>
                     </div>
@@ -672,14 +675,14 @@ onMounted(() => {
 
 .zigen-list {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr)) !important;
+    /* grid-template-columns will be set dynamically via :style */
     justify-items: start !important;
     align-items: start !important;
-    gap: 0.05rem !important;
+    gap: 0.01rem 0.01rem !important;
     width: 100% !important;
-    margin-top: 0.1rem;
-    line-height: 1.2;
-    /* 使用 CSS Grid 靠左对齐 */
+    margin-top: 0.0rem;
+    line-height: 1.0;
+    /* Column width controlled by columnMinWidth parameter */
 }
 
 .zigen-list::after {
@@ -691,15 +694,13 @@ onMounted(() => {
     display: block !important;
     font-size: 0.9rem;
     padding: 0.01rem 0.01rem;
-    /* 移除背景色，让字根显示更清爽 */
     border-radius: 0.2rem;
-    /* 移除默认颜色，让内部字根字体优先 */
     transition: all 0.15s ease;
     white-space: nowrap;
     cursor: pointer;
     border: 1px solid transparent;
     line-height: 1.0;
-    margin: 0.01rem 0 !important;
+    margin: 0rem 0rem !important;
     text-align: left !important;
 }
 
@@ -753,9 +754,8 @@ onMounted(() => {
 
 .zigen-code {
     font-family: monospace;
-    font-size: inherit;
+    font-size: 0.7rem;
     color: #666666 !important;
-    /* 直接使用灰色並強制優先級 */
     font-weight: 400;
 }
 

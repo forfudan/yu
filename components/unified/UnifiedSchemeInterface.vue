@@ -29,6 +29,19 @@ const currentScheme = computed(() => {
     return SCHEMES.find(s => s.id === activeScheme.value) || SCHEMES[0]
 })
 
+// 根據方案決定字根列寬度
+const columnMinWidth = computed(() => {
+    switch (activeScheme.value) {
+        case 'ming':
+            return '2rem'
+        case 'joy':
+        case 'light':
+        case 'star':
+        default:
+            return '1.4rem'
+    }
+})
+
 // 方案切換處理
 function handleSchemeChange(schemeId: string) {
     activeScheme.value = schemeId
@@ -65,7 +78,7 @@ function handleSchemeChange(schemeId: string) {
 
         <!-- 字根圖組件 -->
         <div class="zigen-section mt-8">
-            <ZigenMap :default-scheme="activeScheme" :hide-scheme-buttons="true" />
+            <ZigenMap :default-scheme="activeScheme" :hide-scheme-buttons="true" :column-min-width="columnMinWidth" />
         </div>
     </div>
 </template>

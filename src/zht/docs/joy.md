@@ -1,5 +1,9 @@
 # 卿雲爛兮
 
+<script setup>
+import ZigenMap from "@/zigen/ZigenMap.vue"
+</script>
+
 ::: warning 注意
 本方案基於宇浩拆分，爲 25.5 鍵亂序單編、繁簡通打方案。初始學習難度較大，請務必充分了解、分析、平衡其風險和收益後再決定是否學習使用。
 :::
@@ -50,9 +54,9 @@
 
 詳見[《常見輸入法重碼數據》](./statistics.md)
 
-以下爲本方案的字根圖。有可能作爲末根的生僻部首，圖上標註其讀音，以供參考：
+以下爲本方案的字根圖。
 
-[![yujoy](/yujoy.png)](/yujoy.png)
+<ZigenMap :default-scheme="'joy'" :hide-scheme-buttons="true" column-min-width="1.5rem" />
 
 ## 優缺點
 
