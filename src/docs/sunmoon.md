@@ -228,7 +228,7 @@
 1. `食`，`FKa` -> `WKa` （和`人`聚类）
 1. `水`，`FKo` -> `WKo`
 1. <ruby>厂丆<rt>ān</rt></ruby>，`Kre` -> `Ga` （和`广疒鹿麻`聚类）
-1. <ruby>风<rt>fēng</rt>虫<rt>hǔi</rt></ruby>，`M` -> `Q` （和`几殳`聚类）
+1. <span class="yuniversus"><ruby>风<rt>fēng</rt>虫<rt>hǔi</rt></ruby></span>，`M` -> `Q` （和`几殳`聚类）
 1. <ruby>耂<rt>lǎo</rt></ruby>，`Vli` -> `Vo` （生僻字，只做首部，此处作无音化处理）
 1. <ruby>壴<rt>zhú</rt></ruby>，`Fsu` -> `Vsu` （和`土士龶耂`聚类）
 
