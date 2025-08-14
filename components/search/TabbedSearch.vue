@@ -109,7 +109,7 @@ const componentKey = computed(() => `search-${activeScheme.value}`)
         <!-- Tab Navigation -->
         <div class="tabs tabs-boxed mb-4 bg-base-200">
             <button v-for="scheme in schemes" :key="scheme.id" @click="switchScheme(scheme.id)" :class="[
-                'tab tab-lg',
+                'tab tab-lg tab-override',
                 { 'tab-active': activeScheme === scheme.id }
             ]" :title="scheme.description">
                 {{ scheme.name }}
@@ -120,7 +120,7 @@ const componentKey = computed(() => `search-${activeScheme.value}`)
         <div class="mb-3 text-sm text-gray-600 dark:text-gray-400 text-center">
             <span class="font-medium">當前方案</span>：{{ currentScheme.name }}
             <span v-if="currentScheme.description" class="ml-2 text-xs opacity-75">{{ currentScheme.description
-                }}</span>
+            }}</span>
         </div>
 
         <!-- Search Component -->
@@ -137,21 +137,29 @@ const componentKey = computed(() => `search-${activeScheme.value}`)
     margin: 0 auto;
 }
 
-.tab {
-    transition: all 0.2s ease;
+/* Tab 顏色覆蓋 - 使用專門的 override 類 */
+.tab-override {
+    color: rgb(107 114 128) !important;
+    /* 覆蓋 zigen-font 的黑色 */
 }
 
-.tab:hover {
-    background-color: var(--fallback-b3, oklch(var(--b3)/var(--tw-bg-opacity)));
+.tab-override:hover {
+    color: rgb(75 85 99) !important;
 }
 
-.tab-active {
-    background-color: var(--fallback-p, oklch(var(--p)/var(--tw-bg-opacity)));
-    color: var(--fallback-pc, oklch(var(--pc)/var(--tw-text-opacity)));
+.tab-override.tab-active {
+    color: white !important;
 }
 
-.tab-active:hover {
-    background-color: var(--fallback-pf, oklch(var(--pf)/var(--tw-bg-opacity)));
+/* 暗色模式 */
+@media (prefers-color-scheme: dark) {
+    .tab-override {
+        color: rgb(156 163 175) !important;
+    }
+
+    .tab-override:hover {
+        color: rgb(209 213 219) !important;
+    }
 }
 
 /* Custom styling for better visual hierarchy */

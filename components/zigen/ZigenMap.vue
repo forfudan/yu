@@ -362,9 +362,12 @@ onMounted(() => {
 <template>
     <div class="zigen-map-container">
         <!-- 方案切换标签 -->
+        <!-- Tab Navigation -->
         <div class="tabs tabs-boxed mb-4 bg-base-200">
-            <button v-for="scheme in schemes" :key="scheme.id" @click="switchScheme(scheme.id)"
-                :class="['tab tab-lg', { 'tab-active': activeScheme === scheme.id }]">
+            <button v-for="scheme in schemes" :key="scheme.id" @click="switchScheme(scheme.id)" :class="[
+                'tab tab-lg tab-override',
+                { 'tab-active': activeScheme === scheme.id }
+            ]">
                 {{ scheme.name }}
             </button>
         </div>
@@ -626,32 +629,34 @@ onMounted(() => {
 }
 
 .zigen-font {
-    font-family: 'Yuniversus', sans-serif;
     color: #45237c !important;
-    /* 直接使用十六進制黑色並強制優先級 */
-    font-weight: 500;
+    font-weight: normal;
+    /* 使用正常字重，保持宋體的細緻感 */
     font-size: inherit;
+    /* 保持全局 zigen-font 的字體族設置，不覆蓋 font-family */
 }
 
-/* 在亮色模式下使用深色字體 */
+/* 在亮色模式下使用深藍色字體，與 Card.vue 保持一致 */
 @media (prefers-color-scheme: light) {
     .zigen-font {
-        color: rgb(0 0 0) !important;
-        /* 純黑色，使用 !important 提高優先級 */
+        color: rgb(55 48 163) !important;
+        /* indigo-800 深藍色，與 Card.vue 相同 */
     }
 }
 
 /* 也針對 zigen-item 內的字根字體設置 */
 @media (prefers-color-scheme: light) {
     .zigen-item .zigen-font {
-        color: rgb(0 0 0) !important;
+        color: rgb(55 48 163) !important;
+        /* indigo-800 深藍色，與 Card.vue 相同 */
     }
 }
 
 /* 針對鍵盤佈局中的所有字根字體 */
 @media (prefers-color-scheme: light) {
     .keyboard-layout .zigen-font {
-        color: rgb(0 0 0) !important;
+        color: rgb(55 48 163) !important;
+        /* indigo-800 深藍色，與 Card.vue 相同 */
     }
 }
 
@@ -834,18 +839,29 @@ onMounted(() => {
     }
 }
 
-/* Tab样式 */
-.tab {
-    transition: all 0.2s ease;
+/* Tab样式 - 使用專門的 override 類 */
+.tab-override {
+    color: rgb(107 114 128) !important;
+    /* 覆蓋 zigen-font 的黑色 */
 }
 
-.tab:hover {
-    background-color: var(--fallback-b3, oklch(var(--b3)/var(--tw-bg-opacity)));
+.tab-override:hover {
+    color: rgb(75 85 99) !important;
 }
 
-.tab-active {
-    background-color: var(--fallback-p, oklch(var(--p)/var(--tw-bg-opacity)));
-    color: var(--fallback-pc, oklch(var(--pc)/var(--tw-text-opacity)));
+.tab-override.tab-active {
+    color: white !important;
+}
+
+/* 暗色模式 */
+@media (prefers-color-scheme: dark) {
+    .tab-override {
+        color: rgb(156 163 175) !important;
+    }
+
+    .tab-override:hover {
+        color: rgb(209 213 219) !important;
+    }
 }
 
 /* 悬停卡片中的字根列样式 */
