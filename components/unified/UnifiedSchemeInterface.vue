@@ -5,7 +5,7 @@
   - 統一管理 TabbedSearch 和 ZigenMap 的方案切換
   - 單一按鈕組控制兩個組件同時切換方案
   - 保持搜索輸入狀態
-  
+
   Modification History:
   - 2025-08-14 by 朱複丹: 初版
 -->
@@ -60,12 +60,12 @@ function handleSchemeChange(schemeId: string) {
 
         <!-- 搜索組件 -->
         <div class="search-section">
-            <TabbedSearch :key="`search-${activeScheme}`" :default-scheme="activeScheme" :hide-scheme-buttons="true" />
+            <TabbedSearch :default-scheme="activeScheme" :hide-scheme-buttons="true" />
         </div>
 
         <!-- 字根圖組件 -->
         <div class="zigen-section mt-8">
-            <ZigenMap :key="`zigen-${activeScheme}`" :default-scheme="activeScheme" :hide-scheme-buttons="true" />
+            <ZigenMap :default-scheme="activeScheme" :hide-scheme-buttons="true" />
         </div>
     </div>
 </template>
