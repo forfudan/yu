@@ -36,16 +36,23 @@ function handleSchemeChange(schemeId: string) {
     <div class="unified-scheme-interface">
         <!-- 統一的方案選擇器 -->
         <div class="unified-scheme-selector">
-            <div class="scheme-info mb-4 text-center">
-                <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300">
-                    當前方案：{{ currentScheme.name }}
-                </h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                    {{ currentScheme.description }}
-                </p>
-            </div>
+            <div class="scheme-header-row">
+                <!-- 方案信息 -->
+                <div class="scheme-info">
+                    <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-1">
+                        當前方案：{{ currentScheme.name }}
+                    </h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                        {{ currentScheme.description }}
+                    </p>
+                </div>
 
-            <SchemeSelector :schemes="SCHEMES" :active-scheme="activeScheme" @scheme-changed="handleSchemeChange" />
+                <!-- 方案按鈕 -->
+                <div class="scheme-buttons">
+                    <SchemeSelector :schemes="SCHEMES" :active-scheme="activeScheme"
+                        @scheme-changed="handleSchemeChange" />
+                </div>
+            </div>
         </div>
 
         <!-- 搜索組件 -->
@@ -75,6 +82,22 @@ function handleSchemeChange(schemeId: string) {
     padding: 1.5rem;
     margin-bottom: 2rem;
     border: 1px solid var(--vp-c-divider);
+}
+
+.scheme-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.scheme-info {
+    flex: 1;
+    text-align: left;
+}
+
+.scheme-buttons {
+    flex-shrink: 0;
 }
 
 .scheme-info h3 {
@@ -107,6 +130,23 @@ function handleSchemeChange(schemeId: string) {
     .unified-scheme-selector {
         padding: 1rem;
         margin-bottom: 1.5rem;
+    }
+
+    .scheme-header-row {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .scheme-info {
+        text-align: center;
+        width: 100%;
+    }
+
+    .scheme-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .section-title {

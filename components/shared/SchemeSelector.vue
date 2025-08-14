@@ -39,7 +39,7 @@ function switchScheme(schemeId: string) {
 
 <template>
     <div class="scheme-selector">
-        <div class="flex justify-center mb-6 space-x-4">
+        <div class="flex justify-center space-x-4">
             <button v-for="scheme in schemes" :key="scheme.id" @click="switchScheme(scheme.id)" :class="[
                 'scheme-button',
                 { 'scheme-button-active': activeScheme === scheme.id }
@@ -79,16 +79,17 @@ function switchScheme(schemeId: string) {
 }
 
 .scheme-button-active {
-    background-color: rgb(29 78 216);
-    /* 活躍狀態的深藍色 */
-    border-color: rgb(29 78 216);
-    box-shadow: 0 0 0 3px rgba(59 130 246, 0.3);
-    /* 外發光效果 */
+    background-color: rgb(147 51 234);
+    /* 活躍狀態的紫色 */
+    border-color: rgb(147 51 234);
+    box-shadow: 0 0 0 3px rgba(147 51 234, 0.3);
+    /* 紫色外發光效果 */
 }
 
 .scheme-button-active:hover {
-    background-color: rgb(29 78 216);
-    border-color: rgb(29 78 216);
+    background-color: rgb(126 34 206);
+    /* 更深的紫色 */
+    border-color: rgb(126 34 206);
 }
 
 .scheme-text {
@@ -109,9 +110,14 @@ function switchScheme(schemeId: string) {
     }
 
     .scheme-button-active {
-        background-color: rgb(29 78 216);
-        border-color: rgb(29 78 216);
-        box-shadow: 0 0 0 3px rgba(59 130 246, 0.4);
+        background-color: rgb(147 51 234);
+        border-color: rgb(147 51 234);
+        box-shadow: 0 0 0 3px rgba(147 51 234, 0.4);
+    }
+
+    .scheme-button-active:hover {
+        background-color: rgb(126 34 206);
+        border-color: rgb(126 34 206);
     }
 }
 </style>
