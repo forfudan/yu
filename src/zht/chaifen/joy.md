@@ -2,7 +2,7 @@
 aside: false
 ---
 <script setup>
-import Search from '@/search/FetchSearch.vue'
+import Search from '@/search/OptimizedFetchSearch.vue'
 </script>
 
 # 卿云拆分查询
