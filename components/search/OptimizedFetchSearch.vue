@@ -1,19 +1,12 @@
 <!--
   OptimizedFetchSearch.vue - 優化的搜索數據獲取組件（使用壓縮JSON）
   
-  Performance Improvements:
-  - Uses compressed JSON instead of large CSV files
-  - 69% smaller file size (2.79MB → 883KB)
-  - 5-10x faster parsing (JSON vs CSV)
-  - Better browser caching and CDN performance
-  - Automatic format fallback (gzip → json → csv)
-  
   Modification History:
   - 2025-08-14 by 朱複丹: 初版，生成優化版本的拆分數據獲取組件，讀取壓縮JSON文件
 -->
 
 <script setup lang="ts">
-import { shallowRef, watch, onMounted } from "vue";
+import { shallowRef, watch, onMounted, computed } from "vue";
 import Search from "./Search.vue";
 import { ZigenMap, ChaifenMap, fetchZigen } from "./share";
 import ChaiDataLoader from "./ChaiDataLoader";
@@ -36,6 +29,37 @@ const isLoading = shallowRef(false)
 const isDataLoaded = shallowRef(false)
 const userInput = shallowRef(p.modelValue || '')
 const loadError = shallowRef<string | null>(null)
+
+// 诗词数组和随机选择
+const poets: string[] = [
+    "小樓一夜聽春雨　深巷明朝賣杏花",
+    "休對故人思故國　且將新火試新茶",
+    "三十功名塵與土　八千里路雲和月",
+    "落花人獨立　微雨燕雙飛",
+    "玲瓏骰子安紅豆　入骨相思知不知",
+    "兩情若是久長時　又豈在朝朝暮暮",
+    "身無彩鳳雙飛翼　心有靈犀一點通",
+    "自在飛花輕似夢　無邊絲雨細如愁",
+    "醉後不知天在水　滿船清夢壓星河",
+    "東風夜放花千樹　更吹落　星如雨",
+    "鳳蕭聲動　玉壸光轉　一夜魚龍舞",
+    "爲君持酒勸斜陽　且向花間留晚照",
+    "綠楊煙外曉寒輕　紅杏枝頭春意鬧",
+    '城中桃李愁風雨　春在溪頭薺菜花',
+    '未是秋光奇绝　看十五十六',
+    "無可奈何花落去　似曾相識燕歸來",
+    "但願人長久　千里共嬋娟",
+    "大江東去　浪淘盡千古風流人物",
+    "明月幾時有　把酒問青天",
+    "一蓑煙雨任平生　也無風雨也無晴",
+    "縱豆蔻詞工　青樓夢好　難賦深情",
+    "衣帶漸寬終不悔　為伊消得人憔悴",
+];
+
+const randomPoetry = computed(() => {
+    const index = Math.floor(Math.random() * poets.length);
+    return poets[index];
+})
 
 // 同步外部传入的值
 watch(() => p.modelValue, (newValue) => {
@@ -159,11 +183,17 @@ function quickSearch(query: string) {
         </div>
 
         <!-- Search component (only when data is loaded) -->
-        <Search v-else-if="isDataLoaded && chaifenMap && zigenMap" :chaifenMap="chaifenMap" :zigenMap="zigenMap"
+        <Search v-if="isDataLoaded && chaifenMap && zigenMap" :chaifenMap="chaifenMap" :zigenMap="zigenMap"
             :supplement="p.supplement" :ming="p.ming || false" v-model:userInput="userInput" />
 
+        <!-- Show poetry when no input and no data loaded yet -->
+        <div v-else-if="!userInput.trim() && !isLoading && !loadError"
+            class="opacity-40 text-center p-9 tracking-widest">
+            {{ randomPoetry }}
+        </div>
+
         <!-- Empty state -->
-        <div v-else-if="userInput.trim().length > 0" class="text-gray-500 text-center py-4">
+        <div v-else-if="userInput.trim().length > 0 && !isLoading" class="text-gray-500 text-center py-4">
             开始输入以查看拆分……
         </div>
     </div>

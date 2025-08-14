@@ -1,6 +1,5 @@
 /**
- * Optimized Chaifen Data Loader
- * Loads compressed JSON data with performance optimizations
+ * ChaiDataLoader - 拆分数据加载器
  */
 
 interface ChaiResult {

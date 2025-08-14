@@ -120,7 +120,7 @@ const componentKey = computed(() => `search-${activeScheme.value}`)
         <div class="mb-3 text-sm text-gray-600 dark:text-gray-400 text-center">
             <span class="font-medium">當前方案</span>：{{ currentScheme.name }}
             <span v-if="currentScheme.description" class="ml-2 text-xs opacity-75">{{ currentScheme.description
-            }}</span>
+                }}</span>
         </div>
 
         <!-- Search Component -->
