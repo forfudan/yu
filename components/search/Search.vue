@@ -1,5 +1,17 @@
+<!--
+  Search.vue - 搜索結果展示組件
+  
+  Modification History:
+  - 2025-08-14 by 朱複丹: 优化组件间通信，使用v-model进行数据绑定
+  - 2025-08-13 by 朱複丹: 增加參數 ming，允許對日月方案進行編碼
+  - 2024-12-16 by yb6b: feat: Search component searchParm Prop
+  - 2024-04-24 by 朱複丹: 增加對天碼的支持
+  - 2024-03-27 by 朱複丹: 增加參數 supplement，判斷是否需要回頭碼
+  - 2024-03-27 by yb6b: 製作拆分查詢的組件
+-->
+
 <script setup lang="ts">
-import { shallowRef, ref } from "vue";
+import { shallowRef, ref, watch } from "vue";
 import { watchThrottled, useUrlSearchParams } from "@vueuse/core";
 import Card from "./Card.vue";
 import { ChaifenMap, ZigenMap } from "./share";
@@ -10,13 +22,32 @@ const p = defineProps<{
     ming: boolean,
     /** 是否启用URL里的搜索Params */
     searchParam?: boolean,
+    /** 用户输入 */
+    userInput?: string,
+}>()
+
+const emit = defineEmits<{
+    'update:userInput': [value: string]
 }>()
 
 const urlSearchParams = useUrlSearchParams()
-const userInput = shallowRef(urlSearchParams?.q || '')
+const localUserInput = shallowRef(p.userInput || urlSearchParams?.q || '')
 const searchZigens = shallowRef<string[]>()
-watchThrottled(userInput, () => {
-    const user = userInput.value as string
+
+// Watch for changes in userInput prop
+watch(() => p.userInput, (newInput) => {
+    if (newInput !== undefined && newInput !== localUserInput.value) {
+        localUserInput.value = newInput
+    }
+}, { immediate: true })
+
+// Watch local input changes and emit to parent
+watch(localUserInput, (newValue) => {
+    emit('update:userInput', newValue as string)
+}, { immediate: false })
+
+watchThrottled(localUserInput, () => {
+    const user = localUserInput.value as string
     if (p.searchParam) {
         urlSearchParams.q = user
     }
@@ -47,16 +78,7 @@ const poet: string = poets[ind];
 </script>
 
 <template>
-    <label class="input input-bordered bg-gray-100 dark:bg-slate-800 flex items-center gap-2 mt-2">
-        <input type="text" class="grow" placeholder="輸入文本查詢拆分" v-model="userInput" />
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70">
-            <path fill-rule="evenodd"
-                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                clip-rule="evenodd" />
-        </svg>
-    </label>
-
-    <div v-if="!userInput" class="opacity-40 text-center p-9 tracking-widest">{{ poet }}</div>
+    <div v-if="!localUserInput" class="opacity-40 text-center p-9 tracking-widest">{{ poet }}</div>
     <div class="flex justify-center flex-wrap my-8" v-else>
         <Card v-for="zigen in searchZigens" :key="zigen" :chaifen="chaifenMap.get(zigen)" :zigenMap
             :supplement="p.supplement" :ming="p.ming" />

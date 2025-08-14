@@ -25,7 +25,7 @@ hero:
       link: /zht/install
 
 ---
-<!-- 
+
 <script setup>
 import Search from '@/search/FetchSearch.vue'
 import Chaifen from '@/chaifen/Chaifen.vue'
@@ -34,10 +34,8 @@ import IME from '@/ime/FetchInput.vue'
 </script>
 
 <div class="zigen-font">
-<Search chaifenUrl="/chaifen.csv" zigenUrl="/zigen-star.csv" supplement />
+<Search chaifenUrl="/chaifen.csv" zigenUrl="/zigen-star.csv" :supplement="true" />
 </div>
-
---- -->
 
 <!-- <MultiChaifen chars="卿雲爛兮糾縵縵兮" :size="35" />
 <MultiChaifen chars="日月光華旦復旦兮" :size="35" />

@@ -1,3 +1,15 @@
+<!--
+  TrainCard.vue - 训练卡片组件
+  
+  Modification History:
+  - 2025-08-14 by 朱宇浩: 增加參數 ming，允許日月字根訓練對五個一碼上屏字增加兼容輸入
+  - 2025-08-14 by 朱宇浩: 編碼提示區分大小寫
+  - 2025-08-14 by 朱宇浩: 允許用戶在訓練完之後選擇再來一輪
+  - 2025-08-14 by 朱宇浩: 在練習單字時顯示字根圖解
+  - 2024-03-27 by 朱宇浩: 增加參數 supplement，判斷是否需要回頭碼
+  - 2024-03-27 by yb6b: 製作字根和單字練習的組件
+-->
+
 <script setup lang="ts">
 import { shallowRef, watch, onMounted } from "vue";
 import { Schedule } from "./schedule";
