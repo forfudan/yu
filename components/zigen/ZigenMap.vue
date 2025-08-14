@@ -193,17 +193,15 @@ const getExampleChars = async (zigen: string): Promise<string[]> => {
 async function loadData() {
     isLoading.value = true;
     try {
-        // 加载字根数据
+        // 只加载字根数据，不初始化拆分数据加载器
         const zigenData = await fetchZigen(currentScheme.value.zigenUrl);
         zigenMap.value = zigenData;
 
-        // 初始化拆分数据加载器
-        chaifenLoader.value = ChaiDataLoader.getInstance(currentScheme.value.chaifenUrl);
-
-        console.log(`已初始化 ChaiDataLoader，使用文件: ${currentScheme.value.chaifenUrl}`);
+        console.log(`已加載字根數據，文件: ${currentScheme.value.zigenUrl}`);
+        console.log('注意：拆分數據將在第一次懸停字根時才加載');
 
     } catch (error) {
-        console.error('加载数据失败:', error);
+        console.error('加载字根数据失败:', error);
     } finally {
         isLoading.value = false;
     }
@@ -213,6 +211,13 @@ async function loadData() {
 async function handleZigenHover(event: MouseEvent, zigen: { font: string, code: string }) {
     hoveredZigen.value = zigen.font;
     hoverPosition.value = { x: event.clientX, y: event.clientY };
+
+    // 懶加載：第一次懸停時才初始化拆分數據加載器
+    if (!chaifenLoader.value) {
+        console.log('第一次懸停，正在初始化拆分數據加載器...');
+        chaifenLoader.value = ChaiDataLoader.getInstance(currentScheme.value.chaifenUrl);
+        console.log(`已初始化 ChaiDataLoader，使用文件: ${currentScheme.value.chaifenUrl}`);
+    }
 
     // 找到所有相同完整编码的字根
     // 需要先找到当前字根的完整编码（首字母+剩余编码）
@@ -339,6 +344,8 @@ function findSameCodeZigens(targetFont: string, targetFullCode: string) {
 }// 切换方案
 function switchScheme(schemeId: string) {
     activeScheme.value = schemeId;
+    // 清除已緩存的拆分數據加載器，讓新方案在第一次懸停時重新加載
+    chaifenLoader.value = null;
 }
 
 // 監聽方案變化
@@ -378,8 +385,13 @@ onMounted(() => {
             <span class="ml-2">正在加载字根数据...</span>
         </div>
 
+        <!-- 使用提示 -->
+        <div v-if="!isLoading" class="text-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+            懸停字根可查看例字（首次懸停需要加載數據，可能稍有延遲）
+        </div>
+
         <!-- 键盘字根图 -->
-        <div v-else-if="zigenMap" class="keyboard-layout">
+        <div v-if="!isLoading && zigenMap" class="keyboard-layout">
             <div v-for="(row, rowIndex) in keyboardLayout" :key="rowIndex" class="keyboard-row">
                 <div v-for="key in row" :key="key" class="keyboard-key"
                     :class="{ 'empty-key': emptyKeys.includes(key) }">

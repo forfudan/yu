@@ -21,8 +21,8 @@ interface SearchScheme {
     chaifenUrl: string
     zigenUrl: string
     description?: string
-    supplement?: boolean    // 是否支持補充字符
-    ming?: boolean         // 是否使用日月版特殊處理
+    supplement?: boolean    // 是否支持回頭碼
+    ming?: boolean          // 日月方案
 }
 
 const props = defineProps<{
