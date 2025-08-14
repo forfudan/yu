@@ -2,6 +2,9 @@
   SchemeSelector.vue - 共享的方案選擇器組件
   
   用於 TabbedSearch 和 ZigenMap 的統一方案切換按鈕
+
+  Modification History:
+  - 2025-08-14 by 朱複丹: 初版
 -->
 
 <script setup lang="ts">
