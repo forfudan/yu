@@ -2,6 +2,7 @@
 import { shallowRef, watch, onMounted } from "vue";
 import { Schedule } from "./schedule";
 import { Card, ChaifenMap, find8relativeChars } from "./share";
+import MultiChaifen from "../chaifen/MultiChaifen.vue";
 
 const p = defineProps<{
     /** 复习卡片的数据 */
@@ -69,7 +70,9 @@ function checkNextItem(answer: string) {
         </div>
         <div class="flex justify-around mb-8">
             <div :class="['text-6xl ', { 'text-red-400': !isCorrect }]">{{ card.name }}</div>
-
+            <div class="flex tracking-widest flex-col opacity-70" v-if="mode === 'z'">
+                <MultiChaifen :chars="card.name" :size="100" :key="card.name" />
+            </div>
             <div class="flex tracking-widest flex-col opacity-70" v-if="mode === 'g' && chaifenMap">
 
                 <div class="text-gray-500 text-sm">

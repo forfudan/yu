@@ -14,6 +14,7 @@ const p = defineProps<{
   /** 练习的范围，从第几条到第几条，不填则是全部 */
   range?: [start: number, end: number]
   supplement: boolean
+  ming: boolean
 }>()
 
 let cardsName = p.name + '_char'
@@ -40,7 +41,7 @@ onMounted(async () => {
 
   cards.value = chaifenValues.map(cf => ({
     name: cf.char,
-    key: makeCodesFromDivision(cf.division, zigenMap, p.supplement).toLowerCase()
+    key: makeCodesFromDivision(cf.division, zigenMap, p.supplement, p.ming).toLowerCase()
   }))
 
   cache[cardsName] = cards.value

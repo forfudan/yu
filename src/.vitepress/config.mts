@@ -311,8 +311,12 @@ export default defineConfig({
           items: [
             {
               text: '日月字根',
-              link: '/practice/root_sunmoon'
+              link: '/practice/root_ming'
             },
+            {
+              text: '日月单字',
+              link: '/practice/char_ming'
+            }
           ]
         },
         {
@@ -730,8 +734,12 @@ export default defineConfig({
               items: [
                 {
                   text: '日月字根',
-                  link: '/zht/practice/root_sunmoon'
+                  link: '/zht/practice/root_ming'
                 },
+                {
+                  text: '日月單字',
+                  link: '/zht/practice/char_ming'
+                }
               ]
             },
             {

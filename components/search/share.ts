@@ -42,7 +42,7 @@ export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, supp
             str.length === 2 ? str[0].toUpperCase() + str[1] : str
         result.push(capitalizeFirstIfTwoLetters(zigenMap.get(lastZigen)?.ma?.slice(1) || '?'))
 
-        return result.join('')
+        return result.join('').slice(0, 5)
     }
 
     else {
