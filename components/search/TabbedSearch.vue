@@ -100,19 +100,32 @@ function switchScheme(schemeId: string) {
     }
 }
 
+// 获取方案对应的汉字
+function getSchemeChar(schemeId: string): string {
+    const charMap: Record<string, string> = {
+        'joy': '卿',
+        'light': '光', 
+        'star': '星',
+        'ming': '明'
+    };
+    return charMap[schemeId] || '?';
+}
+
 // Key for forcing component refresh when scheme changes, but keep input content
 const componentKey = computed(() => `search-${activeScheme.value}`)
 </script>
 
 <template>
     <div class="tabbed-search-container">
-        <!-- Tab Navigation -->
-        <div class="tabs tabs-boxed mb-4 bg-base-200">
-            <button v-for="scheme in schemes" :key="scheme.id" @click="switchScheme(scheme.id)" :class="[
-                'tab tab-lg tab-override',
-                { 'tab-active': activeScheme === scheme.id }
-            ]" :title="scheme.description">
-                {{ scheme.name }}
+        <!-- 方案切换圆形按钮 -->
+        <div class="flex justify-center mb-6 space-x-4">
+            <button v-for="scheme in schemes" :key="scheme.id" @click="switchScheme(scheme.id)" 
+                :class="[
+                    'scheme-button',
+                    { 'scheme-button-active': activeScheme === scheme.id }
+                ]"
+                :title="scheme.description">
+                <span class="scheme-text">{{ getSchemeChar(scheme.id) }}</span>
             </button>
         </div>
 
@@ -137,48 +150,67 @@ const componentKey = computed(() => `search-${activeScheme.value}`)
     margin: 0 auto;
 }
 
-/* Tab 顏色覆蓋 - 使用專門的 override 類 */
-.tab-override {
-    color: rgb(107 114 128) !important;
-    /* 覆蓋 zigen-font 的黑色 */
+/* 圓形方案按鈕樣式 */
+.scheme-button {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: rgb(59 130 246);
+    /* 藍色背景 */
+    border: 2px solid rgb(59 130 246);
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.tab-override:hover {
-    color: rgb(75 85 99) !important;
+.scheme-button:hover {
+    background-color: rgb(37 99 235);
+    /* 更深的藍色 */
+    border-color: rgb(37 99 235);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.tab-override.tab-active {
-    color: white !important;
+.scheme-button-active {
+    background-color: rgb(29 78 216);
+    /* 活躍狀態的深藍色 */
+    border-color: rgb(29 78 216);
+    box-shadow: 0 0 0 3px rgba(59 130 246, 0.3);
+    /* 外發光效果 */
 }
 
-/* 暗色模式 */
+.scheme-button-active:hover {
+    background-color: rgb(29 78 216);
+    border-color: rgb(29 78 216);
+}
+
+.scheme-text {
+    font-family: 'Noto Serif SC', serif;
+    /* 使用宋體字體 */
+}
+
+/* 暗色模式下的圓形按鈕 */
 @media (prefers-color-scheme: dark) {
-    .tab-override {
-        color: rgb(156 163 175) !important;
+    .scheme-button {
+        background-color: rgb(37 99 235);
+        border-color: rgb(37 99 235);
     }
 
-    .tab-override:hover {
-        color: rgb(209 213 219) !important;
-    }
-}
-
-/* Custom styling for better visual hierarchy */
-.tabs-boxed {
-    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    border: 1px solid var(--fallback-b3, oklch(var(--b3)/var(--tw-border-opacity)));
-}
-
-/* Responsive design */
-@media (max-width: 640px) {
-    .tab {
-        font-size: 0.75rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+    .scheme-button:hover {
+        background-color: rgb(29 78 216);
+        border-color: rgb(29 78 216);
     }
 
-    .tabs-boxed {
-        flex-wrap: wrap;
-        gap: 0.25rem;
+    .scheme-button-active {
+        background-color: rgb(29 78 216);
+        border-color: rgb(29 78 216);
+        box-shadow: 0 0 0 3px rgba(59 130 246, 0.4);
     }
 }
 </style>
