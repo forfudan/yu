@@ -67,21 +67,34 @@ class ChaiDataLoader {
 
         for (const format of formats) {
             try {
-                const response = await fetch(format.url)
+                const response = await fetch(format.url, {
+                    headers: {
+                        'Accept': 'application/json, text/csv, */*',
+                        'Accept-Charset': 'utf-8'
+                    }
+                })
                 if (!response.ok) continue
 
                 let data: OptimizedChaiData
 
                 if (format.csv) {
-                    // Fallback to CSV parsing
-                    const text = await response.text()
+                    // Fallback to CSV parsing with explicit UTF-8 handling
+                    const arrayBuffer = await response.arrayBuffer()
+                    const text = new TextDecoder('utf-8').decode(arrayBuffer)
                     data = this.parseCsvToOptimized(text)
                 } else if (format.compressed) {
-                    // Handle compressed JSON (browser will decompress automatically)
-                    data = await response.json()
+                    // Handle gzip compressed JSON
+                    const arrayBuffer = await response.arrayBuffer()
+
+                    // Decompress gzip data
+                    const decompressedBuffer = await this.decompressGzip(arrayBuffer)
+                    const text = new TextDecoder('utf-8').decode(decompressedBuffer)
+                    data = JSON.parse(text)
                 } else {
-                    // Regular JSON
-                    data = await response.json()
+                    // Regular JSON with explicit UTF-8 handling
+                    const arrayBuffer = await response.arrayBuffer()
+                    const text = new TextDecoder('utf-8').decode(arrayBuffer)
+                    data = JSON.parse(text)
                 }
 
                 const loadTime = performance.now() - startTime
@@ -117,9 +130,7 @@ class ChaiDataLoader {
         }
 
         return data
-    }
-
-    /**
+    }    /**
      * Search characters with optimized lookup
      */
     search(query: string): ChaiResult[] {
@@ -173,6 +184,45 @@ class ChaiDataLoader {
             division: charData.d,
             division_tw: charData.dt,
             region: charData.r
+        }
+    }
+
+    /**
+     * Decompress gzip data using browser's built-in DecompressionStream
+     */
+    private async decompressGzip(arrayBuffer: ArrayBuffer): Promise<ArrayBuffer> {
+        try {
+            // Use the modern Compression Streams API
+            const stream = new ReadableStream({
+                start(controller) {
+                    controller.enqueue(new Uint8Array(arrayBuffer))
+                    controller.close()
+                }
+            })
+
+            const decompressedStream = stream.pipeThrough(new DecompressionStream('gzip'))
+            const chunks: Uint8Array[] = []
+            const reader = decompressedStream.getReader()
+
+            while (true) {
+                const { done, value } = await reader.read()
+                if (done) break
+                chunks.push(value)
+            }
+
+            // Combine chunks into a single ArrayBuffer
+            const totalLength = chunks.reduce((sum, chunk) => sum + chunk.length, 0)
+            const result = new Uint8Array(totalLength)
+            let offset = 0
+            for (const chunk of chunks) {
+                result.set(chunk, offset)
+                offset += chunk.length
+            }
+
+            return result.buffer
+        } catch (error) {
+            console.error('Failed to decompress gzip data:', error)
+            throw new Error(`Gzip decompression failed: ${error.message}`)
         }
     }
 }

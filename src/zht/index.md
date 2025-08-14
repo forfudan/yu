@@ -27,17 +27,12 @@ hero:
 ---
 
 <script setup>
-import TabbedSearch from '@/search/TabbedSearch.vue'
+import UnifiedSchemeInterface from '@/unified/UnifiedSchemeInterface.vue'
 </script>
 
 <div class="zigen-font">
-<TabbedSearch defaultScheme="star" />
+<UnifiedSchemeInterface defaultScheme="star" />
 </div>
-
-<!-- <MultiChaifen chars="卿雲爛兮糾縵縵兮" :size="35" />
-<MultiChaifen chars="日月光華旦復旦兮" :size="35" />
-<MultiChaifen chars="明明上天爛然星陳" :size="35" />
-<MultiChaifen chars="日月光華弘於一人" :size="35" /> -->
 
 ::: tip 致有緣人
 
