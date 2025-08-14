@@ -36,8 +36,8 @@ const keyboardLayout = [
     ['z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/']
 ];
 
-// 需要显示但暂时留空的键
-const emptyKeys = [',', '.', '/', ';', "'"];
+// 需要显示但暂时留空的键（移除 ,./; 四个键，让它们显示字根）
+const emptyKeys = ["'"];
 
 // 支持的方案
 const schemes: ZigenScheme[] = [
@@ -126,23 +126,33 @@ const zigenByKey = computed(() => {
 
     console.log(`Found ${validZigens.length} valid zigens`);
 
-    // 按按键分组并处理相同编码
-    for (const zigen of validZigens) {
+    // 按按键分组并处理连续相同编码的字根
+    for (let i = 0; i < validZigens.length; i++) {
+        const zigen = validZigens[i];
         const { font, ma, firstLetter, code } = zigen;
 
         if (!result[firstLetter]) {
             result[firstLetter] = { visible: [], hidden: [] };
         }
 
-        // 检查是否已经有相同编码的字根
+        // 检查前一个字根是否有相同的编码和按键
+        const prevZigen = i > 0 ? validZigens[i - 1] : null;
+        const isPrevSameCodeAndKey = prevZigen &&
+            prevZigen.code === code &&
+            prevZigen.firstLetter === firstLetter;
+
+        // 检查是否已经有相同编码的字根在visible中
         const existingWithSameCode = result[firstLetter].visible.find(item => item.code === code);
 
         if (!existingWithSameCode) {
             // 第一个具有此编码的字根，放在visible中
             result[firstLetter].visible.push({ font, code });
-        } else {
-            // 已有相同编码的字根，放在hidden中
+        } else if (isPrevSameCodeAndKey) {
+            // 只有当前字根与前一个字根编码相同且连续时，才放在hidden中
             result[firstLetter].hidden.push({ font, code });
+        } else {
+            // 编码相同但不连续，作为新的visible字根显示
+            result[firstLetter].visible.push({ font, code });
         }
     }
 
@@ -269,6 +279,16 @@ function handleZigenLeave() {
         hoveredZigen.value = null;
         hoveredZigenInfo.value = null;
         zigenExampleChars.value = {};
+    }
+}
+
+// 获取键位标注文本
+function getKeyLabel(key: string): string {
+    switch (key) {
+        case ';': return '次選';
+        case ',': return '逗號';
+        case '.': return '句號';
+        default: return '无字根';
     }
 }
 
@@ -437,7 +457,17 @@ onMounted(() => {
 
                     <!-- 无字根提示 -->
                     <div v-else-if="!emptyKeys.includes(key)" class="text-xs text-gray-400">
-                        无字根
+                        <div v-if="key === '/'" class="text-center">
+                            <div>引導特殊符號</div>
+                            <div>切換多重註解</div>
+                        </div>
+                        <div v-else-if="key === 'z'" class="text-center">
+                            <div>引導拼音反查</div>
+                            <div>引導歷史輸入</div>
+                        </div>
+                        <div v-else>
+                            {{ getKeyLabel(key) }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -589,6 +619,7 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     overflow: hidden;
 }
 
@@ -620,21 +651,27 @@ onMounted(() => {
 }
 
 .zigen-list {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 0.1rem;
-    width: 100%;
-    margin-top: 0.15rem;
-    line-height: 1.0;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr)) !important;
+    justify-items: start !important;
+    align-items: start !important;
+    gap: 0.05rem !important;
+    width: 100% !important;
+    margin-top: 0.1rem;
+    line-height: 1.2;
+    /* 使用 CSS Grid 靠左对齐 */
+}
+
+.zigen-list::after {
+    content: "";
+    flex: auto;
 }
 
 .zigen-item {
-    font-size: 0.8rem;
+    display: block !important;
+    font-size: 0.9rem;
     padding: 0.01rem 0.01rem;
-    background: var(--fallback-n, oklch(var(--n)/0.05));
+    /* 移除背景色，让字根显示更清爽 */
     border-radius: 0.2rem;
     /* 移除默认颜色，让内部字根字体优先 */
     transition: all 0.15s ease;
@@ -642,7 +679,8 @@ onMounted(() => {
     cursor: pointer;
     border: 1px solid transparent;
     line-height: 1.0;
-    margin: 0.01rem;
+    margin: 0.01rem 0 !important;
+    text-align: left !important;
 }
 
 .zigen-item:hover {

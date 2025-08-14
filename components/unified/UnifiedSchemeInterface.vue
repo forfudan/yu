@@ -87,13 +87,13 @@ function handleSchemeChange(schemeId: string) {
 
 .scheme-header-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .scheme-info {
-    flex: 1;
+    flex-shrink: 0;
     text-align: left;
 }
 
@@ -135,17 +135,15 @@ function handleSchemeChange(schemeId: string) {
 
     .scheme-header-row {
         flex-direction: column;
-        gap: 1rem;
-        align-items: flex-start;
+        gap: 1.5rem;
+        align-items: center;
     }
 
     .scheme-info {
         text-align: center;
-        width: 100%;
     }
 
     .scheme-buttons {
-        width: 100%;
         display: flex;
         justify-content: center;
     }
