@@ -1,22 +1,19 @@
 <!--
-  ZigenMap.vue - 字根图组件
-  
+    ZigenMap.vue - 字根圖生成組件
+
   Features:
-  - QWERTY键盘布局显示字根分布
-  - 支持多种输入方案切换（卿雲、光華、星陳、日月）
-  - 悬停显示例字卡片
-  - 响应式布局，自适应窗口宽度
-  - 紧凑的卡片式设计
+  - 支持多個方案切換（卿雲、光華、星陳、日月）
+  - 懸停以顯示歸併字根和例字
   
   Modification History:
-  - 2025-08-14 by 朱複丹: 初版，实现基础功能和样式优化
+  - 2025-08-14 by 朱複丹: 初版，實現基礎功能和樣式
 -->
 
 <script setup lang="ts">
 import { ref, computed, watch, onMounted } from "vue";
 import { fetchZigen } from "../search/share";
 import ChaiDataLoader from "../search/ChaiDataLoader";
-import type { ZigenMap as ZigenMapType } from "../search/share";
+import type { ZigenMap as ZigenMapType, ChaifenMap, Chaifen } from "../search/share";
 
 interface ZigenScheme {
     id: string
@@ -68,51 +65,122 @@ const activeScheme = ref('star');
 const zigenMap = ref<ZigenMapType>();
 const chaifenLoader = ref<ChaiDataLoader>();
 const isLoading = ref(false);
+// 当前悬停的字根信息
 const hoveredZigen = ref<string | null>(null);
+const hoveredZigenInfo = ref<{ visible: Array<{ font: string, code: string }>, hidden: Array<{ font: string, code: string }> } | null>(null);
 const hoverPosition = ref({ x: 0, y: 0 });
 const exampleChars = ref<string[]>([]);
+// 固定彈窗狀態
+const pinnedZigen = ref<string | null>(null);
+const pinnedZigenInfo = ref<{ visible: Array<{ font: string, code: string }>, hidden: Array<{ font: string, code: string }> } | null>(null);
+const pinnedExampleChars = ref<string[]>([]);
+const isPinned = ref(false);
 
 // 当前方案
 const currentScheme = computed(() => {
     return schemes.find(s => s.id === activeScheme.value) || schemes[0];
 });
 
-// 按键分组的字根
+// 按键分组的字根 - 优化版本，合并相同编码的字根
 const zigenByKey = computed(() => {
-    if (!zigenMap.value) return {};
-
-    const result: Record<string, Array<{ font: string, code: string }>> = {};
-
-    for (const [font, data] of zigenMap.value) {
-        const firstLetter = data.ma[0].toLowerCase();
-        if (!result[firstLetter]) {
-            result[firstLetter] = [];
-        }
-        result[firstLetter].push({
-            font,
-            code: data.ma.slice(1) // 剩余字母
-        });
+    if (!zigenMap.value) {
+        console.log('No zigenMap data');
+        return {};
     }
 
+    console.log('ZigenMap has data, size:', zigenMap.value.size);
+
+    const result: Record<string, { visible: Array<{ font: string, code: string }>, hidden: Array<{ font: string, code: string }> }> = {};
+
+    // 先收集所有有效的字根数据
+    const validZigens: Array<{ font: string, ma: string, firstLetter: string, code: string }> = [];
+
+    for (const [key, data] of zigenMap.value) {
+        const font = data.font;
+        const ma = data.ma?.trim();
+
+        // 只检查编码必须存在，字根字段存在即可（即使看起来是空白字符）
+        if (!ma || ma.length === 0) continue;
+        if (font === null || font === undefined) continue;
+
+        const firstLetter = ma[0].toLowerCase();
+        const code = ma.slice(1);
+
+        validZigens.push({ font, ma, firstLetter, code });
+    }
+
+    console.log(`Found ${validZigens.length} valid zigens`);
+
+    // 按按键分组并处理相同编码
+    for (const zigen of validZigens) {
+        const { font, ma, firstLetter, code } = zigen;
+
+        if (!result[firstLetter]) {
+            result[firstLetter] = { visible: [], hidden: [] };
+        }
+
+        // 检查是否已经有相同编码的字根
+        const existingWithSameCode = result[firstLetter].visible.find(item => item.code === code);
+
+        if (!existingWithSameCode) {
+            // 第一个具有此编码的字根，放在visible中
+            result[firstLetter].visible.push({ font, code });
+        } else {
+            // 已有相同编码的字根，放在hidden中
+            result[firstLetter].hidden.push({ font, code });
+        }
+    }
+
+    console.log('Final result:', result);
     return result;
 });
 
 // 获取包含指定字根的例字
 const getExampleChars = async (zigen: string): Promise<string[]> => {
-    if (!chaifenLoader.value) return [];
+    if (!chaifenLoader.value) {
+        console.log('chaifenLoader 未初始化');
+        return [];
+    }
 
     try {
-        const allChars = await chaifenLoader.value.loadData();
+        console.log(`開始為字根 "${zigen}" 搜索例字...`);
+        const optimizedData = await chaifenLoader.value.loadData();
+
         const examples: string[] = [];
 
-        for (const [char, data] of Object.entries(allChars)) {
-            // 类型安全的检查
+        // 確保字根是正確的 Unicode 字符串
+        const normalizedZigen = zigen.normalize('NFC');
+        console.log(`搜索字根: "${normalizedZigen}"`);
+
+        // 檢查前幾個字符的數據格式
+        const sampleEntries = Object.entries(optimizedData).slice(0, 3);
+        console.log('數據樣本:', sampleEntries);
+
+        let checkedCount = 0;
+        for (const [char, data] of Object.entries(optimizedData)) {
+            checkedCount++;
+
             const charData = data as { d?: string, dt?: string, r?: string };
-            if (charData.d?.includes(zigen)) {
+
+            // 調試：檢查特定字符
+            if (checkedCount <= 5) {
+                console.log(`字符 "${char}" 的拆分數據:`, charData.d);
+            }
+
+            // 檢查拆分數據是否包含指定字根
+            if (charData.d?.includes(normalizedZigen)) {
+                console.log(`✅ 找到匹配: "${char}" 包含字根 "${normalizedZigen}", 拆分: "${charData.d}"`);
                 examples.push(char);
                 if (examples.length >= 20) break;
             }
+
+            // 每檢查1000個字符輸出一次進度
+            if (checkedCount % 1000 === 0) {
+                console.log(`已檢查 ${checkedCount} 個字符，找到 ${examples.length} 個例字`);
+            }
         }
+
+        console.log(`字根 "${normalizedZigen}" 最終找到例字:`, examples.slice(0, 5), `(總共${examples.length}個)`);
         return examples;
     } catch (error) {
         console.error('获取例字失败:', error);
@@ -131,6 +199,8 @@ async function loadData() {
         // 初始化拆分数据加载器
         chaifenLoader.value = ChaiDataLoader.getInstance(currentScheme.value.chaifenUrl);
 
+        console.log(`已初始化 ChaiDataLoader，使用文件: ${currentScheme.value.chaifenUrl}`);
+
     } catch (error) {
         console.error('加载数据失败:', error);
     } finally {
@@ -139,29 +209,150 @@ async function loadData() {
 }
 
 // 处理字根悬停
-async function handleZigenHover(event: MouseEvent, zigen: string) {
-    hoveredZigen.value = zigen;
+async function handleZigenHover(event: MouseEvent, zigen: { font: string, code: string }) {
+    hoveredZigen.value = zigen.font;
     hoverPosition.value = { x: event.clientX, y: event.clientY };
 
-    // 异步加载例字
-    exampleChars.value = await getExampleChars(zigen);
+    // 找到所有相同完整编码的字根
+    // 需要先找到当前字根的完整编码（首字母+剩余编码）
+    let fullCode = '';
+    if (zigenMap.value) {
+        for (const [key, data] of zigenMap.value) {
+            if (data.font === zigen.font && data.ma?.slice(1) === zigen.code) {
+                fullCode = data.ma;
+                break;
+            }
+        }
+    }
+
+    const sameCodeZigens = findSameCodeZigens(zigen.font, fullCode);
+    hoveredZigenInfo.value = sameCodeZigens;
+
+    // 获取所有相同编码字根的例字（限制为10个）
+    const allZigens = [...sameCodeZigens.visible, ...sameCodeZigens.hidden];
+    const allExamples: string[] = [];
+
+    for (const z of allZigens) {
+        const examples = await getExampleChars(z.font);
+        allExamples.push(...examples);
+        if (allExamples.length >= 10) break;
+    }
+
+    exampleChars.value = allExamples.slice(0, 10);
 }
 
 function handleZigenLeave() {
+    // 如果彈窗已固定，不清除懸停狀態
+    if (!isPinned.value) {
+        hoveredZigen.value = null;
+        hoveredZigenInfo.value = null;
+        exampleChars.value = [];
+    }
+}
+
+// 處理字根點擊 - 固定彈窗
+async function handleZigenClick(event: MouseEvent, zigen: { font: string, code: string }) {
+    event.stopPropagation();
+
+    // 如果已經固定了相同的字根，則取消固定
+    if (isPinned.value && pinnedZigen.value === zigen.font) {
+        closePinnedPopup();
+        return;
+    }
+
+    // 固定新的字根
+    pinnedZigen.value = zigen.font;
+    isPinned.value = true;
+
+    // 找到完整編碼
+    let fullCode = '';
+    if (zigenMap.value) {
+        for (const [key, data] of zigenMap.value) {
+            if (data.font === zigen.font && data.ma?.slice(1) === zigen.code) {
+                fullCode = data.ma;
+                break;
+            }
+        }
+    }
+
+    const sameCodeZigens = findSameCodeZigens(zigen.font, fullCode);
+    pinnedZigenInfo.value = sameCodeZigens;
+
+    // 獲取例字
+    const allZigens = [...sameCodeZigens.visible, ...sameCodeZigens.hidden];
+    console.log('開始獲取例字，字根數量:', allZigens.length);
+    const allExamples: string[] = [];
+
+    for (const z of allZigens) {
+        console.log(`正在獲取字根 "${z.font}" 的例字...`);
+        const examples = await getExampleChars(z.font);
+        console.log(`字根 "${z.font}" 找到例字:`, examples.length, '個');
+        allExamples.push(...examples);
+        if (allExamples.length >= 10) break;
+    }
+
+    pinnedExampleChars.value = allExamples.slice(0, 10);
+    console.log(`固定彈窗 - 字根 "${zigen.font}" 的最終例字:`, pinnedExampleChars.value);    // 清除懸停狀態
     hoveredZigen.value = null;
+    hoveredZigenInfo.value = null;
     exampleChars.value = [];
 }
 
-// 切换方案
+// 關閉固定彈窗
+function closePinnedPopup() {
+    isPinned.value = false;
+    pinnedZigen.value = null;
+    pinnedZigenInfo.value = null;
+    pinnedExampleChars.value = [];
+}
+
+// 辅助函数：找到所有相同完整编码的字根
+function findSameCodeZigens(targetFont: string, targetFullCode: string) {
+    const visible: Array<{ font: string, code: string }> = [];
+    const hidden: Array<{ font: string, code: string }> = [];
+
+    if (!zigenMap.value || !targetFullCode) return { visible, hidden };
+
+    for (const [key, data] of zigenMap.value) {
+        const font = data.font;
+        const ma = data.ma?.trim();
+
+        if (!ma || !font || font === null || font === undefined) continue;
+
+        // 比较完整编码
+        if (ma === targetFullCode) {
+            if (font === targetFont) {
+                // 当前悬停的字根放在最前面
+                visible.unshift({ font, code: ma }); // 使用完整编码显示
+            } else {
+                // 其他相同完整编码的字根
+                hidden.push({ font, code: ma }); // 使用完整编码显示
+            }
+        }
+    }
+
+    return { visible, hidden };
+}// 切换方案
 function switchScheme(schemeId: string) {
     activeScheme.value = schemeId;
 }
 
-// 监听方案变化
+// 監聽方案變化
 watch(() => activeScheme.value, loadData);
 
-// 初始化
-onMounted(loadData);
+// 監聽點擊事件，點擊空白處關閉固定彈窗
+onMounted(() => {
+    loadData();
+
+    document.addEventListener('click', (event) => {
+        if (isPinned.value) {
+            const pinnedPopup = document.querySelector('.pinned-popup');
+            if (pinnedPopup && !pinnedPopup.contains(event.target as Node)) {
+                closePinnedPopup();
+            }
+        }
+    });
+});
 </script>
 
 <template>
@@ -188,13 +379,16 @@ onMounted(loadData);
                     <!-- 键位标签 -->
                     <div class="key-label">{{ key.toUpperCase() }}</div>
 
-                    <!-- 字根显示 -->
-                    <div v-if="!emptyKeys.includes(key) && zigenByKey[key]" class="zigen-list">
-                        <span v-for="(zigen, index) in zigenByKey[key]" :key="index" class="zigen-item"
-                            @mouseenter="handleZigenHover($event, zigen.font)" @mouseleave="handleZigenLeave">
+                    <!-- 字根显示 - 只显示可见的字根 -->
+                    <div v-if="!emptyKeys.includes(key) && zigenByKey[key]?.visible.length > 0" class="zigen-list">
+                        <span v-for="(zigen, index) in zigenByKey[key].visible" :key="index" class="zigen-item"
+                            @mouseenter="handleZigenHover($event, zigen)" @mouseleave="handleZigenLeave"
+                            @click="handleZigenClick($event, zigen)">
                             <span class="zigen-font">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code }}</span>
                         </span>
+                        <!-- 如果有隐藏的字根，显示省略号 -->
+                        <span v-if="zigenByKey[key].hidden.length > 0" class="more-indicator">⋯</span>
                     </div>
 
                     <!-- 无字根提示 -->
@@ -205,26 +399,97 @@ onMounted(loadData);
             </div>
         </div>
 
-        <!-- 悬停卡片 -->
-        <div v-if="hoveredZigen" class="hover-card" :style="{
+        <!-- 悬停卡片 - 显示相同编码的字根 -->
+        <div v-if="hoveredZigen && hoveredZigenInfo" class="hover-card" :style="{
             left: hoverPosition.x + 10 + 'px',
             top: hoverPosition.y + 10 + 'px'
         }">
-            <div class="card bg-base-100 shadow-xl border">
-                <div class="card-body p-4">
-                    <h3 class="card-title text-lg">
-                        <span class="zigen-font">{{ hoveredZigen }}</span>
+            <div class="popup-container">
+                <div class="popup-body">
+                    <h3 class="popup-title">
+                        字根 "{{ hoveredZigen }}" 的歸併字根
                     </h3>
-                    <div v-if="exampleChars.length > 0" class="example-chars">
-                        <h4 class="text-sm font-medium mb-2">例字：</h4>
+
+                    <!-- 字根列表 - 按列显示 -->
+                    <div class="zigen-columns">
+                        <!-- 当前悬停的字根 -->
+                        <div v-for="(zigen, index) in hoveredZigenInfo.visible" :key="`visible-${index}`"
+                            class="zigen-column">
+                            <div class="zigen-header current-zigen">
+                                <span class="zigen-font">{{ zigen.font }}</span>
+                                <span class="zigen-code-display">{{ zigen.code }}</span>
+                            </div>
+                        </div>
+
+                        <!-- 其他相同编码的字根 -->
+                        <div v-for="(zigen, index) in hoveredZigenInfo.hidden" :key="`hidden-${index}`"
+                            class="zigen-column">
+                            <div class="zigen-header other-zigen">
+                                <span class="zigen-font">{{ zigen.font }}</span>
+                                <span class="zigen-code-display">{{ zigen.code }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 例字显示 -->
+                    <div v-if="exampleChars.length > 0" class="example-chars mt-4">
+                        <h4 class="text-sm font-medium mb-2 text-base-content">例字（前10个）：</h4>
                         <div class="chars-grid">
                             <span v-for="char in exampleChars" :key="char" class="example-char zigen-font">
                                 {{ char }}
                             </span>
                         </div>
                     </div>
-                    <div v-else class="text-sm text-gray-500">
+                    <div v-else class="text-sm text-base-content opacity-60 mt-4">
                         正在加载例字...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 固定彈窗 - 點擊字根後顯示 -->
+        <div v-if="isPinned && pinnedZigen && pinnedZigenInfo" class="pinned-popup">
+            <div class="popup-container">
+                <div class="popup-body">
+                    <div class="popup-header">
+                        <h3 class="popup-title">
+                            字根 "{{ pinnedZigen }}" 的同编码字根
+                        </h3>
+                        <button @click="closePinnedPopup" class="close-btn">✕</button>
+                    </div>
+
+                    <!-- 字根列表 - 按列显示 -->
+                    <div class="zigen-columns">
+                        <!-- 当前固定的字根 -->
+                        <div v-for="(zigen, index) in pinnedZigenInfo.visible" :key="`pinned-visible-${index}`"
+                            class="zigen-column">
+                            <div class="zigen-header current-zigen">
+                                <span class="zigen-font">{{ zigen.font }}</span>
+                                <span class="zigen-code-display">{{ zigen.code }}</span>
+                            </div>
+                        </div>
+
+                        <!-- 其他相同编码的字根 -->
+                        <div v-for="(zigen, index) in pinnedZigenInfo.hidden" :key="`pinned-hidden-${index}`"
+                            class="zigen-column">
+                            <div class="zigen-header other-zigen">
+                                <span class="zigen-font">{{ zigen.font }}</span>
+                                <span class="zigen-code-display">{{ zigen.code }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 例字显示 -->
+                    <div v-if="pinnedExampleChars.length > 0" class="example-chars mt-4">
+                        <h4 class="text-sm font-medium mb-2 text-base-content">例字（前10个）：</h4>
+                        <div class="chars-grid">
+                            <span v-for="char in pinnedExampleChars" :key="char" class="example-char zigen-font">
+                                {{ char }}
+                            </span>
+                        </div>
+                    </div>
+                    <div v-else class="text-sm text-base-content opacity-60 mt-4">
+                        正在加載例字...
                     </div>
                 </div>
             </div>
@@ -341,6 +606,12 @@ onMounted(loadData);
     transform: scale(1.05);
 }
 
+.more-indicator {
+    font-size: 0.4rem;
+    color: var(--fallback-nc, oklch(var(--nc)/0.5));
+    margin-left: 0.1rem;
+}
+
 .zigen-font {
     font-family: 'Yuniversus', sans-serif;
     color: var(--fallback-p, oklch(var(--p)/var(--tw-text-opacity)));
@@ -368,6 +639,72 @@ onMounted(loadData);
     z-index: 1000;
     pointer-events: none;
     max-width: 20rem;
+}
+
+/* 彈出框樣式 - 與鍵位樣式一致 */
+.popup-container {
+    background: rgb(249 250 251);
+    border: 1px solid var(--fallback-bc, oklch(var(--bc)/0.1));
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.dark .popup-container {
+    background: rgb(15 23 42);
+}
+
+.popup-body {
+    padding: 1rem;
+}
+
+.popup-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--fallback-nc, oklch(var(--nc)/0.8));
+    border-bottom: 1px solid var(--fallback-bc, oklch(var(--bc)/0.15));
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+/* 固定彈窗樣式 */
+.pinned-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    pointer-events: auto;
+    max-width: 28rem;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.close-btn {
+    background: var(--fallback-error, oklch(var(--er)/0.1));
+    border: 1px solid var(--fallback-error, oklch(var(--er)/0.3));
+    border-radius: 0.375rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    color: var(--fallback-error, oklch(var(--er)/1));
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.close-btn:hover {
+    background: var(--fallback-error, oklch(var(--er)/0.2));
+    transform: scale(1.05);
 }
 
 .example-chars {
@@ -445,5 +782,59 @@ onMounted(loadData);
 .tab-active {
     background-color: var(--fallback-p, oklch(var(--p)/var(--tw-bg-opacity)));
     color: var(--fallback-pc, oklch(var(--pc)/var(--tw-text-opacity)));
+}
+
+/* 悬停卡片中的字根列样式 */
+.zigen-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.zigen-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 3rem;
+}
+
+.zigen-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: var(--fallback-b2, oklch(var(--b2)/var(--tw-bg-opacity)));
+    border: 1px solid var(--fallback-bc, oklch(var(--bc)/0.1));
+}
+
+.hidden-zigen .zigen-header {
+    background: var(--fallback-warning, oklch(var(--wa)/0.1));
+    border-color: var(--fallback-warning, oklch(var(--wa)/0.3));
+}
+
+.zigen-code-display {
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: var(--fallback-bc, oklch(var(--bc)/0.6));
+    margin-top: 0.25rem;
+}
+
+.zigen-header.current-zigen {
+    background: var(--fallback-primary, oklch(var(--p)/0.1));
+    border-color: var(--fallback-primary, oklch(var(--p)/0.3));
+}
+
+.zigen-header.other-zigen {
+    background: var(--fallback-primary, oklch(var(--p)/0.1));
+    border-color: var(--fallback-primary, oklch(var(--p)/0.3));
+    opacity: 0.9;
+    /* 稍微透明以示區別 */
+}
+
+.zigen-header.other-zigen .zigen-font {
+    color: inherit;
+    /* 使用繼承的顏色 */
 }
 </style>

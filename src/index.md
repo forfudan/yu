@@ -35,9 +35,7 @@ import ZigenMap from '@/zigen/ZigenMap.vue'
 <TabbedSearch defaultScheme="star" />
 </div>
 
----
-
-<div class="zigen-font">
+<div class="mt-8">
 <ZigenMap />
 </div>
 
