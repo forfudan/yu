@@ -28,13 +28,17 @@ hero:
 
 <script setup>
 import TabbedSearch from '@/search/TabbedSearch.vue'
-import Chaifen from '@/chaifen/Chaifen.vue'
-import MultiChaifen from '@/chaifen/MultiChaifen.vue'
-import IME from '@/ime/FetchInput.vue'
+import ZigenMap from '@/zigen/ZigenMap.vue'
 </script>
 
 <div class="zigen-font">
 <TabbedSearch defaultScheme="star" />
+</div>
+
+---
+
+<div class="zigen-font">
+<ZigenMap />
 </div>
 
 <!-- <MultiChaifen chars="卿雲爛兮糾縵縵兮" :size="35" />
