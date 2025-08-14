@@ -57,13 +57,11 @@ function handleSchemeChange(schemeId: string) {
 
         <!-- 搜索組件 -->
         <div class="search-section">
-            <h4 class="section-title">拆分查詢</h4>
             <TabbedSearch :key="`search-${activeScheme}`" :default-scheme="activeScheme" :hide-scheme-buttons="true" />
         </div>
 
         <!-- 字根圖組件 -->
         <div class="zigen-section mt-8">
-            <h4 class="section-title">字根圖</h4>
             <ZigenMap :key="`zigen-${activeScheme}`" :default-scheme="activeScheme" :hide-scheme-buttons="true" />
         </div>
     </div>
