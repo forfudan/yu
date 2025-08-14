@@ -15,6 +15,13 @@ import { fetchZigen } from "../search/share";
 import ChaiDataLoader from "../search/ChaiDataLoader";
 import type { ZigenMap as ZigenMapType, ChaifenMap, Chaifen } from "../search/share";
 
+const props = defineProps<{
+    defaultScheme?: string
+    hideSchemeButtons?: boolean
+}>()
+
+const { hideSchemeButtons } = props
+
 interface ZigenScheme {
     id: string
     name: string
@@ -61,7 +68,7 @@ const schemes: ZigenScheme[] = [
 ];
 
 // 响应式状态
-const activeScheme = ref('star');
+const activeScheme = ref(props.defaultScheme || 'star');
 const zigenMap = ref<ZigenMapType>();
 const chaifenLoader = ref<ChaiDataLoader>();
 const isLoading = ref(false);
@@ -76,6 +83,13 @@ const pinnedZigen = ref<string | null>(null);
 const pinnedZigenInfo = ref<{ visible: Array<{ font: string, code: string }>, hidden: Array<{ font: string, code: string }> } | null>(null);
 const pinnedZigenExampleChars = ref<{ [zigenFont: string]: string[] }>({});
 const isPinned = ref(false);
+
+// 監聽 props.defaultScheme 的變化
+watch(() => props.defaultScheme, (newScheme) => {
+    if (newScheme && newScheme !== activeScheme.value) {
+        activeScheme.value = newScheme;
+    }
+}, { immediate: true });
 
 // 当前方案
 const currentScheme = computed(() => {
@@ -380,7 +394,7 @@ onMounted(() => {
 <template>
     <div class="zigen-map-container">
         <!-- 方案切换圆形按钮 -->
-        <div class="flex justify-center mb-6 space-x-4">
+        <div v-if="!hideSchemeButtons" class="flex justify-center mb-6 space-x-4">
             <button v-for="scheme in schemes" :key="scheme.id" @click="switchScheme(scheme.id)" :class="[
                 'scheme-button',
                 { 'scheme-button-active': activeScheme === scheme.id }

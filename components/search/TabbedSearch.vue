@@ -11,7 +11,7 @@
 -->
 
 <script setup lang="ts">
-import { ref, computed, watch, onMounted } from "vue";
+import { ref, computed, watch } from "vue";
 import OptimizedFetchSearch from "./OptimizedFetchSearch.vue";
 
 // Define available schemes
@@ -28,7 +28,10 @@ interface SearchScheme {
 const props = defineProps<{
     defaultScheme?: string
     supplement?: boolean
+    hideSchemeButtons?: boolean
 }>()
+
+const { hideSchemeButtons } = props
 
 // 共享的用戶輸入狀態，切換標籤時保持不變
 const sharedUserInput = ref('')
@@ -77,6 +80,13 @@ const schemes: SearchScheme[] = [
 // Current active scheme
 const activeScheme = ref(props.defaultScheme || 'star')
 
+// 監聽 props.defaultScheme 的變化
+watch(() => props.defaultScheme, (newScheme) => {
+    if (newScheme && newScheme !== activeScheme.value) {
+        activeScheme.value = newScheme;
+    }
+}, { immediate: true });
+
 // Get current scheme data
 const currentScheme = computed(() => {
     return schemes.find(s => s.id === activeScheme.value) || schemes[0]
@@ -104,7 +114,7 @@ function switchScheme(schemeId: string) {
 function getSchemeChar(schemeId: string): string {
     const charMap: Record<string, string> = {
         'joy': '卿',
-        'light': '光', 
+        'light': '光',
         'star': '星',
         'ming': '明'
     };
@@ -118,19 +128,17 @@ const componentKey = computed(() => `search-${activeScheme.value}`)
 <template>
     <div class="tabbed-search-container">
         <!-- 方案切换圆形按钮 -->
-        <div class="flex justify-center mb-6 space-x-4">
-            <button v-for="scheme in schemes" :key="scheme.id" @click="switchScheme(scheme.id)" 
-                :class="[
-                    'scheme-button',
-                    { 'scheme-button-active': activeScheme === scheme.id }
-                ]"
-                :title="scheme.description">
+        <div v-if="!hideSchemeButtons" class="flex justify-center mb-6 space-x-4">
+            <button v-for="scheme in schemes" :key="scheme.id" @click="switchScheme(scheme.id)" :class="[
+                'scheme-button',
+                { 'scheme-button-active': activeScheme === scheme.id }
+            ]" :title="scheme.description">
                 <span class="scheme-text">{{ getSchemeChar(scheme.id) }}</span>
             </button>
         </div>
 
         <!-- Current Scheme Info -->
-        <div class="mb-3 text-sm text-gray-600 dark:text-gray-400 text-center">
+        <div v-if="!hideSchemeButtons" class="mb-3 text-sm text-gray-600 dark:text-gray-400 text-center">
             <span class="font-medium">當前方案</span>：{{ currentScheme.name }}
             <span v-if="currentScheme.description" class="ml-2 text-xs opacity-75">{{ currentScheme.description
             }}</span>
