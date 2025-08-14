@@ -13,7 +13,7 @@ jobs:
     
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -22,7 +22,7 @@ jobs:
         cache: 'npm'
         
     - name: Setup Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.9'
         
@@ -38,7 +38,7 @@ jobs:
       run: npm run build
       
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: website-build
         path: dist/
@@ -50,7 +50,7 @@ jobs:
     
     steps:
     - name: Download build artifacts
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: website-build
         path: dist/
