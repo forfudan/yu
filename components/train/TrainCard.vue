@@ -14,6 +14,7 @@ const p = defineProps<{
     /** 训练模式：字根、单字练习 */
     mode: 'g' | 'z'
     supplement: boolean
+    ming: boolean
 }>()
 
 let thisSchedule: Schedule<Card>;
@@ -39,9 +40,21 @@ onMounted(() => {
 })
 
 watch(userKeys, (newKeys) => {
-    // 多个编码没有打完就不提示错误
-    if (newKeys.length < card.value.key.length)
-        return
+    // Alternative solutions for ming mode
+    const mingAlternatives: Record<string, string> = {
+        '的': 'e',
+        '是': 'i',
+        '我': 'o',
+        '不': 'u',
+        '了': 'a'
+    }
+
+    // Check if we should trigger checkNextItem
+    const shouldCheck = newKeys.length >= card.value.key.length ||
+        (p.ming && mingAlternatives[card.value.name] && newKeys.toLowerCase() === mingAlternatives[card.value.name])
+
+    if (!shouldCheck) return
+
     // 检查回答
     checkNextItem(newKeys)
     userKeys.value = ''
@@ -50,8 +63,25 @@ watch(userKeys, (newKeys) => {
 function checkNextItem(answer: string) {
     const answerLowercase = answer.toLowerCase()
     const keyLowercase = card.value.key.toLowerCase()
+
+    // Alternative solutions for ming mode
+    const mingAlternatives: Record<string, string> = {
+        '的': 'e',
+        '是': 'i',
+        '我': 'o',
+        '不': 'u',
+        '了': 'a'
+    }
+
+    let isCorrectAnswer = answerLowercase === keyLowercase
+
+    // Check for alternative solutions when ming is true
+    if (!isCorrectAnswer && p.ming && mingAlternatives[card.value.name]) {
+        isCorrectAnswer = answerLowercase === mingAlternatives[card.value.name]
+    }
+
     let next: { item: Card; isFirst: boolean };
-    if (answerLowercase === keyLowercase) {
+    if (isCorrectAnswer) {
         next = thisSchedule.nextSuccess();
         isCorrect.value = true
     } else {
@@ -133,6 +163,15 @@ function restartTraining() {
 
             <div :class="['text-center', { 'opacity-0': !isFirstLearn }]">答案是 <b class="font-mono">{{ card.key }}</b>
                 <span v-if="mode === 'z'">（{{ chaifenMap?.get(card.name)?.division }}）</span>
+                <div v-if="p.ming && ['的', '是', '我', '不', '了'].includes(card.name)" class="text-sm text-gray-500 mt-1">
+                    也可直接使用韻碼 <b class="font-mono text-blue-600">{{
+                        card.name === '的' ? 'E' :
+                            card.name === '是' ? 'I' :
+                                card.name === '我' ? 'O' :
+                                    card.name === '不' ? 'U' :
+                                        card.name === '了' ? 'A' : ''
+                    }}</b> 直接上屏
+                </div>
             </div>
 
         </div>

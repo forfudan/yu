@@ -11,7 +11,3 @@ import Train from "@/train/CharTrain.vue"
 <div class="zigen-font">
 <Train name="ming"  chaifenUrl="/chaifen.csv" zigenUrl="/zigen-ming.csv" :range="[0,1000]" :supplement="false" :ming="true" />
 </div>
-
-本练习为单字全码练习，以下五个汉字可以一码上屏：
-
-的 E，是 I，我 O，不 U，了 A
