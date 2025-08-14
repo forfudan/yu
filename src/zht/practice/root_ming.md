@@ -9,7 +9,7 @@ aside: false
 import Train from "@/train/ZigenTrain.vue"
 </script>
 <div class="zigen-font">
-<Train name="sunmoon" zigenUrl="/zigen-sm.csv" :range="[0,]" mode='both' />
+<Train name="sunmoon" zigenUrl="/zigen-ming.csv" :range="[0,]" mode='both' />
 </div>
 
 韻母對照表：
@@ -31,5 +31,5 @@ import Train from "@/train/ZigenTrain.vue"
 import Train from "@/train/ZigenTrain.vue"
 </script>
 <div class="zigen-font">
-<Train name="sunmoon" zigenUrl="/zigen-sm.csv" :range="[0,]" mode='A' />
+<Train name="sunmoon" zigenUrl="/zigen-ming.csv" :range="[0,]" mode='A' />
 </div> -->

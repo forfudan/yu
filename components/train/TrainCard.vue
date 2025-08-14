@@ -24,6 +24,7 @@ const card = shallowRef<Card>({
 const progress = shallowRef(0)
 const isFirstLearn = shallowRef(true)
 const isCorrect = shallowRef(true)
+const isCompleted = shallowRef(false)
 const userKeys = shallowRef('')
 
 onMounted(() => {
@@ -56,46 +57,85 @@ function checkNextItem(answer: string) {
         next = thisSchedule.nextFail();
         isCorrect.value = false
     }
+
+    // Check if training is completed
+    if (progress.value >= p.cards.length) {
+        isCompleted.value = true
+        return
+    }
+
     card.value = next.item
     isFirstLearn.value = next.isFirst
     progress.value = thisSchedule.progress
 }
+
+function restartTraining() {
+    thisSchedule = new Schedule(p.cards, p.name)
+    const first = thisSchedule.first()
+    card.value = first.item
+    isFirstLearn.value = first.isFirst
+    progress.value = thisSchedule.progress
+    isCompleted.value = false
+    const element = document.getElementById('input_el')
+    element?.focus()
+}
 </script>
 
 <template>
-    <div
-        :class="['md:w-2/3 w-full shadow-sm my-12 pb-24 bg-opacity-10  rounded-md', { 'bg-red-700': !isCorrect, 'bg-slate-500': isCorrect }]">
-        <div class="flex justify-center mb-24">
-            <progress class="progress w-full" :value="progress" :max="cards.length" />
+    <!-- Training completed screen -->
+    <div v-if="isCompleted" class="text-center py-16">
+        <div class="mb-8">
+            <div class="text-6xl mb-4">🎉</div>
+            <h2 class="text-4xl font-bold mb-2">恭喜你完成練習！</h2>
+            <p class="text-xl text-gray-600 mb-8">你已经完成了 {{ cards.length }} 個項目的練習，獲得称号「登堂入室」</p>
         </div>
-        <div class="flex justify-around mb-8">
-            <div :class="['text-6xl ', { 'text-red-400': !isCorrect }]">{{ card.name }}</div>
-            <div class="flex tracking-widest flex-col opacity-70" v-if="mode === 'z'">
-                <MultiChaifen :chars="card.name" :size="100" :key="card.name" />
+
+        <div class="space-y-4">
+            <button @click="restartTraining" class="btn btn-primary btn-lg px-8">
+                要不要再來一輪？
+            </button>
+            <div class="text-sm text-gray-500">
+                繼續聯繫以巩固記憶
             </div>
-            <div class="flex tracking-widest flex-col opacity-70" v-if="mode === 'g' && chaifenMap">
-
-                <div class="text-gray-500 text-sm">
-                    相关的字：
-                </div>
-
-                <div class="font-bold text-xl">
-                    {{ find8relativeChars(card.name, chaifenMap) }}
-                </div>
-            </div>
-
         </div>
-
-        <div class="flex justify-center p-5">
-            <input id="input_el" type="text" placeholder="输入编码" v-model="userKeys"
-                :class="['input w-half max-w-xs input-bordered text-center input-sm dark:bg-slate-800 bg-white', { 'input-error': !isCorrect }]" />
-        </div>
-
-        <div :class="['text-center', { 'opacity-0': !isFirstLearn }]">答案是 <b class="font-mono">{{ card.key }}</b>
-            <span v-if="mode === 'z'">（{{ chaifenMap?.get(card.name)?.division }}）</span>
-        </div>
-
     </div>
 
-    <div class="text-gray-500 pb-16">训练进度：{{ progress }} / {{ cards.length }}</div>
+    <!-- Training in progress screen -->
+    <div v-else>
+        <div
+            :class="['md:w-2/3 w-full shadow-sm my-12 pb-24 bg-opacity-10  rounded-md', { 'bg-red-700': !isCorrect, 'bg-slate-500': isCorrect }]">
+            <div class="flex justify-center mb-24">
+                <progress class="progress w-full" :value="progress" :max="cards.length" />
+            </div>
+            <div class="flex justify-around mb-8">
+                <div :class="['text-6xl ', { 'text-red-400': !isCorrect }]">{{ card.name }}</div>
+                <div class="flex tracking-widest flex-col opacity-70" v-if="mode === 'z'">
+                    <MultiChaifen :chars="card.name" :size="100" :key="card.name" loc="" />
+                </div>
+                <div class="flex tracking-widest flex-col opacity-70" v-if="mode === 'g' && chaifenMap">
+
+                    <div class="text-gray-500 text-sm">
+                        相关的字：
+                    </div>
+
+                    <div class="font-bold text-xl">
+                        {{ find8relativeChars(card.name, chaifenMap) }}
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex justify-center p-5">
+                <input id="input_el" type="text" placeholder="輸入編碼" v-model="userKeys"
+                    :class="['input w-half max-w-xs input-bordered text-center input-sm dark:bg-slate-800 bg-white', { 'input-error': !isCorrect }]" />
+            </div>
+
+            <div :class="['text-center', { 'opacity-0': !isFirstLearn }]">答案是 <b class="font-mono">{{ card.key }}</b>
+                <span v-if="mode === 'z'">（{{ chaifenMap?.get(card.name)?.division }}）</span>
+            </div>
+
+        </div>
+
+        <div class="text-gray-500 pb-16">訓練進度：{{ progress }} / {{ cards.length }}</div>
+    </div>
 </template>

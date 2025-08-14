@@ -9,7 +9,7 @@ aside: false
 import Train from "@/train/CharTrain.vue"
 </script>
 <div class="zigen-font">
-<Train name="ming"  chaifenUrl="/chaifen.csv" zigenUrl="/zigen-sm.csv" :range="[0,1000]" :supplement="false" :ming="true" />
+<Train name="ming"  chaifenUrl="/chaifen.csv" zigenUrl="/zigen-ming.csv" :range="[0,1000]" :supplement="false" :ming="true" />
 </div>
 
 本練習為單字全碼練習，以下五個漢字可以一碼上屏：

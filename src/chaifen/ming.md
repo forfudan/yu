@@ -10,7 +10,7 @@ import Search from '@/search/FetchSearch.vue'
 注意，拆分编码为日月全息编码，实际使用时，只需要截取前五码即可。
 
 <div class="zigen-font">
-<Search chaifenUrl="/chaifen.csv" zigenUrl="/zigen-sm.csv" :supplement="true" :ming="true"/>
+<Search chaifenUrl="/chaifen.csv" zigenUrl="/zigen-ming.csv" :supplement="true" :ming="true"/>
 </div>
 
 ::: tip 提示

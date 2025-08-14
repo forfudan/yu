@@ -9,5 +9,5 @@ aside: false
 import Train from "@/train/ZigenTrain.vue"
 </script>
 <div class="zigen-font">
-<Train name="sunmoon" zigenUrl="/zigen-sm.csv" :range="[0,]" mode='A' />
+<Train name="sunmoon" zigenUrl="/zigen-ming.csv" :range="[0,]" mode='A' />
 </div>
