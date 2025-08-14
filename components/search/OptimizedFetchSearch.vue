@@ -9,7 +9,7 @@
   - Automatic format fallback (gzip → json → csv)
   
   Modification History:
-  - 2025-08-14 by 朱複丹: 生成優化版本讀取壓縮JSON數據
+  - 2025-08-14 by 朱複丹: 初版，生成優化版本的拆分數據獲取組件，讀取壓縮JSON文件
 -->
 
 <script setup lang="ts">
@@ -23,14 +23,47 @@ const p = defineProps<{
     zigenUrl: string,
     supplement: boolean,
     ming?: boolean,
+    modelValue?: string, // 支持 v-model 传入用户输入
+}>()
+
+const emit = defineEmits<{
+    'update:modelValue': [value: string]
 }>()
 
 const chaifenMap = shallowRef<ChaifenMap>()
 const zigenMap = shallowRef<ZigenMap>()
 const isLoading = shallowRef(false)
 const isDataLoaded = shallowRef(false)
-const userInput = shallowRef('')
+const userInput = shallowRef(p.modelValue || '')
 const loadError = shallowRef<string | null>(null)
+
+// 同步外部传入的值
+watch(() => p.modelValue, (newValue) => {
+    if (newValue !== undefined && newValue !== userInput.value) {
+        userInput.value = newValue
+        // 如果外部传入的值不为空且数据还没加载，立即加载数据
+        if (newValue.trim().length > 0 && !isDataLoaded.value) {
+            loadData()
+        }
+    }
+}, { immediate: true })
+
+// 当内部值改变时，通知父组件
+watch(userInput, (newValue) => {
+    emit('update:modelValue', newValue)
+    // 当用户开始输入时加载数据
+    if (newValue.trim().length > 0 && !isDataLoaded.value) {
+        loadData()
+    }
+})
+
+// 监听数据加载状态和用户输入，确保组件创建时能正确显示结果
+watch([isDataLoaded, userInput], ([dataLoaded, input]) => {
+    // 当数据加载完成且有用户输入时，触发搜索显示
+    if (dataLoaded && input && input.trim().length > 0) {
+        console.log(`🔍 Data loaded, ready to search for: "${input}"`)
+    }
+})
 
 // Get instance of optimized data loader for the specific file
 const dataLoader = ChaiDataLoader.getInstance(p.chaifenUrl)
@@ -78,16 +111,13 @@ async function loadData() {
     }
 }// Preload data if user hasn't interacted yet (optional optimization)
 onMounted(() => {
+    // 如果组件创建时已经有输入值，立即加载数据
+    if (userInput.value.trim().length > 0) {
+        loadData()
+    }
     // Uncomment to preload data immediately
     // loadData()
 })
-
-// Watch for user input and load data when user starts typing
-watch(userInput, (newValue) => {
-    if (newValue.trim().length > 0 && !isDataLoaded.value) {
-        loadData()
-    }
-}, { immediate: false })
 
 // Fast search function using optimized loader
 function quickSearch(query: string) {
