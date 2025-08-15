@@ -198,6 +198,38 @@ const zigenByKey = computed(() => {
     return result;
 });
 
+// 按編碼排序的字根列表（用於列表模式）
+const sortedZigenByKey = computed(() => {
+    if (!zigenByKey.value) return {};
+
+    const result: Record<string, Array<{ font: string, code: string, isHidden: boolean }>> = {};
+
+    for (const [key, zigens] of Object.entries(zigenByKey.value)) {
+        const allZigens: Array<{ font: string, code: string, isHidden: boolean }> = [];
+
+        // 收集所有字根並標記是否隱藏
+        zigens.visible.forEach(zigen => {
+            allZigens.push({ ...zigen, isHidden: false });
+        });
+        zigens.hidden.forEach(zigen => {
+            allZigens.push({ ...zigen, isHidden: true });
+        });
+
+        // 按編碼排序，同編碼的字根會聚集在一起
+        allZigens.sort((a, b) => {
+            if (a.code !== b.code) {
+                return a.code.localeCompare(b.code);
+            }
+            // 同編碼內，visible 字根排在前面
+            return (a.isHidden ? 1 : 0) - (b.isHidden ? 1 : 0);
+        });
+
+        result[key] = allZigens;
+    }
+
+    return result;
+});
+
 // 获取包含指定字根的例字
 const getExampleChars = async (zigen: string): Promise<string[]> => {
     if (!chaifenLoader.value) {
@@ -546,18 +578,13 @@ onMounted(() => {
                 <div class="mobile-key-label">{{ key.toUpperCase() }}</div>
 
                 <!-- 字根显示 -->
-                <div v-if="!emptyKeys.includes(key) && (zigenByKey[key]?.visible.length > 0 || zigenByKey[key]?.hidden.length > 0)"
+                <div v-if="!emptyKeys.includes(key) && sortedZigenByKey[key]?.length > 0"
                     class="mobile-zigen-container">
                     <div class="mobile-zigen-list text-indigo-800 dark:text-indigo-300">
-                        <!-- 显示所有可见字根 -->
-                        <span v-for="(zigen, index) in zigenByKey[key].visible" :key="`visible-${index}`"
-                            class="mobile-zigen-item" @click="handleZigenClick($event, zigen)">
-                            <span class="zigen-font">{{ zigen.font }}</span>
-                            <span class="zigen-code">{{ zigen.code }}</span>
-                        </span>
-                        <!-- 显示所有隐藏字根 -->
-                        <span v-for="(zigen, index) in zigenByKey[key].hidden" :key="`hidden-${index}`"
-                            class="mobile-zigen-item mobile-hidden-zigen" @click="handleZigenClick($event, zigen)">
+                        <!-- 显示按編碼排序的所有字根 -->
+                        <span v-for="(zigen, index) in sortedZigenByKey[key]" :key="`sorted-${index}`"
+                            class="mobile-zigen-item" :class="{ 'mobile-hidden-zigen': zigen.isHidden }"
+                            @click="handleZigenClick($event, zigen)">
                             <span class="zigen-font">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code }}</span>
                         </span>
