@@ -45,13 +45,14 @@ const candidateHanzi = computed(() => {
 
     const allCandidates = mabiaoList.slice(range[0], range[1])
 
-    // 过滤候选项：保留所有以当前编码开头的候选项
+    // 主候选栏：精确匹配和预测项
     const filteredCandidates = allCandidates.filter(candidate => {
         const candidateCode = candidate.key!
-        // 保留所有以当前编码开头的候选项
-        return candidateCode.startsWith(cd)
+        if (candidateCode === cd) return true // 精确匹配
+        if (!candidateCode.startsWith(cd)) return false
+        const rest = candidateCode.slice(cd.length)
+        return rest.length === 1 && 'aeiou'.includes(rest)
     })
-
     return filteredCandidates
 })
 
@@ -80,12 +81,21 @@ const candidatePage = computed(() => {
 })
 
 // 下拉展开的候选字（虚拟滚动分页）
-const dropdownCandidates = computed(() => {
-    if (candidateHanzi.value.length <= dynamicCandidateCount.value) return [];
+const dropdownRawCandidates = computed(() => {
+    // 显示所有以当前编码开头的候选项
+    if (!candidateCodes.value) return [];
+    const cd = candidateCodes.value
+    const range = biSearchBetween(mabiaoList, cd)
+    if (!range) return [];
+    const allCandidates = mabiaoList.slice(range[0], range[1])
+    return allCandidates.filter(candidate => candidate.key!.startsWith(cd))
+})
 
+const dropdownCandidates = computed(() => {
+    if (dropdownRawCandidates.value.length <= dynamicCandidateCount.value) return [];
     const startIndex = dropdownPageIndex.value * dropdownPageSize
-    const endIndex = Math.min(startIndex + dropdownPageSize, candidateHanzi.value.length)
-    return candidateHanzi.value.slice(startIndex, endIndex)
+    const endIndex = Math.min(startIndex + dropdownPageSize, dropdownRawCandidates.value.length)
+    return dropdownRawCandidates.value.slice(startIndex, endIndex)
 })
 
 // 计算下拉面板总页数
@@ -122,7 +132,7 @@ function adjustCandidateCount() {
         if (!container) return
 
         // 获取容器可用宽度（减去翻页按钮和边距）
-        const containerWidth = container.clientWidth - 50
+        const containerWidth = Math.min(window.innerWidth - 50, 320)
 
         // 计算最适合的候选项数量
         let bestCount = 3 // 最少3个
@@ -446,11 +456,11 @@ watch(candidateHanzi, (newCandidates) => {
 
 // 监听候选编码变化，重置展开状态并重新计算宽度
 watch(candidateCodes, () => {
+    // 编码变化时立即重新计算主候选栏显示数量
+    adjustCandidateCount()
     candidateExpanded.value = false
     candidatePageIndex.value = 0
     dropdownPageIndex.value = 0
-    // 编码变化时也需要重新计算，因为后序编码长度会影响宽度
-    adjustCandidateCount()
 })
 
 // 生命周期钩子
