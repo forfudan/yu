@@ -546,16 +546,21 @@ onMounted(() => {
                 <div class="mobile-key-label">{{ key.toUpperCase() }}</div>
 
                 <!-- 字根显示 -->
-                <div v-if="!emptyKeys.includes(key) && zigenByKey[key]?.visible.length > 0"
+                <div v-if="!emptyKeys.includes(key) && (zigenByKey[key]?.visible.length > 0 || zigenByKey[key]?.hidden.length > 0)"
                     class="mobile-zigen-container">
                     <div class="mobile-zigen-list text-indigo-800 dark:text-indigo-300">
-                        <span v-for="(zigen, index) in zigenByKey[key].visible" :key="index" class="mobile-zigen-item"
-                            @click="handleZigenClick($event, zigen)">
+                        <!-- 显示所有可见字根 -->
+                        <span v-for="(zigen, index) in zigenByKey[key].visible" :key="`visible-${index}`"
+                            class="mobile-zigen-item" @click="handleZigenClick($event, zigen)">
                             <span class="zigen-font">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code }}</span>
                         </span>
-                        <!-- 如果有隐藏的字根，显示省略号 -->
-                        <span v-if="zigenByKey[key].hidden.length > 0" class="mobile-more-indicator">⋯</span>
+                        <!-- 显示所有隐藏字根 -->
+                        <span v-for="(zigen, index) in zigenByKey[key].hidden" :key="`hidden-${index}`"
+                            class="mobile-zigen-item mobile-hidden-zigen" @click="handleZigenClick($event, zigen)">
+                            <span class="zigen-font">{{ zigen.font }}</span>
+                            <span class="zigen-code">{{ zigen.code }}</span>
+                        </span>
                     </div>
                 </div>
 
@@ -1331,6 +1336,20 @@ onMounted(() => {
 
 .mobile-zigen-item:hover {
     background: var(--fallback-bc, oklch(var(--bc)/0.1));
+}
+
+/* 列表模式中的隱藏字根樣式 
+隱藏字根即歸併在同一個編碼上的非主要字根
+*/
+.mobile-hidden-zigen {
+    opacity: 0.7;
+    background: var(--fallback-warning, oklch(var(--wa)/0.1));
+    border: 1px solid var(--fallback-warning, oklch(var(--wa)/0.3));
+}
+
+.mobile-hidden-zigen:hover {
+    opacity: 0.9;
+    background: var(--fallback-warning, oklch(var(--wa)/0.2));
 }
 
 .mobile-zigen-item .zigen-font {
