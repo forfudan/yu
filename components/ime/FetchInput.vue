@@ -3,6 +3,7 @@
 
     Modification History:
     - 2025-08-15 by 朱複丹: 重構版本，提升數據加載性能和穩定性
+      使用json文件代替原始txt
     - 2024-06-25 by yb6b: 初版
 -->
 

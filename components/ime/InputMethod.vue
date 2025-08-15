@@ -2,7 +2,13 @@
     InputMethod.vue - 在線輸入法核心組件
 
     Modification History:
-    - 2025-08-15 by 朱複丹: 重構版本，優化輸入法引擎和用戶體驗
+    - 2025-08-15 by 朱複丹: 完全重構代碼，優化輸入法引擎和用戶體驗
+      支持日月方案
+      支持額外的候選框
+      支持自動上屏
+      支持標點符號頂屏
+      支持韻碼提示
+      支持中英文模式切換
     - 2024-06-25 by yb6b: 初版
 -->
 
@@ -789,7 +795,7 @@ function onKeydown(e: KeyboardEvent) {
                                     <!-- 后序编码 -->
                                     <span class="text-sm text-blue-400 dark:text-blue-500 dark:opacity-70">{{
                                         n.key!.slice(candidateCodes.length)
-                                    }}</span>
+                                        }}</span>
                                 </button>
                             </div>
                         </div>
@@ -839,7 +845,7 @@ function onKeydown(e: KeyboardEvent) {
                                     n.name }}</div>
                                 <!-- 编码 -->
                                 <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                                    }}</div>
+                                }}</div>
                             </button>
                         </div>
                     </div>
