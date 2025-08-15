@@ -46,20 +46,25 @@ defineEmits<{
             </button>
         </div>
 
-        <!-- 空格键行：中/英切换、空格、删除 -->
-        <div class="flex gap-0.5 p-1">
+        <!-- 空格键行：使用网格布局精确对齐 -->
+        <div class="grid grid-cols-10 gap-0.5 p-1 pt-0">
+            <!-- 中/英切换键：占2格 -->
             <button
-                class="w-12 hover:bg-slate-300 hover:dark:bg-slate-800 py-3 text-sm text-neutral-500 border rounded flex items-center justify-center"
+                class="col-span-2 hover:bg-slate-300 hover:dark:bg-slate-800 py-3 text-sm text-neutral-500 border rounded flex items-center justify-center"
                 @click="$emit('click', 'toggle-lang')">
                 中/英
             </button>
+            
+            <!-- 空格键：占6格，对应C到逗号键 -->
             <button
-                class="flex-1 hover:bg-slate-300 hover:dark:bg-slate-800 py-3 text-sm text-neutral-500 rounded flex items-center justify-center"
+                class="col-span-6 hover:bg-slate-300 hover:dark:bg-slate-800 py-3 text-sm text-neutral-500 rounded flex items-center justify-center"
                 @click="$emit('click', ' ')">
                 空格
             </button>
+            
+            <!-- 删除键：占2格 -->
             <button
-                class="w-12 text-neutral-400 hover:bg-slate-300 hover:dark:bg-slate-800 flex justify-center items-center rounded"
+                class="col-span-2 text-neutral-400 hover:bg-slate-300 hover:dark:bg-slate-800 flex justify-center items-center rounded"
                 @click="$emit('click', 'bs')">
                 <!-- 退格按钮 -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">

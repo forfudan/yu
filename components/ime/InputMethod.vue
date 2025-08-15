@@ -705,7 +705,7 @@ function onKeydown(e: KeyboardEvent) {
     <div class="pt-3">
         <textarea v-model="text" ref="textarea"
             class="textarea textarea-bordered textarea-md w-full bg-neutral-50 dark:bg-neutral-700"
-            placeholder="点击这里开始输入" @keydown="onKeydown" @focus="onTextareaFocus" @blur="onTextareaBlur"></textarea>
+            placeholder="在這裏盡情輸入吧！" @keydown="onKeydown" @focus="onTextareaFocus" @blur="onTextareaBlur"></textarea>
     </div>
 
     <div class="relative w-full">
@@ -728,8 +728,8 @@ function onKeydown(e: KeyboardEvent) {
                     <div class="text-sm text-slate-500 ml-6 mt-1" v-if="candidateCodes.length === 0">
                         <slot>
                             <!-- 根据模式显示不同提示 -->
-                            <span v-if="isChineseMode">点击上方文本框开始打字（中文模式）</span>
-                            <span v-else>英文输入模式，直接打字即可</span>
+                            <span v-if="isChineseMode">中文輸入模式，記得關閉系統輸入法</span>
+                            <span v-else>英文輸入模式，記得關閉系統輸入法</span>
                         </slot>
                     </div>
                     <div class="text-sm text-slate-400 dark:text-slate-500 ml-6 mt-1" v-else>空码</div>
