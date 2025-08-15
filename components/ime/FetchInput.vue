@@ -1,3 +1,11 @@
+<!--
+    FetchInput.vue - 輸入法數據加載組件
+
+    Modification History:
+    - 2025-08-15 by 朱複丹: 重構版本，提升數據加載性能和穩定性
+    - 2024-06-25 by yb6b: 初版
+-->
+
 <script setup lang="ts">
 import * as utils from './share'
 import { onMounted, shallowRef, ref } from "vue";

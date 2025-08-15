@@ -1,3 +1,11 @@
+<!--
+    Keyboard.vue - 虛擬鍵盤顯示組件
+    
+    Modification History:
+    - 2025-08-15 by 朱複丹: 重構版本，改善鍵盤交互體驗和視覺效果
+    - 2024-06-25 by yb6b: 初版
+-->
+
 <script setup lang="ts">
 const p = defineProps<{
     layout: 27 | 26

@@ -36,6 +36,7 @@ npm run prebuild     # 手动生成数据
 
 - `chaifen.csv` → `chaifen.json` (减小69%)
 - `chaifen-tianma.csv` → `chaifen-tianma.json` (减小68%)
+- `mabiao_ming.txt` → `mabiao_ming.json` (减小37%)
 - 执行繁简转换 (`translate/tc2sc.py`)
 
 ### 自动部署

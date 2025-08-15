@@ -20,6 +20,7 @@ const expectedFiles = [
     'chaifen-tianma.json',
     'chaifen_tw.json',
     'chaifen_zhu.json',
+    'mabiao_ming.json',
     'build-info.json'
 ]
 

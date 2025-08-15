@@ -1,3 +1,11 @@
+<!--
+    InputMethod.vue - 在線輸入法核心組件
+
+    Modification History:
+    - 2025-08-15 by 朱複丹: 重構版本，優化輸入法引擎和用戶體驗
+    - 2024-06-25 by yb6b: 初版
+-->
+
 <script setup lang="ts">
 import { ref, computed, watch, nextTick } from 'vue'
 import { biSearchBetween, ImeRule, searchTop, MabiaoItem } from './share'

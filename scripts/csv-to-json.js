@@ -67,15 +67,21 @@ function csvToOptimizedJson(csvPath, outputDir, outputName = 'chaifen.json') {
     const originalSize = fs.statSync(csvPath).size
 
     // Generate the optimized file
-    let finalData = bestFormat.data
+    const jsonData = bestFormat.data
     const outputPath = path.join(outputDir, bestFormat.name)
 
+    // 同时生成压缩和非压缩版本作为备选
+    const uncompressedPath = outputPath.replace('.json.gz', '.json')
+    fs.writeFileSync(uncompressedPath, jsonData) // 非压缩版本
+
+    let finalData = jsonData
     if (bestFormat.compress === 'gzip') {
-        finalData = zlib.gzipSync(finalData)
+        finalData = zlib.gzipSync(jsonData)
     }
 
-    fs.writeFileSync(outputPath, finalData)
+    fs.writeFileSync(outputPath, finalData) // 压缩版本
     const size = fs.statSync(outputPath).size
+    const uncompressedSize = fs.statSync(uncompressedPath).size
     const reduction = ((originalSize - size) / originalSize * 100).toFixed(1)
 
     console.log('\n📊 Optimization Results:')
