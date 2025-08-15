@@ -10,7 +10,7 @@
 -->
 
 <script setup lang="ts">
-import { ref, computed, onMounted, watch, toRef } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch, toRef } from 'vue'
 import { fetchZigen } from "../search/share";
 import ChaiDataLoader from "../search/ChaiDataLoader";
 import type { ZigenMap as ZigenMapType, ChaifenMap, Chaifen } from "../search/share";
@@ -46,6 +46,28 @@ const keyboardLayout = [
 
 // 需要显示但暂时留空的键（移除 ,./; 四个键，让它们显示字根）
 const emptyKeys = ["'"];
+
+// 移動端檢測
+const isMobileView = ref(false);
+
+// 檢測屏幕尺寸
+const checkMobileView = () => {
+    isMobileView.value = window.innerWidth < 768;
+};
+
+onMounted(() => {
+    checkMobileView();
+    window.addEventListener('resize', checkMobileView);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('resize', checkMobileView);
+});
+
+// 扁平化的按鍵列表（移動端用）
+const flatKeyList = computed(() => {
+    return keyboardLayout.flat();
+});
 
 // 支持的方案
 const schemes: ZigenScheme[] = [
@@ -434,11 +456,11 @@ onMounted(() => {
 
         <!-- 使用提示 -->
         <div v-if="!isLoading" class="text-center text-sm text-gray-500 dark:text-gray-400 mb-4">
-            懸停字根可查看例字（首次懸停需要加載數據，可能稍有延遲）
+            懸停字根可查看例字
         </div>
 
-        <!-- 键盘字根图 -->
-        <div v-if="!isLoading && zigenMap" class="keyboard-layout">
+        <!-- 键盘字根图 - 桌面端網格布局 -->
+        <div v-if="!isLoading && zigenMap && !isMobileView" class="keyboard-layout">
             <div v-for="(row, rowIndex) in keyboardLayout" :key="rowIndex" class="keyboard-row">
                 <div v-for="key in row" :key="key" class="keyboard-key"
                     :class="{ 'empty-key': emptyKeys.includes(key) }">
@@ -496,6 +518,39 @@ onMounted(() => {
             </div>
         </div>
 
+        <!-- 移動端垂直列表布局 -->
+        <div v-if="!isLoading && zigenMap && isMobileView" class="mobile-layout">
+            <div v-for="key in flatKeyList" :key="key" class="mobile-key-row"
+                :class="{ 'empty-mobile-key': emptyKeys.includes(key) }">
+                <!-- 按键名称 -->
+                <div class="mobile-key-label">{{ key.toUpperCase() }}</div>
+
+                <!-- 字根显示 -->
+                <div v-if="!emptyKeys.includes(key) && zigenByKey[key]?.visible.length > 0"
+                    class="mobile-zigen-container">
+                    <div class="mobile-zigen-list text-indigo-800 dark:text-indigo-300">
+                        <span v-for="(zigen, index) in zigenByKey[key].visible" :key="index" class="mobile-zigen-item"
+                            @click="handleZigenClick($event, zigen)">
+                            <span class="zigen-font">{{ zigen.font }}</span>
+                            <span class="zigen-code">{{ zigen.code }}</span>
+                        </span>
+                        <!-- 如果有隐藏的字根，显示省略号 -->
+                        <span v-if="zigenByKey[key].hidden.length > 0" class="mobile-more-indicator">⋯</span>
+                    </div>
+                </div>
+
+                <!-- 无字根提示（移動端簡化版） -->
+                <div v-else-if="!emptyKeys.includes(key)" class="mobile-no-zigen">
+                    <span v-if="key === '/'" class="mobile-key-desc zigen-font">引導特殊符號</span>
+                    <span v-else-if="key === 'z'" class="mobile-key-desc zigen-font">引導拼音反查</span>
+                    <span v-else-if="['a', 'e', 'i', 'o', 'u'].includes(key)" class="mobile-key-desc zigen-font">
+                        一碼上屏字
+                    </span>
+                    <span v-else class="mobile-key-desc zigen-font">{{ getKeyLabel(key) }}</span>
+                </div>
+            </div>
+        </div>
+
         <!-- 悬停卡片 - 显示相同编码的字根 -->
         <div v-if="hoveredZigen && hoveredZigenInfo" class="hover-card" :style="{
             left: hoverPosition.x + 10 + 'px',
@@ -504,7 +559,7 @@ onMounted(() => {
             <div class="popup-container">
                 <div class="popup-body">
                     <h3 class="popup-title">
-                        編碼 {{ hoveredZigenInfo.visible[0]?.code || hoveredZigen }} 上的歸併字根
+                        編碼 {{ hoveredZigenInfo.visible[0]?.code || hoveredZigen }} 上的字根
                     </h3>
 
                     <!-- 字根列表 - 每個字根一行，例字在同一行 -->
@@ -551,7 +606,7 @@ onMounted(() => {
                 <div class="popup-body">
                     <div class="popup-header">
                         <h3 class="popup-title">
-                            編碼 {{ pinnedZigenInfo.visible[0]?.code || pinnedZigen }} 上的歸併字根
+                            編碼 {{ pinnedZigenInfo.visible[0]?.code || pinnedZigen }} 上的字根
                         </h3>
                         <button @click="closePinnedPopup" class="close-btn">✕</button>
                     </div>
@@ -898,7 +953,9 @@ onMounted(() => {
     font-size: 0.875rem;
 }
 
-/* 响应式设计 */
+/* 响应式设计 
+手機和小屏幕设备上调整键位大小和字根字体大小 
+*/
 @media (max-width: 768px) {
     .keyboard-key {
         min-width: 2.5rem;
@@ -1130,5 +1187,108 @@ onMounted(() => {
 
 .zigen-header.other-zigen .zigen-font {
     color: inherit;
+}
+
+/* 移動端垂直列表樣式 */
+.mobile-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.mobile-key-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 2.5rem;
+    padding: 0.0rem 0.1rem;
+    background: rgb(249 250 251);
+    border: 1px solid var(--fallback-bc, oklch(var(--bc)/0.1));
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    transition: all 0.2s ease;
+}
+
+.dark .mobile-key-row {
+    background: rgb(15 23 42);
+}
+
+.mobile-key-row:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.empty-mobile-key {
+    opacity: 0.3;
+}
+
+.mobile-key-label {
+    flex-shrink: 0;
+    width: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--fallback-nc, oklch(var(--nc)/0.8));
+    text-align: center;
+    margin-right: 0.75rem;
+}
+
+.mobile-zigen-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-zigen-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.mobile-zigen-item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.5rem;
+    padding: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 0.375rem;
+}
+
+.mobile-zigen-item:hover {
+    background: var(--fallback-bc, oklch(var(--bc)/0.1));
+}
+
+.mobile-zigen-item .zigen-font {
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.mobile-zigen-item .zigen-code {
+    font-family: monospace;
+    font-size: 0.625rem;
+    color: #666666;
+    margin-top: 0.125rem;
+}
+
+.mobile-more-indicator {
+    color: var(--fallback-bc, oklch(var(--bc)/0.5));
+    font-size: 1rem;
+    margin-left: 0.25rem;
+}
+
+.mobile-no-zigen {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-key-desc {
+    font-size: 0.75rem;
+    color: var(--fallback-bc, oklch(var(--bc)/0.6));
+    font-style: italic;
 }
 </style>
