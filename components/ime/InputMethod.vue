@@ -423,11 +423,11 @@ function onKeydown(e: KeyboardEvent) {
     <!-- 文本输入框 -->
     <div class="pt-3">
         <textarea v-model="text" ref="textarea"
-            class="textarea textarea-bordered textarea-md w-full max-w-screen-sm bg-neutral-50 dark:bg-neutral-700"
+            class="textarea textarea-bordered textarea-md w-full bg-neutral-50 dark:bg-neutral-700"
             style="border-style: solid" placeholder="点击这里开始输入" @keydown="onKeydown"></textarea>
     </div>
 
-    <div class="relative">
+    <div class="relative w-full">
         <Keyboard :layout="26" @click="onClick">
             <template #codes>
                 <div class="h-4" v-if="candidateCodes === ''"></div>

@@ -22,9 +22,9 @@ defineEmits<{
     <slot name="codes"></slot>
 
     <div
-        class="text-xl bg-neutral-50 dark:bg-neutral-900 max-w-screen-sm text-slate-900 dark:text-slate-400 select-none">
+        class="text-xl bg-neutral-50 dark:bg-neutral-900 w-full text-slate-900 dark:text-slate-400 select-none">
         <!-- 候选栏 -->
-        <div class="flex min-h-9 h-9 text-base bg-neutral-100 dark:bg-neutral-800 pt-1 break-keep text-nowrap">
+        <div class="flex min-h-9 h-9 text-base bg-neutral-100 dark:bg-neutral-800 pt-1 break-keep text-nowrap w-full">
             <slot name="cadidate"></slot>
         </div>
 
