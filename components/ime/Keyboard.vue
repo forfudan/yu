@@ -7,14 +7,9 @@
 -->
 
 <script setup lang="ts">
-const p = defineProps<{
-    layout: 27 | 26
-}>()
-
 defineEmits<{
     click: [keyName: string]
 }>()
-
 </script>
 
 <template>
@@ -27,39 +22,44 @@ defineEmits<{
             <slot name="cadidate"></slot>
         </div>
 
-        <!-- qwer行 -->
-        <div class="flex text-center ">
-            <button class="flex-1 hover:bg-slate-300 hover:dark:bg-slate-800 py-4" v-for="k in 'qwertyuiop'"
+        <!-- 键盘主体：使用垂直网格布局 -->
+        <div class="grid grid-cols-10 gap-0.5 p-1">
+            <!-- 第一行：qwertyuiop -->
+            <button v-for="k in 'qwertyuiop'" :key="k"
+                class="aspect-square hover:bg-slate-300 hover:dark:bg-slate-800 flex items-center justify-center"
                 @click="$emit('click', k)">
-                {{ k }}</button>
+                {{ k }}
+            </button>
+
+            <!-- 第二行：asdfghjkl; -->
+            <button v-for="k in 'asdfghjkl;'" :key="k"
+                class="aspect-square hover:bg-slate-300 hover:dark:bg-slate-800 flex items-center justify-center"
+                @click="$emit('click', k)">
+                {{ k }}
+            </button>
+
+            <!-- 第三行：zxcvbnm,./ -->
+            <button v-for="k in 'zxcvbnm,./'" :key="k"
+                class="aspect-square hover:bg-slate-300 hover:dark:bg-slate-800 flex items-center justify-center"
+                @click="$emit('click', k)">
+                {{ k }}
+            </button>
         </div>
 
-        <!-- asdf行，要考虑27键的布局 -->
-        <div class="flex text-center " v-if="layout === 26">
-            <div class="flex-5"></div>
-            <button class="flex-1 hover:bg-slate-300 hover:dark:bg-slate-800 py-4" v-for="k in 'asdfghjkl'"
-                @click="$emit('click', k)">
-                {{ k }}</button>
-            <div class="flex-5"></div>
-        </div>
-        <div class="flex text-center " v-else>
-            <button class="flex-1 hover:bg-slate-300 hover:dark:bg-slate-800 py-4" v-for="k in 'asdfghjkl;'"
-                @click="$emit('click', k)">
-                {{ k }}</button>
-        </div>
-
-
-        <!-- zxcv行，要添加个删除按钮 -->
-        <div class="flex text-center ">
-            <div class="flex-1"></div>
-            <button class="flex-1 hover:bg-slate-300 hover:dark:bg-slate-800 py-4" v-for="k in 'zxcvbnm'"
-                @click="$emit('click', k)">
-                {{ k }}</button>
-            <button class="flex-1 hover:bg-slate-300 hover:dark:bg-slate-800 py-4" @click="$emit('click', '/')">
-                /
+        <!-- 空格键行：中/英切换、空格、删除 -->
+        <div class="flex gap-0.5 p-1">
+            <button
+                class="w-12 hover:bg-slate-300 hover:dark:bg-slate-800 py-3 text-sm text-neutral-500 border rounded flex items-center justify-center"
+                @click="$emit('click', 'toggle-lang')">
+                中/英
             </button>
             <button
-                class="flex-2 text-neutral-400 hover:bg-slate-300 hover:dark:bg-slate-800 flex justify-center items-center"
+                class="flex-1 hover:bg-slate-300 hover:dark:bg-slate-800 py-3 text-sm text-neutral-500 rounded flex items-center justify-center"
+                @click="$emit('click', ' ')">
+                空格
+            </button>
+            <button
+                class="w-12 text-neutral-400 hover:bg-slate-300 hover:dark:bg-slate-800 flex justify-center items-center rounded"
                 @click="$emit('click', 'bs')">
                 <!-- 退格按钮 -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -67,17 +67,6 @@ defineEmits<{
                         d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-3 12.59L17.59 17L14 13.41L10.41 17L9 15.59L12.59 12L9 8.41L10.41 7L14 10.59L17.59 7L19 8.41L15.41 12" />
                 </svg>
             </button>
-
-        </div>
-
-        <!-- 空格键行 -->
-        <div class="flex text-center ">
-            <div class="flex-2"></div>
-            <button class="flex-6 hover:bg-slate-300 hover:dark:bg-slate-800 py-3 text-sm text-neutral-500"
-                @click="$emit('click', ' ')">
-                空格
-            </button>
-            <div class="flex-2"></div>
         </div>
     </div>
 </template>

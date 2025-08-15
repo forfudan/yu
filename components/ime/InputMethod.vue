@@ -22,10 +22,18 @@ const props = defineProps<{
 const mabiaoList = props.data
 console.log('🎯 InputMethod loaded with', mabiaoList.length, 'items')
 
+//#region 中英文状态管理
+const isChineseMode = ref(true) // true为中文模式，false为英文模式
+const quoteState = ref(false) // 追踪双引号状态，false为开引号，true为闭引号
+//#endregion
+
 //#region 候选条
 const candidateCodes = ref('')
 
 const candidateHanzi = computed(() => {
+    // 如果是英文模式，不显示候选字
+    if (!isChineseMode.value) return []
+
     const cd = candidateCodes.value
     // 没有输入编码
     if (!cd) return [];
@@ -209,6 +217,24 @@ const text = ref('')
 const textarea = ref<HTMLInputElement>()
 
 function onClick(key: string) {
+    // 中英文切换
+    if (key === 'toggle-lang') {
+        isChineseMode.value = !isChineseMode.value
+        // 切换到英文模式时清空编码
+        if (!isChineseMode.value) {
+            candidateCodes.value = ''
+        }
+        console.log('语言模式切换:', isChineseMode.value ? '中文' : '英文')
+        return
+    }
+
+    // 如果是英文模式，直接输入字符（除了删除键和空格键）
+    if (!isChineseMode.value && key !== 'bs' && key !== ' ') {
+        console.log('英文模式输入字符:', key)
+        commit(key)
+        return
+    }
+
     if (key === 'bs') {
         if (candidateCodes.value) {
             candidateCodes.value = candidateCodes.value.slice(0, -1)
@@ -222,7 +248,13 @@ function onClick(key: string) {
     }
 
     if (key === ' ') {
-        // 空格键使用和物理键盘一样的逻辑
+        // 英文模式下直接输入空格
+        if (!isChineseMode.value) {
+            commit(' ')
+            return
+        }
+
+        // 中文模式下使用输入法逻辑
         const cd = candidateCodes.value
         if (cd) {
             // 有编码时，空格上屏第一个候选项（如果有的话）
@@ -239,19 +271,103 @@ function onClick(key: string) {
         return
     }
 
-    // 检查是否需要先上屏再添加新编码
-    checkAutoCommit(key)
+    // 检查是否为标点符号，标点符号直接输入
+    const punctuationChars = [',', '.', ';', '!', '?', '[', ']', '{', '}', '"', "'", '/', '(', ')']
+    if (punctuationChars.includes(key)) {
+        // 如果有编码，先上屏第一个候选项
+        if (candidateCodes.value && candidatePage.value.length > 0) {
+            commit(candidatePage.value[0].name)
+            candidateCodes.value = ''
+            candidatePageIndex.value = 0
+        }
+        // 然后输入标点符号
+        commit(key)
+        return
+    }
 
-    candidateCodes.value += key
-    candidatePageIndex.value = 0
+    // 中文模式下才进行编码处理
+    if (isChineseMode.value) {
+        // 检查是否需要先上屏再添加新编码
+        checkAutoCommit(key)
+
+        candidateCodes.value += key
+        candidatePageIndex.value = 0
+    } else {
+        // 英文模式下直接输入字符
+        commit(key)
+    }
+}
+
+// 中文标点符号转换函数
+function convertToChinese(words: string): string {
+    if (!isChineseMode.value) {
+        return words
+    }
+
+    // 逐个字符处理
+    let result = ''
+
+    for (let i = 0; i < words.length; i++) {
+        const char = words[i]
+
+        switch (char) {
+            case ',':
+                result += '，'
+                break
+            case '.':
+                result += '。'
+                break
+            case ';':
+                result += '；'
+                break
+            case '!':
+                result += '！'
+                break
+            case '?':
+                result += '？'
+                break
+            case '[':
+                result += '「'
+                break
+            case ']':
+                result += '」'
+                break
+            case '{':
+                result += '『'
+                break
+            case '}':
+                result += '』'
+                break
+            case '"':
+                // 处理双引号的开合
+                if (quoteState.value) {
+                    result += '"' // 闭引号
+                } else {
+                    result += '"' // 开引号
+                }
+                quoteState.value = !quoteState.value
+                break
+            case "'":
+                result += "'"
+                break
+            default:
+                result += char
+                break
+        }
+    }
+
+    return result
 }
 
 function commit(words: string) {
+    // 在中文模式下转换标点符号
+    const convertedWords = convertToChinese(words)
+
     const textareaNode = textarea.value!
     const { selectionStart, selectionEnd } = textareaNode
 
     if (selectionStart === 0 && selectionEnd === 0) {
-        text.value += words
+        text.value += convertedWords
         // 立即同步更新DOM值
         textareaNode.value = text.value
         nextTick(() => {
@@ -262,13 +378,13 @@ function commit(words: string) {
 
     const startPart = text.value.slice(0, selectionStart || undefined)
     const endPart = selectionEnd !== null ? text.value.slice(selectionEnd) : ''
-    text.value = startPart + words + endPart
+    text.value = startPart + convertedWords + endPart
 
     // 立即同步更新DOM值
     textareaNode.value = text.value
 
     nextTick(() => {
-        textareaNode.selectionEnd = selectionStart! + words.length
+        textareaNode.selectionEnd = selectionStart! + convertedWords.length
     })
 }
 
@@ -439,7 +555,7 @@ function checkAutoCommit(nextKey: string) {
 }
 
 //#region 电脑键盘事件
-const keysListened = new Set(`abcdefghijklmnopqrstuvwxyz/${props.rule.keys === 27 ? ';' : ''}`)
+const keysListened = new Set(`abcdefghijklmnopqrstuvwxyz/,.${props.rule.keys === 27 ? ';' : ''}`)
 
 const commitKeys = computed(() => {
     const { cm1, cm2, cm3 } = props.rule
@@ -469,6 +585,28 @@ function onKeydown(e: KeyboardEvent) {
         e.preventDefault()
         e.stopPropagation()
 
+        // 检查是否为标点符号，标点符号直接输入
+        const punctuationChars = [',', '.', ';', '/', '!', '?', '[', ']', '{', '}', '"', "'", '(', ')']
+        if (punctuationChars.includes(key)) {
+            // 如果有编码，先上屏第一个候选项
+            if (candidateCodes.value && candidatePage.value.length > 0) {
+                commit(candidatePage.value[0].name)
+                candidateCodes.value = ''
+                candidatePageIndex.value = 0
+            }
+            // 然后输入标点符号
+            commit(key)
+            return
+        }
+
+        // 英文模式下直接输入字符
+        if (!isChineseMode.value) {
+            console.log('物理键盘英文模式输入:', key)
+            commit(key)
+            return
+        }
+
+        // 中文模式下处理编码
         // 检查是否需要先上屏再添加新编码
         checkAutoCommit(key)
 
@@ -479,6 +617,12 @@ function onKeydown(e: KeyboardEvent) {
 
     // 空格键 - 按照输入法规则处理
     if (key === ' ') {
+        // 英文模式下让系统自然处理空格
+        if (!isChineseMode.value) {
+            return
+        }
+
+        // 中文模式处理
         if (cd) {
             // 有编码时，阻止默认行为并处理上屏
             e.preventDefault()
@@ -565,19 +709,27 @@ function onKeydown(e: KeyboardEvent) {
     </div>
 
     <div class="relative w-full">
-        <Keyboard :layout="26" @click="onClick">
+        <Keyboard @click="onClick">
             <template #codes>
-                <div class="h-4" v-if="candidateCodes === ''"></div>
-                <div v-else class="text-xs bg-neutral-200 dark:bg-neutral-900 w-max px-2 h-4 select-none">
-                    {{ candidateCodes }}
+                <div class="flex items-center space-x-2">
+                    <div class="h-4" v-if="candidateCodes === ''"></div>
+                    <div v-else class="text-xs bg-neutral-200 dark:bg-neutral-900 w-max px-2 h-4 select-none">
+                        {{ candidateCodes }}
+                    </div>
+                    <!-- 语言模式状态 -->
+                    <div class="text-xs px-2 h-4 rounded select-none"
+                        :class="isChineseMode ? 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200' : 'bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200'">
+                        {{ isChineseMode ? '中' : '英' }}
+                    </div>
                 </div>
             </template>
             <template #cadidate>
                 <template v-if="candidateHanzi.length === 0">
                     <div class="text-sm text-slate-500 ml-6 mt-1" v-if="candidateCodes.length === 0">
                         <slot>
-                            <!-- 没有输入时默认显示的内容 -->
-                            点击上方文本框开始打字
+                            <!-- 根据模式显示不同提示 -->
+                            <span v-if="isChineseMode">点击上方文本框开始打字（中文模式）</span>
+                            <span v-else>英文输入模式，直接打字即可</span>
                         </slot>
                     </div>
                     <div class="text-sm text-slate-400 dark:text-slate-500 ml-6 mt-1" v-else>空码</div>
@@ -599,7 +751,7 @@ function onKeydown(e: KeyboardEvent) {
                                     <!-- 后序编码 -->
                                     <span class="text-sm text-blue-400 dark:text-blue-500 dark:opacity-70">{{
                                         n.key!.slice(candidateCodes.length)
-                                    }}</span>
+                                        }}</span>
                                 </button>
                             </div>
                         </div>
@@ -649,7 +801,7 @@ function onKeydown(e: KeyboardEvent) {
                                     n.name }}</div>
                                 <!-- 编码 -->
                                 <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                                    }}</div>
+                                }}</div>
                             </button>
                         </div>
                     </div>
