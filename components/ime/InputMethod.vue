@@ -118,16 +118,12 @@ const candidatePage = computed(() => {
 const dropdownCandidates = computed(() => {
     if (!candidateCodes.value) return [];
     const cd = candidateCodes.value;
-    const range = biSearchBetween(mabiaoList, cd);
-    if (!range) return [];
-    // 顯示所有 key 以當前編碼開頭的項（包括精確匹配）
-    const allPredict = mabiaoList.slice(range[0], range[1]).filter(candidate => {
-        const candidateCode = candidate.key!;
-        return candidateCode.startsWith(cd);
-    });
+    // 直接在全表篩選所有 key 以當前編碼開頭的項
+    const allPredict = mabiaoList.filter(candidate => candidate.key && candidate.key.startsWith(cd));
     // 分頁
     const startIndex = dropdownPageIndex.value * dropdownPageSize;
     const endIndex = Math.min(startIndex + dropdownPageSize, allPredict.length);
+    console.log('dropdownCandidates', cd, allPredict);
     return allPredict.slice(startIndex, endIndex);
 })
 
@@ -135,13 +131,8 @@ const dropdownCandidates = computed(() => {
 const totalDropdownPages = computed(() => {
     if (!candidateCodes.value) return 0;
     const cd = candidateCodes.value;
-    const range = biSearchBetween(mabiaoList, cd);
-    if (!range) return 0;
-    // 所有 key 以當前編碼開頭的項（包括精確匹配）
-    const allPredict = mabiaoList.slice(range[0], range[1]).filter(candidate => {
-        const candidateCode = candidate.key!;
-        return candidateCode.startsWith(cd);
-    });
+    // 直接在全表篩選所有 key 以當前編碼開頭的項
+    const allPredict = mabiaoList.filter(candidate => candidate.key && candidate.key.startsWith(cd));
     if (allPredict.length === 0) return 0;
     return Math.ceil(allPredict.length / dropdownPageSize);
 })
@@ -804,7 +795,7 @@ function onKeydown(e: KeyboardEvent) {
                                 <span class="text-xs text-slate-400 dark:text-slate-500">{{ i + 1 }}</span>
                                 <!-- 词条 -->
                                 <span class="text-xl select-text px-2 text-slate-900 dark:text-slate-200">{{ n.name
-                                }}</span>
+                                    }}</span>
                                 <!-- 后序编码 -->
                                 <span class="text-base text-blue-400 dark:text-blue-500 mt-0">{{
                                     n.key!.slice(candidateCodes.length) }}</span>
@@ -864,7 +855,7 @@ function onKeydown(e: KeyboardEvent) {
                             </div>
                             <!-- 编码 -->
                             <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                                }}</div>
+                            }}</div>
                         </button>
                     </div>
                 </div>
