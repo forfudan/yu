@@ -7,6 +7,7 @@
   
   Modification History:
   - 2025-08-14 by 朱複丹: 初版，實現基礎功能和樣式
+  - 2025-08-15 by 朱複丹: 添加字根列表模式
 -->
 
 <script setup lang="ts">
@@ -29,13 +30,6 @@ const gridTemplateColumns = computed(() => {
     const width = columnMinWidth.value || '2rem'
     return `repeat(auto-fill, minmax(${width}, max-content))`
 })
-
-interface ZigenScheme {
-    id: string
-    name: string
-    zigenUrl: string
-    chaifenUrl: string
-}
 
 // 键盘布局 - QWERTY垂直排列
 const keyboardLayout = [
@@ -77,33 +71,16 @@ const flatKeyList = computed(() => {
     return keyboardLayout.flat();
 });
 
-// 支持的方案
-const schemes: ZigenScheme[] = [
-    {
-        id: 'joy',
-        name: '卿雲',
-        zigenUrl: '/zigen-joy.csv',
+// 支持的方案（簡化版，僅用於數據加載）
+const supportedSchemes = ['joy', 'light', 'star', 'ming'];
+
+// 獲取方案對應的文件URL
+function getSchemeUrls(schemeId: string) {
+    return {
+        zigenUrl: `/zigen-${schemeId}.csv`,
         chaifenUrl: '/chaifen.json'
-    },
-    {
-        id: 'light',
-        name: '光華',
-        zigenUrl: '/zigen-light.csv',
-        chaifenUrl: '/chaifen.json'
-    },
-    {
-        id: 'star',
-        name: '星陳',
-        zigenUrl: '/zigen-star.csv',
-        chaifenUrl: '/chaifen.json'
-    },
-    {
-        id: 'ming',
-        name: '日月',
-        zigenUrl: '/zigen-ming.csv',
-        chaifenUrl: '/chaifen.json'
-    }
-];
+    };
+}
 
 // 响应式状态
 // 使用传入的 defaultScheme 或默认值，但不创建独立的响应式状态
@@ -123,12 +100,7 @@ const pinnedZigenInfo = ref<{ visible: Array<{ font: string, code: string }>, hi
 const pinnedZigenExampleChars = ref<{ [zigenFont: string]: string[] }>({});
 const isPinned = ref(false);
 
-// 当前方案
-const currentScheme = computed(() => {
-    return schemes.find(s => s.id === activeScheme.value) || schemes[0];
-});
-
-// 监听方案变化，清除拆分数据缓存
+// 監聽方案變化，清除拆分數據緩存
 watch(() => props.defaultScheme, () => {
     // 清除已緩存的拆分數據加載器，讓新方案在第一次懸停時重新加載
     chaifenLoader.value = null;
@@ -288,10 +260,11 @@ async function loadData() {
     isLoading.value = true;
     try {
         // 只加载字根数据，不初始化拆分数据加载器
-        const zigenData = await fetchZigen(currentScheme.value.zigenUrl);
+        const urls = getSchemeUrls(activeScheme.value);
+        const zigenData = await fetchZigen(urls.zigenUrl);
         zigenMap.value = zigenData;
 
-        console.log(`已加載字根數據，文件: ${currentScheme.value.zigenUrl}`);
+        console.log(`已加載字根數據，文件: ${urls.zigenUrl}`);
         console.log('注意：拆分數據將在第一次懸停字根時才加載');
 
     } catch (error) {
@@ -309,8 +282,9 @@ async function handleZigenHover(event: MouseEvent, zigen: { font: string, code: 
     // 懶加載：第一次懸停時才初始化拆分數據加載器
     if (!chaifenLoader.value) {
         console.log('第一次懸停，正在初始化拆分數據加載器...');
-        chaifenLoader.value = ChaiDataLoader.getInstance(currentScheme.value.chaifenUrl);
-        console.log(`已初始化 ChaiDataLoader，使用文件: ${currentScheme.value.chaifenUrl}`);
+        const urls = getSchemeUrls(activeScheme.value);
+        chaifenLoader.value = ChaiDataLoader.getInstance(urls.chaifenUrl);
+        console.log(`已初始化 ChaiDataLoader，使用文件: ${urls.chaifenUrl}`);
     }
 
     // 找到所有相同完整编码的字根
@@ -447,17 +421,6 @@ function findSameCodeZigens(targetFont: string, targetFullCode: string) {
     return { visible, hidden };
 }
 
-// 获取方案对应的汉字
-function getSchemeChar(schemeId: string): string {
-    const charMap: Record<string, string> = {
-        'joy': '卿',
-        'light': '光',
-        'star': '星',
-        'ming': '明'
-    };
-    return charMap[schemeId] || '?';
-}
-
 // 監聽方案變化
 watch(() => activeScheme.value, loadData);
 
@@ -478,15 +441,15 @@ onMounted(() => {
 
 <template>
     <div class="zigen-map-container">
-        <!-- 方案切换圆形按钮 -->
-        <div v-if="!hideSchemeButtons" class="flex justify-center mb-6 space-x-4">
+        <!-- 方案切换圆形按钮（已禁用，由父組件統一管理） -->
+        <!-- <div v-if="!hideSchemeButtons" class="flex justify-center mb-6 space-x-4">
             <button v-for="scheme in schemes" :key="scheme.id" :class="[
                 'scheme-button',
                 { 'scheme-button-active': activeScheme === scheme.id }
             ]" :title="scheme.name">
                 <span class="scheme-text">{{ getSchemeChar(scheme.id) }}</span>
             </button>
-        </div>
+        </div> -->
 
         <!-- 加载状态 -->
         <div v-if="isLoading" class="flex justify-center items-center py-8">
@@ -1021,41 +984,6 @@ onMounted(() => {
     .key-label {
         font-size: 0.625rem;
     }
-}
-
-/* 圓形方案按鈕樣式 */
-.scheme-button {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background-color: rgb(59 130 246);
-    /* 藍色背景 */
-    border: 2px solid rgb(59 130 246);
-    color: white;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.scheme-button:hover {
-    background-color: rgb(37 99 235);
-    /* 更深的藍色 */
-    border-color: rgb(37 99 235);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.scheme-button-active {
-    background-color: rgb(29 78 216);
-    /* 活躍狀態的深藍色 */
-    border-color: rgb(29 78 216);
-    box-shadow: 0 0 0 3px rgba(59 130 246, 0.3);
-    /* 外發光效果 */
 }
 
 /* 布局切換按鈕樣式 */
