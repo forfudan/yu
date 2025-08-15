@@ -1,0 +1,1 @@
+import{_ as e,c as o,o as a,a4 as t,an as s}from"./chunks/framework.DTi27XpN.js";const m=JSON.parse('{"title":"天码","description":"","frontmatter":{},"headers":[],"relativePath":"sky/index.md","filePath":"sky/index.md"}'),i={name:"sky/index.md"},l=t("",13),c=[l];function n(r,d,p,_,f,h){return a(),o("div",null,c)}const k=e(i,[["render",n]]);export{m as __pageData,k as default};

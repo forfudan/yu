@@ -1,0 +1,1 @@
+import{_ as i,c as l,o as a,a4 as e}from"./chunks/framework.DTi27XpN.js";const f=JSON.parse('{"title":"徐码·尔雅输入法","description":"","frontmatter":{},"headers":[],"relativePath":"xuma/index.md","filePath":"xuma/index.md"}'),t={name:"xuma/index.md"},r=e("",57),o=[r];function s(h,n,d,c,p,u){return a(),l("div",null,o)}const k=i(t,[["render",s]]);export{f as __pageData,k as default};

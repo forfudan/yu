@@ -1,1 +1,0 @@
-import{_ as t,c as d,o as r,a4 as e}from"./chunks/framework.vM2YJXtg.js";const u=JSON.parse('{"title":"古籍通规繁体标准","description":"","frontmatter":{},"headers":[],"relativePath":"docs/guji.md","filePath":"docs/guji.md"}'),o={name:"docs/guji.md"},a=e("",28),c=[a];function h(l,i,s,n,p,b){return r(),d("div",null,c)}const g=t(o,[["render",h]]);export{u as __pageData,g as default};

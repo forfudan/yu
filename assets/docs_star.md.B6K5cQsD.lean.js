@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as l,a4 as d,a8 as a}from"./chunks/framework.vM2YJXtg.js";const _=JSON.parse('{"title":"烂然星陈","description":"","frontmatter":{},"headers":[],"relativePath":"docs/star.md","filePath":"docs/star.md"}'),s={name:"docs/star.md"},i=d("",12),r=[i];function n(f,y,x,g,o,h){return l(),e("div",null,r)}const p=t(s,[["render",n]]);export{_ as __pageData,p as default};
