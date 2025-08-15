@@ -54,14 +54,14 @@ defineEmits<{
                 @click="$emit('click', 'toggle-lang')">
                 中/英
             </button>
-            
+
             <!-- 空格键：占6格，对应C到逗号键 -->
             <button
                 class="col-span-6 hover:bg-slate-300 hover:dark:bg-slate-800 py-3 text-sm text-neutral-500 rounded flex items-center justify-center"
                 @click="$emit('click', ' ')">
                 空格
             </button>
-            
+
             <!-- 删除键：占2格 -->
             <button
                 class="col-span-2 text-neutral-400 hover:bg-slate-300 hover:dark:bg-slate-800 flex justify-center items-center rounded"

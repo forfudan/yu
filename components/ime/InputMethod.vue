@@ -272,7 +272,7 @@ function onClick(key: string) {
     }
 
     // 检查是否为标点符号，标点符号直接输入
-    const punctuationChars = [',', '.', ';', '!', '?', '[', ']', '{', '}', '"', "'", '/', '(', ')']
+    const punctuationChars = [',', '.', ';', '!', '?', '[', ']', '{', '}', '"', "'", '(', ')']
     if (punctuationChars.includes(key)) {
         // 如果有编码，先上屏第一个候选项
         if (candidateCodes.value && candidatePage.value.length > 0) {
@@ -364,31 +364,51 @@ function commit(words: string) {
     const convertedWords = convertToChinese(words)
 
     const textareaNode = textarea.value!
+    
+    // 确保获取最新的光标位置
+    textareaNode.focus()
     const { selectionStart, selectionEnd } = textareaNode
+    const currentValue = textareaNode.value
 
-    if (selectionStart === 0 && selectionEnd === 0) {
-        text.value += convertedWords
-        // 立即同步更新DOM值
-        textareaNode.value = text.value
-        nextTick(() => {
-            textareaNode.selectionEnd = text.value.length
-        })
+    console.log('commit 调用:', {
+        words: convertedWords,
+        selectionStart,
+        selectionEnd,
+        currentValue: currentValue.slice(0, 20) + (currentValue.length > 20 ? '...' : ''),
+        textLength: currentValue.length
+    })
+
+    // 处理在文本末尾追加的情况
+    if (selectionStart === currentValue.length && selectionEnd === currentValue.length) {
+        const newValue = currentValue + convertedWords
+        text.value = newValue
+        textareaNode.value = newValue
+        
+        // 同步设置光标位置
+        const newCursorPosition = newValue.length
+        textareaNode.selectionStart = newCursorPosition
+        textareaNode.selectionEnd = newCursorPosition
         return
     }
 
-    const startPart = text.value.slice(0, selectionStart || undefined)
-    const endPart = selectionEnd !== null ? text.value.slice(selectionEnd) : ''
-    text.value = startPart + convertedWords + endPart
+    // 处理在文本中间插入或替换选中文本的情况
+    const startPart = currentValue.slice(0, selectionStart || 0)
+    const endPart = currentValue.slice(selectionEnd || selectionStart || 0)
+    const newValue = startPart + convertedWords + endPart
+    
+    text.value = newValue
+    textareaNode.value = newValue
 
-    // 立即同步更新DOM值
-    textareaNode.value = text.value
-
-    nextTick(() => {
-        textareaNode.selectionEnd = selectionStart! + convertedWords.length
+    // 同步设置光标位置
+    const newCursorPosition = (selectionStart || 0) + convertedWords.length
+    textareaNode.selectionStart = newCursorPosition
+    textareaNode.selectionEnd = newCursorPosition
+    
+    console.log('commit 完成:', {
+        newValue: newValue.slice(0, 20) + (newValue.length > 20 ? '...' : ''),
+        newCursorPosition
     })
-}
-
-function onClickCandidate(card: MabiaoItem) {
+}function onClickCandidate(card: MabiaoItem) {
     commit(card.name)
     // textarea.value?.focus()
     candidatePageIndex.value = 0
@@ -586,7 +606,7 @@ function onKeydown(e: KeyboardEvent) {
         e.stopPropagation()
 
         // 检查是否为标点符号，标点符号直接输入
-        const punctuationChars = [',', '.', ';', '/', '!', '?', '[', ']', '{', '}', '"', "'", '(', ')']
+        const punctuationChars = [',', '.', ';', '!', '?', '[', ']', '{', '}', '"', "'", '(', ')']
         if (punctuationChars.includes(key)) {
             // 如果有编码，先上屏第一个候选项
             if (candidateCodes.value && candidatePage.value.length > 0) {
@@ -751,7 +771,7 @@ function onKeydown(e: KeyboardEvent) {
                                     <!-- 后序编码 -->
                                     <span class="text-sm text-blue-400 dark:text-blue-500 dark:opacity-70">{{
                                         n.key!.slice(candidateCodes.length)
-                                        }}</span>
+                                    }}</span>
                                 </button>
                             </div>
                         </div>
@@ -801,7 +821,7 @@ function onKeydown(e: KeyboardEvent) {
                                     n.name }}</div>
                                 <!-- 编码 -->
                                 <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                                }}</div>
+                                    }}</div>
                             </button>
                         </div>
                     </div>
