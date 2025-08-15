@@ -303,10 +303,15 @@ function onClick(key: string) {
 
     // 中文模式下才进行编码处理
     if (isChineseMode.value) {
+        let inputKey = key
+        // 如果是大写字母，自动转为小写
+        if (/^[A-Z]$/.test(key)) {
+            inputKey = key.toLowerCase()
+        }
         // 检查是否需要先上屏再添加新编码
-        checkAutoCommit(key)
+        checkAutoCommit(inputKey)
 
-        candidateCodes.value += key
+        candidateCodes.value += inputKey
         candidatePageIndex.value = 0
     } else {
         // 英文模式下直接输入字符
@@ -650,10 +655,14 @@ function onKeydown(e: KeyboardEvent) {
         }
 
         // 中文模式下处理编码
+        let inputKey = key
+        if (/^[A-Z]$/.test(key)) {
+            inputKey = key.toLowerCase()
+        }
         // 检查是否需要先上屏再添加新编码
-        checkAutoCommit(key)
+        checkAutoCommit(inputKey)
 
-        candidateCodes.value += key
+        candidateCodes.value += inputKey
         candidatePageIndex.value = 0
         return
     }
@@ -795,7 +804,7 @@ function onKeydown(e: KeyboardEvent) {
                                     <!-- 后序编码 -->
                                     <span class="text-sm text-blue-400 dark:text-blue-500 dark:opacity-70">{{
                                         n.key!.slice(candidateCodes.length)
-                                        }}</span>
+                                    }}</span>
                                 </button>
                             </div>
                         </div>
@@ -845,7 +854,7 @@ function onKeydown(e: KeyboardEvent) {
                                     n.name }}</div>
                                 <!-- 编码 -->
                                 <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                                }}</div>
+                                    }}</div>
                             </button>
                         </div>
                     </div>
