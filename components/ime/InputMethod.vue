@@ -63,22 +63,26 @@ const candidateHanzi = computed(() => {
     if (filterCJK.value) {
         filteredCandidates = filteredCandidates.filter(c => {
             const ch = c.name.charCodeAt(0)
-            // CJK统一表范围
+            // CJK基本集、CJK拓展A、中文標點、注音符號
             return (
+                // CJK基本集
                 (ch >= 0x4E00 && ch <= 0x9FFF) ||
+                // CJK拓展A
                 (ch >= 0x3400 && ch <= 0x4DBF) ||
-                (ch >= 0x20000 && ch <= 0x2A6DF) ||
-                (ch >= 0x2A700 && ch <= 0x2B73F) ||
-                (ch >= 0x2B740 && ch <= 0x2B81F) ||
-                (ch >= 0x2B820 && ch <= 0x2CEAF) ||
-                (ch >= 0xF900 && ch <= 0xFAFF) ||
-                (ch >= 0x2F800 && ch <= 0x2FA1F)
+                // 中文標點
+                (ch >= 0x3000 && ch <= 0x303F) ||
+                // 注音符號
+                (ch >= 0x3100 && ch <= 0x312F) ||
+                (ch >= 0x31A0 && ch <= 0x31BF)
             )
         })
     }
     return filteredCandidates
 })
 
+
+// 固定候選欄顯示數量
+const candidateCount = 9
 // CJK过滤状态
 const filterCJK = ref(true)
 // 虛擬鍵盤顯示狀態
@@ -105,7 +109,7 @@ const dropdownPageIndex = ref(0)
 const candidatePage = computed(() => {
     if (candidateHanzi.value.length === 0) return [];
     const cpi = candidatePageIndex.value
-    return candidateHanzi.value.slice(cpi * dynamicCandidateCount.value, (cpi + 1) * dynamicCandidateCount.value)
+    return candidateHanzi.value.slice(cpi * candidateCount, (cpi + 1) * candidateCount)
 })
 
 // 下拉展开的候选字（虚拟滚动分页）
@@ -136,7 +140,7 @@ const dropdownRawCandidates = computed(() => {
 })
 
 const dropdownCandidates = computed(() => {
-    if (dropdownRawCandidates.value.length <= dynamicCandidateCount.value) return [];
+    if (dropdownRawCandidates.value.length <= candidateCount) return [];
     const startIndex = dropdownPageIndex.value * dropdownPageSize
     const endIndex = Math.min(startIndex + dropdownPageSize, dropdownRawCandidates.value.length)
     return dropdownRawCandidates.value.slice(startIndex, endIndex)
@@ -144,12 +148,11 @@ const dropdownCandidates = computed(() => {
 
 // 计算下拉面板总页数
 const totalDropdownPages = computed(() => {
-    if (candidateHanzi.value.length <= dynamicCandidateCount.value) return 0
-
+    if (candidateHanzi.value.length <= candidateCount) return 0
     return Math.ceil(candidateHanzi.value.length / dropdownPageSize)
 })
 
-const hasMoreCandidates = computed(() => candidateHanzi.value.length > dynamicCandidateCount.value)
+const hasMoreCandidates = computed(() => candidateHanzi.value.length > candidateCount)
 
 // 下拉面板翻页函数
 function nextDropdownPage() {
@@ -165,55 +168,7 @@ function prevDropdownPage() {
 }
 
 // 检测候选字容器宽度并调整显示数量
-function adjustCandidateCount() {
-    // 只有在有候选字的情况下才进行计算
-    if (candidateHanzi.value.length === 0) {
-        return
-    }
-
-    nextTick(() => {
-        const container = candidateContainer.value
-        if (!container) return
-
-        // 获取容器可用宽度（减去翻页按钮和边距）
-        const containerWidth = Math.min(window.innerWidth - 50, 320)
-
-        // 计算最适合的候选项数量
-        let bestCount = 3 // 最少3个
-        const maxCount = Math.min(9, candidateHanzi.value.length) // 最多9个或实际候选数量
-
-        // 预先计算前几个候选项的汉字总数，用于调整策略
-        let totalHanziCount = 0
-        for (let i = 0; i < Math.min(9, candidateHanzi.value.length); i++) {
-            totalHanziCount += candidateHanzi.value[i].name.length
-        }
-
-        // 详细计算每个数量的宽度
-        const widthCalculations = []
-        for (let count = 3; count <= maxCount; count++) {
-            const totalWidth = calculateCandidatesWidth(count)
-            widthCalculations.push({ count, totalWidth, fits: totalWidth <= containerWidth })
-            if (totalWidth <= containerWidth) {
-                bestCount = count
-            } else {
-                break // 超出宽度就停止
-            }
-        }
-
-        const oldCount = dynamicCandidateCount.value
-        dynamicCandidateCount.value = bestCount
-        console.log('候选字容器调整:', {
-            候选数量: candidateHanzi.value.length,
-            前9个候选汉字总数: totalHanziCount,
-            当前编码: candidateCodes.value,
-            容器宽度: containerWidth,
-            旧显示数量: oldCount,
-            新显示数量: bestCount,
-            宽度计算详情: widthCalculations,
-            候选项示例: candidateHanzi.value.slice(0, bestCount).map(c => `${c.name}(${c.key})`).join(', ')
-        })
-    })
-}
+// ...已移除動態調節函數...
 
 // 计算指定数量候选项的总宽度
 function calculateCandidatesWidth(count: number): number {
@@ -489,7 +444,6 @@ function onTextareaBlur() {
 watch(candidateHanzi, (newCandidates) => {
     candidatePageIndex.value = 0 // 候选字变化时重置页面索引
     dropdownPageIndex.value = 0 // 重置下拉页面索引
-    adjustCandidateCount()
 
     // 检查是否需要自动上屏唯一候选项
     if (newCandidates.length === 1 && candidateCodes.value) {
@@ -507,7 +461,6 @@ watch(candidateHanzi, (newCandidates) => {
 // 监听候选编码变化，重置展开状态并重新计算宽度
 watch(candidateCodes, () => {
     // 编码变化时立即重新计算主候选栏显示数量
-    adjustCandidateCount()
     candidateExpanded.value = false
     candidatePageIndex.value = 0
     dropdownPageIndex.value = 0
@@ -515,9 +468,7 @@ watch(candidateCodes, () => {
 
 // 生命周期钩子
 onMounted(() => {
-    adjustCandidateCount()
     if (typeof window !== 'undefined') {
-        window.addEventListener('resize', adjustCandidateCount)
     }
 
     // 自动聚焦到文本框
@@ -530,7 +481,6 @@ onMounted(() => {
 
 onUnmounted(() => {
     if (typeof window !== 'undefined') {
-        window.removeEventListener('resize', adjustCandidateCount)
     }
 })
 
@@ -854,7 +804,7 @@ function onKeydown(e: KeyboardEvent) {
                                 <!-- 后序编码 -->
                                 <span class="text-base text-blue-400 dark:text-blue-500 dark:opacity-70">{{
                                     n.key!.slice(candidateCodes.length)
-                                }}</span>
+                                    }}</span>
                             </button>
                         </div>
                     </div>
@@ -911,7 +861,7 @@ function onKeydown(e: KeyboardEvent) {
                             </div>
                             <!-- 编码 -->
                             <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                            }}</div>
+                                }}</div>
                         </button>
                     </div>
                 </div>
