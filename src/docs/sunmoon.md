@@ -125,52 +125,10 @@
 
 详见[《常见输入法重码数据》](./statistics.md)
 
-以下为本方案的字根表，以供参考：
-
-::: tip 字根表
-
-<!-- do not translate -->
-<div class="yuniversus">
-
-| 大碼 | 字根                                                                                                                |
-| :--- | :------------------------------------------------------------------------------------------------------------------ |
-| 上排 |                                                                                                                     |
-| q    | 几ji 殳ku 風fe 虫ho 冖丩o 卯mi 丱gi                                                                             |
-| w    | 人亻o 合he 食ka 隹co 水氺ko 力li 申ke 禺e                                                                         |
-| e    | (韻碼上屏)                                                                                                          |
-| r    | 立li 黑ho 石ka 王o 丌ji 身ke 毛mi 文i 鳥ni 烏u 車re 門me 鬥de                                                       |
-| t    | 火ho 尚ke 十ka 巾jo 由u 夂pe 攵pe 衤i                                                                               |
-| y    | 刂di 阝fu 竹su 气qi 西xi 酉u                                                                                        |
-| u    | (韻碼上屏)                                                                                                          |
-| i    | (韻碼上屏)                                                                                                          |
-| o    | (韻碼上屏)                                                                                                          |
-| p    | 雨e 大da 夫fu 犬犭qi 豸si                                                                                           |
-| 中排 |                                                                                                                     |
-| a    | (韻碼上屏)                                                                                                          |
-| s    | 至si 用i 舌ke 二 冫o 木me 尢o 尤u 户hu 尸ka 彐ji 肀e 隶li 片pe 爿pa                                              |
-| d    | 言e 口ke 〇li o 凵屮o 彑ji o 母me 宀ma 长re 已i 己ji 廴o 金jo 皮pi                                              |
-| f    | 一i 匚fe 丂ki 牙a 𰀁㐄o 丿pe 乃ne 手龵ke 电di 甲ja 鱼e 面ma 而o                                                  |
-| g    | 扌ke 厂丆re 广go 疒ne 鹿lu 麻ma 目me 罒o 皿mo 貝bo 頁e 見ja 革ge 牛nu 豕ka 九ju 儿o 夭i                             |
-| h    | 辰re 亥he 其qi 自zi 田ti 习xi 勹冂o 贝bo 页e 冊ce 止si 走ze 齒ri                                                    |
-| j    | 日i 曰e 早zi 甶fu 鬼go 巳si 巴ba 刀di 门me 丰fe 夕xi 矢ka 心忄xo 上ke 寸ci 臣re 舟se 咼冎ga 骨gu 工gi 瓦a 川巛ri    |
-| k    | 辛xo 甫fu 丬qo 弓gi 之si 里li 古gu 千qi 囗o 三sa 且qe 下xa 丁丅di 入e 八ba 戈ge 戊u 弋i 彳ri 彡ka 臼ju 白be 纟si    |
-| l    | 曲qe 兀u 欠qi 饣ka 干ga 匕bi 正se 穴xe 丨gi 非fo 子zi 予e 了le 高gi 方fe 亡o 亠te 向xo 小xi 糸si 幺i 辶ro 髟bi 長re |
-| ;    | (次選)                                                                                                              |
-| 下排 |                                                                                                                     |
-| x    | 䒑丷ci 羊⺶o 钅jo 乌u 鸟ni                                                                                        |
-| c    | 氵ko 乙𠃌乚i 飛fo 世ka 女ne 又u o 马ma 生ke 禾he 來le                                                              |
-| v    | 土du 龶士ke 壴su 耂o 斤jo 戶hu 见je 山ka 业e 米mi 讠e 车re 乂i                                                     |
-| b    | 卜bu 虎hu 鹵lu 灬bi 魚e 馬ma 爪sa 瓜ga 亦i 示ka 末mo 未o                                                            |
-| n    | 月e 足zu 缶fe 壬o 亍ru 厶si 丶di                                                                                    |
-| m    | 艮ge 耳o 不bu 丑re 七qi 乜me 也e 艹ci 卅sa ⺈mo                                                                      |
-| ,    |                                                                                                                     |
-| .    |                                                                                                                     |
-| /    | (輸入過程中調出拆分提示)                                                                                            |
-
-</div>
-<!-- do not translate -->
-
-:::
+<script setup>
+import ZigenMap from "@/zigen/ZigenMap.vue"
+</script>
+<ZigenMap :default-scheme="'ming'" :hide-scheme-buttons="true" column-min-width="1.52rem" />
 
 ::: details 更新
 

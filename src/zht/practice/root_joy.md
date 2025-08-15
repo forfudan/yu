@@ -7,11 +7,10 @@ aside: false
 
 <script setup>
 import Train from "@/train/ZigenTrain.vue"
+import ZigenMap from "@/zigen/ZigenMap.vue"
 </script>
 <div class="zigen-font">
 <Train name="joy" zigenUrl="/zigen-joy.csv" :range="[0,]" mode='A' />
 </div>
 
-::: details 键位图
-![卿云字根图](/yujoy.png)
-:::
+<ZigenMap :default-scheme="'joy'" :hide-scheme-buttons="true" column-min-width="1.5rem" />

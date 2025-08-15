@@ -63,4 +63,7 @@
 
 ## 字根圖
 
-![yustar](/yustar.png)
+<script setup>
+import ZigenMap from "@/zigen/ZigenMap.vue"
+</script>
+<ZigenMap :default-scheme="'star'" :hide-scheme-buttons="true" column-min-width="1.5rem" />

@@ -1,6 +1,9 @@
 # 光华
 
-![宇浩输入法宋体字根图](/yulight.png)
+<script setup>
+import ZigenMap from "@/zigen/ZigenMap.vue"
+</script>
+<ZigenMap :default-scheme="'light'" :hide-scheme-buttons="true" column-min-width="1.52rem" />
 
 ## 字根大码
 

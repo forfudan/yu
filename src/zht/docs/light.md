@@ -16,7 +16,10 @@ Z 鍵不安排字根，用於反查。
 
 由於字根按照首筆筆畫進行分區，適合有五筆經驗的用戶。
 
-![宇浩輸入法宋體字根圖](/yulight.png)
+<script setup>
+import ZigenMap from "@/zigen/ZigenMap.vue"
+</script>
+<ZigenMap :default-scheme="'light'" :hide-scheme-buttons="true" column-min-width="1.52rem" />
 
 光華和星陳的區別，可參見以下表格：
 

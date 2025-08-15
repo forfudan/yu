@@ -383,8 +383,8 @@ export default defineConfig({
 
     },
     footer: {
-      message: "宇浩输入法官网",
-      copyright: "shurufa.app | yuhao.forfudan.com © 2024 Under CC BY-NC-ND 4.0 license.",
+      message: "宇浩輸入法官網",
+      copyright: "shurufa.app © 2025 Under CC BY-NC-ND 4.0 license.",
     },
     darkModeSwitchLabel: "黑暗模式",
     langMenuLabel: "选择语言",

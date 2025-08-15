@@ -7,54 +7,10 @@ aside: false
 
 <script setup>
 import Train from "@/train/CharTrain.vue"
+import ZigenMap from "@/zigen/ZigenMap.vue"
 </script>
 <div class="zigen-font">
 <Train name="star" chaifenUrl="/chaifen_tw.csv" zigenUrl="/zigen-star.csv" :range="[0,1000]" :supplement="true" />
 </div>
 
-::: details 字根表
-<!-- do not translate -->
-<div class="zigen-font">
-
-| 大碼 | 聚類字根                                            | 零散字根  |
-| :--- | :-------------------------------------------------- | --------- |
-| A    | 木來　㔾卩　亠高                                |          |
-| B    | 皮又龴スコ癶马彐尸弓丑 　(橫折)                    | 言 入     |
-| C    | 冂贝见冊雨　(下框) 　彳彡　(幾撇)              | 女        |
-| D    | 由电申車叀丰　白𠂤臼戶鬼向烏鳥斤爿片　鬥門       | 至 讠     |
-| E    | 亻𠂇隹　几殳風　乚彑母                             |           |
-| F    | 未末　手扌龵　尤尢                                  | 一        |
-| G    | 丿竹气𧘇　乃廴                                   | 十 黑 艮  |
-| H    | 土士壴走龶　匚臣牙                                 | 犬 丂 户  |
-| I    | 宀穴　小⺌尚　二亍冫　火灬                       |           |
-| J    | 日曰𫩏早古　上丄下丅丁示　目且見貝　缶矢            | 王        |
-| K    | 丶乀八食　寸了子予　立辛　弋戈戊　　卯 | 纟       |
-| L    | 兀丌耳　口舌　三川巛巜                             |           |
-| M    | 广疒麻鹿　千壬禾夭毛豸　乌鸟　刀刂　辰            |           |
-| N    | 水氺　幺厶匕长　干甫                          |           |
-| O    | 己已巳巴　大夫𡗗　也乜　辶之                       | 糸 钅     |
-| P    | 止龰足齒　酉西襾　生牛                              | 工        |
-| Q    | 丷䒑丬羊⺶⺷米　自身                                  | 虫        |
-| R    | 心忄　人合僉　咼骨冎　九瓦                        |           |
-| S    | 艹廾卅卌龷世革　而面                              | 用 力 乂  |
-| T    | 方文夂攵亦亡亥豕                                  | 金 门     |
-| U    | 爪瓜　罒皿　長镸髟　丨卜虎虍鹵　〢非其业　山巾  | 舟        |
-| V    | 田甲里禺魚　(田不出頭或下出頭) 　石厂丆不           | 习        |
-| W    | 月勹　凵丩屮丱　(上框)                         | 囗 馬 儿 |
-| X    | 冖𠂊夕饣欠鱼　车七                                | 衤        |
-| Y    | 乛亅⺄乙飛                                           | 阝        |
-
-</div>
-<!-- do not translate -->
-
-:::
-
-::: details 键位图
-![宇浩·星陈字根图](/yustar.png)
-:::
-
-::: details 单字规则
-
-- 取首、二、三、末根大码。
-- 不足四码，末根小码补齐。
-- 仍不足四码，首根小码补齐。
+<ZigenMap :default-scheme="'star'" :hide-scheme-buttons="true" column-min-width="1.5rem" />
