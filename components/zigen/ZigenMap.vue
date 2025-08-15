@@ -172,32 +172,27 @@ const zigenByKey = computed(() => {
 });
 
 // 按編碼排序的字根列表（用於列表模式）
+// 按文件原始順序的字根列表（用於列表模式）
 const sortedZigenByKey = computed(() => {
-    if (!zigenByKey.value) return {};
+    if (!zigenMap.value) return {};
 
+    // 初始化所有 key 的空陣列
     const result: Record<string, Array<{ font: string, code: string, isHidden: boolean }>> = {};
+    for (const key of flatKeyList.value) {
+        result[key] = [];
+    }
 
-    for (const [key, zigens] of Object.entries(zigenByKey.value)) {
-        const allZigens: Array<{ font: string, code: string, isHidden: boolean }> = [];
+    // 嚴格依照 zigenMap.value 的原始順序分配
+    for (const [key, data] of zigenMap.value) {
+        const font = data.font;
+        const ma = data.ma?.trim();
+        if (!ma || font === null || font === undefined) continue;
+        const firstLetter = ma[0].toLowerCase();
+        const code = ma.slice(1);
 
-        // 收集所有字根並標記是否隱藏
-        zigens.visible.forEach(zigen => {
-            allZigens.push({ ...zigen, isHidden: false });
-        });
-        zigens.hidden.forEach(zigen => {
-            allZigens.push({ ...zigen, isHidden: true });
-        });
-
-        // 按編碼排序，同編碼的字根會聚集在一起
-        allZigens.sort((a, b) => {
-            if (a.code !== b.code) {
-                return a.code.localeCompare(b.code);
-            }
-            // 同編碼內，visible 字根排在前面
-            return (a.isHidden ? 1 : 0) - (b.isHidden ? 1 : 0);
-        });
-
-        result[key] = allZigens;
+        // 判斷是否為隱藏字根（同 key 下已出現過相同 code 則為隱藏）
+        const isHidden = result[firstLetter].some(z => z.code === code);
+        result[firstLetter].push({ font, code, isHidden });
     }
 
     return result;
@@ -1361,8 +1356,8 @@ onMounted(() => {
 
 /* 桌面端列表布局優化 */
 .desktop-list-layout {
-    max-width: 48rem;
-    margin: 0 auto;
+    width: 100%;
+    min-width: 100%;
 }
 
 .desktop-list-layout .mobile-key-row {
