@@ -40,9 +40,9 @@ export default defineConfig({
     nav: [
       { text: '介绍', link: '/docs/' },
       { text: '教程', link: '/learn/' },
-      { text: '拆分', link: '/chaifen/' },
       { text: '练习', link: '/practice/root' },
       { text: '安装', link: '/install' },
+      { text: '体验', link: '/ming' },
       { text: '跟打', link: 'https://yupad.pages.dev/' }
     ],
     sidebar: {
@@ -462,9 +462,9 @@ export default defineConfig({
         nav: [
           { text: '介紹', link: '/zht/docs/' },
           { text: '教程', link: '/zht/learn/' },
-          { text: '拆分', link: '/zht/chaifen/' },
           { text: '練習', link: '/zht/practice/root' },
           { text: '安裝', link: '/zht/install' },
+          { text: '體驗', link: '/ming' },
           { text: '跟打', link: 'https://yupad.pages.dev/' }
         ],
         sidebar: {
