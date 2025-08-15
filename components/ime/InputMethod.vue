@@ -784,7 +784,8 @@ function onKeydown(e: KeyboardEvent) {
             </template>
             <template v-else>
                 <!-- 正常候选字显示 -->
-                <div class="relative flex items-center min-h-[3.5rem]" ref="candidateContainer">
+                <div class="relative flex items-center min-h-[3.5rem] border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 shadow-sm"
+                    ref="candidateContainer">
                     <div class="flex-1 min-w-0 overflow-x-auto overflow-y-hidden scrollbar-hide"
                         style="scrollbar-width: none; -ms-overflow-style: none;">
                         <div class="flex">
@@ -795,7 +796,7 @@ function onKeydown(e: KeyboardEvent) {
                                 <span class="text-xs text-slate-400 dark:text-slate-500">{{ i + 1 }}</span>
                                 <!-- 词条 -->
                                 <span class="text-xl select-text px-2 text-slate-900 dark:text-slate-200">{{ n.name
-                                    }}</span>
+                                }}</span>
                                 <!-- 后序编码 -->
                                 <span class="text-base text-blue-400 dark:text-blue-500 mt-0">{{
                                     n.key!.slice(candidateCodes.length) }}</span>
@@ -855,7 +856,7 @@ function onKeydown(e: KeyboardEvent) {
                             </div>
                             <!-- 编码 -->
                             <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                            }}</div>
+                                }}</div>
                         </button>
                     </div>
                 </div>
