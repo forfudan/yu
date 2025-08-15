@@ -1,19 +1,19 @@
-// 第二候選框顯示狀態
-const showDropdownPanel = ref(false)
-<script setup lang="ts">
-/*
-        InputMethod.vue - 在線輸入法核心組件
+<!--
+    InputMethod.vue - 在線輸入法核心組件
 
-        Modification History:
-        - 2025-08-15 by 朱複丹: 完全重構代碼，優化輸入法引擎和用戶體驗
-            支持日月方案
-            支持額外的候選框
-            支持自動上屏
-            支持標點符號頂屏
-            支持韻碼提示
-            支持中英文模式切換
-        - 2024-06-25 by yb6b: 初版
-*/
+    Modification History:
+    - 2025-08-15 by 朱複丹: 完全重構代碼，優化輸入法引擎和用戶體驗
+        支持日月方案
+        支持額外的候選框
+        支持自動上屏
+        支持標點符號頂屏
+        支持韻碼提示
+        支持中英文模式切換
+    - 2024-06-25 by yb6b: 初版
+-->
+
+<script setup lang="ts">
+
 import { ref, computed, watch, nextTick, onMounted, onUnmounted } from 'vue'
 import { biSearchBetween, ImeRule, searchTop, MabiaoItem } from './share'
 import Keyboard from "./Keyboard.vue";
@@ -787,17 +787,16 @@ function onKeydown(e: KeyboardEvent) {
                         style="scrollbar-width: none; -ms-overflow-style: none;">
                         <div class="flex">
                             <button
-                                class="px-3 py-2 text-base hover:bg-slate-200 dark:hover:bg-slate-900 whitespace-nowrap flex-shrink-0 rounded"
+                                class="px-3 py-2 text-base hover:bg-slate-200 dark:hover:bg-slate-900 whitespace-nowrap flex-shrink-0 rounded flex flex-col items-center"
                                 v-for="n, i of candidatePage" @click="onClickCandidate(n)">
                                 <!-- 序号 -->
-                                <span class="text-base text-slate-400 dark:text-slate-500">{{ i + 1 }}.</span>
+                                <span class="text-xs text-slate-400 dark:text-slate-500">{{ i + 1 }}</span>
                                 <!-- 词条 -->
-                                <span class="select-text px-2 text-slate-900 dark:text-slate-200">
-                                    {{ n.name }}</span>
-                                <!-- 后序编码 -->
-                                <span class="text-base text-blue-400 dark:text-blue-500 dark:opacity-70">{{
-                                    n.key!.slice(candidateCodes.length)
+                                <span class="text-xl select-text px-2 text-slate-900 dark:text-slate-200">{{ n.name
                                 }}</span>
+                                <!-- 后序编码 -->
+                                <span class="text-base text-blue-400 dark:text-blue-500 mt-0">{{
+                                    n.key!.slice(candidateCodes.length) }}</span>
                             </button>
                         </div>
                     </div>
@@ -854,7 +853,7 @@ function onKeydown(e: KeyboardEvent) {
                             </div>
                             <!-- 编码 -->
                             <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                            }}</div>
+                                }}</div>
                         </button>
                     </div>
                 </div>
