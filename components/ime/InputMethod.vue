@@ -52,45 +52,43 @@ const candidateHanzi = computed(() => {
 
     let allCandidates = mabiaoList.slice(range[0], range[1])
 
-    // 主候选栏：精确匹配和预测项
-    let filteredCandidates = allCandidates.filter(candidate => {
+    // 分離精確匹配和預測項
+    const exactMatches = allCandidates.filter(candidate => candidate.key! === cd)
+    let predictMatches = allCandidates.filter(candidate => {
         const candidateCode = candidate.key!
-        if (candidateCode === cd) return true // 精确匹配
+        if (candidateCode === cd) return false // 已在精確匹配
         if (!candidateCode.startsWith(cd)) return false
         const rest = candidateCode.slice(cd.length)
         return rest.length === 1 && 'aeiou'.includes(rest)
     })
 
-    // CJK过滤
-    if (filterCJK.value) {
-        filteredCandidates = filteredCandidates.filter(c => {
-            const ch = c.name.charCodeAt(0)
-            // CJK基本集、CJK拓展A、中文標點、注音符號
-            return (
-                // CJK基本集
-                (ch >= 0x4E00 && ch <= 0x9FFF) ||
-                // CJK拓展A
-                (ch >= 0x3400 && ch <= 0x4DBF) ||
-                // 中文標點
-                (ch >= 0x3000 && ch <= 0x303F) ||
-                // 注音符號
-                (ch >= 0x3100 && ch <= 0x312F) ||
-                (ch >= 0x31A0 && ch <= 0x31BF)
-            )
-        })
-    }
-    return filteredCandidates
+    // CJK过滤只作用於預測項
+    predictMatches = predictMatches.filter(c => {
+        const ch = c.name.charCodeAt(0)
+        // CJK基本集、CJK拓展A、中文標點、注音符號
+        return (
+            // CJK基本集
+            (ch >= 0x4E00 && ch <= 0x9FFF) ||
+            // CJK拓展A
+            (ch >= 0x3400 && ch <= 0x4DBF) ||
+            // 中文標點
+            (ch >= 0x3000 && ch <= 0x303F) ||
+            // 注音符號
+            (ch >= 0x3100 && ch <= 0x312F) ||
+            (ch >= 0x31A0 && ch <= 0x31BF)
+        )
+    })
+    // 合併精確匹配和過濾後的預測項
+    return [...exactMatches, ...predictMatches]
 })
 
 
 // 固定候選欄顯示數量
 const candidateCount = 9
-// CJK过滤状态
-const filterCJK = ref(true)
 // 虛擬鍵盤顯示狀態
 const showKeyboard = ref(false)
 // 是否显示候选字下拉面板
-const showDropdownPanel = ref(false)
+const showDropdownPanel = ref(true)
 
 const candidatePageIndex = ref(0)
 
@@ -116,29 +114,36 @@ const candidatePage = computed(() => {
     return candidateHanzi.value.slice(cpi * candidateCount, (cpi + 1) * candidateCount)
 })
 
-// 下拉展开的候选字（虚拟滚动分页）
-const dropdownRawCandidates = computed(() => {
-    // 显示所有以当前编码开头的候选项
-    if (!candidateCodes.value) return [];
-    const cd = candidateCodes.value
-    const range = biSearchBetween(mabiaoList, cd)
-    if (!range) return [];
-    let allCandidates = mabiaoList.slice(range[0], range[1]).filter(candidate => candidate.key!.startsWith(cd))
-    // 不再根據 filterCJK 控制第二候選窗
-    return allCandidates
-})
-
+// 下拉展开的候选字（虚拟滚动分页，始终显示所有預測項）
 const dropdownCandidates = computed(() => {
-    if (dropdownRawCandidates.value.length <= candidateCount) return [];
-    const startIndex = dropdownPageIndex.value * dropdownPageSize
-    const endIndex = Math.min(startIndex + dropdownPageSize, dropdownRawCandidates.value.length)
-    return dropdownRawCandidates.value.slice(startIndex, endIndex)
+    if (!candidateCodes.value) return [];
+    const cd = candidateCodes.value;
+    const range = biSearchBetween(mabiaoList, cd);
+    if (!range) return [];
+    // 顯示所有預測項（key 以當前編碼開頭且不等於當前編碼，不做 CJK 過濾）
+    const allPredict = mabiaoList.slice(range[0], range[1]).filter(candidate => {
+        const candidateCode = candidate.key!;
+        return candidateCode !== cd && candidateCode.startsWith(cd);
+    });
+    // 分頁
+    const startIndex = dropdownPageIndex.value * dropdownPageSize;
+    const endIndex = Math.min(startIndex + dropdownPageSize, allPredict.length);
+    return allPredict.slice(startIndex, endIndex);
 })
 
 // 计算下拉面板总页数
 const totalDropdownPages = computed(() => {
-    if (candidateHanzi.value.length <= candidateCount) return 0
-    return Math.ceil(candidateHanzi.value.length / dropdownPageSize)
+    if (!candidateCodes.value) return 0;
+    const cd = candidateCodes.value;
+    const range = biSearchBetween(mabiaoList, cd);
+    if (!range) return 0;
+    // 所有預測項目（key 以當前編碼開頭且不等於當前編碼，不做 CJK 過濾）
+    const allPredict = mabiaoList.slice(range[0], range[1]).filter(candidate => {
+        const candidateCode = candidate.key!;
+        return candidateCode !== cd && candidateCode.startsWith(cd);
+    });
+    if (allPredict.length === 0) return 0;
+    return Math.ceil(allPredict.length / dropdownPageSize);
 })
 
 const hasMoreCandidates = computed(() => candidateHanzi.value.length > candidateCount)
@@ -155,9 +160,6 @@ function prevDropdownPage() {
         dropdownPageIndex.value--
     }
 }
-
-// 检测候选字容器宽度并调整显示数量
-// ...已移除動態調節函數...
 
 // 计算指定数量候选项的总宽度
 function calculateCandidatesWidth(count: number): number {
@@ -341,7 +343,6 @@ function convertToChinese(words: string): string {
             case '}':
                 result += '』'
                 break
-                defineExpose({ filterCJK })
             case '"':
                 // 处理双引号的开合
                 if (quoteState.value) {
@@ -742,10 +743,6 @@ function onKeydown(e: KeyboardEvent) {
     <div class="relative w-full">
         <!-- CJK过滤按钮 -->
         <div class="flex justify-end mb-2 space-x-2">
-            <button @click="filterCJK = !filterCJK"
-                class="px-3 py-1 rounded bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs">
-                {{ filterCJK ? '顯示全部字符' : '只顯示常用漢字' }}
-            </button>
             <button @click="showDropdownPanel = !showDropdownPanel"
                 class="px-3 py-1 rounded bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs">
                 {{ showDropdownPanel ? '隱藏第二候選框' : '顯示更多候選項' }}
@@ -793,7 +790,7 @@ function onKeydown(e: KeyboardEvent) {
                                 <span class="text-xs text-slate-400 dark:text-slate-500">{{ i + 1 }}</span>
                                 <!-- 词条 -->
                                 <span class="text-xl select-text px-2 text-slate-900 dark:text-slate-200">{{ n.name
-                                }}</span>
+                                    }}</span>
                                 <!-- 后序编码 -->
                                 <span class="text-base text-blue-400 dark:text-blue-500 mt-0">{{
                                     n.key!.slice(candidateCodes.length) }}</span>
@@ -853,7 +850,7 @@ function onKeydown(e: KeyboardEvent) {
                             </div>
                             <!-- 编码 -->
                             <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                                }}</div>
+                            }}</div>
                         </button>
                     </div>
                 </div>
