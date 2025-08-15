@@ -88,7 +88,7 @@ const candidateCount = 9
 // 虛擬鍵盤顯示狀態
 const showKeyboard = ref(false)
 // 是否显示候选字下拉面板
-const showDropdownPanel = ref(true)
+const showDropdownPanel = ref(false)
 
 const candidatePageIndex = ref(0)
 
@@ -750,7 +750,7 @@ function onKeydown(e: KeyboardEvent) {
         <div class="flex justify-end mb-2 space-x-2">
             <button @click="showDropdownPanel = !showDropdownPanel"
                 class="px-3 py-1 rounded bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs">
-                {{ showDropdownPanel ? '隱藏第二候選框' : '顯示更多候選項' }}
+                {{ showDropdownPanel ? '隱藏更多候選框' : '顯示更多候選項' }}
             </button>
             <button @click="showKeyboard = !showKeyboard"
                 class="px-3 py-1 rounded bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs">
