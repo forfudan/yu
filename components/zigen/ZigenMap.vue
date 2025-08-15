@@ -211,7 +211,16 @@ const getExampleChars = async (zigen: string): Promise<string[]> => {
 
     try {
         console.log(`開始為字根 "${zigen}" 搜索例字...`);
-        const optimizedData = await chaifenLoader.value.loadData();
+
+        // 添加超時處理
+        const timeoutPromise = new Promise<never>((_, reject) => {
+            setTimeout(() => reject(new Error('數據加載超時')), 10000); // 10秒超時
+        });
+
+        const optimizedData = await Promise.race([
+            chaifenLoader.value.loadData(),
+            timeoutPromise
+        ]);
 
         const examples: string[] = [];
 
@@ -251,6 +260,9 @@ const getExampleChars = async (zigen: string): Promise<string[]> => {
         return examples;
     } catch (error) {
         console.error('获取例字失败:', error);
+        if (error instanceof Error && error.message === '數據加載超時') {
+            console.error('數據加載超時，請檢查網絡連接');
+        }
         return [];
     }
 };
@@ -339,6 +351,14 @@ function getKeyLabel(key: string): string {
 // 處理字根點擊 - 固定彈窗
 async function handleZigenClick(event: MouseEvent, zigen: { font: string, code: string }) {
     event.stopPropagation();
+
+    // 確保 chaifenLoader 已初始化（手機端可能直接點擊而沒有懸停）
+    if (!chaifenLoader.value) {
+        console.log('點擊時初始化拆分數據加載器...');
+        const urls = getSchemeUrls(activeScheme.value);
+        chaifenLoader.value = ChaiDataLoader.getInstance(urls.chaifenUrl);
+        console.log(`已初始化 ChaiDataLoader，使用文件: ${urls.chaifenUrl}`);
+    }
 
     // 如果已經固定了相同的字根，則取消固定
     if (isPinned.value && pinnedZigen.value === zigen.font) {
