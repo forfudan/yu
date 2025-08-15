@@ -20,7 +20,7 @@ const props = defineProps<{
 
 
 const mabiaoList = props.data
-console.log(mabiaoList);
+console.log('🎯 InputMethod loaded with', mabiaoList.length, 'items')
 
 //#region 候选条
 const candidateCodes = ref('')
@@ -257,7 +257,7 @@ function onKeydown(e: KeyboardEvent) {
                         <!-- 后序编码 -->
                         <span class="text-sm text-blue-400 dark:text-blue-500 dark:opacity-70">{{
                             n.key!.slice(candidateCodes.length)
-                            }}</span>
+                        }}</span>
                     </button>
                 </div>
 

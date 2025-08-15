@@ -25,7 +25,12 @@ const mabiaoList = shallowRef<utils.MabiaoItem[]>()
 const progress = ref({ max: 0, current: 0 })
 
 onMounted(async () => {
-    mabiaoList.value = await utils.fetchMabiao(p.mabiaoUrl, progress)
+    try {
+        mabiaoList.value = await utils.fetchMabiao(p.mabiaoUrl, progress)
+        console.log('✅ Mabiao loaded successfully:', mabiaoList.value?.length, 'items')
+    } catch (error) {
+        console.error('❌ Failed to load mabiao:', error)
+    }
 })
 
 </script>

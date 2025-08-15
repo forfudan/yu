@@ -2,6 +2,13 @@ export * from '../train/share'
 import { withBase } from 'vitepress'
 import * as vue from 'vue'
 
+// 动态导入pako用于gzip解压缩
+declare global {
+    interface Window {
+        pako?: any;
+    }
+}
+
 //#region 输入法的规则
 export interface ImeRule {
     /** 顶屏时 取前几码的首选字 */
@@ -31,6 +38,103 @@ export const YuhaoRule: ImeRule = {
 }
 //#endregion
 
+//#region gzip解压缩工具
+let pakoLoaded = false
+
+/**
+ * 动态加载pako库
+ */
+async function loadPako(): Promise<any> {
+    if (window.pako) {
+        return window.pako
+    }
+
+    if (pakoLoaded) {
+        return window.pako
+    }
+
+    try {
+        // 从CDN加载pako
+        const script = document.createElement('script')
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js'
+        script.crossOrigin = 'anonymous'
+
+        await new Promise((resolve, reject) => {
+            script.onload = resolve
+            script.onerror = reject
+            document.head.appendChild(script)
+        })
+
+        pakoLoaded = true
+        return window.pako
+    } catch (error) {
+        console.warn('Failed to load pako library:', error)
+        return null
+    }
+}
+
+/**
+ * 解压gzip数据并转换为字符串
+ */
+async function decompressGzipToString(arrayBuffer: ArrayBuffer): Promise<string> {
+    const decompressedBuffer = await decompressGzip(arrayBuffer)
+    return new TextDecoder('utf-8').decode(decompressedBuffer)
+}
+
+/**
+ * 解压gzip数据
+ */
+async function decompressGzip(arrayBuffer: ArrayBuffer): Promise<ArrayBuffer> {
+    try {
+        // 首先尝试使用pako库
+        const pako = await loadPako()
+        if (pako) {
+            console.log('📦 Using pako for gzip decompression')
+            const compressed = new Uint8Array(arrayBuffer)
+            const decompressed = pako.inflate(compressed)
+            return decompressed.buffer
+        }
+
+        // 回退到浏览器原生DecompressionStream
+        console.log('🌐 Using browser DecompressionStream for gzip decompression')
+        if (typeof DecompressionStream === 'undefined') {
+            throw new Error('DecompressionStream not supported and pako not available')
+        }
+
+        const stream = new ReadableStream({
+            start(controller) {
+                controller.enqueue(new Uint8Array(arrayBuffer))
+                controller.close()
+            }
+        })
+
+        const decompressedStream = stream.pipeThrough(new DecompressionStream('gzip'))
+        const chunks: Uint8Array[] = []
+        const reader = decompressedStream.getReader()
+
+        while (true) {
+            const { done, value } = await reader.read()
+            if (done) break
+            chunks.push(value)
+        }
+
+        // 合并chunks到单个ArrayBuffer
+        const totalLength = chunks.reduce((sum, chunk) => sum + chunk.length, 0)
+        const result = new Uint8Array(totalLength)
+        let offset = 0
+        for (const chunk of chunks) {
+            result.set(chunk, offset)
+            offset += chunk.length
+        }
+
+        return result.buffer
+    } catch (error) {
+        console.error('Failed to decompress gzip data:', error)
+        throw new Error(`Gzip decompression failed: ${error.message}`)
+    }
+}
+//#endregion
+
 //#region 读取码表
 export interface MabiaoItem {
     name: string,
@@ -47,51 +151,67 @@ interface IProgress {
     current: number;
 }
 
-export async function fetchMabiao(url: string, progressRef: vue.Ref<IProgress>) {
-    if (url in mabiaoCache) return mabiaoCache[url];
+export async function fetchMabiao(url: string, progressRef: vue.Ref<IProgress>): Promise<MabiaoItem[]> {
+    console.log('开始获取码表:', url);
 
-    try {
-        const res = await fetch(withBase(url))
-        if (!res.ok) throw new Error();
+    const response = await fetch(withBase(url));
+    if (!response.ok) {
+        throw new Error(`Failed to fetch mabiao: ${response.status}`);
+    }
 
-        //  响应头没有文件体积,就假装是 2MiB 
-        progressRef.value.max = Number(res.headers.get('Content-Length') || 2 << 20)
+    const arrayBuffer = await response.arrayBuffer();
+    const contentType = response.headers.get('content-type') || '';
+    console.log('响应类型:', contentType, '数据大小:', arrayBuffer.byteLength);
 
-        let received = 0
-        progressRef.value.current = received
-        let chunks: Uint8Array[] = [];
+    // 检测是否为JSON格式（通过文件扩展名或内容类型）
+    const isJson = url.endsWith('.json') || contentType.includes('application/json');
 
-        const reader = res.body.getReader();
-        while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-            chunks.push(value);
-            received += value.length;
-            progressRef.value.current = received
+    let text: string;
+
+    if (isJson) {
+        // 尝试解压缩JSON数据
+        console.log('检测到JSON格式，开始解压缩...');
+        text = await decompressGzipToString(arrayBuffer);
+
+        // 解析JSON
+        const data = JSON.parse(text);
+        const entries = Object.entries(data);
+        console.log('JSON解析完成，条目数:', entries.length);
+
+        // 设置进度
+        if (progressRef) {
+            progressRef.value.max = entries.length;
+            progressRef.value.current = entries.length;
         }
 
-        let allChunks = new Uint8Array(received);
-        let position = 0;
-        for (const chunk of chunks) {
-            allChunks.set(chunk, position);
-            position += chunk.length;
-        }
-        let text = new TextDecoder("utf-8").decode(allChunks);
+        // 转换为MabiaoItem数组
+        const result = entries.map(([code, word]) => ({
+            name: String(word),
+            key: code
+        }));
 
-        const result: MabiaoItem[] = []
-        for (const line of text.trim().split('\n')) {
-            const lineTuple = line.trim().split('\t')
-            result.push({ name: lineTuple[1], key: lineTuple[0] })
+        // 按key字段排序（对二分查找很重要）
+        result.sort((a, b) => a.key.localeCompare(b.key));
+
+        console.log('转换完成，返回', result.length, '个条目');
+        return result;
+    } else {
+        // 处理TSV格式（原有逻辑）
+        text = new TextDecoder('utf-8').decode(arrayBuffer);
+        console.log('TSV数据长度:', text.length);
+
+        const lines = text.split('\n').filter(line => line.trim() !== '');
+        if (progressRef) {
+            progressRef.value.max = lines.length;
         }
 
-        // 必须要排序
-        result.sort(sortFunc)
-        mabiaoCache[url] = result
-        return result
-    } catch (error) {
-        if (error instanceof Error)
-            alert(`无法下载或解析《${url}》文件：${error.cause}`)
-        throw error
+        return lines.map((line, index) => {
+            if (progressRef) {
+                progressRef.value.current = index + 1;
+            }
+            const [code, word] = line.split('\t');
+            return { name: word, key: code };
+        });
     }
 }
 //#endregion
