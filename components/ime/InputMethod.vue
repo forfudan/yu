@@ -42,42 +42,43 @@ const candidatePageIndex = ref(0)
 
 const disablePreviousPageBtn = computed(() => candidatePageIndex.value < 1)
 const disableNextPageBtn = computed(() => {
-    const pageSize = candidateExpanded.value ? 36 : maxVisibleCandidates.value
+    const pageSize = dynamicCandidateCount.value
     return candidatePageIndex.value >= Math.ceil(candidateHanzi.value.length / pageSize) - 1
 })
 
 // 候选字展开状态
 const candidateExpanded = ref(false)
 const candidateContainer = ref<HTMLElement>()
-const maxVisibleCandidates = ref(5) // 动态调整的候选字数量
+const dynamicCandidateCount = ref(5) // 动态调整的候选字数量，默认5个
 
 // 虚拟滚动相关
 const dropdownPageSize = 24 // 下拉面板每页显示的候选字数量
 const dropdownPageIndex = ref(0)
 
-// 动态调整候选字显示数量
+// 主要候选栏显示的候选字（动态调整数量）
 const candidatePage = computed(() => {
     if (candidateHanzi.value.length === 0) return [];
     const cpi = candidatePageIndex.value
-    const maxCount = maxVisibleCandidates.value
-    return candidateHanzi.value.slice(cpi * maxCount, (cpi + 1) * maxCount)
+    return candidateHanzi.value.slice(cpi * dynamicCandidateCount.value, (cpi + 1) * dynamicCandidateCount.value)
 })
 
-// 下拉面板渲染的候选字（分页显示）
+// 下拉展开的候选字（虚拟滚动分页）
 const dropdownCandidates = computed(() => {
-    if (candidateHanzi.value.length <= maxVisibleCandidates.value) return [];
+    if (candidateHanzi.value.length <= dynamicCandidateCount.value) return [];
+
     const startIndex = dropdownPageIndex.value * dropdownPageSize
     const endIndex = Math.min(startIndex + dropdownPageSize, candidateHanzi.value.length)
     return candidateHanzi.value.slice(startIndex, endIndex)
 })
 
-// 计算总页数
+// 计算下拉面板总页数
 const totalDropdownPages = computed(() => {
-    if (candidateHanzi.value.length <= maxVisibleCandidates.value) return 0
+    if (candidateHanzi.value.length <= dynamicCandidateCount.value) return 0
+
     return Math.ceil(candidateHanzi.value.length / dropdownPageSize)
 })
 
-const hasMoreCandidates = computed(() => candidateHanzi.value.length > maxVisibleCandidates.value)
+const hasMoreCandidates = computed(() => candidateHanzi.value.length > dynamicCandidateCount.value)
 
 // 下拉面板翻页函数
 function nextDropdownPage() {
@@ -94,15 +95,79 @@ function prevDropdownPage() {
 
 // 检测候选字容器宽度并调整显示数量
 function adjustCandidateCount() {
+    // 只有在有候选字的情况下才进行计算
+    if (candidateHanzi.value.length === 0) {
+        return
+    }
+
     nextTick(() => {
-        if (!candidateContainer.value) return
+        const container = candidateContainer.value
+        if (!container) return
 
-        const containerWidth = candidateContainer.value.offsetWidth - 100 // 预留按钮空间
-        const averageCandidateWidth = 80 // 估算每个候选字按钮的平均宽度
-        const maxCount = Math.max(3, Math.min(9, Math.floor(containerWidth / averageCandidateWidth)))
+        // 获取容器可用宽度（减去翻页按钮和边距）
+        const containerWidth = container.clientWidth - 100
 
-        maxVisibleCandidates.value = maxCount
+        // 计算最适合的候选项数量
+        let bestCount = 3 // 最少3个
+        const maxCount = Math.min(9, candidateHanzi.value.length) // 最多9个或实际候选数量
+
+        // 预先计算前几个候选项的汉字总数，用于调整策略
+        let totalHanziCount = 0
+        for (let i = 0; i < Math.min(9, candidateHanzi.value.length); i++) {
+            totalHanziCount += candidateHanzi.value[i].name.length
+        }
+
+        for (let count = 3; count <= maxCount; count++) {
+            const totalWidth = calculateCandidatesWidth(count)
+            if (totalWidth <= containerWidth) {
+                bestCount = count
+            } else {
+                break // 超出宽度就停止
+            }
+        }
+
+        const oldCount = dynamicCandidateCount.value
+        dynamicCandidateCount.value = bestCount
+        console.log('候选字容器调整:', {
+            候选数量: candidateHanzi.value.length,
+            前9个候选汉字总数: totalHanziCount,
+            当前编码: candidateCodes.value,
+            容器宽度: containerWidth,
+            旧显示数量: oldCount,
+            新显示数量: bestCount,
+            计算宽度: calculateCandidatesWidth(bestCount),
+            候选项示例: candidateHanzi.value.slice(0, bestCount).map(c => c.name).join(', ')
+        })
     })
+}
+
+// 计算指定数量候选项的总宽度
+function calculateCandidatesWidth(count: number): number {
+    if (candidateHanzi.value.length === 0) return 0
+
+    let totalWidth = 0
+
+    // 基于实际会显示的候选项来计算，而不是只考虑编码完全相同的
+    for (let i = 0; i < count && i < candidateHanzi.value.length; i++) {
+        const candidate = candidateHanzi.value[i]
+
+        // 候选编号宽度 (如 "1.", "2." 等，约10px)
+        const numberWidth = 10
+
+        // 汉字宽度 (每个汉字约16px)
+        const hanziWidth = candidate.name.length * 16
+
+        // 编码宽度 (每个字符约7px，编码字体较小)
+        const codeLength = candidate.key!.slice(candidateCodes.value.length).length
+        const codeWidth = codeLength * 7
+
+        // 按钮内边距和间距 (约14px)
+        const paddingWidth = 14
+
+        totalWidth += numberWidth + hanziWidth + codeWidth + paddingWidth
+    }
+
+    return totalWidth
 }
 //#endregion
 
@@ -156,11 +221,13 @@ watch(candidateHanzi, () => {
     adjustCandidateCount()
 }, { immediate: true })
 
-// 监听候选编码变化，重置展开状态
+// 监听候选编码变化，重置展开状态并重新计算宽度
 watch(candidateCodes, () => {
     candidateExpanded.value = false
     candidatePageIndex.value = 0
     dropdownPageIndex.value = 0
+    // 编码变化时也需要重新计算，因为后序编码长度会影响宽度
+    adjustCandidateCount()
 })
 
 // 生命周期钩子
@@ -297,7 +364,7 @@ function onKeydown(e: KeyboardEvent) {
     }
     if (key === '=' && cd) {
         e.preventDefault()
-        const pageSize = candidateExpanded.value ? 36 : maxVisibleCandidates.value
+        const pageSize = dynamicCandidateCount.value
         if (cpi + 1 < candidateHanzi.value.length / pageSize)
             candidatePageIndex.value++
         return
@@ -338,20 +405,23 @@ function onKeydown(e: KeyboardEvent) {
                 <template v-else>
                     <!-- 正常候选字显示 -->
                     <div class="relative flex items-center" ref="candidateContainer">
-                        <div class="flex-auto overflow-hidden flex">
-                            <button
-                                class="px-2 py-1 hover:bg-slate-200 dark:hover:bg-slate-900 whitespace-nowrap flex-shrink-0"
-                                v-for="n, i of candidatePage" @click="onClickCandidate(n)">
-                                <!-- 序号 -->
-                                <span class="text-sm text-slate-400 dark:text-slate-500">{{ i + 1 }}.</span>
-                                <!-- 词条 -->
-                                <span class="select-text px-1 text-slate-900 dark:text-slate-200">
-                                    {{ n.name }}</span>
-                                <!-- 后序编码 -->
-                                <span class="text-sm text-blue-400 dark:text-blue-500 dark:opacity-70">{{
-                                    n.key!.slice(candidateCodes.length)
-                                }}</span>
-                            </button>
+                        <div class="flex-1 min-w-0 overflow-x-auto overflow-y-hidden scrollbar-hide"
+                            style="scrollbar-width: none; -ms-overflow-style: none;">
+                            <div class="flex">
+                                <button
+                                    class="px-2 py-1 hover:bg-slate-200 dark:hover:bg-slate-900 whitespace-nowrap flex-shrink-0"
+                                    v-for="n, i of candidatePage" @click="onClickCandidate(n)">
+                                    <!-- 序号 -->
+                                    <span class="text-sm text-slate-400 dark:text-slate-500">{{ i + 1 }}.</span>
+                                    <!-- 词条 -->
+                                    <span class="select-text px-1 text-slate-900 dark:text-slate-200">
+                                        {{ n.name }}</span>
+                                    <!-- 后序编码 -->
+                                    <span class="text-sm text-blue-400 dark:text-blue-500 dark:opacity-70">{{
+                                        n.key!.slice(candidateCodes.length)
+                                        }}</span>
+                                </button>
+                            </div>
                         </div>
 
                         <!-- 翻页按钮 -->
@@ -372,7 +442,7 @@ function onKeydown(e: KeyboardEvent) {
                         <div class="flex justify-between items-center mb-2">
                             <div class="text-sm text-slate-500">
                                 候选字 {{ dropdownPageIndex * dropdownPageSize + 1 }}-{{ Math.min((dropdownPageIndex + 1) *
-                                dropdownPageSize, candidateHanzi.length) }} / {{ candidateHanzi.length }}
+                                    dropdownPageSize, candidateHanzi.length) }} / {{ candidateHanzi.length }}
                             </div>
                             <div class="flex space-x-2">
                                 <button :disabled="dropdownPageIndex === 0"
@@ -399,7 +469,7 @@ function onKeydown(e: KeyboardEvent) {
                                     n.name }}</div>
                                 <!-- 编码 -->
                                 <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                                    }}</div>
+                                }}</div>
                             </button>
                         </div>
                     </div>
@@ -408,3 +478,17 @@ function onKeydown(e: KeyboardEvent) {
         </Keyboard>
     </div>
 </template>
+
+<style scoped>
+.scrollbar-hide {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+</style>
