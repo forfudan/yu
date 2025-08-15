@@ -780,12 +780,12 @@ function onKeydown(e: KeyboardEvent) {
                 </div>
             </div>
             <template v-if="candidateHanzi.length === 0">
-                <div class="flex items-center min-h-[3.5rem]">
+                <div class="flex items-center min-h-[3.5rem] h-[3.5rem]">
                     <div class="text-sm text-slate-500 ml-6 mt-1" v-if="candidateCodes.length === 0">
                         <slot>
                             <!-- 根据模式显示不同提示 -->
                             <span v-if="isChineseMode">中文輸入模式，記得關閉系統輸入法</span>
-                            <span v-else>英文輸入模式，記得關閉系統輸入法</span>
+                            <span v-else>英文輸入模式，記得關閉系統輸法</span>
                         </slot>
                     </div>
                     <div class="text-sm text-slate-400 dark:text-slate-500 ml-6 mt-1" v-else>空码</div>
