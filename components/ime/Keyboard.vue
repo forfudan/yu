@@ -21,8 +21,7 @@ defineEmits<{
     <!-- 候选编码 -->
     <slot name="codes"></slot>
 
-    <div
-        class="text-xl bg-neutral-50 dark:bg-neutral-900 w-full text-slate-900 dark:text-slate-400 select-none">
+    <div class="text-xl bg-neutral-50 dark:bg-neutral-900 w-full text-slate-900 dark:text-slate-400 select-none">
         <!-- 候选栏 -->
         <div class="flex min-h-9 h-9 text-base bg-neutral-100 dark:bg-neutral-800 pt-1 break-keep text-nowrap w-full">
             <slot name="cadidate"></slot>
@@ -56,6 +55,9 @@ defineEmits<{
             <button class="flex-1 hover:bg-slate-300 hover:dark:bg-slate-800 py-4" v-for="k in 'zxcvbnm'"
                 @click="$emit('click', k)">
                 {{ k }}</button>
+            <button class="flex-1 hover:bg-slate-300 hover:dark:bg-slate-800 py-4" @click="$emit('click', '/')">
+                /
+            </button>
             <button
                 class="flex-2 text-neutral-400 hover:bg-slate-300 hover:dark:bg-slate-800 flex justify-center items-center"
                 @click="$emit('click', 'bs')">
@@ -66,6 +68,16 @@ defineEmits<{
                 </svg>
             </button>
 
+        </div>
+
+        <!-- 空格键行 -->
+        <div class="flex text-center ">
+            <div class="flex-2"></div>
+            <button class="flex-6 hover:bg-slate-300 hover:dark:bg-slate-800 py-3 text-sm text-neutral-500"
+                @click="$emit('click', ' ')">
+                空格
+            </button>
+            <div class="flex-2"></div>
         </div>
     </div>
 </template>

@@ -221,29 +221,58 @@ const textarea = ref<HTMLInputElement>()
 
 function onClick(key: string) {
     if (key === 'bs') {
-        if (candidateCodes.value)
+        if (candidateCodes.value) {
             candidateCodes.value = candidateCodes.value.slice(0, -1)
-        else
-            text.value = text.value.slice(0, -1)
+        } else {
+            // 虚拟键盘的简单删除逻辑
+            if (text.value.length > 0) {
+                text.value = text.value.slice(0, -1)
+            }
+        }
         return
     }
+
+    if (key === ' ') {
+        // 空格键使用和物理键盘一样的逻辑
+        const cd = candidateCodes.value
+        if (cd) {
+            // 有编码时，空格上屏第一个候选项（如果有的话）
+            if (candidatePage.value.length > 0) {
+                commit(candidatePage.value[0].name)
+            }
+            // 无论是否有候选项，都清空编码
+            candidateCodes.value = ''
+            candidatePageIndex.value = 0
+        } else {
+            // 没有编码时，空格作为普通字符输入
+            commit(' ')
+        }
+        return
+    }
+
     candidateCodes.value += key
     candidatePageIndex.value = 0
-}
-
-function commit(words: string) {
+} function commit(words: string) {
     const textareaNode = textarea.value!
     const { selectionStart, selectionEnd } = textareaNode
+
     if (selectionStart === 0 && selectionEnd === 0) {
         text.value += words
+        // 立即同步更新DOM值
+        textareaNode.value = text.value
         nextTick(() => {
             textareaNode.selectionEnd = text.value.length
         })
         return
     }
+
     const startPart = text.value.slice(0, selectionStart || undefined)
     const endPart = selectionEnd !== null ? text.value.slice(selectionEnd) : ''
     text.value = startPart + words + endPart
+
+    // 立即同步更新DOM值
+    textareaNode.value = text.value
+
     nextTick(() => {
         textareaNode.selectionEnd = selectionStart! + words.length
     })
@@ -254,6 +283,15 @@ function onClickCandidate(card: MabiaoItem) {
     // textarea.value?.focus()
     candidatePageIndex.value = 0
     candidateCodes.value = ''
+}
+
+// 处理文本框聚焦和失焦事件
+function onTextareaFocus() {
+    // 聚焦时可以在这里添加额外逻辑
+}
+
+function onTextareaBlur() {
+    // 失焦时可以在这里添加额外逻辑
 }
 //#endregion
 
@@ -279,6 +317,13 @@ onMounted(() => {
     if (typeof window !== 'undefined') {
         window.addEventListener('resize', adjustCandidateCount)
     }
+
+    // 自动聚焦到文本框
+    nextTick(() => {
+        if (textarea.value) {
+            textarea.value.focus()
+        }
+    })
 })
 
 onUnmounted(() => {
@@ -341,7 +386,7 @@ watch(candidateCodes, (cd) => {
 //#endregion
 
 //#region 电脑键盘事件
-const keysListened = new Set(`abcdefghijklmnopqrstuvwxyz${props.rule.keys === 27 ? ';' : ''}`)
+const keysListened = new Set(`abcdefghijklmnopqrstuvwxyz/${props.rule.keys === 27 ? ';' : ''}`)
 
 const commitKeys = computed(() => {
     const { cm1, cm2, cm3 } = props.rule
@@ -358,20 +403,47 @@ const commitKeys = computed(() => {
 function onKeydown(e: KeyboardEvent) {
     const { key } = e
 
+    // 允许系统快捷键通过（不阻止）
+    if (e.ctrlKey || e.metaKey || e.altKey) {
+        // 对于系统快捷键，不阻止默认行为
+        return
+    }
+
     const cd = candidateCodes.value
+
     // 输入按键
     if (keysListened.has(key)) {
         e.preventDefault()
+        e.stopPropagation()
         candidateCodes.value += key
         candidatePageIndex.value = 0
         return
     }
 
-    // 上屏键
-    if (commitKeys.value.has(key)) {
+    // 空格键 - 按照输入法规则处理
+    if (key === ' ') {
+        if (cd) {
+            // 有编码时，阻止默认行为并处理上屏
+            e.preventDefault()
+            e.stopPropagation()
+            // 空格上屏第一个候选项（如果有的话）
+            if (candidatePage.value.length > 0) {
+                commit(candidatePage.value[0].name)
+            }
+            // 无论是否有候选项，都清空编码
+            candidateCodes.value = ''
+            candidatePageIndex.value = 0
+        }
+        // 没有编码时，让系统自然处理空格输入
+        return
+    }
+
+    // 上屏键（排除空格键，因为空格键已经特殊处理了）
+    if (commitKeys.value.has(key) && key !== ' ') {
         const candidateIndex = commitKeys.value.get(key)!
         if (candidateIndex < candidatePage.value.length) {
             e.preventDefault()
+            e.stopPropagation()
             commit(candidatePage.value[candidateIndex].name)
             candidateCodes.value = ''
             candidatePageIndex.value = 0
@@ -380,15 +452,21 @@ function onKeydown(e: KeyboardEvent) {
     }
 
     // 删除键
-    if (key === 'Backspace' && cd) {
-        e.preventDefault()
-        candidateCodes.value = cd.slice(0, -1)
+    if (key === 'Backspace') {
+        if (cd) {
+            // 有候选编码时，删除编码
+            e.preventDefault()
+            e.stopPropagation()
+            candidateCodes.value = cd.slice(0, -1)
+        }
+        // 没有候选编码时，让系统自然处理删除
         return
     }
 
     // 清除键
     if (key === 'Escape' && cd) {
         e.preventDefault()
+        e.stopPropagation()
         if (candidateExpanded.value) {
             candidateExpanded.value = false
         } else {
@@ -401,12 +479,14 @@ function onKeydown(e: KeyboardEvent) {
     const cpi = candidatePageIndex.value
     if (key === '-' && cd) {
         e.preventDefault()
+        e.stopPropagation()
         if (cpi > 0)
             candidatePageIndex.value--
         return
     }
     if (key === '=' && cd) {
         e.preventDefault()
+        e.stopPropagation()
         const pageSize = dynamicCandidateCount.value
         if (cpi + 1 < candidateHanzi.value.length / pageSize)
             candidatePageIndex.value++
@@ -424,7 +504,7 @@ function onKeydown(e: KeyboardEvent) {
     <div class="pt-3">
         <textarea v-model="text" ref="textarea"
             class="textarea textarea-bordered textarea-md w-full bg-neutral-50 dark:bg-neutral-700"
-            style="border-style: solid" placeholder="点击这里开始输入" @keydown="onKeydown"></textarea>
+            placeholder="点击这里开始输入" @keydown="onKeydown" @focus="onTextareaFocus" @blur="onTextareaBlur"></textarea>
     </div>
 
     <div class="relative w-full">
@@ -462,7 +542,7 @@ function onKeydown(e: KeyboardEvent) {
                                     <!-- 后序编码 -->
                                     <span class="text-sm text-blue-400 dark:text-blue-500 dark:opacity-70">{{
                                         n.key!.slice(candidateCodes.length)
-                                    }}</span>
+                                        }}</span>
                                 </button>
                             </div>
                         </div>
@@ -512,7 +592,7 @@ function onKeydown(e: KeyboardEvent) {
                                     n.name }}</div>
                                 <!-- 编码 -->
                                 <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                                    }}</div>
+                                }}</div>
                             </button>
                         </div>
                     </div>
