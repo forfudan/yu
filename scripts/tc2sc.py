@@ -60,6 +60,7 @@ paths_of_docs = [
     "/practice/char_joy_zhu.md",
     "/practice/root_ming.md",
     "/practice/char_ming.md",
+    "/practice/char_ming_zhu.md",
     "/practice/root_wafel.md",
     "/chaifen/index.md",
     "/chaifen/light.md",

@@ -299,11 +299,7 @@ export default defineConfig({
             {
               text: '卿云单字',
               link: '/practice/char_joy'
-            },
-            {
-              text: '卿云·作品高频字',
-              link: '/practice/char_joy_zhu'
-            },
+            }
           ]
         },
         {
@@ -316,7 +312,11 @@ export default defineConfig({
             {
               text: '日月单字',
               link: '/practice/char_ming'
-            }
+            },
+            {
+              text: '日月·作品高频字',
+              link: '/practice/char_ming_zhu'
+            },
           ]
         },
         {
@@ -723,10 +723,6 @@ export default defineConfig({
                   text: '卿雲單字',
                   link: '/zht/practice/char_joy'
                 },
-                {
-                  text: '卿雲·作品高頻字',
-                  link: '/zht/practice/char_joy_zhu'
-                },
               ]
             },
             {
@@ -739,7 +735,11 @@ export default defineConfig({
                 {
                   text: '日月單字',
                   link: '/zht/practice/char_ming'
-                }
+                },
+                {
+                  text: '日月·作品高頻字',
+                  link: '/zht/practice/char_ming_zhu'
+                },
               ]
             },
             {
