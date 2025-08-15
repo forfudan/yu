@@ -598,6 +598,20 @@ const commitKeys = computed(() => {
 
 function onKeydown(e: KeyboardEvent) {
     const { key } = e
+    // 主候選欄上下鍵翻頁
+    if (key === 'ArrowUp' && candidateHanzi.value.length > 0) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (candidatePageIndex.value > 0) candidatePageIndex.value--;
+        return;
+    }
+    if (key === 'ArrowDown' && candidateHanzi.value.length > 0) {
+        e.preventDefault();
+        e.stopPropagation();
+        const pageSize = dynamicCandidateCount.value;
+        if ((candidatePageIndex.value + 1) * pageSize < candidateHanzi.value.length) candidatePageIndex.value++;
+        return;
+    }
 
     // 允许系统快捷键通过（不阻止）
     if (e.ctrlKey || e.metaKey || e.altKey) {
@@ -790,7 +804,7 @@ function onKeydown(e: KeyboardEvent) {
                                 <span class="text-xs text-slate-400 dark:text-slate-500">{{ i + 1 }}</span>
                                 <!-- 词条 -->
                                 <span class="text-xl select-text px-2 text-slate-900 dark:text-slate-200">{{ n.name
-                                    }}</span>
+                                }}</span>
                                 <!-- 后序编码 -->
                                 <span class="text-base text-blue-400 dark:text-blue-500 mt-0">{{
                                     n.key!.slice(candidateCodes.length) }}</span>
@@ -850,7 +864,7 @@ function onKeydown(e: KeyboardEvent) {
                             </div>
                             <!-- 编码 -->
                             <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                            }}</div>
+                                }}</div>
                         </button>
                     </div>
                 </div>
