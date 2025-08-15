@@ -1,18 +1,17 @@
-<!--
-    InputMethod.vue - 在線輸入法核心組件
-
-    Modification History:
-    - 2025-08-15 by 朱複丹: 完全重構代碼，優化輸入法引擎和用戶體驗
-      支持日月方案
-      支持額外的候選框
-      支持自動上屏
-      支持標點符號頂屏
-      支持韻碼提示
-      支持中英文模式切換
-    - 2024-06-25 by yb6b: 初版
--->
-
 <script setup lang="ts">
+/*
+        InputMethod.vue - 在線輸入法核心組件
+
+        Modification History:
+        - 2025-08-15 by 朱複丹: 完全重構代碼，優化輸入法引擎和用戶體驗
+            支持日月方案
+            支持額外的候選框
+            支持自動上屏
+            支持標點符號頂屏
+            支持韻碼提示
+            支持中英文模式切換
+        - 2024-06-25 by yb6b: 初版
+*/
 import { ref, computed, watch, nextTick, onMounted, onUnmounted } from 'vue'
 import { biSearchBetween, ImeRule, searchTop, MabiaoItem } from './share'
 import Keyboard from "./Keyboard.vue";
@@ -82,6 +81,8 @@ const candidateHanzi = computed(() => {
 
 // CJK过滤状态
 const filterCJK = ref(true)
+// 虛擬鍵盤顯示狀態
+const showKeyboard = ref(false)
 
 const candidatePageIndex = ref(0)
 
@@ -801,28 +802,31 @@ function onKeydown(e: KeyboardEvent) {
 
     <div class="relative w-full">
         <!-- CJK过滤按钮 -->
-        <div class="flex justify-end mb-2">
+        <div class="flex justify-end mb-2 space-x-2">
             <button @click="filterCJK = !filterCJK"
                 class="px-3 py-1 rounded bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs">
                 {{ filterCJK ? '點擊此處顯示全部字符' : '點擊此處只顯示CJK字符' }}
             </button>
+            <button @click="showKeyboard = !showKeyboard"
+                class="px-3 py-1 rounded bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs">
+                {{ showKeyboard ? '收起鍵盤' : '顯示鍵盤' }}
+            </button>
         </div>
-        <Keyboard @click="onClick">
-            <template #codes>
-                <div class="flex items-center space-x-2">
-                    <div class="h-4" v-if="candidateCodes === ''"></div>
-                    <div v-else class="text-xs bg-neutral-200 dark:bg-neutral-900 w-max px-2 h-4 select-none">
-                        {{ candidateCodes }}
-                    </div>
-                    <!-- 语言模式状态 -->
-                    <div class="text-xs px-2 h-4 rounded select-none"
-                        :class="isChineseMode ? 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200' : 'bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200'">
-                        {{ isChineseMode ? '中' : '英' }}
-                    </div>
+        <!-- 候选栏始终显示 -->
+        <div>
+            <div class="flex items-center space-x-2">
+                <!-- 语言模式状态 -->
+                <div class="text-xs px-2 h-4 rounded select-none"
+                    :class="isChineseMode ? 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200' : 'bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200'">
+                    {{ isChineseMode ? '中' : '英' }}
                 </div>
-            </template>
-            <template #cadidate>
-                <template v-if="candidateHanzi.length === 0">
+                <div class="h-4" v-if="candidateCodes === ''"></div>
+                <div v-else class="text-xs bg-neutral-200 dark:bg-neutral-900 w-max px-2 h-4 select-none">
+                    {{ candidateCodes }}
+                </div>
+            </div>
+            <template v-if="candidateHanzi.length === 0">
+                <div class="flex items-center min-h-[3.5rem]">
                     <div class="text-sm text-slate-500 ml-6 mt-1" v-if="candidateCodes.length === 0">
                         <slot>
                             <!-- 根据模式显示不同提示 -->
@@ -831,88 +835,89 @@ function onKeydown(e: KeyboardEvent) {
                         </slot>
                     </div>
                     <div class="text-sm text-slate-400 dark:text-slate-500 ml-6 mt-1" v-else>空码</div>
-                </template>
-                <template v-else>
-                    <!-- 正常候选字显示 -->
-                    <div class="relative flex items-center" ref="candidateContainer">
-                        <div class="flex-1 min-w-0 overflow-x-auto overflow-y-hidden scrollbar-hide"
-                            style="scrollbar-width: none; -ms-overflow-style: none;">
-                            <div class="flex">
-                                <button
-                                    class="px-2 py-1 hover:bg-slate-200 dark:hover:bg-slate-900 whitespace-nowrap flex-shrink-0"
-                                    v-for="n, i of candidatePage" @click="onClickCandidate(n)">
-                                    <!-- 序号 -->
-                                    <span class="text-sm text-slate-400 dark:text-slate-500">{{ i + 1 }}.</span>
-                                    <!-- 词条 -->
-                                    <span class="select-text px-1 text-slate-900 dark:text-slate-200">
-                                        {{ n.name }}</span>
-                                    <!-- 后序编码 -->
-                                    <span class="text-sm text-blue-400 dark:text-blue-500 dark:opacity-70">{{
-                                        n.key!.slice(candidateCodes.length)
-                                        }}</span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- 翻页按钮 -->
-                        <div class="flex items-center mx-2 space-x-1">
-                            <button :class="{ 'text-transparent': disablePreviousPageBtn }"
-                                :disabled="disablePreviousPageBtn"
-                                class="hover:bg-slate-200 dark:hover:bg-slate-700 rounded px-1"
-                                @click="candidatePageIndex--">◂</button>
-                            <button :class="{ 'text-transparent': disableNextPageBtn }" :disabled="disableNextPageBtn"
-                                class="hover:bg-slate-200 dark:hover:bg-slate-700 rounded px-1"
-                                @click="candidatePageIndex++">▸</button>
-                        </div>
-                    </div>
-
-                    <!-- 展开的候选字面板（只显示CJK时隐藏） -->
-                    <div v-if="hasMoreCandidates && !filterCJK"
-                        class="absolute top-full left-0 right-0 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg shadow-lg z-[9999] p-4 mt-2">
-                        <div class="flex justify-between items-center mb-2">
-                            <div class="text-sm text-slate-500">
-                                候選字 {{ dropdownPageIndex * dropdownPageSize + 1 }}-{{ Math.min((dropdownPageIndex + 1) *
-                                    dropdownPageSize, candidateHanzi.length) }} / {{ candidateHanzi.length }}
-                            </div>
-                            <div class="flex space-x-2">
-                                <button :disabled="dropdownPageIndex === 0"
-                                    :class="{ 'text-slate-300': dropdownPageIndex === 0 }" @click="prevDropdownPage"
-                                    class="px-2 py-1 text-sm hover:bg-slate-100 dark:hover:bg-slate-700 rounded">
-                                    ← 上一頁
-                                </button>
-                                <span class="text-sm text-slate-500 px-2 py-1">
-                                    {{ dropdownPageIndex + 1 }} / {{ totalDropdownPages }}
-                                </span>
-                                <button :disabled="dropdownPageIndex >= totalDropdownPages - 1"
-                                    :class="{ 'text-slate-300': dropdownPageIndex >= totalDropdownPages - 1 }"
-                                    @click="nextDropdownPage"
-                                    class="px-2 py-1 text-sm hover:bg-slate-100 dark:hover:bg-slate-700 rounded">
-                                    下一頁 →
-                                </button>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap gap-2 max-h-64 overflow-y-auto">
-                            <button v-for="n, i of dropdownCandidates" :key="i" @click="onClickCandidate(n)"
-                                class="inline-flex flex-col items-center px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded border border-slate-200 dark:border-slate-600 min-w-0">
+                </div>
+            </template>
+            <template v-else>
+                <!-- 正常候选字显示 -->
+                <div class="relative flex items-center min-h-[3.5rem]" ref="candidateContainer">
+                    <div class="flex-1 min-w-0 overflow-x-auto overflow-y-hidden scrollbar-hide"
+                        style="scrollbar-width: none; -ms-overflow-style: none;">
+                        <div class="flex">
+                            <button
+                                class="px-3 py-2 text-base hover:bg-slate-200 dark:hover:bg-slate-900 whitespace-nowrap flex-shrink-0 rounded"
+                                v-for="n, i of candidatePage" @click="onClickCandidate(n)">
+                                <!-- 序号 -->
+                                <span class="text-base text-slate-400 dark:text-slate-500">{{ i + 1 }}.</span>
                                 <!-- 词条 -->
-                                <div class="text-slate-900 dark:text-slate-200 font-medium text-lg leading-tight">{{
-                                    n.name }}</div>
-                                <!-- 顯示同字的其他編碼提示 -->
-                                <div v-if="n.name && mabiaoList.filter(m => m.name === n.name).length > 1"
-                                    class="text-xs text-slate-400 mt-1">
-                                    <span>
-                                        {{mabiaoList.filter(m => m.name === n.name).map(m => m.key).sort().join(' ')}}
-                                    </span>
-                                </div>
-                                <!-- 编码 -->
-                                <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                                }}</div>
+                                <span class="select-text px-2 text-slate-900 dark:text-slate-200">
+                                    {{ n.name }}</span>
+                                <!-- 后序编码 -->
+                                <span class="text-base text-blue-400 dark:text-blue-500 dark:opacity-70">{{
+                                    n.key!.slice(candidateCodes.length)
+                                }}</span>
                             </button>
                         </div>
                     </div>
-                </template>
+
+                    <!-- 翻页按钮 -->
+                    <div class="flex items-center mx-2 space-x-1">
+                        <button :class="{ 'text-transparent': disablePreviousPageBtn }"
+                            :disabled="disablePreviousPageBtn"
+                            class="hover:bg-slate-200 dark:hover:bg-slate-700 rounded px-1"
+                            @click="candidatePageIndex--">◂</button>
+                        <button :class="{ 'text-transparent': disableNextPageBtn }" :disabled="disableNextPageBtn"
+                            class="hover:bg-slate-200 dark:hover:bg-slate-700 rounded px-1"
+                            @click="candidatePageIndex++">▸</button>
+                    </div>
+                </div>
+
+                <!-- 展开的候选字面板（只显示CJK时隐藏） -->
+                <div v-if="hasMoreCandidates && !filterCJK"
+                    class="absolute top-full left-0 right-0 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg shadow-lg z-[9999] p-4 mt-2">
+                    <div class="flex justify-between items-center mb-2">
+                        <div class="text-sm text-slate-500">
+                            候選字 {{ dropdownPageIndex * dropdownPageSize + 1 }}-{{ Math.min((dropdownPageIndex + 1) *
+                                dropdownPageSize, candidateHanzi.length) }} / {{ candidateHanzi.length }}
+                        </div>
+                        <div class="flex space-x-2">
+                            <button :disabled="dropdownPageIndex === 0"
+                                :class="{ 'text-slate-300': dropdownPageIndex === 0 }" @click="prevDropdownPage"
+                                class="px-2 py-1 text-sm hover:bg-slate-100 dark:hover:bg-slate-700 rounded">
+                                ← 上一頁
+                            </button>
+                            <span class="text-sm text-slate-500 px-2 py-1">
+                                {{ dropdownPageIndex + 1 }} / {{ totalDropdownPages }}
+                            </span>
+                            <button :disabled="dropdownPageIndex >= totalDropdownPages - 1"
+                                :class="{ 'text-slate-300': dropdownPageIndex >= totalDropdownPages - 1 }"
+                                @click="nextDropdownPage"
+                                class="px-2 py-1 text-sm hover:bg-slate-100 dark:hover:bg-slate-700 rounded">
+                                下一頁 →
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 max-h-64 overflow-y-auto">
+                        <button v-for="n, i of dropdownCandidates" :key="i" @click="onClickCandidate(n)"
+                            class="inline-flex flex-col items-center px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded border border-slate-200 dark:border-slate-600 min-w-0">
+                            <!-- 词条 -->
+                            <div class="text-slate-900 dark:text-slate-200 font-medium text-lg leading-tight">{{
+                                n.name }}</div>
+                            <!-- 顯示同字的其他編碼提示 -->
+                            <div v-if="n.name && mabiaoList.filter(m => m.name === n.name).length > 1"
+                                class="text-xs text-slate-400 mt-1">
+                                <span>
+                                    {{mabiaoList.filter(m => m.name === n.name).map(m => m.key).sort().join(' ')}}
+                                </span>
+                            </div>
+                            <!-- 编码 -->
+                            <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
+                            }}</div>
+                        </button>
+                    </div>
+                </div>
             </template>
-        </Keyboard>
+        </div>
+        <Keyboard v-if="showKeyboard" @click="onClick" @hide-keyboard="showKeyboard = false" />
     </div>
 </template>
 
