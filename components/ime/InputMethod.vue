@@ -433,10 +433,14 @@ watch(candidateHanzi, (newCandidates) => {
 
     // 检查是否需要自动上屏唯一候选项
     if (newCandidates.length === 1 && candidateCodes.value) {
-        console.log('检测到唯一候选项，自动上屏:', newCandidates[0].name)
-        commit(newCandidates[0].name)
-        candidateCodes.value = ''
-        candidatePageIndex.value = 0
+        const cd = candidateCodes.value
+        // 只有编码长度>=5或最后一位为aeiou时才自动上屏
+        if (cd.length >= 5 || 'aeiou'.includes(cd.at(-1)!)) {
+            console.log('检测到唯一候选项，自动上屏:', newCandidates[0].name)
+            commit(newCandidates[0].name)
+            candidateCodes.value = ''
+            candidatePageIndex.value = 0
+        }
     }
 }, { immediate: true })
 
@@ -540,13 +544,16 @@ function checkAutoCommit(nextKey: string) {
         当前候选项: currentCandidates.map(c => c.name).slice(0, 5)
     })
 
-    // 1. 如果当前候选项唯一，直接上屏
+    // 1. 如果当前候选项唯一，只有编码长度>=5或末码为aeiou时才自动上屏
     if (currentCandidates.length === 1) {
-        console.log('当前候选项唯一，上屏:', currentCandidates[0].name)
-        commit(currentCandidates[0].name)
-        candidateCodes.value = ''
-        candidatePageIndex.value = 0
-        return
+        const cd = candidateCodes.value
+        if (cd.length >= 5 || 'aeiou'.includes(cd.at(-1)!)) {
+            console.log('当前候选项唯一，上屏:', currentCandidates[0].name)
+            commit(currentCandidates[0].name)
+            candidateCodes.value = ''
+            candidatePageIndex.value = 0
+            return
+        }
     }
 
     // 2. 如果候选项不唯一，分情况处理
@@ -771,7 +778,7 @@ function onKeydown(e: KeyboardEvent) {
                                     <!-- 后序编码 -->
                                     <span class="text-sm text-blue-400 dark:text-blue-500 dark:opacity-70">{{
                                         n.key!.slice(candidateCodes.length)
-                                        }}</span>
+                                    }}</span>
                                 </button>
                             </div>
                         </div>
@@ -821,7 +828,7 @@ function onKeydown(e: KeyboardEvent) {
                                     n.name }}</div>
                                 <!-- 编码 -->
                                 <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                                }}</div>
+                                    }}</div>
                             </button>
                         </div>
                     </div>

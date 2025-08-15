@@ -258,7 +258,7 @@ export function biSearchBetween(arr: MabiaoItem[], keyPrefix: string) {
     // 找上边界
     const topBoundary = biSearchPoint(arr, keyPrefix, 0, compareTopBoundary)
     if (topBoundary < 0)
-        throw new Error(`cannot find prefix(top) ${keyPrefix}`)
+        return null
 
     // 找下边界
     const botBoundary = biSearchPoint(arr, keyPrefix, topBoundary, compareBotBoundary)
@@ -356,6 +356,7 @@ function compareBotBoundary(arr: MabiaoItem[], keyPrefix: string, index: number)
 }
 
 function cardIsPrefix(card: MabiaoItem, prefix: string) {
+    if (!card || !card.key) return false
     return card.key.startsWith(prefix, 0)
 }
 //#endregion
