@@ -40,14 +40,14 @@ const candidateHanzi = computed(() => {
 
 const candidatePageIndex = ref(0)
 const candidatePage = computed(() => {
-    const countsEachPage = 5
+    const countsEachPage = 9
     if (candidateHanzi.value.length === 0) return [];
     const cpi = candidatePageIndex.value
     return candidateHanzi.value.slice(cpi * countsEachPage, (cpi + 1) * countsEachPage)
 })
 
 const disablePreviousPageBtn = computed(() => candidatePageIndex.value < 1)
-const disableNextPageBtn = computed(() => candidatePageIndex.value > candidateHanzi.value.length / 5 - 1)
+const disableNextPageBtn = computed(() => candidatePageIndex.value > candidateHanzi.value.length / 9 - 1)
 //#endregion
 
 
@@ -155,7 +155,7 @@ const commitKeys = computed(() => {
     result.set(cm1, 0)
     result.set(cm2, 1)
     result.set(cm3, 2)
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 9; i++) {
         result.set(String(i + 1), i)
     }
     return result

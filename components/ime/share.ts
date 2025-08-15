@@ -185,10 +185,25 @@ export async function fetchMabiao(url: string, progressRef: vue.Ref<IProgress>):
         }
 
         // 转换为MabiaoItem数组
-        const result = entries.map(([code, word]) => ({
-            name: String(word),
-            key: code
-        }));
+        const result: MabiaoItem[] = [];
+
+        for (const [code, value] of entries) {
+            if (Array.isArray(value)) {
+                // 如果值是数组，为每个字符创建独立的条目
+                for (const char of value) {
+                    result.push({
+                        name: String(char),
+                        key: code
+                    });
+                }
+            } else {
+                // 如果值是单个字符串
+                result.push({
+                    name: String(value),
+                    key: code
+                });
+            }
+        }
 
         // 按key字段排序（对二分查找很重要）
         result.sort((a, b) => a.key.localeCompare(b.key));
