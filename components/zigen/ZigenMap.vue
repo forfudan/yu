@@ -7,10 +7,11 @@
   
   Modification History:
   - 2025-08-14 by 朱複丹: 初版，實現基礎功能和樣式
+  - 2025-08-15 by 朱複丹: 添加字根列表模式
 -->
 
 <script setup lang="ts">
-import { ref, computed, onMounted, watch, toRef } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch, toRef } from 'vue'
 import { fetchZigen } from "../search/share";
 import ChaiDataLoader from "../search/ChaiDataLoader";
 import type { ZigenMap as ZigenMapType, ChaifenMap, Chaifen } from "../search/share";
@@ -30,13 +31,6 @@ const gridTemplateColumns = computed(() => {
     return `repeat(auto-fill, minmax(${width}, max-content))`
 })
 
-interface ZigenScheme {
-    id: string
-    name: string
-    zigenUrl: string
-    chaifenUrl: string
-}
-
 // 键盘布局 - QWERTY垂直排列
 const keyboardLayout = [
     ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
@@ -47,33 +41,46 @@ const keyboardLayout = [
 // 需要显示但暂时留空的键（移除 ,./; 四个键，让它们显示字根）
 const emptyKeys = ["'"];
 
-// 支持的方案
-const schemes: ZigenScheme[] = [
-    {
-        id: 'joy',
-        name: '卿雲',
-        zigenUrl: '/zigen-joy.csv',
+// 移動端檢測
+const isMobileView = ref(false);
+
+// 桌面端布局模式切換
+const isListView = ref(false);
+
+// 檢測屏幕尺寸
+const checkMobileView = () => {
+    isMobileView.value = window.innerWidth < 768;
+};
+
+// 切換桌面端布局模式
+const toggleDesktopLayout = () => {
+    isListView.value = !isListView.value;
+};
+
+onMounted(() => {
+    checkMobileView();
+    window.addEventListener('resize', checkMobileView);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('resize', checkMobileView);
+});
+
+// 扁平化的按鍵列表（移動端用）
+const flatKeyList = computed(() => {
+    return keyboardLayout.flat();
+});
+
+// 支持的方案（簡化版，僅用於數據加載）
+const supportedSchemes = ['joy', 'light', 'star', 'ming'];
+
+// 獲取方案對應的文件URL
+function getSchemeUrls(schemeId: string) {
+    return {
+        zigenUrl: `/zigen-${schemeId}.csv`,
         chaifenUrl: '/chaifen.json'
-    },
-    {
-        id: 'light',
-        name: '光華',
-        zigenUrl: '/zigen-light.csv',
-        chaifenUrl: '/chaifen.json'
-    },
-    {
-        id: 'star',
-        name: '星陳',
-        zigenUrl: '/zigen-star.csv',
-        chaifenUrl: '/chaifen.json'
-    },
-    {
-        id: 'ming',
-        name: '日月',
-        zigenUrl: '/zigen-ming.csv',
-        chaifenUrl: '/chaifen.json'
-    }
-];
+    };
+}
 
 // 响应式状态
 // 使用传入的 defaultScheme 或默认值，但不创建独立的响应式状态
@@ -93,12 +100,7 @@ const pinnedZigenInfo = ref<{ visible: Array<{ font: string, code: string }>, hi
 const pinnedZigenExampleChars = ref<{ [zigenFont: string]: string[] }>({});
 const isPinned = ref(false);
 
-// 当前方案
-const currentScheme = computed(() => {
-    return schemes.find(s => s.id === activeScheme.value) || schemes[0];
-});
-
-// 监听方案变化，清除拆分数据缓存
+// 監聽方案變化，清除拆分數據緩存
 watch(() => props.defaultScheme, () => {
     // 清除已緩存的拆分數據加載器，讓新方案在第一次懸停時重新加載
     chaifenLoader.value = null;
@@ -168,6 +170,38 @@ const zigenByKey = computed(() => {
     return result;
 });
 
+// 按編碼排序的字根列表（用於列表模式）
+const sortedZigenByKey = computed(() => {
+    if (!zigenByKey.value) return {};
+
+    const result: Record<string, Array<{ font: string, code: string, isHidden: boolean }>> = {};
+
+    for (const [key, zigens] of Object.entries(zigenByKey.value)) {
+        const allZigens: Array<{ font: string, code: string, isHidden: boolean }> = [];
+
+        // 收集所有字根並標記是否隱藏
+        zigens.visible.forEach(zigen => {
+            allZigens.push({ ...zigen, isHidden: false });
+        });
+        zigens.hidden.forEach(zigen => {
+            allZigens.push({ ...zigen, isHidden: true });
+        });
+
+        // 按編碼排序，同編碼的字根會聚集在一起
+        allZigens.sort((a, b) => {
+            if (a.code !== b.code) {
+                return a.code.localeCompare(b.code);
+            }
+            // 同編碼內，visible 字根排在前面
+            return (a.isHidden ? 1 : 0) - (b.isHidden ? 1 : 0);
+        });
+
+        result[key] = allZigens;
+    }
+
+    return result;
+});
+
 // 获取包含指定字根的例字
 const getExampleChars = async (zigen: string): Promise<string[]> => {
     if (!chaifenLoader.value) {
@@ -226,10 +260,11 @@ async function loadData() {
     isLoading.value = true;
     try {
         // 只加载字根数据，不初始化拆分数据加载器
-        const zigenData = await fetchZigen(currentScheme.value.zigenUrl);
+        const urls = getSchemeUrls(activeScheme.value);
+        const zigenData = await fetchZigen(urls.zigenUrl);
         zigenMap.value = zigenData;
 
-        console.log(`已加載字根數據，文件: ${currentScheme.value.zigenUrl}`);
+        console.log(`已加載字根數據，文件: ${urls.zigenUrl}`);
         console.log('注意：拆分數據將在第一次懸停字根時才加載');
 
     } catch (error) {
@@ -247,8 +282,9 @@ async function handleZigenHover(event: MouseEvent, zigen: { font: string, code: 
     // 懶加載：第一次懸停時才初始化拆分數據加載器
     if (!chaifenLoader.value) {
         console.log('第一次懸停，正在初始化拆分數據加載器...');
-        chaifenLoader.value = ChaiDataLoader.getInstance(currentScheme.value.chaifenUrl);
-        console.log(`已初始化 ChaiDataLoader，使用文件: ${currentScheme.value.chaifenUrl}`);
+        const urls = getSchemeUrls(activeScheme.value);
+        chaifenLoader.value = ChaiDataLoader.getInstance(urls.chaifenUrl);
+        console.log(`已初始化 ChaiDataLoader，使用文件: ${urls.chaifenUrl}`);
     }
 
     // 找到所有相同完整编码的字根
@@ -385,17 +421,6 @@ function findSameCodeZigens(targetFont: string, targetFullCode: string) {
     return { visible, hidden };
 }
 
-// 获取方案对应的汉字
-function getSchemeChar(schemeId: string): string {
-    const charMap: Record<string, string> = {
-        'joy': '卿',
-        'light': '光',
-        'star': '星',
-        'ming': '明'
-    };
-    return charMap[schemeId] || '?';
-}
-
 // 監聽方案變化
 watch(() => activeScheme.value, loadData);
 
@@ -416,15 +441,15 @@ onMounted(() => {
 
 <template>
     <div class="zigen-map-container">
-        <!-- 方案切换圆形按钮 -->
-        <div v-if="!hideSchemeButtons" class="flex justify-center mb-6 space-x-4">
+        <!-- 方案切换圆形按钮（已禁用，由父組件統一管理） -->
+        <!-- <div v-if="!hideSchemeButtons" class="flex justify-center mb-6 space-x-4">
             <button v-for="scheme in schemes" :key="scheme.id" :class="[
                 'scheme-button',
                 { 'scheme-button-active': activeScheme === scheme.id }
             ]" :title="scheme.name">
                 <span class="scheme-text">{{ getSchemeChar(scheme.id) }}</span>
             </button>
-        </div>
+        </div> -->
 
         <!-- 加载状态 -->
         <div v-if="isLoading" class="flex justify-center items-center py-8">
@@ -432,13 +457,24 @@ onMounted(() => {
             <span class="ml-2">正在加载字根数据...</span>
         </div>
 
-        <!-- 使用提示 -->
-        <div v-if="!isLoading" class="text-center text-sm text-gray-500 dark:text-gray-400 mb-4">
-            懸停字根可查看例字（首次懸停需要加載數據，可能稍有延遲）
+        <!-- 使用提示和桌面端布局切換 -->
+        <div v-if="!isLoading" class="flex justify-between items-center mb-4">
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+                懸停字根可查看例字
+            </div>
+            <!-- 桌面端布局切換按鈕 -->
+            <div v-if="!isMobileView" class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">布局：</span>
+                <button @click="toggleDesktopLayout" class="layout-toggle-btn"
+                    :class="{ 'layout-toggle-active': isListView }" :title="isListView ? '切換為網格布局' : '切換為列表布局'">
+                    <span v-if="!isListView">☰</span>
+                    <span v-else>⊞</span>
+                </button>
+            </div>
         </div>
 
-        <!-- 键盘字根图 -->
-        <div v-if="!isLoading && zigenMap" class="keyboard-layout">
+        <!-- 键盘字根图 - 桌面端網格布局 -->
+        <div v-if="!isLoading && zigenMap && !isMobileView && !isListView" class="keyboard-layout">
             <div v-for="(row, rowIndex) in keyboardLayout" :key="rowIndex" class="keyboard-row">
                 <div v-for="key in row" :key="key" class="keyboard-key"
                     :class="{ 'empty-key': emptyKeys.includes(key) }">
@@ -496,6 +532,40 @@ onMounted(() => {
             </div>
         </div>
 
+        <!-- 垂直列表布局（移動端或桌面端列表視圖） -->
+        <div v-if="!isLoading && zigenMap && (isMobileView || isListView)" class="mobile-layout"
+            :class="{ 'desktop-list-layout': !isMobileView && isListView }">
+            <div v-for="key in flatKeyList" :key="key" class="mobile-key-row"
+                :class="{ 'empty-mobile-key': emptyKeys.includes(key) }">
+                <!-- 按键名称 -->
+                <div class="mobile-key-label">{{ key.toUpperCase() }}</div>
+
+                <!-- 字根显示 -->
+                <div v-if="!emptyKeys.includes(key) && sortedZigenByKey[key]?.length > 0"
+                    class="mobile-zigen-container">
+                    <div class="mobile-zigen-list text-indigo-800 dark:text-indigo-300">
+                        <!-- 显示按編碼排序的所有字根 -->
+                        <span v-for="(zigen, index) in sortedZigenByKey[key]" :key="`sorted-${index}`"
+                            class="mobile-zigen-item" :class="{ 'mobile-hidden-zigen': zigen.isHidden }"
+                            @click="handleZigenClick($event, zigen)">
+                            <span class="zigen-font">{{ zigen.font }}</span>
+                            <span class="zigen-code">{{ zigen.code }}</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 无字根提示（移動端簡化版） -->
+                <div v-else-if="!emptyKeys.includes(key)" class="mobile-no-zigen">
+                    <span v-if="key === '/'" class="mobile-key-desc zigen-font">引導特殊符號</span>
+                    <span v-else-if="key === 'z'" class="mobile-key-desc zigen-font">引導拼音反查</span>
+                    <span v-else-if="['a', 'e', 'i', 'o', 'u'].includes(key)" class="mobile-key-desc zigen-font">
+                        一碼上屏字
+                    </span>
+                    <span v-else class="mobile-key-desc zigen-font">{{ getKeyLabel(key) }}</span>
+                </div>
+            </div>
+        </div>
+
         <!-- 悬停卡片 - 显示相同编码的字根 -->
         <div v-if="hoveredZigen && hoveredZigenInfo" class="hover-card" :style="{
             left: hoverPosition.x + 10 + 'px',
@@ -504,7 +574,7 @@ onMounted(() => {
             <div class="popup-container">
                 <div class="popup-body">
                     <h3 class="popup-title">
-                        編碼 {{ hoveredZigenInfo.visible[0]?.code || hoveredZigen }} 上的歸併字根
+                        編碼 {{ hoveredZigenInfo.visible[0]?.code || hoveredZigen }} 上的字根
                     </h3>
 
                     <!-- 字根列表 - 每個字根一行，例字在同一行 -->
@@ -551,7 +621,7 @@ onMounted(() => {
                 <div class="popup-body">
                     <div class="popup-header">
                         <h3 class="popup-title">
-                            編碼 {{ pinnedZigenInfo.visible[0]?.code || pinnedZigen }} 上的歸併字根
+                            編碼 {{ pinnedZigenInfo.visible[0]?.code || pinnedZigen }} 上的字根
                         </h3>
                         <button @click="closePinnedPopup" class="close-btn">✕</button>
                     </div>
@@ -898,7 +968,9 @@ onMounted(() => {
     font-size: 0.875rem;
 }
 
-/* 响应式设计 */
+/* 响应式设计 
+手機和小屏幕设备上调整键位大小和字根字体大小 
+*/
 @media (max-width: 768px) {
     .keyboard-key {
         min-width: 2.5rem;
@@ -914,39 +986,55 @@ onMounted(() => {
     }
 }
 
-/* 圓形方案按鈕樣式 */
-.scheme-button {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background-color: rgb(59 130 246);
-    /* 藍色背景 */
-    border: 2px solid rgb(59 130 246);
-    color: white;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
+/* 布局切換按鈕樣式 */
+.layout-toggle-btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.375rem;
+    background-color: rgb(243 244 246);
+    border: 1px solid rgb(209 213 219);
+    color: rgb(107 114 128);
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.scheme-button:hover {
+.dark .layout-toggle-btn {
+    background-color: rgb(55 65 81);
+    border-color: rgb(75 85 99);
+    color: rgb(156 163 175);
+}
+
+.layout-toggle-btn:hover {
+    background-color: rgb(229 231 235);
+    border-color: rgb(156 163 175);
+    color: rgb(75 85 99);
+}
+
+.dark .layout-toggle-btn:hover {
+    background-color: rgb(75 85 99);
+    border-color: rgb(107 114 128);
+    color: rgb(209 213 219);
+}
+
+.layout-toggle-active {
+    background-color: rgb(59 130 246);
+    border-color: rgb(59 130 246);
+    color: white;
+}
+
+.dark .layout-toggle-active {
+    background-color: rgb(59 130 246);
+    border-color: rgb(59 130 246);
+    color: white;
+}
+
+.layout-toggle-active:hover {
     background-color: rgb(37 99 235);
-    /* 更深的藍色 */
     border-color: rgb(37 99 235);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.scheme-button-active {
-    background-color: rgb(29 78 216);
-    /* 活躍狀態的深藍色 */
-    border-color: rgb(29 78 216);
-    box-shadow: 0 0 0 3px rgba(59 130 246, 0.3);
-    /* 外發光效果 */
 }
 
 .scheme-button-active:hover {
@@ -1130,5 +1218,151 @@ onMounted(() => {
 
 .zigen-header.other-zigen .zigen-font {
     color: inherit;
+}
+
+/* 移動端垂直列表樣式 */
+.mobile-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.mobile-key-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 2.5rem;
+    padding: 0.0rem 0.1rem;
+    background: rgb(249 250 251);
+    border: 1px solid var(--fallback-bc, oklch(var(--bc)/0.1));
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    transition: all 0.2s ease;
+}
+
+.dark .mobile-key-row {
+    background: rgb(15 23 42);
+}
+
+.mobile-key-row:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.empty-mobile-key {
+    opacity: 0.3;
+}
+
+.mobile-key-label {
+    flex-shrink: 0;
+    width: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--fallback-nc, oklch(var(--nc)/0.8));
+    text-align: center;
+    margin-right: 0.75rem;
+}
+
+.mobile-zigen-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-zigen-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.mobile-zigen-item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.5rem;
+    padding: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 0.375rem;
+}
+
+.mobile-zigen-item:hover {
+    background: var(--fallback-bc, oklch(var(--bc)/0.1));
+}
+
+/* 列表模式中的隱藏字根樣式 
+隱藏字根即歸併在同一個編碼上的非主要字根
+*/
+.mobile-hidden-zigen {
+    opacity: 0.7;
+    background: var(--fallback-warning, oklch(var(--wa)/0.1));
+    border: 1px solid var(--fallback-warning, oklch(var(--wa)/0.3));
+}
+
+.mobile-hidden-zigen:hover {
+    opacity: 0.9;
+    background: var(--fallback-warning, oklch(var(--wa)/0.2));
+}
+
+.mobile-zigen-item .zigen-font {
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.mobile-zigen-item .zigen-code {
+    font-family: monospace;
+    font-size: 0.625rem;
+    color: #666666;
+    margin-top: 0.125rem;
+}
+
+.mobile-more-indicator {
+    color: var(--fallback-bc, oklch(var(--bc)/0.5));
+    font-size: 1rem;
+    margin-left: 0.25rem;
+}
+
+.mobile-no-zigen {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-key-desc {
+    font-size: 0.75rem;
+    color: var(--fallback-bc, oklch(var(--bc)/0.6));
+    font-style: italic;
+}
+
+/* 桌面端列表布局優化 */
+.desktop-list-layout {
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.desktop-list-layout .mobile-key-row {
+    min-height: 3rem;
+    padding: 0.0rem 0.1rem;
+}
+
+.desktop-list-layout .mobile-key-label {
+    width: 2.5rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+.desktop-list-layout .mobile-zigen-item .zigen-font {
+    font-size: 1.125rem;
+}
+
+.desktop-list-layout .mobile-zigen-item .zigen-code {
+    font-size: 0.75rem;
+}
+
+.desktop-list-layout .mobile-key-desc {
+    font-size: 0.875rem;
 }
 </style>

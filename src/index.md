@@ -34,11 +34,6 @@ import UnifiedSchemeInterface from '@/unified/UnifiedSchemeInterface.vue'
 <UnifiedSchemeInterface defaultScheme="star" />
 </div>
 
-<!-- <MultiChaifen chars="卿雲爛兮糾縵縵兮" :size="35" />
-<MultiChaifen chars="日月光華旦復旦兮" :size="35" />
-<MultiChaifen chars="明明上天爛然星陳" :size="35" />
-<MultiChaifen chars="日月光華弘於一人" :size="35" /> -->
-
 ::: tip 致有缘人
 
 当你点开这个页面的时候，你就是一名有缘人。
