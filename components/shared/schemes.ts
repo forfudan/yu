@@ -66,7 +66,7 @@ export const ZIGEN_SCHEMES: ZigenScheme[] = SCHEMES.map(scheme => ({
     name: scheme.name,
     description: scheme.description,
     zigenUrl: scheme.zigenUrl,
-    chaifenUrl: '/chaifen.json' // 字根圖統一使用 JSON 格式
+    chaifenUrl: '/chaifen.json' // 字根圖統一使用壓縮JSON格式
 }))
 
 // 默認方案

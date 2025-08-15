@@ -9,5 +9,6 @@ src/.vitepress/cache
 
 # Generated files (created during build)
 src/public/*.json
+src/public/*.json.gz
 src/public/build-info.json
 !src/public/mb-*.txt

@@ -48,8 +48,9 @@ const isMobileView = ref(false);
 const isListView = ref(false);
 
 // 檢測屏幕尺寸
+// 小於此寬度則為移動端顯示模式
 const checkMobileView = () => {
-    isMobileView.value = window.innerWidth < 768;
+    isMobileView.value = window.innerWidth < 1280;
 };
 
 // 切換桌面端布局模式
@@ -480,7 +481,7 @@ onMounted(() => {
         <!-- 使用提示和桌面端布局切換 -->
         <div v-if="!isLoading" class="flex justify-between items-center mb-4">
             <div class="text-sm text-gray-500 dark:text-gray-400">
-                懸停字根可查看例字
+                點擊字根可查看例字
             </div>
             <!-- 桌面端布局切換按鈕 -->
             <div v-if="!isMobileView" class="flex items-center space-x-2">
@@ -693,6 +694,7 @@ onMounted(() => {
     margin: 0;
     position: relative;
     box-sizing: border-box;
+    --mobile-key-padding: 0.2rem 0.1rem;
 }
 
 .keyboard-layout {
@@ -1253,7 +1255,7 @@ onMounted(() => {
     align-items: center;
     width: 100%;
     min-height: 2.5rem;
-    padding: 0.0rem 0.1rem;
+    padding: var(--mobile-key-padding);
     background: rgb(249 250 251);
     border: 1px solid var(--fallback-bc, oklch(var(--bc)/0.1));
     border-radius: 0.75rem;
@@ -1365,7 +1367,6 @@ onMounted(() => {
 
 .desktop-list-layout .mobile-key-row {
     min-height: 3rem;
-    padding: 0.0rem 0.1rem;
 }
 
 .desktop-list-layout .mobile-key-label {

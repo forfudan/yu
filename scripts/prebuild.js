@@ -29,8 +29,21 @@ try {
     process.exit(1)
 }
 
-// 2. Run traditional to simplified Chinese conversion
-console.log('🈚 Step 2: Running Traditional to Simplified Chinese conversion...')
+// 2. Convert mabiao files to optimized JSON
+console.log('📋 Step 2: Converting mabiao files to optimized JSON...')
+try {
+    execSync('node scripts/prebuild-mabiao.js', {
+        cwd: projectRoot,
+        stdio: 'inherit'
+    })
+    console.log('✅ Mabiao to JSON conversion completed\n')
+} catch (error) {
+    console.error('❌ Mabiao conversion failed:', error.message)
+    process.exit(1)
+}
+
+// 3. Run traditional to simplified Chinese conversion
+console.log('🈚 Step 3: Running Traditional to Simplified Chinese conversion...')
 try {
     // Check if Python script exists
     const tc2scPath = join(projectRoot, 'scripts', 'tc2sc.py')
@@ -47,8 +60,8 @@ try {
     console.error('❌ Traditional to Simplified Chinese conversion failed:', error.message)
     // Don't exit here as this might not be critical
     console.log('⚠️  Continuing build process...\n')
-}// 3. Clean up any temporary files (optional)
-console.log('🧹 Step 3: Cleaning up temporary files...')
+}// 4. Clean up any temporary files (optional)
+console.log('🧹 Step 4: Cleaning up temporary files...')
 try {
     // Remove any .tmp files in src/public
     const publicDir = join(projectRoot, 'src', 'public')
@@ -67,8 +80,8 @@ try {
     console.log('⚠️  Cleanup warning:', error.message, '\n')
 }
 
-// 4. Generate build info
-console.log('📝 Step 4: Generating build information...')
+// 5. Generate build info
+console.log('📝 Step 5: Generating build information...')
 try {
     const buildInfo = {
         timestamp: new Date().toISOString(),
@@ -78,11 +91,13 @@ try {
             'chaifen.json',
             'chaifen-tianma.json',
             'chaifen_tw.json',
-            'chaifen_zhu.json'
+            'chaifen_zhu.json',
+            'mabiao_ming.json'
         ],
         compression_stats: {
             'chaifen.csv': '2.79MB → 883KB (69.1% reduction)',
-            'chaifen-tianma.csv': '2.44MB → 796KB (68.2% reduction)'
+            'chaifen-tianma.csv': '2.44MB → 796KB (68.2% reduction)',
+            'mabiao_ming.txt': '2.8MB → 1.5MB (37.4% reduction)'
         }
     }
 

@@ -2,6 +2,13 @@
  * ChaiDataLoader - 拆分数据加载器
  */
 
+// 动态导入pako用于gzip解压缩
+declare global {
+    interface Window {
+        pako?: any;
+    }
+}
+
 interface ChaiResult {
     char: string
     division?: string
@@ -22,9 +29,42 @@ class ChaiDataLoader {
     private data: OptimizedChaiData | null = null
     private loading: Promise<OptimizedChaiData> | null = null
     private dataUrl: string
+    private pakoLoaded: boolean = false
 
     constructor(dataUrl: string) {
         this.dataUrl = dataUrl
+    }
+
+    /**
+     * 动态加载pako库
+     */
+    private async loadPako(): Promise<any> {
+        if (window.pako) {
+            return window.pako
+        }
+
+        if (this.pakoLoaded) {
+            return window.pako
+        }
+
+        try {
+            // 从CDN加载pako
+            const script = document.createElement('script')
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js'
+            script.crossOrigin = 'anonymous'
+
+            await new Promise((resolve, reject) => {
+                script.onload = resolve
+                script.onerror = reject
+                document.head.appendChild(script)
+            })
+
+            this.pakoLoaded = true
+            return window.pako
+        } catch (error) {
+            console.warn('Failed to load pako library:', error)
+            return null
+        }
     }
 
     static getInstance(dataUrl: string = '/chaifen.json'): ChaiDataLoader {
@@ -188,11 +228,25 @@ class ChaiDataLoader {
     }
 
     /**
-     * Decompress gzip data using browser's built-in DecompressionStream
+     * Decompress gzip data using pako library with fallback to DecompressionStream
      */
     private async decompressGzip(arrayBuffer: ArrayBuffer): Promise<ArrayBuffer> {
         try {
-            // Use the modern Compression Streams API
+            // 首先尝试使用pako库
+            const pako = await this.loadPako()
+            if (pako) {
+                console.log('📦 Using pako for gzip decompression')
+                const compressed = new Uint8Array(arrayBuffer)
+                const decompressed = pako.inflate(compressed)
+                return decompressed.buffer
+            }
+
+            // 回退到浏览器原生DecompressionStream
+            console.log('🌐 Using browser DecompressionStream for gzip decompression')
+            if (typeof DecompressionStream === 'undefined') {
+                throw new Error('DecompressionStream not supported and pako not available')
+            }
+
             const stream = new ReadableStream({
                 start(controller) {
                     controller.enqueue(new Uint8Array(arrayBuffer))

@@ -5,6 +5,6 @@ aside: false
 import IME from '@/ime/FetchInput.vue'
 </script>
 
-# 星陳在線輸入
+# 宇浩日月在線輸入
 
-<IME mabiaoUrl="/mb-star.txt" />
+<IME mabiaoUrl="/mabiao_ming.json" />

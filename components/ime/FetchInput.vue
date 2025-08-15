@@ -1,3 +1,12 @@
+<!--
+    FetchInput.vue - 輸入法數據加載組件
+
+    Modification History:
+    - 2025-08-15 by 朱複丹: 重構版本，提升數據加載性能和穩定性
+      使用json文件代替原始txt
+    - 2024-06-25 by yb6b: 初版
+-->
+
 <script setup lang="ts">
 import * as utils from './share'
 import { onMounted, shallowRef, ref } from "vue";
@@ -17,7 +26,12 @@ const mabiaoList = shallowRef<utils.MabiaoItem[]>()
 const progress = ref({ max: 0, current: 0 })
 
 onMounted(async () => {
-    mabiaoList.value = await utils.fetchMabiao(p.mabiaoUrl, progress)
+    try {
+        mabiaoList.value = await utils.fetchMabiao(p.mabiaoUrl, progress)
+        console.log('✅ Mabiao loaded successfully:', mabiaoList.value?.length, 'items')
+    } catch (error) {
+        console.error('❌ Failed to load mabiao:', error)
+    }
 })
 
 </script>
