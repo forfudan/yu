@@ -35,7 +35,27 @@ const candidateHanzi = computed(() => {
     // 空码
     if (!range) return [];
 
-    return mabiaoList.slice(range[0], range[1])
+    const allCandidates = mabiaoList.slice(range[0], range[1])
+
+    // 过滤候选项：只保留完全匹配的，或者只需要再加一个元音字母的
+    const filteredCandidates = allCandidates.filter(candidate => {
+        const candidateCode = candidate.key!
+
+        // 完全匹配
+        if (candidateCode === cd) {
+            return true
+        }
+
+        // 检查是否只需要再加一个元音字母
+        if (candidateCode.length === cd.length + 1 && candidateCode.startsWith(cd)) {
+            const nextChar = candidateCode[cd.length]
+            return 'aeiou'.includes(nextChar)
+        }
+
+        return false
+    })
+
+    return filteredCandidates
 })
 
 const candidatePageIndex = ref(0)
@@ -117,8 +137,11 @@ function adjustCandidateCount() {
             totalHanziCount += candidateHanzi.value[i].name.length
         }
 
+        // 详细计算每个数量的宽度
+        const widthCalculations = []
         for (let count = 3; count <= maxCount; count++) {
             const totalWidth = calculateCandidatesWidth(count)
+            widthCalculations.push({ count, totalWidth, fits: totalWidth <= containerWidth })
             if (totalWidth <= containerWidth) {
                 bestCount = count
             } else {
@@ -135,8 +158,8 @@ function adjustCandidateCount() {
             容器宽度: containerWidth,
             旧显示数量: oldCount,
             新显示数量: bestCount,
-            计算宽度: calculateCandidatesWidth(bestCount),
-            候选项示例: candidateHanzi.value.slice(0, bestCount).map(c => c.name).join(', ')
+            宽度计算详情: widthCalculations,
+            候选项示例: candidateHanzi.value.slice(0, bestCount).map(c => `${c.name}(${c.key})`).join(', ')
         })
     })
 }
@@ -146,25 +169,45 @@ function calculateCandidatesWidth(count: number): number {
     if (candidateHanzi.value.length === 0) return 0
 
     let totalWidth = 0
+    const details = []
 
-    // 基于实际会显示的候选项来计算，而不是只考虑编码完全相同的
+    // 基于实际会显示的候选项来计算
     for (let i = 0; i < count && i < candidateHanzi.value.length; i++) {
         const candidate = candidateHanzi.value[i]
 
-        // 候选编号宽度 (如 "1.", "2." 等，约10px)
-        const numberWidth = 10
+        // 候选编号宽度 (如 "1.", "2." 等，约12px)
+        const numberWidth = 12
 
-        // 汉字宽度 (每个汉字约16px)
-        const hanziWidth = candidate.name.length * 16
+        // 汉字宽度 (每个汉字约15px，稍微保守一些)
+        const hanziWidth = candidate.name.length * 15
 
-        // 编码宽度 (每个字符约7px，编码字体较小)
+        // 编码宽度 (每个字符约6px，编码字体较小)
         const codeLength = candidate.key!.slice(candidateCodes.value.length).length
-        const codeWidth = codeLength * 7
+        const codeWidth = codeLength * 6
 
-        // 按钮内边距和间距 (约14px)
-        const paddingWidth = 14
+        // 按钮内边距和间距 (约12px)
+        const paddingWidth = 12
 
-        totalWidth += numberWidth + hanziWidth + codeWidth + paddingWidth
+        const itemWidth = numberWidth + hanziWidth + codeWidth + paddingWidth
+        totalWidth += itemWidth
+
+        details.push({
+            name: candidate.name,
+            key: candidate.key,
+            numberWidth,
+            hanziWidth,
+            codeWidth,
+            paddingWidth,
+            itemWidth
+        })
+    }
+
+    // 在调试模式下输出详细信息
+    if (count <= 5) {
+        console.log(`计算${count}个候选项宽度:`, {
+            总宽度: totalWidth,
+            详情: details
+        })
     }
 
     return totalWidth
@@ -419,7 +462,7 @@ function onKeydown(e: KeyboardEvent) {
                                     <!-- 后序编码 -->
                                     <span class="text-sm text-blue-400 dark:text-blue-500 dark:opacity-70">{{
                                         n.key!.slice(candidateCodes.length)
-                                        }}</span>
+                                    }}</span>
                                 </button>
                             </div>
                         </div>
@@ -469,7 +512,7 @@ function onKeydown(e: KeyboardEvent) {
                                     n.name }}</div>
                                 <!-- 编码 -->
                                 <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                                }}</div>
+                                    }}</div>
                             </button>
                         </div>
                     </div>
