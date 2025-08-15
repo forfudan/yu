@@ -37,22 +37,11 @@ const candidateHanzi = computed(() => {
 
     const allCandidates = mabiaoList.slice(range[0], range[1])
 
-    // 过滤候选项：只保留完全匹配的，或者只需要再加一个元音字母的
+    // 过滤候选项：保留所有以当前编码开头的候选项
     const filteredCandidates = allCandidates.filter(candidate => {
         const candidateCode = candidate.key!
-
-        // 完全匹配
-        if (candidateCode === cd) {
-            return true
-        }
-
-        // 检查是否只需要再加一个元音字母
-        if (candidateCode.length === cd.length + 1 && candidateCode.startsWith(cd)) {
-            const nextChar = candidateCode[cd.length]
-            return 'aeiou'.includes(nextChar)
-        }
-
-        return false
+        // 保留所有以当前编码开头的候选项
+        return candidateCode.startsWith(cd)
     })
 
     return filteredCandidates
@@ -250,9 +239,14 @@ function onClick(key: string) {
         return
     }
 
+    // 检查是否需要先上屏再添加新编码
+    checkAutoCommit(key)
+
     candidateCodes.value += key
     candidatePageIndex.value = 0
-} function commit(words: string) {
+}
+
+function commit(words: string) {
     const textareaNode = textarea.value!
     const { selectionStart, selectionEnd } = textareaNode
 
@@ -296,10 +290,18 @@ function onTextareaBlur() {
 //#endregion
 
 // 监听候选字变化，动态调整显示数量
-watch(candidateHanzi, () => {
+watch(candidateHanzi, (newCandidates) => {
     candidatePageIndex.value = 0 // 候选字变化时重置页面索引
     dropdownPageIndex.value = 0 // 重置下拉页面索引
     adjustCandidateCount()
+
+    // 检查是否需要自动上屏唯一候选项
+    if (newCandidates.length === 1 && candidateCodes.value) {
+        console.log('检测到唯一候选项，自动上屏:', newCandidates[0].name)
+        commit(newCandidates[0].name)
+        candidateCodes.value = ''
+        candidatePageIndex.value = 0
+    }
 }, { immediate: true })
 
 // 监听候选编码变化，重置展开状态并重新计算宽度
@@ -357,9 +359,10 @@ watch(candidateHanzi, (hz) => {
 })
 
 watch(candidateCodes, (cd) => {
-    // 顶屏
+    // 顶屏逻辑已移到 checkAutoCommit 函数中处理
+    // 这里保留原有的延时顶功逻辑（如果配置了 popLen）
     const popLen = props.rule.pop
-    const codeLen = props.rule.len
+    const codeLen = 5 // 修改为5码上屏
 
     if (cd.length > codeLen) {
         // 延时顶功
@@ -372,7 +375,7 @@ watch(candidateCodes, (cd) => {
             commit(popCard.name)
             candidateCodes.value = candidateCodes.value.slice(popLen)
         }
-        // 定长
+        // 定长（5码）
         else {
             const topIndex = searchTop(props.data, cd.slice(0, codeLen))
             if (topIndex !== null) {
@@ -384,6 +387,56 @@ watch(candidateCodes, (cd) => {
     }
 })
 //#endregion
+
+// 检查是否需要自动上屏
+function checkAutoCommit(nextKey: string) {
+    const cd = candidateCodes.value
+    if (!cd) return
+
+    const currentCandidates = candidateHanzi.value
+    if (currentCandidates.length === 0) return
+
+    console.log('checkAutoCommit 调用:', {
+        当前编码: cd,
+        即将添加: nextKey,
+        新编码: cd + nextKey,
+        当前候选数量: currentCandidates.length,
+        当前候选项: currentCandidates.map(c => c.name).slice(0, 5)
+    })
+
+    // 1. 如果当前候选项唯一，直接上屏
+    if (currentCandidates.length === 1) {
+        console.log('当前候选项唯一，上屏:', currentCandidates[0].name)
+        commit(currentCandidates[0].name)
+        candidateCodes.value = ''
+        candidatePageIndex.value = 0
+        return
+    }
+
+    // 2. 如果候选项不唯一，分情况处理
+    if (currentCandidates.length > 1) {
+        // 2a. 如果当前编码已经达到5码，下一个编码（第6码）顶出前序首选字
+        if (cd.length >= 5) {
+            console.log('当前编码达到5码，即将输入第6码，上屏首选:', currentCandidates[0].name)
+            commit(currentCandidates[0].name)
+            candidateCodes.value = ''
+            candidatePageIndex.value = 0
+            return
+        }
+
+        // 2b. 如果当前编码结尾是aeiou中的一个，输入下一个编码也顶出前序候选项
+        const lastChar = cd[cd.length - 1]
+        if ('aeiou'.includes(lastChar)) {
+            console.log('当前编码元音结尾，上屏首选:', { 编码: cd, 结尾字符: lastChar, 首选: currentCandidates[0].name })
+            commit(currentCandidates[0].name)
+            candidateCodes.value = ''
+            candidatePageIndex.value = 0
+            return
+        }
+    }
+
+    console.log('无需上屏')
+}
 
 //#region 电脑键盘事件
 const keysListened = new Set(`abcdefghijklmnopqrstuvwxyz/${props.rule.keys === 27 ? ';' : ''}`)
@@ -415,6 +468,10 @@ function onKeydown(e: KeyboardEvent) {
     if (keysListened.has(key)) {
         e.preventDefault()
         e.stopPropagation()
+
+        // 检查是否需要先上屏再添加新编码
+        checkAutoCommit(key)
+
         candidateCodes.value += key
         candidatePageIndex.value = 0
         return
@@ -542,7 +599,7 @@ function onKeydown(e: KeyboardEvent) {
                                     <!-- 后序编码 -->
                                     <span class="text-sm text-blue-400 dark:text-blue-500 dark:opacity-70">{{
                                         n.key!.slice(candidateCodes.length)
-                                        }}</span>
+                                    }}</span>
                                 </button>
                             </div>
                         </div>
@@ -592,7 +649,7 @@ function onKeydown(e: KeyboardEvent) {
                                     n.name }}</div>
                                 <!-- 编码 -->
                                 <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                                }}</div>
+                                    }}</div>
                             </button>
                         </div>
                     </div>
