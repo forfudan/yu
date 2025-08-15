@@ -120,10 +120,10 @@ const dropdownCandidates = computed(() => {
     const cd = candidateCodes.value;
     const range = biSearchBetween(mabiaoList, cd);
     if (!range) return [];
-    // 顯示所有預測項（key 以當前編碼開頭且不等於當前編碼，不做 CJK 過濾）
+    // 顯示所有 key 以當前編碼開頭的項（包括精確匹配）
     const allPredict = mabiaoList.slice(range[0], range[1]).filter(candidate => {
         const candidateCode = candidate.key!;
-        return candidateCode !== cd && candidateCode.startsWith(cd);
+        return candidateCode.startsWith(cd);
     });
     // 分頁
     const startIndex = dropdownPageIndex.value * dropdownPageSize;
@@ -137,10 +137,10 @@ const totalDropdownPages = computed(() => {
     const cd = candidateCodes.value;
     const range = biSearchBetween(mabiaoList, cd);
     if (!range) return 0;
-    // 所有預測項目（key 以當前編碼開頭且不等於當前編碼，不做 CJK 過濾）
+    // 所有 key 以當前編碼開頭的項（包括精確匹配）
     const allPredict = mabiaoList.slice(range[0], range[1]).filter(candidate => {
         const candidateCode = candidate.key!;
-        return candidateCode !== cd && candidateCode.startsWith(cd);
+        return candidateCode.startsWith(cd);
     });
     if (allPredict.length === 0) return 0;
     return Math.ceil(allPredict.length / dropdownPageSize);
