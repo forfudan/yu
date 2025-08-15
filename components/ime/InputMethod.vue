@@ -364,7 +364,7 @@ function commit(words: string) {
     const convertedWords = convertToChinese(words)
 
     const textareaNode = textarea.value!
-    
+
     // 确保获取最新的光标位置
     textareaNode.focus()
     const { selectionStart, selectionEnd } = textareaNode
@@ -383,7 +383,7 @@ function commit(words: string) {
         const newValue = currentValue + convertedWords
         text.value = newValue
         textareaNode.value = newValue
-        
+
         // 同步设置光标位置
         const newCursorPosition = newValue.length
         textareaNode.selectionStart = newCursorPosition
@@ -395,7 +395,7 @@ function commit(words: string) {
     const startPart = currentValue.slice(0, selectionStart || 0)
     const endPart = currentValue.slice(selectionEnd || selectionStart || 0)
     const newValue = startPart + convertedWords + endPart
-    
+
     text.value = newValue
     textareaNode.value = newValue
 
@@ -403,12 +403,12 @@ function commit(words: string) {
     const newCursorPosition = (selectionStart || 0) + convertedWords.length
     textareaNode.selectionStart = newCursorPosition
     textareaNode.selectionEnd = newCursorPosition
-    
+
     console.log('commit 完成:', {
         newValue: newValue.slice(0, 20) + (newValue.length > 20 ? '...' : ''),
         newCursorPosition
     })
-}function onClickCandidate(card: MabiaoItem) {
+} function onClickCandidate(card: MabiaoItem) {
     commit(card.name)
     // textarea.value?.focus()
     candidatePageIndex.value = 0
@@ -771,7 +771,7 @@ function onKeydown(e: KeyboardEvent) {
                                     <!-- 后序编码 -->
                                     <span class="text-sm text-blue-400 dark:text-blue-500 dark:opacity-70">{{
                                         n.key!.slice(candidateCodes.length)
-                                    }}</span>
+                                        }}</span>
                                 </button>
                             </div>
                         </div>
@@ -821,7 +821,7 @@ function onKeydown(e: KeyboardEvent) {
                                     n.name }}</div>
                                 <!-- 编码 -->
                                 <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                                    }}</div>
+                                }}</div>
                             </button>
                         </div>
                     </div>
