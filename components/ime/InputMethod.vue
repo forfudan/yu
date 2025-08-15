@@ -122,7 +122,7 @@ function adjustCandidateCount() {
         if (!container) return
 
         // 获取容器可用宽度（减去翻页按钮和边距）
-        const containerWidth = container.clientWidth - 100
+        const containerWidth = container.clientWidth - 50
 
         // 计算最适合的候选项数量
         let bestCount = 3 // 最少3个
@@ -732,7 +732,8 @@ function onKeydown(e: KeyboardEvent) {
     <div class="pt-3">
         <textarea v-model="text" ref="textarea"
             class="textarea textarea-bordered textarea-md w-full bg-neutral-50 dark:bg-neutral-700"
-            placeholder="在這裏盡情輸入吧！" @keydown="onKeydown" @focus="onTextareaFocus" @blur="onTextareaBlur"></textarea>
+            placeholder="輸入數據在本地分析加載，不會上傳雲端。" @keydown="onKeydown" @focus="onTextareaFocus"
+            @blur="onTextareaBlur"></textarea>
     </div>
 
     <div class="relative w-full">
