@@ -50,9 +50,17 @@ const emptyKeys = ["'"];
 // 移動端檢測
 const isMobileView = ref(false);
 
+// 桌面端布局模式切換
+const isListView = ref(false);
+
 // 檢測屏幕尺寸
 const checkMobileView = () => {
     isMobileView.value = window.innerWidth < 768;
+};
+
+// 切換桌面端布局模式
+const toggleDesktopLayout = () => {
+    isListView.value = !isListView.value;
 };
 
 onMounted(() => {
@@ -454,13 +462,24 @@ onMounted(() => {
             <span class="ml-2">正在加载字根数据...</span>
         </div>
 
-        <!-- 使用提示 -->
-        <div v-if="!isLoading" class="text-center text-sm text-gray-500 dark:text-gray-400 mb-4">
-            懸停字根可查看例字
+        <!-- 使用提示和桌面端布局切換 -->
+        <div v-if="!isLoading" class="flex justify-between items-center mb-4">
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+                懸停字根可查看例字
+            </div>
+            <!-- 桌面端布局切換按鈕 -->
+            <div v-if="!isMobileView" class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">布局：</span>
+                <button @click="toggleDesktopLayout" class="layout-toggle-btn"
+                    :class="{ 'layout-toggle-active': isListView }" :title="isListView ? '切換為網格布局' : '切換為列表布局'">
+                    <span v-if="!isListView">☰</span>
+                    <span v-else>⊞</span>
+                </button>
+            </div>
         </div>
 
         <!-- 键盘字根图 - 桌面端網格布局 -->
-        <div v-if="!isLoading && zigenMap && !isMobileView" class="keyboard-layout">
+        <div v-if="!isLoading && zigenMap && !isMobileView && !isListView" class="keyboard-layout">
             <div v-for="(row, rowIndex) in keyboardLayout" :key="rowIndex" class="keyboard-row">
                 <div v-for="key in row" :key="key" class="keyboard-key"
                     :class="{ 'empty-key': emptyKeys.includes(key) }">
@@ -518,8 +537,9 @@ onMounted(() => {
             </div>
         </div>
 
-        <!-- 移動端垂直列表布局 -->
-        <div v-if="!isLoading && zigenMap && isMobileView" class="mobile-layout">
+        <!-- 垂直列表布局（移動端或桌面端列表視圖） -->
+        <div v-if="!isLoading && zigenMap && (isMobileView || isListView)" class="mobile-layout"
+            :class="{ 'desktop-list-layout': !isMobileView && isListView }">
             <div v-for="key in flatKeyList" :key="key" class="mobile-key-row"
                 :class="{ 'empty-mobile-key': emptyKeys.includes(key) }">
                 <!-- 按键名称 -->
@@ -1006,6 +1026,57 @@ onMounted(() => {
     /* 外發光效果 */
 }
 
+/* 布局切換按鈕樣式 */
+.layout-toggle-btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.375rem;
+    background-color: rgb(243 244 246);
+    border: 1px solid rgb(209 213 219);
+    color: rgb(107 114 128);
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark .layout-toggle-btn {
+    background-color: rgb(55 65 81);
+    border-color: rgb(75 85 99);
+    color: rgb(156 163 175);
+}
+
+.layout-toggle-btn:hover {
+    background-color: rgb(229 231 235);
+    border-color: rgb(156 163 175);
+    color: rgb(75 85 99);
+}
+
+.dark .layout-toggle-btn:hover {
+    background-color: rgb(75 85 99);
+    border-color: rgb(107 114 128);
+    color: rgb(209 213 219);
+}
+
+.layout-toggle-active {
+    background-color: rgb(59 130 246);
+    border-color: rgb(59 130 246);
+    color: white;
+}
+
+.dark .layout-toggle-active {
+    background-color: rgb(59 130 246);
+    border-color: rgb(59 130 246);
+    color: white;
+}
+
+.layout-toggle-active:hover {
+    background-color: rgb(37 99 235);
+    border-color: rgb(37 99 235);
+}
+
 .scheme-button-active:hover {
     background-color: rgb(29 78 216);
     border-color: rgb(29 78 216);
@@ -1290,5 +1361,34 @@ onMounted(() => {
     font-size: 0.75rem;
     color: var(--fallback-bc, oklch(var(--bc)/0.6));
     font-style: italic;
+}
+
+/* 桌面端列表布局優化 */
+.desktop-list-layout {
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.desktop-list-layout .mobile-key-row {
+    min-height: 3rem;
+    padding: 0.0rem 0.1rem;
+}
+
+.desktop-list-layout .mobile-key-label {
+    width: 2.5rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+.desktop-list-layout .mobile-zigen-item .zigen-font {
+    font-size: 1.125rem;
+}
+
+.desktop-list-layout .mobile-zigen-item .zigen-code {
+    font-size: 0.75rem;
+}
+
+.desktop-list-layout .mobile-key-desc {
+    font-size: 0.875rem;
 }
 </style>
