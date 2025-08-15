@@ -119,8 +119,15 @@ async function main() {
         console.log('正在解析碼表數據...')
         const rawData = parseMabiao(content)
 
+        console.log('正在對碼表進行...')
+        const sortedRawData = Object.entries(rawData).sort((a, b) => {
+            if (a[0] < b[0]) return -1;
+            if (a[0] > b[0]) return 1;
+            return 0; // 相同 code 保持原順序
+        });
+
         console.log('正在優化數據結構...')
-        const optimizedData = optimizeData(rawData)
+        const optimizedData = optimizeData(Object.fromEntries(sortedRawData))
 
         console.log('正在壓縮數據...')
         const compressed = compressData(optimizedData)
