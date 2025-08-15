@@ -1,3 +1,5 @@
+// 第二候選框顯示狀態
+const showDropdownPanel = ref(false)
 <script setup lang="ts">
 /*
         InputMethod.vue - 在線輸入法核心組件
@@ -87,6 +89,8 @@ const candidateCount = 9
 const filterCJK = ref(true)
 // 虛擬鍵盤顯示狀態
 const showKeyboard = ref(false)
+// 是否显示候选字下拉面板
+const showDropdownPanel = ref(false)
 
 const candidatePageIndex = ref(0)
 
@@ -120,22 +124,7 @@ const dropdownRawCandidates = computed(() => {
     const range = biSearchBetween(mabiaoList, cd)
     if (!range) return [];
     let allCandidates = mabiaoList.slice(range[0], range[1]).filter(candidate => candidate.key!.startsWith(cd))
-    // CJK过滤
-    if (filterCJK.value) {
-        allCandidates = allCandidates.filter(c => {
-            const ch = c.name.charCodeAt(0)
-            return (
-                (ch >= 0x4E00 && ch <= 0x9FFF) ||
-                (ch >= 0x3400 && ch <= 0x4DBF) ||
-                (ch >= 0x20000 && ch <= 0x2A6DF) ||
-                (ch >= 0x2A700 && ch <= 0x2B73F) ||
-                (ch >= 0x2B740 && ch <= 0x2B81F) ||
-                (ch >= 0x2B820 && ch <= 0x2CEAF) ||
-                (ch >= 0xF900 && ch <= 0xFAFF) ||
-                (ch >= 0x2F800 && ch <= 0x2FA1F)
-            )
-        })
-    }
+    // 不再根據 filterCJK 控制第二候選窗
     return allCandidates
 })
 
@@ -755,7 +744,11 @@ function onKeydown(e: KeyboardEvent) {
         <div class="flex justify-end mb-2 space-x-2">
             <button @click="filterCJK = !filterCJK"
                 class="px-3 py-1 rounded bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs">
-                {{ filterCJK ? '點擊此處顯示全部字符' : '點擊此處只顯示CJK字符' }}
+                {{ filterCJK ? '顯示全部字符' : '只顯示常用漢字' }}
+            </button>
+            <button @click="showDropdownPanel = !showDropdownPanel"
+                class="px-3 py-1 rounded bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs">
+                {{ showDropdownPanel ? '隱藏第二候選框' : '顯示更多候選項' }}
             </button>
             <button @click="showKeyboard = !showKeyboard"
                 class="px-3 py-1 rounded bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs">
@@ -804,7 +797,7 @@ function onKeydown(e: KeyboardEvent) {
                                 <!-- 后序编码 -->
                                 <span class="text-base text-blue-400 dark:text-blue-500 dark:opacity-70">{{
                                     n.key!.slice(candidateCodes.length)
-                                    }}</span>
+                                }}</span>
                             </button>
                         </div>
                     </div>
@@ -821,8 +814,8 @@ function onKeydown(e: KeyboardEvent) {
                     </div>
                 </div>
 
-                <!-- 展开的候选字面板（只显示CJK时隐藏） -->
-                <div v-if="hasMoreCandidates && !filterCJK"
+                <!-- 展开的候选字面板（獨立開關控制） -->
+                <div v-if="showDropdownPanel"
                     class="absolute top-full left-0 right-0 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg shadow-lg z-[9999] p-4 mt-2">
                     <div class="flex justify-between items-center mb-2">
                         <div class="text-sm text-slate-500">
@@ -861,7 +854,7 @@ function onKeydown(e: KeyboardEvent) {
                             </div>
                             <!-- 编码 -->
                             <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                                }}</div>
+                            }}</div>
                         </button>
                     </div>
                 </div>
