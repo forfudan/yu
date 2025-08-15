@@ -54,7 +54,7 @@ function handleSchemeChange(schemeId: string) {
         <div class="unified-scheme-selector">
             <div class="scheme-header-row">
                 <!-- 方案信息 -->
-                <div class="scheme-info">
+                <div class="scheme-info hidden md:block">
                     <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-1">
                         當前方案：{{ currentScheme.name }}
                     </h3>
@@ -150,6 +150,7 @@ function handleSchemeChange(schemeId: string) {
         flex-direction: column;
         gap: 1.5rem;
         align-items: center;
+        justify-content: center;
     }
 
     .scheme-info {
@@ -159,6 +160,7 @@ function handleSchemeChange(schemeId: string) {
     .scheme-buttons {
         display: flex;
         justify-content: center;
+        width: 100%;
     }
 
     .section-title {
