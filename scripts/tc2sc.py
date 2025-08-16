@@ -1,7 +1,7 @@
 # %%
 import re
-
 import opencc
+import os
 
 t2s = opencc.OpenCC("t2s")
 
@@ -95,5 +95,7 @@ for path_of_doc in paths_of_docs:
         output = doc
         print(path_of_doc, "not translated.")
     output = output.replace("/zht/", "/")
-    with open("src" + path_of_doc, mode="w", encoding="utf8") as temp:
+    output_path = "src" + path_of_doc
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with open(output_path, mode="w", encoding="utf8") as temp:
         temp.write(output)
