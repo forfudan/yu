@@ -13,4 +13,4 @@ import ZigenMap from "@/zigen/ZigenMap.vue"
 <Train name="star" zigenUrl="/zigen-star.csv" :range="[0,]" mode='both' />
 </div>
 
-<ZigenMap :default-scheme="star" :hide-scheme-buttons="true" column-min-width="1.52rem" />
+<ZigenMap :default-scheme="'star'" :hide-scheme-buttons="true" column-min-width="1.52rem" />
