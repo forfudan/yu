@@ -747,7 +747,7 @@ onMounted(() => {
 .key-label {
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--fallback-nc, oklch(var(--nc)/0.8));
+    /* color: var(--fallback-nc, oklch(var(--nc)/0.8)); */
     border-bottom: 1px solid var(--fallback-bc, oklch(var(--bc)/0.15));
     padding-bottom: 0.15rem;
     margin-bottom: 0.15rem;
@@ -1271,7 +1271,7 @@ onMounted(() => {
     width: 2rem;
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--fallback-nc, oklch(var(--nc)/0.8));
+    /* color: var(--fallback-nc, oklch(var(--nc)/0.8)); */
     text-align: center;
     margin-right: 0.75rem;
 }
