@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as l,a4 as d}from"./chunks/framework.DTi27XpN.js";const h=JSON.parse('{"title":"宇浩系列方案总览","description":"","frontmatter":{},"headers":[],"relativePath":"docs/series.md","filePath":"docs/series.md"}'),a={name:"docs/series.md"},s=d("",3),i=[s];function n(f,x,y,g,r,o){return l(),e("div",null,i)}const c=t(a,[["render",n]]);export{h as __pageData,c as default};
