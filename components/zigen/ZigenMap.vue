@@ -5,12 +5,14 @@
   - 支持多個方案切換（卿雲、光華、星陳、日月）
   - 懸停以顯示歸併字根和例字
   
-  Modification History:
+  Major Modification History:
   - 2025-08-14 by 朱複丹: 初版，實現基礎功能和樣式
   - 2025-08-15 by 朱複丹: 添加字根列表模式
 -->
 
 <script setup lang="ts">
+// 统一例字数量限制
+const MAX_EXAMPLES = 8;
 import { ref, computed, onMounted, onUnmounted, watch, toRef } from 'vue'
 import { fetchZigen } from "../search/share";
 import ChaiDataLoader from "../search/ChaiDataLoader";
@@ -247,7 +249,7 @@ const getExampleChars = async (zigen: string): Promise<string[]> => {
             if (charData.d?.includes(normalizedZigen)) {
                 console.log(`✅ 找到匹配: "${char}" 包含字根 "${normalizedZigen}", 拆分: "${charData.d}"`);
                 examples.push(char);
-                if (examples.length >= 20) break;
+                if (examples.length >= MAX_EXAMPLES) break;
             }
 
             // 每檢查1000個字符輸出一次進度
@@ -598,7 +600,7 @@ onMounted(() => {
                             </div>
                             <!-- 該字根的例字 - 直接跟在字根後面 -->
                             <div v-if="zigenExampleChars[zigen.font]?.length > 0" class="example-chars-same-line">
-                                <span v-for="char in zigenExampleChars[zigen.font].slice(0, 8)" :key="char"
+                                <span v-for="char in zigenExampleChars[zigen.font].slice(0, MAX_EXAMPLES)" :key="char"
                                     class="example-char zigen-font">{{ char }}</span>
                             </div>
                             <div v-else class="example-chars-same-line">
@@ -647,8 +649,8 @@ onMounted(() => {
                             </div>
                             <!-- 該字根的例字 - 直接跟在字根後面 -->
                             <div v-if="pinnedZigenExampleChars[zigen.font]?.length > 0" class="example-chars-same-line">
-                                <span v-for="char in pinnedZigenExampleChars[zigen.font].slice(0, 8)" :key="char"
-                                    class="example-char zigen-font">{{ char }}</span>
+                                <span v-for="char in pinnedZigenExampleChars[zigen.font].slice(0, MAX_EXAMPLES)"
+                                    :key="char" class="example-char zigen-font">{{ char }}</span>
                             </div>
                             <div v-else class="example-chars-same-line">
                                 <span class="loading-text">正在加載...</span>
