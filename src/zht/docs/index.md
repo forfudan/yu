@@ -30,7 +30,7 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 - 字頻加權後的選重率極低，基本上一字一碼，碼到字出，極其適合盲打。
 - 繁簡字碼位分離，比如`简` `簡`不同編碼，繁體簡體混在一起打也極少選重。
-- 字形兼容大陸通規、[大陸古籍通規](/docs/guji)[^guji_standards]、臺灣正體、香港繁體四套標準，方便檢字。
+- 字形兼容大陸通規、[大陸古籍通規](./guji)[^guji_standards]、臺灣正體、香港繁體四套標準，方便檢字。
 - 設有簡體、繁體兩套詞庫，字形涵蓋兩岸三地三套標準 [^opencc]。
 - 全面覆蓋 CJK 全字集 99000 多個漢字（更新至 CJK 擴 I 區），生僻字一網打盡。
 - 檢字方便，翻頁少。總共 99000 多個漢字，候選項最多的碼位上只有 18 個候選字。
@@ -138,7 +138,7 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 ## 腳註
 
-[^frequent_characters]: 「最常用漢字」的定義依賴於文本空間。關於本測評中所用的字頻數據的來源，[請參閱此頁面](/docs/statistics)。
+[^frequent_characters]: 「最常用漢字」的定義依賴於文本空間。關於本測評中所用的字頻數據的來源，[請參閱此頁面](./statistics)。
 
 [^guji_standards]: 中華人民共和國國家標準《古籍印刷通用字規範字形表》（GB/Z 40637-2021）：[https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=52E2DE28D439C1937EE09AE4B5AA615B](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=52E2DE28D439C1937EE09AE4B5AA615B)
 

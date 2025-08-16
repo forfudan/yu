@@ -26,7 +26,7 @@ async function fetchChaifenPlot(url: string) {
 
 onMounted(async () => {
     if (chaifenPlotMap.value) return;
-    chaifenPlotMap.value = await fetchChaifenPlot("/chaifen_plot.csv")
+    chaifenPlotMap.value = await fetchChaifenPlot("/zi-plot.csv")
     // searchYuChaifenPlots.value = [...p.chars].filter(zi => chaifenPlotMap.has(zi))
 })
 
