@@ -4,6 +4,12 @@
 
 天碼是一個表形碼輸入方案，由宋天研製。特點有：四碼定長、純字形、雙編碼、繁簡通打[^fanjian]等。因爲其大碼表形，小碼取音的設計哲學，易學性極高。QQ討論群：631302614
 
+<script setup>
+import ZigenMap from "@/zigen/ZigenMap.vue"
+</script>
+
+<ZigenMap :default-scheme="'tianma'" column-min-width="1.5rem" :zigenFontClass="'zigen-font-tianma'" />
+
 ## 規則
 
 天碼共約 500 字根，歸類後約 250，在 26 鍵上，依據其形態，對應到近似的拉丁字母上，形成規則排布。
@@ -31,13 +37,5 @@
 
 單行定義爲：ABCZza\[:4\]
 :::
-
-<script setup>
-import ZigenMap from "@/zigen/ZigenMap.vue"
-</script>
-
-<ZigenMap :default-scheme="'tianma'" column-min-width="1.5rem" :zigenFontClass="'zigen-font-tianma'" />
-
-![天码简要字根表](/天码简要字根表.png)
 
 [^fanjian]: 一般認爲單一碼表繁簡聯合選重率小於萬分之五十即具有繁簡通打特性。
