@@ -18,11 +18,13 @@ import type { ZigenMap as ZigenMapType, ChaifenMap, Chaifen } from "../search/sh
 
 const props = defineProps<{
     defaultScheme?: string
-    hideSchemeButtons?: boolean
     columnMinWidth?: string
+    zigenFontClass?: string // 新增：自定义字根字体类名
 }>()
 
-const { hideSchemeButtons } = props
+// 新增：字根字体类名，默认为 'zigen-font'
+const zigenFontClass = computed(() => props.zigenFontClass || 'zigen-font')
+
 const columnMinWidth = toRef(props, 'columnMinWidth')
 
 // Dynamic grid template columns based on columnMinWidth parameter
@@ -72,14 +74,16 @@ const flatKeyList = computed(() => {
     return keyboardLayout.flat();
 });
 
-// 支持的方案（簡化版，僅用於數據加載）
-const supportedSchemes = ['joy', 'light', 'star', 'ming'];
+// 宇碼方案
+const BaseSchemes = ['joy', 'light', 'star', 'ming', 'wafel'];
 
 // 獲取方案對應的文件URL
 function getSchemeUrls(schemeId: string) {
+    // 判断 defaultScheme 是否在 BaseSchemes 中
+    const isBase = BaseSchemes.includes(schemeId);
     return {
         zigenUrl: `/zigen-${schemeId}.csv`,
-        chaifenUrl: '/chaifen.json'
+        chaifenUrl: isBase ? '/chaifen.json' : `/chaifen-${schemeId}.json`
     };
 }
 
@@ -457,15 +461,6 @@ onMounted(() => {
 
 <template>
     <div class="zigen-map-container">
-        <!-- 方案切换圆形按钮（已禁用，由父組件統一管理） -->
-        <!-- <div v-if="!hideSchemeButtons" class="flex justify-center mb-6 space-x-4">
-            <button v-for="scheme in schemes" :key="scheme.id" :class="[
-                'scheme-button',
-                { 'scheme-button-active': activeScheme === scheme.id }
-            ]" :title="scheme.name">
-                <span class="scheme-text">{{ getSchemeChar(scheme.id) }}</span>
-            </button>
-        </div> -->
 
         <!-- 加载状态 -->
         <div v-if="isLoading" class="flex justify-center items-center py-8">
@@ -480,7 +475,7 @@ onMounted(() => {
             </div>
             <!-- 桌面端布局切換按鈕 -->
             <div v-if="!isMobileView" class="flex items-center space-x-2">
-                <span class="text-xs text-gray-400">布局：</span>
+                <span class="text-xs text-gray-400">切換字根圖和字根表：</span>
                 <button @click="toggleDesktopLayout" class="layout-toggle-btn"
                     :class="{ 'layout-toggle-active': isListView }" :title="isListView ? '切換為網格布局' : '切換為列表布局'">
                     <span v-if="!isListView">☰</span>
@@ -503,7 +498,7 @@ onMounted(() => {
                         <span v-for="(zigen, index) in zigenByKey[key].visible" :key="index" class="zigen-item"
                             @mouseenter="handleZigenHover($event, zigen)" @mouseleave="handleZigenLeave"
                             @click="handleZigenClick($event, zigen)">
-                            <span class="zigen-font">{{ zigen.font }}</span>
+                            <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code }}</span>
                         </span>
                         <!-- 如果有隐藏的字根，显示省略号 -->
@@ -564,7 +559,7 @@ onMounted(() => {
                         <span v-for="(zigen, index) in sortedZigenByKey[key]" :key="`sorted-${index}`"
                             class="mobile-zigen-item" :class="{ 'mobile-hidden-zigen': zigen.isHidden }"
                             @click="handleZigenClick($event, zigen)">
-                            <span class="zigen-font">{{ zigen.font }}</span>
+                            <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code }}</span>
                         </span>
                     </div>
@@ -577,7 +572,7 @@ onMounted(() => {
                     <span v-else-if="['a', 'e', 'i', 'o', 'u'].includes(key)" class="mobile-key-desc zigen-font">
                         一碼上屏字
                     </span>
-                    <span v-else class="mobile-key-desc zigen-font">{{ getKeyLabel(key) }}</span>
+                    <span v-else class="mobile-key-desc">{{ getKeyLabel(key) }}</span>
                 </div>
             </div>
         </div>
@@ -599,7 +594,7 @@ onMounted(() => {
                         <div v-for="(zigen, index) in hoveredZigenInfo.visible" :key="`visible-${index}`"
                             class="zigen-row-inline">
                             <div class="zigen-header-inline current-zigen">
-                                <span class="zigen-font">{{ zigen.font }}</span>
+                                <span :class="zigenFontClass">{{ zigen.font }}</span>
                             </div>
                             <!-- 該字根的例字 - 直接跟在字根後面 -->
                             <div v-if="zigenExampleChars[zigen.font]?.length > 0" class="example-chars-same-line">
@@ -615,7 +610,7 @@ onMounted(() => {
                         <div v-for="(zigen, index) in hoveredZigenInfo.hidden" :key="`hidden-${index}`"
                             class="zigen-row-inline">
                             <div class="zigen-header-inline other-zigen">
-                                <span class="zigen-font">{{ zigen.font }}</span>
+                                <span :class="zigenFontClass">{{ zigen.font }}</span>
                             </div>
                             <!-- 該字根的例字 - 直接跟在字根後面 -->
                             <div v-if="zigenExampleChars[zigen.font]?.length > 0" class="example-chars-same-line">
@@ -648,7 +643,7 @@ onMounted(() => {
                         <div v-for="(zigen, index) in pinnedZigenInfo.visible" :key="`pinned-visible-${index}`"
                             class="zigen-row-inline">
                             <div class="zigen-header-inline current-zigen">
-                                <span class="zigen-font">{{ zigen.font }}</span>
+                                <span :class="zigenFontClass">{{ zigen.font }}</span>
                             </div>
                             <!-- 該字根的例字 - 直接跟在字根後面 -->
                             <div v-if="pinnedZigenExampleChars[zigen.font]?.length > 0" class="example-chars-same-line">
@@ -664,7 +659,7 @@ onMounted(() => {
                         <div v-for="(zigen, index) in pinnedZigenInfo.hidden" :key="`pinned-hidden-${index}`"
                             class="zigen-row-inline">
                             <div class="zigen-header-inline other-zigen">
-                                <span class="zigen-font">{{ zigen.font }}</span>
+                                <span :class="zigenFontClass">{{ zigen.font }}</span>
                             </div>
                             <!-- 該字根的例字 - 直接跟在字根後面 -->
                             <div v-if="pinnedZigenExampleChars[zigen.font]?.length > 0" class="example-chars-same-line">
@@ -752,7 +747,7 @@ onMounted(() => {
 .key-label {
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--fallback-nc, oklch(var(--nc)/0.8));
+    /* color: var(--fallback-nc, oklch(var(--nc)/0.8)); */
     border-bottom: 1px solid var(--fallback-bc, oklch(var(--bc)/0.15));
     padding-bottom: 0.15rem;
     margin-bottom: 0.15rem;
@@ -1276,7 +1271,7 @@ onMounted(() => {
     width: 2rem;
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--fallback-nc, oklch(var(--nc)/0.8));
+    /* color: var(--fallback-nc, oklch(var(--nc)/0.8)); */
     text-align: center;
     margin-right: 0.75rem;
 }
@@ -1351,7 +1346,7 @@ onMounted(() => {
 .mobile-key-desc {
     font-size: 0.75rem;
     color: var(--fallback-bc, oklch(var(--bc)/0.6));
-    font-style: italic;
+    /* 移除斜体 */
 }
 
 /* 桌面端列表布局優化 */

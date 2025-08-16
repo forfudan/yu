@@ -7,7 +7,7 @@ import ZigenTrain from "@/train/ZigenTrain.vue"
 
 ## 字根練習
 
-<div class="tianma">
+<div class="zigen-font-tianma">
 <ZigenTrain name="tianma" zigenUrl="/zigen-tianma.csv" :range="[0,]" mode='both' />
 </div>
 

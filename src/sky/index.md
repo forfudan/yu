@@ -32,6 +32,12 @@
 单行定义为：ABCZza\[:4\]
 :::
 
+<script setup>
+import ZigenMap from "@/zigen/ZigenMap.vue"
+</script>
+
+<ZigenMap :default-scheme="'tianma'" column-min-width="1.5rem" :zigenFontClass="'zigen-font-tianma'" />
+
 ![天码简要字根表](/天码简要字根表.png)
 
 [^fanjian]: 一般认为单一码表繁简联合选重率小于万分之五十即具有繁简通打特性。

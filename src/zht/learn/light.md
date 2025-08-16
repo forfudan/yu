@@ -3,7 +3,7 @@
 <script setup>
 import ZigenMap from "@/zigen/ZigenMap.vue"
 </script>
-<ZigenMap :default-scheme="'light'" :hide-scheme-buttons="true" column-min-width="1.52rem" />
+<ZigenMap :default-scheme="'light'" column-min-width="1.52rem" />
 
 ## 字根大碼
 

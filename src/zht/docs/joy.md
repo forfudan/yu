@@ -1,9 +1,5 @@
 # 卿雲爛兮
 
-<script setup>
-import ZigenMap from "@/zigen/ZigenMap.vue"
-</script>
-
 ::: warning 注意
 本方案基於宇浩拆分，爲 25.5 鍵亂序單編、繁簡通打方案。初始學習難度較大，請務必充分了解、分析、平衡其風險和收益後再決定是否學習使用。
 :::
@@ -56,7 +52,11 @@ import ZigenMap from "@/zigen/ZigenMap.vue"
 
 以下爲本方案的字根圖。
 
-<ZigenMap :default-scheme="'joy'" :hide-scheme-buttons="true" column-min-width="1.5rem" />
+<script setup>
+import ZigenMap from "@/zigen/ZigenMap.vue"
+</script>
+
+<ZigenMap :default-scheme="'joy'" column-min-width="1.5rem" />
 
 ## 優缺點
 

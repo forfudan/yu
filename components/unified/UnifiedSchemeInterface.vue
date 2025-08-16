@@ -78,7 +78,7 @@ function handleSchemeChange(schemeId: string) {
 
         <!-- 字根圖組件 -->
         <div class="zigen-section mt-8">
-            <ZigenMap :default-scheme="activeScheme" :hide-scheme-buttons="true" :column-min-width="columnMinWidth" />
+            <ZigenMap :default-scheme="activeScheme" :column-min-width="columnMinWidth" />
         </div>
     </div>
 </template>

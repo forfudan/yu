@@ -61,7 +61,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <Train v-if="cards && chaifenMap" :name="cardsName" :cards :chaifenMap mode="g" />
+    <Train v-if="cards && chaifenMap" :name="cardsName" :cards :chaifenMap mode="g" :supplement="false" :ming="false" />
     <h2 class="text-gray-700 text-center" v-else>
         下载数据中……
     </h2>
