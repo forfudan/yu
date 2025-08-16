@@ -76,14 +76,16 @@ const flatKeyList = computed(() => {
     return keyboardLayout.flat();
 });
 
-// 支持的方案（簡化版，僅用於數據加載）
-const supportedSchemes = ['joy', 'light', 'star', 'ming'];
+// 宇碼方案
+const BaseSchemes = ['joy', 'light', 'star', 'ming', 'wafel'];
 
 // 獲取方案對應的文件URL
 function getSchemeUrls(schemeId: string) {
+    // 判断 defaultScheme 是否在 BaseSchemes 中
+    const isBase = BaseSchemes.includes(schemeId);
     return {
         zigenUrl: `/zigen-${schemeId}.csv`,
-        chaifenUrl: '/chaifen.json'
+        chaifenUrl: isBase ? '/chaifen.json' : `/chaifen-${schemeId}.json`
     };
 }
 
