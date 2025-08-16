@@ -7,6 +7,13 @@ src/.vitepress/cache
 .vscode
 .zed
 
+# Simplified pages (generated from traditional Chinese)
+src/docs/
+src/learn/
+src/practice/
+src/chaifen/
+src/index.md
+
 # Generated files (created during build)
 src/public/*.json
 src/public/*.json.gz
