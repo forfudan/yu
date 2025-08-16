@@ -11,12 +11,12 @@ font,ma
 馬,bma
 ,bma
 魚,be
+亦,bi
 爪,bsa
 瓜,bga
-亦,bi
-示,bka
 未,bo
 末,bmo
+示,bka
 乙,ci
 亅,ci
 乚,ci
@@ -24,9 +24,6 @@ font,ma
 ,co
 世,cka
 又,cu
-ス,co
-マ,co
-癶,cbo
 女,cne
 马,cma
 禾,che
@@ -328,6 +325,9 @@ font,ma
 ,vo
 乂,vi
 ,vi
+ス,vo
+マ,vo
+癶,vo
 ⺁,vi
 斤,vjo
 戶,vhu
