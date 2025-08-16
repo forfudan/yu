@@ -13,4 +13,4 @@ import ZigenMap from "@/zigen/ZigenMap.vue"
 <Train name="light" chaifenUrl="/chaifen_zhu.csv" zigenUrl="/zigen-light.csv" :range="[0,1000]" :supplement="true" :ming='false'/>
 </div>
 
-<ZigenMap :default-scheme="'light'" :hide-scheme-buttons="true" column-min-width="1.5rem" />
+<ZigenMap :default-scheme="'light'" column-min-width="1.5rem" />

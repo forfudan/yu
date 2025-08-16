@@ -36,7 +36,7 @@
 import ZigenMap from "@/zigen/ZigenMap.vue"
 </script>
 
-<ZigenMap :default-scheme="'tianma'" :hide-scheme-buttons="true" column-min-width="1.5rem" :zigenFontClass="'zigen-font-tianma'" />
+<ZigenMap :default-scheme="'tianma'" column-min-width="1.5rem" :zigenFontClass="'zigen-font-tianma'" />
 
 ![天码简要字根表](/天码简要字根表.png)
 

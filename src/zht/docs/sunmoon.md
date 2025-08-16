@@ -128,7 +128,7 @@
 <script setup>
 import ZigenMap from "@/zigen/ZigenMap.vue"
 </script>
-<ZigenMap :default-scheme="'ming'" :hide-scheme-buttons="true" column-min-width="1.52rem" />
+<ZigenMap :default-scheme="'ming'" column-min-width="1.52rem" />
 
 ::: details 更新
 

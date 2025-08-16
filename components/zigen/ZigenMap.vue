@@ -18,7 +18,6 @@ import type { ZigenMap as ZigenMapType, ChaifenMap, Chaifen } from "../search/sh
 
 const props = defineProps<{
     defaultScheme?: string
-    hideSchemeButtons?: boolean
     columnMinWidth?: string
     zigenFontClass?: string // 新增：自定义字根字体类名
 }>()
@@ -26,7 +25,6 @@ const props = defineProps<{
 // 新增：字根字体类名，默认为 'zigen-font'
 const zigenFontClass = computed(() => props.zigenFontClass || 'zigen-font')
 
-const { hideSchemeButtons } = props
 const columnMinWidth = toRef(props, 'columnMinWidth')
 
 // Dynamic grid template columns based on columnMinWidth parameter
@@ -463,15 +461,6 @@ onMounted(() => {
 
 <template>
     <div class="zigen-map-container">
-        <!-- 方案切换圆形按钮（已禁用，由父組件統一管理） -->
-        <!-- <div v-if="!hideSchemeButtons" class="flex justify-center mb-6 space-x-4">
-            <button v-for="scheme in schemes" :key="scheme.id" :class="[
-                'scheme-button',
-                { 'scheme-button-active': activeScheme === scheme.id }
-            ]" :title="scheme.name">
-                <span class="scheme-text">{{ getSchemeChar(scheme.id) }}</span>
-            </button>
-        </div> -->
 
         <!-- 加载状态 -->
         <div v-if="isLoading" class="flex justify-center items-center py-8">
@@ -486,7 +475,7 @@ onMounted(() => {
             </div>
             <!-- 桌面端布局切換按鈕 -->
             <div v-if="!isMobileView" class="flex items-center space-x-2">
-                <span class="text-xs text-gray-400">布局：</span>
+                <span class="text-xs text-gray-400">切換字根圖和字根表：</span>
                 <button @click="toggleDesktopLayout" class="layout-toggle-btn"
                     :class="{ 'layout-toggle-active': isListView }" :title="isListView ? '切換為網格布局' : '切換為列表布局'">
                     <span v-if="!isListView">☰</span>

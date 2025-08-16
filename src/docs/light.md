@@ -19,7 +19,7 @@ Z 键不安排字根，用于反查。
 <script setup>
 import ZigenMap from "@/zigen/ZigenMap.vue"
 </script>
-<ZigenMap :default-scheme="'light'" :hide-scheme-buttons="true" column-min-width="1.52rem" />
+<ZigenMap :default-scheme="'light'" column-min-width="1.52rem" />
 
 光华和星陈的区别，可参见以下表格：
 

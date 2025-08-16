@@ -13,4 +13,4 @@ import ZigenMap from "@/zigen/ZigenMap.vue"
 <Train name="joy"  chaifenUrl="/chaifen.csv" zigenUrl="/zigen-joy.csv" :range="[0,1000]" :supplement="false" :ming='false'/>
 </div>
 
-<ZigenMap :default-scheme="'joy'" :hide-scheme-buttons="true" column-min-width="1.5rem" />
+<ZigenMap :default-scheme="'joy'" column-min-width="1.5rem" />

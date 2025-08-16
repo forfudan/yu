@@ -56,7 +56,7 @@
 import ZigenMap from "@/zigen/ZigenMap.vue"
 </script>
 
-<ZigenMap :default-scheme="'joy'" :hide-scheme-buttons="true" column-min-width="1.5rem" />
+<ZigenMap :default-scheme="'joy'" column-min-width="1.5rem" />
 
 ## 优缺点
 
