@@ -572,7 +572,7 @@ onMounted(() => {
                     <span v-else-if="['a', 'e', 'i', 'o', 'u'].includes(key)" class="mobile-key-desc zigen-font">
                         一碼上屏字
                     </span>
-                    <span v-else class="mobile-key-desc zigen-font">{{ getKeyLabel(key) }}</span>
+                    <span v-else class="mobile-key-desc">{{ getKeyLabel(key) }}</span>
                 </div>
             </div>
         </div>
@@ -1346,7 +1346,7 @@ onMounted(() => {
 .mobile-key-desc {
     font-size: 0.75rem;
     color: var(--fallback-bc, oklch(var(--bc)/0.6));
-    font-style: italic;
+    /* 移除斜体 */
 }
 
 /* 桌面端列表布局優化 */
