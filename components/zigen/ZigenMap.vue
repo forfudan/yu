@@ -20,7 +20,11 @@ const props = defineProps<{
     defaultScheme?: string
     hideSchemeButtons?: boolean
     columnMinWidth?: string
+    zigenFontClass?: string // 新增：自定义字根字体类名
 }>()
+
+// 新增：字根字体类名，默认为 'zigen-font'
+const zigenFontClass = computed(() => props.zigenFontClass || 'zigen-font')
 
 const { hideSchemeButtons } = props
 const columnMinWidth = toRef(props, 'columnMinWidth')
@@ -503,7 +507,7 @@ onMounted(() => {
                         <span v-for="(zigen, index) in zigenByKey[key].visible" :key="index" class="zigen-item"
                             @mouseenter="handleZigenHover($event, zigen)" @mouseleave="handleZigenLeave"
                             @click="handleZigenClick($event, zigen)">
-                            <span class="zigen-font">{{ zigen.font }}</span>
+                            <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code }}</span>
                         </span>
                         <!-- 如果有隐藏的字根，显示省略号 -->
@@ -564,7 +568,7 @@ onMounted(() => {
                         <span v-for="(zigen, index) in sortedZigenByKey[key]" :key="`sorted-${index}`"
                             class="mobile-zigen-item" :class="{ 'mobile-hidden-zigen': zigen.isHidden }"
                             @click="handleZigenClick($event, zigen)">
-                            <span class="zigen-font">{{ zigen.font }}</span>
+                            <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code }}</span>
                         </span>
                     </div>
@@ -599,7 +603,7 @@ onMounted(() => {
                         <div v-for="(zigen, index) in hoveredZigenInfo.visible" :key="`visible-${index}`"
                             class="zigen-row-inline">
                             <div class="zigen-header-inline current-zigen">
-                                <span class="zigen-font">{{ zigen.font }}</span>
+                                <span :class="zigenFontClass">{{ zigen.font }}</span>
                             </div>
                             <!-- 該字根的例字 - 直接跟在字根後面 -->
                             <div v-if="zigenExampleChars[zigen.font]?.length > 0" class="example-chars-same-line">
@@ -615,7 +619,7 @@ onMounted(() => {
                         <div v-for="(zigen, index) in hoveredZigenInfo.hidden" :key="`hidden-${index}`"
                             class="zigen-row-inline">
                             <div class="zigen-header-inline other-zigen">
-                                <span class="zigen-font">{{ zigen.font }}</span>
+                                <span :class="zigenFontClass">{{ zigen.font }}</span>
                             </div>
                             <!-- 該字根的例字 - 直接跟在字根後面 -->
                             <div v-if="zigenExampleChars[zigen.font]?.length > 0" class="example-chars-same-line">
@@ -648,7 +652,7 @@ onMounted(() => {
                         <div v-for="(zigen, index) in pinnedZigenInfo.visible" :key="`pinned-visible-${index}`"
                             class="zigen-row-inline">
                             <div class="zigen-header-inline current-zigen">
-                                <span class="zigen-font">{{ zigen.font }}</span>
+                                <span :class="zigenFontClass">{{ zigen.font }}</span>
                             </div>
                             <!-- 該字根的例字 - 直接跟在字根後面 -->
                             <div v-if="pinnedZigenExampleChars[zigen.font]?.length > 0" class="example-chars-same-line">
@@ -664,7 +668,7 @@ onMounted(() => {
                         <div v-for="(zigen, index) in pinnedZigenInfo.hidden" :key="`pinned-hidden-${index}`"
                             class="zigen-row-inline">
                             <div class="zigen-header-inline other-zigen">
-                                <span class="zigen-font">{{ zigen.font }}</span>
+                                <span :class="zigenFontClass">{{ zigen.font }}</span>
                             </div>
                             <!-- 該字根的例字 - 直接跟在字根後面 -->
                             <div v-if="pinnedZigenExampleChars[zigen.font]?.length > 0" class="example-chars-same-line">
