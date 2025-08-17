@@ -109,7 +109,7 @@ import ZigenMap from "@/zigen/ZigenMap.vue"
 
 1. 使用[字根練習程序](../practice/root_joy.md)學習字根編碼。
 2. 使用[單字練習程序](../practice/char_joy.md)學習前1000高頻字全碼。
-3. 使用[全碼整句模式](#整句模式)在[跟打器](http://yupad.pages.dev/)録入文章並強化記憶。
+3. 使用[全碼整句模式](#整句模式)在[跟打器](http://genda.shurufa.app//)録入文章並強化記憶。
 4. 使用[全碼整句模式](#整句模式)進行日常輸入，按 Z 鍵反查拆分和編碼。
 5. 熟悉全碼後，決定是否轉用四碼定長模式（學習簡碼和詞語輸入）。
 

@@ -43,7 +43,7 @@ export default defineConfig({
       { text: '练习', link: '/practice/root' },
       { text: '安装', link: '/install' },
       { text: '体验', link: '/ming' },
-      { text: '跟打', link: 'https://yupad.pages.dev/' }
+      { text: '跟打', link: 'https://genda.shurufa.app/' }
     ],
     sidebar: {
       '/docs': [
@@ -333,7 +333,7 @@ export default defineConfig({
           items: [
             {
               text: '跟打器',
-              link: 'https://yupad.pages.dev/'
+              link: 'https://genda.shurufa.app/'
             }
           ]
         }
@@ -465,7 +465,7 @@ export default defineConfig({
           { text: '練習', link: '/zht/practice/root' },
           { text: '安裝', link: '/zht/install' },
           { text: '體驗', link: '/ming' },
-          { text: '跟打', link: 'https://yupad.pages.dev/' }
+          { text: '跟打', link: 'https://genda.shurufa.app/' }
         ],
         sidebar: {
           '/zht/docs': [
@@ -756,7 +756,7 @@ export default defineConfig({
               items: [
                 {
                   text: '跟打器',
-                  link: 'https://yupad.pages.dev/'
+                  link: 'https://genda.shurufa.app/'
                 }
               ]
             }
