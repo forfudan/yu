@@ -10960,6 +10960,7 @@ bbji	𤼵
 bbjj	𢑑
 bbjj	
 bbjk	双瞳
+bbjk	𭟷
 bbjl	쫂
 bbjl	쫆
 bbjl	쫋
@@ -11259,6 +11260,7 @@ bboo	🈒
 bboo	ᄍ
 bboo	ㅉ
 bboo	𘢴
+bboo	
 bbop	屡建奇功
 bboq	双颊
 bbos	㠯
@@ -14775,7 +14777,6 @@ bjkc	尉
 bjkf	𢲴
 bjkg	褽
 bjkg	𣂊
-bjkg	𭟷
 bjki	熨
 bjkj	剧组
 bjkj	壁上红旗飘落照
@@ -17615,7 +17616,6 @@ boo	
 boo	
 boo	
 boo	
-boo	
 booa	欒
 booa	𩏹
 booa	𮎂
@@ -20641,6 +20641,7 @@ cbb	⻉
 cbba	𡠏
 cbbb	娺
 cbbb	霛
+cbbb	𩆫
 cbbb	𭛶
 cbbd	奴隶
 cbbd	𫛇
@@ -21044,7 +21045,6 @@ cbuv	彼岸
 cbuw	雪崩
 cbux	贝罗
 cbvb	𩅭
-cbvb	𩆫
 cbvd	雪原
 cbvk	雪野
 cbvs	砮
@@ -173844,6 +173844,7 @@ pbbj	𲆬
 pbbk	𨂳
 pbbl	𤛒
 pbbl	𨢫
+pbbn	𨄛
 pbbo	𧿸
 pbbo	𨠈
 pbbo	𨠡
@@ -173952,7 +173953,6 @@ pbqs	𨂲
 pbre	趹
 pbre	𨀇
 pbrj	𧿻
-pbrn	𨄛
 pbrx	巧言令色
 pbs	踴
 pbsm	蹍
