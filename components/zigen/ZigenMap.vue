@@ -3,11 +3,12 @@
 
   Features:
   - 支持多個方案切換（卿雲、光華、星陳、日月）
-  - 懸停以顯示歸併字根和例字
+  - 點擊顯示歸併字根和例字
   
   Major Modification History:
   - 2025-08-14 by 朱複丹: 初版，實現基礎功能和樣式
   - 2025-08-15 by 朱複丹: 添加字根列表模式
+  - 2025-08-17 by 朱複丹: 移除懸停顯示功能，改為僅點擊顯示以提升性能
 -->
 
 <script setup lang="ts">
@@ -21,10 +22,10 @@ import type { ZigenMap as ZigenMapType, ChaifenMap, Chaifen } from "../search/sh
 const props = defineProps<{
     defaultScheme?: string
     columnMinWidth?: string
-    zigenFontClass?: string // 新增：自定义字根字体类名
+    zigenFontClass?: string // 新增：自定義字根字體類名
 }>()
 
-// 新增：字根字体类名，默认为 'zigen-font'
+// 新增：字根字體類名，默認為 'zigen-font'
 const zigenFontClass = computed(() => props.zigenFontClass || 'zigen-font')
 
 const columnMinWidth = toRef(props, 'columnMinWidth')
@@ -35,20 +36,20 @@ const gridTemplateColumns = computed(() => {
     return `repeat(auto-fill, minmax(${width}, max-content))`
 })
 
-// 键盘布局 - QWERTY垂直排列
+// 鍵盤佈局 - QWERTY垂直排列
 const keyboardLayout = [
     ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
     ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
     ['z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/']
 ];
 
-// 需要显示但暂时留空的键（移除 ,./; 四个键，让它们显示字根）
+// 需要顯示但暫時留空的鍵（移除 ,./; 四個鍵，讓它們顯示字根）
 const emptyKeys = ["'"];
 
 // 移動端檢測
 const isMobileView = ref(false);
 
-// 桌面端布局模式切換
+// 桌面端佈局模式切換
 const isListView = ref(false);
 
 // 檢測屏幕尺寸
@@ -57,7 +58,7 @@ const checkMobileView = () => {
     isMobileView.value = window.innerWidth < 1280;
 };
 
-// 切換桌面端布局模式
+// 切換桌面端佈局模式
 const toggleDesktopLayout = () => {
     isListView.value = !isListView.value;
 };
@@ -76,7 +77,8 @@ const flatKeyList = computed(() => {
     return keyboardLayout.flat();
 });
 
-// 宇碼方案
+// 宇浩輸入法系列方案
+// 共用拆分哦！
 const BaseSchemes = ['joy', 'light', 'star', 'ming', 'wafel'];
 
 // 獲取方案對應的文件URL
@@ -89,22 +91,16 @@ function getSchemeUrls(schemeId: string) {
     };
 }
 
-// 响应式状态
-// 使用传入的 defaultScheme 或默认值，但不创建独立的响应式状态
+// 響應式狀態
+// 使用傳入的 defaultScheme 或默認值，但不創建獨立的響應式狀態
 const activeScheme = computed(() => props.defaultScheme || 'star');
 const zigenMap = ref<ZigenMapType>();
 const chaifenLoader = ref<ChaiDataLoader>();
 const isLoading = ref(false);
-// 当前悬停的字根信息
-const hoveredZigen = ref<string | null>(null);
-const hoveredZigenInfo = ref<{ visible: Array<{ font: string, code: string }>, hidden: Array<{ font: string, code: string }> } | null>(null);
-const hoverPosition = ref({ x: 0, y: 0 });
-// 每個字根的例字數據結構
-const zigenExampleChars = ref<{ [zigenFont: string]: string[] }>({});
 // 例字緩存，key 為 normalizedZigen，value 為 examples Set
 const cachedExampleChars = ref<Map<string, Set<string>>>(new Map());
 // 已經检查的字符数量
-const cachedCheckedCount = ref<int>(0);
+const cachedCheckedCount = ref<number>(0);
 // 固定彈窗狀態
 const pinnedZigen = ref<string | null>(null);
 const pinnedZigenInfo = ref<{ visible: Array<{ font: string, code: string }>, hidden: Array<{ font: string, code: string }> } | null>(null);
@@ -113,7 +109,7 @@ const isPinned = ref(false);
 
 // 監聽方案變化，清除拆分數據緩存
 watch(() => props.defaultScheme, () => {
-    // 清除已緩存的拆分數據加載器，讓新方案在第一次懸停時重新加載
+    // 清除已緩存的拆分數據加載器，讓新方案在第一次點擊時重新加載
     chaifenLoader.value = null;
     // 清除例字緩存，因為不同方案可能有不同的字根定義
     cachedExampleChars.value.clear();
@@ -121,7 +117,7 @@ watch(() => props.defaultScheme, () => {
     console.log('方案已切換，已清除例字緩存');
 });
 
-// 按键分组的字根 - 优化版本，合并相同编码的字根
+// 按鍵分組的字根 - 優化版本，合併相同編碼的字根
 const zigenByKey = computed(() => {
     if (!zigenMap.value) {
         console.log('No zigenMap data');
@@ -132,14 +128,14 @@ const zigenByKey = computed(() => {
 
     const result: Record<string, { visible: Array<{ font: string, code: string }>, hidden: Array<{ font: string, code: string }> }> = {};
 
-    // 先收集所有有效的字根数据
+    // 先收集所有有效的字根數據
     const validZigens: Array<{ font: string, ma: string, firstLetter: string, code: string }> = [];
 
     for (const [key, data] of zigenMap.value) {
         const font = data.font;
         const ma = data.ma?.trim();
 
-        // 只检查编码必须存在，字根字段存在即可（即使看起来是空白字符）
+        // 只檢查編碼必須存在，字根字段存在即可（即使看起來是空白字符）
         if (!ma || ma.length === 0) continue;
         if (font === null || font === undefined) continue;
 
@@ -151,7 +147,7 @@ const zigenByKey = computed(() => {
 
     console.log(`Found ${validZigens.length} valid zigens`);
 
-    // 按按键分组并处理连续相同编码的字根
+    // 按按鍵分組並處理連續相同編碼的字根
     for (let i = 0; i < validZigens.length; i++) {
         const zigen = validZigens[i];
         const { font, ma, firstLetter, code } = zigen;
@@ -304,74 +300,23 @@ const getExampleChars = async (zigen: string): Promise<string[]> => {
     }
 };
 
-// 加载数据
+// 加載數據
 async function loadData() {
     isLoading.value = true;
     try {
-        // 只加载字根数据，不初始化拆分数据加载器
+        // 只加載字根數據，不初始化拆分數據加載器
         const urls = getSchemeUrls(activeScheme.value);
         const zigenData = await fetchZigen(urls.zigenUrl);
         zigenMap.value = zigenData;
 
+        console.log('我就知道你會忍不住打開控制臺😏');
         console.log(`已加載字根數據，文件: ${urls.zigenUrl}`);
-        console.log('注意：拆分數據將在第一次懸停字根時才加載');
+        console.log('注意：拆分數據將在第一次點擊字根時才加載');
 
     } catch (error) {
-        console.error('加载字根数据失败:', error);
+        console.error('加載字根數據失敗:', error);
     } finally {
         isLoading.value = false;
-    }
-}
-
-// 处理字根悬停
-async function handleZigenHover(event: MouseEvent, zigen: { font: string, code: string }) {
-    hoveredZigen.value = zigen.font;
-    hoverPosition.value = { x: event.clientX, y: event.clientY };
-
-    // 懶加載：第一次懸停時才初始化拆分數據加載器
-    if (!chaifenLoader.value) {
-        console.log('第一次懸停，正在初始化拆分數據加載器...');
-        const urls = getSchemeUrls(activeScheme.value);
-        chaifenLoader.value = ChaiDataLoader.getInstance(urls.chaifenUrl);
-        console.log(`已初始化 ChaiDataLoader，使用文件: ${urls.chaifenUrl}`);
-    }
-
-    // 找到所有相同完整编码的字根
-    // 需要先找到当前字根的完整编码（首字母+剩余编码）
-    let fullCode = '';
-    if (zigenMap.value) {
-        for (const [key, data] of zigenMap.value) {
-            if (data.font === zigen.font && data.ma?.slice(1) === zigen.code) {
-                fullCode = data.ma;
-                break;
-            }
-        }
-    }
-
-    const sameCodeZigens = findSameCodeZigens(zigen.font, fullCode);
-    hoveredZigenInfo.value = sameCodeZigens;
-
-    // 為每個字根分別獲取例字
-    console.log('開始獲取例字，字根數量:', [...sameCodeZigens.visible, ...sameCodeZigens.hidden].length);
-    const newZigenExampleChars: { [zigenFont: string]: string[] } = {};
-
-    const allZigens = [...sameCodeZigens.visible, ...sameCodeZigens.hidden];
-    for (const z of allZigens) {
-        console.log(`正在獲取字根 "${z.font}" 的例字...`);
-        const examples = await getExampleChars(z.font);
-        console.log(`字根 "${z.font}" 找到例字:`, examples.length, '個');
-        newZigenExampleChars[z.font] = examples.slice(0, 8); // 每個字根最多8個例字
-    }
-
-    zigenExampleChars.value = newZigenExampleChars;
-}
-
-function handleZigenLeave() {
-    // 如果彈窗已固定，不清除懸停狀態
-    if (!isPinned.value) {
-        hoveredZigen.value = null;
-        hoveredZigenInfo.value = null;
-        zigenExampleChars.value = {};
     }
 }
 
@@ -435,11 +380,6 @@ async function handleZigenClick(event: MouseEvent, zigen: { font: string, code: 
 
     pinnedZigenExampleChars.value = newPinnedZigenExampleChars;
     console.log(`固定彈窗 - 字根 "${zigen.font}" 的最終例字:`, pinnedZigenExampleChars.value);
-
-    // 清除懸停狀態
-    hoveredZigen.value = null;
-    hoveredZigenInfo.value = null;
-    zigenExampleChars.value = {};
 }
 
 // 關閉固定彈窗
@@ -450,7 +390,7 @@ function closePinnedPopup() {
     pinnedZigenExampleChars.value = {};
 }
 
-// 辅助函数：找到所有相同完整编码的字根
+// 輔助函數：找到所有相同完整編碼的字根
 function findSameCodeZigens(targetFont: string, targetFullCode: string) {
     const visible: Array<{ font: string, code: string }> = [];
     const hidden: Array<{ font: string, code: string }> = [];
@@ -466,11 +406,11 @@ function findSameCodeZigens(targetFont: string, targetFullCode: string) {
         // 比较完整编码
         if (ma === targetFullCode) {
             if (font === targetFont) {
-                // 当前悬停的字根放在最前面
-                visible.unshift({ font, code: ma }); // 使用完整编码显示
+                // 當前懸停的字根放在最前面
+                visible.unshift({ font, code: ma }); // 使用完整編碼顯示
             } else {
-                // 其他相同完整编码的字根
-                hidden.push({ font, code: ma }); // 使用完整编码显示
+                // 其他相同完整編碼的字根
+                hidden.push({ font, code: ma }); // 使用完整編碼顯示
             }
         }
     }
@@ -499,18 +439,18 @@ onMounted(() => {
 <template>
     <div class="zigen-map-container">
 
-        <!-- 加载状态 -->
+        <!-- 加載狀態 -->
         <div v-if="isLoading" class="flex justify-center items-center py-8">
             <div class="loading loading-spinner loading-lg"></div>
-            <span class="ml-2">正在加载字根数据...</span>
+            <span class="ml-2">正在加載字根數據...</span>
         </div>
 
-        <!-- 使用提示和桌面端布局切換 -->
+        <!-- 使用提示和桌面端佈局切換 -->
         <div v-if="!isLoading" class="flex justify-between items-center mb-4">
             <div class="text-sm text-gray-500 dark:text-gray-400">
                 點擊字根可查看例字
             </div>
-            <!-- 桌面端布局切換按鈕 -->
+            <!-- 桌面端佈局切換按鈕 -->
             <div v-if="!isMobileView" class="flex items-center space-x-2">
                 <span class="text-xs text-gray-400">切換字根圖和字根表：</span>
                 <button @click="toggleDesktopLayout" class="layout-toggle-btn"
@@ -521,28 +461,27 @@ onMounted(() => {
             </div>
         </div>
 
-        <!-- 键盘字根图 - 桌面端網格布局 -->
+        <!-- 鍵盤字根圖 - 桌面端網格佈局 -->
         <div v-if="!isLoading && zigenMap && !isMobileView && !isListView" class="keyboard-layout">
             <div v-for="(row, rowIndex) in keyboardLayout" :key="rowIndex" class="keyboard-row">
                 <div v-for="key in row" :key="key" class="keyboard-key"
                     :class="{ 'empty-key': emptyKeys.includes(key) }">
-                    <!-- 键位标签 -->
+                    <!-- 鍵位標籤 -->
                     <div class="key-label">{{ key.toUpperCase() }}</div>
 
-                    <!-- 字根显示 - 只显示可见的字根 -->
+                    <!-- 字根顯示 - 只顯示可見的字根 -->
                     <div v-if="!emptyKeys.includes(key) && zigenByKey[key]?.visible.length > 0"
                         class="zigen-list text-indigo-800 dark:text-indigo-300" :style="{ gridTemplateColumns }">
                         <span v-for="(zigen, index) in zigenByKey[key].visible" :key="index" class="zigen-item"
-                            @mouseenter="handleZigenHover($event, zigen)" @mouseleave="handleZigenLeave"
                             @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code }}</span>
                         </span>
-                        <!-- 如果有隐藏的字根，显示省略号 -->
+                        <!-- 如果有隱藏的字根，顯示省略號 -->
                         <span v-if="zigenByKey[key].hidden.length > 0" class="more-indicator">⋯</span>
                     </div>
 
-                    <!-- 无字根提示 -->
+                    <!-- 無字根提示 -->
                     <div v-else-if="!emptyKeys.includes(key)" class="text-xs text-gray-400 no-zigen-text">
                         <div v-if="key === '/'" class="vertical-text zigen-font">
                             <div>引導特殊符號</div>
@@ -585,14 +524,14 @@ onMounted(() => {
             :class="{ 'desktop-list-layout': !isMobileView && isListView }">
             <div v-for="key in flatKeyList" :key="key" class="mobile-key-row"
                 :class="{ 'empty-mobile-key': emptyKeys.includes(key) }">
-                <!-- 按键名称 -->
+                <!-- 按鍵名稱 -->
                 <div class="mobile-key-label">{{ key.toUpperCase() }}</div>
 
-                <!-- 字根显示 -->
+                <!-- 字根顯示 -->
                 <div v-if="!emptyKeys.includes(key) && sortedZigenByKey[key]?.length > 0"
                     class="mobile-zigen-container">
                     <div class="mobile-zigen-list text-indigo-800 dark:text-indigo-300">
-                        <!-- 显示按編碼排序的所有字根 -->
+                        <!-- 顯示按編碼排序的所有字根 -->
                         <span v-for="(zigen, index) in sortedZigenByKey[key]" :key="`sorted-${index}`"
                             class="mobile-zigen-item" :class="{ 'mobile-hidden-zigen': zigen.isHidden }"
                             @click="handleZigenClick($event, zigen)">
@@ -610,55 +549,6 @@ onMounted(() => {
                         一碼上屏字
                     </span>
                     <span v-else class="mobile-key-desc">{{ getKeyLabel(key) }}</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- 悬停卡片 - 显示相同编码的字根 -->
-        <div v-if="hoveredZigen && hoveredZigenInfo" class="hover-card" :style="{
-            left: hoverPosition.x + 10 + 'px',
-            top: hoverPosition.y + 10 + 'px'
-        }">
-            <div class="popup-container">
-                <div class="popup-body">
-                    <h3 class="popup-title">
-                        編碼 {{ hoveredZigenInfo.visible[0]?.code || hoveredZigen }} 上的字根
-                    </h3>
-
-                    <!-- 字根列表 - 每個字根一行，例字在同一行 -->
-                    <div class="zigen-rows text-indigo-800 dark:text-indigo-300">
-                        <!-- 可見字根 -->
-                        <div v-for="(zigen, index) in hoveredZigenInfo.visible" :key="`visible-${index}`"
-                            class="zigen-row-inline">
-                            <div class="zigen-header-inline current-zigen">
-                                <span :class="zigenFontClass">{{ zigen.font }}</span>
-                            </div>
-                            <!-- 該字根的例字 - 直接跟在字根後面 -->
-                            <div v-if="zigenExampleChars[zigen.font]?.length > 0" class="example-chars-same-line">
-                                <span v-for="char in zigenExampleChars[zigen.font].slice(0, MAX_EXAMPLES)" :key="char"
-                                    class="example-char zigen-font">{{ char }}</span>
-                            </div>
-                            <div v-else class="example-chars-same-line">
-                                <span class="loading-text">正在加載...</span>
-                            </div>
-                        </div>
-
-                        <!-- 隱藏字根 -->
-                        <div v-for="(zigen, index) in hoveredZigenInfo.hidden" :key="`hidden-${index}`"
-                            class="zigen-row-inline">
-                            <div class="zigen-header-inline other-zigen">
-                                <span :class="zigenFontClass">{{ zigen.font }}</span>
-                            </div>
-                            <!-- 該字根的例字 - 直接跟在字根後面 -->
-                            <div v-if="zigenExampleChars[zigen.font]?.length > 0" class="example-chars-same-line">
-                                <span v-for="char in zigenExampleChars[zigen.font].slice(0, 8)" :key="char"
-                                    class="example-char zigen-font">{{ char }}</span>
-                            </div>
-                            <div v-else class="example-chars-same-line">
-                                <span class="loading-text">正在加載...</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -897,13 +787,6 @@ onMounted(() => {
     color: var(--fallback-pc, oklch(var(--pc)/0.8));
 }
 
-.hover-card {
-    position: fixed;
-    z-index: 1000;
-    pointer-events: none;
-    max-width: 20rem;
-}
-
 /* 彈出框樣式 - 與鍵位樣式一致 */
 .popup-container {
     background: rgb(249 250 251);
@@ -990,13 +873,6 @@ onMounted(() => {
     font-size: 0.875rem;
 }
 
-.hover-card {
-    position: fixed;
-    z-index: 1000;
-    pointer-events: none;
-    max-width: 20rem;
-}
-
 .example-chars {
     margin-top: 0.5rem;
 }
@@ -1017,8 +893,8 @@ onMounted(() => {
     font-size: 0.875rem;
 }
 
-/* 响应式设计 
-手機和小屏幕设备上调整键位大小和字根字体大小 
+/* 響應式設計 
+手機和小屏幕設備上調整鍵位大小和字根字體大小 
 */
 @media (max-width: 768px) {
     .keyboard-key {
@@ -1035,7 +911,7 @@ onMounted(() => {
     }
 }
 
-/* 布局切換按鈕樣式 */
+/* 佈局切換按鈕樣式 */
 .layout-toggle-btn {
     width: 2rem;
     height: 2rem;
@@ -1115,7 +991,7 @@ onMounted(() => {
     }
 }
 
-/* 悬停卡片中的字根列样式 */
+/* 懸停卡片中的字根列樣式 */
 .zigen-columns {
     display: flex;
     flex-wrap: wrap;
