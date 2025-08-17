@@ -642,8 +642,8 @@ onMounted(() => {
     max-width: 8rem;
     min-height: 4.5rem;
     padding: 0.5rem 0.375rem;
-    background: rgb(249 250 251);
-    border: 1px solid var(--fallback-bc, oklch(var(--bc)/0.1));
+    background: rgb(250 245 255);
+    border: 1px solid rgb(233 213 255);
     border-radius: 1.25rem;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -656,13 +656,20 @@ onMounted(() => {
 }
 
 .dark .keyboard-key {
-    background: rgb(15 23 42);
+    background: rgb(30 27 75);
+    border-color: rgb(88 28 135);
 }
 
 .keyboard-key:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    border-color: var(--fallback-p, oklch(var(--p)/0.3));
+    border-color: rgb(196 181 253);
+    background: rgb(245 243 255);
+}
+
+.dark .keyboard-key:hover {
+    background: rgb(55 48 163);
+    border-color: rgb(147 51 234);
 }
 
 .empty-key {
@@ -674,12 +681,17 @@ onMounted(() => {
 .key-label {
     font-size: 0.8rem;
     font-weight: 600;
-    /* color: var(--fallback-nc, oklch(var(--nc)/0.8)); */
-    border-bottom: 1px solid var(--fallback-bc, oklch(var(--bc)/0.15));
+    color: rgb(88 28 135);
+    border-bottom: 1px solid rgb(233 213 255);
     padding-bottom: 0.15rem;
     margin-bottom: 0.15rem;
     width: 100%;
     text-align: center;
+}
+
+.dark .key-label {
+    color: rgb(196 181 253);
+    border-bottom-color: rgb(147 51 234);
 }
 
 .zigen-list {
@@ -714,16 +726,26 @@ onMounted(() => {
 }
 
 .zigen-item:hover {
-    background: var(--fallback-p, oklch(var(--p)/0.1));
-    color: var(--fallback-p, oklch(var(--p)/1));
-    border-color: var(--fallback-p, oklch(var(--p)/0.3));
+    background: rgb(196 181 253);
+    color: rgb(88 28 135);
+    border-color: rgb(147 51 234);
     transform: scale(1.05);
+}
+
+.dark .zigen-item:hover {
+    background: rgb(147 51 234);
+    color: rgb(245 243 255);
+    border-color: rgb(196 181 253);
 }
 
 .more-indicator {
     font-size: 0.4rem;
-    color: var(--fallback-nc, oklch(var(--nc)/0.5));
+    color: rgb(168 85 247);
     margin-left: 0.1rem;
+}
+
+.dark .more-indicator {
+    color: rgb(196 181 253);
 }
 
 /* 无字根文字竖排样式 */
@@ -764,14 +786,14 @@ onMounted(() => {
 .zigen-code {
     font-family: monospace;
     font-size: 0.7rem;
-    color: #666666 !important;
+    color: rgb(107 114 128) !important;
     font-weight: 400;
 }
 
 /* 在亮色模式下使用更深的顏色 */
 @media (prefers-color-scheme: light) {
     .zigen-code {
-        color: rgb(55 65 81) !important;
+        color: rgb(71 85 105) !important;
         /* 更深的灰色，使用 !important */
     }
 }
@@ -779,18 +801,22 @@ onMounted(() => {
 /* 針對 zigen-item 內的編碼 */
 @media (prefers-color-scheme: light) {
     .zigen-item .zigen-code {
-        color: rgb(55 65 81) !important;
+        color: rgb(71 85 105) !important;
     }
 }
 
 .zigen-item:hover .zigen-code {
-    color: var(--fallback-pc, oklch(var(--pc)/0.8));
+    color: rgb(245 243 255) !important;
+}
+
+.dark .zigen-item:hover .zigen-code {
+    color: rgb(30 27 75) !important;
 }
 
 /* 彈出框樣式 - 與鍵位樣式一致 */
 .popup-container {
-    background: rgb(249 250 251);
-    border: 1px solid var(--fallback-bc, oklch(var(--bc)/0.1));
+    background: rgb(250 245 255);
+    border: 1px solid rgb(233 213 255);
     border-radius: 1.25rem;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     transition: all 0.2s ease;
@@ -798,7 +824,8 @@ onMounted(() => {
 }
 
 .dark .popup-container {
-    background: rgb(15 23 42);
+    background: rgb(30 27 75);
+    border-color: rgb(88 28 135);
 }
 
 .popup-body {
@@ -808,11 +835,16 @@ onMounted(() => {
 .popup-title {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--fallback-nc, oklch(var(--nc)/0.8));
-    border-bottom: 1px solid var(--fallback-bc, oklch(var(--bc)/0.15));
+    color: rgb(88 28 135);
+    border-bottom: 1px solid rgb(233 213 255);
     padding-bottom: 0.5rem;
     margin-bottom: 0.75rem;
     text-align: center;
+}
+
+.dark .popup-title {
+    color: rgb(196 181 253);
+    border-bottom-color: rgb(147 51 234);
 }
 
 /* 固定彈窗樣式 */
@@ -836,12 +868,12 @@ onMounted(() => {
 }
 
 .close-btn {
-    background: var(--fallback-error, oklch(var(--er)/0.1));
-    border: 1px solid var(--fallback-error, oklch(var(--er)/0.3));
+    background: rgb(254 226 226);
+    border: 1px solid rgb(252 165 165);
     border-radius: 0.375rem;
     padding: 0.25rem 0.5rem;
     font-size: 0.75rem;
-    color: var(--fallback-error, oklch(var(--er)/1));
+    color: rgb(220 38 38);
     cursor: pointer;
     transition: all 0.2s ease;
     flex-shrink: 0;
@@ -849,28 +881,18 @@ onMounted(() => {
 }
 
 .close-btn:hover {
-    background: var(--fallback-error, oklch(var(--er)/0.2));
+    background: rgb(254 202 202);
     transform: scale(1.05);
 }
 
-.example-chars {
-    margin-top: 0.5rem;
+.dark .close-btn {
+    background: rgb(127 29 29);
+    border-color: rgb(239 68 68);
+    color: rgb(254 202 202);
 }
 
-.chars-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(1.5rem, 1fr));
-    gap: 0.25rem;
-    max-height: 8rem;
-    overflow-y: auto;
-}
-
-.example-char {
-    text-align: center;
-    padding: 0.125rem;
-    border-radius: 0.25rem;
-    background-color: var(--fallback-b2, oklch(var(--b2)/var(--tw-bg-opacity)));
-    font-size: 0.875rem;
+.dark .close-btn:hover {
+    background: rgb(153 27 27);
 }
 
 .example-chars {
@@ -889,8 +911,16 @@ onMounted(() => {
     text-align: center;
     padding: 0.125rem;
     border-radius: 0.25rem;
-    background-color: var(--fallback-b2, oklch(var(--b2)/var(--tw-bg-opacity)));
+    background-color: rgb(254 243 199);
     font-size: 0.875rem;
+    color: rgb(120 53 15);
+    border: 1px solid rgb(251 191 36);
+}
+
+.dark .example-char {
+    background-color: rgb(30 41 59);
+    color: rgb(251 191 36);
+    border-color: rgb(245 158 11);
 }
 
 /* 響應式設計 
@@ -916,9 +946,9 @@ onMounted(() => {
     width: 2rem;
     height: 2rem;
     border-radius: 0.375rem;
-    background-color: rgb(243 244 246);
-    border: 1px solid rgb(209 213 219);
-    color: rgb(107 114 128);
+    background-color: rgb(254 243 199);
+    border: 1px solid rgb(251 191 36);
+    color: rgb(120 53 15);
     font-size: 0.875rem;
     transition: all 0.2s ease;
     cursor: pointer;
@@ -928,38 +958,38 @@ onMounted(() => {
 }
 
 .dark .layout-toggle-btn {
-    background-color: rgb(55 65 81);
-    border-color: rgb(75 85 99);
-    color: rgb(156 163 175);
+    background-color: rgb(30 41 59);
+    border-color: rgb(245 158 11);
+    color: rgb(251 191 36);
 }
 
 .layout-toggle-btn:hover {
-    background-color: rgb(229 231 235);
-    border-color: rgb(156 163 175);
-    color: rgb(75 85 99);
+    background-color: rgb(253 230 138);
+    border-color: rgb(245 158 11);
+    color: rgb(120 53 15);
 }
 
 .dark .layout-toggle-btn:hover {
-    background-color: rgb(75 85 99);
-    border-color: rgb(107 114 128);
-    color: rgb(209 213 219);
+    background-color: rgb(51 65 85);
+    border-color: rgb(245 158 11);
+    color: rgb(251 191 36);
 }
 
 .layout-toggle-active {
-    background-color: rgb(59 130 246);
-    border-color: rgb(59 130 246);
-    color: white;
+    background-color: rgb(196 181 253);
+    border-color: rgb(147 51 234);
+    color: rgb(88 28 135);
 }
 
 .dark .layout-toggle-active {
-    background-color: rgb(59 130 246);
-    border-color: rgb(59 130 246);
-    color: white;
+    background-color: rgb(147 51 234);
+    border-color: rgb(196 181 253);
+    color: rgb(245 243 255);
 }
 
 .layout-toggle-active:hover {
-    background-color: rgb(37 99 235);
-    border-color: rgb(37 99 235);
+    background-color: rgb(167 139 250);
+    border-color: rgb(126 34 206);
 }
 
 .scheme-button-active:hover {
@@ -1159,20 +1189,28 @@ onMounted(() => {
     width: 100%;
     min-height: 2.5rem;
     padding: var(--mobile-key-padding);
-    background: rgb(249 250 251);
-    border: 1px solid var(--fallback-bc, oklch(var(--bc)/0.1));
+    background: rgb(250 245 255);
+    border: 1px solid rgb(233 213 255);
     border-radius: 0.75rem;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
     transition: all 0.2s ease;
 }
 
 .dark .mobile-key-row {
-    background: rgb(15 23 42);
+    background: rgb(30 27 75);
+    border-color: rgb(88 28 135);
 }
 
 .mobile-key-row:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    background: rgb(245 243 255);
+    border-color: rgb(196 181 253);
+}
+
+.dark .mobile-key-row:hover {
+    background: rgb(55 48 163);
+    border-color: rgb(147 51 234);
 }
 
 .empty-mobile-key {
@@ -1184,9 +1222,13 @@ onMounted(() => {
     width: 2rem;
     font-size: 0.875rem;
     font-weight: 600;
-    /* color: var(--fallback-nc, oklch(var(--nc)/0.8)); */
+    color: rgb(88 28 135);
     text-align: center;
     margin-right: 0.75rem;
+}
+
+.dark .mobile-key-label {
+    color: rgb(196 181 253);
 }
 
 .mobile-zigen-container {
@@ -1215,7 +1257,13 @@ onMounted(() => {
 }
 
 .mobile-zigen-item:hover {
-    background: var(--fallback-bc, oklch(var(--bc)/0.1));
+    background: rgb(196 181 253);
+    color: rgb(88 28 135);
+}
+
+.dark .mobile-zigen-item:hover {
+    background: rgb(147 51 234);
+    color: rgb(245 243 255);
 }
 
 /* 列表模式中的隱藏字根樣式 
