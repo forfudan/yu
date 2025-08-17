@@ -31951,7 +31951,6 @@ db	⽨
 db	⽩
 db	🀆
 db	𘯕
-db	
 dbaa	𧆘
 dbac	白礬
 dbad	白云
@@ -32700,7 +32699,6 @@ dckc	参谋长
 dcke	𱾋
 dckf	通讯员
 dckf	参议员
-dckg	𭟷
 dckh	𦹆
 dckh	𫉸
 dckk	䔅
@@ -33076,6 +33074,7 @@ ddcj	쮑
 ddcj	쮧
 ddcj	쮭
 ddcj	敬若神明
+ddck	𭟷
 ddck	쭎
 ddck	쭒
 ddck	쭗
@@ -33657,6 +33656,7 @@ ddi	𫨷
 ddi	🈒
 ddi	ᄍ
 ddi	ㅉ
+ddi	
 ddic	𧊬
 ddic	藥學
 ddid	芆
@@ -255058,6 +255058,7 @@ sddd	畷
 sddd	𭿁
 sddd	被薜荔兮带女萝
 sddd	被薜荔兮帶女蘿
+sdde	𩆫
 sdde	雪莲花
 sdde	雪蓮花
 sddh	瞞著
@@ -255407,7 +255408,6 @@ sdsd	凤凰
 sdsd	𣀮
 sdsd	𥍜
 sdsd	雲蒸霞蔚
-sdse	𩆫
 sdsf	颱風
 sdsg	𣰶
 sdsg	𥀶
@@ -315879,6 +315879,7 @@ xddd	輟
 xddd	罬
 xddd	䟾
 xddd	𨀝
+xdde	𨄛
 xdde	雄花
 xddh	𰹚
 xddh	蹬著
@@ -316161,7 +316162,6 @@ xdtu	𨏕
 xdty	友鄰
 xdua	𨃓
 xdua	𮜌
-xdue	𨄛
 xdue	雄鷹
 xdue	雄鹰
 xdui	友邻
