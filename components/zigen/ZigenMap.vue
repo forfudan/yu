@@ -101,6 +101,10 @@ const hoveredZigenInfo = ref<{ visible: Array<{ font: string, code: string }>, h
 const hoverPosition = ref({ x: 0, y: 0 });
 // 每個字根的例字數據結構
 const zigenExampleChars = ref<{ [zigenFont: string]: string[] }>({});
+// 例字緩存，key 為 normalizedZigen，value 為 examples Set
+const cachedExampleChars = ref<Map<string, Set<string>>>(new Map());
+// 已經检查的字符数量
+const cachedCheckedCount = ref<int>(0);
 // 固定彈窗狀態
 const pinnedZigen = ref<string | null>(null);
 const pinnedZigenInfo = ref<{ visible: Array<{ font: string, code: string }>, hidden: Array<{ font: string, code: string }> } | null>(null);
@@ -111,6 +115,10 @@ const isPinned = ref(false);
 watch(() => props.defaultScheme, () => {
     // 清除已緩存的拆分數據加載器，讓新方案在第一次懸停時重新加載
     chaifenLoader.value = null;
+    // 清除例字緩存，因為不同方案可能有不同的字根定義
+    cachedExampleChars.value.clear();
+    cachedCheckedCount.value = 0;
+    console.log('方案已切換，已清除例字緩存');
 });
 
 // 按键分组的字根 - 优化版本，合并相同编码的字根
@@ -206,13 +214,27 @@ const sortedZigenByKey = computed(() => {
 
 // 获取包含指定字根的例字
 const getExampleChars = async (zigen: string): Promise<string[]> => {
+    // 確保字根是正確的 Unicode 字符串
+    const normalizedZigen = zigen.normalize('NFC');
+
+    let examples: Set<string> = new Set();
+
+    // 檢查緩存中是否已有該字根的例字
+    if (cachedExampleChars.value.has(normalizedZigen)) {
+        examples = cachedExampleChars.value.get(normalizedZigen)!;
+        console.log(`✅ 從緩存中獲取字根 "${normalizedZigen}" 的例字 ${examples.size} 個`);
+        if (examples.size >= MAX_EXAMPLES) {
+            return Array.from(examples);
+        }
+    }
+
     if (!chaifenLoader.value) {
         console.log('chaifenLoader 未初始化');
         return [];
     }
 
     try {
-        console.log(`開始為字根 "${zigen}" 搜索例字...`);
+        console.log(`開始為字根 "${zigen}(${normalizedZigen})" 搜索例字, cachedCheckedCount=${cachedCheckedCount.value}...`);
 
         // 添加超時處理
         const timeoutPromise = new Promise<never>((_, reject) => {
@@ -224,18 +246,12 @@ const getExampleChars = async (zigen: string): Promise<string[]> => {
             timeoutPromise
         ]);
 
-        const examples: string[] = [];
-
-        // 確保字根是正確的 Unicode 字符串
-        const normalizedZigen = zigen.normalize('NFC');
-        console.log(`搜索字根: "${normalizedZigen}"`);
-
         // 檢查前幾個字符的數據格式
         const sampleEntries = Object.entries(optimizedData).slice(0, 3);
         console.log('數據樣本:', sampleEntries);
 
         let checkedCount = 0;
-        for (const [char, data] of Object.entries(optimizedData)) {
+        for (const [char, data] of Object.entries(optimizedData).slice(cachedCheckedCount.value)) {
             checkedCount++;
 
             const charData = data as { d?: string, dt?: string, r?: string };
@@ -245,21 +261,40 @@ const getExampleChars = async (zigen: string): Promise<string[]> => {
                 console.log(`字符 "${char}" 的拆分數據:`, charData.d);
             }
 
-            // 檢查拆分數據是否包含指定字根
-            if (charData.d?.includes(normalizedZigen)) {
-                console.log(`✅ 找到匹配: "${char}" 包含字根 "${normalizedZigen}", 拆分: "${charData.d}"`);
-                examples.push(char);
-                if (examples.length >= MAX_EXAMPLES) break;
+            // 將 charData.d 中的每個字根都加入對應的緩存集合
+            if (charData.d) {
+                for (const zigenItem of charData.d) {
+                    // 確保緩存中有對應的集合
+                    if (!cachedExampleChars.value.has(zigenItem)) {
+                        cachedExampleChars.value.set(zigenItem, new Set());
+                    }
+                    const set = cachedExampleChars.value.get(zigenItem)!;
+                    if (set.size < MAX_EXAMPLES) {
+                        set.add(char);
+                    }
+
+                    if (zigenItem === normalizedZigen) {
+                        examples = set;
+                        console.log(`✅ 找到匹配: "${char}" 包含字根 "${normalizedZigen}", 拆分: "${charData.d}"`);
+                    }
+                }
+
+                if (examples.size >= MAX_EXAMPLES) {
+                    break;
+                }
             }
 
             // 每檢查1000個字符輸出一次進度
             if (checkedCount % 1000 === 0) {
-                console.log(`已檢查 ${checkedCount} 個字符，找到 ${examples.length} 個例字`);
+                console.log(`已檢查 ${checkedCount} 個字符，找到 ${examples.size} 個例字`);
             }
         }
 
-        console.log(`字根 "${normalizedZigen}" 最終找到例字:`, examples.slice(0, 5), `(總共${examples.length}個)`);
-        return examples;
+        cachedCheckedCount.value += checkedCount;
+
+        console.log(`字根 "${normalizedZigen}" 最終找到例字:`, Array.from(examples).slice(0, 5), `(總共${examples.size}個)`);
+
+        return Array.from(examples);
     } catch (error) {
         console.error('获取例字失败:', error);
         if (error instanceof Error && error.message === '數據加載超時') {
