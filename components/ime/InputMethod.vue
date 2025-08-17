@@ -208,6 +208,8 @@ const text = ref('')
 const textarea = ref<HTMLInputElement>()
 
 function onClick(key: string) {
+    console.log('[onClick] key:', key);
+
     // 中英文切换
     if (key === 'toggle-lang') {
         isChineseMode.value = !isChineseMode.value
@@ -262,8 +264,38 @@ function onClick(key: string) {
         return
     }
 
+    // 特殊处理分号和单引号：有候选时选择候选项，无候选时输入标点
+    if (key === ';' && candidateCodes.value && candidatePage.value.length >= 2) {
+        // 分号选择第2个候选项
+        commit(candidatePage.value[1].name)
+        candidateCodes.value = ''
+        candidatePageIndex.value = 0
+        return
+    }
+
+    if (key === "'" && candidateCodes.value && candidatePage.value.length >= 3) {
+        // 单引号选择第3个候选项
+        commit(candidatePage.value[2].name)
+        candidateCodes.value = ''
+        candidatePageIndex.value = 0
+        return
+    }
+
+    // 双引号永远输入中文标点
+    if (key === '"') {
+        // 如果有编码，先上屏第一个候选项
+        if (candidateCodes.value && candidatePage.value.length > 0) {
+            commit(candidatePage.value[0].name)
+            candidateCodes.value = ''
+            candidatePageIndex.value = 0
+        }
+        // 然后输入双引号
+        commit(key)
+        return
+    }
+
     // 检查是否为标点符号，标点符号直接输入
-    const punctuationChars = [',', '.', ';', '!', '?', '[', ']', '{', '}', '"', "'", '(', ')']
+    const punctuationChars = [',', '.', '!', '?', '[', ']', '{', '}', '(', ')', '\\']
     if (punctuationChars.includes(key)) {
         // 如果有编码，先上屏第一个候选项
         if (candidateCodes.value && candidatePage.value.length > 0) {
@@ -296,6 +328,7 @@ function onClick(key: string) {
 
 // 中文标点符号转换函数
 function convertToChinese(words: string): string {
+    console.log('[convertToChinese] called:', { words, isChineseMode: isChineseMode.value });
     if (!isChineseMode.value) {
         return words
     }
@@ -321,6 +354,9 @@ function convertToChinese(words: string): string {
                 break
             case '?':
                 result += '？'
+                break
+            case '\\':
+                result += '、'
                 break
             case '[':
                 result += '「'
@@ -573,7 +609,7 @@ function checkAutoCommit(nextKey: string) {
 }
 
 //#region 电脑键盘事件
-const keysListened = new Set(`abcdefghijklmnopqrstuvwxyz/,.${props.rule.keys === 27 ? ';' : ''}`)
+const keysListened = new Set(`abcdefghijklmnopqrstuvwxyz/;'",.[]{}!?\\${props.rule.keys === 27 ? ';' : ''}`)
 
 const commitKeys = computed(() => {
     const { cm1, cm2, cm3 } = props.rule
@@ -611,14 +647,54 @@ function onKeydown(e: KeyboardEvent) {
     }
 
     const cd = candidateCodes.value
-
     // 输入按键
     if (keysListened.has(key)) {
         e.preventDefault()
         e.stopPropagation()
 
+        // 特殊处理分号和单引号：有候选时选择候选项，无候选时输入标点
+        if (key === ';') {
+            if (candidateCodes.value && candidatePage.value.length >= 2) {
+                // 分号选择第2个候选项
+                commit(candidatePage.value[1].name)
+                candidateCodes.value = ''
+                candidatePageIndex.value = 0
+            } else {
+                // 无候选项时输入中文分号
+                console.log('输入中文分号')
+                commit(key)
+            }
+            return
+        }
+
+        if (key === "'") {
+            if (candidateCodes.value && candidatePage.value.length >= 3) {
+                // 单引号选择第3个候选项
+                commit(candidatePage.value[2].name)
+                candidateCodes.value = ''
+                candidatePageIndex.value = 0
+            } else {
+                // 无候选项时输入中文单引号
+                commit(key)
+            }
+            return
+        }
+
+        // 双引号永远输入中文标点
+        if (key === '"') {
+            // 如果有编码，先上屏第一个候选项
+            if (candidateCodes.value && candidatePage.value.length > 0) {
+                commit(candidatePage.value[0].name)
+                candidateCodes.value = ''
+                candidatePageIndex.value = 0
+            }
+            // 然后输入双引号
+            commit(key)
+            return
+        }
+
         // 检查是否为标点符号，标点符号直接输入
-        const punctuationChars = [',', '.', ';', '!', '?', '[', ']', '{', '}', '"', "'", '(', ')']
+        const punctuationChars = [',', '.', '!', '?', '[', ']', '{', '}', '(', ')', '\\']
         if (punctuationChars.includes(key)) {
             // 如果有编码，先上屏第一个候选项
             if (candidateCodes.value && candidatePage.value.length > 0) {
