@@ -92,12 +92,12 @@ try {
             'chaifen-tianma.json',
             'chaifen_tw.json',
             'chaifen_zhu.json',
-            'mabiao_ming.json'
+            'mabiao-ming.json'
         ],
         compression_stats: {
             'chaifen.csv': '2.79MB → 883KB (69.1% reduction)',
             'chaifen-tianma.csv': '2.44MB → 796KB (68.2% reduction)',
-            'mabiao_ming.txt': '2.8MB → 1.5MB (37.4% reduction)'
+            'mabiao-ming.txt': '2.8MB → 1.5MB (37.4% reduction)'
         }
     }
 

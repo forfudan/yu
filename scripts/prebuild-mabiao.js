@@ -20,8 +20,8 @@ const __dirname = dirname(__filename)
 const projectRoot = path.join(__dirname, '..')
 
 // 文件路径配置
-const INPUT_FILE = path.join(projectRoot, 'src', 'public', 'mabiao_ming.txt')
-const OUTPUT_COMPRESSED = path.join(projectRoot, 'src', 'public', 'mabiao_ming.json')
+const INPUT_FILE = path.join(projectRoot, 'src', 'public', 'mabiao-ming.txt')
+const OUTPUT_COMPRESSED = path.join(projectRoot, 'src', 'public', 'mabiao-ming.json')
 
 /**
  * 解析 TSV 格式的碼表文件

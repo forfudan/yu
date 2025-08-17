@@ -7,4 +7,4 @@ import IME from '@/ime/FetchInput.vue'
 
 # 宇浩日月在線輸入
 
-<IME mabiaoUrl="/mabiao_ming.json" />
+<IME mabiaoUrl="/mabiao-ming.json" />
