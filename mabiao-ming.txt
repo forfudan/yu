@@ -2131,6 +2131,7 @@ wsfo	健
 wsni	会
 wssu	假
 wsyi	倒
+wtgi	什麽
 wygo	價
 wyja	傷
 xcdo	总
