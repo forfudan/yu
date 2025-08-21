@@ -9,6 +9,7 @@
   - 2025-08-14 by 朱複丹: 初版，實現基礎功能和樣式
   - 2025-08-15 by 朱複丹: 添加字根列表模式
   - 2025-08-17 by 朱複丹: 移除懸停顯示功能，改為僅點擊顯示以提升性能
+  - 2025-08-21 by 朱複丹: 允許字根列表模式下按鍵按照字母表順序排列
 -->
 
 <script setup lang="ts">
@@ -25,7 +26,7 @@ const props = defineProps<{
     zigenFontClass?: string // 新增：自定義字根字體類名
 }>()
 
-// 新增：字根字體類名，默認為 'zigen-font'
+// 字根字體類名，默認為 'zigen-font'
 const zigenFontClass = computed(() => props.zigenFontClass || 'zigen-font')
 
 const columnMinWidth = toRef(props, 'columnMinWidth')
@@ -52,6 +53,9 @@ const isMobileView = ref(false);
 // 桌面端佈局模式切換
 const isListView = ref(false);
 
+// 列表視圖中按鍵排序模式切換（鍵盤順序 vs 字母順序）
+const sortKeysByAlphabet = ref(false);
+
 // 檢測屏幕尺寸
 // 小於此寬度則為移動端顯示模式
 const checkMobileView = () => {
@@ -63,6 +67,11 @@ const toggleDesktopLayout = () => {
     isListView.value = !isListView.value;
 };
 
+// 切換按鍵排序模式
+const toggleKeyOrder = () => {
+    sortKeysByAlphabet.value = !sortKeysByAlphabet.value;
+};
+
 onMounted(() => {
     checkMobileView();
     window.addEventListener('resize', checkMobileView);
@@ -72,9 +81,28 @@ onUnmounted(() => {
     window.removeEventListener('resize', checkMobileView);
 });
 
-// 扁平化的按鍵列表（移動端用）
+// 扁平化的按鍵列表（移動端和桌面端列表視圖用）
 const flatKeyList = computed(() => {
-    return keyboardLayout.flat();
+    const keys = keyboardLayout.flat();
+
+    // 如果是列表視圖且需要字母排序，則按字母順序排序
+    if (sortKeysByAlphabet.value) {
+        return keys.slice().sort((a, b) => {
+            // 判斷是否為字母
+            const isAlphaA = /^[a-zA-Z]$/.test(a);
+            const isAlphaB = /^[a-zA-Z]$/.test(b);
+
+            // 字母優先，非字母按鍵放在後面
+            if (isAlphaA && !isAlphaB) return -1;
+            if (!isAlphaA && isAlphaB) return 1;
+
+            // 都是字母或都不是字母，則按字典序排序
+            return a.localeCompare(b);
+        });
+    }
+
+    // 否則保持鍵盤佈局順序
+    return keys;
 });
 
 // 宇浩輸入法系列方案
@@ -182,7 +210,6 @@ const zigenByKey = computed(() => {
 });
 
 // 按編碼排序的字根列表（用於列表模式）
-// 按文件原始順序的字根列表（用於列表模式）
 const sortedZigenByKey = computed(() => {
     if (!zigenMap.value) return {};
 
@@ -204,6 +231,9 @@ const sortedZigenByKey = computed(() => {
         const isHidden = result[firstLetter].some(z => z.code === code);
         result[firstLetter].push({ font, code, isHidden });
     }
+
+    // 保持鍵盤順序（原始文件順序），不再在這裡進行字根排序
+    // 原始文件的排序是經過了一定的歸併處理的
 
     return result;
 });
@@ -445,18 +475,42 @@ onMounted(() => {
             <span class="ml-2">正在加載字根數據...</span>
         </div>
 
-        <!-- 使用提示和桌面端佈局切換 -->
+        <!-- 使用提示和控制按鈕 -->
         <div v-if="!isLoading" class="flex justify-between items-center mb-4">
             <div class="text-sm text-gray-500 dark:text-gray-400">
                 點擊字根可查看例字
             </div>
-            <!-- 桌面端佈局切換按鈕 -->
-            <div v-if="!isMobileView" class="flex items-center space-x-2">
-                <span class="text-xs text-gray-400">切換字根圖和字根表：</span>
-                <button @click="toggleDesktopLayout" class="layout-toggle-btn"
-                    :class="{ 'layout-toggle-active': isListView }" :title="isListView ? '切換為網格布局' : '切換為列表布局'">
-                    <span v-if="!isListView">☰</span>
-                    <span v-else>⊞</span>
+
+            <!-- 桌面端控制按鈕 -->
+            <div v-if="!isMobileView" class="flex items-center space-x-4">
+                <div class="flex items-center space-x-2">
+                    <span class="text-xs text-gray-400">切換字根圖和字根表：</span>
+                    <button @click="toggleDesktopLayout" class="layout-toggle-btn"
+                        :class="{ 'layout-toggle-active': isListView }" :title="isListView ? '切換為網格布局' : '切換為列表布局'">
+                        <span v-if="!isListView">☰</span>
+                        <span v-else>⊞</span>
+                    </button>
+                </div>
+                <!-- 桌面端列表視圖按鍵排序切換按鈕 -->
+                <div v-if="isListView" class="flex items-center space-x-2">
+                    <span class="text-xs text-gray-400">按鍵排序：</span>
+                    <button @click="toggleKeyOrder" class="layout-toggle-btn"
+                        :class="{ 'layout-toggle-active': sortKeysByAlphabet }"
+                        :title="sortKeysByAlphabet ? '切換為鍵盤順序' : '切換為字母順序'">
+                        <span v-if="!sortKeysByAlphabet">🔤</span>
+                        <span v-else>⌨️</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 移動端按鍵排序切換按鈕 -->
+            <div v-if="isMobileView" class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">按鍵排序：</span>
+                <button @click="toggleKeyOrder" class="layout-toggle-btn"
+                    :class="{ 'layout-toggle-active': sortKeysByAlphabet }"
+                    :title="sortKeysByAlphabet ? '切換為鍵盤順序' : '切換為字母順序'">
+                    <span v-if="!sortKeysByAlphabet">🔤</span>
+                    <span v-else>⌨️</span>
                 </button>
             </div>
         </div>
