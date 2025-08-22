@@ -43,7 +43,8 @@ export default defineConfig({
       { text: '练习', link: '/practice/root' },
       { text: '安装', link: '/install' },
       { text: '体验', link: '/ming' },
-      { text: '跟打', link: 'https://genda.shurufa.app/' }
+      { text: '跟打', link: 'https://genda.shurufa.app/' },
+      { text: '测评', link: 'https://ceping.shurufa.app/' },
     ],
     sidebar: {
       '/docs': [
@@ -465,7 +466,8 @@ export default defineConfig({
           { text: '練習', link: '/zht/practice/root' },
           { text: '安裝', link: '/zht/install' },
           { text: '體驗', link: '/ming' },
-          { text: '跟打', link: 'https://genda.shurufa.app/' }
+          { text: '跟打', link: 'https://genda.shurufa.app/' },
+          { text: '測評', link: 'https://ceping.shurufa.app/' },
         ],
         sidebar: {
           '/zht/docs': [
