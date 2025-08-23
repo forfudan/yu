@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "宇浩輸入法"
+  name: "宇浩系列輸入法"
   text: "情繫漢字 溝通古今"
   tagline: 全漢字字形輸入・繁簡通打・極低選重
   image:

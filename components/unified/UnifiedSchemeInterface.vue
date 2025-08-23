@@ -56,7 +56,7 @@ function handleSchemeChange(schemeId: string) {
                 <!-- 方案信息 -->
                 <div class="scheme-info hidden md:block">
                     <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                        當前方案：{{ currentScheme.name }}
+                        當前輸入法：{{ currentScheme.name }}
                     </h3>
                     <p class="text-sm text-gray-500 dark:text-gray-400">
                         {{ currentScheme.description }}

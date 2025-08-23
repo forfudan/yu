@@ -6,7 +6,7 @@ import autoprefixer from "autoprefixer"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "宇浩输入法",
+  title: "宇浩系列输入法",
   description: "情系汉字 沟通古今",
   lang: "zh-Hans-CN",
   outDir: "../dist",
@@ -52,9 +52,34 @@ export default defineConfig({
           text: '介绍',
           items: [
             {
-              text: '基本信息',
+              text: '宇浩系列总览',
               link: '/docs/'
             },
+            {
+              text: '光华输入法',
+              link: '/docs/light',
+            },
+            {
+              text: '星陈输入法',
+              link: '/docs/star',
+            },
+            {
+              text: '卿云输入法',
+              link: '/docs/joy',
+            },
+            {
+              text: '日月输入法',
+              link: '/docs/sunmoon',
+            },
+            {
+              text: '吉旦餅输入法',
+              link: '/docs/wafel',
+            },
+          ]
+        },
+        {
+          text: '信息',
+          items: [
             {
               text: '更新日志',
               link: '/docs/changelog'
@@ -67,42 +92,8 @@ export default defineConfig({
               text: '背景故事',
               link: '/docs/background',
             },
-          ]
-        },
-        {
-          text: '系列',
-          items: [
             {
-              text: '综览',
-              link: '/docs/series',
-            },
-            {
-              text: '光华',
-              link: '/docs/light',
-            },
-            {
-              text: '吉旦餅',
-              link: '/docs/wafel',
-            },
-            {
-              text: '星陈',
-              link: '/docs/star',
-            },
-            {
-              text: '卿云',
-              link: '/docs/joy',
-            },
-            {
-              text: '日月',
-              link: '/docs/sunmoon',
-            },
-          ]
-        },
-        {
-          text: '技术',
-          items: [
-            {
-              text: '宇浩字根字体',
+              text: '字根字体',
               link: '/docs/yuniversus',
             },
             {
@@ -456,7 +447,7 @@ export default defineConfig({
     zht: {
       label: "傳統漢字",
       lang: "zh-Hans-CN",
-      title: "宇浩輸入法",
+      title: "宇浩系列輸入法",
       description: "情繫漢字 溝通古今",
       themeConfig: {
         logo: '/logo_purple.png',
@@ -475,9 +466,34 @@ export default defineConfig({
               text: '介紹',
               items: [
                 {
-                  text: '基本信息',
+                  text: '宇浩系列總覽',
                   link: '/zht/docs/'
                 },
+                {
+                  text: '光華輸入法',
+                  link: '/zht/docs/light',
+                },
+                {
+                  text: '星陳輸入法',
+                  link: '/zht/docs/star',
+                },
+                {
+                  text: '卿雲輸入法',
+                  link: '/zht/docs/joy',
+                },
+                {
+                  text: '日月大明輸入法',
+                  link: '/zht/docs/sunmoon',
+                },
+                {
+                  text: '吉旦餅輸入法',
+                  link: '/zht/docs/wafel',
+                },
+              ]
+            },
+            {
+              text: '信息',
+              items: [
                 {
                   text: '更新日誌',
                   link: '/zht/docs/changelog'
@@ -490,42 +506,8 @@ export default defineConfig({
                   text: '背景故事',
                   link: '/zht/docs/background',
                 },
-              ]
-            },
-            {
-              text: '系列',
-              items: [
                 {
-                  text: '總覽',
-                  link: '/zht/docs/series',
-                },
-                {
-                  text: '光華',
-                  link: '/zht/docs/light',
-                },
-                {
-                  text: '吉旦餅',
-                  link: '/zht/docs/wafel',
-                },
-                {
-                  text: '星陳',
-                  link: '/zht/docs/star',
-                },
-                {
-                  text: '卿雲',
-                  link: '/zht/docs/joy',
-                },
-                {
-                  text: '日月',
-                  link: '/zht/docs/sunmoon',
-                },
-              ]
-            },
-            {
-              text: '技術',
-              items: [
-                {
-                  text: '宇浩字根字體',
+                  text: '字根字體',
                   link: '/zht/docs/yuniversus',
                 },
                 {
