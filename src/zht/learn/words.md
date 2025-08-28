@@ -2,11 +2,11 @@
 import Chaifen from '@/chaifen/Chaifen.vue'
 </script>
 
-# 詞語編碼
+# 星陳輸入法詞語編碼
 
 除了設置簡碼，宇碼還將常用的詞語，也編成 4 個字母的編碼。這樣可以降低每一個字的平均碼長，提高打字速度。
 
-「宇浩」的詞語編碼規則，分爲三種情況。
+星陳輸入法的詞語編碼規則，分爲三種情況。
 
 ## 兩字詞
 
@@ -14,7 +14,7 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 ::: tip 例
 
-`人生`：`人`的編碼爲 `Ree`，`生`的編碼爲 `Pss`。因此，`人生`的編碼爲 `RePs`。  
+`人生`：`人`的編碼爲 `Ree`，`生`的編碼爲 `Pss`。因此，`人生`的編碼爲 `RePs`。
 
 `事情`：`事`的編碼爲 `KLBj`，`情`的編碼爲 `RHWy`。因此，「事情」的編碼爲 `KLWy`。
 <div class="flex justify-left flex-wrap">
@@ -32,7 +32,7 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 <div class="flex justify-left flex-wrap">
 <Chaifen char='泡' :parts='[3,2,3]' :colors='[1,0,0,0]' />
 <Chaifen char='泡' :parts='[3,2,3]' :colors='[1,0,0,0]' />
-<Chaifen char='糖' :parts='[6,3,4,3]' :colors='[3,4,0,0]' />  
+<Chaifen char='糖' :parts='[6,3,4,3]' :colors='[3,4,0,0]' />
 </div>
 
 `星期三`：`星`的編碼爲`〔日生・ JPsr〕`，`期`的編碼爲`〔其月・ UWyq〕`，`三`的編碼爲`〔三・ Laa〕`。因此，`星期三`的編碼爲`〔日其三・ JULa〕`。
@@ -48,7 +48,7 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 四字詞及以上，取前三字的第一碼，和最後一個字的第一碼即可：
 
 ::: tip 例
-`狐假虎威`：`狐`的編碼爲`〔犭瓜・ HUgq〕`，「假」的編碼爲`〔亻尸二又・ EBIB〕`，「虎」的編碼爲`〔虎・ Uhh〕`，「威」的編碼爲`〔戊一女・ KFCn〕`。因此，「狐假虎威」的編碼爲`〔犭亻虎戊・ HEUK〕`。  
+`狐假虎威`：`狐`的編碼爲`〔犭瓜・ HUgq〕`，「假」的編碼爲`〔亻尸二又・ EBIB〕`，「虎」的編碼爲`〔虎・ Uhh〕`，「威」的編碼爲`〔戊一女・ KFCn〕`。因此，「狐假虎威」的編碼爲`〔犭亻虎戊・ HEUK〕`。
 <div class="flex justify-left flex-wrap">
 <Chaifen char='狐' :parts='[3,5]' :colors='[1,0]' />
 <Chaifen char='假' :parts='[2,3,2,2,2]' :colors='[2,0,0,0,0]' />

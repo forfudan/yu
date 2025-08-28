@@ -1,8 +1,8 @@
-import { defineConfig } from 'vitepress'
-import mdFootnote from "markdown-it-footnote"
-import path from "node:path"
-import tailwind from "tailwindcss"
-import autoprefixer from "autoprefixer"
+import { defineConfig } from "vitepress";
+import mdFootnote from "markdown-it-footnote";
+import path from "node:path";
+import tailwind from "tailwindcss";
+import autoprefixer from "autoprefixer";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -17,12 +17,10 @@ export default defineConfig({
       dark: "material-theme-palenight",
     },
     config: (md) => {
-      md.use(mdFootnote)
-    }
+      md.use(mdFootnote);
+    },
   },
-  head: [
-    ['link', { rel: 'icon', href: '/logo_blue.png', type: 'image/png' }]
-  ],
+  head: [["link", { rel: "icon", href: "/logo_blue.png", type: "image/png" }]],
   vite: {
     css: {
       postcss: {
@@ -31,348 +29,335 @@ export default defineConfig({
     },
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '../../components'),
-      }
-    }
+        "@": path.resolve(__dirname, "../../components"),
+      },
+    },
   },
   themeConfig: {
-    logo: '/logo_blue.png',
+    logo: "/logo_blue.png",
     nav: [
-      { text: '介绍', link: '/docs/' },
-      { text: '教程', link: '/learn/' },
-      { text: '练习', link: '/practice/root' },
-      { text: '安装', link: '/install' },
-      { text: '体验', link: '/ming' },
-      { text: '跟打', link: 'https://genda.shurufa.app/' },
-      { text: '测评', link: 'https://ceping.shurufa.app/' },
+      { text: "介绍", link: "/docs/" },
+      { text: "教程", link: "/learn/" },
+      { text: "练习", link: "/practice/root" },
+      { text: "安装", link: "/install" },
+      { text: "体验", link: "/ming" },
+      { text: "跟打", link: "https://genda.shurufa.app/" },
+      { text: "测评", link: "https://ceping.shurufa.app/" },
     ],
     sidebar: {
-      '/docs': [
+      "/docs": [
         {
-          text: '介绍',
+          text: "介绍",
           items: [
             {
-              text: '宇浩系列总览',
-              link: '/docs/'
+              text: "宇浩系列总览",
+              link: "/docs/",
             },
             {
-              text: '光华输入法',
-              link: '/docs/light',
+              text: "光华输入法",
+              link: "/docs/light",
             },
             {
-              text: '星陈输入法',
-              link: '/docs/star',
+              text: "星陈输入法",
+              link: "/docs/star",
             },
             {
-              text: '卿云输入法',
-              link: '/docs/joy',
+              text: "卿云输入法",
+              link: "/docs/joy",
             },
             {
-              text: '日月输入法',
-              link: '/docs/sunmoon',
+              text: "日月输入法",
+              link: "/docs/sunmoon",
             },
             {
-              text: '吉旦餅输入法',
-              link: '/docs/wafel',
+              text: "吉旦餅输入法",
+              link: "/docs/wafel",
             },
-          ]
+          ],
         },
         {
-          text: '信息',
+          text: "信息",
           items: [
             {
-              text: '更新日志',
-              link: '/docs/changelog'
+              text: "更新日志",
+              link: "/docs/changelog",
             },
             {
-              text: '展望未来',
-              link: '/docs/developing'
+              text: "展望未来",
+              link: "/docs/developing",
             },
             {
-              text: '背景故事',
-              link: '/docs/background',
+              text: "背景故事",
+              link: "/docs/background",
             },
             {
-              text: '字根字体',
-              link: '/docs/yuniversus',
+              text: "字根字体",
+              link: "/docs/yuniversus",
             },
             {
-              text: '设计哲学',
-              link: '/docs/discussion',
+              text: "设计哲学",
+              link: "/docs/discussion",
             },
             {
-              text: '技术文档',
-              link: '/docs/technical'
+              text: "技术文档",
+              link: "/docs/technical",
             },
             {
-              text: '字集覆盖',
-              link: '/docs/coverage'
+              text: "字集覆盖",
+              link: "/docs/coverage",
             },
-          ]
+          ],
         },
         {
-          text: '杂谈',
+          text: "杂谈",
           items: [
             {
-              text: '琼林撷英：常用概念术语',
-              link: '/docs/concepts',
+              text: "琼林撷英：常用概念术语",
+              link: "/docs/concepts",
             },
             {
-              text: '常见输入法测评数据',
-              link: '/docs/statistics',
+              text: "常见输入法测评数据",
+              link: "/docs/statistics",
             },
             {
-              text: '字形输入法特性表和关系表',
-              link: '/docs/characteristics',
+              text: "字形输入法特性表和关系表",
+              link: "/docs/characteristics",
             },
             {
-              text: '常见形码输入方案编码规则',
-              link: '/docs/coding',
+              text: "常见形码输入方案编码规则",
+              link: "/docs/coding",
             },
             {
-              text: '古籍通规繁体标准',
-              link: '/docs/guji',
+              text: "古籍通规繁体标准",
+              link: "/docs/guji",
             },
-          ]
+          ],
         },
         {
-          text: '大观',
+          text: "大观",
           items: [
             {
-              text: '宇浩诗韵拼音',
-              link: '/docs/sypy',
+              text: "宇浩诗韵拼音",
+              link: "/docs/sypy",
             },
             {
-              text: '天码',
-              link: '/sky/',
+              text: "天码",
+              link: "/sky/",
             },
             {
-              text: '徐码',
-              link: '/xuma/',
+              text: "徐码",
+              link: "/xuma/",
             },
             {
-              text: '易码',
-              link: '/docs/yima',
+              text: "易码",
+              link: "/docs/yima",
             },
-          ]
+          ],
         },
       ],
-      '/learn': [
+      "/learn": [
         {
-          text: '前言',
-          link: '/learn/'
+          text: "前言",
+          link: "/learn/",
+        },
+        {
+          text: "拆分教程",
+          items: [
+            {
+              text: "基础拆分教程",
+              link: "/learn/division",
+            },
+            {
+              text: "宇浩拆分禁手",
+              link: "/learn/prohibition",
+            },
+            {
+              text: "字根内在属性",
+              link: "/learn/intrinsic",
+            },
+            {
+              text: "字形书体笔顺",
+              link: "/learn/variation",
+            },
+            {
+              text: "字根归并聚类",
+              link: "/learn/grouping",
+            },
+            {
+              text: "特殊部件拆分",
+              link: "/learn/radicals",
+            },
+            {
+              text: "拆分机器实现",
+              link: "/learn/machine",
+            },
+          ],
+        },
+        {
+          text: "星陈教程",
+          items: [
+            {
+              text: "字根编码",
+              link: "/learn/roots",
+            },
+            {
+              text: "单字编码",
+              link: "/learn/chars",
+            },
+            {
+              text: "简码设置",
+              link: "/learn/quick",
+            },
+            {
+              text: "词语编码",
+              link: "/learn/words",
+            },
+            {
+              text: "极简词库",
+              link: "/learn/lexicon",
+            },
+          ],
+        },
+        {
+          text: "附录",
+          items: [
+            {
+              text: "字海拾珍——必拆字举隅",
+              link: "/learn/examples",
+            },
+            {
+              text: "高频字拆分图解——简化字",
+              link: "/learn/frequent",
+            },
+            {
+              text: "高频字拆分图解——传统字",
+              link: "/learn/frequent_tc",
+            },
+          ],
+        },
+      ],
+      "/practice": [
+        {
+          text: "烂然星陈",
+          items: [
+            {
+              text: "星陈字根",
+              link: "/practice/root",
+            },
+            {
+              text: "星陈单字",
+              link: "/practice/char",
+            },
+            {
+              text: "星陈单字·台湾拆分",
+              link: "/practice/char_tw",
+            },
+          ],
+        },
+        {
+          text: "日月光华",
+          items: [
+            {
+              text: "光华字根",
+              link: "/practice/root_light",
+            },
+            {
+              text: "光华单字",
+              link: "/practice/char_light",
+            },
+          ],
+        },
+        {
+          text: "卿云烂兮",
+          items: [
+            {
+              text: "卿云字根",
+              link: "/practice/root_joy",
+            },
+            {
+              text: "卿云单字",
+              link: "/practice/char_joy",
+            },
+          ],
+        },
+        {
+          text: "日月有常",
+          items: [
+            {
+              text: "日月字根",
+              link: "/practice/root_ming",
+            },
+            {
+              text: "日月单字",
+              link: "/practice/char_ming",
+            },
+            {
+              text: "日月·作品高频字",
+              link: "/practice/char_ming_zhu",
+            },
+          ],
+        },
+        {
+          text: "吉旦饼",
+          items: [
+            {
+              text: "吉旦饼字根",
+              link: "/practice/root_wafel",
+            },
+          ],
+        },
+        {
+          text: "跟打器",
+          items: [
+            {
+              text: "跟打器",
+              link: "https://genda.shurufa.app/",
+            },
+          ],
+        },
+      ],
+      "/chaifen": [
+        {
+          text: "星陈",
+          link: "/chaifen/",
+        },
+        {
+          text: "光华",
+          link: "/chaifen/light",
+        },
+        {
+          text: "卿云",
+          link: "/chaifen/joy",
+        },
+        {
+          text: "日月",
+          link: "/chaifen/ming",
+        },
+      ],
+      "/sky": [
+        {
+          text: "天码",
+          link: "/sky/",
+        },
+        {
+          text: "拆分查询",
+          link: "/sky/search",
+        },
+        {
+          text: "在線練習",
+          link: "/sky/practice",
+        },
+      ],
+      "/xuma": [
+        {
+          text: "徐码",
+          link: "/xuma/",
         },
         {
           text: "教程",
-          items: [{
-            text: '单字拆分',
-            link: '/learn/division'
-          },
-          {
-            text: '字根编码',
-            link: '/learn/roots'
-          },
-          {
-            text: '字根速記',
-            link: '/learn/star'
-          },
-          {
-            text: '单字编码',
-            link: '/learn/chars'
-          },
-          {
-            text: '简码设置',
-            link: '/learn/quick'
-          },
-          {
-            text: '词语编码',
-            link: '/learn/words'
-          },
-          {
-            text: '极简词库',
-            link: '/learn/lexicon'
-          },
-          ]
-        },
-        {
-          text: "进阶",
-          items: [
-            {
-              text: '宇浩拆分禁手',
-              link: '/learn/prohibition'
-            },
-            {
-              text: '字根内在属性',
-              link: '/learn/intrinsic'
-            },
-            {
-              text: '字形书体笔顺',
-              link: '/learn/variation'
-            },
-            {
-              text: '字根归并聚类',
-              link: '/learn/grouping'
-            },
-            {
-              text: '特殊部件拆分',
-              link: '/learn/radicals'
-            },
-            {
-              text: '拆分机器实现',
-              link: '/learn/machine'
-            },
-          ]
-        },
-        {
-          text: '附录',
-          items: [
-            {
-              text: '字海拾珍——必拆字举隅',
-              link: '/learn/examples'
-            },
-            {
-              text: '高频字拆分图解——简化字',
-              link: '/learn/frequent'
-            },
-            {
-              text: '高频字拆分图解——传统字',
-              link: '/learn/frequent_tc'
-            },
-          ]
-        },
-        {
-          text: '光华',
-          items: [
-            {
-              text: '光华方案字根图表',
-              link: '/learn/light'
-            },
-          ]
-        }
-      ],
-      '/practice': [
-        {
-          text: '烂然星陈',
-          items: [
-            {
-              text: '星陈字根',
-              link: '/practice/root'
-            },
-            {
-              text: '星陈单字',
-              link: '/practice/char'
-            },
-            {
-              text: '星陈单字·台湾拆分',
-              link: '/practice/char_tw'
-            },
-          ]
-        },
-        {
-          text: '日月光华',
-          items: [
-            {
-              text: '光华字根',
-              link: '/practice/root_light'
-            },
-            {
-              text: '光华单字',
-              link: '/practice/char_light'
-            },
-          ]
-        },
-        {
-          text: '卿云烂兮',
-          items: [
-            {
-              text: '卿云字根',
-              link: '/practice/root_joy'
-            },
-            {
-              text: '卿云单字',
-              link: '/practice/char_joy'
-            }
-          ]
-        },
-        {
-          text: '日月有常',
-          items: [
-            {
-              text: '日月字根',
-              link: '/practice/root_ming'
-            },
-            {
-              text: '日月单字',
-              link: '/practice/char_ming'
-            },
-            {
-              text: '日月·作品高频字',
-              link: '/practice/char_ming_zhu'
-            },
-          ]
-        },
-        {
-          text: '吉旦饼',
-          items: [
-            {
-              text: '吉旦饼字根',
-              link: '/practice/root_wafel'
-            }
-          ]
-        },
-        {
-          text: '跟打器',
-          items: [
-            {
-              text: '跟打器',
-              link: 'https://genda.shurufa.app/'
-            }
-          ]
-        }
-      ],
-      '/chaifen': [
-        {
-          text: '星陈',
-          link: '/chaifen/'
-        },
-        {
-          text: '光华',
-          link: '/chaifen/light'
-        },
-        {
-          text: '卿云',
-          link: '/chaifen/joy'
-        },
-        {
-          text: '日月',
-          link: '/chaifen/ming'
+          link: "/xuma/learn",
         },
       ],
-      '/sky': [
-        {
-          text: '天码',
-          link: '/sky/'
-        },
-        {
-          text: '拆分查询',
-          link: '/sky/search'
-        },
-        {
-          text: '在線練習',
-          link: '/sky/practice'
-        },
-      ],
-      '/xuma': [
-        {
-          text: '徐码',
-          link: '/xuma/'
-        },
-        {
-          text: '教程',
-          link: '/xuma/learn'
-        },
-      ],
-
     },
     footer: {
       message: "宇浩輸入法官網",
@@ -384,7 +369,7 @@ export default defineConfig({
     sidebarMenuLabel: "全部頁面列表",
     outline: {
       level: "deep",
-      label: "本頁大綱"
+      label: "本頁大綱",
     },
     search: {
       provider: "local",
@@ -417,11 +402,11 @@ export default defineConfig({
           svg: `<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
         <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M23.1117 4.49449C23.4296 2.94472 21.9074 1.65683 20.4317 2.227L2.3425 9.21601C0.694517 9.85273 0.621087 12.1572 2.22518 12.8975L6.1645 14.7157L8.03849 21.2746C8.13583 21.6153 8.40618 21.8791 8.74917 21.968C9.09216 22.0568 9.45658 21.9576 9.70712 21.707L12.5938 18.8203L16.6375 21.8531C17.8113 22.7334 19.5019 22.0922 19.7967 20.6549L23.1117 4.49449ZM3.0633 11.0816L21.1525 4.0926L17.8375 20.2531L13.1 16.6999C12.7019 16.4013 12.1448 16.4409 11.7929 16.7928L10.5565 18.0292L10.928 15.9861L18.2071 8.70703C18.5614 8.35278 18.5988 7.79106 18.2947 7.39293C17.9906 6.99479 17.4389 6.88312 17.0039 7.13168L6.95124 12.876L3.0633 11.0816ZM8.17695 14.4791L8.78333 16.6015L9.01614 15.321C9.05253 15.1209 9.14908 14.9366 9.29291 14.7928L11.5128 12.573L8.17695 14.4791Z" fill="currentColor"/>
-        </svg>`
+        </svg>`,
         },
-        link: 'https://t.me/yuhaoim'
+        link: "https://t.me/yuhaoim",
       },
-      { icon: 'github', link: 'https://github.com/forFudan/yuhao/releases' },
+      { icon: "github", link: "https://github.com/forFudan/yuhao/releases" },
       {
         icon: {
           svg: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tencent-qq" viewBox="0 0 16 16">
@@ -437,12 +422,12 @@ export default defineConfig({
         },
         link: "http://zhuyuhao.ysepan.com/",
       },
-    ]
+    ],
   },
   locales: {
     root: {
-      label: '简化汉字',
-      lang: 'zh-Hans-CN'
+      label: "简化汉字",
+      lang: "zh-Hans-CN",
     },
     zht: {
       label: "傳統漢字",
@@ -450,345 +435,341 @@ export default defineConfig({
       title: "宇浩系列輸入法",
       description: "情繫漢字 溝通古今",
       themeConfig: {
-        logo: '/logo_purple.png',
+        logo: "/logo_purple.png",
         nav: [
-          { text: '介紹', link: '/zht/docs/' },
-          { text: '教程', link: '/zht/learn/' },
-          { text: '練習', link: '/zht/practice/root' },
-          { text: '安裝', link: '/zht/install' },
-          { text: '體驗', link: '/ming' },
-          { text: '跟打', link: 'https://genda.shurufa.app/' },
-          { text: '測評', link: 'https://ceping.shurufa.app/' },
+          { text: "介紹", link: "/zht/docs/" },
+          { text: "教程", link: "/zht/learn/" },
+          { text: "練習", link: "/zht/practice/root" },
+          { text: "安裝", link: "/zht/install" },
+          { text: "體驗", link: "/ming" },
+          { text: "跟打", link: "https://genda.shurufa.app/" },
+          { text: "測評", link: "https://ceping.shurufa.app/" },
         ],
         sidebar: {
-          '/zht/docs': [
+          "/zht/docs": [
             {
-              text: '介紹',
+              text: "介紹",
               items: [
                 {
-                  text: '宇浩系列總覽',
-                  link: '/zht/docs/'
+                  text: "宇浩系列總覽",
+                  link: "/zht/docs/",
                 },
                 {
-                  text: '光華輸入法',
-                  link: '/zht/docs/light',
+                  text: "光華輸入法",
+                  link: "/zht/docs/light",
                 },
                 {
-                  text: '星陳輸入法',
-                  link: '/zht/docs/star',
+                  text: "星陳輸入法",
+                  link: "/zht/docs/star",
                 },
                 {
-                  text: '卿雲輸入法',
-                  link: '/zht/docs/joy',
+                  text: "卿雲輸入法",
+                  link: "/zht/docs/joy",
                 },
                 {
-                  text: '日月大明輸入法',
-                  link: '/zht/docs/sunmoon',
+                  text: "日月大明輸入法",
+                  link: "/zht/docs/sunmoon",
                 },
                 {
-                  text: '吉旦餅輸入法',
-                  link: '/zht/docs/wafel',
+                  text: "吉旦餅輸入法",
+                  link: "/zht/docs/wafel",
                 },
-              ]
+              ],
             },
             {
-              text: '信息',
+              text: "信息",
               items: [
                 {
-                  text: '更新日誌',
-                  link: '/zht/docs/changelog'
+                  text: "更新日誌",
+                  link: "/zht/docs/changelog",
                 },
                 {
-                  text: '展望未來',
-                  link: '/zht/docs/developing'
+                  text: "展望未來",
+                  link: "/zht/docs/developing",
                 },
                 {
-                  text: '背景故事',
-                  link: '/zht/docs/background',
+                  text: "背景故事",
+                  link: "/zht/docs/background",
                 },
                 {
-                  text: '字根字體',
-                  link: '/zht/docs/yuniversus',
+                  text: "字根字體",
+                  link: "/zht/docs/yuniversus",
                 },
                 {
-                  text: '设计哲学',
-                  link: '/zht/docs/discussion',
+                  text: "设计哲学",
+                  link: "/zht/docs/discussion",
                 },
                 {
-                  text: '技術文檔',
-                  link: '/zht/docs/technical'
+                  text: "技術文檔",
+                  link: "/zht/docs/technical",
                 },
                 {
-                  text: '字集覆蓋',
-                  link: '/zht/docs/coverage'
+                  text: "字集覆蓋",
+                  link: "/zht/docs/coverage",
                 },
-              ]
+              ],
             },
             {
-              text: '雜談',
+              text: "雜談",
               items: [
                 {
-                  text: '瓊林擷英：常用概念術語',
-                  link: '/zht/docs/concepts',
+                  text: "瓊林擷英：常用概念術語",
+                  link: "/zht/docs/concepts",
                 },
                 {
-                  text: '常見輸入法測評數據',
-                  link: '/zht/docs/statistics',
+                  text: "常見輸入法測評數據",
+                  link: "/zht/docs/statistics",
                 },
                 {
-                  text: '字形輸入法特性表和關係表',
-                  link: '/zht/docs/characteristics',
+                  text: "字形輸入法特性表和關係表",
+                  link: "/zht/docs/characteristics",
                 },
                 {
-                  text: '常見形碼輸入方案編碼規則',
-                  link: '/zht/docs/coding',
+                  text: "常見形碼輸入方案編碼規則",
+                  link: "/zht/docs/coding",
                 },
                 {
-                  text: '古籍通規繁體標準',
-                  link: '/zht/docs/guji',
+                  text: "古籍通規繁體標準",
+                  link: "/zht/docs/guji",
                 },
-              ]
+              ],
             },
             {
-              text: '大觀',
+              text: "大觀",
               items: [
                 {
-                  text: '宇浩詩韻拼音',
-                  link: '/zht/docs/sypy',
+                  text: "宇浩詩韻拼音",
+                  link: "/zht/docs/sypy",
                 },
                 {
-                  text: '天碼',
-                  link: '/zht/sky/',
+                  text: "天碼",
+                  link: "/zht/sky/",
                 },
                 {
-                  text: '徐碼',
-                  link: '/zht/xuma/',
+                  text: "徐碼",
+                  link: "/zht/xuma/",
                 },
                 {
-                  text: '易碼',
-                  link: '/zht/docs/yima',
+                  text: "易碼",
+                  link: "/zht/docs/yima",
                 },
-              ]
+              ],
             },
           ],
-          '/zht/learn': [
+          "/zht/learn": [
             {
-              text: '前言',
-              link: '/zht/learn/'
+              text: "前言",
+              link: "/zht/learn/",
+            },
+            {
+              text: "拆分教程",
+              items: [
+                {
+                  text: "基础拆分教程",
+                  link: "/zht/learn/division",
+                },
+                {
+                  text: "宇浩拆分禁手",
+                  link: "/zht/learn/prohibition",
+                },
+                {
+                  text: "字根内在屬性",
+                  link: "/zht/learn/intrinsic",
+                },
+                {
+                  text: "字形書體筆順",
+                  link: "/zht/learn/variation",
+                },
+                {
+                  text: "字根歸併聚類",
+                  link: "/zht/learn/grouping",
+                },
+                {
+                  text: "特殊部件拆分",
+                  link: "/zht/learn/radicals",
+                },
+                {
+                  text: "拆分機器實現",
+                  link: "/zht/learn/machine",
+                },
+              ],
+            },
+            {
+              text: "星陳教程",
+              items: [
+                {
+                  text: "字根編碼",
+                  link: "/zht/learn/roots",
+                },
+                {
+                  text: "單字編碼",
+                  link: "/zht/learn/chars",
+                },
+                {
+                  text: "簡碼設置",
+                  link: "/zht/learn/quick",
+                },
+                {
+                  text: "詞語編碼",
+                  link: "/zht/learn/words",
+                },
+                {
+                  text: "極簡詞庫",
+                  link: "/zht/learn/lexicon",
+                },
+              ],
+            },
+            {
+              text: "附錄",
+              items: [
+                {
+                  text: "字海拾珍——必拆字舉隅",
+                  link: "/zht/learn/examples",
+                },
+                {
+                  text: "高频字拆分图解——简化字",
+                  link: "/zht/learn/frequent",
+                },
+                {
+                  text: "高频字拆分图解——传统字",
+                  link: "/zht/learn/frequent_tc",
+                },
+              ],
+            },
+            {
+              text: "光華",
+              items: [
+                {
+                  text: "光華方案字根圖表",
+                  link: "/zht/learn/light",
+                },
+              ],
+            },
+          ],
+          "/zht/practice": [
+            {
+              text: "爛然星陳",
+              items: [
+                {
+                  text: "星陳字根",
+                  link: "/zht/practice/root",
+                },
+                {
+                  text: "星陳單字",
+                  link: "/zht/practice/char",
+                },
+                {
+                  text: "星陳單字·臺灣拆分",
+                  link: "/zht/practice/char_tw",
+                },
+              ],
+            },
+            {
+              text: "日月光華",
+              items: [
+                {
+                  text: "光華字根",
+                  link: "/zht/practice/root_light",
+                },
+                {
+                  text: "光華單字",
+                  link: "/zht/practice/char_light",
+                },
+              ],
+            },
+            {
+              text: "卿雲爛兮",
+              items: [
+                {
+                  text: "卿雲字根",
+                  link: "/zht/practice/root_joy",
+                },
+                {
+                  text: "卿雲單字",
+                  link: "/zht/practice/char_joy",
+                },
+              ],
+            },
+            {
+              text: "日月有常",
+              items: [
+                {
+                  text: "日月字根",
+                  link: "/zht/practice/root_ming",
+                },
+                {
+                  text: "日月單字",
+                  link: "/zht/practice/char_ming",
+                },
+                {
+                  text: "日月·作品高頻字",
+                  link: "/zht/practice/char_ming_zhu",
+                },
+              ],
+            },
+            {
+              text: "吉旦餅",
+              items: [
+                {
+                  text: "吉旦餅字根",
+                  link: "/zht/practice/root_wafel",
+                },
+              ],
+            },
+            {
+              text: "跟打器",
+              items: [
+                {
+                  text: "跟打器",
+                  link: "https://genda.shurufa.app/",
+                },
+              ],
+            },
+          ],
+          "/zht/chaifen": [
+            {
+              text: "星陳",
+              link: "/zht/chaifen/",
+            },
+            {
+              text: "光華",
+              link: "/zht/chaifen/light",
+            },
+            {
+              text: "卿雲",
+              link: "/zht/chaifen/joy",
+            },
+            {
+              text: "日月",
+              link: "/zht/chaifen/ming",
+            },
+          ],
+          "/zht/sky": [
+            {
+              text: "天碼",
+              link: "/zht/sky/",
+            },
+            {
+              text: "拆分查询",
+              link: "/zht/sky/search",
+            },
+            {
+              text: "在線練習",
+              link: "/zht/sky/practice",
+            },
+          ],
+          "/zht/xuma": [
+            {
+              text: "徐碼",
+              link: "/zht/xuma/",
             },
             {
               text: "教程",
-              items: [
-                {
-                  text: '單字拆分',
-                  link: '/zht/learn/division'
-                },
-                {
-                  text: '字根編碼',
-                  link: '/zht/learn/roots'
-                },
-                {
-                  text: '字根速記',
-                  link: '/zht/learn/star'
-                },
-                {
-                  text: '單字編碼',
-                  link: '/zht/learn/chars'
-                },
-                {
-                  text: '簡碼設置',
-                  link: '/zht/learn/quick'
-                },
-                {
-                  text: '詞語編碼',
-                  link: '/zht/learn/words'
-                },
-                {
-                  text: '極簡詞庫',
-                  link: '/zht/learn/lexicon'
-                },
-              ]
-            },
-            {
-              text: "進階",
-              items: [
-                {
-                  text: '宇浩拆分禁手',
-                  link: '/zht/learn/prohibition'
-                },
-                {
-                  text: '字根内在屬性',
-                  link: '/zht/learn/intrinsic'
-                },
-                {
-                  text: '字形書體筆順',
-                  link: '/zht/learn/variation'
-                },
-                {
-                  text: '字根歸併聚類',
-                  link: '/zht/learn/grouping'
-                },
-                {
-                  text: '特殊部件拆分',
-                  link: '/zht/learn/radicals'
-                },
-                {
-                  text: '拆分機器實現',
-                  link: '/zht/learn/machine'
-                }
-              ]
-            },
-            {
-              text: '附錄',
-              items: [
-                {
-                  text: '字海拾珍——必拆字舉隅',
-                  link: '/zht/learn/examples'
-                },
-                {
-                  text: '高频字拆分图解——简化字',
-                  link: '/zht/learn/frequent'
-                },
-                {
-                  text: '高频字拆分图解——传统字',
-                  link: '/zht/learn/frequent_tc'
-                },
-              ]
-            },
-            {
-              text: '光華',
-              items: [
-                {
-                  text: '光華方案字根圖表',
-                  link: '/zht/learn/light'
-                },
-              ]
-            }
-          ],
-          '/zht/practice': [
-            {
-              text: '爛然星陳',
-              items: [
-                {
-                  text: '星陳字根',
-                  link: '/zht/practice/root'
-                },
-                {
-                  text: '星陳單字',
-                  link: '/zht/practice/char'
-                },
-                {
-                  text: '星陳單字·臺灣拆分',
-                  link: '/zht/practice/char_tw'
-                },
-              ]
-            },
-            {
-              text: '日月光華',
-              items: [
-                {
-                  text: '光華字根',
-                  link: '/zht/practice/root_light'
-                },
-                {
-                  text: '光華單字',
-                  link: '/zht/practice/char_light'
-                },
-              ]
-            },
-            {
-              text: '卿雲爛兮',
-              items: [
-                {
-                  text: '卿雲字根',
-                  link: '/zht/practice/root_joy'
-                },
-                {
-                  text: '卿雲單字',
-                  link: '/zht/practice/char_joy'
-                },
-              ]
-            },
-            {
-              text: '日月有常',
-              items: [
-                {
-                  text: '日月字根',
-                  link: '/zht/practice/root_ming'
-                },
-                {
-                  text: '日月單字',
-                  link: '/zht/practice/char_ming'
-                },
-                {
-                  text: '日月·作品高頻字',
-                  link: '/zht/practice/char_ming_zhu'
-                },
-              ]
-            },
-            {
-              text: '吉旦餅',
-              items: [
-                {
-                  text: '吉旦餅字根',
-                  link: '/zht/practice/root_wafel'
-                }
-              ]
-            },
-            {
-              text: '跟打器',
-              items: [
-                {
-                  text: '跟打器',
-                  link: 'https://genda.shurufa.app/'
-                }
-              ]
-            }
-          ],
-          '/zht/chaifen': [
-            {
-              text: '星陳',
-              link: '/zht/chaifen/'
-            },
-            {
-              text: '光華',
-              link: '/zht/chaifen/light'
-            },
-            {
-              text: '卿雲',
-              link: '/zht/chaifen/joy'
-            },
-            {
-              text: '日月',
-              link: '/zht/chaifen/ming'
-            },
-          ],
-          '/zht/sky': [
-            {
-              text: '天碼',
-              link: '/zht/sky/'
-            },
-            {
-              text: '拆分查询',
-              link: '/zht/sky/search'
-            },
-            {
-              text: '在線練習',
-              link: '/zht/sky/practice'
-            },
-          ],
-          '/zht/xuma': [
-            {
-              text: '徐碼',
-              link: '/zht/xuma/'
-            },
-            {
-              text: '教程',
-              link: '/zht/xuma/learn'
+              link: "/zht/xuma/learn",
             },
           ],
         },
-      }
+      },
     },
   },
-})
+});

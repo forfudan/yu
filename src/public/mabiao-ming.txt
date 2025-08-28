@@ -93525,7 +93525,6 @@ smfcg	楹
 smfch	𰘶
 smfci	㭏
 smfcn	𣏛
-smfcs	𣏱
 smfct	𣝽
 smfdc	𣕒
 smfdd	樞
@@ -93882,7 +93881,6 @@ smhdl	𣔲
 smhdt	𣕌
 smhfd	桐
 smhfd	𣖣
-smhff	𣏵
 smhfi	𣏊
 smhfi	𣑭
 smhfk	𮲶
@@ -93997,6 +93995,7 @@ smhso	枣
 smhso	枃
 smhso	枏
 smhso	𠄬
+smhso	𣏵
 smhso	𣗠
 smhst	橰
 smhst	𤏡
@@ -96253,6 +96252,7 @@ smyme	柂
 smyml	㰐
 smymn	橢
 smymn	椭
+smymq	𣏱
 smymv	𣟁
 smymv	𣡅
 smynd	𣘜

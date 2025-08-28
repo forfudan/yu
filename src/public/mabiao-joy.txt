@@ -1176,6 +1176,7 @@ agg	橇
 aggg	橇
 aggg	𭩳
 aggp	𣙨
+aggq	𣏱
 agh	柇
 aghh	𣔫
 aghh	𣛆
@@ -1500,6 +1501,7 @@ ai	用
 ai	用户
 ai	⽤
 aiae	枃
+aiae	𣏵
 aiam	𰗮
 aiam	𱣭
 aibb	柁
@@ -1544,7 +1546,6 @@ aifc	栦
 aife	𰗤
 aiff	楦
 aiff	楡
-aiff	𣏵
 aifi	𣏊
 aifl	檳
 aifm	𣘹
@@ -4905,7 +4906,6 @@ awsi	𬂢
 awsj	𣏆
 awss	𣒃
 awss	𫞌
-awta	𣏱
 awtp	𣒵
 awts	橎
 awtw	柹

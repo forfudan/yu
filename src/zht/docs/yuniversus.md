@@ -1,8 +1,8 @@
-# 宇浩輸入法字根字體PUA
+# 宇浩系列輸入法字根字體PUA
 
 ## Yuniversus 簡介
 
-爲了顯示宇浩輸入法的特有字根，我使用[天珩字庫](http://cheonhyeong.com/Simplified/download.html)和[思源宋體](https://source.typekit.com/source-han-serif/)生成了專門的字體，定名爲 [Yuniversus](/Yuniversus.woff). 即 「宇」的拼音 Yu 和「宇宙/合一」的拉丁文 Universus 的合寫。
+爲了顯示宇浩系列輸入法的特有字根，我使用[天珩字庫](http://cheonhyeong.com/Simplified/download.html)和[思源宋體](https://source.typekit.com/source-han-serif/)生成了專門的字體，定名爲 [Yuniversus](/Yuniversus.woff). 即 「宇」的拼音 Yu 和「宇宙/合一」的拉丁文 Universus 的合寫。
 
 爲了方便檢索和拓展，字根的排佈嚴格按照字根的前三個筆畫。
 
@@ -46,10 +46,10 @@
 
 ## 字根舉例
 
-举例：<span class="yuniversus"></span>  
+举例：<span class="yuniversus"></span>
 豎折横。故而位於第2大區第5小區前16个，即 F58x 行，
 
-举例：<span class="yuniversus"></span>  
+举例：<span class="yuniversus"></span>
 順折。故而位於第5大區第6小區單折變形區，即 F8Bx 行。
 
 ## 字根一覽

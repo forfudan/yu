@@ -1,7 +1,8 @@
 # %%
-import re
-import opencc
 import os
+import re
+
+import opencc
 
 t2s = opencc.OpenCC("t2s")
 
@@ -21,7 +22,6 @@ paths_of_docs = [
     "/docs/yuniversus.md",
     "/docs/series.md",
     "/docs/light.md",
-    "/docs/star.md",
     "/docs/wafel.md",
     "/docs/sunmoon.md",
     "/docs/joy.md",
@@ -37,8 +37,6 @@ paths_of_docs = [
     "/learn/quick.md",
     "/learn/words.md",
     "/learn/lexicon.md",
-    "/learn/star.md",
-    "/learn/light.md",
     # 進階
     "/learn/prohibition.md",
     "/learn/intrinsic.md",

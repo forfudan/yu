@@ -44596,6 +44596,7 @@ fpxk	𠡠
 fpxp	𨔤
 fpyf	𣒔
 fpyr	𣛱
+fqai	𣏱
 fqal	𣘠
 fqao	𣑻
 fqar	𣓽
@@ -44692,7 +44693,6 @@ fqwl	𣙱
 fqwo	𦈩
 fqwu	𩲧
 fqxm	𣞂
-fqxs	𣏱
 fqyi	𣖯
 fraa	𩎳
 frab	𣨇
@@ -45305,7 +45305,6 @@ fwfa	𣡡
 fwfa	𣡸
 fwfa	𩏴
 fwfb	𢾵
-fwff	𣏵
 fwfi	𠄡
 fwfi	𣏊
 fwfk	𧊪
@@ -45344,6 +45343,7 @@ fwqo	𣏯
 fwqr	𠀡
 fwqx	𣖣
 fwse	𤽩
+fwsi	𣏵
 fwsl	𣒅
 fwsv	𣑆
 fwtb	𠭿

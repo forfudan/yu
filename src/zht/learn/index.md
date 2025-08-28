@@ -9,7 +9,7 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 如果你已經知道形碼是什麽，可以直接[從單字拆分開始學習](./division)。
 
-如果你已經掌握了一種形碼，可以直接[從宇碼字根開始學習](./star)。
+如果你已經掌握了一種形碼，可以直接[從星陳輸入法的字根開始學習](./roots)。
 
 如果你想直觀感受宇碼拆分，可以直接[查看宇碼的拆分圖例](./examples)。
 
