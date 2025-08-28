@@ -1321,7 +1321,6 @@ agdn	𱈴
 agdq	𪴧
 age	梅
 ageg	柹
-agei	𣏱
 agej	𣏆
 agej	𧘊
 agek	𣘧
@@ -1511,6 +1510,7 @@ agwy	𧘯
 agxg	𧛁
 agxi	亳
 agxi	杔
+agxi	𣏱
 agxk	桲
 agxn	𣓽
 agxo	㮦
@@ -4832,7 +4832,6 @@ awdd	𣡴
 awdk	檲
 awei	𭀚
 awes	𠡌
-awff	𣏵
 awfg	𧘫
 awfg	𧙵
 awfh	𣒈
@@ -4852,6 +4851,7 @@ awii	𣑯
 awii	𣗮
 awir	枃
 awir	𠅆
+awir	𣏵
 awjg	棝
 awjh	𣓓
 awjh	𣖼
