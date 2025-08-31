@@ -219,6 +219,15 @@ export default defineConfig({
           ],
         },
         {
+          text: "日月教程",
+          items: [
+            {
+              text: "字根编码",
+              link: "/learn/roots_ming",
+            },
+          ],
+        },
+        {
           text: "附录",
           items: [
             {
@@ -616,6 +625,15 @@ export default defineConfig({
                 {
                   text: "極簡詞庫",
                   link: "/zht/learn/lexicon",
+                },
+              ],
+            },
+            {
+              text: "日月教程",
+              items: [
+                {
+                  text: "字根編碼",
+                  link: "/zht/learn/roots_ming",
                 },
               ],
             },

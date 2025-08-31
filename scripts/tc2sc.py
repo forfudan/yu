@@ -21,6 +21,7 @@ paths_of_docs = [
     "/docs/guji.md",
     "/docs/yuniversus.md",
     "/docs/series.md",
+    "/docs/star.md",
     "/docs/light.md",
     "/docs/wafel.md",
     "/docs/sunmoon.md",
@@ -30,20 +31,23 @@ paths_of_docs = [
     "/docs/characteristics.md",
     "/docs/sypy.md",
     "/docs/coverage.md",
+    # 教程
     "/learn/index.md",
     "/learn/division.md",
-    "/learn/roots.md",
-    "/learn/chars.md",
-    "/learn/quick.md",
-    "/learn/words.md",
-    "/learn/lexicon.md",
-    # 進階
     "/learn/prohibition.md",
     "/learn/intrinsic.md",
     "/learn/variation.md",
     "/learn/radicals.md",
     "/learn/grouping.md",
     "/learn/machine.md",
+    # 星程
+    "/learn/roots.md",
+    "/learn/chars.md",
+    "/learn/quick.md",
+    "/learn/words.md",
+    "/learn/lexicon.md",
+    # 日月
+    "/learn/roots_ming.md",
     # 例子
     "/learn/examples.md",
     "/learn/frequent.md",
