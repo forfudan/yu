@@ -52,6 +52,8 @@ const showAnswer = ref(false);
 const isCorrect = ref(true);
 const wrongInputCount = ref(0);
 const showResetConfirm = ref(false);
+// 用於強制更新進度條的響應式狀態
+const forceUpdate = ref(0);
 
 // 處理重置確認
 const handleReset = () => {
@@ -142,8 +144,24 @@ const zigenGapClass = computed(() => {
 
 const currentGroup = computed(() => cardGroups[currentIndex.value] || null);
 const totalGroups = computed(() => cardGroups.length);
+
+// 使用已練習的字根組數來顯示進度，確保進度穩定且準確
+const practiceProgress = computed(() => {
+    // 依賴 forceUpdate 來觸發重新計算
+    forceUpdate.value;
+    const stats = schedule.getStats();
+    const practicedGroups = stats.total; // 已經練習過的不同字根組數
+    const totalGroups = cardGroups.length; // 總字根組數
+    return {
+        current: practicedGroups,
+        total: totalGroups,
+        percentage: totalGroups > 0 ?
+            (practicedGroups / totalGroups * 100).toFixed(1) : '0'
+    };
+});
+
 const progress = computed(() =>
-    totalGroups.value > 0 ? (currentIndex.value / totalGroups.value * 100).toFixed(1) : '0'
+    practiceProgress.value.percentage
 );
 
 // 監聽輸入，自動處理正確答案或錯誤提示
@@ -172,6 +190,8 @@ const handleCorrectAnswer = () => {
 
     // 使用改進的調度演算法記錄成功
     schedule.recordSuccess(currentGroup.value.code);
+    // 觸發進度條更新
+    forceUpdate.value++;
 
     // 立即進入下一組，無延遲
     nextGroup();
@@ -186,6 +206,8 @@ const handleWrongAnswer = () => {
 
     // 記錄失敗
     schedule.recordFailure(currentGroup.value.code);
+    // 觸發進度條更新
+    forceUpdate.value++;
 
     // 清空輸入，等待用戶重新輸入
     inputValue.value = '';
@@ -218,9 +240,17 @@ const nextGroup = () => {
 
     // 重置狀態
     isCorrect.value = true;
-    showAnswer.value = false;
     wrongInputCount.value = 0;
     inputValue.value = '';
+
+    // 檢查是否為第一次見到此字根組，如果是則直接顯示答案
+    const currentGroupCode = currentGroup.value?.code;
+    if (currentGroupCode && schedule.isFirstTime(currentGroupCode)) {
+        showAnswer.value = true;
+        console.log(`字根組 "${currentGroupCode}" 第一次出現，直接顯示答案`);
+    } else {
+        showAnswer.value = false;
+    }
 
     nextTick(() => {
         inputElement.value?.focus();
@@ -260,6 +290,8 @@ const checkZigen = (groupIndex: number, zigenIndex: number, userInput: string) =
 
     if (isCorrect) {
         schedule.recordSuccess(targetZigen.ma)
+        // 觸發進度條更新
+        forceUpdate.value++;
         if (zigenIndex < currentGroup.value.zigens.length - 1) {
             // 移動到下一個字根
         } else {
@@ -267,6 +299,8 @@ const checkZigen = (groupIndex: number, zigenIndex: number, userInput: string) =
         }
     } else {
         schedule.recordFailure(targetZigen.ma)
+        // 觸發進度條更新
+        forceUpdate.value++;
         wrongInputCount.value++
     }
 
@@ -295,9 +329,10 @@ onBeforeUnmount(() => {
             <!-- 進度顯示 -->
             <div class="text-center text-sm text-gray-600 dark:text-gray-400">
                 <div class="flex justify-between items-center mb-2">
-                    <span>練習進度: {{ currentIndex + 1 }} / {{ totalGroups }}</span>
+                    <span>已練習字根組: {{ practiceProgress.current }} / {{ practiceProgress.total }} (進度 {{
+                        practiceProgress.percentage }}%)</span>
                     <span v-if="wrongInputCount > 0" class="text-red-600 dark:text-red-400">錯誤次數: {{ wrongInputCount
-                    }}</span>
+                        }}</span>
                 </div>
                 <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                     <div class="bg-blue-500 dark:bg-blue-400 h-2 rounded-full transition-all duration-300"

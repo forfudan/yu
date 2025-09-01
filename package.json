@@ -26,7 +26,7 @@
     "dev": "npm run prebuild && vitepress dev src",
     "dev:fast": "vitepress dev src",
     "build": "npm run prebuild && vitepress build src && npm run postbuild",
-    "build2": "npm run prebuild && vitepress build src --base /yu/ && npm run postbuild",
+    "build:github": "npm run prebuild && vitepress build src --base /yu/ && npm run postbuild",
     "preview": "vitepress preview src",
     "verify": "node scripts/verify-build.js"
   },
