@@ -1,1 +1,0 @@
-import"./framework.2ez64Ajs.js";function e(t,f){const r=[];for(const o of f.values())if(o.division.includes(t)){const i=o.char;if(i&&i.trim()){const s=Array.from(i.trim());for(const n of s)n&&n!=="�"&&r.length<8&&r.push(n);if(r.length>=8)break}}return r.join("")}export{e as f};
