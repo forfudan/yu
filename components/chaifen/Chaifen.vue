@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { genIdentifier, getDivision } from "./share";
+import { onMounted } from 'vue';
 
 const p = defineProps({
     char: { type: String },
@@ -41,7 +42,10 @@ if (typeof p.colors === "string") {
     colors = p.colors
 };
 
-getDivision(randYu, p.char, parts, colors, p.size);
+// Only call getDivision when component is mounted (client-side)
+onMounted(() => {
+    getDivision(randYu, p.char, parts, colors, p.size);
+});
 
 </script>
 

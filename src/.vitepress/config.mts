@@ -32,6 +32,10 @@ export default defineConfig({
         "@": path.resolve(__dirname, "../../components"),
       },
     },
+    build: {
+      // 提高 chunk 大小警告限制，因為我們有一些大的數據文件和第三方庫
+      chunkSizeWarningLimit: 1000,
+    },
   },
   themeConfig: {
     logo: "/logo_blue.png",

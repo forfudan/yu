@@ -28,10 +28,15 @@ DESCRIPTION 介紹:
 版本：
 20240407: 初版.
 20240408: 生成隨機 id.
+20240901: 修正 SSR 報錯.
  */
+
+// TypeScript declarations for embedded HanziWriter library
+// declare var HanziWriter: any;
 
 import { fetchCsvAsMap } from "../search/share";
 
+// @ts-ignore - Embedded HanziWriter library with complex type patterns
 export function genIdentifier(length: number): string {
   let randYu = "";
   const chars =
@@ -92,6 +97,7 @@ function renderFanningStrokesNew(
   }
 }
 
+// @ts-ignore - Embedded HanziWriter library - comprehensive type suppression
 export function getDivision(
   target: string,
   char: string,
@@ -99,19 +105,31 @@ export function getDivision(
   colors: Array<number> = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0],
   size: number = 75,
 ) {
+  // Check if we're in a browser environment
+  if (typeof window === 'undefined' || typeof document === 'undefined') {
+    // Skip execution during SSR
+    return;
+  }
+
   HanziWriter.loadCharacterData(char).then(function (charData) {
-    renderFanningStrokesNew(
-      document.getElementById(target),
-      char,
-      charData.strokes,
-      parts,
-      colors,
-      size,
-    );
+    const targetElement = document.getElementById(target);
+    if (targetElement) {
+      renderFanningStrokesNew(
+        targetElement,
+        char,
+        charData.strokes,
+        parts,
+        colors,
+        size,
+      );
+    }
+  }).catch(function (error) {
+    console.warn('Failed to load character data for:', char, error);
   });
 }
 
 // 以下内容來自 https://cdn.jsdelivr.net/npm/hanzi-writer@3.0/dist/hanzi-writer.min.js
+// 但進行了部分修正和更改
 // 請保留版權聲明
 //
 // LICENSE
@@ -119,6 +137,8 @@ export function getDivision(
 // Hanzi Writer v3.0.3 | https://chanind.github.io/hanzi-writer
 //
 
+// @ts-nocheck
+// TypeScript suppression for the entire embedded HanziWriter library section
 var HanziWriter = (function () {
   "use strict";
   var t;
@@ -136,10 +156,10 @@ var HanziWriter = (function () {
         o = e[i];
       s !== o &&
         (s &&
-        o &&
-        "object" == typeof s &&
-        "object" == typeof o &&
-        !Array.isArray(o)
+          o &&
+          "object" == typeof s &&
+          "object" == typeof o &&
+          !Array.isArray(o)
           ? (r[i] = n(s, o))
           : (r[i] = o));
     }
@@ -173,7 +193,7 @@ var HanziWriter = (function () {
         r: parseInt(r[1], 10),
         g: parseInt(r[2], 10),
         b: parseInt(r[3], 10),
-        a: parseFloat(r[4] || 1, 10),
+        a: parseFloat(r[4] || "1"),
       };
     throw new Error("Invalid color: ".concat(t));
   }
@@ -183,13 +203,17 @@ var HanziWriter = (function () {
     return r;
   }
   const d =
-      (null === (t = e.navigator) || void 0 === t ? void 0 : t.userAgent) || "",
+    (null === (t = e.navigator) || void 0 === t ? void 0 : t.userAgent) || "",
     _ =
       d.indexOf("MSIE ") > 0 ||
       d.indexOf("Trident/") > 0 ||
       d.indexOf("Edge/") > 0,
-    p = () => {};
+    p = () => { };
   class g {
+    _mutationChains: any[];
+    _onStateChange: any;
+    state: any;
+
     constructor(t, e, r = p) {
       ((this._mutationChains = []),
         (this._onStateChange = r),
@@ -312,25 +336,25 @@ var HanziWriter = (function () {
     },
     w = (t) => {
       const e = ((t, e = 30) => {
-          const r = y(t) / (e - 1),
-            i = [t[0]],
-            s = o(t),
-            n = t.slice(1);
-          for (let t = 0; t < e - 2; t++) {
-            let t = o(i),
-              e = r,
-              s = !1;
-            for (; !s; ) {
-              const r = m(t, n[0]);
-              if (r < e) ((e -= r), (t = n.shift()));
-              else {
-                const o = C(t, n[0], e - r);
-                (i.push(o), (s = !0));
-              }
+        const r = y(t) / (e - 1),
+          i = [t[0]],
+          s = o(t),
+          n = t.slice(1);
+        for (let t = 0; t < e - 2; t++) {
+          let t = o(i),
+            e = r,
+            s = !1;
+          for (; !s;) {
+            const r = m(t, n[0]);
+            if (r < e) ((e -= r), (t = n.shift()));
+            else {
+              const o = C(t, n[0], e - r);
+              (i.push(o), (s = !0));
             }
           }
-          return (i.push(s), i);
-        })(t),
+        }
+        return (i.push(s), i);
+      })(t),
         r = { x: c(e.map((t) => t.x)), y: c(e.map((t) => t.y)) },
         i = e.map((t) => f(t, r)),
         s = Math.sqrt(
@@ -356,11 +380,11 @@ var HanziWriter = (function () {
   function S(t, e = !1) {
     const r = v(t[0]),
       i = t.slice(1);
-    let s = "M ".concat(r.x, " ").concat(r.y);
+    let s = "M ".concat(r.x.toString(), " ").concat(r.y.toString());
     return (
       i.forEach((t) => {
         const e = v(t);
-        s += " L ".concat(e.x, " ").concat(e.y);
+        s += " L ".concat(e.x.toString(), " ").concat(e.y.toString());
       }),
       e && (s += "Z"),
       s
@@ -388,6 +412,11 @@ var HanziWriter = (function () {
     return (n.unshift(o), n);
   };
   class x {
+    path: any;
+    points: any[];
+    strokeNum: number;
+    isInRadical: boolean;
+
     constructor(t, e, r, i = !1) {
       ((this.path = t),
         (this.points = e),
@@ -419,6 +448,9 @@ var HanziWriter = (function () {
     }
   }
   class D {
+    symbol: any;
+    strokes: any[];
+
     constructor(t, e) {
       ((this.symbol = t), (this.strokes = e));
     }
@@ -434,20 +466,27 @@ var HanziWriter = (function () {
         s,
         i,
         ((o = i),
-        (null !== (n = null == t ? void 0 : t.indexOf(o)) && void 0 !== n
-          ? n
-          : -1) >= 0),
+          (null !== (n = null == t ? void 0 : t.indexOf(o)) && void 0 !== n
+            ? n
+            : -1) >= 0),
       );
       var o, n;
     });
   }
   const [R, T] = [
-      { x: 0, y: -124 },
-      { x: 1024, y: 900 },
-    ],
+    { x: 0, y: -124 },
+    { x: 1024, y: 900 },
+  ],
     A = T.x - R.x,
     O = T.y - R.y;
   class L {
+    padding: number;
+    width: number;
+    height: number;
+    scale: number;
+    xOffset: number;
+    yOffset: number;
+
     constructor(t) {
       const { padding: e, width: r, height: i } = t;
       ((this.padding = e), (this.width = r), (this.height = i));
@@ -469,29 +508,29 @@ var HanziWriter = (function () {
     }
   }
   const b = (t, e) => {
-      const r = ((t) => {
-          const e = [];
-          let r = t[0];
-          return (
-            t.slice(1).forEach((t) => {
-              (e.push(f(t, r)), (r = t));
-            }),
-            e
-          );
-        })(t),
-        i = e.getVectors();
+    const r = ((t) => {
+      const e = [];
+      let r = t[0];
       return (
-        c(
-          r.map((t) => {
-            const e = i.map((e) => {
-              return ((i = t), ((r = e).x * i.x + r.y * i.y) / k(r) / k(i));
-              var r, i;
-            });
-            return Math.max(...e);
-          }),
-        ) > 0
+        t.slice(1).forEach((t) => {
+          (e.push(f(t, r)), (r = t));
+        }),
+        e
       );
-    },
+    })(t),
+      i = e.getVectors();
+    return (
+      c(
+        r.map((t) => {
+          const e = i.map((e) => {
+            return ((i = t), ((r = e).x * i.x + r.y * i.y) / k(r) / k(i));
+            var r, i;
+          });
+          return Math.max(...e);
+        }),
+      ) > 0
+    );
+  },
     E = (t) => {
       if (t.length < 2) return t;
       const [e, ...r] = t,
@@ -553,10 +592,10 @@ var HanziWriter = (function () {
         n = o <= 350 * (s || e.strokeNum > 0 ? 0.5 : 1) * i;
       if (!n) return { isMatch: !1, avgDist: o };
       const a = ((t, e, r) => {
-          const i = m(e.getStartingPoint(), t[0]),
-            s = m(e.getEndingPoint(), t[t.length - 1]);
-          return i <= 250 * r && s <= 250 * r;
-        })(t, e, i),
+        const i = m(e.getStartingPoint(), t[0]),
+          s = m(e.getEndingPoint(), t[t.length - 1]);
+        return i <= 250 * r && s <= 250 * r;
+      })(t, e, i),
         h = b(t, e),
         c = W(t, e.points, i),
         l = ((t, e, r) => (r * (y(t) + 25)) / (e.getLength() + 25) >= 0.35)(
@@ -567,6 +606,10 @@ var HanziWriter = (function () {
       return { isMatch: n && a && h && c && l, avgDist: o };
     };
   class H {
+    id: any;
+    points: any[];
+    externalPoints: any[];
+
     constructor(t, e, r) {
       ((this.id = t), (this.points = [e]), (this.externalPoints = [r]));
     }
@@ -575,7 +618,21 @@ var HanziWriter = (function () {
     }
   }
   class I {
-    constructor(t, e, r = {}) {
+    _tick: any;
+    scope: any;
+    _valuesOrCallable: any;
+    _duration: number;
+    _force: any;
+    _pausedDuration: number;
+    _startPauseTime: any;
+    _renderState: any;
+    _values: any;
+    _frameHandle: any;
+    _startState: any;
+    _startTime: any;
+    _resolve: any;
+
+    constructor(t, e, r: any = {}) {
       ((this._tick = (t) => {
         if (null !== this._startPauseTime) return;
         const e = Math.min(
@@ -633,13 +690,13 @@ var HanziWriter = (function () {
     pause() {
       null === this._startPauseTime &&
         (this._frameHandle && s(this._frameHandle),
-        (this._startPauseTime = performance.now()));
+          (this._startPauseTime = performance.now()));
     }
     resume() {
       null !== this._startPauseTime &&
         ((this._frameHandle = i(this._tick)),
-        (this._pausedDuration += performance.now() - this._startPauseTime),
-        (this._startPauseTime = null));
+          (this._pausedDuration += performance.now() - this._startPauseTime),
+          (this._startPauseTime = null));
     }
     cancel(t) {
       var e;
@@ -648,7 +705,7 @@ var HanziWriter = (function () {
         s(this._frameHandle || -1),
         (this._frameHandle = void 0),
         this._force &&
-          (this._values || this._inflateValues(t),
+        (this._values || this._inflateValues(t),
           t.updateState(this._values)));
     }
   }
@@ -674,12 +731,21 @@ var HanziWriter = (function () {
     }
     return !0;
   }
-  I.Delay = class {
+
+  class IDelay {
+    _duration: number;
+    _startTime: any;
+    _paused: boolean;
+    scope: string;
+    _runningPromise: any;
+    _resolve: any;
+    _timeout: any;
+
     constructor(t) {
       ((this._duration = t),
         (this._startTime = null),
         (this._paused = !1),
-        (this.scope = "delay.".concat(t)));
+        (this.scope = "delay.".concat(t.toString())));
     }
     run() {
       return (
@@ -701,8 +767,8 @@ var HanziWriter = (function () {
     resume() {
       this._paused &&
         ((this._startTime = performance.now()),
-        (this._timeout = setTimeout(() => this.cancel(), this._duration)),
-        (this._paused = !1));
+          (this._timeout = setTimeout(() => this.cancel(), this._duration)),
+          (this._paused = !1));
     }
     cancel() {
       (clearTimeout(this._timeout),
@@ -779,7 +845,7 @@ var HanziWriter = (function () {
           ),
         ),
         e.strokes.forEach((e, r) => {
-          (r > 0 && o.push(new I.Delay(s)), (o = o.concat(X(t, e, i))));
+          (r > 0 && o.push(new I("delay", null, { duration: s })), (o = o.concat(X(t, e, i))));
         }),
         o
       );
@@ -789,6 +855,16 @@ var HanziWriter = (function () {
       new I("userStrokes.".concat(t), null, { force: !0 }),
     ];
   class $ {
+    _currentStrokeIndex: number;
+    _mistakesOnStroke: number;
+    _totalMistakes: number;
+    _character: any;
+    _renderState: any;
+    _isActive: boolean;
+    _positioner: any;
+    _options: any;
+    _userStroke: any;
+
     constructor(t, e, r) {
       ((this._currentStrokeIndex = 0),
         (this._mistakesOnStroke = 0),
@@ -807,20 +883,20 @@ var HanziWriter = (function () {
         (this._totalMistakes = 0),
         this._renderState.run(
           ((e = this._character),
-          (r = t.strokeFadeDuration),
-          [
-            ...V("main", e, r),
-            new I(
-              "character.highlight",
-              { opacity: 1, strokes: u({ opacity: 0 }, e.strokes.length) },
-              { force: !0 },
-            ),
-            new I(
-              "character.main",
-              { opacity: 1, strokes: u({ opacity: 0 }, e.strokes.length) },
-              { force: !0 },
-            ),
-          ]),
+            (r = t.strokeFadeDuration),
+            [
+              ...V("main", e, r),
+              new I(
+                "character.highlight",
+                { opacity: 1, strokes: u({ opacity: 0 }, e.strokes.length) },
+                { force: !0 },
+              ),
+              new I(
+                "character.main",
+                { opacity: 1, strokes: u({ opacity: 0 }, e.strokes.length) },
+                { force: !0 },
+              ),
+            ]),
         )
       );
       var e, r;
@@ -836,7 +912,7 @@ var HanziWriter = (function () {
           ((t, e) => [
             new I("quiz.activeUserStrokeId", t, { force: !0 }),
             new I(
-              "userStrokes.".concat(t),
+              "userStrokes.".concat(t.toString()),
               { points: [e], opacity: 1 },
               { force: !0 },
             ),
@@ -851,8 +927,8 @@ var HanziWriter = (function () {
       const r = this._userStroke.points.slice(0);
       return this._renderState.run(
         ((i = this._userStroke.id),
-        (s = r),
-        [new I("userStrokes.".concat(i, ".points"), s, { force: !0 })]),
+          (s = r),
+          [new I("userStrokes.".concat(i, ".points"), s, { force: !0 })]),
       );
       var i, s;
     }
@@ -868,12 +944,12 @@ var HanziWriter = (function () {
               : 300,
           ),
         ),
-        1 === this._userStroke.points.length)
+          1 === this._userStroke.points.length)
       )
         return void (this._userStroke = void 0);
       const e = this._getCurrentStroke();
       if (
-        (function (t, e, r, i = {}) {
+        (function (t, e, r, i: any = {}) {
           const s = e.strokes,
             o = E(t.points);
           if (o.length < 2) return null;
@@ -917,9 +993,9 @@ var HanziWriter = (function () {
     cancel() {
       ((this._isActive = !1),
         this._userStroke &&
-          this._renderState.run(
-            Y(this._userStroke.id, this._options.drawingFadeDuration),
-          ));
+        this._renderState.run(
+          Y(this._userStroke.id, this._options.drawingFadeDuration),
+        ));
     }
     _getStrokeData(t = !1) {
       return {
@@ -953,24 +1029,24 @@ var HanziWriter = (function () {
       null == r || r(this._getStrokeData(!0));
       let a =
         ((h = "main"),
-        (c = this._currentStrokeIndex),
-        (l = o),
-        [
-          new I(
-            "character.".concat(h, ".strokes.").concat(c),
-            { displayPortion: 1, opacity: 1 },
-            { duration: l, force: !0 },
-          ),
-        ]);
+          (c = this._currentStrokeIndex),
+          (l = o),
+          [
+            new I(
+              "character.".concat(h, ".strokes.").concat(c),
+              { displayPortion: 1, opacity: 1 },
+              { duration: l, force: !0 },
+            ),
+          ]);
       var h, c, l;
       ((this._mistakesOnStroke = 0), (this._currentStrokeIndex += 1));
       (this._currentStrokeIndex === t.length &&
         ((this._isActive = !1),
-        null == i || i({ character: e, totalMistakes: this._totalMistakes }),
-        s &&
+          null == i || i({ character: e, totalMistakes: this._totalMistakes }),
+          s &&
           (a = a.concat(
             ((t, e) => [
-              ...V("highlight", t),
+              ...V("highlight", t, 0),
               ...U("highlight", t, e / 2),
               ...V("highlight", t, e / 2),
             ])(this._character, 2 * (n || 0)),
@@ -982,8 +1058,8 @@ var HanziWriter = (function () {
       ((this._mistakesOnStroke += 1),
         (this._totalMistakes += 1),
         null === (t = (e = this._options).onMistake) ||
-          void 0 === t ||
-          t.call(e, this._getStrokeData()));
+        void 0 === t ||
+        t.call(e, this._getStrokeData()));
     }
     _getCurrentStroke() {
       return this._character.strokes[this._currentStrokeIndex];
@@ -1006,6 +1082,10 @@ var HanziWriter = (function () {
       e.removeChild(t);
   }
   class rt {
+    stroke: any;
+    _pathLength: number;
+    static STROKE_WIDTH: number;
+
     constructor(t) {
       ((this.stroke = t),
         (this._pathLength = t.getLength() + rt.STROKE_WIDTH / 2));
@@ -1019,6 +1099,11 @@ var HanziWriter = (function () {
   }
   rt.STROKE_WIDTH = 200;
   class it extends rt {
+    _oldProps: any;
+    _animationPath: any;
+    _clip: any;
+    _strokePath: any;
+
     constructor(t) {
       (super(t), (this._oldProps = void 0));
     }
@@ -1026,7 +1111,7 @@ var HanziWriter = (function () {
       ((this._animationPath = J("path")),
         (this._clip = J("clipPath")),
         (this._strokePath = J("path")));
-      const e = "mask-".concat(h());
+      const e = "mask-".concat(h().toString());
       (Z(this._clip, "id", e),
         Z(this._strokePath, "d", this.stroke.path),
         (this._animationPath.style.opacity = "0"),
@@ -1037,10 +1122,10 @@ var HanziWriter = (function () {
             let e = "";
             return (
               window.location &&
-                window.location.href &&
-                (e = window.location.href
-                  .replace(/#[^#]*$/, "")
-                  .replace(/"/gi, "%22")),
+              window.location.href &&
+              (e = window.location.href
+                .replace(/#[^#]*$/, "")
+                .replace(/"/gi, "%22")),
               'url("'.concat(e, "#").concat(t, '")')
             );
           })(e),
@@ -1055,8 +1140,8 @@ var HanziWriter = (function () {
           "stroke-linecap": "round",
           "stroke-linejoin": "miter",
           "stroke-dasharray": ""
-            .concat(this._pathLength, ",")
-            .concat(this._pathLength),
+            .concat(this._pathLength.toString(), ",")
+            .concat(this._pathLength.toString()),
         }),
         this._clip.appendChild(this._strokePath),
         t.defs.appendChild(this._clip),
@@ -1092,6 +1177,10 @@ var HanziWriter = (function () {
     }
   }
   class st {
+    _oldProps: any;
+    _strokeRenderers: any[];
+    _group: any;
+
     constructor(t) {
       ((this._oldProps = void 0),
         (this._strokeRenderers = t.strokes.map((t) => new it(t))));
@@ -1116,13 +1205,13 @@ var HanziWriter = (function () {
       i !==
         (null === (e = this._oldProps) || void 0 === e ? void 0 : e.opacity) &&
         ((this._group.style.opacity = i.toString()),
-        _ ||
+          _ ||
           (0 === i
             ? (this._group.style.display = "none")
             : 0 ===
-                (null === (a = this._oldProps) || void 0 === a
-                  ? void 0
-                  : a.opacity) && this._group.style.removeProperty("display")));
+            (null === (a = this._oldProps) || void 0 === a
+              ? void 0
+              : a.opacity) && this._group.style.removeProperty("display")));
       const h =
         !this._oldProps ||
         o !== this._oldProps.strokeColor ||
@@ -1130,7 +1219,7 @@ var HanziWriter = (function () {
       if (
         h ||
         s !==
-          (null === (r = this._oldProps) || void 0 === r ? void 0 : r.strokes)
+        (null === (r = this._oldProps) || void 0 === r ? void 0 : r.strokes)
       )
         for (let t = 0; t < this._strokeRenderers.length; t++) {
           var c;
@@ -1150,6 +1239,9 @@ var HanziWriter = (function () {
     }
   }
   class ot {
+    _oldProps: any;
+    _path: any;
+
     constructor() {
       this._oldProps = void 0;
     }
@@ -1161,13 +1253,13 @@ var HanziWriter = (function () {
       if (this._path && t !== this._oldProps) {
         if (
           t.strokeColor !==
-            (null === (e = this._oldProps) || void 0 === e
-              ? void 0
-              : e.strokeColor) ||
+          (null === (e = this._oldProps) || void 0 === e
+            ? void 0
+            : e.strokeColor) ||
           t.strokeWidth !==
-            (null === (r = this._oldProps) || void 0 === r
-              ? void 0
-              : r.strokeWidth)
+          (null === (r = this._oldProps) || void 0 === r
+            ? void 0
+            : r.strokeWidth)
         ) {
           const { r: e, g: r, b: i, a: s } = t.strokeColor;
           tt(this._path, {
@@ -1187,9 +1279,9 @@ var HanziWriter = (function () {
             ? void 0
             : i.opacity) && Z(this._path, "opacity", t.opacity.toString()),
           t.points !==
-            (null === (s = this._oldProps) || void 0 === s
-              ? void 0
-              : s.points) && Z(this._path, "d", S(t.points)),
+          (null === (s = this._oldProps) || void 0 === s
+            ? void 0
+            : s.points) && Z(this._path, "d", S(t.points)),
           (this._oldProps = t));
       }
     }
@@ -1198,6 +1290,8 @@ var HanziWriter = (function () {
     }
   }
   class nt {
+    node: any;
+
     constructor(t) {
       this.node = t;
     }
@@ -1240,6 +1334,10 @@ var HanziWriter = (function () {
     }
   }
   class at extends nt {
+    svg: any;
+    defs: any;
+    _pt: any;
+
     constructor(t, e) {
       (super(t),
         (this.svg = t),
@@ -1270,8 +1368,8 @@ var HanziWriter = (function () {
       if (
         this._pt &&
         ((this._pt.x = t.clientX),
-        (this._pt.y = t.clientY),
-        "getScreenCTM" in this.node)
+          (this._pt.y = t.clientY),
+          "getScreenCTM" in this.node)
       ) {
         var e;
         const t = this._pt.matrixTransform(
@@ -1287,8 +1385,8 @@ var HanziWriter = (function () {
       if (
         this._pt &&
         ((this._pt.x = t.touches[0].clientX),
-        (this._pt.y = t.touches[0].clientY),
-        "getScreenCTM" in this.node)
+          (this._pt.y = t.touches[0].clientY),
+          "getScreenCTM" in this.node)
       ) {
         var e;
         const t = this._pt.matrixTransform(
@@ -1303,6 +1401,14 @@ var HanziWriter = (function () {
   }
   var ht = {
     HanziWriterRenderer: class {
+      _character: any;
+      _positioner: any;
+      _mainCharRenderer: any;
+      _outlineCharRenderer: any;
+      _highlightCharRenderer: any;
+      _userStrokeRenderers: any;
+      _positionedTarget: any;
+
       constructor(t, e) {
         ((this._character = t),
           (this._positioner = e),
@@ -1319,10 +1425,10 @@ var HanziWriter = (function () {
           r,
           "transform",
           "translate("
-            .concat(i, ", ")
-            .concat(o - s, ") scale(")
-            .concat(n, ", ")
-            .concat(-1 * n, ")"),
+            .concat(i.toString(), ", ")
+            .concat((o - s).toString(), ") scale(")
+            .concat(n.toString(), ", ")
+            .concat((-1 * n).toString(), ")"),
         ),
           this._outlineCharRenderer.mount(e),
           this._mainCharRenderer.mount(e),
@@ -1396,26 +1502,30 @@ var HanziWriter = (function () {
     t.stroke();
   };
   class lt extends rt {
+    _path2D: any;
+    _pathCmd: any;
+    _extendedMaskPoints: any;
+
     constructor(t, e = !0) {
       (super(t),
         e && Path2D
           ? (this._path2D = new Path2D(this.stroke.path))
           : (this._pathCmd = ((t) => {
-              const e = t.split(/(^|\s+)(?=[A-Z])/).filter((t) => " " !== t),
-                r = [(t) => t.beginPath()];
-              for (const t of e) {
-                const [e, ...i] = t.split(/\s+/),
-                  s = i.map((t) => parseFloat(t));
-                "M" === e
-                  ? r.push((t) => t.moveTo(...s))
-                  : "L" === e
-                    ? r.push((t) => t.lineTo(...s))
-                    : "C" === e
-                      ? r.push((t) => t.bezierCurveTo(...s))
-                      : "Q" === e && r.push((t) => t.quadraticCurveTo(...s));
-              }
-              return (t) => r.forEach((e) => e(t));
-            })(this.stroke.path)),
+            const e = t.split(/(^|\s+)(?=[A-Z])/).filter((t) => " " !== t),
+              r = [(t) => t.beginPath()];
+            for (const t of e) {
+              const [e, ...i] = t.split(/\s+/),
+                s = i.map((t) => parseFloat(t));
+              "M" === e
+                ? r.push((t) => t.moveTo(...s))
+                : "L" === e
+                  ? r.push((t) => t.lineTo(...s))
+                  : "C" === e
+                    ? r.push((t) => t.bezierCurveTo(...s))
+                    : "Q" === e && r.push((t) => t.quadraticCurveTo(...s));
+            }
+            return (t) => r.forEach((e) => e(t));
+          })(this.stroke.path)),
         (this._extendedMaskPoints = P(
           this.stroke.points,
           rt.STROKE_WIDTH / 2,
@@ -1435,10 +1545,10 @@ var HanziWriter = (function () {
           1 === n
             ? "rgb(".concat(i, ",").concat(s, ",").concat(o, ")")
             : "rgb("
-                .concat(i, ",")
-                .concat(s, ",")
-                .concat(o, ",")
-                .concat(n, ")"),
+              .concat(i, ",")
+              .concat(s, ",")
+              .concat(o, ",")
+              .concat(n, ")"),
         h = this._getStrokeDashoffset(e.displayPortion);
       ((t.globalAlpha = e.opacity),
         (t.strokeStyle = a),
@@ -1453,6 +1563,8 @@ var HanziWriter = (function () {
     }
   }
   class ut {
+    _strokeRenderers: any[];
+
     constructor(t) {
       this._strokeRenderers = t.strokes.map((t) => new lt(t));
     }
@@ -1511,6 +1623,14 @@ var HanziWriter = (function () {
   }
   var pt = {
     HanziWriterRenderer: class {
+      destroy: any;
+      _character: any;
+      _positioner: any;
+      _mainCharRenderer: any;
+      _outlineCharRenderer: any;
+      _highlightCharRenderer: any;
+      _target: any;
+
       constructor(t, e) {
         ((this.destroy = p),
           (this._character = t),
@@ -1524,12 +1644,12 @@ var HanziWriter = (function () {
       }
       _animationFrame(t) {
         const {
-            width: e,
-            height: r,
-            scale: i,
-            xOffset: s,
-            yOffset: o,
-          } = this._positioner,
+          width: e,
+          height: r,
+          scale: i,
+          xOffset: s,
+          yOffset: o,
+        } = this._positioner,
           n = this._target.getContext();
         (n.clearRect(0, 0, e, r),
           n.save(),
@@ -1632,6 +1752,14 @@ var HanziWriter = (function () {
     rendererOverride: {},
   };
   class ft {
+    _loadCounter: number;
+    _isLoading: boolean;
+    loadingFailed: boolean;
+    _options: any;
+    _resolve: any;
+    _reject: any;
+    _loadingChar: any;
+
     constructor(t) {
       ((this._loadCounter = 0),
         (this._isLoading = !1),
@@ -1640,10 +1768,10 @@ var HanziWriter = (function () {
     }
     _debouncedLoad(t, e) {
       const r = (t) => {
-          var r;
-          e === this._loadCounter &&
-            (null === (r = this._resolve) || void 0 === r || r.call(this, t));
-        },
+        var r;
+        e === this._loadCounter &&
+          (null === (r = this._resolve) || void 0 === r || r.call(this, t));
+      },
         i = (t) => {
           var r;
           e === this._loadCounter &&
@@ -1661,16 +1789,16 @@ var HanziWriter = (function () {
           return (
             (this._isLoading = !1),
             null === (e = (r = this._options).onLoadCharDataSuccess) ||
-              void 0 === e ||
-              e.call(r, t),
+            void 0 === e ||
+            e.call(r, t),
             t
           );
         })
         .catch((t) => {
           if (
             ((this._isLoading = !1),
-            (this.loadingFailed = !0),
-            this._options.onLoadCharDataError)
+              (this.loadingFailed = !0),
+              this._options.onLoadCharDataError)
           )
             return void this._options.onLoadCharDataError(t);
           if (t instanceof Error) throw t;
@@ -1695,7 +1823,7 @@ var HanziWriter = (function () {
   class kt {
     constructor(t, e = {}) {
       const { HanziWriterRenderer: r, createRenderTarget: i } =
-          "canvas" === e.renderer ? pt : ht,
+        "canvas" === e.renderer ? pt : ht,
         s = e.rendererOverride || {};
       ((this._renderer = {
         HanziWriterRenderer: s.HanziWriterRenderer || r,
@@ -1734,7 +1862,7 @@ var HanziWriter = (function () {
           .concat(i.height - i.yOffset, ")\n        scale(")
           .concat(i.scale, ", ")
           .concat(-1 * i.scale, ")\n      ")),
-        s.replace(/^\s+/, "").replace(/\s+$/, "")).replace(/\s+/g, " "),
+          s.replace(/^\s+/, "").replace(/\s+$/, "")).replace(/\s+/g, " "),
       };
       var s;
     }
@@ -1746,22 +1874,22 @@ var HanziWriter = (function () {
           return null === (e = this._renderState) || void 0 === e
             ? void 0
             : e
-                .run(
-                  U(
-                    "main",
-                    this._character,
-                    "number" == typeof t.duration
-                      ? t.duration
-                      : this._options.strokeFadeDuration,
-                  ),
-                )
-                .then((e) => {
-                  var r;
-                  return (
-                    null === (r = t.onComplete) || void 0 === r || r.call(t, e),
-                    e
-                  );
-                });
+              .run(
+                U(
+                  "main",
+                  this._character,
+                  "number" == typeof t.duration
+                    ? t.duration
+                    : this._options.strokeFadeDuration,
+                ),
+              )
+              .then((e) => {
+                var r;
+                return (
+                  null === (r = t.onComplete) || void 0 === r || r.call(t, e),
+                  e
+                );
+              });
         })
       );
     }
@@ -1773,22 +1901,22 @@ var HanziWriter = (function () {
           return null === (e = this._renderState) || void 0 === e
             ? void 0
             : e
-                .run(
-                  V(
-                    "main",
-                    this._character,
-                    "number" == typeof t.duration
-                      ? t.duration
-                      : this._options.strokeFadeDuration,
-                  ),
-                )
-                .then((e) => {
-                  var r;
-                  return (
-                    null === (r = t.onComplete) || void 0 === r || r.call(t, e),
-                    e
-                  );
-                });
+              .run(
+                V(
+                  "main",
+                  this._character,
+                  "number" == typeof t.duration
+                    ? t.duration
+                    : this._options.strokeFadeDuration,
+                ),
+              )
+              .then((e) => {
+                var r;
+                return (
+                  null === (r = t.onComplete) || void 0 === r || r.call(t, e),
+                  e
+                );
+              });
         })
       );
     }
@@ -1800,22 +1928,22 @@ var HanziWriter = (function () {
           return null === (e = this._renderState) || void 0 === e
             ? void 0
             : e
-                .run(
-                  K(
-                    "main",
-                    this._character,
-                    this._options.strokeFadeDuration,
-                    this._options.strokeAnimationSpeed,
-                    this._options.delayBetweenStrokes,
-                  ),
-                )
-                .then((e) => {
-                  var r;
-                  return (
-                    null === (r = t.onComplete) || void 0 === r || r.call(t, e),
-                    e
-                  );
-                });
+              .run(
+                K(
+                  "main",
+                  this._character,
+                  this._options.strokeFadeDuration,
+                  this._options.strokeAnimationSpeed,
+                  this._options.delayBetweenStrokes,
+                ),
+              )
+              .then((e) => {
+                var r;
+                return (
+                  null === (r = t.onComplete) || void 0 === r || r.call(t, e),
+                  e
+                );
+              });
         })
       );
     }
@@ -1827,35 +1955,35 @@ var HanziWriter = (function () {
           return null === (r = this._renderState) || void 0 === r
             ? void 0
             : r
-                .run(
-                  ((t, e, r, i) => {
-                    const s = e.strokes[r];
-                    return [
-                      new I("character.".concat(t), (r) => {
-                        const i = r.character[t],
-                          s = { opacity: 1, strokes: {} };
-                        for (let t = 0; t < e.strokes.length; t++)
-                          s.strokes[t] = {
-                            opacity: i.opacity * i.strokes[t].opacity,
-                          };
-                        return s;
-                      }),
-                      ...X(t, s, i),
-                    ];
-                  })(
-                    "main",
-                    this._character,
-                    t,
-                    this._options.strokeAnimationSpeed,
-                  ),
-                )
-                .then((t) => {
-                  var r;
-                  return (
-                    null === (r = e.onComplete) || void 0 === r || r.call(e, t),
-                    t
-                  );
-                });
+              .run(
+                ((t, e, r, i) => {
+                  const s = e.strokes[r];
+                  return [
+                    new I("character.".concat(t), (r) => {
+                      const i = r.character[t],
+                        s = { opacity: 1, strokes: {} };
+                      for (let t = 0; t < e.strokes.length; t++)
+                        s.strokes[t] = {
+                          opacity: i.opacity * i.strokes[t].opacity,
+                        };
+                      return s;
+                    }),
+                    ...X(t, s, i),
+                  ];
+                })(
+                  "main",
+                  this._character,
+                  t,
+                  this._options.strokeAnimationSpeed,
+                ),
+              )
+              .then((t) => {
+                var r;
+                return (
+                  null === (r = e.onComplete) || void 0 === r || r.call(e, t),
+                  t
+                );
+              });
         })
       );
     }
@@ -1924,22 +2052,22 @@ var HanziWriter = (function () {
           return null === (e = this._renderState) || void 0 === e
             ? void 0
             : e
-                .run(
-                  U(
-                    "outline",
-                    this._character,
-                    "number" == typeof t.duration
-                      ? t.duration
-                      : this._options.strokeFadeDuration,
-                  ),
-                )
-                .then((e) => {
-                  var r;
-                  return (
-                    null === (r = t.onComplete) || void 0 === r || r.call(t, e),
-                    e
-                  );
-                });
+              .run(
+                U(
+                  "outline",
+                  this._character,
+                  "number" == typeof t.duration
+                    ? t.duration
+                    : this._options.strokeFadeDuration,
+                ),
+              )
+              .then((e) => {
+                var r;
+                return (
+                  null === (r = t.onComplete) || void 0 === r || r.call(t, e),
+                  e
+                );
+              });
         })
       );
     }
@@ -1951,22 +2079,22 @@ var HanziWriter = (function () {
           return null === (e = this._renderState) || void 0 === e
             ? void 0
             : e
-                .run(
-                  V(
-                    "outline",
-                    this._character,
-                    "number" == typeof t.duration
-                      ? t.duration
-                      : this._options.strokeFadeDuration,
-                  ),
-                )
-                .then((e) => {
-                  var r;
-                  return (
-                    null === (r = t.onComplete) || void 0 === r || r.call(t, e),
-                    e
-                  );
-                });
+              .run(
+                V(
+                  "outline",
+                  this._character,
+                  "number" == typeof t.duration
+                    ? t.duration
+                    : this._options.strokeFadeDuration,
+                ),
+              )
+              .then((e) => {
+                var r;
+                return (
+                  null === (r = t.onComplete) || void 0 === r || r.call(t, e),
+                  e
+                );
+              });
         })
       );
     }
@@ -1989,12 +2117,12 @@ var HanziWriter = (function () {
           return null === (t = this._renderState) || void 0 === t
             ? void 0
             : t.run(s).then((t) => {
-                var e;
-                return (
-                  null === (e = r.onComplete) || void 0 === e || e.call(r, t),
-                  t
-                );
-              });
+              var e;
+              return (
+                null === (e = r.onComplete) || void 0 === e || e.call(r, t),
+                t
+              );
+            });
         })
       );
     }
@@ -2004,13 +2132,13 @@ var HanziWriter = (function () {
           this._renderState &&
           this._positioner &&
           (this.cancelQuiz(),
-          (this._quiz = new $(
-            this._character,
-            this._renderState,
-            this._positioner,
-          )),
-          (this._options = { ...this._options, ...t }),
-          this._quiz.startQuiz(this._options));
+            (this._quiz = new $(
+              this._character,
+              this._renderState,
+              this._positioner,
+            )),
+            (this._options = { ...this._options, ...t }),
+            this._quiz.startQuiz(this._options));
       });
     }
     cancelQuiz() {
@@ -2051,13 +2179,13 @@ var HanziWriter = (function () {
       const e = { ...gt, ...t };
       return (
         t.strokeAnimationDuration &&
-          !t.strokeAnimationSpeed &&
-          (e.strokeAnimationSpeed = 500 / t.strokeAnimationDuration),
+        !t.strokeAnimationSpeed &&
+        (e.strokeAnimationSpeed = 500 / t.strokeAnimationDuration),
         t.strokeHighlightDuration &&
-          !t.strokeHighlightSpeed &&
-          (e.strokeHighlightSpeed = 500 / e.strokeHighlightDuration),
+        !t.strokeHighlightSpeed &&
+        (e.strokeHighlightSpeed = 500 / e.strokeHighlightDuration),
         t.highlightCompleteColor ||
-          (e.highlightCompleteColor = e.highlightColor),
+        (e.highlightCompleteColor = e.highlightColor),
         this._fillWidthAndHeight(e)
       );
     }
@@ -2079,8 +2207,8 @@ var HanziWriter = (function () {
         );
       return this._withDataPromise
         ? this._withDataPromise.then(() => {
-            if (!this._loadingManager.loadingFailed) return t();
-          })
+          if (!this._loadingManager.loadingFailed) return t();
+        })
         : Promise.resolve().then(t);
     }
     _setupListeners() {
