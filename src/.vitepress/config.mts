@@ -9,6 +9,7 @@ export default defineConfig({
   title: "宇浩系列输入法",
   description: "情系汉字 沟通古今",
   lang: "zh-Hans-CN",
+  base: process.env.NODE_ENV === 'production' && process.env.GITHUB_PAGES ? '/yu/' : '/',
   outDir: "../dist",
   markdown: {
     math: true,
@@ -20,7 +21,9 @@ export default defineConfig({
       md.use(mdFootnote);
     },
   },
-  head: [["link", { rel: "icon", href: "/logo_blue.png", type: "image/png" }]],
+  head: [
+    ["link", { rel: "icon", href: "/logo_blue.png", type: "image/png" }]
+  ],
   vite: {
     css: {
       postcss: {
