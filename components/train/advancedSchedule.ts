@@ -33,13 +33,13 @@ export class AdvancedSchedule {
     private storageKey: string;
     private practiceCount: number = 0; // 當前練習組數計數器
 
-    // 算法參數
-    private readonly NEW_CARD_RATIO = 0.25; // 新卡片比例：25%
-    private readonly INITIAL_INTERVALS = [4, 8, 16]; // 初始間隔：1組、3組、7組
+    // 算法參數 - 調整為更長的復習間隔
+    private readonly NEW_CARD_RATIO = 0.30; // 新卡片比例：30%（增加新學習內容）
+    private readonly INITIAL_INTERVALS = [16, 64, 256]; // 初始間隔：64組、128組、256組（加倍）
     private readonly GRADUATION_THRESHOLD = 3; // 畢業閾值：連續3次正確
-    private readonly EASY_MULTIPLIER = 2.5; // 簡單乘數
-    private readonly GOOD_MULTIPLIER = 2.0; // 良好乘數
-    private readonly HARD_MULTIPLIER = 1.2; // 困難乘數
+    private readonly EASY_MULTIPLIER = 3.0; // 簡單乘數
+    private readonly GOOD_MULTIPLIER = 2.5; // 良好乘數
+    private readonly HARD_MULTIPLIER = 1.5; // 困難乘數
 
     constructor(name: string) {
         this.storageKey = `spaced_repetition_${name}`;
@@ -68,8 +68,8 @@ export class AdvancedSchedule {
             if (item.consecutiveCorrect >= this.GRADUATION_THRESHOLD) {
                 // 已掌握：間隔延長
                 item.currentInterval = Math.floor(item.currentInterval * this.GOOD_MULTIPLIER);
-                // 限制最大間隔為50組（避免在短期訓練中間隔過長）
-                item.currentInterval = Math.min(item.currentInterval, 50);
+                // 限制最大間隔為100組（增加最大間隔）
+                item.currentInterval = Math.min(item.currentInterval, 100);
             } else {
                 // 仍在學習：適度延長
                 item.currentInterval = Math.floor(item.currentInterval * this.HARD_MULTIPLIER);

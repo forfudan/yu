@@ -398,9 +398,9 @@ onBeforeUnmount(() => {
                             class="text-sm text-gray-600 dark:text-gray-300 font-mono bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
                             {{ zigen.ma }}
                         </div>
-                        <!-- 顯示相關漢字 - 響應式大小和間距 -->
+                        <!-- 顯示相關漢字 - 響應式大小和間距，使用 zigen-font -->
                         <div :class="[
-                            'text-gray-600 dark:text-gray-300 mt-2 font-medium tracking-tight',
+                            'text-gray-600 dark:text-gray-300 mt-2 font-medium tracking-tight zigen-font',
                             {
                                 'text-sm': windowWidth < 768,
                                 'text-base': windowWidth >= 768 && windowWidth < 1024,

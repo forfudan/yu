@@ -18,7 +18,12 @@ export function find8relativeChars(zigen: string, chaifenMap: ChaifenMap) {
                 // 使用 Array.from 正確處理 Unicode 字符
                 const chars = Array.from(char.trim())
                 for (const c of chars) {
-                    if (c && c !== '�' && result.length < 8) {
+                    const codePoint = c.codePointAt(0)
+                    // 只保留 CJK 基本集字符（U+4E00-U+9FFF），避免顯示問題
+                    if (c &&
+                        codePoint !== undefined &&
+                        codePoint >= 0x4E00 && codePoint <= 0x9FFF && // CJK 統一漢字基本集
+                        result.length < 8) {
                         result.push(c)
                     }
                 }
@@ -26,5 +31,7 @@ export function find8relativeChars(zigen: string, chaifenMap: ChaifenMap) {
             }
         }
     }
-    return result.join('')
+    // 使用 Array.from 確保正確處理 Unicode 字符
+    const resultString = result.join('')
+    return Array.from(resultString).slice(0, 8).join('')
 }
