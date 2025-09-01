@@ -8,8 +8,9 @@
 
 <script setup lang="ts">
 /** 字根練習 - 優化版 */
-import { shallowRef, onMounted } from "vue";
+import { shallowRef, onMounted, ref, computed, nextTick } from "vue";
 import { Card, cache, fetchChaifen, fetchZigen, makeCodesFromDivision } from "./share";
+import { AdvancedSchedule } from "./advancedSchedule";
 import TrainCardGroup from "./TrainCardGroup.vue";
 
 interface ZigenGroup {
@@ -40,8 +41,42 @@ if (range) {
     cardsName += `_${range[0]}_${range[1]}`
 }
 
+// 字頻序相關 - 添加狀態持久化
+const storageKey = `zigen_sort_order_${p.name}`
+const isFrequencyOrder = ref(false)
+const originalCardGroups = shallowRef<ZigenGroup[]>()
 const cardGroups = shallowRef<ZigenGroup[]>()
 const chaifenMap = shallowRef()
+
+// 從 localStorage 載入排序狀態
+function loadSortOrder() {
+    try {
+        const saved = localStorage.getItem(storageKey)
+        if (saved !== null) {
+            const savedValue = JSON.parse(saved)
+            isFrequencyOrder.value = savedValue
+            console.log('載入保存的排序狀態:', savedValue)
+        }
+    } catch (error) {
+        console.warn('載入排序狀態失敗:', error)
+    }
+}
+
+// 保存排序狀態到 localStorage
+function saveSortOrder() {
+    try {
+        localStorage.setItem(storageKey, JSON.stringify(isFrequencyOrder.value))
+        console.log('排序狀態已保存:', isFrequencyOrder.value)
+    } catch (error) {
+        console.warn('保存排序狀態失敗:', error)
+    }
+}
+
+// 高頻字根（按優先級排序）
+const highFreqZigens = ['口', '一', '月', '丶', '日', '人', '亻', '扌', '白', '土', '丷', '二', '又', '丿', '宀', '木', '尚', '辶', '小', '冖', '厶', '心', '氵', '八', '女', '大', '艹', '𠂇', '匕', '寸', '也', '乙', '戈', '目', '讠', '不', '龰', '阝', '竹', '了', '十', '夂', '王', '刂', '儿', '力', '凵', '冂', '子', '斤', '火', '米', '丁', '彐', '纟', '文', '立', '士', '夕', '乂', '门', '卜', '自', '尤', '彳', '羊', '止', '禾', '贝', '尸', '工', '乚', '上', '囗', '至', '手', '𬺰', '艮', '车', '石', '田', '己', '几', '牛', '见', '走', '甲', '且', '彡', '犬', '巾', '西', '方', '刀', '殳', '七', '弓', '巴', '矢', '示']
+
+// 低頻字根（排到最後）
+const lowFreqZigens = ['鳥', '烏', '魚', '馬', '風', '來', '車', '長', '門', '鬥', '齒', '飛', '見', '貝', '鹵', '僉', '韋', '咼', '黽']
 
 const getCode = (ma: string) => {
     switch (p.mode) {
@@ -53,6 +88,70 @@ const getCode = (ma: string) => {
             return ma
         default:
             break;
+    }
+}
+
+// 獲取字根組的頻率優先級
+function getZigenGroupPriority(group: ZigenGroup): number {
+    // 檢查組內是否包含高頻字根
+    for (const zigen of group.zigens) {
+        const highFreqIndex = highFreqZigens.indexOf(zigen.font)
+        if (highFreqIndex !== -1) {
+            return highFreqIndex // 越小優先級越高
+        }
+    }
+
+    // 檢查組內是否包含低頻字根
+    for (const zigen of group.zigens) {
+        const lowFreqIndex = lowFreqZigens.indexOf(zigen.font)
+        if (lowFreqIndex !== -1) {
+            return 10000 + lowFreqIndex // 排到最後
+        }
+    }
+
+    return 5000 // 中等優先級
+}
+
+// 按字頻排序字根組
+function sortGroupsByFrequency(groups: ZigenGroup[]): ZigenGroup[] {
+    return [...groups].sort((a, b) => {
+        const priorityA = getZigenGroupPriority(a)
+        const priorityB = getZigenGroupPriority(b)
+        return priorityA - priorityB
+    })
+}
+
+// 切換排序模式
+function toggleSortOrder() {
+    console.log('切換排序模式被調用，當前狀態:', isFrequencyOrder.value)
+    isFrequencyOrder.value = !isFrequencyOrder.value
+    console.log('切換後狀態:', isFrequencyOrder.value)
+    saveSortOrder() // 保存狀態
+    applySortOrder() // 應用排序
+    console.log('排序應用完成，按鈕應該顯示為:', isFrequencyOrder.value ? '橙色（字頻序）' : '灰色（字典序）')
+
+    // 自動刷新頁面以確保排序生效
+    setTimeout(() => {
+        window.location.reload();
+    }, 100);
+}
+
+// 應用排序邏輯
+function applySortOrder() {
+    if (originalCardGroups.value) {
+        if (isFrequencyOrder.value) {
+            cardGroups.value = sortGroupsByFrequency(originalCardGroups.value)
+            console.log('已切換到字頻序，重新排序了', cardGroups.value.length, '個字根組')
+        } else {
+            cardGroups.value = [...originalCardGroups.value] // 創建新數組以觸發響應式更新
+            console.log('已切換到字典序，恢復原始順序')
+        }
+        // 確保響應式更新
+        nextTick(() => {
+            console.log('排序更新完成，當前順序:', cardGroups.value.slice(0, 3).map(g => g.code))
+        })
+    } else {
+        console.warn('originalCardGroups 未初始化，無法應用排序')
     }
 }
 
@@ -85,8 +184,27 @@ function groupZigensByCode(zigenValues: Array<{ font: string; ma: string }>) {
     return groups;
 }
 
+// 重置訓練
+function resetTraining() {
+    // 重置調度系統需要等數據載入後
+    if (originalCardGroups.value) {
+        const schedule = new AdvancedSchedule(cardsName)
+        schedule.reset()
+
+        // 重置排序狀態為字典序
+        isFrequencyOrder.value = false
+        saveSortOrder()
+
+        // 重新應用排序（這會觸發 TrainCardGroup 的重新初始化）
+        applySortOrder()
+
+        console.log('訓練已重置，排序狀態重置為字典序')
+    }
+}
+
 onMounted(async () => {
-    if (cardGroups.value && chaifenMap.value) return;
+    // 首先載入保存的排序狀態
+    loadSortOrder()
 
     chaifenMap.value = await fetchChaifen('/chaifen.csv')
     const zigenMap = await fetchZigen(p.zigenUrl)
@@ -98,16 +216,23 @@ onMounted(async () => {
     }
 
     // 按編碼分組字根
-    cardGroups.value = groupZigensByCode(zigenValues);
+    const groups = groupZigensByCode(zigenValues);
+    originalCardGroups.value = groups;
 
-    console.log(`字根練習：共 ${cardGroups.value.length} 個編碼組，包含 ${zigenValues.length} 個字根`);
+    // 根據保存的狀態應用排序
+    applySortOrder()
+
+    console.log(`字根練習：共 ${groups.length} 個編碼組，包含 ${zigenValues.length} 個字根，當前${isFrequencyOrder.value ? '字頻序' : '字典序'}`);
 })
 </script>
 
 <template>
-    <TrainCardGroup v-if="cardGroups && chaifenMap" :name="cardsName" :card-groups="cardGroups"
-        :chaifen-map="chaifenMap" mode="g" :supplement="p.supplement ?? false" :ming="p.ming ?? false" />
-    <h2 class="text-gray-700 text-center" v-else>
+    <div v-if="cardGroups && chaifenMap">
+        <TrainCardGroup :name="cardsName" :card-groups="cardGroups" :chaifen-map="chaifenMap" mode="g"
+            :supplement="p.supplement ?? false" :ming="p.ming ?? false" :is-frequency-order="isFrequencyOrder"
+            :on-toggle-sort="toggleSortOrder" :on-reset="resetTraining" />
+    </div>
+    <h2 class="text-gray-700 dark:text-gray-300 text-center" v-else>
         下載資料中……
     </h2>
 </template>

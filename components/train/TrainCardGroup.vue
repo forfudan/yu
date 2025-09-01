@@ -29,10 +29,16 @@ const p = defineProps<{
     /** 是否顯示補充，僅對單字練習有效 */
     supplement?: boolean,
     /** 是否顯示拆分名詞，僅對單字練習有效 */
-    ming?: boolean
+    ming?: boolean,
+    /** 是否為字頻序 */
+    isFrequencyOrder?: boolean,
+    /** 排序切換回調 */
+    onToggleSort?: () => void,
+    /** 重置訓練回調 */
+    onReset?: () => void
 }>()
 
-const { name, cardGroups, mode, supplement, ming } = p;
+const { name, cardGroups, mode, supplement, ming, isFrequencyOrder, onToggleSort, onReset } = p;
 
 console.log(`載入分組練習會話: ${name}`);
 
@@ -45,6 +51,94 @@ const inputValue = ref<string>('');
 const showAnswer = ref(false);
 const isCorrect = ref(true);
 const wrongInputCount = ref(0);
+const showResetConfirm = ref(false);
+
+// 處理重置確認
+const handleReset = () => {
+    showResetConfirm.value = true;
+}
+
+const confirmReset = () => {
+    if (onReset) {
+        onReset();
+        showResetConfirm.value = false;
+        // 強制刷新頁面以確保完全重置
+        setTimeout(() => {
+            window.location.reload();
+        }, 100);
+    }
+}
+
+const cancelReset = () => {
+    showResetConfirm.value = false;
+}
+
+// 響應式字根大小計算
+const windowWidth = ref(typeof window !== 'undefined' ? window.innerWidth : 1024);
+
+const handleResize = () => {
+    windowWidth.value = window.innerWidth;
+};
+
+onMounted(() => {
+    if (typeof window !== 'undefined') {
+        window.addEventListener('resize', handleResize);
+    }
+    nextTick(() => {
+        inputElement.value?.focus();
+    });
+    document.addEventListener('keydown', handleKeydown);
+
+    // 初始化第一個字根組
+    nextGroup();
+});
+
+onBeforeUnmount(() => {
+    if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', handleResize);
+    }
+    document.removeEventListener('keydown', handleKeydown);
+});
+
+// 計算字根大小類名
+const zigenSizeClass = computed(() => {
+    if (!currentGroup.value) return 'text-8xl';
+
+    const zigenCount = currentGroup.value.zigens.length;
+    const isSmallScreen = windowWidth.value < 768; // sm breakpoint
+    const isMediumScreen = windowWidth.value < 1024; // lg breakpoint
+
+    if (isSmallScreen) {
+        // 小屏幕：按字根數量調整
+        if (zigenCount <= 2) return 'text-6xl';
+        if (zigenCount <= 4) return 'text-5xl';
+        return 'text-4xl';
+    } else if (isMediumScreen) {
+        // 中等屏幕：稍大一些
+        if (zigenCount <= 2) return 'text-8xl';
+        if (zigenCount <= 4) return 'text-7xl';
+        return 'text-6xl';
+    } else {
+        // 大屏幕：最大字體
+        if (zigenCount <= 2) return 'text-9xl';
+        if (zigenCount <= 4) return 'text-8xl';
+        return 'text-7xl';
+    }
+});
+
+// 計算間距類名
+const zigenGapClass = computed(() => {
+    if (!currentGroup.value) return 'gap-8 lg:gap-12';
+
+    const zigenCount = currentGroup.value.zigens.length;
+    const isSmallScreen = windowWidth.value < 768;
+
+    if (isSmallScreen) {
+        return zigenCount > 4 ? 'gap-3' : 'gap-4';
+    } else {
+        return zigenCount > 4 ? 'gap-6' : 'gap-8 lg:gap-12';
+    }
+});
 
 const currentGroup = computed(() => cardGroups[currentIndex.value] || null);
 const totalGroups = computed(() => cardGroups.length);
@@ -141,10 +235,20 @@ const handleKeydown = (e: KeyboardEvent) => {
     }
 };
 
-/** 獲取相關字符 */
+/** 獲取相關字符 - 響應式顯示 */
 const getRelatedChars = (zigen: string): string => {
     const related = find8relativeChars(zigen, p.chaifenMap)
-    return related.slice(0, 4).split('').join(' ')
+    const isSmallScreen = windowWidth.value < 768;
+    const isMediumScreen = windowWidth.value < 1024;
+
+    let maxChars = 4; // 預設4個字符
+    if (isSmallScreen) {
+        maxChars = 2; // 小屏幕只顯示2個
+    } else if (isMediumScreen) {
+        maxChars = 3; // 中屏幕顯示3個
+    }
+
+    return related.slice(0, maxChars).split('').join('')
 }
 
 /** 檢查字根是否正確 */
@@ -187,42 +291,87 @@ onBeforeUnmount(() => {
 <template>
     <div class="max-w-2xl mx-auto p-6 space-y-6" v-if="currentGroup">
         <!-- 進度顯示 -->
-        <div class="text-center text-sm text-gray-600">
-            <div class="flex justify-between items-center mb-2">
-                <span>練習進度: {{ currentIndex + 1 }} / {{ totalGroups }}</span>
-                <span v-if="wrongInputCount > 0" class="text-red-600">錯誤次數: {{ wrongInputCount }}</span>
-            </div>
-            <div class="w-full bg-gray-200 rounded-full h-2">
-                <div class="bg-blue-500 h-2 rounded-full transition-all duration-300" :style="`width: ${progress}%`">
+        <div class="relative">
+            <!-- 進度顯示 -->
+            <div class="text-center text-sm text-gray-600 dark:text-gray-400">
+                <div class="flex justify-between items-center mb-2">
+                    <span>練習進度: {{ currentIndex + 1 }} / {{ totalGroups }}</span>
+                    <span v-if="wrongInputCount > 0" class="text-red-600 dark:text-red-400">錯誤次數: {{ wrongInputCount
+                    }}</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div class="bg-blue-500 dark:bg-blue-400 h-2 rounded-full transition-all duration-300"
+                        :style="`width: ${progress}%`">
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- 練習區域 -->
         <div :class="[
-            'w-full shadow-lg rounded-2xl transition-all duration-300 transform',
-            { 'bg-red-50 border-red-200': !isCorrect, 'bg-blue-50 border-blue-200': isCorrect },
+            'w-full shadow-lg rounded-2xl transition-all duration-300 transform relative',
+            {
+                'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-800': !isCorrect,
+                'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800': isCorrect
+            },
             'border-2 hover:shadow-xl'
         ]">
+            <!-- 卡片內控制按鈕 -->
+            <div class="absolute top-4 right-4 flex gap-2 z-10">
+                <!-- 排序切換按鈕 -->
+                <button v-if="onToggleSort"
+                    @click="() => { console.log('排序按鈕被點擊，當前狀態:', isFrequencyOrder); onToggleSort(); }" :class="[
+                        'w-8 h-8 rounded-full font-medium transition-all duration-200 flex items-center justify-center text-xs shadow-md',
+                        isFrequencyOrder
+                            ? 'bg-orange-500 hover:bg-orange-600 text-white'
+                            : 'bg-gray-200 hover:bg-gray-300 text-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-200'
+                    ]" :title="isFrequencyOrder ? '字頻序 (點擊切換到字典序)' : '字典序 (點擊切換到字頻序)'">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
+                    </svg>
+                </button>
+
+                <!-- 重置按鈕 -->
+                <button v-if="onReset" @click="handleReset"
+                    class="w-8 h-8 rounded-full bg-red-500 hover:bg-red-600 text-white font-medium transition-all duration-200 flex items-center justify-center text-xs shadow-md"
+                    title="重新開始訓練">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                </button>
+            </div>
+
             <!-- 字根組顯示 -->
             <div class="text-center py-12">
                 <!-- 字根組 - 響應式大小設計 -->
-                <div class="flex justify-center items-center flex-wrap gap-8 lg:gap-12 mb-12">
+                <div :class="['flex justify-center items-center flex-wrap mb-12', zigenGapClass]">
                     <div v-for="(zigen, index) in currentGroup.zigens" :key="index"
                         class="flex flex-col items-center group">
                         <div :class="[
                             'mb-4 zigen-font transform transition-all duration-300 group-hover:scale-110',
-                            'text-7xl sm:text-8xl lg:text-9xl',
-                            { 'text-red-500': !isCorrect, 'text-blue-700': isCorrect }
+                            zigenSizeClass,
+                            {
+                                'text-red-500 dark:text-red-400': !isCorrect,
+                                'text-blue-700 dark:text-blue-300': isCorrect
+                            }
                         ]">
                             {{ zigen.font }}
                         </div>
-                        <div v-if="showAnswer" class="text-sm text-gray-600 font-mono bg-gray-100 px-2 py-1 rounded">
+                        <div v-if="showAnswer"
+                            class="text-sm text-gray-600 dark:text-gray-300 font-mono bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
                             {{ zigen.ma }}
                         </div>
-                        <!-- 顯示相關漢字 - 增大字體 -->
-                        <div class="text-lg sm:text-xl text-gray-600 mt-3 font-medium"
-                            v-if="getRelatedChars(zigen.font)">
+                        <!-- 顯示相關漢字 - 響應式大小和間距 -->
+                        <div :class="[
+                            'text-gray-600 dark:text-gray-300 mt-2 font-medium tracking-tight',
+                            {
+                                'text-sm': windowWidth < 768,
+                                'text-base': windowWidth >= 768 && windowWidth < 1024,
+                                'text-lg': windowWidth >= 1024
+                            }
+                        ]" v-if="getRelatedChars(zigen.font)">
                             {{ getRelatedChars(zigen.font) }}
                         </div>
                     </div>
@@ -235,8 +384,8 @@ onBeforeUnmount(() => {
                     'px-6 py-4 text-2xl text-center border-2 rounded-xl w-48 font-mono',
                     'transition-all duration-300 focus:outline-none focus:ring-4',
                     {
-                        'border-red-300 focus:border-red-500 focus:ring-red-200 bg-red-50': !isCorrect,
-                        'border-blue-300 focus:border-blue-500 focus:ring-blue-200 bg-white': isCorrect
+                        'border-red-300 focus:border-red-500 focus:ring-red-200 bg-red-50 dark:border-red-700 dark:focus:border-red-500 dark:focus:ring-red-900/50 dark:bg-red-900/20 dark:text-white': !isCorrect,
+                        'border-blue-300 focus:border-blue-500 focus:ring-blue-200 bg-white dark:border-blue-700 dark:focus:border-blue-500 dark:focus:ring-blue-900/50 dark:bg-gray-800 dark:text-white': isCorrect
                     }
                 ]" />
             </div>
@@ -246,26 +395,62 @@ onBeforeUnmount(() => {
                 'text-center pb-8 transition-all duration-300',
                 { 'opacity-0 transform translate-y-2': !showAnswer, 'opacity-100': showAnswer }
             ]">
-                <div class="inline-block bg-gray-100 px-4 py-2 rounded-lg">
-                    答案是 <span class="font-mono text-xl font-bold text-blue-600">{{ currentGroup.code }}</span>
+                <div class="inline-block bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-lg">
+                    <span class="text-gray-800 dark:text-gray-200">答案是</span> <span
+                        class="font-mono text-xl font-bold text-blue-600 dark:text-blue-400">{{ currentGroup.code
+                        }}</span>
                 </div>
             </div>
         </div>
 
         <!-- 操作提示 -->
-        <div class="text-center text-sm text-gray-500 space-y-1">
+        <div class="text-center text-sm text-gray-500 dark:text-gray-400 space-y-1">
             <div v-if="!showAnswer" class="flex items-center justify-center gap-4">
                 <span class="flex items-center gap-1">
-                    <kbd class="px-2 py-1 text-xs bg-gray-100 rounded">輸入</kbd>
+                    <kbd class="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 dark:text-gray-300 rounded">輸入</kbd>
                     自動檢查
                 </span>
                 <span class="flex items-center gap-1">
-                    <kbd class="px-2 py-1 text-xs bg-gray-100 rounded">Esc</kbd>
+                    <kbd class="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 dark:text-gray-300 rounded">Esc</kbd>
                     顯示答案
                 </span>
             </div>
-            <div v-else class="text-blue-600 font-medium">
+            <div v-else class="text-blue-600 dark:text-blue-400 font-medium">
                 繼續輸入正確編碼
+            </div>
+        </div>
+    </div>
+
+    <!-- 重置確認對話框 -->
+    <div v-if="showResetConfirm" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+        @click="cancelReset">
+        <div class="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-sm mx-4 shadow-xl" @click.stop>
+            <div class="flex items-center gap-3 mb-4">
+                <div
+                    class="w-10 h-10 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
+                    <svg class="w-6 h-6 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100">確認重置</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">您確定要重新開始訓練嗎？</p>
+                </div>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
+                這將清除當前的學習進度和統計數據，無法恢復。
+            </p>
+            <div class="flex gap-3 justify-end">
+                <button @click="cancelReset"
+                    class="px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors">
+                    取消
+                </button>
+                <button @click="confirmReset"
+                    class="px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-colors">
+                    確認重置
+                </button>
             </div>
         </div>
     </div>
