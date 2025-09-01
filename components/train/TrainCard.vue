@@ -1,5 +1,5 @@
 <!--
-  TrainCard.vue - 训练卡片组件
+  TrainCard.vue - 訓練卡片組件
   
   Modification History:
   - 2025-08-14 by 朱宇浩: 增加參數 ming，允許日月字根訓練對五個一碼上屏字增加兼容輸入
@@ -130,12 +130,12 @@ function restartTraining() {
         <div class="mb-8">
             <div class="text-6xl mb-4">🎉</div>
             <h2 class="text-4xl font-bold mb-2">恭喜你完成練習！</h2>
-            <p class="text-xl text-gray-600 mb-8">你已经完成了 {{ cards.length }} 個項目的練習，獲得称号「登堂入室」</p>
+            <p class="text-xl text-gray-600 mb-8">你已经完成了 {{ cards.length }} 個項目的練習。感謝你的努力和堅持，爲中華文明和漢字的傳承又增添了一份力量！</p>
         </div>
 
         <div class="space-y-4">
             <button @click="restartTraining" class="btn btn-primary btn-lg px-8">
-                要不要再來一輪？
+                想要再訓練一輪嗎？
             </button>
             <div class="text-sm text-gray-500">
                 繼續練習以巩固記憶
