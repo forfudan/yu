@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as l,a4 as d}from"./chunks/framework.rq0FYgLR.js";const c=JSON.parse('{"title":"吉旦饼输入法","description":"","frontmatter":{},"headers":[],"relativePath":"docs/wafel.md","filePath":"docs/wafel.md"}'),a={name:"docs/wafel.md"},s=d("",5),n=[s];function i(f,r,g,x,y,o){return l(),e("div",null,n)}const h=t(a,[["render",i]]);export{c as __pageData,h as default};

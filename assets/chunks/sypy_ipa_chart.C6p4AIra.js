@@ -1,0 +1,1 @@
+const s="/sypy/sypy_vowels.png",p="/sypy/sypy_chart.png",y="/sypy/sypy_pinyin_chart.png",_="/sypy/sypy_trans1_chart.png",t="/sypy/sypy_trans2_chart.png",n="/sypy/sypy_trans3_chart.png",a="/sypy/sypy_ipa_chart.png";export{s as _,p as a,y as b,_ as c,t as d,n as e,a as f};

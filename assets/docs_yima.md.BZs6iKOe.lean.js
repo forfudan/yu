@@ -1,1 +1,0 @@
-import{_ as t,c as l,o as e,a4 as d}from"./chunks/framework.rq0FYgLR.js";const p=JSON.parse('{"title":"易码","description":"","frontmatter":{},"headers":[],"relativePath":"docs/yima.md","filePath":"docs/yima.md"}'),a={name:"docs/yima.md"},i=d("",35),n=[i];function s(f,x,y,g,r,h){return e(),l("div",null,n)}const c=t(a,[["render",s]]);export{p as __pageData,c as default};
