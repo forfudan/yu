@@ -1,258 +1,351 @@
 /**
- * AdvancedSchedule.ts - 間隔重複訓練調度演算法
+ * AdvancedSchedule.ts - 基於間隔重複的字根學習調度算法
  * 
- * 基於SuperMemo/Anki算法，實現學習與復習穿插的智慧調度
- * 特點：
- * 1. 新字根學習時立即安排短期復習
- * 2. 根據回答品質動態調整復習間隔
- * 3. 控制每次學習的新內容比例（20-30%）
- * 4. 錯誤字根優先復習
+ * 使用字根組進行訓練：
+ * 1. 直接使用字根組的索引，而不是編碼
+ * 2. 避免編碼查找導致的不連續組丟失問題
+ * 3. 確保所有字根組都能被正確訪問
+ * 
+ * 間隔重複邏輯：
+ * 1. 按順序出字根組，第一次為「學習」
+ * 2. 學習後根據表現安排復習，間隔逐步增加
+ * 3. 錯誤時安排強化練習，使用較短間隔
+ * 4. 達到3次正確後標記為已掌握
  */
 
 interface ReviewItem {
-    /** 項目標識符 */
-    id: string;
-    /** 下次復習的絕對組數位置 */
-    nextReviewAt: number;
+    /** 字根組索引 */
+    index: number;
     /** 連續正確次數 */
     consecutiveCorrect: number;
     /** 總練習次數 */
     totalReviews: number;
-    /** 錯誤次數 */
-    errorCount: number;
-    /** 最後練習時間 */
-    lastPracticed: number;
-    /** 是否為新學項目 */
-    isNew: boolean;
+    /** 是否已完成學習（達到3次正確） */
+    isCompleted: boolean;
+    /** 下次復習的練習計數器位置 */
+    nextReviewAt: number;
     /** 當前間隔長度 */
     currentInterval: number;
+    /** 上次練習的練習計數器位置 */
+    lastPracticedAt: number;
 }
 
 export class AdvancedSchedule {
-    private items: Map<string, ReviewItem> = new Map();
+    private items: Map<number, ReviewItem> = new Map();
     private storageKey: string;
-    private practiceCount: number = 0; // 當前練習組數計數器
+    private currentLearningIndex: number = 0; // 當前學習到第幾個字根組
+    private practiceCounter: number = 0; // 全局練習計數器
+    private totalGroups: number = 0; // 總字根組數量
 
-    // 算法參數 - 平衡學習效率與記憶鞏固
-    private readonly NEW_CARD_RATIO = 0.30; // 新卡片比例：30%
-    private readonly INITIAL_INTERVALS = [3, 8, 20]; // 初始間隔：3組、8組、20組（適中間隔）
-    private readonly GRADUATION_THRESHOLD = 3; // 畢業閾值：連續3次正確
-    private readonly EASY_MULTIPLIER = 2.0; // 簡單乘數
-    private readonly GOOD_MULTIPLIER = 1.8; // 良好乘數（適中增長）
-    private readonly HARD_MULTIPLIER = 1.3; // 困難乘數
+    // 間隔設定（以練習次數為單位）
+    private readonly INITIAL_INTERVALS = [2, 5, 10]; // 初次學習後的復習間隔
+    private readonly REINFORCE_INTERVAL = 1; // 錯誤後的強化間隔
+    private readonly MAX_INTERVAL = 20; // 最大間隔
+    private readonly GRADUATION_THRESHOLD = 3; // 畢業閾值
 
     constructor(name: string) {
-        this.storageKey = `spaced_repetition_${name}`;
+        this.storageKey = `advanced_schedule_${name}`;
         this.loadFromStorage();
+    }
+
+    /**
+     * 初始化調度系統
+     */
+    initializeWithGroupCount(totalGroups: number): void {
+        this.totalGroups = totalGroups;
+
+        // 確保所有索引都有對應的項目
+        for (let i = 0; i < totalGroups; i++) {
+            if (!this.items.has(i)) {
+                this.items.set(i, {
+                    index: i,
+                    consecutiveCorrect: 0,
+                    totalReviews: 0,
+                    isCompleted: false,
+                    nextReviewAt: 0,
+                    currentInterval: 0,
+                    lastPracticedAt: 0
+                });
+            }
+        }
+
+        this.saveToStorage();
     }
 
     /**
      * 記錄成功回答
      */
-    recordSuccess(id: string): void {
-        const item = this.getOrCreateItem(id);
-        this.practiceCount++;
+    recordSuccess(groupIndex: number): void {
+        const item = this.getOrCreateItem(groupIndex);
+        this.practiceCounter++;
 
         item.consecutiveCorrect++;
         item.totalReviews++;
-        item.lastPracticed = this.practiceCount;
-        item.isNew = false;
+        item.lastPracticedAt = this.practiceCounter;
 
-        // 簡化的間隔計算
-        if (item.consecutiveCorrect <= this.INITIAL_INTERVALS.length) {
-            const intervalIndex = item.consecutiveCorrect - 1;
-            item.currentInterval = this.INITIAL_INTERVALS[intervalIndex] || this.INITIAL_INTERVALS[this.INITIAL_INTERVALS.length - 1];
+        // 如果達到畢業閾值，標記為完成
+        if (item.consecutiveCorrect >= this.GRADUATION_THRESHOLD) {
+            item.isCompleted = true;
+            item.nextReviewAt = Number.MAX_SAFE_INTEGER; // 不再復習
         } else {
-            item.currentInterval = Math.floor(item.currentInterval * this.GOOD_MULTIPLIER);
-            item.currentInterval = Math.min(item.currentInterval, 50);
+            // 計算下次復習間隔
+            this.scheduleNextReview(item);
         }
 
-        item.nextReviewAt = this.practiceCount + item.currentInterval;
-        this.items.set(id, item);
         this.saveToStorage();
     }
 
     /**
      * 記錄失敗回答
      */
-    recordFailure(id: string): void {
-        const item = this.getOrCreateItem(id);
-        this.practiceCount++;
+    recordFailure(groupIndex: number): void {
+        const item = this.getOrCreateItem(groupIndex);
+        this.practiceCounter++;
 
+        // 重置連續正確次數
         item.consecutiveCorrect = 0;
         item.totalReviews++;
-        item.errorCount++;
-        item.lastPracticed = this.practiceCount;
-        item.isNew = false;
+        item.lastPracticedAt = this.practiceCounter;
 
-        // 錯誤處理：簡化為立即復習
-        item.currentInterval = 1;
-        item.nextReviewAt = this.practiceCount + item.currentInterval;
-        this.items.set(id, item);
+        // 安排強化練習（較短間隔）
+        item.currentInterval = this.REINFORCE_INTERVAL;
+        item.nextReviewAt = this.practiceCounter + this.REINFORCE_INTERVAL;
+
         this.saveToStorage();
     }
 
     /**
-     * 獲取下一個需要練習的項目 - 簡化的高效調度算法
+     * 計算並安排下次復習
      */
-    getNext<T extends { code: string }>(allItems: T[]): T | null {
-        // 分類所有項目
-        const newItems: T[] = [];
-        const dueReviews: T[] = [];
+    private scheduleNextReview(item: ReviewItem): void {
+        const reviewCount = item.consecutiveCorrect;
 
-        for (const cardItem of allItems) {
-            const reviewItem = this.items.get(cardItem.code);
+        if (reviewCount <= this.INITIAL_INTERVALS.length) {
+            // 使用預定義的初始間隔
+            item.currentInterval = this.INITIAL_INTERVALS[reviewCount - 1];
+        } else {
+            // 使用漸進式增長
+            item.currentInterval = Math.min(
+                Math.floor(item.currentInterval * 1.5),
+                this.MAX_INTERVAL
+            );
+        }
 
-            if (!reviewItem) {
-                // 完全新的項目
-                newItems.push(cardItem);
-            } else if (this.practiceCount >= reviewItem.nextReviewAt && reviewItem.consecutiveCorrect < this.GRADUATION_THRESHOLD) {
-                // 到期且未掌握的項目
-                dueReviews.push(cardItem);
+        item.nextReviewAt = this.practiceCounter + item.currentInterval;
+    }
+
+    /**
+     * 獲取下一個需要練習的字根組索引
+     */
+    getNextIndex(): number | null {
+        // 1. 首先檢查是否有到期的復習項目（按優先級排序）
+        const dueItems = this.getDueItems();
+        if (dueItems.length > 0) {
+            // 返回最高優先級的到期項目
+            return dueItems[0].index;
+        }
+
+        // 2. 如果沒有到期項目，繼續學習新字根組
+        while (this.currentLearningIndex < this.totalGroups) {
+            const item = this.items.get(this.currentLearningIndex);
+
+            if (!item || !item.isCompleted) {
+                const selectedIndex = this.currentLearningIndex;
+                this.currentLearningIndex++;
+                return selectedIndex;
             }
+
+            this.currentLearningIndex++;
         }
 
-        // 優先處理到期復習
-        if (dueReviews.length > 0) {
-            return dueReviews[0];
-        }
-
-        // 然後學習新內容
-        if (newItems.length > 0) {
-            return newItems[0];
+        // 3. 檢查是否還有未完成的項目
+        for (const [index, item] of this.items.entries()) {
+            if (!item.isCompleted) {
+                return index;
+            }
         }
 
         return null;
     }
 
     /**
-     * 計算復習優先級
+     * 獲取所有到期的復習項目，按優先級排序
      */
-    private calculatePriority(reviewItem: ReviewItem): number {
-        let priority = 1000;
-
-        // 錯誤次數越多，優先級越高
-        priority += reviewItem.errorCount * 500;
-
-        // 超期時間越長，優先級越高
-        const overdue = this.practiceCount - reviewItem.nextReviewAt;
-        priority += Math.max(0, overdue) * 100;
-
-        // 從未正確答過的項目優先級更高
-        if (reviewItem.consecutiveCorrect === 0) {
-            priority += 200;
-        }
-
-        return priority;
-    }
-
-    /**
-     * 獲取統計信息
-     */
-    getStats(): { total: number; mastered: number; learning: number; difficult: number } {
-        let mastered = 0;
-        let learning = 0;
-        let difficult = 0;
+    private getDueItems(): ReviewItem[] {
+        const dueItems: ReviewItem[] = [];
 
         for (const item of this.items.values()) {
-            if (item.consecutiveCorrect >= this.GRADUATION_THRESHOLD) {
-                mastered++;
-            } else if (item.errorCount >= 3) {
-                difficult++;
-            } else {
-                learning++;
+            if (!item.isCompleted &&
+                item.nextReviewAt > 0 &&
+                this.practiceCounter >= item.nextReviewAt) {
+                dueItems.push(item);
             }
         }
 
-        return {
-            total: this.items.size,
-            mastered,
-            learning,
-            difficult
-        };
+        // 按優先級排序：錯誤項目 > 短間隔項目 > 超期時間長的項目
+        dueItems.sort((a, b) => {
+            // 錯誤項目（連續正確次數為0）優先
+            if (a.consecutiveCorrect === 0 && b.consecutiveCorrect > 0) return -1;
+            if (b.consecutiveCorrect === 0 && a.consecutiveCorrect > 0) return 1;
+
+            // 超期時間長的優先
+            const aOverdue = this.practiceCounter - a.nextReviewAt;
+            const bOverdue = this.practiceCounter - b.nextReviewAt;
+            return bOverdue - aOverdue;
+        });
+
+        return dueItems;
     }
 
     /**
-     * 獲取單個項目的統計信息
+     * 檢查是否為第一次見到此字根組
      */
-    getItemStats(id: string): ReviewItem | null {
-        return this.items.get(id) || null;
+    isFirstTime(groupIndex: number): boolean {
+        const item = this.items.get(groupIndex);
+        return !item || item.totalReviews === 0;
     }
 
     /**
-     * 檢查項目是否為第一次出現
+     * 檢查是否已完成所有學習
      */
-    isFirstTime(id: string): boolean {
-        const item = this.items.get(id);
-        return !item || item.isNew || item.totalReviews === 0;
-    }
+    isCompleted(): boolean {
+        if (this.totalGroups === 0) return false;
 
-    /**
-     * 獲取當前練習進度
-     */
-    getCurrentProgress(): { practiceCount: number; estimatedTotal: number } {
-        const totalItems = this.items.size;
-        const avgReviewsPerItem = 4; // 估計每個項目平均需要4次練習才能掌握
-        const estimatedTotal = Math.max(totalItems * avgReviewsPerItem, this.practiceCount + 50);
-
-        return {
-            practiceCount: this.practiceCount,
-            estimatedTotal
-        };
-    }
-
-    private getOrCreateItem(id: string): ReviewItem {
-        const existing = this.items.get(id);
-        if (existing) {
-            return existing;
-        }
-
-        const newItem: ReviewItem = {
-            id,
-            nextReviewAt: this.practiceCount + 1, // 新項目在下一組練習
-            consecutiveCorrect: 0,
-            totalReviews: 0,
-            errorCount: 0,
-            lastPracticed: 0,
-            isNew: true,
-            currentInterval: 1
-        };
-
-        this.items.set(id, newItem);
-        return newItem;
-    }
-
-    private loadFromStorage(): void {
-        try {
-            const stored = localStorage.getItem(this.storageKey);
-            if (stored) {
-                const data = JSON.parse(stored);
-                this.items = new Map(Object.entries(data.items || {}));
-                this.practiceCount = data.practiceCount || 0;
+        for (let i = 0; i < this.totalGroups; i++) {
+            const item = this.items.get(i);
+            if (!item || !item.isCompleted) {
+                return false;
             }
-        } catch (error) {
-            console.warn('載入調度數據失敗:', error);
         }
+
+        return true;
     }
 
-    private saveToStorage(): void {
-        try {
-            const data = {
-                items: Object.fromEntries(this.items),
-                practiceCount: this.practiceCount
+    /**
+     * 獲取或創建項目
+     */
+    private getOrCreateItem(groupIndex: number): ReviewItem {
+        let item = this.items.get(groupIndex);
+        if (!item) {
+            item = {
+                index: groupIndex,
+                consecutiveCorrect: 0,
+                totalReviews: 0,
+                isCompleted: false,
+                nextReviewAt: 0,
+                currentInterval: 0,
+                lastPracticedAt: 0
             };
-            localStorage.setItem(this.storageKey, JSON.stringify(data));
-        } catch (error) {
-            console.warn('保存調度數據失敗:', error);
+            this.items.set(groupIndex, item);
         }
+        return item;
     }
 
     /**
-     * 重置所有數據（用於調試）
+     * 獲取進度統計
+     */
+    getProgressStats(): { practiced: number; mastered: number; total: number; percentage: number } {
+        let practiced = 0;
+        let mastered = 0;
+
+        // 確保所有索引都有對應的項目
+        for (let i = 0; i < this.totalGroups; i++) {
+            if (!this.items.has(i)) {
+                this.items.set(i, {
+                    index: i,
+                    consecutiveCorrect: 0,
+                    totalReviews: 0,
+                    isCompleted: false,
+                    nextReviewAt: 0,
+                    currentInterval: 0,
+                    lastPracticedAt: 0
+                });
+            }
+        }
+
+        // 統計已練習的和已掌握的字根組
+        for (const item of this.items.values()) {
+            if (item.totalReviews > 0) {
+                practiced++;
+            }
+            if (item.isCompleted) {
+                mastered++;
+            }
+        }
+
+        return {
+            practiced,
+            mastered,
+            total: this.totalGroups,
+            percentage: this.totalGroups > 0 ? (practiced / this.totalGroups * 100) : 0
+        };
+    }
+
+    /**
+     * 重置學習進度
      */
     reset(): void {
         this.items.clear();
-        this.practiceCount = 0;
-        localStorage.removeItem(this.storageKey);
+        this.currentLearningIndex = 0;
+        this.practiceCounter = 0;
+
+        // 重新初始化所有項目
+        for (let i = 0; i < this.totalGroups; i++) {
+            this.items.set(i, {
+                index: i,
+                consecutiveCorrect: 0,
+                totalReviews: 0,
+                isCompleted: false,
+                nextReviewAt: 0,
+                currentInterval: 0,
+                lastPracticedAt: 0
+            });
+        }
+
+        if (typeof localStorage !== 'undefined') {
+            localStorage.removeItem(this.storageKey);
+        }
+    }
+
+    /**
+     * 獲取調試信息
+     */
+    getScheduleDebugInfo(): string {
+        const completed = Array.from(this.items.values()).filter(item => item.isCompleted).length;
+        const dueCount = this.getDueItems().length;
+        return `練習計數: ${this.practiceCounter}, 到期項目: ${dueCount}, 當前學習索引: ${this.currentLearningIndex}/${this.totalGroups}, 已完成: ${completed}`;
+    }
+
+    /**
+     * 保存到本地存儲
+     */
+    private saveToStorage(): void {
+        if (typeof localStorage !== 'undefined') {
+            const data = {
+                items: Array.from(this.items.entries()),
+                currentLearningIndex: this.currentLearningIndex,
+                practiceCounter: this.practiceCounter,
+                totalGroups: this.totalGroups
+            };
+            localStorage.setItem(this.storageKey, JSON.stringify(data));
+        }
+    }    /**
+     * 從本地存儲加載
+     */
+    private loadFromStorage(): void {
+        if (typeof localStorage !== 'undefined') {
+            const saved = localStorage.getItem(this.storageKey);
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    this.items = new Map(data.items || []);
+                    this.currentLearningIndex = data.currentLearningIndex || 0;
+                    this.practiceCounter = data.practiceCounter || 0;
+                    this.totalGroups = data.totalGroups || 0;
+                } catch (error) {
+                    console.warn('載入存儲數據失敗:', error);
+                }
+            }
+        }
     }
 }

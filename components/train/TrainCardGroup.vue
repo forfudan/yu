@@ -42,7 +42,7 @@ const { name, cardGroups, mode, supplement, ming, isFrequencyOrder, onToggleSort
 
 console.log(`載入分組練習會話: ${name}`);
 
-// 使用改進的調度演算法
+// 使用基於索引的調度演算法
 const schedule = new AdvancedSchedule(name);
 
 const currentIndex = ref(0);
@@ -54,6 +54,15 @@ const wrongInputCount = ref(0);
 const showResetConfirm = ref(false);
 // 用於強制更新進度條的響應式狀態
 const forceUpdate = ref(0);
+
+// 自動化測試相關狀態
+const isAutoTesting = ref(false);
+const autoTestSpeed = ref(10); // 自動測試間隔（毫秒）
+const autoTestResults = ref<string[]>([]);
+const autoTestStartTime = ref(0);
+const autoTestCount = ref(0);
+const maxAutoTestCount = ref(2000); // 最大自動測試次數
+let autoTestTimer: ReturnType<typeof setTimeout> | null = null;
 
 // 處理重置確認
 const handleReset = () => {
@@ -150,20 +159,25 @@ const totalGroups = computed(() => cardGroups.length);
 const practiceProgress = computed(() => {
     // 依賴 forceUpdate 來觸發重新計算
     forceUpdate.value;
-    const stats = schedule.getStats();
-    const practicedGroups = stats.total; // 已經練習過的不同字根組數
-    const totalGroups = cardGroups.length; // 總字根組數
-    return {
-        current: practicedGroups,
-        total: totalGroups,
-        percentage: totalGroups > 0 ?
-            (practicedGroups / totalGroups * 100).toFixed(1) : '0'
-    };
-});
 
-const progress = computed(() =>
+    // 使用基於索引的調度系統統計
+    const stats = schedule.getProgressStats();
+
+    return {
+        current: stats.practiced,
+        total: stats.total,
+        mastered: stats.mastered,
+        percentage: stats.percentage.toFixed(1)
+    };
+}); const progress = computed(() =>
     practiceProgress.value.percentage
 );
+
+// 檢查是否已完成所有學習
+const isCompleted = computed(() => {
+    forceUpdate.value; // 依賴更新觸發器
+    return schedule.isCompleted();
+});
 
 // 監聽輸入，自動處理正確答案或錯誤提示
 watch(inputValue, (newValue) => {
@@ -189,8 +203,8 @@ const handleCorrectAnswer = () => {
 
     isCorrect.value = true;
 
-    // 使用改進的調度演算法記錄成功
-    schedule.recordSuccess(currentGroup.value.code);
+    // 使用基於索引的調度演算法記錄成功
+    schedule.recordSuccess(currentIndex.value);
     // 觸發進度條更新
     forceUpdate.value++;
 
@@ -205,8 +219,8 @@ const handleWrongAnswer = () => {
     wrongInputCount.value++;
     showAnswer.value = true;
 
-    // 記錄失敗
-    schedule.recordFailure(currentGroup.value.code);
+    // 使用基於索引的調度演算法記錄失敗
+    schedule.recordFailure(currentIndex.value);
     // 觸發進度條更新
     forceUpdate.value++;
 
@@ -218,25 +232,14 @@ const handleWrongAnswer = () => {
 };
 
 const nextGroup = () => {
-    // 獲取下一個需要練習的字根組
-    const nextGroupData = schedule.getNext(cardGroups);
+    // 使用基於索引的調度系統獲取下一個需要練習的字根組
+    const nextGroupIndex = schedule.getNextIndex();
 
-    if (nextGroupData) {
-        currentIndex.value = cardGroups.findIndex(g => g.code === nextGroupData.code);
+    if (nextGroupIndex !== null) {
+        currentIndex.value = nextGroupIndex;
     } else {
-        // 如果沒有更多需要練習的組，隨機選擇一個還需要加強的
-        const needPractice = cardGroups.filter(g => {
-            const stats = schedule.getItemStats(g.code);
-            return !stats || stats.consecutiveCorrect < 3 || stats.errorCount > 0;
-        });
-
-        if (needPractice.length > 0) {
-            const randomGroup = needPractice[Math.floor(Math.random() * needPractice.length)];
-            currentIndex.value = cardGroups.findIndex(g => g.code === randomGroup.code);
-        } else {
-            // 全部掌握，隨機選擇
-            currentIndex.value = Math.floor(Math.random() * cardGroups.length);
-        }
+        // 調度系統返回null，說明所有字根組都已完成，停止練習
+        return; // 不再選擇字根組
     }
 
     // 重置狀態
@@ -245,10 +248,8 @@ const nextGroup = () => {
     inputValue.value = '';
 
     // 檢查是否為第一次見到此字根組，如果是則直接顯示答案
-    const currentGroupCode = currentGroup.value?.code;
-    if (currentGroupCode && schedule.isFirstTime(currentGroupCode)) {
+    if (schedule.isFirstTime(currentIndex.value)) {
         showAnswer.value = true;
-        console.log(`字根組 "${currentGroupCode}" 第一次出現，直接顯示答案`);
     } else {
         showAnswer.value = false;
     }
@@ -256,6 +257,124 @@ const nextGroup = () => {
     nextTick(() => {
         inputElement.value?.focus();
     });
+};
+
+// 自動化測試功能
+const startAutoTest = () => {
+    if (isAutoTesting.value) return;
+
+    isAutoTesting.value = true;
+    autoTestResults.value = [];
+    autoTestStartTime.value = Date.now();
+    autoTestCount.value = 0;
+
+    autoTestResults.value.push(`[${new Date().toLocaleTimeString()}] 開始自動化測試，速度: ${autoTestSpeed.value}ms/次`);
+
+    runAutoTestStep();
+};
+
+const stopAutoTest = () => {
+    if (!isAutoTesting.value) return;
+
+    isAutoTesting.value = false;
+    if (autoTestTimer) {
+        clearTimeout(autoTestTimer);
+        autoTestTimer = null;
+    }
+
+    const duration = Date.now() - autoTestStartTime.value;
+    const durationMinutes = (duration / 1000 / 60).toFixed(1);
+    const stats = schedule.getProgressStats();
+
+    autoTestResults.value.push(`[${new Date().toLocaleTimeString()}] 測試停止`);
+    autoTestResults.value.push(`實際字根組數: ${cardGroups.length}`);
+    autoTestResults.value.push(`測試時長: ${durationMinutes}分鐘，共${autoTestCount.value}次練習`);
+    autoTestResults.value.push(`最終進度: ${stats.percentage.toFixed(1)}% (${stats.practiced}/${stats.total})`);
+    autoTestResults.value.push(`已掌握: ${stats.mastered}個字根組`);
+};
+
+const runAutoTestStep = () => {
+    if (!isAutoTesting.value || !currentGroup.value) return;
+
+    autoTestCount.value++;
+
+    // 記錄當前狀態
+    const stats = schedule.getProgressStats();
+    const currentCode = currentGroup.value.code;
+
+    // 模擬90%的正確率
+    const isCorrectAnswer = Math.random() > 0.1;
+
+    if (isCorrectAnswer) {
+        // 模擬正確輸入
+        inputValue.value = currentCode;
+        // handleCorrectAnswer 會在 watch 中被自動調用
+    } else {
+        // 模擬錯誤
+        schedule.recordFailure(currentIndex.value);
+        forceUpdate.value++;
+        nextGroup();
+    }
+
+    // 每50次記錄一次進度
+    if (autoTestCount.value % 50 === 0) {
+        const newStats = schedule.getProgressStats();
+        const debugInfo = schedule.getScheduleDebugInfo();
+        autoTestResults.value.push(`[${autoTestCount.value}次] 進度: ${newStats.percentage.toFixed(1)}% | 當前字根: ${currentCode}`);
+        autoTestResults.value.push(`  ${debugInfo}`);
+
+        // 檢查是否陷入死循環（進度不再變化）
+        if (autoTestCount.value > 200 && newStats.percentage === stats.percentage) {
+            autoTestResults.value.push(`⚠️ 警告：進度停滯在 ${stats.percentage.toFixed(1)}%，可能陷入死循環`);
+        }
+    }
+
+    // 检查停止条件
+    if (autoTestCount.value >= maxAutoTestCount.value) {
+        autoTestResults.value.push(`达到最大测试次数 ${maxAutoTestCount.value}，停止测试`);
+        stopAutoTest();
+        return;
+    }
+
+    // 检查是否所有字根组都已完成（掌握数等于总数）
+    if (stats.mastered >= cardGroups.length) {
+        autoTestResults.value.push(`✅ 所有字根组都已掌握 (${stats.mastered}/${cardGroups.length})，测试成功完成`);
+        stopAutoTest();
+        return;
+    }
+
+    // 继续下一步测试
+    autoTestTimer = setTimeout(runAutoTestStep, autoTestSpeed.value);
+};
+
+/** 重置學習進度 */
+const resetProgress = () => {
+    if (isAutoTesting.value) return;
+
+    // 清除本地存儲
+    schedule.reset();
+
+    // 重置組件狀態
+    currentIndex.value = 0;
+    inputValue.value = '';
+    showAnswer.value = false;
+    isCorrect.value = true;
+    wrongInputCount.value = 0;
+    autoTestResults.value = [];
+    autoTestCount.value = 0;
+
+    // 重新初始化
+    schedule.initializeWithGroupCount(cardGroups.length);
+    nextGroup();
+
+    // 強制更新進度顯示
+    forceUpdate.value++;
+
+    autoTestResults.value.push(`[${new Date().toLocaleTimeString()}] 學習進度已重置`);
+};
+
+const restartTraining = () => {
+    resetProgress();
 };
 
 const handleKeydown = (e: KeyboardEvent) => {
@@ -290,7 +409,7 @@ const checkZigen = (groupIndex: number, zigenIndex: number, userInput: string) =
     const isCorrect = userInput === targetZigen.ma
 
     if (isCorrect) {
-        schedule.recordSuccess(targetZigen.ma)
+        schedule.recordSuccess(groupIndex)
         // 觸發進度條更新
         forceUpdate.value++;
         if (zigenIndex < currentGroup.value.zigens.length - 1) {
@@ -299,7 +418,7 @@ const checkZigen = (groupIndex: number, zigenIndex: number, userInput: string) =
             nextGroup()
         }
     } else {
-        schedule.recordFailure(targetZigen.ma)
+        schedule.recordFailure(groupIndex)
         // 觸發進度條更新
         forceUpdate.value++;
         wrongInputCount.value++
@@ -309,6 +428,9 @@ const checkZigen = (groupIndex: number, zigenIndex: number, userInput: string) =
 }
 
 onMounted(() => {
+    // 初始化基於索引的調度系統
+    schedule.initializeWithGroupCount(cardGroups.length);
+
     nextTick(() => {
         inputElement.value?.focus();
     });
@@ -320,14 +442,43 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
     document.removeEventListener('keydown', handleKeydown);
+
+    // 清理自動測試定時器
+    if (autoTestTimer) {
+        clearTimeout(autoTestTimer);
+        autoTestTimer = null;
+    }
 });
 </script>
 
 <template>
+    <!-- 完成狀態顯示 -->
+    <div v-if="isCompleted" class="text-center py-16">
+        <div class="mb-8">
+            <div class="text-6xl mb-4">🎉</div>
+            <h2 class="text-4xl font-bold mb-2">恭喜你完成練習！</h2>
+            <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">
+                你已經完成了 {{ cardGroups.length }} 個字根組的練習。
+                感謝你的努力和堅持，為中華文明和漢字的傳承又增添了一份力量！
+            </p>
+        </div>
+
+        <div class="space-y-4">
+            <button @click="restartTraining"
+                class="px-8 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 font-medium">
+                想要再訓練一輪嗎？
+            </button>
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+                繼續練習以鞏固記憶
+            </div>
+        </div>
+    </div>
+
+    <!-- 練習進行中 -->
     <div :class="[
         'mx-auto p-6 space-y-6',
         windowWidth < 768 ? 'max-w-sm p-3 space-y-3' : 'max-w-2xl'  // 手機端縮小容器和間距
-    ]" v-if="currentGroup">
+    ]" v-else-if="currentGroup">
         <!-- 進度顯示 -->
         <div class="relative">
             <!-- 進度顯示 -->
@@ -339,10 +490,10 @@ onBeforeUnmount(() => {
                     'flex justify-between items-center',
                     windowWidth < 768 ? 'mb-1' : 'mb-2'  // 手機端減少底部間距
                 ]">
-                    <span>已練習字根組: {{ practiceProgress.current }} / {{ practiceProgress.total }} (進度 {{
-                        practiceProgress.percentage }}%)</span>
+                    <span>已練習: {{ practiceProgress.current }} / {{ practiceProgress.total }} ({{
+                        practiceProgress.percentage }}%) | 已掌握: {{ practiceProgress.mastered }}</span>
                     <span v-if="wrongInputCount > 0" class="text-red-600 dark:text-red-400">錯誤次數: {{ wrongInputCount
-                        }}</span>
+                    }}</span>
                 </div>
                 <div :class="[
                     'w-full bg-gray-200 dark:bg-gray-700 rounded-full',
@@ -356,6 +507,57 @@ onBeforeUnmount(() => {
                 </div>
             </div>
         </div>
+
+        <!-- 自動化測試控制面板 -->
+        <!-- 
+        <div class="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
+            <div class="flex flex-wrap items-center gap-3 mb-3">
+                <h3 class="text-sm font-medium text-yellow-800 dark:text-yellow-200">自動化測試</h3>
+                <button v-if="!isAutoTesting" @click="startAutoTest"
+                    class="px-3 py-1 bg-green-500 hover:bg-green-600 text-white text-xs rounded-md transition-colors">
+                    開始測試
+                </button>
+                <button v-if="isAutoTesting" @click="stopAutoTest"
+                    class="px-3 py-1 bg-red-500 hover:bg-red-600 text-white text-xs rounded-md transition-colors">
+                    停止測試
+                </button>
+                <button @click="resetProgress" :disabled="isAutoTesting"
+                    class="px-3 py-1 bg-purple-500 hover:bg-purple-600 disabled:bg-gray-400 text-white text-xs rounded-md transition-colors">
+                    重置進度
+                </button>
+                <div class="flex items-center gap-2 text-xs">
+                    <label class="text-yellow-700 dark:text-yellow-300">速度:</label>
+                    <select v-model="autoTestSpeed" :disabled="isAutoTesting" class="px-2 py-1 border rounded text-xs">
+                        <option value="10">極快 (10ms)</option>
+                        <option value="300">快速 (300ms)</option>
+                        <option value="500">正常 (500ms)</option>
+                        <option value="1000">慢速 (1s)</option>
+                    </select>
+                </div>
+                <div class="flex items-center gap-2 text-xs">
+                    <label class="text-yellow-700 dark:text-yellow-300">最大次數:</label>
+                    <input v-model.number="maxAutoTestCount" :disabled="isAutoTesting" type="number" min="100"
+                        max="5000" step="100" class="w-16 px-2 py-1 border rounded text-xs" />
+                </div>
+            </div>
+            <div v-if="isAutoTesting" class="mb-2">
+                <div class="text-xs text-yellow-700 dark:text-yellow-300">
+                    測試中... 已進行 {{ autoTestCount }} 次 ({{ practiceProgress.percentage }}%)
+                </div>
+                <div class="w-full bg-yellow-200 dark:bg-yellow-800 rounded-full h-1 mt-1">
+                    <div class="bg-yellow-500 h-1 rounded-full transition-all duration-300"
+                        :style="`width: ${Math.min(100, (autoTestCount / maxAutoTestCount) * 100)}%`"></div>
+                </div>
+            </div>
+            <div v-if="autoTestResults.length > 0"
+                class="max-h-32 overflow-y-auto bg-white dark:bg-gray-800 rounded border p-2">
+                <div v-for="(result, index) in autoTestResults.slice(-10)" :key="index"
+                    class="text-xs text-gray-600 dark:text-gray-400 font-mono">
+                    {{ result }}
+                </div>
+            </div>
+        </div>
+         -->
 
         <!-- 練習區域 -->
         <div :class="[
@@ -372,14 +574,13 @@ onBeforeUnmount(() => {
                 windowWidth < 768 ? 'bottom-2 right-2' : 'bottom-4 right-4'  // 手機端移到右下角
             ]">
                 <!-- 排序切換按鈕 -->
-                <button v-if="onToggleSort"
-                    @click="() => { console.log('排序按鈕被點擊，當前狀態:', isFrequencyOrder); onToggleSort(); }" :class="[
-                        'rounded-full font-medium transition-all duration-200 flex items-center justify-center shadow-md',
-                        windowWidth < 768 ? 'w-6 h-6 text-xs' : 'w-8 h-8 text-xs',  // 手機端縮小按鈕
-                        isFrequencyOrder
-                            ? 'bg-orange-500 hover:bg-orange-600 text-white'
-                            : 'bg-gray-200 hover:bg-gray-300 text-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-200'
-                    ]" :title="isFrequencyOrder ? '字頻序 (點擊切換到字典序)' : '字典序 (點擊切換到字頻序)'">
+                <button v-if="onToggleSort" @click="onToggleSort" :class="[
+                    'rounded-full font-medium transition-all duration-200 flex items-center justify-center shadow-md',
+                    windowWidth < 768 ? 'w-6 h-6 text-xs' : 'w-8 h-8 text-xs',  // 手機端縮小按鈕
+                    isFrequencyOrder
+                        ? 'bg-orange-500 hover:bg-orange-600 text-white'
+                        : 'bg-gray-200 hover:bg-gray-300 text-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-200'
+                ]" :title="isFrequencyOrder ? '字頻序 (點擊切換到字典序)' : '字典序 (點擊切換到字頻序)'">
                     <svg :class="windowWidth < 768 ? 'w-2 h-2' : 'w-3 h-3'" fill="none" stroke="currentColor"
                         viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

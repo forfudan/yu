@@ -81,13 +81,13 @@ const lowFreqZigens = ['鳥', '烏', '魚', '馬', '風', '來', '車', '長', '
 const getCode = (ma: string) => {
     switch (p.mode) {
         case 'A':
-            return ma[0]
+            return ma[0];
         case 'a':
-            return ma[1]
+            return ma[1];
         case 'both':
-            return ma
+            return ma;
         default:
-            break;
+            return undefined;
     }
 }
 
@@ -158,12 +158,27 @@ function applySortOrder() {
 // 將字根按相同編碼分組，參考 ZigenMap.vue 的邏輯
 function groupZigensByCode(zigenValues: Array<{ font: string; ma: string }>) {
     const groups: ZigenGroup[] = [];
+    let skippedCount = 0;
+    const skippedItems: Array<{ font: string; ma: string; reason: string }> = [];
+
+    console.log('=== 开始分组字根 ===');
+    console.log('输入字根总数:', zigenValues.length);
+    console.log('练习模式:', p.mode);
 
     for (let i = 0; i < zigenValues.length; i++) {
         const current = zigenValues[i];
         const currentCode = getCode(current.ma)?.toLowerCase();
 
-        if (!currentCode) continue;
+        if (!currentCode) {
+            skippedCount++;
+            skippedItems.push({
+                font: current.font,
+                ma: current.ma,
+                reason: `getCode返回空值，mode=${p.mode}`
+            });
+            console.warn(`跳过字根 ${i}: ${current.font} (${current.ma}) - getCode返回: ${getCode(current.ma)}`);
+            continue;
+        }
 
         // 檢查是否與前一個字根編碼相同且連續
         const prev = i > 0 ? zigenValues[i - 1] : null;
@@ -179,6 +194,16 @@ function groupZigensByCode(zigenValues: Array<{ font: string; ma: string }>) {
                 zigens: [current]
             });
         }
+    }
+
+    console.log('=== 分组完成 ===');
+    console.log('有效组数:', groups.length);
+    console.log('跳过的字根数:', skippedCount);
+    if (skippedCount > 0) {
+        console.log('跳过的字根详情:', skippedItems);
+        console.log('前10个跳过的字根原因统计:');
+        const reasons = skippedItems.slice(0, 10).map(item => `${item.font}(${item.ma}): ${item.reason}`);
+        reasons.forEach(reason => console.log(`  - ${reason}`));
     }
 
     return groups;
