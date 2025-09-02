@@ -136,7 +136,8 @@ const zigenGapClass = computed(() => {
     const isSmallScreen = windowWidth.value < 768;
 
     if (isSmallScreen) {
-        return zigenCount > 4 ? 'gap-3' : 'gap-4';
+        // 手機端進一步減少間距
+        return zigenCount > 4 ? 'gap-1' : zigenCount > 2 ? 'gap-2' : 'gap-3';
     } else {
         return zigenCount > 4 ? 'gap-6' : 'gap-8 lg:gap-12';
     }
@@ -323,20 +324,34 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-    <div class="max-w-2xl mx-auto p-6 space-y-6" v-if="currentGroup">
+    <div :class="[
+        'mx-auto p-6 space-y-6',
+        windowWidth < 768 ? 'max-w-sm p-3 space-y-3' : 'max-w-2xl'  // 手機端縮小容器和間距
+    ]" v-if="currentGroup">
         <!-- 進度顯示 -->
         <div class="relative">
             <!-- 進度顯示 -->
-            <div class="text-center text-sm text-gray-600 dark:text-gray-400">
-                <div class="flex justify-between items-center mb-2">
+            <div :class="[
+                'text-center text-gray-600 dark:text-gray-400',
+                windowWidth < 768 ? 'text-xs' : 'text-sm'  // 手機端縮小進度文字
+            ]">
+                <div :class="[
+                    'flex justify-between items-center',
+                    windowWidth < 768 ? 'mb-1' : 'mb-2'  // 手機端減少底部間距
+                ]">
                     <span>已練習字根組: {{ practiceProgress.current }} / {{ practiceProgress.total }} (進度 {{
                         practiceProgress.percentage }}%)</span>
                     <span v-if="wrongInputCount > 0" class="text-red-600 dark:text-red-400">錯誤次數: {{ wrongInputCount
                         }}</span>
                 </div>
-                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                    <div class="bg-blue-500 dark:bg-blue-400 h-2 rounded-full transition-all duration-300"
-                        :style="`width: ${progress}%`">
+                <div :class="[
+                    'w-full bg-gray-200 dark:bg-gray-700 rounded-full',
+                    windowWidth < 768 ? 'h-1.5' : 'h-2'  // 手機端縮小進度條高度
+                ]">
+                    <div :class="[
+                        'bg-blue-500 dark:bg-blue-400 rounded-full transition-all duration-300',
+                        windowWidth < 768 ? 'h-1.5' : 'h-2'  // 手機端縮小進度條高度
+                    ]" :style="`width: ${progress}%`">
                     </div>
                 </div>
             </div>
@@ -352,26 +367,33 @@ onBeforeUnmount(() => {
             'border-2 hover:shadow-xl'
         ]">
             <!-- 卡片內控制按鈕 -->
-            <div class="absolute top-4 right-4 flex gap-2 z-10">
+            <div :class="[
+                'absolute flex gap-2 z-10',
+                windowWidth < 768 ? 'bottom-2 right-2' : 'bottom-4 right-4'  // 手機端移到右下角
+            ]">
                 <!-- 排序切換按鈕 -->
                 <button v-if="onToggleSort"
                     @click="() => { console.log('排序按鈕被點擊，當前狀態:', isFrequencyOrder); onToggleSort(); }" :class="[
-                        'w-8 h-8 rounded-full font-medium transition-all duration-200 flex items-center justify-center text-xs shadow-md',
+                        'rounded-full font-medium transition-all duration-200 flex items-center justify-center shadow-md',
+                        windowWidth < 768 ? 'w-6 h-6 text-xs' : 'w-8 h-8 text-xs',  // 手機端縮小按鈕
                         isFrequencyOrder
                             ? 'bg-orange-500 hover:bg-orange-600 text-white'
                             : 'bg-gray-200 hover:bg-gray-300 text-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-200'
                     ]" :title="isFrequencyOrder ? '字頻序 (點擊切換到字典序)' : '字典序 (點擊切換到字頻序)'">
-                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg :class="windowWidth < 768 ? 'w-2 h-2' : 'w-3 h-3'" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
                     </svg>
                 </button>
 
                 <!-- 重置按鈕 -->
-                <button v-if="onReset" @click="handleReset"
-                    class="w-8 h-8 rounded-full bg-red-500 hover:bg-red-600 text-white font-medium transition-all duration-200 flex items-center justify-center text-xs shadow-md"
-                    title="重新開始訓練">
-                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button v-if="onReset" @click="handleReset" :class="[
+                    'rounded-full bg-red-500 hover:bg-red-600 text-white font-medium transition-all duration-200 flex items-center justify-center shadow-md',
+                    windowWidth < 768 ? 'w-6 h-6 text-xs' : 'w-8 h-8 text-xs'  // 手機端縮小按鈕
+                ]" title="重新開始訓練">
+                    <svg :class="windowWidth < 768 ? 'w-2 h-2' : 'w-3 h-3'" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                     </svg>
@@ -379,13 +401,21 @@ onBeforeUnmount(() => {
             </div>
 
             <!-- 字根組顯示 -->
-            <div class="text-center py-12">
+            <div :class="[
+                'text-center',
+                windowWidth < 768 ? 'py-4' : 'py-12'  // 手機端大幅減少垂直間距
+            ]">
                 <!-- 字根組 - 響應式大小設計 -->
-                <div :class="['flex justify-center items-center flex-wrap mb-12', zigenGapClass]">
+                <div :class="[
+                    'flex justify-center items-center flex-wrap',
+                    windowWidth < 768 ? 'mb-4' : 'mb-12',  // 手機端減少底部間距
+                    zigenGapClass
+                ]">
                     <div v-for="(zigen, index) in currentGroup.zigens" :key="index"
                         class="flex flex-col items-center group">
                         <div :class="[
-                            'mb-4 zigen-font transform transition-all duration-300 group-hover:scale-110',
+                            'zigen-font transform transition-all duration-300 group-hover:scale-110',
+                            windowWidth < 768 ? 'mb-1' : 'mb-4',  // 手機端減少字根下方間距
                             zigenSizeClass,
                             {
                                 'text-red-500 dark:text-red-400': !isCorrect,
@@ -394,15 +424,18 @@ onBeforeUnmount(() => {
                         ]">
                             {{ zigen.font }}
                         </div>
-                        <div v-if="showAnswer"
-                            class="text-sm text-gray-600 dark:text-gray-300 font-mono bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
+                        <div v-if="showAnswer" :class="[
+                            'text-sm text-gray-600 dark:text-gray-300 font-mono bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded',
+                            windowWidth < 768 ? 'text-xs px-1 py-0.5' : ''  // 手機端縮小編碼顯示
+                        ]">
                             {{ zigen.ma }}
                         </div>
                         <!-- 顯示相關漢字 - 響應式大小和間距，使用 zigen-font -->
                         <div :class="[
-                            'text-gray-600 dark:text-gray-300 mt-2 font-medium tracking-tight zigen-font',
+                            'text-gray-600 dark:text-gray-300 font-medium tracking-tight zigen-font',
+                            windowWidth < 768 ? 'mt-0.5' : 'mt-2',  // 手機端減少頂部間距
                             {
-                                'text-sm': windowWidth < 768,
+                                'text-xs': windowWidth < 768,  // 手機端更小的相關字
                                 'text-base': windowWidth >= 768 && windowWidth < 1024,
                                 'text-lg': windowWidth >= 1024
                             }
@@ -414,10 +447,15 @@ onBeforeUnmount(() => {
             </div>
 
             <!-- 輸入區域 -->
-            <div class="flex justify-center pb-8">
+            <div :class="[
+                'flex justify-center',
+                windowWidth < 768 ? 'pb-3' : 'pb-8'  // 手機端減少底部間距
+            ]">
                 <input ref="inputElement" v-model="inputValue" type="text" placeholder="編碼" :class="[
-                    'px-6 py-4 text-2xl text-center border-2 rounded-xl w-48 font-mono',
+                    'text-center border-2 rounded-xl font-mono',
                     'transition-all duration-300 focus:outline-none focus:ring-4',
+                    // 手機端縮小輸入框
+                    windowWidth < 768 ? 'px-3 py-2 text-lg w-32' : 'px-6 py-4 text-2xl w-48',
                     {
                         'border-red-300 focus:border-red-500 focus:ring-red-200 bg-red-50 dark:border-red-700 dark:focus:border-red-500 dark:focus:ring-red-900/50 dark:bg-red-900/20 dark:text-white': !isCorrect,
                         'border-blue-300 focus:border-blue-500 focus:ring-blue-200 bg-white dark:border-blue-700 dark:focus:border-blue-500 dark:focus:ring-blue-900/50 dark:bg-gray-800 dark:text-white': isCorrect
@@ -427,26 +465,47 @@ onBeforeUnmount(() => {
 
             <!-- 答案顯示區域 -->
             <div :class="[
-                'text-center pb-8 transition-all duration-300',
+                'text-center transition-all duration-300',
+                windowWidth < 768 ? 'pb-3' : 'pb-8',  // 手機端減少底部間距
                 { 'opacity-0 transform translate-y-2': !showAnswer, 'opacity-100': showAnswer }
             ]">
-                <div class="inline-block bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-lg">
-                    <span class="text-gray-800 dark:text-gray-200">答案是</span> <span
-                        class="font-mono text-xl font-bold text-blue-600 dark:text-blue-400">{{ currentGroup.code
-                        }}</span>
+                <div :class="[
+                    'inline-block bg-gray-100 dark:bg-gray-800 rounded-lg',
+                    windowWidth < 768 ? 'px-2 py-1' : 'px-4 py-2'  // 手機端縮小答案框
+                ]">
+                    <span :class="[
+                        'text-gray-800 dark:text-gray-200',
+                        windowWidth < 768 ? 'text-sm' : ''  // 手機端縮小文字
+                    ]">答案是</span>
+                    <span :class="[
+                        'font-mono font-bold text-blue-600 dark:text-blue-400',
+                        windowWidth < 768 ? 'text-lg' : 'text-xl'  // 手機端縮小答案文字
+                    ]">{{ currentGroup.code }}</span>
                 </div>
             </div>
         </div>
 
         <!-- 操作提示 -->
-        <div class="text-center text-sm text-gray-500 dark:text-gray-400 space-y-1">
-            <div v-if="!showAnswer" class="flex items-center justify-center gap-4">
+        <div :class="[
+            'text-center text-gray-500 dark:text-gray-400 space-y-1',
+            windowWidth < 768 ? 'text-xs' : 'text-sm'  // 手機端縮小提示文字
+        ]">
+            <div v-if="!showAnswer" :class="[
+                'flex items-center justify-center',
+                windowWidth < 768 ? 'gap-2 flex-col' : 'gap-4'  // 手機端垂直排列提示
+            ]">
                 <span class="flex items-center gap-1">
-                    <kbd class="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 dark:text-gray-300 rounded">輸入</kbd>
+                    <kbd :class="[
+                        'bg-gray-100 dark:bg-gray-800 dark:text-gray-300 rounded',
+                        windowWidth < 768 ? 'px-1 py-0.5 text-xs' : 'px-2 py-1 text-xs'  // 手機端縮小按鍵提示
+                    ]">輸入</kbd>
                     自動檢查
                 </span>
                 <span class="flex items-center gap-1">
-                    <kbd class="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 dark:text-gray-300 rounded">Esc</kbd>
+                    <kbd :class="[
+                        'bg-gray-100 dark:bg-gray-800 dark:text-gray-300 rounded',
+                        windowWidth < 768 ? 'px-1 py-0.5 text-xs' : 'px-2 py-1 text-xs'  // 手機端縮小按鍵提示
+                    ]">Esc</kbd>
                     顯示答案
                 </span>
             </div>
@@ -529,6 +588,11 @@ kbd {
         font-size: 4rem;
         line-height: 1;
     }
+
+    /* 手機端額外的緊湊樣式 */
+    .space-y-3>*+* {
+        margin-top: 0.75rem;
+    }
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
@@ -542,6 +606,15 @@ kbd {
     .text-9xl {
         font-size: 8rem;
         line-height: 1;
+    }
+}
+
+/* 手機端視窗高度優化 */
+@media (max-width: 767px) and (max-height: 600px) {
+
+    /* 在小屏幕且低高度的設備上進一步壓縮 */
+    .zigen-font {
+        line-height: 0.9;
     }
 }
 
