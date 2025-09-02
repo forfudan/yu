@@ -1,16 +1,16 @@
 /**
- * AdvancedSchedule.ts - 基於索引的字根學習調度算法
+ * AdvancedSchedule.ts - 基於間隔重複的字根學習調度算法
  * 
- * 解決273 vs 244問題的關鍵：
+ * 使用字根組進行訓練：
  * 1. 直接使用字根組的索引，而不是編碼
  * 2. 避免編碼查找導致的不連續組丟失問題
  * 3. 確保所有字根組都能被正確訪問
  * 
- * 簡單邏輯：
+ * 間隔重複邏輯：
  * 1. 按順序出字根組，第一次為「學習」
- * 2. 學習後安排兩次「復習」，插入當前學習序列
- * 3. 錯誤時安排一次「強化」，插入序列
- * 4. 達到3次正確後不再出現
+ * 2. 學習後根據表現安排復習，間隔逐步增加
+ * 3. 錯誤時安排強化練習，使用較短間隔
+ * 4. 達到3次正確後標記為已掌握
  */
 
 interface ReviewItem {
@@ -22,15 +22,26 @@ interface ReviewItem {
     totalReviews: number;
     /** 是否已完成學習（達到3次正確） */
     isCompleted: boolean;
+    /** 下次復習的練習計數器位置 */
+    nextReviewAt: number;
+    /** 當前間隔長度 */
+    currentInterval: number;
+    /** 上次練習的練習計數器位置 */
+    lastPracticedAt: number;
 }
 
 export class AdvancedSchedule {
     private items: Map<number, ReviewItem> = new Map();
     private storageKey: string;
     private currentLearningIndex: number = 0; // 當前學習到第幾個字根組
-    private reviewQueue: number[] = []; // 復習隊列（存索引）
-    private reinforceQueue: number[] = []; // 強化隊列（存索引）
+    private practiceCounter: number = 0; // 全局練習計數器
     private totalGroups: number = 0; // 總字根組數量
+
+    // 間隔設定（以練習次數為單位）
+    private readonly INITIAL_INTERVALS = [2, 5, 10]; // 初次學習後的復習間隔
+    private readonly REINFORCE_INTERVAL = 1; // 錯誤後的強化間隔
+    private readonly MAX_INTERVAL = 20; // 最大間隔
+    private readonly GRADUATION_THRESHOLD = 3; // 畢業閾值
 
     constructor(name: string) {
         this.storageKey = `advanced_schedule_${name}`;
@@ -50,7 +61,10 @@ export class AdvancedSchedule {
                     index: i,
                     consecutiveCorrect: 0,
                     totalReviews: 0,
-                    isCompleted: false
+                    isCompleted: false,
+                    nextReviewAt: 0,
+                    currentInterval: 0,
+                    lastPracticedAt: 0
                 });
             }
         }
@@ -63,15 +77,19 @@ export class AdvancedSchedule {
      */
     recordSuccess(groupIndex: number): void {
         const item = this.getOrCreateItem(groupIndex);
+        this.practiceCounter++;
+
         item.consecutiveCorrect++;
         item.totalReviews++;
+        item.lastPracticedAt = this.practiceCounter;
 
-        // 如果達到3次正確，標記為完成
-        if (item.consecutiveCorrect >= 3) {
+        // 如果達到畢業閾值，標記為完成
+        if (item.consecutiveCorrect >= this.GRADUATION_THRESHOLD) {
             item.isCompleted = true;
+            item.nextReviewAt = Number.MAX_SAFE_INTEGER; // 不再復習
         } else {
-            // 安排復習
-            this.reviewQueue.push(groupIndex);
+            // 計算下次復習間隔
+            this.scheduleNextReview(item);
         }
 
         this.saveToStorage();
@@ -82,34 +100,52 @@ export class AdvancedSchedule {
      */
     recordFailure(groupIndex: number): void {
         const item = this.getOrCreateItem(groupIndex);
+        this.practiceCounter++;
 
         // 重置連續正確次數
         item.consecutiveCorrect = 0;
         item.totalReviews++;
+        item.lastPracticedAt = this.practiceCounter;
 
-        // 安排強化練習
-        this.reinforceQueue.push(groupIndex);
+        // 安排強化練習（較短間隔）
+        item.currentInterval = this.REINFORCE_INTERVAL;
+        item.nextReviewAt = this.practiceCounter + this.REINFORCE_INTERVAL;
 
         this.saveToStorage();
+    }
+
+    /**
+     * 計算並安排下次復習
+     */
+    private scheduleNextReview(item: ReviewItem): void {
+        const reviewCount = item.consecutiveCorrect;
+
+        if (reviewCount <= this.INITIAL_INTERVALS.length) {
+            // 使用預定義的初始間隔
+            item.currentInterval = this.INITIAL_INTERVALS[reviewCount - 1];
+        } else {
+            // 使用漸進式增長
+            item.currentInterval = Math.min(
+                Math.floor(item.currentInterval * 1.5),
+                this.MAX_INTERVAL
+            );
+        }
+
+        item.nextReviewAt = this.practiceCounter + item.currentInterval;
     }
 
     /**
      * 獲取下一個需要練習的字根組索引
      */
     getNextIndex(): number | null {
-        // 1. 優先處理強化隊列
-        if (this.reinforceQueue.length > 0) {
-            const index = this.reinforceQueue.shift()!;
-            return index;
+        // 1. 首先檢查是否有到期的復習項目（按優先級排序）
+        const dueItems = this.getDueItems();
+        if (dueItems.length > 0) {
+            // 返回最高優先級的到期項目
+            return dueItems[0].index;
         }
 
-        // 2. 處理復習隊列
-        if (this.reviewQueue.length > 0) {
-            const index = this.reviewQueue.shift()!;
-            return index;
-        }
-
-        // 3. 按順序學習新字根組
+        // 2. 如果沒有到期項目，繼續學習新字根組
         while (this.currentLearningIndex < this.totalGroups) {
             const item = this.items.get(this.currentLearningIndex);
 
@@ -122,7 +158,7 @@ export class AdvancedSchedule {
             this.currentLearningIndex++;
         }
 
-        // 4. 檢查是否還有未完成的項目
+        // 3. 檢查是否還有未完成的項目
         for (const [index, item] of this.items.entries()) {
             if (!item.isCompleted) {
                 return index;
@@ -130,6 +166,35 @@ export class AdvancedSchedule {
         }
 
         return null;
+    }
+
+    /**
+     * 獲取所有到期的復習項目，按優先級排序
+     */
+    private getDueItems(): ReviewItem[] {
+        const dueItems: ReviewItem[] = [];
+
+        for (const item of this.items.values()) {
+            if (!item.isCompleted &&
+                item.nextReviewAt > 0 &&
+                this.practiceCounter >= item.nextReviewAt) {
+                dueItems.push(item);
+            }
+        }
+
+        // 按優先級排序：錯誤項目 > 短間隔項目 > 超期時間長的項目
+        dueItems.sort((a, b) => {
+            // 錯誤項目（連續正確次數為0）優先
+            if (a.consecutiveCorrect === 0 && b.consecutiveCorrect > 0) return -1;
+            if (b.consecutiveCorrect === 0 && a.consecutiveCorrect > 0) return 1;
+
+            // 超期時間長的優先
+            const aOverdue = this.practiceCounter - a.nextReviewAt;
+            const bOverdue = this.practiceCounter - b.nextReviewAt;
+            return bOverdue - aOverdue;
+        });
+
+        return dueItems;
     }
 
     /**
@@ -166,7 +231,10 @@ export class AdvancedSchedule {
                 index: groupIndex,
                 consecutiveCorrect: 0,
                 totalReviews: 0,
-                isCompleted: false
+                isCompleted: false,
+                nextReviewAt: 0,
+                currentInterval: 0,
+                lastPracticedAt: 0
             };
             this.items.set(groupIndex, item);
         }
@@ -187,7 +255,10 @@ export class AdvancedSchedule {
                     index: i,
                     consecutiveCorrect: 0,
                     totalReviews: 0,
-                    isCompleted: false
+                    isCompleted: false,
+                    nextReviewAt: 0,
+                    currentInterval: 0,
+                    lastPracticedAt: 0
                 });
             }
         }
@@ -215,9 +286,8 @@ export class AdvancedSchedule {
      */
     reset(): void {
         this.items.clear();
-        this.reviewQueue = [];
-        this.reinforceQueue = [];
         this.currentLearningIndex = 0;
+        this.practiceCounter = 0;
 
         // 重新初始化所有項目
         for (let i = 0; i < this.totalGroups; i++) {
@@ -225,7 +295,10 @@ export class AdvancedSchedule {
                 index: i,
                 consecutiveCorrect: 0,
                 totalReviews: 0,
-                isCompleted: false
+                isCompleted: false,
+                nextReviewAt: 0,
+                currentInterval: 0,
+                lastPracticedAt: 0
             });
         }
 
@@ -239,7 +312,8 @@ export class AdvancedSchedule {
      */
     getScheduleDebugInfo(): string {
         const completed = Array.from(this.items.values()).filter(item => item.isCompleted).length;
-        return `強化隊列: ${this.reinforceQueue.length}, 復習隊列: ${this.reviewQueue.length}, 當前學習索引: ${this.currentLearningIndex}/${this.totalGroups}, 已完成: ${completed}`;
+        const dueCount = this.getDueItems().length;
+        return `練習計數: ${this.practiceCounter}, 到期項目: ${dueCount}, 當前學習索引: ${this.currentLearningIndex}/${this.totalGroups}, 已完成: ${completed}`;
     }
 
     /**
@@ -250,15 +324,12 @@ export class AdvancedSchedule {
             const data = {
                 items: Array.from(this.items.entries()),
                 currentLearningIndex: this.currentLearningIndex,
-                reviewQueue: this.reviewQueue,
-                reinforceQueue: this.reinforceQueue,
+                practiceCounter: this.practiceCounter,
                 totalGroups: this.totalGroups
             };
             localStorage.setItem(this.storageKey, JSON.stringify(data));
         }
-    }
-
-    /**
+    }    /**
      * 從本地存儲加載
      */
     private loadFromStorage(): void {
@@ -269,8 +340,7 @@ export class AdvancedSchedule {
                     const data = JSON.parse(saved);
                     this.items = new Map(data.items || []);
                     this.currentLearningIndex = data.currentLearningIndex || 0;
-                    this.reviewQueue = data.reviewQueue || [];
-                    this.reinforceQueue = data.reinforceQueue || [];
+                    this.practiceCounter = data.practiceCounter || 0;
                     this.totalGroups = data.totalGroups || 0;
                 } catch (error) {
                     console.warn('載入存儲數據失敗:', error);
