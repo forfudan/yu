@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宇浩系列字根練習自動測試工具</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .controls {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .input-group label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .input-group input,
+        .input-group select {
+            padding: 8px 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: white;
+        }
+
+        .button.primary {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+
+        .button.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .button.danger {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+        }
+
+        .button.danger:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(238, 90, 82, 0.4);
+        }
+
+        .button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .progress {
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 20px;
+            position: relative;
+        }
+
+        .progress-fill {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            height: 100%;
+            transition: width 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .log {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .log-entry {
+            margin-bottom: 5px;
+            padding: 2px 0;
+        }
+
+        .log-entry.success {
+            color: #28a745;
+        }
+
+        .log-entry.failure {
+            color: #dc3545;
+        }
+
+        .log-entry.info {
+            color: #17a2b8;
+        }
+
+        .log-entry.warning {
+            color: #ffc107;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .running .stat-card {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">宇浩系列字根練習自動測試工具</h1>
+            <p>模擬在真實界面中不斷填入正確或錯誤答案，測試算法是否會卡在某個進度無法推進</p>
+        </div>
+
+        <div class="controls">
+            <div class="input-group">
+                <label>練習目標</label>
+                <input type="number" id="targetPractices" value="2000" min="1" max="10000">
+            </div>
+            <div class="input-group">
+                <label>練習速度</label>
+                <select id="speed">
+                    <option value="10" selected>極極快 (10ms)</option>
+                    <option value="50">極快 (50ms)</option>
+                    <option value="100">快速 (100ms)</option>
+                    <option value="200">正常 (200ms)</option>
+                    <option value="500">慢速 (500ms)</option>
+                    <option value="1000">很慢 (1s)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>錯誤率</label>
+                <select id="errorRate">
+                    <option value="0">0% (總是正確)</option>
+                    <option value="0.05">5%</option>
+                    <option value="0.1" selected>10%</option>
+                    <option value="0.15">15%</option>
+                    <option value="0.2">20%</option>
+                </select>
+            </div>
+            <button class="button primary" id="startBtn" onclick="startAutoTest()">開始自動測試</button>
+            <button class="button danger" id="stopBtn" onclick="stopAutoTest()" disabled>停止測試</button>
+            <button class="button" onclick="resetTest()">重置</button>
+            <button class="button" onclick="quickTest()">快速測試(1000次)</button>
+            <button class="button" onclick="calculateTheory()">理論計算</button>
+        </div>
+
+        <div id="theoryResult"
+            style="margin: 10px 0; padding: 15px; background: #f8f9fa; border-radius: 8px; display: none;">
+            <h4>📊 理論分析</h4>
+            <div id="theoryContent"></div>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 0%">0%</div>
+            </div>
+        </div>
+
+        <div class="stats" id="stats">
+            <div class="stat-card">
+                <div class="stat-value" id="practiceCount">0</div>
+                <div class="stat-label">練習次數</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="completionRate">0%</div>
+                <div class="stat-label">完成率</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="successRate">0%</div>
+                <div class="stat-label">正確率</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="timeElapsed">0s</div>
+                <div class="stat-label">已用時間</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="estimatedTime">--</div>
+                <div class="stat-label">預估剩餘</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="currentStage">準備中</div>
+                <div class="stat-label">當前階段</div>
+            </div>
+        </div>
+
+        <div style="margin: 20px 0;">
+            <h3>算法統計</h3>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="masteredCount">0</div>
+                    <div class="stat-label">已掌握</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="learningCount">0</div>
+                    <div class="stat-label">學習中</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="difficultCount">0</div>
+                    <div class="stat-label">困難項</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="newCount">0</div>
+                    <div class="stat-label">未開始</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="efficiency">--</div>
+                    <div class="stat-label">練習效率</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="avgReviews">--</div>
+                    <div class="stat-label">平均復習次數</div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h3>測試日誌</h3>
+            <div class="log" id="testLog"></div>
+        </div>
+    </div>
+
+    <script>
+        // 模擬 AdvancedSchedule 類
+        class AdvancedSchedule {
+            constructor(name) {
+                this.items = new Map();
+                this.storageKey = `auto_test_${name}`;
+                this.practiceCount = 0;
+
+                // 算法參數 - 平衡學習效率與記憶鞏固
+                this.NEW_CARD_RATIO = 0.30;
+                this.INITIAL_INTERVALS = [3, 8, 20]; // 適中間隔，確保記憶鞏固
+                this.GRADUATION_THRESHOLD = 3; // 恢復到3次連續正確，符合學習原理
+                this.EASY_MULTIPLIER = 2.0;
+                this.GOOD_MULTIPLIER = 1.8; // 適中的乘數，不會增長過快
+                this.HARD_MULTIPLIER = 1.2;
+
+                this.loadFromStorage();
+            }
+
+            loadFromStorage() {
+                try {
+                    const data = localStorage.getItem(this.storageKey);
+                    if (data) {
+                        const parsed = JSON.parse(data);
+                        this.items = new Map(parsed.items || []);
+                        this.practiceCount = parsed.practiceCount || 0;
+                    }
+                } catch (e) {
+                    console.warn('Failed to load from storage:', e);
+                }
+            }
+
+            saveToStorage() {
+                try {
+                    const data = {
+                        items: Array.from(this.items.entries()),
+                        practiceCount: this.practiceCount
+                    };
+                    localStorage.setItem(this.storageKey, JSON.stringify(data));
+                } catch (e) {
+                    console.warn('Failed to save to storage:', e);
+                }
+            }
+
+            recordSuccess(id) {
+                const item = this.getOrCreateItem(id);
+                this.practiceCount++;
+
+                item.consecutiveCorrect++;
+                item.totalReviews++;
+                item.lastPracticed = this.practiceCount;
+                item.isNew = false;
+
+                // 簡化的間隔計算 - 與真實版本完全一致
+                if (item.consecutiveCorrect <= this.INITIAL_INTERVALS.length) {
+                    const intervalIndex = item.consecutiveCorrect - 1;
+                    item.currentInterval = this.INITIAL_INTERVALS[intervalIndex] || this.INITIAL_INTERVALS[this.INITIAL_INTERVALS.length - 1];
+                } else {
+                    item.currentInterval = Math.floor(item.currentInterval * this.GOOD_MULTIPLIER);
+                    item.currentInterval = Math.min(item.currentInterval, 50);
+                }
+
+                item.nextReviewAt = this.practiceCount + item.currentInterval;
+                this.items.set(id, item);
+                this.saveToStorage();
+            }
+
+            recordFailure(id) {
+                const item = this.getOrCreateItem(id);
+                this.practiceCount++;
+
+                item.consecutiveCorrect = 0;
+                item.totalReviews++;
+                item.errorCount++;
+                item.lastPracticed = this.practiceCount;
+                item.isNew = false;
+
+                // 錯誤處理：簡化為立即復習 - 與真實版本一致
+                item.currentInterval = 1;
+                item.nextReviewAt = this.practiceCount + item.currentInterval;
+                this.items.set(id, item);
+                this.saveToStorage();
+            }
+
+            getOrCreateItem(id) {
+                const existing = this.items.get(id);
+                if (existing) {
+                    return existing;
+                }
+
+                const newItem = {
+                    id,
+                    nextReviewAt: this.practiceCount + 1, // 新項目在下一組練習
+                    consecutiveCorrect: 0,
+                    totalReviews: 0,
+                    errorCount: 0,
+                    lastPracticed: 0,
+                    isNew: true,
+                    currentInterval: 1
+                };
+
+                this.items.set(id, newItem);
+                return newItem;
+            }
+
+            getNext(cardGroups) {
+                // 分類所有項目 - 與真實版本一致
+                const newItems = [];
+                const dueReviews = [];
+
+                for (const cardItem of cardGroups) {
+                    const reviewItem = this.items.get(cardItem.code);
+
+                    if (!reviewItem) {
+                        // 完全新的項目
+                        newItems.push(cardItem);
+                    } else if (this.practiceCount >= reviewItem.nextReviewAt && reviewItem.consecutiveCorrect < this.GRADUATION_THRESHOLD) {
+                        // 到期且未掌握的項目
+                        dueReviews.push(cardItem);
+                    }
+                }
+
+                // 優先處理到期復習
+                if (dueReviews.length > 0) {
+                    return dueReviews[0];
+                }
+
+                // 然後學習新內容
+                if (newItems.length > 0) {
+                    return newItems[0];
+                }
+
+                return null;
+            }
+
+            getStats() {
+                let mastered = 0;
+                let learning = 0;
+                let difficult = 0;
+
+                for (const item of this.items.values()) {
+                    if (item.consecutiveCorrect >= this.GRADUATION_THRESHOLD) {
+                        mastered++;
+                    } else if (item.errorCount >= 3) {
+                        difficult++;
+                    } else {
+                        learning++;
+                    }
+                }
+
+                return {
+                    total: this.items.size,  // 已練習的項目數
+                    mastered,
+                    learning,
+                    difficult
+                };
+            }
+
+            reset() {
+                this.items.clear();
+                this.practiceCount = 0;
+                localStorage.removeItem(this.storageKey);
+            }
+        }
+
+        // 模擬字根組數據（簡化版本）
+        const mockCardGroups = [];
+        for (let i = 1; i <= 250; i++) {
+            mockCardGroups.push({
+                code: `zigen_${i}`,
+                name: `字根${i}`,
+                zigens: [{
+                    font: `根${i}`,
+                    ma: `z${i}`
+                }]
+            });
+        }
+
+        // 測試變量
+        let schedule = new AdvancedSchedule('auto_test');
+        let testInterval;
+        let startTime;
+        let totalPractices = 0;
+        let successCount = 0;
+        let isRunning = false;
+
+        function log(message, type = 'info') {
+            const logDiv = document.getElementById('testLog');
+            const timestamp = new Date().toLocaleTimeString();
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            entry.textContent = `[${timestamp}] ${message}`;
+            logDiv.appendChild(entry);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function updateStats() {
+            const stats = schedule.getStats();
+            const now = Date.now();
+            const elapsed = startTime ? Math.floor((now - startTime) / 1000) : 0;
+
+            // 計算完成率：已練習項目數 / 總目標數
+            const totalTargetItems = 250;
+            const completionRate = stats.total / totalTargetItems;
+
+            document.getElementById('practiceCount').textContent = totalPractices;
+            document.getElementById('completionRate').textContent = `${Math.round(completionRate * 100)}%`;
+            document.getElementById('successRate').textContent = totalPractices > 0 ? `${Math.round(successCount / totalPractices * 100)}%` : '0%';
+            document.getElementById('timeElapsed').textContent = `${elapsed}s`;
+
+            // 更新進度條
+            const progressFill = document.getElementById('progressFill');
+            const progress = Math.round(completionRate * 100);
+            progressFill.style.width = `${progress}%`;
+            progressFill.textContent = `${progress}%`;
+
+            // 估算剩餘時間
+            if (totalPractices > 0 && completionRate < 1) {
+                const practicesPerSecond = totalPractices / elapsed;
+                const targetPractices = parseInt(document.getElementById('targetPractices').value);
+                const remainingPractices = targetPractices - totalPractices;
+                const estimatedSeconds = Math.round(remainingPractices / practicesPerSecond);
+                document.getElementById('estimatedTime').textContent = `${estimatedSeconds}s`;
+            } else {
+                document.getElementById('estimatedTime').textContent = '--';
+            }
+
+            // 更新當前階段
+            if (completionRate >= 1) {
+                document.getElementById('currentStage').textContent = '已完成';
+            } else if (completionRate >= 0.8) {
+                document.getElementById('currentStage').textContent = '衝刺階段';
+            } else if (completionRate >= 0.5) {
+                document.getElementById('currentStage').textContent = '鞏固階段';
+            } else if (completionRate >= 0.2) {
+                document.getElementById('currentStage').textContent = '學習階段';
+            } else {
+                document.getElementById('currentStage').textContent = '起步階段';
+            }
+
+            // 更新算法統計
+            const newCount = totalTargetItems - stats.total;
+            document.getElementById('masteredCount').textContent = stats.mastered;
+            document.getElementById('learningCount').textContent = stats.learning;
+            document.getElementById('difficultCount').textContent = stats.difficult;
+            document.getElementById('newCount').textContent = newCount;
+
+            // 計算效率和平均復習次數
+            if (stats.total > 0) {
+                const practicesPerItem = totalPractices / stats.total;
+                document.getElementById('efficiency').textContent = `${practicesPerItem.toFixed(1)}x`;
+
+                const allItems = Array.from(schedule.items.values());
+                const totalReviews = allItems.reduce((sum, item) => sum + item.totalReviews, 0);
+                const avgReviews = totalReviews / allItems.length;
+                document.getElementById('avgReviews').textContent = avgReviews.toFixed(1);
+            } else {
+                document.getElementById('efficiency').textContent = '--';
+                document.getElementById('avgReviews').textContent = '--';
+            }
+        }
+
+        function practiceOnce() {
+            const nextGroup = schedule.getNext(mockCardGroups);
+
+            if (!nextGroup) {
+                log('沒有更多項目需要練習！', 'success');
+                stopAutoTest();
+                return;
+            }
+
+            totalPractices++;
+            const errorRate = parseFloat(document.getElementById('errorRate').value);
+            const isSuccess = Math.random() > errorRate;
+
+            // 詳細調試信息
+            const stats = schedule.getStats();
+            const completionRate = stats.total / 250;
+            console.log(`練習前狀態: 已練習=${stats.total}, 熟練=${stats.mastered}, 完成率=${Math.round(completionRate * 100)}%`);
+
+            if (isSuccess) {
+                schedule.recordSuccess(nextGroup.code);
+                successCount++;
+                log(`練習 ${nextGroup.name} - 正確 (連續正確: ${schedule.items.get(nextGroup.code)?.consecutiveCorrect || 0})`, 'success');
+            } else {
+                schedule.recordFailure(nextGroup.code);
+                log(`練習 ${nextGroup.name} - 錯誤`, 'failure');
+            }
+
+            updateStats();
+
+            // 檢查是否達到目標
+            const targetPractices = parseInt(document.getElementById('targetPractices').value);
+            const newStats = schedule.getStats();
+            const newCompletionRate = newStats.total / 250;
+            console.log(`練習後狀態: 已練習=${newStats.total}, 熟練=${newStats.mastered}, 完成率=${Math.round(newCompletionRate * 100)}%`);
+
+            if (totalPractices >= targetPractices) {
+                const finalStats = schedule.getStats();
+                const finalCompletionRate = finalStats.total / 250;
+                log(`達到目標練習次數 ${targetPractices}，完成率：${Math.round(finalCompletionRate * 100)}%`, 'warning');
+
+                // 顯示詳細結果
+                const practicesPerItem = finalStats.total > 0 ? (totalPractices / finalStats.total).toFixed(1) : 'N/A';
+                log(`📊 測試結果: 已練習${finalStats.total}/250項, 掌握${finalStats.mastered}項, 效率${practicesPerItem}x`, 'info');
+
+                if (finalCompletionRate >= 1) {
+                    log('🎉 恭喜！所有項目都已開始練習！', 'success');
+                } else if (finalCompletionRate >= 0.8) {
+                    log('👍 表現良好，大部分項目已開始練習', 'success');
+                } else {
+                    log('⚠️ 建議調整算法參數以提高效率', 'warning');
+                }
+
+                stopAutoTest();
+            } else if (newCompletionRate >= 1) {
+                log(`所有項目都已完成！總練習次數：${totalPractices}`, 'success');
+                stopAutoTest();
+            }
+        }
+
+        function startAutoTest() {
+            if (isRunning) return;
+
+            isRunning = true;
+            startTime = Date.now();
+            const speed = parseInt(document.getElementById('speed').value);
+
+            document.getElementById('startBtn').disabled = true;
+            document.getElementById('stopBtn').disabled = false;
+            document.getElementById('stats').classList.add('running');
+
+            log('開始自動測試...', 'info');
+
+            testInterval = setInterval(practiceOnce, speed);
+        }
+
+        function stopAutoTest() {
+            if (!isRunning) return;
+
+            isRunning = false;
+
+            if (testInterval) {
+                clearInterval(testInterval);
+                testInterval = null;
+            }
+
+            document.getElementById('startBtn').disabled = false;
+            document.getElementById('stopBtn').disabled = true;
+            document.getElementById('stats').classList.remove('running');
+
+            const stats = schedule.getStats();
+            const completionRate = stats.total / 250;
+            log(`測試已停止。完成率：${Math.round(completionRate * 100)}%，總練習：${totalPractices}次`, 'info');
+        }
+
+        function quickTest() {
+            if (isRunning) {
+                log('請先停止當前測試', 'warning');
+                return;
+            }
+
+            // 設置快速測試參數
+            document.getElementById('targetPractices').value = '1000';
+            document.getElementById('speed').value = '10';
+            document.getElementById('errorRate').value = '0.1';
+
+            log('開始快速測試 (1000次練習，10%錯誤率)...', 'info');
+            startAutoTest();
+        }
+
+        function calculateTheory() {
+            const errorRate = parseFloat(document.getElementById('errorRate').value);
+            const intervals = [3, 8, 20]; // 當前設置的間隔
+            const graduationThreshold = 3;
+            const totalItems = 250;
+
+            // 修正的理論計算
+            const successRate = 1 - errorRate;
+
+            // 計算達到N次連續成功的期望嘗試次數
+            // 使用正確的幾何分布公式
+            function expectedTrialsForConsecutiveSuccesses(n, p) {
+                // 遞歸公式: E[T_n] = (1 + (1-p) * E[T_n]) / p + E[T_{n-1}]
+                // 簡化為: E[T_n] = (1/p) * (1 + E[T_{n-1}])
+                if (n === 1) return 1 / p;
+                return (1 / p) * (1 + expectedTrialsForConsecutiveSuccesses(n - 1, p));
+            }
+
+            const expectedTriesToGraduate = expectedTrialsForConsecutiveSuccesses(graduationThreshold, successRate);
+
+            // 每個項目的預期練習次數就是達到畢業所需的次數
+            // 不需要額外的"間隔成本"，因為算法是並行調度的
+            const averagePracticesPerItem = expectedTriesToGraduate;
+
+            const totalExpectedPractices = Math.round(totalItems * averagePracticesPerItem);
+            const efficiency = averagePracticesPerItem.toFixed(1);
+
+            // 顯示結果
+            const resultDiv = document.getElementById('theoryResult');
+            const contentDiv = document.getElementById('theoryContent');
+
+            contentDiv.innerHTML = `
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                    <div><strong>錯誤率:</strong> ${(errorRate * 100)}%</div>
+                    <div><strong>成功率:</strong> ${(successRate * 100)}%</div>
+                    <div><strong>畢業門檻:</strong> ${graduationThreshold}次連續正確</div>
+                    <div><strong>初始間隔:</strong> [${intervals.join(', ')}]</div>
+                    <div><strong>項目總數:</strong> ${totalItems}</div>
+                    <div><strong>預期效率:</strong> ${efficiency}x (每項目平均練習次數)</div>
+                    <div><strong>預期總練習:</strong> ${totalExpectedPractices}次</div>
+                    <div><strong>理論範圍:</strong> ${Math.round(totalExpectedPractices * 0.9)} - ${Math.round(totalExpectedPractices * 1.1)}次</div>
+                </div>
+                <div style="margin-top: 15px; padding: 10px; background: #e8f5e8; border-radius: 5px;">
+                    <strong>📝 理論模型:</strong>
+                    使用幾何分布計算連續成功的期望次數，${graduationThreshold}次連續成功(${(successRate * 100)}%成功率)的期望嘗試次數為 ${expectedTriesToGraduate.toFixed(1)}
+                </div>
+                <div style="margin-top: 10px; padding: 10px; background: #e3f2fd; border-radius: 5px;">
+                    <strong>� 評估:</strong>
+                    ${efficiency < 3 ? '⚠️ 可能過於容易，記憶鞏固不足' :
+                    efficiency > 6 ? '⚠️ 可能過於困難，學習效率偏低' :
+                        '✅ 參數設置合理，平衡效率與記憶鞏固'}
+                </div>
+            `;
+
+            resultDiv.style.display = 'block';
+            log(`修正理論計算：預期需要 ${totalExpectedPractices} 次練習 (${efficiency}x效率)`, 'info');
+        } function resetTest() {
+            stopAutoTest();
+            schedule.reset();
+            totalPractices = 0;
+            successCount = 0;
+            startTime = null;
+
+            document.getElementById('testLog').innerHTML = '';
+            updateStats();
+
+            log('測試已重置', 'info');
+        }
+
+        // 初始化
+        updateStats();
+        log('自動測試工具已準備就緒', 'info');
+    </script>
+</body>
+
+</html>
