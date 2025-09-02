@@ -74,7 +74,7 @@ export default defineConfig({
             },
             {
               text: "日月输入法",
-              link: "/docs/sunmoon",
+              link: "/docs/ming",
             },
             {
               text: "吉旦餅输入法",
@@ -484,7 +484,7 @@ export default defineConfig({
                 },
                 {
                   text: "日月大明輸入法",
-                  link: "/zht/docs/sunmoon",
+                  link: "/zht/docs/ming",
                 },
                 {
                   text: "吉旦餅輸入法",

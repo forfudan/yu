@@ -1,7 +1,7 @@
 <script setup lang="ts">
 /** 单字练习 */
 import { shallowRef, onMounted } from "vue";
-import { Card, cache, fetchChaifen, fetchZigen, makeCodesFromDivision } from "./share";
+import { Card, cache, fetchChaifenOptimized, fetchZigen, makeCodesFromDivision } from "./share";
 import Train from "./TrainCard.vue";
 
 const p = defineProps<{
@@ -29,8 +29,8 @@ const chaifenMap = shallowRef()
 onMounted(async () => {
   if (cards.value && chaifenMap.value) return;
 
-  // chaifenMap.value = await fetchChaifen('/chaifen.csv')
-  chaifenMap.value = await fetchZigen(p.chaifenUrl)
+  // 使用优化的JSON格式读取拆分数据
+  chaifenMap.value = await fetchChaifenOptimized(p.chaifenUrl)
   const zigenMap = await fetchZigen(p.zigenUrl)
 
   let chaifenValues = [...chaifenMap.value.values()]

@@ -24,7 +24,7 @@ paths_of_docs = [
     "/docs/star.md",
     "/docs/light.md",
     "/docs/wafel.md",
-    "/docs/sunmoon.md",
+    "/docs/ming.md",
     "/docs/joy.md",
     "/docs/tianma.md",
     "/docs/yima.md",

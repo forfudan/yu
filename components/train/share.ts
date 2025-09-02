@@ -1,5 +1,6 @@
 export * from '../search/share'
-import { ChaifenMap } from "../search/share";
+import { ChaifenMap, fetchChaifenOptimized } from "../search/share";
+import ChaiDataLoader from "../search/ChaiDataLoader";
 
 export interface Card {
     /** 练习的题目 */
@@ -7,6 +8,9 @@ export interface Card {
     /** 答案 */
     key: string;
 }
+
+// 重新导出优化的读取函数
+export { fetchChaifenOptimized };
 
 export function find8relativeChars(zigen: string, chaifenMap: ChaifenMap) {
     const result: string[] = []

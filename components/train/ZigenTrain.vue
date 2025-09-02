@@ -9,7 +9,7 @@
 <script setup lang="ts">
 /** 字根練習 - 優化版 */
 import { shallowRef, onMounted, ref, computed, nextTick } from "vue";
-import { Card, cache, fetchChaifen, fetchZigen, makeCodesFromDivision } from "./share";
+import { Card, cache, fetchChaifenOptimized, fetchZigen, makeCodesFromDivision } from "./share";
 import { AdvancedSchedule } from "./advancedSchedule";
 import TrainCardGroup from "./TrainCardGroup.vue";
 
@@ -206,7 +206,14 @@ onMounted(async () => {
     // 首先載入保存的排序狀態
     loadSortOrder()
 
-    chaifenMap.value = await fetchChaifen('/chaifen.csv')
+    // 获取方案对应的拆分文件URL
+    const BaseSchemes = ['joy', 'light', 'star', 'ming', 'wafel'];
+    const isBase = BaseSchemes.includes(p.name);
+    const chaifenUrl = isBase ? '/chaifen.json' : `/chaifen-${p.name}.json`;
+
+    console.log(`字根训练方案: ${p.name}, 使用拆分文件: ${chaifenUrl}`);
+
+    chaifenMap.value = await fetchChaifenOptimized(chaifenUrl)
     const zigenMap = await fetchZigen(p.zigenUrl)
 
     let zigenValues = [...zigenMap.values()]

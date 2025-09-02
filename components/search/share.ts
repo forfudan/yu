@@ -1,4 +1,5 @@
 import { withBase } from "vitepress";
+import ChaiDataLoader from "./ChaiDataLoader";
 export let cache: Record<string, object> = {}
 
 export type CsvMap = Map<string, Record<string, string>>
@@ -118,4 +119,56 @@ export async function fetchChaifen(url: string) {
 
 export async function fetchZigen(url: string) {
     return await fetchCsvAsMap(url) as unknown as ZigenMap
+}
+
+/**
+ * 优化的拆分数据读取函数
+ * 优先使用压缩的JSON格式，失败时回退到CSV格式
+ */
+export async function fetchChaifenOptimized(url: string): Promise<ChaifenMap> {
+    // 检查缓存
+    const cacheKey = `optimized_${url}`;
+    if (cacheKey in cache) {
+        return cache[cacheKey] as ChaifenMap;
+    }
+
+    try {
+        // 首先尝试使用压缩的JSON格式
+        const loader = ChaiDataLoader.getInstance(url);
+        const optimizedData = await loader.loadData();
+
+        // 将优化格式转换为ChaifenMap格式
+        const chaifenMap = new Map<string, { char: string, division: string, division_tw: string, region: string }>();
+
+        for (const [char, data] of Object.entries(optimizedData)) {
+            chaifenMap.set(char, {
+                char,
+                division: data.d || '',
+                division_tw: data.dt || '',
+                region: data.r || ''
+            });
+        }
+
+        console.log(`✅ 成功使用压缩JSON格式加载拆分数据: ${chaifenMap.size} 个字符`);
+
+        // 缓存结果
+        cache[cacheKey] = chaifenMap;
+        return chaifenMap as ChaifenMap;
+
+    } catch (error) {
+        console.warn('JSON格式加载失败，回退到CSV格式:', error);
+
+        // 回退到原有的CSV读取方式
+        try {
+            const result = await fetchCsvAsMap(url) as unknown as ChaifenMap;
+            console.log(`⚠️ 使用CSV格式加载拆分数据: ${result.size} 个字符`);
+
+            // 缓存结果
+            cache[cacheKey] = result;
+            return result;
+        } catch (csvError) {
+            console.error('CSV格式也加载失败:', csvError);
+            throw csvError;
+        }
+    }
 }
