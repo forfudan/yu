@@ -31,6 +31,7 @@
     "verify": "node scripts/verify-build.js"
   },
   "dependencies": {
-    "@vueuse/core": "^10.9.0"
+    "@vueuse/core": "^10.9.0",
+    "hanzi-writer": "^3.7.2"
   }
 }
