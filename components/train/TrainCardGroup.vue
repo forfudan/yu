@@ -42,7 +42,7 @@ const { name, cardGroups, mode, supplement, ming, isFrequencyOrder, onToggleSort
 
 console.log(`載入分組練習會話: ${name}`);
 
-// 使用合并后的基于索引的调度演算法
+// 使用基於索引的調度演算法
 const schedule = new AdvancedSchedule(name);
 
 const currentIndex = ref(0);
@@ -159,19 +159,25 @@ const totalGroups = computed(() => cardGroups.length);
 const practiceProgress = computed(() => {
     // 依賴 forceUpdate 來觸發重新計算
     forceUpdate.value;
-    
-    // 使用合并后的基于索引的调度系统统计
+
+    // 使用基於索引的調度系統統計
     const stats = schedule.getProgressStats();
-    
+
     return {
         current: stats.practiced,
         total: stats.total,
         mastered: stats.mastered,
         percentage: stats.percentage.toFixed(1)
     };
-});const progress = computed(() =>
+}); const progress = computed(() =>
     practiceProgress.value.percentage
 );
+
+// 檢查是否已完成所有學習
+const isCompleted = computed(() => {
+    forceUpdate.value; // 依賴更新觸發器
+    return schedule.isCompleted();
+});
 
 // 監聽輸入，自動處理正確答案或錯誤提示
 watch(inputValue, (newValue) => {
@@ -197,7 +203,7 @@ const handleCorrectAnswer = () => {
 
     isCorrect.value = true;
 
-    // 使用合并后的基于索引的调度演算法记录成功
+    // 使用基於索引的調度演算法記錄成功
     schedule.recordSuccess(currentIndex.value);
     // 觸發進度條更新
     forceUpdate.value++;
@@ -213,7 +219,7 @@ const handleWrongAnswer = () => {
     wrongInputCount.value++;
     showAnswer.value = true;
 
-    // 使用合并后的基于索引的调度演算法记录失败
+    // 使用基於索引的調度演算法記錄失敗
     schedule.recordFailure(currentIndex.value);
     // 觸發進度條更新
     forceUpdate.value++;
@@ -226,16 +232,14 @@ const handleWrongAnswer = () => {
 };
 
 const nextGroup = () => {
-    // 使用合并后的基于索引的调度系统获取下一个需要练习的字根组
+    // 使用基於索引的調度系統獲取下一個需要練習的字根組
     const nextGroupIndex = schedule.getNextIndex();
 
     if (nextGroupIndex !== null) {
         currentIndex.value = nextGroupIndex;
-        console.log(`基于索引的调度系统选择字根组索引: ${nextGroupIndex}`);
     } else {
-        // 调度系统返回null，说明所有字根组都已完成，停止练习
-        console.log('🎉 所有字根组都已完成学习！');
-        return; // 不再选择字根组
+        // 調度系統返回null，說明所有字根組都已完成，停止練習
+        return; // 不再選擇字根組
     }
 
     // 重置狀態
@@ -246,7 +250,6 @@ const nextGroup = () => {
     // 檢查是否為第一次見到此字根組，如果是則直接顯示答案
     if (schedule.isFirstTime(currentIndex.value)) {
         showAnswer.value = true;
-        console.log(`字根組索引 "${currentIndex.value}" 第一次出現，直接顯示答案`);
     } else {
         showAnswer.value = false;
     }
@@ -265,7 +268,6 @@ const startAutoTest = () => {
     autoTestStartTime.value = Date.now();
     autoTestCount.value = 0;
 
-    console.log('開始自動化測試...');
     autoTestResults.value.push(`[${new Date().toLocaleTimeString()}] 開始自動化測試，速度: ${autoTestSpeed.value}ms/次`);
 
     runAutoTestStep();
@@ -284,12 +286,8 @@ const stopAutoTest = () => {
     const durationMinutes = (duration / 1000 / 60).toFixed(1);
     const stats = schedule.getProgressStats();
 
-    console.log('自動化測試已停止');
-    console.log(`🔍 调试信息: cardGroups.length = ${cardGroups.length}, stats.total = ${stats.total}`);
-    console.log(`📊 统计详情: practiced=${stats.practiced}, mastered=${stats.mastered}, total=${stats.total}`);
-
     autoTestResults.value.push(`[${new Date().toLocaleTimeString()}] 測試停止`);
-    autoTestResults.value.push(`🔍 实际字根组数: ${cardGroups.length}`);
+    autoTestResults.value.push(`實際字根組數: ${cardGroups.length}`);
     autoTestResults.value.push(`測試時長: ${durationMinutes}分鐘，共${autoTestCount.value}次練習`);
     autoTestResults.value.push(`最終進度: ${stats.percentage.toFixed(1)}% (${stats.practiced}/${stats.total})`);
     autoTestResults.value.push(`已掌握: ${stats.mastered}個字根組`);
@@ -353,8 +351,6 @@ const runAutoTestStep = () => {
 const resetProgress = () => {
     if (isAutoTesting.value) return;
 
-    console.log('重置學習進度...');
-
     // 清除本地存儲
     schedule.reset();
 
@@ -375,7 +371,10 @@ const resetProgress = () => {
     forceUpdate.value++;
 
     autoTestResults.value.push(`[${new Date().toLocaleTimeString()}] 學習進度已重置`);
-    console.log('學習進度重置完成');
+};
+
+const restartTraining = () => {
+    resetProgress();
 };
 
 const handleKeydown = (e: KeyboardEvent) => {
@@ -429,9 +428,7 @@ const checkZigen = (groupIndex: number, zigenIndex: number, userInput: string) =
 }
 
 onMounted(() => {
-    console.log(`🔍 初始化基于索引的调度系统，字根组数量: ${cardGroups.length}`);
-
-    // 初始化合并后的基于索引的调度系统
+    // 初始化基於索引的調度系統
     schedule.initializeWithGroupCount(cardGroups.length);
 
     nextTick(() => {
@@ -445,7 +442,7 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
     document.removeEventListener('keydown', handleKeydown);
-    
+
     // 清理自動測試定時器
     if (autoTestTimer) {
         clearTimeout(autoTestTimer);
@@ -455,10 +452,33 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
+    <!-- 完成狀態顯示 -->
+    <div v-if="isCompleted" class="text-center py-16">
+        <div class="mb-8">
+            <div class="text-6xl mb-4">🎉</div>
+            <h2 class="text-4xl font-bold mb-2">恭喜你完成練習！</h2>
+            <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">
+                你已經完成了 {{ cardGroups.length }} 個字根組的練習。
+                感謝你的努力和堅持，為中華文明和漢字的傳承又增添了一份力量！
+            </p>
+        </div>
+
+        <div class="space-y-4">
+            <button @click="restartTraining"
+                class="px-8 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 font-medium">
+                想要再訓練一輪嗎？
+            </button>
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+                繼續練習以鞏固記憶
+            </div>
+        </div>
+    </div>
+
+    <!-- 練習進行中 -->
     <div :class="[
         'mx-auto p-6 space-y-6',
         windowWidth < 768 ? 'max-w-sm p-3 space-y-3' : 'max-w-2xl'  // 手機端縮小容器和間距
-    ]" v-if="currentGroup">
+    ]" v-else-if="currentGroup">
         <!-- 進度顯示 -->
         <div class="relative">
             <!-- 進度顯示 -->
@@ -489,6 +509,7 @@ onBeforeUnmount(() => {
         </div>
 
         <!-- 自動化測試控制面板 -->
+        <!-- 
         <div class="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
             <div class="flex flex-wrap items-center gap-3 mb-3">
                 <h3 class="text-sm font-medium text-yellow-800 dark:text-yellow-200">自動化測試</h3>
@@ -536,6 +557,7 @@ onBeforeUnmount(() => {
                 </div>
             </div>
         </div>
+         -->
 
         <!-- 練習區域 -->
         <div :class="[
@@ -552,14 +574,13 @@ onBeforeUnmount(() => {
                 windowWidth < 768 ? 'bottom-2 right-2' : 'bottom-4 right-4'  // 手機端移到右下角
             ]">
                 <!-- 排序切換按鈕 -->
-                <button v-if="onToggleSort"
-                    @click="() => { console.log('排序按鈕被點擊，當前狀態:', isFrequencyOrder); onToggleSort(); }" :class="[
-                        'rounded-full font-medium transition-all duration-200 flex items-center justify-center shadow-md',
-                        windowWidth < 768 ? 'w-6 h-6 text-xs' : 'w-8 h-8 text-xs',  // 手機端縮小按鈕
-                        isFrequencyOrder
-                            ? 'bg-orange-500 hover:bg-orange-600 text-white'
-                            : 'bg-gray-200 hover:bg-gray-300 text-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-200'
-                    ]" :title="isFrequencyOrder ? '字頻序 (點擊切換到字典序)' : '字典序 (點擊切換到字頻序)'">
+                <button v-if="onToggleSort" @click="onToggleSort" :class="[
+                    'rounded-full font-medium transition-all duration-200 flex items-center justify-center shadow-md',
+                    windowWidth < 768 ? 'w-6 h-6 text-xs' : 'w-8 h-8 text-xs',  // 手機端縮小按鈕
+                    isFrequencyOrder
+                        ? 'bg-orange-500 hover:bg-orange-600 text-white'
+                        : 'bg-gray-200 hover:bg-gray-300 text-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-200'
+                ]" :title="isFrequencyOrder ? '字頻序 (點擊切換到字典序)' : '字典序 (點擊切換到字頻序)'">
                     <svg :class="windowWidth < 768 ? 'w-2 h-2' : 'w-3 h-3'" fill="none" stroke="currentColor"
                         viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
