@@ -33,13 +33,13 @@ export class AdvancedSchedule {
     private storageKey: string;
     private practiceCount: number = 0; // 當前練習組數計數器
 
-    // 算法參數 - 調整為更長的復習間隔
+    // 算法參數 - 調整為合理的復習間隔，確保能完成學習
     private readonly NEW_CARD_RATIO = 0.30; // 新卡片比例：30%（增加新學習內容）
-    private readonly INITIAL_INTERVALS = [16, 64, 256]; // 初始間隔：64組、128組、256組（加倍）
+    private readonly INITIAL_INTERVALS = [4, 12, 36]; // 初始間隔：4組、12組、36組（適中間隔）
     private readonly GRADUATION_THRESHOLD = 3; // 畢業閾值：連續3次正確
-    private readonly EASY_MULTIPLIER = 3.0; // 簡單乘數
-    private readonly GOOD_MULTIPLIER = 2.5; // 良好乘數
-    private readonly HARD_MULTIPLIER = 1.5; // 困難乘數
+    private readonly EASY_MULTIPLIER = 2.5; // 簡單乘數
+    private readonly GOOD_MULTIPLIER = 2.0; // 良好乘數
+    private readonly HARD_MULTIPLIER = 1.3; // 困難乘數
 
     constructor(name: string) {
         this.storageKey = `spaced_repetition_${name}`;
@@ -58,29 +58,18 @@ export class AdvancedSchedule {
         item.lastPracticed = this.practiceCount;
         item.isNew = false;
 
-        // 基於Anki算法的間隔計算
+        // 簡化的間隔計算
         if (item.consecutiveCorrect <= this.INITIAL_INTERVALS.length) {
-            // 學習階段：使用預設間隔
             const intervalIndex = item.consecutiveCorrect - 1;
             item.currentInterval = this.INITIAL_INTERVALS[intervalIndex] || this.INITIAL_INTERVALS[this.INITIAL_INTERVALS.length - 1];
         } else {
-            // 復習階段：根據表現調整間隔
-            if (item.consecutiveCorrect >= this.GRADUATION_THRESHOLD) {
-                // 已掌握：間隔延長
-                item.currentInterval = Math.floor(item.currentInterval * this.GOOD_MULTIPLIER);
-                // 限制最大間隔為100組（增加最大間隔）
-                item.currentInterval = Math.min(item.currentInterval, 100);
-            } else {
-                // 仍在學習：適度延長
-                item.currentInterval = Math.floor(item.currentInterval * this.HARD_MULTIPLIER);
-            }
+            item.currentInterval = Math.floor(item.currentInterval * this.GOOD_MULTIPLIER);
+            item.currentInterval = Math.min(item.currentInterval, 50);
         }
 
         item.nextReviewAt = this.practiceCount + item.currentInterval;
         this.items.set(id, item);
         this.saveToStorage();
-
-        console.log(`成功記錄 ${id}: 連續正確=${item.consecutiveCorrect}, 當前間隔=${item.currentInterval}, 下次復習位置=${item.nextReviewAt}`);
     }
 
     /**
@@ -96,33 +85,20 @@ export class AdvancedSchedule {
         item.lastPracticed = this.practiceCount;
         item.isNew = false;
 
-        // 錯誤處理：重置學習進度
-        if (item.errorCount === 1) {
-            // 第一次錯誤：短間隔復習
-            item.currentInterval = 1;
-        } else if (item.errorCount <= 3) {
-            // 多次錯誤：立即復習
-            item.currentInterval = 0;
-        } else {
-            // 困難字根：頻繁復習
-            item.currentInterval = 0;
-        }
-
+        // 錯誤處理：簡化為立即復習
+        item.currentInterval = 1;
         item.nextReviewAt = this.practiceCount + item.currentInterval;
         this.items.set(id, item);
         this.saveToStorage();
-
-        console.log(`錯誤記錄 ${id}: 錯誤次數=${item.errorCount}, 當前間隔=${item.currentInterval}, 下次復習位置=${item.nextReviewAt}`);
     }
 
     /**
-     * 獲取下一個需要練習的項目 - 智慧調度算法
+     * 獲取下一個需要練習的項目 - 簡化的高效調度算法
      */
     getNext<T extends { code: string }>(allItems: T[]): T | null {
         // 分類所有項目
         const newItems: T[] = [];
-        const dueReviews: Array<{ item: T; priority: number; reviewItem: ReviewItem }> = [];
-        const learningItems: T[] = [];
+        const dueReviews: T[] = [];
 
         for (const cardItem of allItems) {
             const reviewItem = this.items.get(cardItem.code);
@@ -130,58 +106,22 @@ export class AdvancedSchedule {
             if (!reviewItem) {
                 // 完全新的項目
                 newItems.push(cardItem);
-            } else if (this.practiceCount >= reviewItem.nextReviewAt) {
-                // 到期需要復習的項目
-                let priority = this.calculatePriority(reviewItem);
-                dueReviews.push({ item: cardItem, priority, reviewItem });
-            } else if (reviewItem.consecutiveCorrect < this.GRADUATION_THRESHOLD) {
-                // 正在學習但還未到期的項目
-                learningItems.push(cardItem);
+            } else if (this.practiceCount >= reviewItem.nextReviewAt && reviewItem.consecutiveCorrect < this.GRADUATION_THRESHOLD) {
+                // 到期且未掌握的項目
+                dueReviews.push(cardItem);
             }
         }
 
-        // 優先處理到期復習（高優先級）
+        // 優先處理到期復習
         if (dueReviews.length > 0) {
-            dueReviews.sort((a, b) => b.priority - a.priority);
-            console.log(`選擇復習項目: ${dueReviews[0].item.code} (優先級: ${dueReviews[0].priority})`);
-            return dueReviews[0].item;
+            return dueReviews[0];
         }
 
-        // 如果沒有到期復習，根據新卡片比例決定學習新內容還是提前復習
-        const totalPracticed = this.items.size;
-        const shouldLearnNew = newItems.length > 0 &&
-            (totalPracticed === 0 || (newItems.length / (newItems.length + totalPracticed)) >= this.NEW_CARD_RATIO);
-
-        if (shouldLearnNew) {
-            console.log(`選擇新項目: ${newItems[0].code}`);
-            return newItems[0];
-        }
-
-        // 如果不學新內容，選擇學習中的困難項目提前復習
-        if (learningItems.length > 0) {
-            const difficultLearning = learningItems
-                .map(item => ({ item, reviewItem: this.items.get(item.code)! }))
-                .filter(({ reviewItem }) => reviewItem.errorCount > 0)
-                .sort((a, b) => b.reviewItem.errorCount - a.reviewItem.errorCount);
-
-            if (difficultLearning.length > 0) {
-                console.log(`選擇困難學習項目: ${difficultLearning[0].item.code}`);
-                return difficultLearning[0].item;
-            }
-
-            // 否則隨機選擇一個學習中的項目
-            const randomLearning = learningItems[Math.floor(Math.random() * learningItems.length)];
-            console.log(`選擇隨機學習項目: ${randomLearning.code}`);
-            return randomLearning;
-        }
-
-        // 最後選擇新項目（如果還有的話）
+        // 然後學習新內容
         if (newItems.length > 0) {
-            console.log(`選擇剩餘新項目: ${newItems[0].code}`);
             return newItems[0];
         }
 
-        console.log('沒有更多項目需要練習');
         return null;
     }
 
@@ -215,7 +155,7 @@ export class AdvancedSchedule {
         let difficult = 0;
 
         for (const item of this.items.values()) {
-            if (item.consecutiveCorrect >= 3 && item.errorCount <= 1) {
+            if (item.consecutiveCorrect >= this.GRADUATION_THRESHOLD) {
                 mastered++;
             } else if (item.errorCount >= 3) {
                 difficult++;
@@ -278,6 +218,7 @@ export class AdvancedSchedule {
             currentInterval: 1
         };
 
+        this.items.set(id, newItem);
         return newItem;
     }
 
@@ -326,6 +267,183 @@ export class AdvancedSchedule {
         return {
             practiceCount: this.practiceCount,
             estimatedTotal
+        };
+    }
+
+    /**
+     * 內建模擬測試功能 - 測試算法在指定數量項目下的表現
+     * @param totalItems 總項目數量（如250個字根）
+     * @param errorRate 錯誤率（0.0-1.0，默認0.1即10%）
+     * @param maxIterations 最大迭代次數（防止無限循環）
+     * @param verbose 是否輸出詳細日誌
+     * @returns 模擬結果統計
+     */
+    simulate(
+        totalItems: number = 250,
+        errorRate: number = 0.1,
+        maxIterations: number = 5000,
+        verbose: boolean = false
+    ): {
+        completed: boolean;
+        totalPractices: number;
+        masteredCount: number;
+        averageReviewsPerItem: number;
+        totalErrors: number;
+        efficiency: string;
+    } {
+        // 重置模擬環境（不影響實際數據）
+        const originalItems = new Map(this.items);
+        const originalPracticeCount = this.practiceCount;
+
+        this.items.clear();
+        this.practiceCount = 0;
+
+        if (verbose) {
+            console.log(`🚀 開始模擬 ${totalItems} 個項目的學習過程`);
+            console.log(`📊 錯誤率: ${(errorRate * 100).toFixed(1)}%`);
+            console.log(`⚙️ 算法參數: 間隔=${this.INITIAL_INTERVALS.join(',')}, 畢業閾值=${this.GRADUATION_THRESHOLD}`);
+            console.log('');
+        }
+
+        // 創建模擬項目
+        const mockItems = Array.from({ length: totalItems }, (_, i) => ({
+            code: `item_${i + 1}`
+        }));
+
+        let iteration = 0;
+        const startTime = Date.now();
+
+        while (iteration < maxIterations) {
+            // 獲取下一個需要練習的項目
+            const nextItem = this.getNext(mockItems);
+
+            if (!nextItem) {
+                // 檢查是否真的完成了
+                const unmastered = Array.from(this.items.values()).filter(
+                    item => item.consecutiveCorrect < this.GRADUATION_THRESHOLD
+                );
+
+                if (unmastered.length === 0) {
+                    if (verbose) console.log('🎉 所有項目都已掌握！');
+                    break;
+                } else {
+                    // 找到下一個最早的復習時間並跳過去
+                    const nextReviewTimes = unmastered
+                        .map(item => item.nextReviewAt)
+                        .filter(time => time > this.practiceCount);
+
+                    if (nextReviewTimes.length > 0) {
+                        const nextTime = Math.min(...nextReviewTimes);
+                        this.practiceCount = nextTime;
+                        if (verbose && iteration % 100 === 0) {
+                            console.log(`⏭️  跳到練習位置 ${this.practiceCount}`);
+                        }
+                        continue;
+                    } else {
+                        break;
+                    }
+                }
+            }
+
+            iteration++;
+
+            // 模擬回答（根據錯誤率決定正確與否）
+            const isCorrect = Math.random() > errorRate;
+
+            if (isCorrect) {
+                this.recordSuccess(nextItem.code);
+                if (verbose && iteration % 200 === 0) {
+                    console.log(`✅ 練習 ${iteration}: ${nextItem.code} 正確`);
+                }
+            } else {
+                this.recordFailure(nextItem.code);
+                if (verbose && iteration % 200 === 0) {
+                    console.log(`❌ 練習 ${iteration}: ${nextItem.code} 錯誤`);
+                }
+            }
+
+            // 定期輸出進度
+            if (verbose && iteration % 500 === 0) {
+                const stats = this.getStats();
+                const progress = (stats.mastered / totalItems * 100).toFixed(1);
+                console.log(`📈 進度報告 - 練習: ${iteration}, 掌握: ${stats.mastered}/${totalItems} (${progress}%)`);
+            }
+        }
+
+        const endTime = Date.now();
+        const finalStats = this.getStats();
+
+        // 計算統計結果
+        const allItems = Array.from(this.items.values());
+        const totalErrors = allItems.reduce((sum, item) => sum + item.errorCount, 0);
+        const averageReviews = allItems.reduce((sum, item) => sum + item.totalReviews, 0) / allItems.length;
+        const completed = finalStats.mastered === totalItems;
+        const efficiency = completed ?
+            `優秀 (${(this.practiceCount / totalItems).toFixed(1)}x)` :
+            `未完成 (${iteration}/${maxIterations})`;
+
+        // 輸出最終結果
+        if (verbose) {
+            console.log('\n' + '='.repeat(50));
+            console.log('🎯 模擬測試完成！');
+            console.log('='.repeat(50));
+            console.log(`⏱️  執行時間: ${endTime - startTime}ms`);
+            console.log(`🔢 總練習次數: ${this.practiceCount}`);
+            console.log(`📚 項目總數: ${totalItems}`);
+            console.log(`🎯 掌握數量: ${finalStats.mastered}/${totalItems}`);
+            console.log(`📊 完成率: ${(finalStats.mastered / totalItems * 100).toFixed(1)}%`);
+            console.log(`❌ 總錯誤次數: ${totalErrors}`);
+            console.log(`🔄 平均復習次數: ${averageReviews.toFixed(1)}`);
+            console.log(`⚡ 效率評估: ${efficiency}`);
+            console.log(`📈 學習統計:`);
+            console.log(`   - 已掌握: ${finalStats.mastered}`);
+            console.log(`   - 學習中: ${finalStats.learning}`);
+            console.log(`   - 困難項: ${finalStats.difficult}`);
+
+            if (completed) {
+                const practicesPerItem = this.practiceCount / totalItems;
+                console.log(`\n✨ 結論: 完成 ${totalItems} 個項目需要約 ${this.practiceCount} 次練習`);
+                console.log(`📊 相當於每個項目平均 ${practicesPerItem.toFixed(1)} 次練習`);
+
+                if (practicesPerItem < 5) {
+                    console.log('🚀 算法效率極佳！');
+                } else if (practicesPerItem < 8) {
+                    console.log('👍 算法效率良好！');
+                } else {
+                    console.log('⚠️  算法可能需要優化');
+                }
+            } else {
+                console.log(`\n⚠️  警告: 在 ${maxIterations} 次迭代內未完成學習`);
+                console.log('💡 建議調整算法參數或增加最大迭代次數');
+            }
+        }
+
+        // 恢復原始數據
+        this.items = originalItems;
+        this.practiceCount = originalPracticeCount;
+
+        return {
+            completed,
+            totalPractices: this.practiceCount, // 直接使用當前練習次數
+            masteredCount: finalStats.mastered,
+            averageReviewsPerItem: averageReviews,
+            totalErrors,
+            efficiency
+        };
+    }
+
+    /**
+     * 快速模擬測試 - 簡化版本，適合在生產環境快速驗證
+     */
+    quickSimulate(totalItems: number = 250): { success: boolean; practices: number; message: string } {
+        const result = this.simulate(totalItems, 0.1, 3000, false);
+
+        return {
+            success: result.completed,
+            practices: result.totalPractices,
+            message: result.completed ?
+                `✅ 成功！${totalItems}個項目需要${result.totalPractices}次練習` :
+                `❌ 失敗！需要調整算法參數`
         };
     }
 }
