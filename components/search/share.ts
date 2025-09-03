@@ -21,7 +21,7 @@ export type ZigenMap = Map<string, Zigen>
 export type ChaifenMap = Map<string, Chaifen>
 
 /** 根据拆分表生成编码 */
-export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, supplement: boolean, ming: boolean) {
+export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, supplement: boolean, ming: boolean, wafel?: boolean) {
     const divisionArray = [...division]
 
     if (ming) {
@@ -44,6 +44,30 @@ export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, supp
         result.push(capitalizeFirstIfTwoLetters(zigenMap.get(lastZigen)?.ma?.slice(1) || '?'))
 
         return result.join('').slice(0, 5)
+    }
+
+    else if (wafel) {
+        // 依次取一、二、末根大码
+        let result: string[] = []
+
+        if (divisionArray.length >= 1) {
+            result.push(zigenMap.get(divisionArray[0])?.ma?.[0] || '?')
+        }
+        if (divisionArray.length >= 2) {
+            result.push(zigenMap.get(divisionArray[1])?.ma?.[0] || '?')
+        }
+        if (divisionArray.length >= 3) {
+            const lastZigen = divisionArray[divisionArray.length - 1]
+            result.push(zigenMap.get(lastZigen)?.ma?.[0] || '?')
+        }
+
+        // 不足三码时，补上末根小码
+        if (result.length < 3) {
+            const lastZigen = divisionArray[divisionArray.length - 1]
+            result.push(zigenMap.get(lastZigen)?.ma?.[1] || '?')
+        }
+
+        return result.join('')
     }
 
     else {

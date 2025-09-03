@@ -26,9 +26,10 @@ const emit = defineEmits<Emits>()
 // 获取方案对应的汉字
 function getSchemeChar(schemeId: string): string {
     const charMap: Record<string, string> = {
-        'joy': '卿',
         'light': '光',
+        'wafel': '華',
         'star': '星',
+        'joy': '卿',
         'ming': '明'
     }
     return charMap[schemeId] || '?'

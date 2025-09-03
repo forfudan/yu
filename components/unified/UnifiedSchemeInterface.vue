@@ -34,6 +34,7 @@ const columnMinWidth = computed(() => {
     switch (activeScheme.value) {
         case 'ming':
             return '2rem'
+        case 'wafel':
         case 'joy':
         case 'light':
         case 'star':

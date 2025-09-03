@@ -20,6 +20,7 @@ const p = defineProps<{
     zigenMap: ZigenMap,
     supplement: boolean,
     ming: boolean,
+    wafel?: boolean,
     /** 是否启用URL里的搜索Params */
     searchParam?: boolean,
     /** 用户输入 */
@@ -81,7 +82,7 @@ const poet: string = poets[ind];
     <div v-if="!localUserInput" class="opacity-40 text-center p-9 tracking-widest">{{ poet }}</div>
     <div class="flex justify-center flex-wrap my-8" v-else>
         <Card v-for="zigen in searchZigens" :key="zigen" :chaifen="chaifenMap.get(zigen)" :zigenMap
-            :supplement="p.supplement" :ming="p.ming" />
+            :supplement="p.supplement" :ming="p.ming" :wafel="p.wafel" />
     </div>
 
 </template>

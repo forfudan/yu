@@ -13,6 +13,7 @@
 <script setup lang="ts">
 import { ref, computed, watch } from "vue";
 import OptimizedFetchSearch from "./OptimizedFetchSearch.vue";
+import { SCHEMES } from '../shared/schemes';
 
 // Define available schemes
 interface SearchScheme {
@@ -23,6 +24,7 @@ interface SearchScheme {
     description?: string
     supplement?: boolean    // 是否支持回頭碼
     ming?: boolean          // 日月方案
+    wafel?: boolean         // 華方案
 }
 
 const props = defineProps<{
@@ -37,45 +39,7 @@ const { hideSchemeButtons } = props
 const sharedUserInput = ref('')
 
 // Available search schemes
-const schemes: SearchScheme[] = [
-    {
-        id: 'joy',
-        name: '卿雲',
-        chaifenUrl: '/chaifen.csv',
-        zigenUrl: '/zigen-joy.csv',
-        description: '卿雲爛兮糾縵縵兮',
-        supplement: false,
-        ming: false
-    },
-    {
-        id: 'light',
-        name: '光華',
-        chaifenUrl: '/chaifen.csv',
-        zigenUrl: '/zigen-light.csv',
-        description: '日月光華旦復旦兮',
-        supplement: true,
-        ming: false
-    },
-    {
-        id: 'star',
-        name: '星陳',
-        chaifenUrl: '/chaifen.csv',
-        zigenUrl: '/zigen-star.csv',
-        description: '明明上天爛然星陳',
-        supplement: true,
-        ming: false
-    },
-
-    {
-        id: 'ming',
-        name: '日月',
-        chaifenUrl: '/chaifen.csv',
-        zigenUrl: '/zigen-ming.csv',
-        description: '日月有常星辰有行',
-        supplement: false,
-        ming: true
-    },
-]
+const schemes: SearchScheme[] = SCHEMES
 
 // Current active scheme
 const activeScheme = ref(props.defaultScheme || 'star')
@@ -103,6 +67,11 @@ const effectiveMing = computed(() => {
     return currentScheme.value.ming || false
 })
 
+const effectiveWafel = computed(() => {
+    // wafel 屬性主要由當前方案決定
+    return currentScheme.value.wafel || false
+})
+
 // Switch to a different scheme
 function switchScheme(schemeId: string) {
     if (schemes.find(s => s.id === schemeId)) {
@@ -116,7 +85,8 @@ function getSchemeChar(schemeId: string): string {
         'joy': '卿',
         'light': '光',
         'star': '星',
-        'ming': '明'
+        'ming': '明',
+        'wafel': '華'
     };
     return charMap[schemeId] || '?';
 }
@@ -147,7 +117,7 @@ const componentKey = computed(() => `search-${activeScheme.value}`)
         <!-- Search Component -->
         <OptimizedFetchSearch :key="componentKey" :chaifenUrl="currentScheme.chaifenUrl"
             :zigenUrl="currentScheme.zigenUrl" :supplement="effectiveSupplement" :ming="effectiveMing"
-            v-model="sharedUserInput" />
+            :wafel="effectiveWafel" v-model="sharedUserInput" />
     </div>
 </template>
 

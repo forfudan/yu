@@ -13,6 +13,7 @@ export interface SearchScheme extends BaseScheme {
     zigenUrl: string
     supplement: boolean
     ming: boolean
+    wafel?: boolean
 }
 
 export interface ZigenScheme extends BaseScheme {
@@ -51,13 +52,23 @@ export const SCHEMES: SearchScheme[] = [
     },
     {
         id: 'ming',
-        name: '日月',
+        name: '明',
         description: '日月有常星辰有行',
         chaifenUrl: '/chaifen.csv',
         zigenUrl: '/zigen-ming.csv',
         supplement: false,
         ming: true
-    }
+    },
+    {
+        id: 'wafel',
+        name: '吉旦餅',
+        description: 'Wafel·華夫·三碼全碼方案',
+        chaifenUrl: '/chaifen.csv',
+        zigenUrl: '/zigen-wafel.csv',
+        supplement: false,
+        ming: false,
+        wafel: true
+    },
 ]
 
 // 轉換為 ZigenScheme 格式（用於字根圖）

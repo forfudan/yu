@@ -15,6 +15,7 @@ const p = defineProps<{
   range?: [start: number, end: number]
   supplement: boolean
   ming: boolean
+  wafel?: boolean
 }>()
 
 let cardsName = p.name + '_char'
@@ -41,7 +42,7 @@ onMounted(async () => {
 
   cards.value = chaifenValues.map(cf => ({
     name: cf.char,
-    key: makeCodesFromDivision(cf.division, zigenMap, p.supplement, p.ming)
+    key: makeCodesFromDivision(cf.division, zigenMap, p.supplement, p.ming, p.wafel)
   }))
 
   cache[cardsName] = cards.value
