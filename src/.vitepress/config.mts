@@ -232,6 +232,10 @@ export default defineConfig({
               text: "字根编码",
               link: "/learn/roots_ming",
             },
+            {
+              text: "单字编码",
+              link: "/learn/chars_ming",
+            },
           ],
         },
         {
@@ -641,6 +645,10 @@ export default defineConfig({
                 {
                   text: "字根編碼",
                   link: "/zht/learn/roots_ming",
+                },
+                {
+                  text: "單字编码",
+                  link: "/zht/learn/chars_ming",
                 },
               ],
             },

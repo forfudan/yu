@@ -40,7 +40,7 @@ paths_of_docs = [
     "/learn/radicals.md",
     "/learn/grouping.md",
     "/learn/machine.md",
-    # 星程
+    # 星陳
     "/learn/roots.md",
     "/learn/chars.md",
     "/learn/quick.md",
@@ -48,6 +48,7 @@ paths_of_docs = [
     "/learn/lexicon.md",
     # 日月
     "/learn/roots_ming.md",
+    "/learn/chars_ming.md",
     # 例子
     "/learn/examples.md",
     "/learn/frequent.md",
