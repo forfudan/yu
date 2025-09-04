@@ -153,12 +153,11 @@ watch(inputValue, (newValue) => {
         return;
     }
 
-    // 檢查是否匹配任何一個拼音
-    const isMatch = currentEntry.value.pinyins.some(p =>
-        p.pinyin.toLowerCase() === input
-    );
+    // 檢查是否匹配第一個（最高頻率的）拼音
+    const isMatch = currentEntry.value.pinyins.length > 0 &&
+        currentEntry.value.pinyins[0].pinyin.toLowerCase() === input;
 
-    console.log('輸入匹配檢查:', input, '匹配結果:', isMatch);
+    console.log('輸入匹配檢查:', input, '期望第一個拼音:', currentEntry.value.pinyins[0]?.pinyin, '匹配結果:', isMatch);
     if (isMatch) {
         // 正確答案，直接進入下一字（不論是否為第一次學習）
         console.log('輸入正確，調用 handleCorrectAnswer');
@@ -173,10 +172,9 @@ const handleInput = (event: Event) => {
 
     if (!currentEntry.value || !input) return;
 
-    // 檢查是否匹配任何一個拼音
-    const isMatch = currentEntry.value.pinyins.some(p =>
-        p.pinyin.toLowerCase() === input
-    );
+    // 檢查是否匹配第一個（最高頻率的）拼音
+    const isMatch = currentEntry.value.pinyins.length > 0 &&
+        currentEntry.value.pinyins[0].pinyin.toLowerCase() === input;
 
     if (isMatch) {
         // 正確答案，直接進入下一字（不論是否為第一次學習）
@@ -189,9 +187,8 @@ const handleInputKeydown = (event: KeyboardEvent) => {
     if (event.key === 'Enter') {
         const input = inputValue.value.trim().toLowerCase();
         if (input && currentEntry.value) {
-            const isMatch = currentEntry.value.pinyins.some(p =>
-                p.pinyin.toLowerCase() === input
-            );
+            const isMatch = currentEntry.value.pinyins.length > 0 &&
+                currentEntry.value.pinyins[0].pinyin.toLowerCase() === input;
 
             if (isMatch) {
                 handleCorrectAnswer();
@@ -433,7 +430,7 @@ onBeforeUnmount(() => {
                     <span>已練習: {{ practiceProgress.current }} / {{ practiceProgress.total }} ({{
                         practiceProgress.percentage }}%) | 已掌握: {{ practiceProgress.mastered }}</span>
                     <span v-if="wrongInputCount > 0" class="text-red-600 dark:text-red-400">錯誤次數: {{ wrongInputCount
-                        }}</span>
+                    }}</span>
                 </div>
                 <div :class="[
                     'w-full bg-gray-200 dark:bg-gray-700 rounded-full',
@@ -504,11 +501,15 @@ onBeforeUnmount(() => {
                     windowWidth < 768 ? 'mb-2' : 'mb-4'
                 ]">
                     <span v-for="(item, index) in currentEntry.pinyins" :key="index" :class="[
-                        'bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded font-mono',
-                        windowWidth < 768 ? 'text-xs px-1 py-0.5' : 'text-sm px-2 py-1'
+                        'rounded font-mono',
+                        windowWidth < 768 ? 'text-xs px-1 py-0.5' : 'text-sm px-2 py-1',
+                        index === 0
+                            ? 'bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-200 font-bold border-2 border-blue-300 dark:border-blue-600'
+                            : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'
                     ]">
                         {{ item.pinyin }}
                         <span v-if="item.freq" class="opacity-75 ml-1">({{ item.freq }}%)</span>
+                        <span v-if="index === 0" class="ml-1 text-xs">✓</span>
                     </span>
                 </div>
             </div>
@@ -543,7 +544,7 @@ onBeforeUnmount(() => {
                     <span :class="[
                         'text-blue-600 dark:text-blue-400 font-medium',
                         windowWidth < 768 ? 'text-sm' : ''
-                    ]">繼續輸入正確拼音</span>
+                    ]">輸入主要拼音（帶✓標記的）</span>
                 </div>
             </div>
         </div>
@@ -562,7 +563,7 @@ onBeforeUnmount(() => {
                         'bg-gray-100 dark:bg-gray-800 dark:text-gray-300 rounded',
                         windowWidth < 768 ? 'px-1 py-0.5 text-xs' : 'px-2 py-1 text-xs'
                     ]">輸入</kbd>
-                    自動檢查
+                    主要拼音
                 </span>
                 <span class="flex items-center gap-1">
                     <kbd :class="[
@@ -571,6 +572,9 @@ onBeforeUnmount(() => {
                     ]">Esc</kbd>
                     顯示答案
                 </span>
+            </div>
+            <div v-if="!showAnswer" class="text-xs opacity-75">
+                請輸入頻率最高的拼音（通常是第一個）
             </div>
         </div>
     </div>

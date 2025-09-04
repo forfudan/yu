@@ -1360,8 +1360,8 @@ $$N_{d} = \sum\limits_{i \in I, j \in J_i/\{1\}} p(w_{ij}).$$
 
 碼表數據基於：
 
-- [光華] [https://shurufa.app](https://shurufa.app) 官方 QQ 群：735728797
-- [星陳] [https://shurufa.app](https://shurufa.app) 官方 QQ 群：735728797
+- [光華] [https://shurufa.app](https://shurufa.app) 官方 QQ 群：170510762
+- [星陳] [https://shurufa.app](https://shurufa.app) 官方 QQ 群：170510762
 - [卿雲] [https://shurufa.app](https://shurufa.app) 官方 QQ 群：374630778
 - [徐碼] 官方 QQ 群：218210590, 761401688
 - [倉頡五代] [https://github.com/rime/rime-cangjie](https://github.com/rime/rime-cangjie)
