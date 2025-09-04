@@ -49617,7 +49617,6 @@ gnyws	㾻
 gnyxg	𲱲
 gnyxi	𤶈
 go	𫶧
-go	𳑺
 gpcke	𲰲
 gpcne	𰋽
 gpda	𦉼
@@ -115864,6 +115863,7 @@ gnvjc	㊕
 go	⼉
 go	⺫
 go	⺲
+go	𖿲
 go	㋸
 go	ㄦ
 go	ル
