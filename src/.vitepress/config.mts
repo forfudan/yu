@@ -327,11 +327,11 @@ export default defineConfig({
           ],
         },
         {
-          text: "跟打器",
+          text: "中古漢語",
           items: [
             {
-              text: "跟打器",
-              link: "https://genda.shurufa.app/",
+              text: "中古拼音",
+              link: "/practice/tupa",
             },
           ],
         },
@@ -750,11 +750,11 @@ export default defineConfig({
               ],
             },
             {
-              text: "跟打器",
+              text: "中古漢語",
               items: [
                 {
-                  text: "跟打器",
-                  link: "https://genda.shurufa.app/",
+                  text: "中古拼音",
+                  link: "/zht/practice/tupa",
                 },
               ],
             },
