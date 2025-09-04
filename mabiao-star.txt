@@ -25,7 +25,7 @@ aaam	𱣎
 aaao	𣙑
 aaap	檚
 aaat	𫿣
-aaat	𳆽
+aaat	𳆼
 aabg	㯬
 aabn	㯟
 aabo	𣗗
@@ -746,7 +746,7 @@ adgm	𬂯
 adgo	𣜲
 adgo	𪴃
 adgp	栧
-adgs	𳌣
+adgs	𳌡
 adgy	裒
 adgy	褢
 adgy	㭛
@@ -989,7 +989,7 @@ aeis	𘫊
 aeiu	㌽
 aeiv	𫴺
 aej	亮
-aejb	𳂝
+aejb	𳂜
 aeje	頏
 aejf	亱
 aejg	亮
@@ -1507,7 +1507,7 @@ agsc	𘀪
 agsg	𘀯
 agsg	𘀶
 agsh	𪲙
-agsh	𳌡
+agsh	𳌟
 agsi	橅
 agsi	𗇒
 agsi	𗇓
@@ -2031,7 +2031,7 @@ ajdm	朾
 ajdn	鶇
 ajdn	𪂼
 ajdn	𪃥
-ajdn	𳏖
+ajdn	𳏔
 ajdo	𬽞
 ajdq	𣠲
 ajds	榊
@@ -2283,6 +2283,7 @@ ajxt	𘢘
 ajyf	𮟽
 ajzg	𫘷
 ajzm	𣑬
+ajzt	𬺥
 ak	李
 ak	李白
 aka	六
@@ -2379,7 +2380,7 @@ akga	𰗭
 akgb	𢻓
 akgc	楌
 akgd	𪇉
-akgd	𳏷
+akgd	𳏵
 akge	雍
 akge	𬆳
 akgf	𢶜
@@ -2407,7 +2408,7 @@ akgl	橘
 akgl	𭫜
 akgm	𣏾
 akgn	𣝥
-akgn	𳈾
+akgn	𳈽
 akgo	槂
 akgo	𦁝
 akgp	材
@@ -2541,6 +2542,7 @@ akmw	𤰎
 akn	松
 akna	松
 akna	枩
+akna	𬺤
 akna	𮪺
 aknd	𪁿
 akng	衮
@@ -2555,7 +2557,7 @@ aknr	棇
 aknr	𰑩
 akns	栐
 akns	𣐚
-aknt	𳆃
+aknt	𳆂
 aknu	𢃪
 aknv	㮬
 aknv	𣙚
@@ -2606,7 +2608,7 @@ aksd	𫡽
 akse	𠙇
 akse	𠙟
 akse	𰚄
-akse	𳋅
+akse	𳋃
 aksg	㐮
 aksg	𣓙
 aksh	𤟞
@@ -2840,6 +2842,7 @@ alll	榀
 alll	楍
 alll	欇
 alll	𣖎
+alll	𬺦
 alll	𱤯
 alll	𱤱
 allm	ポ
@@ -2971,7 +2974,7 @@ alxb	㌕
 alxc	赖
 alxd	𪈎
 alxd	𪈐
-alxd	𳏢
+alxd	𳏠
 alxf	𩐋
 alxi	𬂥
 alxj	賴
@@ -3178,7 +3181,7 @@ anim	𠞩
 anim	𠞻
 anin	𮘎
 anio	䢦
-anio	𳅁
+anio	𳅀
 anir	𪬓
 aniy	𨛧
 anjb	𬃜
@@ -3447,7 +3450,7 @@ apht	㮒
 apib	槱
 apib	𣗇
 apib	𪳝
-apig	𳌠
+apig	𳌞
 apih	樮
 apih	𤍕
 apih	𬄇
@@ -3734,7 +3737,7 @@ aqxc	𣝼
 aqxc	𲁙
 aqxd	鶙
 aqxd	𪆡
-aqxd	𳏞
+aqxd	𳏜
 aqxe	𬆲
 aqxg	𠆘
 aqxg	𣂆
@@ -3899,7 +3902,7 @@ arrk	𫦈
 arrm	㲞
 arrm	𱐟
 arro	𨔊
-arro	𳄿
+arro	𳄾
 arrp	𪲧
 arrr	𣛚
 arrr	𤭢
@@ -4017,7 +4020,7 @@ asgx	𣤸
 asgy	襄
 asgy	𨟚
 asgy	𮕱
-asgy	𳀯
+asgy	𳀮
 ashj	𣛰
 ashj	𣟞
 ashk	𣞕
@@ -4305,7 +4308,7 @@ ateh	𪍇
 atem	𣐀
 atep	𪎀
 ates	𪌓
-ates	𳋏
+ates	𳋍
 atev	𪍞
 atfg	𲦪
 atfk	𪌵
@@ -4324,7 +4327,7 @@ atgk	𪌰
 atgl	檹
 atgo	椸
 atgo	𪍟
-atgo	𳑇
+atgo	𳑅
 atgp	㯀
 atgp	𣚪
 atgq	𪌇
@@ -4355,7 +4358,7 @@ atig	𬂸
 atih	𪌌
 atii	𮭽
 atij	䵀
-atij	𳑈
+atij	𳑆
 atil	䴷
 atim	𱣗
 atin	䴱
@@ -4524,7 +4527,7 @@ atvl	𬹃
 atvo	𪍯
 atvt	𣓂
 atvv	𩻯
-atvv	𳍴
+atvv	𳍲
 atw	麴
 atwc	䴯
 atwe	㰚
@@ -4924,7 +4927,7 @@ avve	櫂
 avvf	𣡟
 avvg	𣝦
 avvg	𧞂
-avvg	𳍘
+avvg	𳍖
 avvh	𣠠
 avvi	𣠜
 avvj	𣡧
@@ -5407,7 +5410,7 @@ bagy	𱚸
 bai	弶
 baif	𧫾
 baig	𧫀
-bais	𲺅
+bais	𲺄
 baiv	諒
 baiv	弶
 baiv	𲌈
@@ -5568,8 +5571,8 @@ bbbd	𠮐
 bbbd	𦦖
 bbbd	𪳫
 bbbd	𬷒
-bbbd	𳏠
-bbbd	𳏸
+bbbd	𳏞
+bbbd	𳏶
 bbbe	𣞵
 bbbe	𧬋
 bbbe	𨿷
@@ -6472,7 +6475,7 @@ bcbi	𬣔
 bcbo	詉
 bcbo	𧦘
 bcbo	𱱶
-bcbo	𳁬
+bcbo	𳁫
 bcbr	𧪅
 bcbs	屃
 bcbu	𩱆
@@ -6659,7 +6662,7 @@ bcuu	𗈗
 bcuy	𘄨
 bcvp	𡳸
 bcvs	屚
-bcvt	𳁻
+bcvt	𳁺
 bcwl	𡱺
 bcy	颇
 bcyc	𗰠
@@ -6749,7 +6752,7 @@ bdkd	𭚪
 bdkj	𧮍
 bdkz	𧫂
 bdlv	𫍋
-bdlv	𳁯
+bdlv	𳁮
 bdmc	譨
 bdmc	𢐪
 bdmd	剭
@@ -6761,7 +6764,7 @@ bdna	𧭥
 bdnd	𪂩
 bdng	𬶿
 bdno	鳮
-bdnp	𳎱
+bdnp	𳎯
 bdns	鳲
 bdns	䲩
 bdns	𧪒
@@ -6884,7 +6887,7 @@ begg	𘴅
 begi	𘅎
 begi	𘅘
 begi	𘅳
-begi	𳁷
+begi	𳁶
 begj	謴
 begk	𘄸
 begk	𘄼
@@ -7206,7 +7209,7 @@ bfll	증
 bfll	틍
 bflm	㔁
 bflm	㲪
-bflm	𳐗
+bflm	𳐕
 bflo	邆
 bflo	𲱿
 bflp	弳
@@ -7900,7 +7903,7 @@ bhkc	詩
 bhkk	𧨃
 bhks	𫸾
 bhku	𩱞
-bhky	𳁨
+bhky	𳁧
 bhkz	誟
 bhkz	𠭂
 bhl	謳
@@ -7934,12 +7937,12 @@ bhos	䛾
 bhos	𮘋
 bhpi	𰙨
 bhqk	𮘰
-bhqm	𳌘
+bhqm	𳌖
 bhqo	㿹
 bhqo	𧬻
 bhqp	𪨡
 bhqy	䛭
-bhqy	𳁫
+bhqy	𳁪
 bhr	誌
 bhrb	𢐾
 bhri	誌
@@ -7967,7 +7970,7 @@ bhuu	𧫲
 bhv	畫
 bhva	𦘣
 bhvd	𣃂
-bhvd	𳏰
+bhvd	𳏮
 bhvf	畫
 bhvm	劃
 bhvm	𠞷
@@ -7984,7 +7987,7 @@ bhwj	譖
 bhwj	㣅
 bhwj	𧭅
 bhwk	屆
-bhwl	𳂁
+bhwl	𳂀
 bhwo	𨕨
 bhwt	謸
 bhww	𡲗
@@ -8933,7 +8936,7 @@ bjvo	𘲝
 bjvv	𧪦
 bjvv	𩨌
 bjvx	𣤻
-bjvy	𳁪
+bjvy	𳁩
 bjw	謁
 bjwc	𡱿
 bjwc	𧩎
@@ -8948,13 +8951,13 @@ bjwy	𧥶
 bjwy	𱎐
 bjwy	䚾
 bjwy	🌒
-bjwy	𳁰
+bjwy	𳁯
 bjxi	𫵇
 bjxj	투
 bjxk	𥌏
 bjxo	주
 bjxs	𱚲
-bjxy	𳁩
+bjxy	𳁨
 bjyf	郿
 bjyf	𨛮
 bjyf	𮟿
@@ -9320,7 +9323,7 @@ blaj	𩏱
 blaj	𬰬
 blaj	𮧲
 blaj	𲊣
-blaj	𳊬
+blaj	𳊪
 blak	韌
 blak	韋
 blak	韍
@@ -9536,7 +9539,7 @@ blkp	𣦢
 blkp	𤴣
 blkp	𲅉
 blkq	糪
-blkq	𳀂
+blkq	𳀁
 blkr	甓
 blkr	憵
 blkr	𦡜
@@ -9568,7 +9571,7 @@ blll	讘
 blll	𱲉
 blll	즁
 blll	튱
-bllq	𳀋
+bllq	𳀊
 bllt	讝
 bllt	𮘲
 bllu	𧬌
@@ -9680,7 +9683,7 @@ bmcs	屒
 bmcy	誫
 bmdd	𡳺
 bmdg	𡲭
-bmdg	𳌻
+bmdg	𳌹
 bmdi	㞚
 bmdi	䛽
 bmdo	𠚫
@@ -9691,7 +9694,7 @@ bmdq	𣍁
 bmdy	䚯
 bmdy	𰴩
 bmee	𫍑
-bmeh	𳈼
+bmeh	𳈻
 bmej	䛢
 bmek	𲁭
 bmeu	𡲫
@@ -9758,7 +9761,7 @@ bmlm	𫠋
 bmln	𭉖
 bmlv	詔
 bmlv	弨
-bmlw	𳁼
+bmlw	𳁻
 bmly	𮠎
 bmm	马
 bmm	⻢
@@ -9768,7 +9771,7 @@ bmmd	𰤩
 bmmj	𧮠
 bmmj	𪨝
 bmmk	𡳜
-bmmm	𳌙
+bmmm	𳌗
 bmmm	𲨎
 bmmq	𫵚
 bmms	尾
@@ -9880,7 +9883,7 @@ bnb	尼
 bnba	𣙰
 bnba	𦘞
 bnbm	𰎂
-bnbm	𳌗
+bnbm	𳌕
 bnbn	𢑨
 bnbo	𨙈
 bnbo	𭰇
@@ -10022,7 +10025,7 @@ bnpn	犀
 bnpn	犀
 bnpo	遲
 bnpo	𛁨
-bnpo	𳅀
+bnpo	𳄿
 bnpw	𧫐
 bnq	強
 bnqc	強
@@ -10118,7 +10121,7 @@ bogu	𫍕
 bohf	𮘊
 bohj	譇
 boib	𭵮
-boin	𳄵
+boin	𳄴
 boj	記
 bojg	𢀶
 bojl	骑
@@ -10129,7 +10132,7 @@ bojy	記
 bokg	𡳋
 bokk	𧧵
 bole	𧪇
-bole	𲹶
+bole	𲹵
 bolr	𢠬
 bons	𧩚
 boo	又
@@ -10251,7 +10254,7 @@ bowl	𡳍
 boxi	㢯
 boxi	䛉
 boxx	𧩫
-bozy	𳁭
+bozy	𳁬
 bp	皮
 bp	皮肤
 bp	皮球
@@ -10323,7 +10326,7 @@ bpng	𧬟
 bpnl	𧩢
 bpns	𰠨
 bpny	𧥸
-bpoa	𳁹
+bpoa	𳁸
 bpoc	迳
 bpoc	𡱦
 bpoo	𧭱
@@ -10476,7 +10479,7 @@ bqoc	謎
 bqoc	遅
 bqoc	𨕄
 bqod	𧧤
-bqod	𳁶
+bqod	𳁵
 bqok	𡳁
 bqom	𮘞
 bqoo	𢑴
@@ -10540,7 +10543,7 @@ bqwv	譾
 bqww	𧪜
 bqxa	𬴊
 bqxa	𡳞
-bqxa	𳁺
+bqxa	𳁹
 bqxi	𪨌
 bqy	詳
 bqyf	𗇻
@@ -10564,7 +10567,7 @@ brcn	𬈄
 brcp	診
 brcp	𭚫
 brcp	𱅇
-brdg	𳌶
+brdg	𳌴
 brdn	鴂
 breg	𢎢
 breh	𨾕
@@ -10582,7 +10585,7 @@ brfc	論
 brff	𲣗
 brfi	𢎮
 brfi	𢎶
-brfi	𲸯
+brfi	𲸮
 brfj	譮
 brfj	𬣎
 brfm	諭
@@ -10631,7 +10634,7 @@ brkd	㞍
 brkd	㿪
 brkd	𢎫
 brkd	𫝲
-brkj	𳁸
+brkj	𳁷
 brkl	謒
 brkl	誝
 brkp	𧫧
@@ -10654,7 +10657,7 @@ brrf	讖
 brrh	𢏬
 brrh	𧨀
 brrj	𧬢
-brrp	𳁳
+brrp	𳁲
 brru	𢐴
 brso	𧩸
 brvv	𦐋
@@ -10764,7 +10767,7 @@ bskp	𮡆
 bskr	臋
 bskr	𩪡
 bskt	𫿚
-bskt	𳇏
+bskt	𳇎
 bsku	𢅝
 bskv	𪽛
 bskw	臀
@@ -10887,7 +10890,7 @@ bthk	𪤜
 bthm	骇
 bths	𡱍
 bthy	該
-btir	𳁮
+btir	𳁭
 btiy	𧧩
 btjy	𫍀
 btkd	諑
@@ -11504,7 +11507,7 @@ bvtd	𨽶
 bvts	屇
 bvty	𧦵
 bvv	謬
-bvvb	𳁴
+bvvb	𳁳
 bvvc	謬
 bvvc	𡳇
 bvvd	謵
@@ -11572,7 +11575,7 @@ bwh	調
 bwhl	調
 bwhl	調
 bwhl	𮹋
-bwhl	𳁲
+bwhl	𳁱
 bwia	𭕯
 bwie	𮫖
 bwii	誂
@@ -11731,7 +11734,7 @@ bxns	𢑙
 bxob	𦫔
 bxob	𦫗
 bxob	𧧘
-bxod	𳁵
+bxod	𳁴
 bxqg	弞
 bxqo	欢
 bxqs	𣢁
@@ -11942,11 +11945,11 @@ c	好友
 c	好奇
 ca	婷
 caa	霖
-caaa	𳉯
+caaa	𳉮
 caab	䨷
 caac	霦
 caaj	𡢾
-caak	𳉦
+caak	𳉥
 caam	霖
 caam	㛦
 caam	㣩
@@ -11966,7 +11969,7 @@ cadj	䨛
 caec	𪥹
 caei	䘕
 caej	妔
-caff	𳉟
+caff	𳉞
 cafl	𡣰
 cagb	𬯾
 cage	𡠫
@@ -11976,7 +11979,7 @@ cagn	𡠀
 cagy	㛄
 cagy	𡟓
 cagy	𩂱
-cahh	𳉞
+cahh	𳉝
 caiv	婛
 caiv	𭛵
 caj	霜
@@ -12124,7 +12127,7 @@ cbbb	𭛶
 cbbd	𫛇
 cbbe	𭜄
 cbbg	弩
-cbbk	𳉥
+cbbk	𳉤
 cbbm	驽
 cbbn	𦉻
 cbbo	㚶
@@ -12132,8 +12135,8 @@ cbbo	𦉳
 cbbo	𪥫
 cbbs	𡜢
 cbc	妞
-cbcb	𳉫
-cbck	𳊃
+cbcb	𳉪
+cbck	𳊁
 cbcn	妞
 cbcr	胬
 cbct	𢖓
@@ -12149,9 +12152,9 @@ cbdz	𩄌
 cbee	𗇄
 cbeh	𨾯
 cbeh	𫱞
-cben	𳉬
+cben	𳉫
 cbes	𗟛
-cbet	𳉛
+cbet	𳉚
 cbfd	𭢱
 cbfo	𡞳
 cbfq	嬁
@@ -12243,7 +12246,7 @@ cblj	𧷅
 cblk	霹
 cblk	𢕾
 cblk	𲛵
-cblo	𳉼
+cblo	𳉻
 cblp	躗
 cblp	躛
 cblp	𤜂
@@ -12325,7 +12328,7 @@ cbr	怒
 cbre	妜
 cbre	𢓙
 cbre	𩂃
-cbrf	𳊔
+cbrf	𳊒
 cbrg	𫻂
 cbri	怒
 cbri	𢝯
@@ -12630,15 +12633,15 @@ cdbo	贩
 cdbo	𢓉
 cdcc	𰐰
 cdck	嬹
-cdcl	𳊄
+cdcl	𳊂
 cdcm	𩇀
 cdcn	𡝀
 cdcn	𡞍
 cdcn	𡞉
 cdcn	𫱠
-cdcn	𳊐
+cdcn	𳊎
 cdcv	𩃘
-cdcv	𳉏
+cdcv	𳉎
 cdd	電
 cddb	䨮
 cddf	婣
@@ -12648,16 +12651,16 @@ cddj	㜱
 cddk	𡤛
 cddn	𡜥
 cddr	𡣺
-cdds	𳊑
+cdds	𳊏
 cddv	電
 cdei	𩃓
 cdek	𡞬
-cden	𳉻
+cden	𳉺
 cdfi	㚱
 cdfi	𩂬
 cdfk	娦
 cdfl	姤
-cdfl	𳊖
+cdfl	𳊔
 cdfn	妦
 cdfo	𡜮
 cdfo	𡤩
@@ -12688,10 +12691,10 @@ cdhk	𢓳
 cdhk	𪦁
 cdhs	𡝂
 cdht	𡢝
-cdhv	𳊍
+cdhv	𳊋
 cdic	鵆
 cdic	䡓
-cdii	𳊉
+cdii	𳊇
 cdin	𱙐
 cdj	徨
 cdjb	𲂼
@@ -12711,10 +12714,9 @@ cdkc	𪫖
 cdkc	𫝩
 cdkd	𡛴
 cdkg	𡠳
-cdkn	𳉽
+cdkn	𳉼
 cdle	𡣟
 cdlj	𡞑
-cdll	𳊁
 cdlv	𲛬
 cdmc	𡢿
 cdmc	𩅽
@@ -12726,9 +12728,9 @@ cdna	㜰
 cdnn	𡡅
 cdns	𡢸
 cdns	𭒉
-cdns	𳉺
+cdns	𳉹
 cdnv	𪂕
-cdnv	𳉩
+cdnv	𳉨
 cdnw	𡤡
 cdob	㛂
 cdob	𱁠
@@ -12738,7 +12740,7 @@ cdoc	䨤
 cdoc	䨨
 cdoc	𡟴
 cdod	𡞃
-cdoe	𳊓
+cdoe	𳊑
 cdog	𡟷
 cdon	妯
 cdpc	𡤆
@@ -12751,9 +12753,9 @@ cdrb	𲛲
 cdre	𱙚
 cdri	𫱮
 cds	媲
-cdse	𳊕
+cdse	𳊓
 cdsi	𡜧
-cdsl	𳉐
+cdsl	𳉏
 cdsn	媲
 cdsn	妽
 cdsn	𡠌
@@ -12778,7 +12780,7 @@ cduj	婂
 cduj	𡞭
 cdul	𩄷
 cdus	𩃡
-cdvn	𳊅
+cdvn	𳊃
 cdvs	𭒥
 cdw	霓
 cdwk	𢕽
@@ -12839,7 +12841,7 @@ cefu	𮱼
 cefv	𩄏
 cegn	𫰕
 ceh	霍
-cehc	𳈻
+cehc	𳈺
 cehj	𡢻
 cehk	㣥
 cehn	婎
@@ -12904,10 +12906,10 @@ ceua	𲊅
 ceuc	𡟞
 ceug	䨹
 ceug	𡤥
-ceui	𳊀
+ceui	𳉿
 ceuj	㚴
 ceuk	𡜒
-ceus	𳉉
+ceus	𳉈
 cevj	𩃫
 cevv	𦒧
 cew	贿
@@ -12929,7 +12931,7 @@ cfbp	徢
 cfbp	𩃖
 cfbw	鿉
 cfbw	𫰌
-cfbw	𳉃
+cfbw	𳉂
 cfby	𢔴
 cfcc	㛤
 cfce	𗏇
@@ -12955,7 +12957,7 @@ cfej	𧢒
 cfej	𧢓
 cfej	𛃊
 cfem	𪥦
-cfeu	𳀘
+cfeu	𳀗
 cfew	𦡒
 cff	妩
 cffd	𫱋
@@ -12990,11 +12992,11 @@ cfin	𱙁
 cfj	徵
 cfjd	𠕊
 cfjf	姮
-cfjf	𳉍
+cfjf	𳉌
 cfjj	𧠊
 cfjj	𪿂
 cfjn	𡞤
-cfjp	𳃭
+cfjp	𳃬
 cfjr	懲
 cfjr	𣆩
 cfjr	懲
@@ -13065,7 +13067,7 @@ cfly	𨚯
 cfmc	𫕫
 cfmd	𠜂
 cfmn	妺
-cfmv	𳉅
+cfmv	𳉄
 cfna	𢓎
 cfng	𫱹
 cfni	𧗷
@@ -13173,7 +13175,7 @@ cgfi	衘
 cgfi	𘮿
 cgfj	禦
 cgfk	娥
-cgfk	𳉕
+cgfk	𳉔
 cgfl	𭜇
 cgfp	𢓩
 cgfq	𡢒
@@ -13208,7 +13210,7 @@ cgjt	𡞪
 cgjt	𢕴
 cgjt	復
 cgjw	𡡲
-cgjw	𳉮
+cgjw	𳉭
 cgkd	彶
 cgkd	雭
 cgkd	㚫
@@ -13278,7 +13280,7 @@ cgxt	𩄿
 cgy	赎
 cgyc	𱝑
 cgyi	𲀟
-cgyi	𳉂
+cgyi	𳉁
 cgyo	赎
 cgyo	𪥿
 cgyp	𢌘
@@ -13339,7 +13341,7 @@ chhr	㥨
 chht	娃
 chht	徍
 chht	𡋩
-chht	𳉎
+chht	𳉍
 chib	𲫷
 chic	𧗥
 chih	𭁱
@@ -13348,7 +13350,7 @@ chjb	嫧
 chjb	㣱
 chjb	𩄾
 chjb	𪓚
-chjb	𳊒
+chjb	𳊐
 chjc	𪦈
 chjc	𬥺
 chjc	𲛢
@@ -13495,23 +13497,23 @@ cibj	𬡿
 cibn	𭴇
 cibo	𰃨
 cibo	𲛍
-cibs	𳀢
+cibs	𳀡
 cicc	行
 cicc	⾏
 cicc	行
 cicn	姲
 cid	婶
-cidb	𳀜
+cidb	𳀛
 cidk	嫔
 cidl	𡟲
-cidl	𳀩
+cidl	𳀨
 cidm	𠕥
 cidn	鴴
 cido	𬰒
 cidr	𢖘
 cids	婶
-cidt	𳀪
-ciei	𳀞
+cidt	𳀩
+ciei	𳀝
 ciej	㜚
 ciek	𡣯
 ciek	𰋹
@@ -13527,13 +13529,13 @@ cifk	𱙓
 cifk	𱙫
 cifl	㛡
 cifl	𗢅
-cifo	𳀙
+cifo	𳀘
 cifp	婝
 cifs	𠕰
 cifv	𡡩
 cig	嬸
 cigh	𡤭
-cigh	𳀨
+cigh	𳀧
 cigj	𡞞
 cigk	衠
 cigp	妙
@@ -13545,7 +13547,7 @@ cigy	𗢄
 cihc	𫹐
 cihc	𲛠
 cihn	𰋺
-ciho	𳀝
+ciho	𳀜
 ciht	𡠠
 ciht	𫭣
 cihv	𮦉
@@ -13554,18 +13556,18 @@ ciib	㛮
 ciib	㛮
 ciic	𧗠
 ciid	𡤰
-ciig	𳉙
+ciig	𳉘
 ciih	赕
 ciih	婒
 ciih	𰞘
-ciih	𳉚
-ciii	𳉵
+ciih	𳉙
+ciii	𳉴
 ciik	𪦯
 ciiq	𪦱
 ciis	𡡯
 ciis	𭜃
 ciiu	𠕒
-ciiv	𳀡
+ciiv	𳀠
 cij	冒
 cijb	㪞
 cijb	𪓘
@@ -13575,7 +13577,7 @@ cijd	𪥰
 cijd	𮷍
 cije	𡜷
 cije	𩑞
-cijg	𳀛
+cijg	𳀚
 ciji	𰟀
 cijj	靌
 cijj	㒻
@@ -13599,8 +13601,8 @@ cika	妌
 cika	䨍
 cika	𠔓
 cikc	𫰦
-cikn	𳀥
-cikp	𳀟
+cikn	𳀤
+cikp	𳀞
 ciky	𠕠
 cild	𫱜
 cili	𧗯
@@ -13646,7 +13648,7 @@ cinp	𲊓
 cinq	霼
 cinr	𩃠
 cins	𭅀
-cins	𳀚
+cins	𳀙
 cint	靉
 cint	𲟯
 cinu	𱁥
@@ -13668,8 +13670,8 @@ ciol	𱙪
 cioz	𭛮
 cipn	𫰴
 ciqa	㒽
-ciqg	𳀫
-ciqh	𳀣
+ciqg	𳀪
+ciqh	𳀢
 ciqm	㛽
 cirb	𬻴
 ciri	𢙡
@@ -13694,10 +13696,10 @@ cis	徜
 cisc	徜
 cisj	𡣚
 cisj	𡤐
-cisk	𳀧
+cisk	𳀦
 cisn	𡞀
-cist	𳀭
-cisu	𳀬
+cist	𳀬
+cisu	𳀫
 cit	嫁
 cite	㒿
 citf	𡞶
@@ -13708,12 +13710,12 @@ cits	𢔻
 citu	𭜂
 ciu	嫦
 ciue	霊
-ciui	𳀠
+ciui	𳀟
 ciuj	嫦
 cius	𱏹
 civt	㜭
 civv	𦐎
-civw	𳀦
+civw	𳀥
 ciw	霄
 ciwb	𢽢
 ciwi	𡡃
@@ -13863,6 +13865,7 @@ cjkx	嫴
 cjkx	𨐞
 cjlb	𡡔
 cjli	𫋰
+cjli	𬺭
 cjlj	𡡧
 cjll	𡟵
 cjll	𪦰
@@ -13904,7 +13907,7 @@ cjri	𮱈
 cjrk	𠕌
 cjrn	𪥨
 cjrv	曹
-cjrv	𳉄
+cjrv	𳉃
 cjrw	𤭄
 cjry	𩃛
 cjry	𩃨
@@ -13998,7 +14001,7 @@ ckdn	𰋵
 ckdp	
 cke	贼
 ckei	𡛟
-cken	𳉴
+cken	𳉳
 ckeq	𬠠
 ckez	贼
 ckez	娀
@@ -14043,7 +14046,7 @@ ckje	𩓣
 ckje	𫕴
 ckji	𡠽
 ckji	𧗹
-ckjl	𳊂
+ckjl	𳊀
 ckjr	嬑
 ckjr	㛺
 ckjr	𩄒
@@ -14179,14 +14182,14 @@ clak	𘣹
 clam	桇
 clam	𭑼
 clam	𰐯
-clau	𳉳
+clau	𳉲
 clbc	𲛨
 clbg	𭚯
 clbi	𡣞
 clbo	娵
 clbo	𭛠
 clbo	𱁝
-clbo	𳉆
+clbo	𳉅
 clby	𧧏
 clc	娲
 clcb	㛣
@@ -14194,7 +14197,7 @@ clcb	𫕥
 clcc	𰐬
 clcn	𱙃
 clcr	娲
-cldc	𳊇
+cldc	𳊅
 cldd	𩴿
 cldd	𰌉
 cldn	鴽
@@ -14233,7 +14236,7 @@ clic	𧗪
 clig	𲉸
 clih	𤈟
 clin	𗺄
-cliu	𳊏
+cliu	𳊍
 clja	𡡊
 cljb	霣
 cljb	㜏
@@ -14247,13 +14250,13 @@ cljk	𤥏
 cljl	𲕇
 cljn	㚦
 cljq	𲛓
-cljr	𳉓
+cljr	𳉒
 cljs	𥙦
 cljs	𩄺
 cljw	徎
 cljw	𡝚
 cljw	𧹓
-cljw	𳉨
+cljw	𳉧
 cljy	𫹟
 clka	𡛰
 clkd	𘲅
@@ -14280,7 +14283,7 @@ cllg	嬋
 cllg	𩅦
 cllh	𩇎
 cllh	𪦊
-cllh	𳉹
+cllh	𳉸
 clli	𬋣
 clli	𬡁
 cllj	䚖
@@ -14330,13 +14333,13 @@ cllv	𩆞
 clly	酃
 clly	𨟯
 clly	𰼂
-clly	𳉲
+clly	𳉱
 cllz	徰
 cllz	𰃪
 clmd	𠕕
 clmm	𣭠
 clmn	𫛪
-clmo	𳊈
+clmo	𳊆
 clnw	𱙱
 clo	絮
 clob	㛕
@@ -14351,8 +14354,8 @@ clqc	𧊟
 clqc	𩄁
 clqm	𥹡
 clr	惩
-clrh	𳉜
-clrh	𳉷
+clrh	𳉛
+clrh	𳉶
 clri	恕
 clri	惩
 clsb	䞌
@@ -14361,7 +14364,7 @@ clsk	𭁦
 clsl	𠡋
 clsl	𭄥
 clsl	𲛌
-clsm	𳉔
+clsm	𳉓
 clsn	姡
 cltj	𨦔
 cltu	𪫎
@@ -14397,7 +14400,7 @@ clyf	𭒅
 clyf	𮟱
 clyf	𲉻
 clyi	𬼤
-clyl	𳉧
+clyl	𳉦
 clz	征
 clzc	征
 clzn	姃
@@ -14444,7 +14447,7 @@ cmhi	𢖇
 cmhn	姀
 cmht	赃
 cmht	㛇
-cmhv	𳉊
+cmhv	𳉉
 cmib	𢖐
 cmic	𧗤
 cmih	𡞊
@@ -14474,7 +14477,7 @@ cmlv	妱
 cmlv	𩅄
 cmlv	𡞈
 cmlv	𭛤
-cmlv	𳉌
+cmlv	𳉋
 cmmd	娳
 cmmd	𫰘
 cmmd	𫹑
@@ -14489,7 +14492,7 @@ cmna	嬤
 cmnb	𱉐
 cmnj	𡤊
 cmnp	𭒳
-cmnv	𳐎
+cmnv	𳐌
 cmoc	𨗒
 cmor	𡣇
 cmpi	𢔗
@@ -14545,7 +14548,7 @@ cnan	𩃚
 cnan	𫰇
 cnat	霶
 cnaw	𩆤
-cnbb	𳉤
+cnbb	𳉣
 cnbd	𩅵
 cnbi	𡣄
 cnbj	𩅹
@@ -14554,7 +14557,7 @@ cnbn	𡚧
 cnbn	𡚨
 cnbn	𲛘
 cnbo	𱏻
-cnbq	𳉾
+cnbq	𳉽
 cnbu	𩅕
 cnbv	𱁑
 cnc	账
@@ -14562,9 +14565,9 @@ cncb	账
 cncl	霘
 cndg	𩄂
 cndh	𮦪
-cndj	𳉿
-cndk	𳉝
-cndl	𳊎
+cndj	𳉾
+cndk	𳉜
+cndl	𳊌
 cndm	𮦽
 cndq	𱁩
 cneb	𩆀
@@ -14579,7 +14582,7 @@ cnfn	𡜵
 cnfp	𢒏
 cnfu	霈
 cng	奸
-cngk	𳉘
+cngk	𳉗
 cngn	奸
 cngo	𩃰
 cngo	𪥻
@@ -14600,7 +14603,7 @@ cnib	𲁮
 cnic	衍
 cnic	衎
 cnic	𲀜
-cnii	𳉭
+cnii	𳉬
 cnij	𲊉
 cnik	𩜾
 cnik	𮩄
@@ -14625,7 +14628,7 @@ cnjr	㛥
 cnjr	𡜖
 cnjr	𡜗
 cnjt	𮦬
-cnjw	𳉪
+cnjw	𳉩
 cnka	𲛡
 cnkc	赙
 cnkc	𱙠
@@ -14656,7 +14659,7 @@ cnlv	贻
 cnmc	𮦩
 cnmd	𱁓
 cnmg	𮦧
-cnmm	𳊋
+cnmm	𳊉
 cnmr	䨙
 cnmy	𱁙
 cnn	女
@@ -14730,11 +14733,11 @@ cnue	霮
 cnuf	𩄼
 cnuj	𩆍
 cnuj	𫕭
-cnuk	𳉢
+cnuk	𳉡
 cnul	霑
 cnum	霪
 cnuq	𫕵
-cnus	𳉣
+cnus	𳉢
 cnve	𩆸
 cnvp	靋
 cnwa	𡜫
@@ -14758,7 +14761,7 @@ coak	𡞗
 coak	𢔓
 coak	𩃳
 cob	姨
-cobb	𳂬
+cobb	𳂫
 cobg	姨
 cobg	䨑
 cobg	𢓡
@@ -14785,7 +14788,7 @@ codk	𰋙
 codn	鴦
 codn	𡚻
 codn	𩿶
-codr	𳊆
+codr	𳊄
 codu	嬵
 codz	𭒟
 coeb	𰷠
@@ -14807,7 +14810,7 @@ coih	𰞄
 coir	𠖼
 coj	婍
 cojb	𪓛
-cojb	𳂕
+cojb	𳂔
 coje	𦅨
 cojj	𫱟
 cojj	𰴎
@@ -14863,7 +14866,7 @@ corw	㼜
 corw	𤬺
 cosk	囘
 cosn	𡚱
-cota	𳉶
+cota	𳉵
 cotu	𪫕
 cou	盎
 couf	𡡰
@@ -14882,7 +14885,7 @@ cp	露
 cp	露出
 cp	露面
 cpbi	𨓶
-cpbp	𳉱
+cpbp	𳉰
 cpbu	𨓼
 cpcb	𫝪
 cpcm	𱝱
@@ -15188,7 +15191,7 @@ crfr	𲊊
 crfs	𫱗
 crgi	𫰓
 crgn	𰌏
-crgn	𳉋
+crgn	𳉊
 crgp	妼
 crgp	𲉴
 crgq	𭒬
@@ -15236,7 +15239,7 @@ crke	𩁎
 crkf	𰭏
 crki	衑
 crki	𮕣
-crkj	𳊽
+crkj	𳊻
 crkl	娢
 crkl	𪦔
 crkl	𱝷
@@ -15337,7 +15340,7 @@ crrk	𩃢
 crrk	𩞐
 crrk	𫆸
 crrk	𰮪
-crrk	𲺐
+crrk	𲺏
 crrl	聳
 crrl	𢕈
 crrl	𦖴
@@ -15352,7 +15355,7 @@ crrm	𬚱
 crrm	𬛌
 crrn	𦚒
 crrn	𫆜
-crrn	𲺆
+crrn	𲺅
 crro	䢨
 crro	𦟦
 crro	𫆭
@@ -15365,7 +15368,7 @@ crrp	㹐
 crrp	𨄦
 crrp	𫰽
 crrp	𰮛
-crrp	𲺬
+crrp	𲺫
 crrq	𦡇
 crrq	𧐱
 crrq	𬛈
@@ -15393,9 +15396,9 @@ crrv	𰮉
 crrw	𠒯
 crrw	𦟖
 crrw	𱼛
-crrw	𲺕
+crrw	𲺔
 crrx	𬚺
-crrx	𲺓
+crrx	𲺒
 crry	𨛇
 crsd	𦌌
 crso	媕
@@ -15468,7 +15471,7 @@ crxx	𩂙
 cs	刚
 cs	刚才
 cs	刚刚
-csab	𳉡
+csab	𳉠
 csac	𗦹
 csac	𗩛
 csaf	𗣥
@@ -16145,7 +16148,7 @@ cssg	𦍃
 cssg	𗦔
 cssg	𗧨
 cssg	𗪎
-cssg	𳉰
+cssg	𳉯
 cssi	网
 cssi	𦌨
 cssi	𦌲
@@ -16184,8 +16187,8 @@ cssq	𦊮
 cssr	𡢉
 cssr	𦊪
 cssr	𦋮
-cssr	𲸿
-cssr	𲺢
+cssr	𲸾
+cssr	𲺡
 csss	𗦓
 csss	𗩁
 csss	𗩈
@@ -16424,14 +16427,14 @@ ctk	霁
 ctka	霁
 ctka	𱙑
 ctki	𬰁
-ctkw	𳊊
+ctkw	𳊈
 ctkz	𱙒
 ctl	赂
 ctlv	赂
 ctlv	𢓜
 ctlv	𩂣
 ctmd	𠞾
-ctmd	𳉠
+ctmd	𳉟
 ctmn	𱙅
 ctmv	𮦅
 ctos	𫱚
@@ -16443,7 +16446,7 @@ ctri	𭝁
 ctri	𱙥
 cts	雾
 ctsc	𢓻
-ctsk	𳊌
+ctsk	𳊊
 ctsl	雾
 ctsn	𡝍
 cttd	𩆨
@@ -16485,7 +16488,7 @@ cubo	𫹏
 cubp	媫
 cubs	𱙋
 cubs	𗢐
-cubs	𳉇
+cubs	𳉆
 cucb	𧹔
 cucb	𰌂
 cuce	𡤇
@@ -16586,7 +16589,7 @@ cujz	婥
 cujz	𢔄
 cuka	𫲑
 cuke	𡝦
-cuke	𳉖
+cuke	𳉕
 cuki	𢖌
 cukj	𢔎
 cukk	㒳
@@ -16728,7 +16731,7 @@ cvhk	𩂾
 cvht	𰊴
 cvic	𢖍
 cvih	𮦟
-cvjd	𳉑
+cvjd	𳉐
 cvje	𩓄
 cvjh	𭒦
 cvjh	𲟭
@@ -16758,7 +16761,7 @@ cvmm	𩅩
 cvmp	靂
 cvmp	𡤌
 cvmp	𢖙
-cvna	𳉒
+cvna	𳉑
 cvnn	𭒇
 cvnn	𲛩
 cvob	𮦞
@@ -16926,7 +16929,7 @@ cwts	𢒤
 cwvo	𩇍
 cww	姗
 cwwf	姗
-cwwf	𳉈
+cwwf	𳉇
 cwwk	𠕐
 cwwk	𡛛
 cwwk	𩂗
@@ -17020,7 +17023,7 @@ cy	页
 cya	娜
 cyaj	䨯
 cyaj	𭒜
-cyat	𳉸
+cyat	𳉷
 cyay	娜
 cybb	𭆬
 cybj	𮗘
@@ -17107,14 +17110,14 @@ cytf	𱁚
 cytp	霳
 cyur	䨸
 cyur	𬰔
-cywc	𳉗
+cywc	𳉖
 cyy	页
 cyy	⻚
 d	的
 d	的确
 da	谅
 da	谅解
-daaa	𳄐
+daaa	𳄏
 daal	𤖧
 daal	𫬴
 daam	䦥
@@ -17277,7 +17280,7 @@ dbag	𨵭
 dbak	译
 dbak	𪀴
 dbak	𬚭
-dbak	𳌹
+dbak	𳌷
 dbb	白
 dbb	⽩
 dbb	🀆
@@ -17288,7 +17291,7 @@ dbba	𮥃
 dbbb	輟
 dbbb	䦤
 dbbb	𰵷
-dbbb	𲻍
+dbbb	𲻌
 dbbd	𨻿
 dbbe	𤗳
 dbbf	𨸿
@@ -17348,7 +17351,7 @@ dbfq	𤾢
 dbfq	𨎤
 dbfq	𨶿
 dbfq	𩴝
-dbfq	𳂅
+dbfq	𳂄
 dbfw	𩳗
 dbgg	𤾟
 dbgl	輑
@@ -17394,7 +17397,7 @@ dblk	𤗺
 dblk	𪇊
 dblu	𨵾
 dbmm	𤽶
-dbmm	𳌼
+dbmm	𳌺
 dbna	䡏
 dbnb	𦤽
 dbnb	𨋗
@@ -17451,7 +17454,7 @@ dbub	𩴋
 dbuo	𨔕
 dbus	𨳤
 dbus	𮝅
-dbvb	𳍅
+dbvb	𳍃
 dbvt	𬏆
 dbwe	𨶞
 dbwh	𨶾
@@ -17481,7 +17484,7 @@ dbyy	𲂍
 dc	讷
 dcbj	轌
 dcbo	𰵠
-dcbo	𳌳
+dcbo	𳌱
 dcc	車
 dcc	叀
 dcc	⾞
@@ -17552,12 +17555,12 @@ dcfw	臖
 dcfy	𨞾
 dcht	𬷆
 dcht	𰵘
-dcht	𳄅
+dcht	𳄄
 dcic	䰢
 dcic	𨴠
 dcic	𮬷
 dcii	𱬰
-dcij	𳏎
+dcij	𳏌
 dcir	冑
 dcjg	𪂯
 dcjr	𤗰
@@ -17642,7 +17645,7 @@ ddbb	㿟
 ddbc	𫏴
 ddbe	𨍪
 ddbe	𪾄
-ddbg	𳌷
+ddbg	𳌵
 ddbi	熭
 ddbj	彗
 ddbj	𣊄
@@ -17705,7 +17708,7 @@ ddfa	𣟰
 ddfa	𨋜
 ddfb	𪔥
 ddfd	𨏮
-ddfd	𳐁
+ddfd	𳏿
 ddff	𢹏
 ddfg	𩲗
 ddfi	𣶒
@@ -17776,7 +17779,7 @@ ddjq	斨
 ddjq	𣍈
 ddjr	暫
 ddjr	㬜
-ddjr	𳄑
+ddjr	𳄐
 ddju	𪁯
 ddjw	𨍧
 ddjw	𬤍
@@ -17824,7 +17827,7 @@ ddnb	䳆
 ddnc	鿂
 ddnd	鴭
 ddnf	𮬬
-ddnf	𳍆
+ddnf	𳍄
 ddni	䳎
 ddni	䳔
 ddni	䳎
@@ -17859,11 +17862,11 @@ ddpn	𤾎
 ddpp	㸞
 ddpq	𤕰
 ddpx	𧟷
-ddpy	𳅞
+ddpy	𳅝
 ddpz	蹔
 ddpz	𨆧
 ddqc	𧐮
-ddqh	𳏶
+ddqh	𳏴
 ddqo	𬤡
 ddre	谀
 ddre	𤗝
@@ -17910,7 +17913,7 @@ ddsu	𪾙
 ddsv	𦦷
 ddsy	𨟋
 ddsy	𨟦
-ddsy	𳁽
+ddsy	𳁼
 ddtj	鏨
 ddtr	牕
 ddtr	䡯
@@ -18023,7 +18026,7 @@ deih	𢨤
 deih	𤉕
 deih	𭽔
 deih	𲫢
-deih	𳏫
+deih	𳏩
 dein	𩾐
 deio	𠃦
 deip	𤖨
@@ -18061,12 +18064,12 @@ dell	𤾘
 dell	𨎄
 delv	𨳾
 demr	𬣯
-demr	𳇻
+demr	𳇺
 dena	閎
 dena	䡌
 denb	讹
 denb	𫔛
-denb	𳌵
+denb	𳌳
 deng	𲂊
 denm	𰹡
 dens	𲈭
@@ -18155,7 +18158,7 @@ dfi	丘
 dfib	𬐃
 dfid	𫠨
 dfif	𨴇
-dfih	𳄄
+dfih	𳄃
 dfii	
 dfij	丘
 dfij	𠂋
@@ -18175,7 +18178,7 @@ dfka	兵
 dfka	閸
 dfka	𠔊
 dfka	🩦
-dfka	𲻌
+dfka	𲻋
 dfkb	𢻞
 dfkc	𬣙
 dfkc	𨊱
@@ -18187,7 +18190,7 @@ dfkg	𰠛
 dfkh	䡖
 dfkk	𤿂
 dfkp	𬷜
-dfkp	𳄉
+dfkp	𳄈
 dfks	䦵
 dfks	𩰞
 dfks	𮝭
@@ -18239,7 +18242,7 @@ dflq	𩰒
 dflq	𫔡
 dflq	𮝒
 dflq	𰵫
-dflq	𳂇
+dflq	𳂆
 dfls	劶
 dfls	𬌑
 dflt	鑋
@@ -18259,13 +18262,13 @@ dflv	輻
 dflw	䡇
 dflw	䦎
 dflw	𭽋
-dflw	𳌲
+dflw	𳌰
 dflx	𣢨
 dfly	郈
 dfly	鄷
 dfmb	皌
 dfmi	𦥦
-dfmm	𳇺
+dfmm	𳇹
 dfna	𨊪
 dfna	𨋇
 dfnk	𤕾
@@ -18274,7 +18277,7 @@ dfnk	𩳞
 dfob	巵
 dfoc	𱭑
 dfod	𨳨
-dfod	𳌱
+dfod	𳌯
 dfof	𨷆
 dfoi	𦥣
 dfok	𡭐
@@ -18289,7 +18292,7 @@ dfrh	𨌻
 dfrn	𫠴
 dfs	開
 dfsc	𨴸
-dfsj	𳈑
+dfsj	𳈐
 dfsl	𪟘
 dfsm	䦐
 dfso	開
@@ -18304,7 +18307,7 @@ dfua	𪪀
 dfuc	𡠋
 dfuc	𫖵
 dfud	𪄜
-dfud	𳏈
+dfud	𳏆
 dfue	𲂉
 dfug	𦥥
 dfug	𰵨
@@ -18370,7 +18373,7 @@ dgbo	𢺼
 dgbo	𢻅
 dgbo	𤽑
 dgbo	𬣛
-dgbo	𳎪
+dgbo	𳎨
 dgbp	𤿾
 dgbr	𱀅
 dgbu	𨺔
@@ -18416,7 +18419,7 @@ dggd	𫏿
 dggi	许
 dggi	𠦛
 dggi	𨳰
-dggi	𳈛
+dggi	𳈚
 dggk	𡦆
 dggm	䦘
 dggo	𮞱
@@ -18426,7 +18429,7 @@ dggu	𱀈
 dggy	𬣳
 dggy	𠃁
 dggy	𤱮
-dghh	𳈤
+dghh	𳈣
 dghj	𮥜
 dghm	𨶯
 dgho	𧽇
@@ -18508,7 +18511,7 @@ dgoz	𱭚
 dgp	曳
 dgpd	曳
 dgpg	诞
-dgpg	𳄊
+dgpg	𳄉
 dgpi	𰙮
 dgpm	閁
 dgq	奧
@@ -18555,7 +18558,7 @@ dgub	𦥬
 dgub	𨋘
 dgub	𨴃
 dgub	𬧵
-dgub	𳎰
+dgub	𳎮
 dgue	𨽱
 dgum	䦗
 dgus	𰎧
@@ -18568,7 +18571,7 @@ dgxi	𨊯
 dgxi	𭽉
 dgxi	𰹊
 dgxk	𲍠
-dgxo	𳍁
+dgxo	𳌿
 dgxp	䡹
 dgxp	𨏡
 dgy	读
@@ -18612,7 +18615,7 @@ dhdc	𨌄
 dhdn	䳙
 dhdn	𤾐
 dhdn	𮭇
-dhdn	𳎽
+dhdn	𳎻
 dhe	毀
 dhea	𲧁
 dheh	𤕿
@@ -18645,7 +18648,7 @@ dhhl	𨎬
 dhhl	𨷁
 dhho	𬩱
 dhhq	𤞛
-dhhq	𲻉
+dhhq	𲻈
 dhht	閨
 dhht	诖
 dhht	𫼋
@@ -18660,8 +18663,8 @@ dhjb	譽
 dhjb	皟
 dhjb	𤖓
 dhjb	𤗮
-dhjb	𳄍
-dhjb	𳈈
+dhjb	𳄌
+dhjb	𳈇
 dhjc	𦦸
 dhjd	轝
 dhjd	鸒
@@ -18681,7 +18684,7 @@ dhjk	𤪐
 dhjk	𛃩
 dhjk	𛃪
 dhjk	𛃫
-dhjl	𲻐
+dhjl	𲻏
 dhjm	𱊭
 dhjo	𨘕
 dhjp	𤰁
@@ -18708,7 +18711,7 @@ dhjx	歟
 dhjx	𬛼
 dhjx	𛀝
 dhjy	㐦
-dhjy	𲻎
+dhjy	𲻍
 dhk	诗
 dhkc	诗
 dhkc	䦙
@@ -18760,7 +18763,7 @@ dhnu	𬤒
 dhnu	𮫥
 dho	奘
 dhoc	𮞴
-dhoc	𳄱
+dhoc	𳄰
 dhod	奘
 dhod	𡘾
 dhod	𮭂
@@ -18805,7 +18808,7 @@ dhtx	𫡒
 dhu	牘
 dhub	𠭭
 dhuc	𮫘
-dhud	𳏩
+dhud	𳏧
 dhuh	𱼱
 dhui	𱭔
 dhuj	牘
@@ -18832,7 +18835,7 @@ dhwj	𤘄
 dhwj	𤾶
 dhwm	𩳯
 dhwr	𮤈
-dhwr	𳎨
+dhwr	𳎦
 dhwt	𨎞
 dhwt	𫍵
 dhwt	𭽠
@@ -18851,7 +18854,7 @@ dhyk	𤘀
 dhyk	𦦰
 dhyk	𭷈
 dhyr	𢛀
-dhzm	𳈃
+dhzm	𳈂
 di	谈
 di	谈判
 di	谈话
@@ -18994,7 +18997,7 @@ ditc	𬱲
 ditj	𩕰
 ditl	𨍇
 ditl	𨎣
-dito	𳄺
+dito	𳄹
 diuj	乕
 diuo	逓
 divm	𡮉
@@ -19067,7 +19070,7 @@ djed	𬐑
 djef	𩑚
 djeg	䫥
 djei	𩒦
-djei	𳎸
+djei	𳎶
 djej	頎
 djem	𨵪
 djen	𤳨
@@ -19147,7 +19150,7 @@ djjh	𧏁
 djjj	覸
 djjj	𨵰
 djjj	𨶳
-djjj	𳈍
+djjj	𳈌
 djjl	皩
 djjm	𨴼
 djjo	𬤧
@@ -19184,7 +19187,7 @@ djlv	鴚
 djlv	𩳦
 djlw	𪾂
 djlx	𣤑
-djmd	𳏏
+djmd	𳏍
 djmg	𱳆
 djmh	𥠟
 djmm	𫔝
@@ -19194,7 +19197,7 @@ djnf	𤗱
 djng	皔
 djng	𬣸
 djng	𱈫
-djng	𳌺
+djng	𳌸
 djni	𨏌
 djnn	輥
 djnn	𤑎
@@ -19204,7 +19207,7 @@ djoc	遑
 djoc	𬨺
 djoc	𮞯
 djod	𨵢
-djps	𳌿
+djps	𳌽
 djq	诅
 djqg	𩲲
 djqq	𤕲
@@ -19266,9 +19269,9 @@ djxa	𦦩
 djxc	𩰪
 djxk	𤪭
 djxm	閇
-djxn	𳌰
+djxn	𳌮
 djxq	𣣒
-djxq	𳈆
+djxq	𳈅
 djxz	𫠮
 djye	𤗕
 djyf	𨜔
@@ -19326,7 +19329,7 @@ dkcy	𬱜
 dkd	斥
 dkdg	𦓸
 dkdg	𱆛
-dkdh	𳈎
+dkdh	𳈍
 dkdi	𦦂
 dkdj	斥
 dkdj	鬭
@@ -19342,7 +19345,7 @@ dkeh	𬯶
 dkei	魆
 dkei	𩿠
 dkei	𫡞
-dkei	𳎬
+dkei	𳎪
 dken	𩾒
 dken	𮙉
 dker	䎣
@@ -19362,7 +19365,7 @@ dkfv	𦔆
 dkg	戕
 dkga	輮
 dkga	𨎸
-dkgb	𳈉
+dkgb	𳈈
 dkgc	谚
 dkgc	𫏳
 dkgg	閬
@@ -19460,11 +19463,11 @@ dkkg	輚
 dkkg	𤖆
 dkkg	𨵊
 dkkg	𬷟
-dkkj	𳄒
+dkkj	𳄑
 dkkl	䎥
 dkkl	䎧
 dkkm	𮋤
-dkkn	𲹥
+dkkn	𲹤
 dkkr	𠓩
 dkku	𦔤
 dkku	𨏺
@@ -19571,10 +19574,10 @@ dkrj	𦓰
 dkrj	𦔡
 dkrj	𦔦
 dkrk	𰭱
-dkrk	𲹨
+dkrk	𲹧
 dkrl	輍
 dkrl	𪁴
-dkrl	𳈀
+dkrl	𳇿
 dkrn	𦔟
 dkrw	甎
 dks	议
@@ -19652,7 +19655,7 @@ dkwu	𨏠
 dkwu	𪚖
 dkxb	𤽮
 dkxc	𨌍
-dkxd	𳄕
+dkxd	𳄔
 dkxi	軝
 dkxi	䲬
 dkxj	閽
@@ -19697,8 +19700,8 @@ dlbl	𲎞
 dlbo	诹
 dlbo	輙
 dlbo	𮝇
-dlbo	𳈂
-dlbo	𳑥
+dlbo	𳈁
+dlbo	𳑣
 dlbp	𬹭
 dlbq	𫜣
 dlc	训
@@ -19725,9 +19728,9 @@ dldu	鼶
 dldw	䶇
 dldw	𪕨
 dle	聞
-dlea	𳑚
+dlea	𳑘
 dlec	𨌀
-dlee	𳑢
+dlee	𳑠
 dlef	𪕴
 dleg	𩲽
 dleg	𬴿
@@ -19763,9 +19766,9 @@ dlgk	𪕉
 dlgl	𨎏
 dlgv	𪖇
 dlhc	鼴
-dlhc	𳑤
+dlhc	𳑢
 dlhe	𪖃
-dlhh	𳑟
+dlhh	𳑝
 dlhk	鼭
 dlhk	𭽑
 dlhl	𪕖
@@ -19774,13 +19777,13 @@ dlht	𪖄
 dlhv	𰹤
 dlhw	鼱
 dlic	𲎠
-dlic	𳑜
+dlic	𳑚
 dlie	𪕎
 dlie	𪖀
 dlig	𲍢
 dlih	鼵
 dlii	𤑠
-dlii	𳑠
+dlii	𳑞
 dlil	𪕓
 dlin	鼧
 dlix	𪕏
@@ -19806,7 +19809,7 @@ dljj	𧢈
 dljj	𨍟
 dljj	𨎨
 dljj	𮚠
-dljj	𳁛
+dljj	𳁚
 dljk	𪕵
 dljl	𨷝
 dljo	谴
@@ -19825,13 +19828,13 @@ dlka	軹
 dlka	䳅
 dlka	𲎟
 dlkc	𡭏
-dlkj	𳑣
+dlkj	𳑡
 dlkl	𮮮
-dlkl	𳑘
+dlkl	𳑖
 dlkm	鼢
 dlkm	𪕋
 dlkv	䶉
-dlkv	𳑗
+dlkv	𳑕
 dll	闆
 dlla	𬤨
 dllb	𪕚
@@ -19848,7 +19851,7 @@ dllg	𬏕
 dllg	𮮯
 dllh	谔
 dllh	𨶴
-dllh	𳌾
+dllh	𳌼
 dllk	𤖞
 dllk	𨎵
 dlll	闆
@@ -19876,7 +19879,7 @@ dlob	𪁗
 dlob	𪁨
 dloc	𨖂
 dloc	𨶐
-dlpj	𳑧
+dlpj	𳑥
 dlpn	𪕑
 dlps	鼪
 dlpz	𪕝
@@ -19886,7 +19889,7 @@ dlqi	𱌐
 dlqk	鼸
 dlqs	𪕒
 dlqu	𪕶
-dlra	𳑞
+dlra	𳑜
 dlrb	𪕌
 dlrf	𪖎
 dlri	𨴽
@@ -19905,7 +19908,7 @@ dlsm	𪺤
 dlsm	𰵬
 dlsm	𲲁
 dlsy	话
-dltd	𳑝
+dltd	𳑛
 dlte	鼤
 dltf	𪕃
 dltf	𪕦
@@ -19950,7 +19953,7 @@ dlwj	𣌺
 dlwk	䶂
 dlwl	鼩
 dlwl	𲂗
-dlwl	𳑙
+dlwl	𳑗
 dlwn	𮬦
 dlwr	軦
 dlww	𪕾
@@ -19965,9 +19968,9 @@ dlxw	𪔽
 dlxw	𪕅
 dlxx	𱌍
 dlxx	𱌏
-dlxx	𳑛
+dlxx	𳑙
 dlyf	𪔸
-dlyf	𳑦
+dlyf	𳑤
 dlz	证
 dlzb	𤽢
 dlzc	𮝆
@@ -20029,7 +20032,7 @@ dmg	诱
 dmgh	𨷔
 dmgn	诱
 dmgn	𨴷
-dmgn	𳄈
+dmgn	𳄇
 dmgy	閮
 dmgy	𬣻
 dmhg	𩲷
@@ -20094,7 +20097,7 @@ dmmn	𠟳
 dmmp	㲏
 dmmy	𬣜
 dmna	𭪛
-dmnb	𳐈
+dmnb	𳐆
 dmnf	𤖑
 dmns	洯
 dmnz	𬸈
@@ -20229,7 +20232,7 @@ dnjr	𨌁
 dnjr	𨌭
 dnjr	𨵝
 dnjr	𰵸
-dnjr	𳌸
+dnjr	𳌶
 dnjw	䦞
 dnjx	𨶦
 dnkc	牔
@@ -20267,7 +20270,7 @@ dnnb	𤽏
 dnnb	𬧱
 dnnc	𤗲
 dnnc	𩴑
-dnnc	𳄏
+dnnc	𳄎
 dnnd	谐
 dnnd	䡡
 dnnd	𪇱
@@ -20326,7 +20329,7 @@ dnum	𥁬
 dnuu	𣻮
 dnvv	𲫅
 dnwe	𤗅
-dnwk	𳁾
+dnwk	𳁽
 dnwn	𨶙
 dnwr	䦾
 dnwr	𨋍
@@ -20343,9 +20346,9 @@ do	由此
 doak	𮍣
 dobb	皅
 dobc	𨊹
-dobg	𳎵
+dobg	𳎳
 dobj	𠂬
-dobm	𳇹
+dobm	𳇸
 dobs	𤰷
 dobu	𡚖
 doc	追
@@ -20356,7 +20359,7 @@ docc	連
 docc	𛄀
 docd	追
 docj	近
-docn	𳄬
+docn	𳄫
 doco	迪
 docq	䢗
 docs	迧
@@ -20505,7 +20508,7 @@ dpet	䥣
 dpgc	𨊧
 dpgh	𭠀
 dpgi	𬛸
-dpgm	𳇸
+dpgm	𳇷
 dpgn	𩾬
 dpgq	𲥒
 dpgy	讧
@@ -20513,7 +20516,7 @@ dpgy	𩳹
 dpgy	𮤛
 dph	闉
 dphj	𭭻
-dphk	𳎮
+dphk	𳎬
 dpht	闉
 dpht	𬤇
 dpht	𫏷
@@ -20527,7 +20530,7 @@ dpiy	𫟞
 dpj	谭
 dpjb	𤗤
 dpjb	𨶛
-dpje	𳊹
+dpje	𳊷
 dpjk	𱆠
 dpjr	𬌆
 dpjr	𲡆
@@ -20539,7 +20542,7 @@ dpk	诛
 dpka	诛
 dpka	㸡
 dpka	𩳅
-dpka	𳇼
+dpka	𳇻
 dpki	𱉁
 dpl	皓
 dplv	皓
@@ -20578,14 +20581,14 @@ dpwj	𩵆
 dpwr	诜
 dpwr	𨴐
 dpwy	𨌳
-dpxc	𳄇
+dpxc	𳄆
 dpxm	閪
 dpyc	輏
 dpyg	𨡛
 dpyg	𩳜
 dpyq	𨟻
 dpzb	𤽱
-dpzm	𳇾
+dpzm	𳇽
 dpzp	𤗁
 dpzq	𨀲
 dpzy	𬣹
@@ -20671,7 +20674,7 @@ dqoy	𨞓
 dqpg	䑘
 dqpg	𬧹
 dqpk	𬤢
-dqpk	𳍄
+dqpk	𳍂
 dqpy	輶
 dqq	曲
 dqq	爿
@@ -20704,7 +20707,7 @@ dque	𲄹
 dquj	谱
 dqum	𨶩
 dqum	𱲛
-dqum	𳄎
+dqum	𳄍
 dqus	𤾵
 dqus	𰿛
 dqus	𗘳
@@ -20717,7 +20720,7 @@ dqwo	𪄧
 dqwo	𪇐
 dqwr	𮍯
 dqwv	𫍿
-dqww	𳈇
+dqww	𳈆
 dqwx	闕
 dqwy	𮝢
 dqxa	轔
@@ -20849,7 +20852,7 @@ drky	軡
 drky	𭨛
 drky	𮵄
 drmm	𣮵
-drmn	𳐑
+drmn	𳐏
 drn	论
 drnb	论
 drnb	𲔆
@@ -21033,7 +21036,7 @@ dsri	恖
 dsri	𢠶
 dsrj	顖
 dsrm	𨴎
-dsrn	𳎳
+dsrn	𳎱
 dsry	𲂈
 dss	申
 dss	🈸
@@ -21107,7 +21110,7 @@ dssx	𭭗
 dst	谎
 dsto	𨏕
 dstw	谎
-dstw	𳇽
+dstw	𳇼
 dsue	䡸
 dsug	𤾸
 dsuk	𩴾
@@ -21251,7 +21254,7 @@ dtwm	𨳑
 dtwn	魑
 dtwn	𤗫
 dtwn	𲄼
-dtwn	𳈋
+dtwn	𳈊
 dtwy	𨌖
 dtxd	𬤛
 dtxi	𤒐
@@ -21283,7 +21286,7 @@ dubo	𤽐
 dubo	𦤺
 dubo	𨋻
 dubo	𰊭
-dubo	𳌴
+dubo	𳌲
 dubs	𨋤
 dubt	𨏵
 duby	讣
@@ -21326,7 +21329,7 @@ dufg	轘
 dufg	闤
 dufg	䴋
 dufg	𲌬
-dufg	𲻋
+dufg	𲻊
 dufh	䡾
 dufj	𧷈
 dufk	𢨛
@@ -21354,7 +21357,7 @@ dugw	䦱
 dugw	𤾡
 dugw	𩴞
 duha	𲈳
-duha	𳈊
+duha	𳈉
 duhb	𤽾
 duhg	䰧
 duhg	𩲼
@@ -21365,7 +21368,7 @@ duhj	䖐
 duhk	𦥚
 duhm	𨵘
 duhn	𤳄
-duhn	𳏇
+duhn	𳏅
 duhp	𤗑
 duhq	䦴
 duhq	𩴮
@@ -21391,7 +21394,7 @@ dujq	𫍹
 dujr	𣈪
 dujw	𨌂
 dujw	𰃎
-dujw	𳇿
+dujw	𳇾
 dujz	𨌬
 dujz	𪂱
 dujz	𰵳
@@ -21415,7 +21418,7 @@ dulv	䦓
 dulv	𧮪
 dulv	𩲦
 dulv	𫚳
-dulv	𳄆
+dulv	𳄅
 dumb	𭽾
 dumd	𠞄
 dumm	𲈨
@@ -21467,7 +21470,7 @@ duso	𰹨
 dusr	輲
 dusr	𦦇
 dusr	𫍱
-dusr	𳈄
+dusr	𳈃
 dusx	𦓐
 dusy	讪
 dute	𩴘
@@ -21568,7 +21571,7 @@ dvsk	𩴜
 dvsl	舅
 dvsl	𤽲
 dvsl	𦥶
-dvsl	𲻏
+dvsl	𲻎
 dvsm	䦒
 dvsr	𰯺
 dvtb	畠
@@ -21778,8 +21781,8 @@ dwpy	𨡓
 dwqc	𧌜
 dwqh	𨷅
 dwqm	𮭀
-dwqq	𳀄
-dwqs	𳍃
+dwqq	𳀃
+dwqs	𳍁
 dwr	兒
 dwrb	皃
 dwrb	𤽇
@@ -21828,7 +21831,7 @@ dx	向
 dx	向上
 dx	向来
 dxaa	𰵼
-dxaa	𳏜
+dxaa	𳏚
 dxaj	䳃
 dxaj	𫍠
 dxaj	𰹏
@@ -21855,7 +21858,7 @@ dxfk	舆
 dxfk	𠖡
 dxfk	𤕶
 dxfk	𮍫
-dxfk	𳏕
+dxfk	𳏓
 dxfu	𭮙
 dxgl	𫍢
 dxgl	𱆙
@@ -21897,7 +21900,7 @@ dxlw	𪽿
 dxlw	𬌍
 dxmd	𰿞
 dxmd	𲈩
-dxmd	𳈁
+dxmd	𳈀
 dxns	𣷛
 dxo	艳
 dxob	艳
@@ -21983,7 +21986,7 @@ dyfb	𨚮
 dyfc	𨛩
 dyff	邦
 dyfg	𨝀
-dyfg	𳍀
+dyfg	𳌾
 dyfj	邤
 dyfl	词
 dyfn	鄥
@@ -22020,7 +22023,7 @@ dypw	谞
 dypw	𨍐
 dyuj	帮
 dyur	𨏱
-dyur	𳈐
+dyur	𳈏
 dyus	𦥖
 dyxr	𮙊
 dyy	讠
@@ -22350,7 +22353,7 @@ ebsr	𠉺
 ebsr	𰁢
 ebss	𠋀
 ebsy	俑
-ebtj	𳆘
+ebtj	𳆗
 ebuc	𫣖
 ebuf	𠏪
 ebuj	𠇛
@@ -22407,7 +22410,7 @@ echk	偫
 echt	𠇦
 ecib	𢽥
 ecih	𠎌
-ecij	𳂘
+ecij	𳂗
 ecin	𠎉
 ecir	乑
 ecjc	𰂭
@@ -22961,7 +22964,7 @@ efre	늣
 efre	ᆬ
 efre	ㄵ
 efrr	늤
-efsc	𳋆
+efsc	𳋄
 efse	𗃧
 efsl	𠆮
 efsm	侀
@@ -23117,7 +23120,7 @@ egcj	𰁲
 egcm	𰅺
 egcn	𱙉
 egcq	㑲
-egcq	𳋊
+egcq	𳋈
 egdc	𘓔
 egdc	𘓕
 egdf	𘧘
@@ -23176,7 +23179,7 @@ egjb	貫
 egjb	𠌞
 egjb	𢿒
 egjc	傷
-egjd	𳏦
+egjd	𳏤
 egje	値
 egjf	𠎟
 egjj	𠑘
@@ -23628,7 +23631,7 @@ eijd	佇
 eije	顦
 eije	𩒏
 eije	𱂝
-eijn	𳋒
+eijn	𳋐
 eijq	𠊙
 eijs	倧
 eiju	𡾎
@@ -24427,7 +24430,7 @@ elac	𲃄
 elad	䳰
 elad	𪃁
 elad	𱏘
-elad	𳄋
+elad	𳄊
 elag	𧛱
 elah	堡
 elai	煲
@@ -24684,7 +24687,7 @@ emjb	賃
 emjh	𭀏
 emji	㑵
 emjm	𲐱
-emjr	𳋋
+emjr	𳋉
 emk	侨
 emka	侨
 emkc	傉
@@ -24715,7 +24718,7 @@ emmf	䫽
 emmh	𬓧
 emmm	𩗅
 emmn	𬸊
-emmn	𳐋
+emmn	𳐉
 emmr	𠇔
 emmr	𠌤
 emna	俬
@@ -24789,7 +24792,7 @@ enfo	𲐠
 enfr	俌
 eng	华
 enge	𩘫
-engf	𳋂
+engf	𳋀
 engi	华
 engm	𪉊
 engr	仠
@@ -24904,7 +24907,7 @@ eodr	㐲
 eodr	𘰔
 eodu	㒙
 eoed	𪄾
-eoef	𳋃
+eoef	𳋁
 eoeh	𠌱
 eoej	𠇳
 eoem	毑
@@ -25055,7 +25058,7 @@ epwr	侁
 epwr	𠐷
 epwr	𤭨
 epwy	𱎳
-epwy	𲺌
+epwy	𲺋
 epxa	僲
 epxr	価
 epxr	𲐡
@@ -25216,7 +25219,7 @@ erfm	䬔
 erfm	𫢕
 erfn	俭
 erfo	𩙋
-erfo	𳋎
+erfo	𳋌
 erfr	𠏚
 erfr	𩙍
 erfr	𲋊
@@ -25477,7 +25480,7 @@ ess	⽎
 essa	僷
 essg	𠎑
 essk	𩙯
-esso	𳋐
+esso	𳋎
 essr	𪝥
 esss	䬅
 esss	𱃚
@@ -25586,6 +25589,7 @@ etqc	𫣢
 etqm	劙
 etqm	𠠞
 etqq	蠡
+etqu	𬺬
 etri	𫢨
 etri	𰂔
 etri	𱎱
@@ -27634,7 +27638,7 @@ fccc	𰴗
 fccc	𗍿
 fccc	𘓲
 fccc	𘓹
-fccd	𳏂
+fccd	𳏀
 fcce	𱍪
 fcce	𘓭
 fccf	𘓳
@@ -28214,7 +28218,7 @@ fecl	㩦
 fedb	𫼻
 fedj	𠁉
 fedn	𩿍
-fedn	𳎩
+fedn	𳎧
 feeb	㩳
 feef	𘔣
 feeg	𘈬
@@ -29103,7 +29107,7 @@ fina	𢶳
 finb	拕
 fins	𢬄
 finw	𢰉
-fioc	𳄝
+fioc	𳄜
 fiod	𢬅
 fiod	𰓕
 fioi	𢸘
@@ -29230,7 +29234,7 @@ fjfp	𡯻
 fjfq	𢵊
 fjfq	𢵦
 fjfq	𲟚
-fjfq	𲿪
+fjfq	𲿩
 fjfr	𭜩
 fjfs	𢰿
 fjfs	𱠘
@@ -29283,7 +29287,7 @@ fjkw	𭂾
 fjl	撮
 fjlb	撮
 fjlb	𢸶
-fjlj	𳂧
+fjlj	𳂦
 fjll	𲢇
 fjlr	𢤎
 fjlr	𭞦
@@ -29402,6 +29406,7 @@ fkaa	𱡈
 fkad	𭢭
 fkai	亞
 fkai	亜
+fkai	𬺢
 fkai	
 fkaj	抑
 fkaj	𭣋
@@ -29849,7 +29854,7 @@ flja	摷
 fljb	損
 fljb	黿
 fljb	𫽭
-fljb	𳂓
+fljb	𳂒
 fljc	𰔋
 flje	頑
 flji	亓
@@ -29936,7 +29941,7 @@ flpj	𮗒
 flpk	𰏅
 flpm	剄
 flpo	逕
-flpq	𲹆
+flpq	𲹅
 flpr	𤭓
 flps	勁
 flpw	巰
@@ -29956,12 +29961,12 @@ flqb	䜷
 flqb	䝄
 flqb	𧰤
 flqb	𮙒
-flqb	𳂄
+flqb	𳂃
 flqc	𧉗
 flqc	𧰃
 flqc	𪨈
 flqc	𮓸
-flqc	𳂆
+flqc	𳂅
 flqd	𧯞
 flqd	𧯰
 flqd	𪁞
@@ -30050,7 +30055,7 @@ flrj	𲣝
 flrl	𣕤
 fls	括
 flsd	𲢖
-flsd	𳎾
+flsd	𳎼
 flsi	吏
 flsi	𰓐
 flsi	吏
@@ -30252,7 +30257,7 @@ fmna	拡
 fmna	𢫻
 fmna	𢯃
 fmnb	𲣁
-fmnm	𳐇
+fmnm	𳐅
 fmno	𰔼
 fmns	𭡆
 fmns	𰔎
@@ -30369,7 +30374,7 @@ fnkd	𘡴
 fnkd	𘬉
 fnke	𣪋
 fnkg	裘
-fnkg	𳁇
+fnkg	𳁆
 fnkh	𡌊
 fnki	𢷄
 fnki	𤈿
@@ -30388,7 +30393,7 @@ fnko	𨘑
 fnkp	𨁛
 fnkq	𧋛
 fnkq	𧒔
-fnkq	𳀇
+fnkq	𳀆
 fnkr	慦
 fnkr	㐜
 fnkr	𢚡
@@ -30608,7 +30613,7 @@ fokd	𢪯
 fol	吞
 folc	𫫹
 fold	𩳝
-fold	𳎺
+fold	𳎸
 fole	𢱕
 fole	𰈩
 folf	𩐄
@@ -30899,13 +30904,14 @@ fqso	𢷥
 fqso	𨔤
 fqso	拼
 fqsp	𱌠
+fqsr	𫜿
 fqss	㧶
 fqsv	𭆉
 fqsv	𰼛
 fqtm	𰚰
 fqto	𢷊
 fqto	𨗅
-fqtq	𲿖
+fqtq	𲿕
 fqtr	𲠝
 fqts	𧰬
 fqts	𲓉
@@ -31018,7 +31024,7 @@ frkc	贽
 frkd	执
 frkd	𢩾
 frkd	𪜂
-frkd	𳎴
+frkd	𳎲
 frkf	挚
 frkg	搇
 frkg	𬡓
@@ -31044,7 +31050,7 @@ frks	𢰸
 frks	𠢞
 frkx	𪮷
 frkx	𫐋
-frkx	𳎘
+frkx	𳎖
 frky	扲
 frky	𪱼
 frky	𭠔
@@ -32449,7 +32455,7 @@ fujk	戬
 fujk	𢨙
 fujk	𪮮
 fujn	𰔵
-fujo	𳄨
+fujo	𳄧
 fujp	𡰖
 fujp	𭡸
 fujq	摣
@@ -32531,7 +32537,7 @@ fuos	𱠁
 fupg	𢭊
 fupi	𬅹
 fupr	𢷍
-fupy	𳅓
+fupy	𳅒
 fuq	撲
 fuqb	𢹸
 fuqc	𰲸
@@ -32660,7 +32666,7 @@ fvap	𫾐
 fvbb	𱠗
 fvbp	𰔓
 fvdi	𪮢
-fvdn	𳏁
+fvdn	𳎿
 fvej	𰀓
 fvep	𣦂
 fvfd	𪇏
@@ -34510,7 +34516,7 @@ fxnr	𭜨
 fxns	㱝
 fxns	𢍈
 fxns	𣧥
-fxnt	𳅺
+fxnt	𳅹
 fxnu	𨱼
 fxnu	𭮓
 fxnv	𭻏
@@ -34912,7 +34918,7 @@ gagq	𫷜
 gagy	𬕁
 gagy	𬕞
 gagy	𮕦
-gagy	𳀮
+gagy	𳀭
 gagz	篙
 gahd	𥱝
 gahh	𲶆
@@ -35331,7 +35337,7 @@ gcqb	𥀇
 gcqd	𪃢
 gcqe	𬆩
 gcqe	𰨵
-gcqe	𳋉
+gcqe	𳋇
 gcqh	献
 gcqh	𪤟
 gcqh	𲚎
@@ -35341,7 +35347,7 @@ gcqm	𥮫
 gcqm	𥮫
 gcqo	遖
 gcqo	𥷻
-gcqo	𳅃
+gcqo	𳅂
 gcqp	𨆕
 gcqq	𰆀
 gcqq	𰆂
@@ -35394,7 +35400,7 @@ gda	範
 gdah	𭐃
 gdaj	範
 gdaq	籣
-gdbh	𳑎
+gdbh	𳑌
 gdbz	𥬝
 gdcc	𗹨
 gdci	𗹥
@@ -35605,7 +35611,7 @@ gehk	𫥠
 gehq	𲵸
 gehs	𠂸
 gehs	𪐾
-gehs	𳑏
+gehs	𳑍
 gehu	𥮃
 gehw	篟
 gehw	𣄯
@@ -36154,7 +36160,7 @@ ggsy	𗽀
 ggsy	𗽁
 ggsy	𗽉
 ggsy	𗽿
-ggtm	𳈓
+ggtm	𳈒
 ggub	笮
 ggum	簋
 gguo	𥯧
@@ -36192,7 +36198,7 @@ ghcb	箦
 ghce	篇
 ghcj	𮨣
 ghcm	𭄙
-ghco	𳄻
+ghco	𳄺
 ghcp	𱼧
 ghcz	䇫
 ghdj	𥭦
@@ -36652,7 +36658,7 @@ gjmf	𰪚
 gjmi	𥃭
 gjmi	𥵕
 gjmm	𥲨
-gjmn	𳐏
+gjmn	𳐍
 gjmq	𰚿
 gjmz	𥬥
 gjna	𠫟
@@ -36709,7 +36715,7 @@ gjrb	𥀐
 gjrb	𱅠
 gjrc	𢒨
 gjrc	𮅢
-gjrd	𳏱
+gjrd	𳏯
 gjre	倝
 gjre	𥭷
 gjrg	斡
@@ -36722,7 +36728,7 @@ gjrk	𧹳
 gjrl	𮍿
 gjrm	㲦
 gjrm	𪟺
-gjrm	𳐓
+gjrm	𳐑
 gjrn	幹
 gjrn	𪜌
 gjrq	螒
@@ -36846,11 +36852,11 @@ gkdn	𘯶
 gkds	𬖆
 gkdt	𬼎
 gkdu	𬕺
-gkdu	𳈏
+gkdu	𳈎
 gkdv	𬖅
 gkdz	臷
 gke	截
-gked	𳏺
+gked	𳏸
 gkeh	截
 gkeh	𩀩
 gkei	𪐶
@@ -37023,7 +37029,7 @@ gkvk	戴
 gkvk	戴
 gkvl	𥳘
 gkvm	𥳩
-gkvo	𳄶
+gkvo	𳄵
 gkvt	𤱱
 gkvt	𥰣
 gkvv	𰭟
@@ -37066,7 +37072,7 @@ glbo	叓
 glbo	箃
 glc	禹
 glcb	筼
-glcd	𳏒
+glcd	𳏐
 glce	𩀌
 glce	𬆪
 glch	㙑
@@ -37470,7 +37476,7 @@ gntl	𥯛
 gntw	𥭎
 gnub	㌩
 gnuc	𰿋
-gnuj	𳑒
+gnuj	𳑐
 gnuk	𥰛
 gnul	𥮒
 gnum	簠
@@ -37734,7 +37740,7 @@ gqbk	䈴
 gqbk	𲌦
 gqbm	𲇀
 gqbo	𲶀
-gqbw	𳅨
+gqbw	𳅧
 gqc	篓
 gqcn	篓
 gqcn	𧈦
@@ -37743,7 +37749,7 @@ gqcp	䖝
 gqcq	𧉁
 gqct	䉤
 gqct	𱶢
-gqcz	𲾙
+gqcz	𲾘
 gqd	釉
 gqdo	釉
 gqea	𮔏
@@ -37751,7 +37757,7 @@ gqeb	𮔺
 gqed	簖
 gqeh	䧽
 gqeh	𮔒
-gqek	𳅦
+gqek	𳅥
 gqel	𥮷
 gqen	𥱑
 gqes	𣪖
@@ -37858,7 +37864,7 @@ gqso	䈂
 gqso	𢍏
 gqst	𨤜
 gqsu	𨤝
-gqsv	𳅩
+gqsv	𳅨
 gqto	𥴦
 gqto	𬩄
 gqts	𪑫
@@ -37869,7 +37875,7 @@ gqum	𭾍
 gquq	釋
 gqus	𡶠
 gqut	𥳆
-gquy	𳅧
+gquy	𳅦
 gqv	翻
 gqvb	𢿥
 gqvb	𭻫
@@ -38041,7 +38047,7 @@ grrg	𠦬
 grrh	𥭭
 grrj	賫
 grrj	𥴔
-grrj	𳂖
+grrj	𳂕
 grrk	𠂿
 grrk	𰆓
 grrk	𱙼
@@ -38133,7 +38139,7 @@ gsdk	簧
 gsdk	𪓈
 gsdm	𫧪
 gsdn	𩿜
-gsdn	𳎫
+gsdn	𳎩
 gsdo	𨖲
 gsds	𗏔
 gsds	𗐆
@@ -38666,7 +38672,7 @@ gufm	𰳨
 gufr	𢛳
 gufz	𰪂
 gug	篮
-gugc	𳀗
+gugc	𳀖
 gugj	𲀚
 gugk	𠀽
 gugk	𥲉
@@ -38752,7 +38758,7 @@ gumh	𧖲
 gumk	衂
 gumk	䘐
 gumk	𧗈
-gumm	𳀖
+gumm	𳀕
 gumn	盁
 gumn	𲍱
 gump	血
@@ -38881,7 +38887,7 @@ guzz	笊
 gv	箅
 gvdg	𥵔
 gvdi	𬇒
-gvdi	𳑐
+gvdi	𳑎
 gvdj	𥯩
 gver	𤱑
 gvfi	𭻯
@@ -39129,7 +39135,7 @@ gxjr	𱸧
 gxk	勃
 gxka	𥮧
 gxka	𪑘
-gxka	𳑑
+gxka	𳑏
 gxkd	鵓
 gxke	𠃱
 gxke	𦚯
@@ -39440,7 +39446,7 @@ hanw	堉
 hanw	𡊿
 hanw	𤞀
 hanw	𲙌
-haoc	𳄢
+haoc	𳄡
 haqi	𧾙
 haqi	𪤪
 haqj	墑
@@ -39602,7 +39608,7 @@ hbeq	𧏌
 hbeq	𧐡
 hbeq	𮡑
 hbeq	𰶟
-hbeq	𲹐
+hbeq	𲹏
 hber	𰒘
 hber	𱰎
 hbes	殸
@@ -39731,7 +39737,7 @@ hbky	𢀨
 hbkz	孯
 hbla	㙔
 hbla	𠥎
-hbla	𳃁
+hbla	𳃀
 hblb	𭮶
 hblh	𲚤
 hblk	壀
@@ -40153,7 +40159,7 @@ hdmc	㺜
 hdmc	𮰮
 hdmd	𧻘
 hdmd	𧼤
-hdmn	𳐊
+hdmn	𳐈
 hdmo	猰
 hdmo	𡐤
 hdmo	𧼪
@@ -40218,7 +40224,7 @@ hdst	坤
 hdst	𡓻
 hdst	☷
 hdsv	𱮰
-hdsz	𳂹
+hdsz	𳂸
 hdtj	𨪄
 hdtt	墽
 hdtt	獥
@@ -40296,7 +40302,7 @@ hedi	𡕀
 hedl	𢀃
 hedn	𪅏
 hedn	𪅧
-hedn	𳏭
+hedn	𳏫
 heeh	𠥔
 heeh	𠥥
 hees	𱥖
@@ -40421,7 +40427,7 @@ heri	慤
 hesc	𰯯
 hesq	𤝈
 hest	坄
-hesw	𲽓
+hesw	𲽒
 hesz	𧺢
 hesz	𰚃
 hetf	𭤪
@@ -40717,7 +40723,7 @@ hful	딓
 hfuo	덜
 hfuo	델
 hfuo	딀
-hfuq	𲿈
+hfuq	𲿇
 hfur	덗
 hfur	덙
 hfur	덠
@@ -40757,7 +40763,7 @@ hfuy	딁
 hfvf	壃
 hfvs	𥔳
 hfvs	𥔼
-hfvv	𳍬
+hfvv	𳍪
 hfwa	𰊏
 hfwb	𲘱
 hfwc	𡴃
@@ -40856,7 +40862,7 @@ hgbs	𪔜
 hgbs	𪔝
 hgbs	𪔨
 hgbs	𲎛
-hgbs	𳑖
+hgbs	𳑔
 hgbt	䥢
 hgbt	𪔟
 hgbu	鼚
@@ -40948,7 +40954,7 @@ hgkd	㧀
 hgkd	𠥠
 hgkd	𤜯
 hgkd	𱘗
-hgkd	𳂸
+hgkd	𳂷
 hgke	䟌
 hgkf	𤢷
 hgkj	䟈
@@ -41477,7 +41483,7 @@ hhjh	뛛
 hhjh	뛷
 hhjj	𧠹
 hhjk	𱤧
-hhjk	𳂲
+hhjk	𳂱
 hhjl	똖
 hhjl	똚
 hhjl	똟
@@ -41535,7 +41541,7 @@ hhjo	뚤
 hhjo	뛀
 hhjo	뛜
 hhjo	뛸
-hhjp	𳃣
+hhjp	𳃢
 hhjq	𬍍
 hhjr	猪
 hhjr	堵
@@ -42094,7 +42100,7 @@ hiik	𰒯
 hiil	𲚦
 hiis	𡑍
 hiis	𲮹
-hiis	𳃅
+hiis	𳃄
 hiiw	塉
 hij	狞
 hijc	𡏉
@@ -42292,7 +42298,7 @@ hjcd	鶠
 hjce	𩀀
 hjci	𭎕
 hjcj	𬢎
-hjcl	𳑡
+hjcl	𳑟
 hjcm	𬸘
 hjcn	匽
 hjcn	壜
@@ -42372,7 +42378,7 @@ hjew	㬾
 hjew	𩥯
 hjey	䞛
 hjez	𲊳
-hjez	𳂾
+hjez	𳂽
 hjf	場
 hjfb	돛
 hjfb	둧
@@ -42468,7 +42474,7 @@ hjhf	둗
 hjhj	𬚍
 hjhk	塒
 hjhk	𱢑
-hjhk	𳂱
+hjhk	𳂰
 hjhq	𤟵
 hjhq	𧽀
 hjht	㘿
@@ -42493,7 +42499,7 @@ hjil	𱗢
 hjil	돟
 hjil	둫
 hjit	垁
-hjiy	𳅌
+hjiy	𳅋
 hjj	猖
 hjja	𮗍
 hjjb	玃
@@ -42717,7 +42723,7 @@ hjuh	돧
 hjuh	됃
 hjuh	됟
 hjuh	뒫
-hjuk	𲹢
+hjuk	𲹡
 hjul	돦
 hjul	돪
 hjul	돯
@@ -42803,7 +42809,7 @@ hjuy	뒥
 hjuy	뒦
 hjuy	뒭
 hjv	塌
-hjvd	𳄓
+hjvd	𳄒
 hjvf	도
 hjvl	𲜟
 hjvt	圵
@@ -42899,7 +42905,7 @@ hkdq	𬌩
 hkdt	圡
 hkdt	𡈽
 hke	越
-hkeb	𳃆
+hkeb	𳃅
 hked	𬷲
 hkeh	𪧸
 hkei	越
@@ -42908,7 +42914,7 @@ hkei	犼
 hkei	𪣂
 hkei	𛄚
 hkej	㔳
-hkeo	𳄰
+hkeo	𳄯
 hkes	𪵋
 hkez	狨
 hkez	𡊸
@@ -43043,14 +43049,14 @@ hkk	
 hkk	
 hkka	赤
 hkka	⾚
-hkka	𳂯
+hkka	𳂮
 hkkb	赧
 hkkb	赮
 hkkb	𠭷
 hkkb	𧹛
 hkkb	𧹞
 hkkb	𫼑
-hkkb	𳂮
+hkkb	𳂭
 hkkc	赪
 hkkc	𡣅
 hkkc	𧹪
@@ -43091,7 +43097,7 @@ hkkj	𫎯
 hkkj	𬦄
 hkkj	𮚱
 hkkj	𰥾
-hkkj	𳂳
+hkkj	𳂲
 hkkk	赫
 hkkk	𡦊
 hkkk	𧹜
@@ -43112,7 +43118,7 @@ hkko	𡘥
 hkko	𧹢
 hkko	𧹶
 hkko	𫐨
-hkko	𳅇
+hkko	𳅆
 hkkp	䞑
 hkkp	䞓
 hkkp	𤛖
@@ -43188,7 +43194,7 @@ hknr	𡍻
 hkns	𤝣
 hkns	𪣉
 hkns	𬦋
-hkns	𳂺
+hkns	𳂹
 hknv	塕
 hknv	㺋
 hkoj	𧾞
@@ -43518,7 +43524,7 @@ hlo	扈
 hlob	扈
 hlob	듍
 hloc	迼
-hloc	𳄯
+hloc	𳄮
 hloe	𭇠
 hlof	듎
 hloj	듈
@@ -43674,7 +43680,7 @@ hmdt	切
 hmdt	𲘰
 hmdz	𧺈
 hmdz	𪟌
-hmdz	𳂵
+hmdz	𳂴
 hmek	𲙝
 hmfg	𫾌
 hmfj	𡓈
@@ -43753,7 +43759,7 @@ hmmq	𤝄
 hmmt	㘪
 hmmt	𦒷
 hmmt	𰉝
-hmmz	𳂷
+hmmz	𳂶
 hmn	鸦
 hmna	鸦
 hmng	𧻧
@@ -43789,7 +43795,7 @@ hmsk	獷
 hmsk	壙
 hmsk	𮛀
 hmsu	𭏖
-hmtf	𳃄
+hmtf	𳃃
 hmul	𡌽
 hmvc	𲚚
 hmvh	㙻
@@ -43960,7 +43966,7 @@ hnmm	耄
 hnmm	𣭢
 hnmn	𫼒
 hnmn	𱉦
-hnmn	𳐉
+hnmn	𳐇
 hnmp	𭷠
 hnmx	𱑬
 hnmy	𭎨
@@ -44115,7 +44121,7 @@ hodg	𲃐
 hodh	戻
 hodk	𬦗
 hodt	𡉑
-hodz	𳂶
+hodz	𳂵
 hoef	匜
 hoeh	㦾
 hoek	𲚕
@@ -44184,7 +44190,7 @@ homd	𲭴
 homh	獉
 homh	𧽕
 homh	𫮔
-homz	𳃂
+homz	𳃁
 hona	𰡅
 hooc	垯
 hooc	逇
@@ -44396,7 +44402,7 @@ hqit	𠥫
 hqit	𡒳
 hqiu	𢅲
 hqj	增
-hqjb	𳂣
+hqjb	𳂢
 hqjg	𫮃
 hqjg	𰅦
 hqjj	增
@@ -44413,7 +44419,7 @@ hqku	獈
 hqku	𬦜
 hqlr	𱗖
 hqlw	㙂
-hqlw	𳂽
+hqlw	𳂼
 hqmf	𠤻
 hqmg	㙿
 hqmm	𣮾
@@ -44509,7 +44515,7 @@ hqru	𰏞
 hqrv	䲀
 hqrw	騺
 hqrw	㼬
-hqry	𳅐
+hqry	𳅏
 hqsl	𭄬
 hqso	垪
 hqso	𤝴
@@ -44690,7 +44696,7 @@ hrmd	𤢾
 hrnb	𫭢
 hroc	𡑟
 hroc	𰺻
-hroc	𳃇
+hroc	𳃆
 hrqf	匳
 hrqq	獫
 hrqt	𡑯
@@ -44718,7 +44724,7 @@ hrrs	𠢳
 hrrt	𡕲
 hrrv	𰣋
 hrrx	㱇
-hrry	𳅎
+hrry	𳅍
 hrtn	𤢌
 hrtu	𲯒
 hrub	𫨼
@@ -44773,7 +44779,7 @@ hsel	匿
 hsen	埖
 hseo	𨙀
 hsep	𠥤
-hsep	𳅟
+hsep	𳅞
 hseq	䘌
 hseq	𧏾
 hser	慝
@@ -44802,7 +44808,7 @@ hsfr	𰊟
 hsfu	墆
 hsfu	𠥖
 hsfu	𤠹
-hsfu	𳃃
+hsfu	𳃂
 hsfw	𡔥
 hsgq	𤠇
 hsgt	𱗋
@@ -44974,7 +44980,7 @@ htal	𱤉
 htam	棨
 htam	𣓯
 htam	𭪃
-htam	𳂼
+htam	𳂻
 htb	肇
 htba	肇
 htbb	𪌛
@@ -44993,7 +44999,7 @@ htdf	埄
 htdf	𫜑
 htdg	𫜔
 htdg	𱆝
-htdn	𳏀
+htdn	𳎾
 htdo	塳
 htdo	𱮛
 htdq	𱋐
@@ -45022,7 +45028,7 @@ htgh	𪑢
 htgi	𲙮
 htgj	𢩜
 htgk	𬹇
-htgk	𳃀
+htgk	𳂿
 htgo	𤟽
 htgp	𲙽
 htgy	𱋇
@@ -45101,7 +45107,7 @@ htoc	𮞒
 htoc	𲙞
 htod	𪣼
 htof	麸
-htoj	𳑉
+htoj	𳑇
 htos	綮
 htpc	𪘯
 htpn	𭷥
@@ -45351,7 +45357,7 @@ hugk	𬌘
 hugq	狐
 hugq	𬛩
 hugq	🦊
-hugq	𲻆
+hugq	𲻅
 hugt	坬
 hugu	𰊑
 hugw	㺔
@@ -45366,6 +45372,7 @@ huhg	𰡨
 huhh	𡐎
 huhj	𭸭
 huhn	𪤄
+huhn	𬺪
 huhq	猇
 huhq	墿
 huhq	𤢟
@@ -45409,7 +45416,7 @@ hujn	𫮞
 hujo	䢱
 hujp	𤢠
 hujs	𮚬
-hujs	𳂨
+hujs	𳂧
 hujt	㠻
 hujw	𠥆
 hujw	𭸍
@@ -45508,7 +45515,7 @@ hure	𧼥
 hure	닷
 hure	댯
 hure	딧
-hurh	𲻅
+hurh	𲻄
 huri	𢛶
 huri	𫮦
 huri	𱗠
@@ -45747,7 +45754,7 @@ hvqy	𮚺
 hvrb	𱗟
 hvri	𢟆
 hvri	𤟧
-hvri	𳂿
+hvri	𳂾
 hvrk	堺
 hvrr	𫮇
 hvsi	𲚍
@@ -45864,7 +45871,7 @@ hwcw	𡐐
 hwcy	𫖶
 hwdf	𬰘
 hwdg	𱗦
-hwdg	𳌽
+hwdg	𳌻
 hwdn	鶄
 hwdn	鵳
 hwdn	鴄
@@ -45880,9 +45887,9 @@ hwfh	匩
 hwfh	𤝵
 hwfi	𩇞
 hwfk	𡔶
-hwfk	𲺼
+hwfk	𲺻
 hwfq	㺈
-hwfs	𲺱
+hwfs	𲺰
 hwgb	𢻄
 hwge	𡎧
 hwgi	𠧀
@@ -46020,7 +46027,7 @@ hwmh	𧼐
 hwmm	𣬮
 hwmn	䴖
 hwmn	𱊋
-hwmn	𳐄
+hwmn	𳐂
 hwmq	獁
 hwmq	𩡷
 hwmt	𡏢
@@ -46030,10 +46037,10 @@ hwna	𲭰
 hwnb	𭎀
 hwnl	𩇚
 hwns	𲙊
-hwns	𳂻
+hwns	𳂺
 hwob	𢩒
 hwob	𭨼
-hwob	𳊗
+hwob	𳊕
 hwoc	𨓽
 hwoc	𰺴
 hwod	㘻
@@ -46069,7 +46076,7 @@ hwsb	䨼
 hwsb	𩇥
 hwsj	𱮢
 hwsk	𩇡
-hwsk	𲺭
+hwsk	𲺬
 hwso	㺛
 hwso	𤟨
 hwt	敖
@@ -46115,7 +46122,7 @@ hwtu	敖
 hwtu	𲤍
 hwtv	鰲
 hwtv	𰧑
-hwtv	𳅯
+hwtv	𳅮
 hwtw	驁
 hwtw	𮌳
 hwtw	𲑶
@@ -46455,7 +46462,7 @@ hyit	𫭖
 hyit	𰉕
 hyiz	𮚲
 hyiz	𰁁
-hyiz	𳂴
+hyiz	𳂳
 hyjj	𧠞
 hyjl	𠥍
 hyjl	𱗊
@@ -46683,7 +46690,7 @@ iaww	𫴨
 iawx	𲒝
 iaxb	𤓄
 iay	炜
-iayf	𳅈
+iayf	𳅇
 iayi	炜
 ib	当
 ib	当时
@@ -47436,7 +47443,7 @@ iefr	𭂖
 iefu	𬊄
 ieg	實
 iegc	𱫜
-iegd	𳏼
+iegd	𳏺
 iegi	凖
 iegi	𘕾
 iegj	實
@@ -47785,7 +47792,7 @@ ifkc	𫤿
 ifkc	𮳚
 ifkc	𛀊
 ifkc	𛀋
-ifkd	𳎶
+ifkd	𳎴
 ifkg	𧙶
 ifkj	𥋩
 ifkj	𫳤
@@ -47877,7 +47884,7 @@ ifus	𪧅
 ifvf	𠘌
 ifvf	𤐀
 ifvt	𱰲
-ifvv	𲹕
+ifvv	𲹔
 ifwb	𡧂
 ifwb	𡧊
 ifwc	𡧤
@@ -47957,7 +47964,7 @@ ighq	𰟵
 ighr	𡫬
 ighr	𥩁
 ighs	黨
-ighs	𳑍
+ighs	𳑋
 ight	爅
 ight	𡓪
 igi	斗
@@ -48514,7 +48521,7 @@ iido	𲆅
 iidr	𪺅
 iidw	𱏧
 iidx	𤍀
-iied	𳏥
+iied	𳏣
 iief	𩗹
 iieh	熦
 iiei	𡧈
@@ -48983,7 +48990,7 @@ ijky	𱬃
 ijlb	熶
 ijlb	𡫉
 ijlb	𪧨
-ijle	𲹳
+ijle	𲹲
 ijli	𥨬
 ijlj	𫳇
 ijlk	𡩪
@@ -50245,7 +50252,7 @@ imdh	灱
 imdh	灲
 imdi	𤊿
 imdn	𱈳
-imdn	𳏓
+imdn	𳏑
 imdr	𠚧
 imfs	𠘚
 imfs	𢱀
@@ -50405,7 +50412,7 @@ ingx	𥤱
 inh	窪
 inhh	窪
 inhj	𡪦
-inhk	𳂰
+inhk	𳂯
 inhn	𭓼
 inhn	𲫮
 inht	𰊉
@@ -50991,7 +50998,7 @@ irg	密
 irga	𡩎
 irgd	𪂁
 irgd	𪅮
-irgd	𳏋
+irgd	𳏉
 irgh	寗
 irgi	𥤿
 irgi	𫳡
@@ -51003,7 +51010,7 @@ irgj	𪾺
 irgj	𫝱
 irgj	𱚓
 irgj	𱚙
-irgj	𳀔
+irgj	𳀓
 irgl	𡫹
 irgl	𫳹
 irgm	𭄋
@@ -51023,7 +51030,7 @@ irgu	𡪖
 irgu	𥧧
 irgw	𡨑
 irgw	𫆴
-irgw	𳌍
+irgw	𳌋
 irgx	𰋘
 irgy	𫴚
 irgy	𰻺
@@ -51094,7 +51101,7 @@ irkr	𪞤
 irkr	𫺇
 irkt	𠘄
 irku	𫥖
-irkw	𳈌
+irkw	𳈋
 irkx	窩
 irkx	𪞧
 irky	𪞘
@@ -51521,7 +51528,7 @@ itlx	𣣟
 itly	𫟭
 itm	氅
 itmm	氅
-itmn	𳐔
+itmn	𳐒
 itmr	𰿦
 itoc	䆳
 itoc	𨗉
@@ -51530,7 +51537,7 @@ itoc	𲫿
 itod	㷜
 itod	𱬍
 itqc	𡩓
-itqc	𲿳
+itqc	𲿲
 itqy	𱫦
 itre	𤇄
 itri	焖
@@ -51830,7 +51837,7 @@ ivod	𡨮
 ivos	𤍶
 ivos	𲒘
 ivqc	𧒾
-ivqc	𲾹
+ivqc	𲾸
 ivqg	𥩎
 ivqg	𥩑
 ivqn	𬊴
@@ -52016,7 +52023,7 @@ iwos	炮
 iwos	窇
 iwos	🩥
 iwou	𬋗
-iwpy	𳅗
+iwpy	𳅖
 iwqh	𡮝
 iwqk	𲵣
 iwqo	𤌯
@@ -52172,7 +52179,7 @@ ixkd	𠖮
 ixkd	𥤯
 ixkd	𰝹
 ixkd	𰝺
-ixkj	𳊱
+ixkj	𳊯
 ixkl	𱷤
 ixks	餈
 ixl	咨
@@ -52487,7 +52494,7 @@ jaka	䂋
 jaka	𣅶
 jaka	𬻅
 jaka	𱲪
-jaka	𳂔
+jaka	𳂓
 jakb	𥌍
 jakd	㺷
 jakd	𥄵
@@ -52568,7 +52575,7 @@ jans	𤥡
 jans	𧵾
 jant	㬚
 jant	瞮
-jant	𳆬
+jant	𳆫
 janw	琉
 janw	珫
 janw	㻙
@@ -52627,7 +52634,7 @@ jaso	𣅹
 jaso	𥌞
 jaso	𰙁
 jate	𲦉
-jatj	𳆇
+jatj	𳆆
 jatr	𣅂
 jatr	𢡑
 jats	𤪗
@@ -53096,7 +53103,7 @@ jcod	𧵌
 jcod	𪰔
 jcod	𱍒
 jcod	🈙
-jcod	𲸴
+jcod	𲸳
 jcou	𣉗
 jcpe	𩑘
 jcpl	𤫢
@@ -53184,7 +53191,7 @@ jdbo	𭥒
 jdbo	𭸸
 jdbo	𮞡
 jdbo	🈣
-jdbq	𲿝
+jdbq	𲿜
 jdbr	𣆆
 jdbr	𢦋
 jdbs	𥙃
@@ -53200,7 +53207,7 @@ jdda	𬹧
 jddb	暳
 jddb	㻰
 jddb	䵻
-jddb	𳑕
+jddb	𳑓
 jddd	𣃊
 jddf	䄗
 jddf	𤤵
@@ -53358,7 +53365,7 @@ jdkc	瑼
 jdkc	䁣
 jdkc	𥛥
 jdkc	𰡽
-jdkc	𲸹
+jdkc	𲸸
 jdkd	𤤐
 jdkd	𮁪
 jdkd	𲤖
@@ -53413,7 +53420,7 @@ jdoc	璉
 jdoc	𲯮
 jdoc	𲴩
 jdoc	𲴲
-jdoc	𳄫
+jdoc	𳄪
 jdod	𰋨
 jdog	暤
 jdos	䄂
@@ -53748,7 +53755,7 @@ jeyi	𬺶
 jf	量
 jf	量化
 jf	量子
-jfay	𳅏
+jfay	𳅎
 jfb	晤
 jfbg	𬑫
 jfbi	𣌚
@@ -53830,7 +53837,7 @@ jfhk	𦈣
 jfhk	𥃳
 jfi	旦
 jfib	𤥙
-jfij	𳋀
+jfij	𳊾
 jfir	旦
 jfir	𢝝
 jfiv	〧
@@ -54041,7 +54048,7 @@ jfpq	𫃆
 jfpq	𲋭
 jfpr	㼵
 jfps	𧤘
-jfps	𳊤
+jfps	𳊢
 jfpt	𲥋
 jfpu	𡺔
 jfpu	𢅨
@@ -54115,7 +54122,7 @@ jfwg	𣈟
 jfwi	𣆃
 jfwi	𤋁
 jfwj	𥏬
-jfwj	𳁖
+jfwj	𳁕
 jfwk	㦹
 jfwl	𱏭
 jfwm	眛
@@ -54291,7 +54298,7 @@ jgmm	𪼋
 jgmy	𣉧
 jgna	𤣵
 jgna	𥃼
-jgnb	𳂒
+jgnb	𳂑
 jgng	𣈨
 jgnk	𭧧
 jgnm	𲲚
@@ -54493,7 +54500,7 @@ jhjc	䞁
 jhjc	𣈿
 jhjc	𤦵
 jhjc	𥈔
-jhjf	𳂛
+jhjf	𳂚
 jhji	𪹶
 jhji	𭧶
 jhjj	𰷙
@@ -54597,7 +54604,7 @@ jhos	𤨄
 jhos	𪰸
 jhos	𪾵
 jhpg	𤥧
-jhqf	𲸳
+jhqf	𲸲
 jhqk	𣊎
 jhqk	𥊝
 jhqk	𱳉
@@ -54709,7 +54716,7 @@ jibb	琯
 jibb	𰨉
 jibb	𱢍
 jibd	𭴀
-jibd	𳏄
+jibd	𳏂
 jibf	缹
 jibg	裻
 jibg	𣇬
@@ -54723,7 +54730,7 @@ jibj	𭿬
 jibj	𰖂
 jibj	𰷁
 jibj	𰷚
-jibk	𳋛
+jibk	𳋙
 jibm	𥄧
 jibo	叔
 jibo	𤥎
@@ -54765,7 +54772,7 @@ jidl	瞎
 jidl	𱢜
 jidn	𪀖
 jidn	𪃷
-jidn	𳏐
+jidn	𳏎
 jido	𥇻
 jidr	𥌷
 jidr	𪼖
@@ -54834,7 +54841,7 @@ jigi	𧠕
 jigi	𧴼
 jigi	𪰍
 jigi	𲣽
-jigi	𲸺
+jigi	𲸹
 jigj	𪻻
 jigj	𪾱
 jigj	𬎒
@@ -55268,7 +55275,7 @@ jjic	暥
 jjic	䁙
 jjic	𭒱
 jjic	𱺳
-jjid	𳏿
+jjid	𳏽
 jjih	焸
 jjih	煛
 jjih	𥇏
@@ -55299,7 +55306,7 @@ jjjb	䂄
 jjjb	𣌗
 jjjb	𥜵
 jjjb	𧷰
-jjjb	𳂚
+jjjb	𳂙
 jjjc	瓔
 jjjc	曑
 jjjc	𥌖
@@ -55341,7 +55348,7 @@ jjjo	𣊖
 jjjo	𧹈
 jjjo	𨗏
 jjjo	𨙘
-jjjo	𳅄
+jjjo	𳅃
 jjjp	曐
 jjjq	𧠢
 jjjq	𰀝
@@ -55362,7 +55369,7 @@ jjjv	𰀎
 jjjw	現
 jjjw	𤦉
 jjjw	𮴡
-jjjw	𲺵
+jjjw	𲺴
 jjjx	𲯞
 jjjy	𬎋
 jjk	珏
@@ -55527,7 +55534,7 @@ jjub	𥊑
 jjub	𥊿
 jjub	𫿊
 jjub	𰡶
-jjue	𳁘
+jjue	𳁗
 jjug	𤬆
 jjum	瑥
 jjum	㬈
@@ -55542,7 +55549,7 @@ jjvr	㫔
 jjvs	𮁞
 jjvv	禢
 jjvv	𥐂
-jjvv	𲸸
+jjvv	𲸷
 jjvx	𠀝
 jjw	旺
 jjwb	𧴽
@@ -55739,7 +55746,7 @@ jkjk	𨑀
 jkjk	𬍼
 jkjk	𰢊
 jkjl	𦗊
-jkjp	𳂫
+jkjp	𳂪
 jkjr	暗
 jkjr	𥏮
 jkjr	𥚱
@@ -55747,7 +55754,7 @@ jkjr	𥜇
 jkjr	𪱍
 jkjr	𪼦
 jkjr	𪾲
-jkjr	𳊮
+jkjr	𳊬
 jkjw	璄
 jkjw	䝬
 jkjw	𤤛
@@ -55858,7 +55865,7 @@ jkrl	𥙿
 jkrm	𥃱
 jkrr	𱍕
 jkrx	𧢊
-jkrx	𳂡
+jkrx	𳂠
 jkse	𲋛
 jksf	𩛕
 jksf	𥆶
@@ -55896,7 +55903,7 @@ jkvt	𥛅
 jkvt	𦉉
 jkvt	𰖝
 jkvt	𥛅
-jkvv	𲹚
+jkvv	𲹙
 jkvw	𤤂
 jkw	瓏
 jkwm	𪾤
@@ -55943,7 +55950,7 @@ jkyi	珹
 jkyi	晠
 jkyi	𥆏
 jkyi	𰁄
-jkyi	𳊶
+jkyi	𳊴
 jkyu	𥊱
 jkyu	𲴷
 jkzb	𧴯
@@ -56236,7 +56243,7 @@ jlvt	𥚉
 jlvv	𠮳
 jlvx	𠮴
 jlw	祝
-jlwd	𳏟
+jlwd	𳏝
 jlwh	𡎺
 jlwi	𭿖
 jlwl	㼃
@@ -56393,7 +56400,7 @@ jmll	矯
 jmll	𤩝
 jmll	𥋊
 jmll	𬓚
-jmll	𲸻
+jmll	𲸺
 jmlm	𥉶
 jmlo	𨙍
 jmlr	𣊈
@@ -56645,7 +56652,7 @@ jnnr	璣
 jnnr	禨
 jnnr	𣊉
 jnnr	𲲰
-jnnr	𳂥
+jnnr	𳂤
 jnns	𥈒
 jnns	𩎍
 jnnv	㼄
@@ -56655,7 +56662,7 @@ jnny	𬪈
 jnoc	𨔯
 jnoc	𬥞
 jnoc	𱯆
-jnoc	𳄡
+jnoc	𳄠
 jnos	𣈠
 jnp	眸
 jnpg	𥆀
@@ -56708,7 +56715,7 @@ jnyi	𥄠
 jo	眠
 joak	琫
 joak	𣈖
-joak	𲸶
+joak	𲸵
 jobb	𧵅
 jobg	眱
 jobg	𣆰
@@ -56978,7 +56985,7 @@ jpna	𥈐
 jpnb	眦
 jpnb	玼
 jpnb	䂑
-jpnb	𳂗
+jpnb	𳂖
 jpnc	𲃻
 jpno	𬎏
 jpnr	𣅫
@@ -57044,7 +57051,7 @@ jqak	㫠
 jqak	𥘽
 jqak	𬑰
 jqak	𬥓
-jqak	𲸵
+jqak	𲸴
 jqam	暞
 jqam	𥉒
 jqb	賺
@@ -57101,11 +57108,11 @@ jqjj	䁬
 jqjj	𩔮
 jqjj	𭨞
 jqjj	贈
-jqjj	𲸼
+jqjj	𲸻
 jqjm	𠞢
 jqjm	𪉒
 jqjm	𰖭
-jqjv	𳍫
+jqjv	𳍩
 jqjw	班
 jqjw	𪱟
 jqkc	𥛖
@@ -57198,7 +57205,7 @@ jquj	𤩓
 jquj	𥐅
 jquj	𪾿
 jquj	𭧱
-jquj	𳂤
+jquj	𳂣
 jquk	𣇢
 jquk	𥏟
 jqum	𣉼
@@ -57280,7 +57287,7 @@ jrfj	瞺
 jrfj	𠁚
 jrfj	𣋘
 jrfj	𧸤
-jrfj	𲸽
+jrfj	𲸼
 jrfk	𱮹
 jrfm	瑜
 jrfm	睮
@@ -57345,7 +57352,7 @@ jrjw	㻇
 jrjw	䀬
 jrjw	𮁵
 jrjw	𰡭
-jrjw	𳂙
+jrjw	𳂘
 jrk	玲
 jrka	玠
 jrka	祄
@@ -57432,7 +57439,7 @@ jrrj	𥛾
 jrrj	𰢁
 jrrp	㻜
 jrrr	𲐬
-jrrs	𲸷
+jrrs	𲸶
 jrso	𣉂
 jrso	𥚫
 jrtn	𥋼
@@ -57466,7 +57473,7 @@ jsam	𣈽
 jsam	𥏭
 jsam	𦉃
 jsam	𫌣
-jsao	𳄷
+jsao	𳄶
 jsau	𢄂
 jsaw	𣊀
 jsba	𭺁
@@ -57563,7 +57570,7 @@ jsgt	㪤
 jsgv	𲰎
 jsgw	𭹤
 jsgy	𱢒
-jsgy	𳅋
+jsgy	𳅊
 jshb	𪔠
 jshb	𲎚
 jshj	𤨛
@@ -57607,7 +57614,7 @@ jsjg	𫪹
 jsjj	𥛼
 jsjj	𭨊
 jsjk	𤪶
-jsjk	𳂦
+jsjk	𳂥
 jsjl	𪻸
 jsjo	暯
 jsjo	瞙
@@ -57639,7 +57646,7 @@ jskg	𣊴
 jskh	贜
 jskh	𥈻
 jskj	𬥭
-jskj	𳊸
+jskj	𳊶
 jskk	𣋰
 jskk	𤧴
 jskk	𭧂
@@ -57772,7 +57779,7 @@ jssr	𧸀
 jssr	𰢏
 jsss	珕
 jsss	𭦀
-jssu	𲽯
+jssu	𲽮
 jssw	𭿆
 jssy	𱰟
 jstf	𣇷
@@ -57908,7 +57915,7 @@ jtiw	𤥂
 jtj	斑
 jtjb	𰷆
 jtjd	𬷱
-jtjd	𳏧
+jtjd	𳏥
 jtjj	𭧐
 jtjm	𥇶
 jtjm	𥇋
@@ -57983,7 +57990,7 @@ jtvc	𪻾
 jtvc	𮂉
 jtvc	𰖙
 jtvj	𫌧
-jtvv	𳍜
+jtvv	𳍚
 jtw	璃
 jtwe	𤫚
 jtwj	𥊛
@@ -58004,7 +58011,7 @@ ju	显
 ju	显示
 ju	显然
 jua	睬
-juaf	𳂠
+juaf	𳂟
 juai	𤪁
 juam	睬
 juam	𣈄
@@ -58227,8 +58234,8 @@ juli	𪹭
 jult	𤨉
 jult	𥍛
 jult	𭧊
-jult	𳁙
-jult	𳂞
+jult	𳁘
+jult	𳂝
 julu	𤨈
 julv	貼
 julv	玷
@@ -59338,7 +59345,7 @@ kaql	𩝾
 kaql	𪞊
 kaqs	𗅭
 kaqt	𫄰
-kaqt	𳋤
+kaqt	𳋢
 kaqu	缔
 kaqu	𥪟
 kara	𢤴
@@ -59486,7 +59493,7 @@ kboz	𫲡
 kbpg	经
 kbpg	𩛐
 kbpi	𤴘
-kbpk	𳋧
+kbpk	𳋥
 kbpl	𬔜
 kbqs	竮
 kbqs	竮
@@ -59508,7 +59515,7 @@ kbwr	𠑼
 kbwr	𠒂
 kbww	𥪊
 kbxb	𰬞
-kbxb	𳋙
+kbxb	𳋗
 kbyi	𰐐
 kbym	𮘃
 kbyz	𡥪
@@ -59516,7 +59523,7 @@ kc	纳
 kc	纳入
 kc	纳税
 kcb	贸
-kcbb	𳋟
+kcbb	𳋝
 kcbi	𰷞
 kcbm	贸
 kcbo	𩛂
@@ -59706,7 +59713,7 @@ kdmc	𨐺
 kdmc	𩟊
 kdmm	𣯡
 kdmo	𥪲
-kdmv	𳑺
+kdmv	𳑸
 kdna	𩟧
 kdna	卿
 kdnb	卿
@@ -59733,7 +59740,7 @@ kdoc	𩞙
 kdod	𪥛
 kdog	𗅓
 kdoj	䌷
-kdol	𳑹
+kdol	𳑷
 kdpg	𡥴
 kdpl	𥩜
 kdpx	𨐏
@@ -59915,7 +59922,7 @@ kf	感觉
 kf	感到
 kfa	印
 kfab	𭓄
-kfae	𳋗
+kfae	𳋕
 kfaj	印
 kfaj	㊞
 kfak	𠂦
@@ -60055,7 +60062,7 @@ kfnk	𥪆
 kfnk	𰬗
 kfns	𢦹
 kfns	㌬
-kfob	𳋘
+kfob	𳋖
 kfoc	䢕
 kfoj	𬘕
 kfok	𥪌
@@ -60338,7 +60345,7 @@ kgnz	𲛼
 kgo	遜
 kgoc	𨑷
 kgoc	𰺽
-kgoc	𳄘
+kgoc	𳄗
 kgod	𦥊
 kgoe	𩛆
 kgoe	𫄟
@@ -60346,7 +60353,7 @@ kgof	𮉢
 kgoh	𡒐
 kgoj	𥎞
 kgoo	遜
-kgoo	𳅂
+kgoo	𳅁
 kgor	愻
 kgos	孫
 kgoz	𩚮
@@ -60510,7 +60517,7 @@ kgum	𲀗
 kgun	𥎅
 kgus	𬑭
 kgvj	𥎙
-kgvv	𲹛
+kgvv	𲹚
 kgw	為
 kgwd	為
 kgwk	䂆
@@ -60571,7 +60578,7 @@ khh	饒
 khhb	𠂼
 khhj	𰬁
 khhk	𰬭
-khhk	𳋔
+khhk	𳋒
 khhl	饒
 khhl	𥪯
 khhq	𫄫
@@ -60600,7 +60607,7 @@ khlv	𲵪
 khml	𬙄
 khna	𬘛
 khna	𭀼
-khnb	𳋕
+khnb	𳋓
 khnj	𩝙
 khns	𫄦
 khnu	饁
@@ -60709,7 +60716,7 @@ kiih	𰬧
 kiii	𮩏
 kiir	𫤬
 kiis	𫁭
-kiis	𳋦
+kiis	𳋤
 kij	综
 kijb	貳
 kijb	𧵸
@@ -60752,7 +60759,7 @@ kiri	弍
 kiri	𢙏
 kirj	䭢
 kirl	𮶅
-kirl	𳋣
+kirl	𳋡
 kirr	𠓞
 kiru	𱺫
 kirx	𩝯
@@ -60783,7 +60790,7 @@ kj	意
 kj	意见
 kj	意外
 kjag	𩟻
-kjag	𳁃
+kjag	𳁂
 kjai	䭘
 kjak	𤰆
 kjal	𩐫
@@ -60874,7 +60881,7 @@ kji	蹙
 kjib	㞝
 kjib	𩜂
 kjic	𫖹
-kjid	𳏡
+kjid	𳏟
 kjig	缈
 kjig	𫖗
 kjij	顣
@@ -60886,7 +60893,7 @@ kjil	㗤
 kjil	𩐣
 kjio	𦄉
 kjip	蹙
-kjip	𳊲
+kjip	𳊰
 kjiq	𧐶
 kjiq	𮙖
 kjir	慼
@@ -60903,7 +60910,7 @@ kjje	𩐳
 kjje	𩒊
 kjje	𩕆
 kjje	𩟹
-kjje	𳊳
+kjje	𳊱
 kjji	𩐡
 kjji	𩐿
 kjjj	𧡱
@@ -60958,7 +60965,7 @@ kjn	绲
 kjnb	卿
 kjng	𩛧
 kjng	𰐎
-kjnl	𳊯
+kjnl	𳊭
 kjnn	餛
 kjnn	绲
 kjnn	𡥵
@@ -61000,7 +61007,7 @@ kjri	𫵋
 kjri	𛀈
 kjrj	𧹄
 kjrj	𧹉
-kjrj	𳊿
+kjrj	𳊽
 kjrl	音
 kjrl	𩐧
 kjrl	𰒚
@@ -61021,7 +61028,7 @@ kjsb	頀
 kjsg	饆
 kjsg	𫖛
 kjsg	𫻫
-kjsg	𳋨
+kjsg	𳋦
 kjsj	𧡗
 kjsj	𪏜
 kjsk	𩐠
@@ -61065,7 +61072,7 @@ kjub	缦
 kjub	𢾑
 kjub	𮄸
 kjub	𮝽
-kjud	𳊴
+kjud	𳊲
 kjue	𬰺
 kjug	𩐮
 kjug	𩑁
@@ -61090,7 +61097,7 @@ kjw	主
 kjwc	𥪔
 kjwc	𩛿
 kjwc	𰬣
-kjwc	𳊭
+kjwc	𳊫
 kjwd	主
 kjwd	𪅑
 kjwd	𘱔
@@ -61294,7 +61301,7 @@ kkuh	虦
 kkum	盞
 kkum	𰬨
 kkum	𲜀
-kkum	𳋞
+kkum	𳋜
 kkuo	𰒳
 kkvj	纾
 kkvk	𢨞
@@ -61340,7 +61347,7 @@ klbm	剚
 klbo	𥪏
 klbo	𬨲
 klbo	𮉪
-klbo	𳋚
+klbo	𳋘
 klbr	𢚣
 klbs	𠡯
 klbs	𠡸
@@ -61655,7 +61662,7 @@ kmnl	𫁡
 kmns	𱥷
 kmoc	𬨟
 kmod	𡗯
-kmod	𳋥
+kmod	𳋣
 kmos	䭧
 kmpi	𣥝
 kmpn	𤘝
@@ -61813,7 +61820,7 @@ knsd	永
 knsd	氷
 knso	𩚳
 knso	𪪳
-knsq	𲾦
+knsq	𲾥
 knsr	汆
 knub	𭁅
 knue	𦨺
@@ -61852,7 +61859,7 @@ kobs	𩚥
 koc	辽
 kocc	过
 koce	辽
-kocg	𳄙
+kocg	𳄘
 koci	𫐟
 kocl	𬨢
 kocm	𨒖
@@ -61860,7 +61867,7 @@ kocn	𩛌
 kocr	込
 kocs	𬨷
 kocv	𨑦
-kocw	𳄛
+kocw	𳄚
 kocz	䢊
 koda	𘰲
 kodd	餣
@@ -61885,7 +61892,7 @@ kojs	𩜪
 kojs	𰌫
 kojz	𭒼
 kok	辮
-kokd	𲸱
+kokd	𲸰
 koku	𩝉
 kokx	辮
 kolj	𢧤
@@ -61951,8 +61958,8 @@ kplv	𫗓
 kplv	𱺞
 kply	𲆕
 kpmn	𪉅
-kpna	𳋡
-kpnb	𳋖
+kpna	𳋟
+kpnb	𳋔
 kpni	𱺤
 kpod	𫗔
 kpqm	𩞸
@@ -62190,7 +62197,7 @@ krld	鵒
 krld	䜬
 krld	𣍂
 krld	𧯇
-krld	𳂀
+krld	𳁿
 krle	𧯔
 krle	𨿜
 krlf	㞃
@@ -62217,7 +62224,7 @@ krlj	𧯕
 krlj	𧯖
 krlj	𬤴
 krlj	𱍜
-krlj	𳁿
+krlj	𳁾
 krlk	谼
 krlk	𧮭
 krlk	𧮺
@@ -62251,7 +62258,7 @@ krlp	䜫
 krlp	䜮
 krlq	螸
 krlq	䜯
-krlq	𳂃
+krlq	𳂂
 krlr	慾
 krlr	䜪
 krlr	𤭏
@@ -62390,7 +62397,7 @@ ksjq	㸖
 ksjr	䇎
 ksjr	𩜅
 ksjz	䓥
-ksjz	𲼛
+ksjz	𲼚
 ksk	辦
 kska	𩛘
 kska	𩛛
@@ -62398,7 +62405,7 @@ kskd	为
 kskd	𘱎
 kski	𮩙
 kskk	𰠌
-ksko	𳄚
+ksko	𳄙
 kskx	辦
 ksky	𰻦
 ksl	爺
@@ -62413,7 +62420,7 @@ kslz	𭒹
 ksm	缅
 ksmd	𠛈
 ksmj	缅
-ksmn	𳐃
+ksmn	𳐁
 ksms	𫗖
 ksmv	𥪿
 ksmw	𮲎
@@ -62557,7 +62564,7 @@ ktmd	𱉄
 ktmd	劉
 ktme	𩙔
 ktmn	𫛯
-ktmn	𳐘
+ktmn	𳐖
 ktmr	𢤐
 ktmr	𱏱
 ktoc	𩞈
@@ -62573,7 +62580,7 @@ kttu	𮩀
 ktu	孜
 ktue	𭣡
 ktul	绺
-ktul	𳋜
+ktul	𳋚
 ktum	𥂚
 ktuz	孜
 ktvt	𩜗
@@ -62583,7 +62590,7 @@ ktxi	𭓎
 ku	站
 ku	站台
 ku	站立
-kuak	𳋢
+kuak	𳋠
 kuam	䌽
 kuam	𩜓
 kuba	𩝰
@@ -62598,12 +62605,12 @@ kubw	𲜇
 kuc	绥
 kucg	𩟼
 kucj	𬘮
-kuck	𳋩
+kuck	𳋧
 kucl	𬔡
 kucn	餒
 kucn	绥
 kucn	𬔞
-kuco	𲸧
+kuco	𲸦
 kucs	餦
 kudc	𠓽
 kudg	𡦶
@@ -62672,7 +62679,7 @@ kumz	孟
 kumz	𥁂
 kun	缓
 kunb	缓
-kunb	𳋠
+kunb	𳋞
 kuno	𥪦
 kuoc	𨒓
 kuoc	𨔌
@@ -62709,7 +62716,7 @@ kuwq	𩞾
 kuxb	绶
 kuxq	𡦞
 kuxu	𱷩
-kuxx	𲸲
+kuxx	𲸱
 kuyf	𮷫
 kuyi	𩚋
 kuyn	𗅘
@@ -62755,7 +62762,7 @@ kvmd	𠟍
 kvmd	𭄁
 kvmm	氃
 kvmn	鹠
-kvmn	𳐖
+kvmn	𳐔
 kvnj	𥫎
 kvnp	𲆾
 kvo	遛
@@ -62830,7 +62837,7 @@ kwes	𫗑
 kwet	𢼠
 kwfk	𪦾
 kwfk	𬲖
-kwfo	𲺥
+kwfo	𲺤
 kwfq	𩝚
 kwgf	𩛀
 kwgq	𩟍
@@ -62840,14 +62847,14 @@ kwhi	𬙇
 kwhl	绸
 kwhl	䭇
 kwhl	𡥱
-kwhl	𳋝
+kwhl	𳋛
 kwhu	𡰛
 kwig	𣂅
 kwii	餆
 kwii	𥩼
 kwii	𱷥
 kwik	𰍤
-kwiu	𳑻
+kwiu	𳑹
 kwiv	𲱇
 kwix	𡯠
 kwj	纠
@@ -62946,7 +62953,7 @@ kwur	𤮨
 kwur	𪚠
 kwur	𮯚
 kwur	𱌾
-kwur	𳑶
+kwur	𳑴
 kwus	龏
 kwus	𪚜
 kwut	𪎁
@@ -62960,15 +62967,15 @@ kwuu	𪚚
 kwuu	𪚥
 kwuv	礱
 kwuv	𦒮
-kwuv	𳑸
+kwuv	𳑶
 kwuw	驡
 kwuw	𪚞
 kwuw	𲫋
-kwuw	𳑷
+kwuw	𳑵
 kwuy	𪚢
 kwuy	𫑰
 kwvm	𡰂
-kwvv	𲹜
+kwvv	𲹛
 kww	戊
 kwwf	𫁠
 kwwf	𮶁
@@ -63030,7 +63037,7 @@ kxjj	䫒
 kxjj	𬡼
 kxjj	𬥰
 kxjj	𰖘
-kxjj	𲸰
+kxjj	𲸯
 kxjl	𣉈
 kxjl	𦖞
 kxjl	𬇌
@@ -63170,7 +63177,7 @@ kyfl	飼
 kyfm	𨙪
 kyfm	𫑗
 kyfm	𰻟
-kyfz	𳅅
+kyfz	𳅄
 kyga	𫻽
 kygb	𠮈
 kygi	𲋔
@@ -63375,7 +63382,7 @@ lamv	呆
 lamv	㕲
 lan	唷
 lana	呟
-lana	𲹫
+lana	𲹪
 lanf	𠾍
 lang	𠻜
 lang	𮋸
@@ -63517,7 +63524,7 @@ lbes	𣪉
 lbes	𱔒
 lbey	鄹
 lbf	噔
-lbfb	𲺃
+lbfb	𲺂
 lbff	𭌡
 lbfl	𡂂
 lbfo	聧
@@ -63529,7 +63536,7 @@ lbfu	嚍
 lbfy	𡂱
 lbg	嘱
 lbge	𱕒
-lbge	𲹪
+lbge	𲹩
 lbgg	𠼯
 lbgi	𠸥
 lbgj	嘱
@@ -63695,7 +63702,7 @@ lbum	唰
 lbus	吲
 lbus	𠰀
 lbuz	𤔛
-lbvv	𳅬
+lbvv	𳅫
 lbwk	𠔛
 lbwl	𭌄
 lbwq	𠹄
@@ -64067,7 +64074,7 @@ ldsr	𡄠
 ldst	𠻦
 ldsv	呻
 ldt	聰
-ldte	𲹻
+ldte	𲹺
 ldti	𱌂
 ldtl	𡁤
 ldtr	聰
@@ -64204,7 +64211,7 @@ leib	𦗠
 leic	𫪢
 leie	耴
 leie	𦔮
-leie	𲹩
+leie	𲹨
 leih	咴
 leih	𤈨
 leih	𰈭
@@ -64243,7 +64250,7 @@ lekl	𠸘
 lekl	𭉩
 lekr	㕽
 lela	𠸒
-lele	𲹵
+lele	𲹴
 leli	𲖼
 lelt	𭍍
 lelv	𲔝
@@ -64427,6 +64434,7 @@ lfil	믛
 lfil	읗
 lfis	𦧆
 lfis	𫬓
+lfiv	𬺣
 lfiv	므
 lfiy	𫪶
 lfj	哽
@@ -64871,7 +64879,7 @@ lgj	嗔
 lgja	𲗿
 lgjb	𡀹
 lgjc	𫬟
-lgjc	𲹸
+lgjc	𲹷
 lgjf	𭇩
 lgjf	𰈢
 lgjg	𡂌
@@ -65170,7 +65178,7 @@ lhks	飸
 lhkt	嘋
 lhkt	㖫
 lhkt	𠻲
-lhkt	𲹰
+lhkt	𲹯
 lhku	𲖋
 lhkv	号
 lhkv	𫩐
@@ -65317,7 +65325,7 @@ lidk	𰈚
 lidl	嗐
 lidl	𦧮
 lidm	𱔣
-lidr	𲺄
+lidr	𲺃
 lidx	𡁍
 lidz	㗌
 lidz	㗧
@@ -65442,7 +65450,7 @@ linb	咜
 linb	𦧑
 lind	𡂃
 linj	嚐
-linr	𲹹
+linr	𲹸
 lins	𰇖
 lioc	𨓌
 liod	𬚙
@@ -65630,7 +65638,7 @@ liwm	𠸑
 liwr	𫆒
 liwr	𭉧
 liwy	哨
-liwy	𲹮
+liwy	𲹭
 lixa	啘
 lixl	𭉊
 lj	喝
@@ -65648,11 +65656,11 @@ ljaf	𠼭
 ljag	𧸫
 ljag	𭍈
 ljag	𱕉
-ljag	𳌢
+ljag	𳌠
 ljai	𠾶
 ljai	𫫩
 ljaj	啣
-ljaj	𳊼
+ljaj	𳊺
 ljak	𰒱
 ljam	巢
 ljam	剿
@@ -65702,11 +65710,11 @@ ljde	耵
 ljdj	𠼹
 ljdj	𱡩
 ljdj	𲕭
-ljdm	𳈅
+ljdm	𳈄
 ljdn	鶰
-ljdn	𳎻
+ljdn	𳎹
 ljdq	𡅏
-ljdr	𲺁
+ljdr	𲺀
 ljdv	叮
 ljdz	𰙛
 lje	順
@@ -65920,7 +65928,7 @@ ljjb	𛀩
 ljjc	嚶
 ljjd	𭍕
 ljjd	𱒘
-ljjd	𳏨
+ljjd	𳏦
 ljje	㘗
 ljje	䫟
 ljje	𦖃
@@ -66006,7 +66014,7 @@ ljob	옱
 ljob	욽
 ljoc	逞
 ljoc	䢥
-ljoc	𳄥
+ljoc	𳄤
 ljof	몶
 ljof	뭂
 ljof	옲
@@ -66398,7 +66406,7 @@ lkal	𪢘
 lkam	𰈍
 lkam	𰗪
 lkao	𠶐
-lkao	𲹱
+lkao	𲹰
 lkav	只
 lkav	叭
 lkb	啷
@@ -66618,7 +66626,7 @@ llbm	骂
 llbo	㖩
 llbo	뮺
 llbo	윶
-llbo	𳄩
+llbo	𳄨
 llbs	𠽽
 llby	𬢧
 llc	嚣
@@ -66700,7 +66708,7 @@ llfy	鄂
 llg	嘍
 llgc	嘍
 llgc	𠶭
-llgc	𲻘
+llgc	𲻗
 llgi	𠦫
 llgo	𨕣
 llgt	𡂡
@@ -66835,7 +66843,7 @@ lllb	𭽺
 lllb	𱓚
 lllc	𠻝
 llld	𣃓
-llld	𳏑
+llld	𳏏
 llle	聶
 llle	𠶻
 llle	𡄸
@@ -66888,7 +66896,7 @@ lllo	𦗻
 lllo	𨙓
 lllo	𮞬
 lllo	𮟹
-lllo	𳄴
+lllo	𳄳
 lllp	𠹜
 lllp	𠻖
 lllq	𰏬
@@ -66928,7 +66936,7 @@ lllx	㱌
 lllx	𣣦
 llly	鄵
 llly	𱔜
-llly	𳅍
+llly	𳅌
 lllz	𮲿
 llmd	𠵯
 llmg	𡀈
@@ -66943,7 +66951,7 @@ llob	𭈊
 llob	𰇫
 llob	뮱
 llob	윭
-llob	𳅆
+llob	𳅅
 lloc	𠻉
 llod	𠲂
 llod	𠼅
@@ -67038,7 +67046,7 @@ lluc	𠳴
 llug	𠁸
 llui	𤊌
 lluj	𠲢
-lluk	𲹦
+lluk	𲹥
 llul	𡄹
 llul	𡼚
 llul	𫬲
@@ -67137,7 +67145,7 @@ lmbl	𠹔
 lmbo	𭊹
 lmbr	𱓒
 lmbw	嘃
-lmbw	𲻙
+lmbw	𲻘
 lmbx	𱔏
 lmcn	唩
 lmcv	㖘
@@ -67149,7 +67157,7 @@ lmdc	𲗴
 lmdd	𭌻
 lmde	刵
 lmdi	喢
-lmdi	𲹴
+lmdi	𲹳
 lmdk	𦗽
 lmdo	𠶦
 lmdr	𭊙
@@ -67288,7 +67296,7 @@ lmxr	𪢖
 lmxx	𠼪
 lmyt	𡂻
 lmyv	㕭
-lmzs	𲻔
+lmzs	𲻓
 lmzv	𪡊
 ln	唉
 lna	吆
@@ -67317,7 +67325,7 @@ lncl	㖰
 lncl	𲕮
 lncn	𠲤
 lncn	𰌑
-lncs	𲻑
+lncs	𲻐
 lncv	𭇉
 lndg	𠸁
 lndk	𲕯
@@ -67395,7 +67403,7 @@ lnlr	𠷂
 lnls	𭉉
 lnlv	咍
 lnlv	𦧞
-lnlv	𲹬
+lnlv	𲹫
 lnlw	𪡵
 lnmd	𠰙
 lnmj	𭌒
@@ -67404,7 +67412,7 @@ lnmy	𠴎
 lnn	聯
 lnnb	吡
 lnnc	嘇
-lnnc	𲹺
+lnnc	𲹹
 lnnd	喈
 lnng	哔
 lnng	𠱢
@@ -67758,7 +67766,7 @@ lqen	𦗅
 lqfn	𭊴
 lqgj	𪢂
 lqgk	𠿿
-lqgk	𲹿
+lqgk	𲹾
 lqh	嗅
 lqhn	𭉈
 lqhq	嗅
@@ -67788,10 +67796,10 @@ lqlr	聪
 lqlw	哾
 lqlw	𬚜
 lqm	咪
-lqme	𲹭
+lqme	𲹬
 lqmg	𭌟
 lqmv	咪
-lqna	𲹲
+lqna	𲹱
 lqnb	𫩡
 lqnn	嗞
 lqnn	𦖺
@@ -68046,7 +68054,7 @@ lsdg	𭌢
 lsdk	𠔦
 lsdk	𡅲
 lsdn	𪀎
-lsdn	𳎯
+lsdn	𳎭
 lsdo	𡀥
 lsdo	𡂴
 lsdq	囒
@@ -68078,7 +68086,7 @@ lsfh	𭊮
 lsfi	嚥
 lsfi	𠳍
 lsfk	𭇻
-lsfk	𲹷
+lsfk	𲹶
 lsfo	嘆
 lsfo	嘆
 lsfo	嘆
@@ -68102,7 +68110,7 @@ lsht	𭊩
 lshu	㘕
 lshu	𡀽
 lshu	𲘚
-lshu	𲺀
+lshu	𲹿
 lsi	史
 lsia	㖼
 lsif	𫫻
@@ -68239,7 +68247,7 @@ lsth	𠹽
 lsti	𱓜
 lstl	𠺴
 lsto	𡂫
-lsto	𲺂
+lsto	𲺁
 lstq	𪢠
 lstu	𭣥
 lstw	𠴏
@@ -68259,7 +68267,7 @@ lsvt	喵
 lsvt	𭋇
 lsvu	𠶙
 lsvv	噧
-lsvv	𲹾
+lsvv	𲹽
 lswb	𠵶
 lswb	𫬺
 lswc	㖴
@@ -68274,7 +68282,7 @@ lswm	𫬉
 lswo	𪡖
 lswq	𱔚
 lswr	𰒌
-lswr	𲹽
+lswr	𲹼
 lswt	𠾎
 lswt	𦖸
 lswt	𱔻
@@ -68676,7 +68684,7 @@ lulv	임
 lulz	𱓳
 lumd	𠜏
 lumd	𠶪
-lumn	𳐆
+lumn	𳐄
 lumr	𱓈
 lumv	𠰘
 lumv	𠱄
@@ -68957,7 +68965,7 @@ luwy	𦟆
 luwy	𭊫
 lux	啰
 luxa	𫫰
-luxa	𲹼
+luxa	𲹻
 luxb	嗳
 luxb	㖟
 luxb	𦧦
@@ -68970,7 +68978,7 @@ luxt	噯
 luxx	啰
 luxx	哕
 luxx	𭗿
-luxx	𲻕
+luxx	𲻔
 luyf	𬩵
 luyf	맠
 luyf	먘
@@ -69147,7 +69155,7 @@ lwam	𠳁
 lwas	㘐
 lwat	𦕃
 lwat	𲔓
-lwat	𲻒
+lwat	𲻑
 lwbk	𭇜
 lwbo	𠭪
 lwbo	𠰸
@@ -69376,7 +69384,7 @@ lxih	焁
 lxik	啭
 lxiv	𠮟
 lxiv	𰇎
-lxiv	𲻓
+lxiv	𲻒
 lxj	噜
 lxjd	𠼓
 lxjk	䏃
@@ -69404,7 +69412,7 @@ lxlw	𠲶
 lxlw	𡁅
 lxlw	𰰃
 lxlw	𱕷
-lxlw	𲹯
+lxlw	𲹮
 lxmd	𠛱
 lxmd	𠯦
 lxmd	𦕀
@@ -69584,14 +69592,14 @@ magy	𢊇
 magy	𤸖
 magy	𧙜
 magy	𪊬
-magy	𳀱
+magy	𳀰
 mair	𬔂
 maiv	麖
 maiv	稤
 maiv	𢈴
 maiv	𣮘
 maiv	𤷦
-maiv	𳐸
+maiv	𳐶
 maj	廂
 majb	疖
 majd	𤸥
@@ -69628,7 +69636,7 @@ mako	𮟜
 maks	𤶀
 maks	𭃠
 makt	𱱤
-makt	𳐕
+makt	𳐓
 maky	廓
 maky	廓
 makz	稕
@@ -69649,7 +69657,7 @@ malm	𢉨
 malo	𨖧
 malo	𪋝
 malo	𱝇
-malo	𳄭
+malo	𳄬
 malt	瘷
 malv	𢈠
 malv	𣭴
@@ -69758,7 +69766,7 @@ mbbo	𤵧
 mbbo	𤵷
 mbbo	𥞐
 mbbo	𰣨
-mbbo	𳐦
+mbbo	𳐤
 mbbu	𥣨
 mbch	𥝦
 mbcr	𤹽
@@ -69779,7 +69787,7 @@ mbej	𭚃
 mbek	𱶮
 mbfi	𭙗
 mbfl	𤻭
-mbfo	𳐼
+mbfo	𳐺
 mbfq	𣰆
 mbfq	𤺌
 mbfs	𱋂
@@ -69795,7 +69803,7 @@ mbgq	㿏
 mbgq	𤺽
 mbgu	𤸷
 mbgy	𤹓
-mbgy	𳑀
+mbgy	𳐾
 mbhj	廜
 mbhj	𤺈
 mbhj	𭄎
@@ -69824,7 +69832,7 @@ mbka	䄶
 mbka	𭯗
 mbkd	𬓤
 mbkd	𭃇
-mbkd	𳂊
+mbkd	𳂉
 mbki	𣭥
 mbkj	𤺕
 mbkk	𥢨
@@ -69927,7 +69935,7 @@ mbrm	𣮒
 mbro	𮞨
 mbrq	𢊪
 mbrr	𫷻
-mbrv	𲹘
+mbrv	𲹗
 mbrw	𢉼
 mbrw	𤮊
 mbrx	𬅪
@@ -69954,9 +69962,9 @@ mbuo	𨘅
 mbuq	𥹺
 mbus	㽼
 mbus	𥝼
-mbus	𳐣
+mbus	𳐡
 mbut	𫸀
-mbvv	𲹝
+mbvv	𲹜
 mbw	庸
 mbwc	㣑
 mbwd	鷛
@@ -70053,7 +70061,7 @@ mcll	麢
 mcll	𪋶
 mclr	𢌔
 mclr	𥤞
-mclr	𳑆
+mclr	𳑄
 mclv	㾒
 mclv	𢇺
 mclv	𥞚
@@ -70092,7 +70100,7 @@ mcrp	瘲
 mcrp	㢔
 mcrp	𥡬
 mcrr	𭃘
-mcrr	𳐪
+mcrr	𳐨
 mcrw	瓾
 mcrw	𭚉
 mcsi	𰣢
@@ -70327,7 +70335,7 @@ mdss	𧳴
 mdte	𤺖
 mdtr	𢊕
 mdtr	𥡥
-mdtr	𳑄
+mdtr	𳑂
 mdts	𪋱
 mdtt	𥢹
 mdtu	𢈣
@@ -70447,7 +70455,7 @@ megi	㢑
 megi	𣯍
 megi	𫠕
 megn	𪽩
-megn	𳐿
+megn	𳐽
 megu	𤶙
 megx	𢈄
 meh	稚
@@ -70493,7 +70501,7 @@ mekc	府
 mekc	㾈
 mekc	𥞂
 mekc	𮙨
-mekc	𳐤
+mekc	𳐢
 mekd	㽴
 mekd	䴟
 mekd	𪎒
@@ -70539,7 +70547,7 @@ meoj	𥟔
 mepg	𧲭
 mepg	𬏢
 mepo	𫎍
-mepo	𳂎
+mepo	𳂍
 mepw	𣮲
 meri	𲠶
 merj	𰣥
@@ -70575,7 +70583,7 @@ mewy	痏
 mewy	𢈓
 mewy	𫎋
 mewy	𭙶
-mewy	𳐩
+mewy	𳐧
 mexx	㢋
 mexx	𧳤
 meyc	𗐡
@@ -70590,7 +70598,7 @@ mfbl	痦
 mfbl	𢈪
 mfbl	𥟊
 mfbl	𧳎
-mfbl	𳐮
+mfbl	𳐬
 mfbo	𭙨
 mfbp	𢈻
 mfby	諬
@@ -70932,7 +70940,7 @@ mgug	𭙾
 mgui	䝦
 mgum	𤼎
 mgum	𭾒
-mgum	𳀕
+mgum	𳀔
 mgus	𥡼
 mgvs	𥖞
 mgwt	𥢄
@@ -70981,7 +70989,7 @@ mhce	㾫
 mhce	𢉞
 mhcj	𭼓
 mhcj	𮃇
-mhcl	𳐨
+mhcl	𳐦
 mhcm	𥣝
 mhcp	𤺬
 mhdg	𲱴
@@ -71035,7 +71043,7 @@ mhjr	𪋑
 mhjr	𮃔
 mhjr	𲟊
 mhjw	㾠
-mhjw	𳐧
+mhjw	𳐥
 mhk	痔
 mhkb	㽲
 mhkc	廚
@@ -71055,7 +71063,7 @@ mhkt	稜
 mhkt	庱
 mhkt	𤷖
 mhkt	稜
-mhkt	𳐶
+mhkt	𳐴
 mhku	𫁆
 mhkw	𱶕
 mhkz	庨
@@ -71140,7 +71148,7 @@ mhwr	𥝪
 mhwt	廒
 mhwt	㾲
 mhwt	廒
-mhwt	𳑁
+mhwt	𳐿
 mhwy	𢉑
 mhwy	𣮛
 mhxq	𧴒
@@ -71432,7 +71440,7 @@ mjfv	𬓾
 mjfx	𬳜
 mjg	馥
 mjga	𩡦
-mjga	𳌃
+mjga	𳌁
 mjgb	㽽
 mjgc	𬳟
 mjge	𤹾
@@ -71461,7 +71469,7 @@ mjib	𢉌
 mjib	𥟧
 mjic	𲨑
 mjig	𢇻
-mjig	𳐐
+mjig	𳐎
 mjii	𭼮
 mjij	馪
 mjij	𫘄
@@ -71514,7 +71522,7 @@ mjkj	𫗽
 mjkj	𲱶
 mjkk	馢
 mjkl	𠷷
-mjkl	𳋿
+mjkl	𳋽
 mjkm	馚
 mjkp	𮩧
 mjkv	𩡓
@@ -71528,8 +71536,8 @@ mjl	痴
 mjlb	穝
 mjlj	𩡞
 mjll	𰣻
-mjlo	𳅉
-mjls	𲻗
+mjlo	𳅈
+mjls	𲻖
 mjlv	痴
 mjlv	疴
 mjlv	𥞍
@@ -71579,7 +71587,7 @@ mjod	𬳡
 mjol	䭲
 mjoo	𩡆
 mjpj	𩡝
-mjpj	𳌄
+mjpj	𳌂
 mjpr	𥣉
 mjps	𣮶
 mjps	𥠀
@@ -71591,7 +71599,7 @@ mjqg	𧴉
 mjqh	租
 mjqh	𩡗
 mjqj	㿀
-mjqj	𳌁
+mjqj	𳋿
 mjqk	馦
 mjqk	䭱
 mjql	麆
@@ -71613,7 +71621,7 @@ mjri	𢞱
 mjri	𢤧
 mjrj	𬳦
 mjrl	馠
-mjrl	𳐡
+mjrl	𳐟
 mjrm	𣬰
 mjro	𮞳
 mjrq	𢆍
@@ -71630,13 +71638,13 @@ mjsh	𥞆
 mjsi	𢈔
 mjsk	𩡙
 mjsl	𪊹
-mjsl	𳋽
+mjsl	𳋻
 mjsm	𥢟
 mjsm	𩡉
 mjso	㢅
 mjso	𣭿
 mjso	𤶦
-mjso	𳌀
+mjso	𳋾
 mjsu	𩡤
 mjta	𮩨
 mjtd	𩡇
@@ -71650,7 +71658,7 @@ mjub	𭃑
 mjub	𭼡
 mjuf	馡
 mjuk	馟
-mjul	𳋾
+mjul	𳋼
 mjum	瘟
 mjum	𥠺
 mjum	瘟
@@ -71703,7 +71711,7 @@ mjxq	㰱
 mjyf	𫗿
 mjyf	𮠂
 mjyf	𮷭
-mjzl	𳐫
+mjzl	𳐩
 mk	底
 mk	底线
 mk	底部
@@ -71764,7 +71772,7 @@ mkfi	𪉇
 mkfi	𲱧
 mkfl	麙
 mkfl	𥠆
-mkfl	𳐹
+mkfl	𳐷
 mkfm	𲦔
 mkfu	𡶳
 mkga	𥠊
@@ -71803,7 +71811,7 @@ mkj	麈
 mkjb	𮮌
 mkjb	𱶤
 mkje	𠟹
-mkji	𳑂
+mkji	𳑀
 mkjn	𪟓
 mkjr	癔
 mkjr	瘖
@@ -71811,7 +71819,7 @@ mkjr	䅧
 mkjr	𢉩
 mkjr	𫁈
 mkjr	𬇂
-mkjr	𳐻
+mkjr	𳐹
 mkjt	𪪜
 mkjw	麈
 mkjw	疰
@@ -71849,7 +71857,7 @@ mklv	𤶂
 mklw	稅
 mkly	廍
 mkly	𭼝
-mkly	𳐴
+mkly	𳐲
 mkmb	𤵠
 mkmd	秎
 mkmd	𠛂
@@ -71926,7 +71934,7 @@ mkvt	瘤
 mkvt	廇
 mkvt	𥠷
 mkvt	𧳽
-mkvt	𳐾
+mkvt	𳐼
 mkw	龐
 mkwb	𤵏
 mkwb	𬏡
@@ -71999,7 +72007,7 @@ mlcd	鷮
 mlce	𠙪
 mlce	𠿕
 mlce	𣪽
-mlce	𳉀
+mlce	𳈿
 mlcf	𡁗
 mlcf	𡰘
 mlcj	𰴖
@@ -72019,12 +72027,12 @@ mlcx	𣤙
 mlcy	𨝰
 mldd	𱌈
 mldn	䳂
-mldn	𳏉
-mldn	𳏊
+mldn	𳏇
+mldn	𳏈
 mlds	𤷻
 mlds	𧳦
 mlea	𦗕
-mled	𳏘
+mled	𳏖
 mleh	𲉪
 mlei	𰀻
 mlel	𬸽
@@ -72063,7 +72071,7 @@ mljj	䙼
 mljj	𢊮
 mljj	𥢢
 mljj	𪎯
-mljj	𳂑
+mljj	𳂐
 mljk	𢈮
 mljr	廳
 mljv	𫁁
@@ -72195,7 +72203,7 @@ mlwr	𥞏
 mlwr	𱱎
 mlwr	免
 mlwr	免
-mlwr	𳂋
+mlwr	𳂊
 mlwy	㾓
 mlwy	䅌
 mlxa	𱱮
@@ -72343,7 +72351,7 @@ mmlv	貂
 mmlv	𢈆
 mmlv	𤵪
 mmlv	𰚕
-mmlz	𳂐
+mmlz	𳂏
 mmm	毛
 mmm	⽑
 mmm	𛃘
@@ -72473,7 +72481,7 @@ mnad	𠚦
 mnag	広
 mnag	𢇝
 mnah	私
-mnai	𳑅
+mnai	𳑃
 mnar	丢
 mnas	𬻭
 mnbb	疕
@@ -72520,7 +72528,7 @@ mnjp	𪪧
 mnjr	𪊨
 mnjr	𭼖
 mnjw	𤶶
-mnjw	𳐳
+mnjw	𳐱
 mnk	痠
 mnka	𰣫
 mnkc	𤸵
@@ -72544,7 +72552,7 @@ mnlv	𣭆
 mnma	𮃡
 mnmd	𱱑
 mnmm	𣭹
-mnmn	𳐌
+mnmn	𳐊
 mnn	鸟
 mnn	⻦
 mnn	
@@ -72835,7 +72843,7 @@ mpxx	𧻬
 mpyb	㾞
 mpyg	庮
 mpyh	𥟁
-mpyl	𳐭
+mpyl	𳐫
 mpza	𨄬
 mpzb	𪽰
 mpzg	𫷭
@@ -72916,7 +72924,7 @@ mql	税
 mqlr	𱶚
 mqlw	税
 mqlw	痥
-mqlw	𳂌
+mqlw	𳂋
 mqm	麋
 mqma	糜
 mqmg	𢈍
@@ -73046,7 +73054,7 @@ mqwj	𢋕
 mqwj	𨤓
 mqwl	𥢀
 mqwn	𥡚
-mqwo	𳄧
+mqwo	𳄦
 mqwp	𱱱
 mqws	𬇈
 mqwx	瘚
@@ -73099,7 +73107,7 @@ mrfa	𱉸
 mrfa	𲅊
 mrfc	稐
 mrfc	𤷔
-mrfc	𳐷
+mrfc	𳐵
 mrfj	廥
 mrfj	癐
 mrfj	䢈
@@ -73141,7 +73149,7 @@ mrgz	𧳸
 mrhb	㾑
 mrhg	𢈈
 mrhh	秴
-mrhl	𳐬
+mrhl	𳐪
 mrhm	𣭝
 mrht	𤵞
 mrhz	𧳇
@@ -73153,7 +73161,7 @@ mrig	応
 mrih	𢘳
 mrij	𢋐
 mrik	𮮐
-mril	𳐢
+mril	𳐠
 mrim	𠞙
 mrim	𲟲
 mrin	𤶊
@@ -73167,7 +73175,7 @@ mriv	𤵲
 mriv	𮮑
 mrj	痊
 mrjb	𤴦
-mrjc	𳄗
+mrjc	𳄖
 mrje	𩖆
 mrjf	𠝗
 mrjg	𫷥
@@ -73187,7 +73195,7 @@ mrkb	㡵
 mrkb	㾉
 mrkb	𣭔
 mrkb	𫥻
-mrkb	𳐥
+mrkb	𳐣
 mrkd	秇
 mrkd	𤴯
 mrkg	㢐
@@ -73262,7 +73270,7 @@ mrnl	𪐓
 mrnm	㓿
 mrnm	䵜
 mrnm	𪐎
-mrnm	𳑊
+mrnm	𳑈
 mrnn	黐
 mrnn	𪏸
 mrnn	𪐐
@@ -73273,7 +73281,7 @@ mrno	𪏶
 mrno	𪐍
 mrno	𪐔
 mrno	𰻿
-mrno	𳑋
+mrno	𳑉
 mrnp	䵓
 mrnp	𤛿
 mrnq	𧒁
@@ -73287,7 +73295,7 @@ mrnt	𪐒
 mrnu	𪐖
 mrnv	䵗
 mrnv	𪐈
-mrnv	𳑌
+mrnv	𳑊
 mrnw	𪐉
 mrnx	䵙
 mrnx	𪐀
@@ -73347,7 +73355,7 @@ mscl	𥤜
 msco	㢍
 msco	𤸡
 msco	𥠚
-msco	𳐺
+msco	𳐸
 msd	癀
 msdb	𥀱
 msdb	𫸌
@@ -73368,7 +73376,7 @@ msdr	𬔄
 msds	𠢹
 msds	𢌊
 msdu	𫸋
-msdv	𳎍
+msdv	𳎋
 msdw	𫸊
 msdy	鄺
 mse	鹱
@@ -73540,7 +73548,7 @@ msmm	𣮻
 msmm	𣰔
 msmm	𥟪
 msmv	𥣑
-msmz	𳂍
+msmz	𳂌
 msoc	𤶒
 msoc	𫸚
 msod	稬
@@ -73740,7 +73748,7 @@ mubg	𤵶
 mubh	𥝒
 mubj	瘧
 mubj	𪪛
-mubj	𳂏
+mubj	𳂎
 mubk	𢈏
 mubm	𲨄
 mubo	𢇮
@@ -73844,7 +73852,7 @@ mujz	𤷘
 mujz	𧳝
 muka	𪊻
 mukc	𰚛
-mukc	𳐲
+mukc	𳐰
 muke	𢉚
 muke	𤺝
 muke	𬏝
@@ -73904,7 +73912,7 @@ muqk	𤻫
 muqk	𥣈
 muqk	𪋫
 muql	麒
-muql	𳐵
+muql	𳐳
 muqn	𬸒
 muqo	穙
 muqo	𧴌
@@ -73981,7 +73989,7 @@ mvcl	𨤯
 mvcn	𰨭
 mvdi	䝠
 mvdi	䴨
-mvdi	𳐽
+mvdi	𳐻
 mvdn	䳯
 mvea	𨤹
 mveb	𱶖
@@ -74098,7 +74106,7 @@ mvss	𫦿
 mvsu	𡼉
 mvsv	𥣭
 mvsy	𰻽
-mvsy	𳅪
+mvsy	𳅩
 mvta	𪎟
 mvtd	𲰸
 mvtg	𢇶
@@ -74273,14 +74281,14 @@ mwjr	毥
 mwjr	𤶇
 mwjs	瘵
 mwjs	穄
-mwjw	𳐯
+mwjw	𳐭
 mwk	豹
 mwka	𥞕
 mwkc	𤶡
 mwkd	豹
 mwkd	䄪
 mwkd	𰄛
-mwkf	𳑃
+mwkf	𳑁
 mwkh	𠚉
 mwkq	𠙺
 mwkq	𬼈
@@ -74368,7 +74376,7 @@ mxaj	𠝽
 mxaj	𪎛
 mxaj	𭼉
 mxak	𥞢
-mxak	𲻚
+mxak	𲻙
 mxar	𰣸
 mxb	稳
 mxba	𣝟
@@ -74396,7 +74404,7 @@ mxgy	秾
 mxhn	𤹒
 mxib	𤶤
 mxid	𭃃
-mxio	𳄼
+mxio	𳄻
 mxip	𨃾
 mxis	𠦿
 mxiv	称
@@ -74432,7 +74440,7 @@ mxlv	𣭨
 mxlv	𮵡
 mxlw	䅋
 mxlw	𮭵
-mxlw	𳐱
+mxlw	𳐯
 mxmh	𢋈
 mxmh	𱱩
 mxnn	𧴀
@@ -74459,7 +74467,7 @@ mxsp	𧴛
 mxsq	𰤇
 mxsy	𧳊
 mxsy	𰣮
-mxsy	𳐰
+mxsy	𳐮
 mxte	𪪐
 mxtu	𭯟
 mxub	𤹹
@@ -74698,7 +74706,7 @@ nala	𣕷
 nalc	濑
 nald	𪄠
 nald	𪆟
-nald	𳏻
+nald	𳏹
 nalg	𣹾
 nalg	𤅭
 nalj	瀨
@@ -75391,7 +75399,7 @@ ndna	濼
 ndnb	𩾕
 ndnb	𣴡
 ndne	𫥡
-ndne	𳄌
+ndne	𳄋
 ndnf	鵏
 ndnf	𭲽
 ndng	鳱
@@ -76129,7 +76137,7 @@ nhjf	𪳼
 nhjf	𲧄
 nhji	㵭
 nhji	𱚩
-nhjj	𳂪
+nhjj	𳂩
 nhjk	𤁛
 nhjo	𬩅
 nhjq	𣶝
@@ -76436,7 +76444,7 @@ niis	𤃨
 niis	𩉀
 niit	灐
 niiv	𱦫
-niiv	𳅭
+niiv	𳅬
 niiw	𰝘
 nij	泞
 nijb	漃
@@ -76621,7 +76629,7 @@ njdn	𪁬
 njdn	𪂌
 njdn	𪂔
 njdn	𪃰
-njdn	𳎼
+njdn	𳎺
 njds	汀
 njds	𠢼
 njdv	𲪘
@@ -76696,7 +76704,7 @@ njib	淑
 njib	𠤑
 njib	𠤕
 njic	𣺂
-njid	𳏮
+njid	𳏬
 njig	渺
 njig	𲩻
 njij	𤂔
@@ -76803,7 +76811,7 @@ njos	𱨂
 njpg	𣵀
 njpg	涅
 njpi	𣷐
-njpi	𳀤
+njpi	𳀣
 njpl	㵆
 njpl	𣽋
 njps	湦
@@ -76951,7 +76959,7 @@ nkfm	𱧗
 nkfr	澸
 nkfr	𣺭
 nkfs	挙
-nkfs	𳁤
+nkfs	𳁣
 nkfu	𬐴
 nkfw	𣺁
 nkg	浐
@@ -77067,7 +77075,7 @@ nkns	𱦔
 nknv	滃
 nkoc	㳡
 nkoc	𨓎
-nkoc	𳄤
+nkoc	𳄣
 nkof	𬇥
 nkoh	𭱜
 nkoj	𭲷
@@ -77138,7 +77146,7 @@ nkwu	𪚒
 nkwy	湇
 nkwy	洕
 nkwy	浳
-nkwy	𲺟
+nkwy	𲺞
 nkxi	汦
 nkxj	涽
 nkxk	泜
@@ -77316,7 +77324,7 @@ nlnb	喸
 nlng	𭱌
 nlni	𭳝
 nlnn	𫨩
-nlnn	𲺳
+nlnn	𲺲
 nlnw	㶌
 nlob	浥
 nloc	迨
@@ -77608,7 +77616,7 @@ nndm	𱊐
 nndn	𪀨
 nndn	𫚰
 nndn	𮬰
-nndn	𳎹
+nndn	𳎷
 nndr	𤭧
 nnds	勓
 nndt	𨰱
@@ -78185,8 +78193,8 @@ npuj	𤚷
 npum	𣾅
 npum	𣾥
 npvv	𣸝
-npvv	𲹖
-npvv	𳍰
+npvv	𲹕
+npvv	𳍮
 npw	洗
 npwa	㳩
 npwc	𪷽
@@ -78324,7 +78332,7 @@ nqnu	𬇿
 nqoa	淃
 nqoa	𣼃
 nqoc	㴹
-nqoc	𳄜
+nqoc	𳄛
 nqod	渼
 nqod	浂
 nqod	𪪅
@@ -79193,7 +79201,7 @@ nuke	㳶
 nuke	𱥶
 nuke	𱦓
 nuke	𱩴
-nuke	𳈿
+nuke	𳈾
 nuki	𣿄
 nukj	𣷪
 nukj	𤂓
@@ -79710,7 +79718,7 @@ nxdn	鴬
 nxdn	𬈒
 nxdo	𪷦
 nxds	𬰣
-nxdt	𳆳
+nxdt	𳆲
 nxdx	𣽌
 nxe	沉
 nxef	𣳞
@@ -79960,7 +79968,7 @@ oaam	㚞
 oaam	𮸑
 oaat	𦇕
 oaat	𫄒
-oabj	𲸛
+oabj	𲸚
 oabo	𦆌
 oaci	𬗘
 oacj	𱺊
@@ -80117,7 +80125,7 @@ obfo	𰾥
 obfo	𲸆
 obfq	镫
 obfs	𦇯
-obfu	𲸤
+obfu	𲸣
 obg	夷
 obgd	夷
 obgd	𡗝
@@ -80128,7 +80136,7 @@ obgl	𦀲
 obgp	𰫝
 obgp	𲇶
 obgs	𥾏
-obgu	𲸚
+obgu	𲸙
 obgy	𦄄
 obhb	𠭵
 obhe	𣪐
@@ -80203,7 +80211,7 @@ obps	紴
 obqc	𫄄
 obqk	繍
 obqs	𦂤
-obrc	𲸩
+obrc	𲸨
 obre	䊽
 obre	𰽤
 obsm	𬭫
@@ -80253,7 +80261,7 @@ occn	𡝉
 occn	𫰹
 ocdj	𦅑
 oceh	𫔓
-oceh	𲸪
+oceh	𲸩
 oces	𥿑
 ocf	铜
 ocfe	𦆓
@@ -80317,14 +80325,14 @@ ocsr	𰿂
 ocss	䋞
 ocsu	𦂴
 octe	𦅙
-ocvl	𲸥
+ocvl	𲸤
 ocvt	镭
 ocvt	𦆙
 ocyj	𰽳
 od	锦
 odag	𦆚
 odam	𦃨
-odam	𲸖
+odam	𲸕
 odaq	𮉚
 odbj	铂
 odbl	𦦺
@@ -80668,7 +80676,7 @@ offr	릆
 offw	릅
 ofgp	𰫞
 ofgp	𰽦
-ofgv	𲸦
+ofgv	𲸥
 ofh	夸
 ofhb	𱡗
 ofhc	𱘼
@@ -80894,7 +80902,7 @@ ogcp	𡘎
 ogcq	䋻
 ogdf	𥿙
 ogdo	𬗺
-ogdo	𳇲
+ogdo	𳇱
 ogeg	𬬳
 ogem	䋦
 ogem	𰾄
@@ -80980,7 +80988,7 @@ ogso	逩
 ogso	𥾷
 ogso	𫯩
 ogso	奔
-ogso	𳇫
+ogso	𳇪
 ogst	𮈦
 ogub	䋏
 ogub	𡗸
@@ -81042,7 +81050,7 @@ ohhk	䋽
 ohhk	𱹱
 ohhl	繞
 ohhm	𠝥
-ohho	𳄦
+ohho	𳄥
 ohhq	綟
 ohhq	𬭜
 ohhr	㥣
@@ -81151,7 +81159,7 @@ oibd	𬉵
 oibj	铛
 oibj	𤆔
 oibj	𦆯
-oibl	𲸙
+oibl	𲸘
 oibq	𦆥
 oibz	𰞀
 oic	锁
@@ -81175,7 +81183,7 @@ oien	𬭎
 oien	綋
 oieo	𰫺
 oier	𦄲
-oiet	𲸘
+oiet	𲸗
 oif	锭
 oiff	縇
 oiff	𲈎
@@ -81187,7 +81195,7 @@ oifl	綄
 oifp	綻
 oifp	锭
 oifq	𮸜
-oifs	𳇳
+oifs	𳇲
 oig	钞
 oigg	𮈶
 oigh	𫄗
@@ -81223,7 +81231,7 @@ oijd	紵
 oijd	𬬾
 oijk	𲈉
 oijq	𬗦
-oijq	𳇮
+oijq	𳇭
 oijs	綜
 oijs	𫓽
 oika	𮈃
@@ -81251,7 +81259,7 @@ oinb	紽
 oinr	𮈾
 oins	𦀋
 oiod	𱘰
-oioi	𲸨
+oioi	𲸧
 oiol	𮈽
 oipg	𦁈
 oirb	𠄧
@@ -81264,9 +81272,9 @@ oirl	𫃻
 oirq	𮉒
 oiru	䌏
 oirz	𱍻
-oisa	𲸢
+oisa	𲸡
 oisc	𮸠
-oish	𳇵
+oish	𳇴
 oisi	𫟂
 oisj	𲈆
 oisk	𦆼
@@ -81372,7 +81380,7 @@ ojbj	뤁
 ojbo	𫃦
 ojbo	롲
 ojbo	룾
-ojbp	𳇯
+ojbp	𳇮
 ojbs	𦁀
 ojbu	𮉗
 ojbz	𰶸
@@ -81574,7 +81582,7 @@ ojmd	𠝩
 ojmd	𰥎
 ojmd	𰥖
 ojmj	钼
-ojml	𲸬
+ojml	𲸫
 ojmm	𣮦
 ojmn	𫛾
 ojn	锟
@@ -81882,7 +81890,7 @@ okjw	紸
 okjw	𰽯
 okjx	𥾽
 okjz	𲈗
-okjz	𲸓
+okjz	𲸒
 okk	織
 okkg	綫
 okkj	織
@@ -81917,7 +81925,7 @@ okns	𮸃
 oknv	𬭩
 okoc	迏
 okoc	𰽾
-okoc	𳄞
+okoc	𳄝
 okoi	𬻼
 okok	𡙒
 okpg	𥿮
@@ -81982,7 +81990,7 @@ ol	钟
 ol	钟爱
 ol	钟表
 olab	𠀧
-olag	𳀳
+olag	𳀲
 olaj	𘧈
 olbb	镊
 olbi	𦆜
@@ -82291,7 +82299,7 @@ onjr	𰾓
 onk	镈
 onkc	縛
 onkc	镈
-onki	𲸠
+onki	𲸟
 onkq	𫯶
 onkt	𦀷
 onkt	𮸏
@@ -82390,7 +82398,7 @@ oohj	𦅁
 ooht	𲙐
 ooj	锜
 oojb	賛
-oojb	𲸡
+oojb	𲸠
 oojc	𲋂
 oojd	𪩫
 oojd	𱈻
@@ -82525,7 +82533,7 @@ opns	𰾁
 opoc	𨕏
 opoi	𲸎
 opoo	𮉓
-opoo	𲸕
+opoo	𲸔
 oppg	
 oppi	𦁡
 oppt	𥜹
@@ -82585,7 +82593,7 @@ oqdb	𰤰
 oqdd	𡘤
 oqdd	𫃨
 oqdm	𠞒
-oqdn	𳎲
+oqdn	𳎰
 oqds	𢍤
 oqeh	𨾮
 oqei	継
@@ -82656,7 +82664,7 @@ oqmd	𠛞
 oqmm	𱥠
 oqmn	𫛥
 oqms	䋛
-oqmt	𳆂
+oqmt	𳆁
 oqng	𢆎
 oqnn	镃
 oqnn	𬗭
@@ -82719,7 +82727,7 @@ oqus	𫯟
 oqut	𬭯
 oquu	𥂱
 oquu	𧗑
-oqwa	𲸣
+oqwa	𲸢
 oqwc	𥿬
 oqwf	𡙳
 oqwk	𫃳
@@ -82798,7 +82806,7 @@ orjw	絟
 ork	铃
 orka	紒
 orka	𡗦
-orka	𳇪
+orka	𳇩
 orkb	铃
 orkb	紷
 orkc	𭔲
@@ -82866,7 +82874,7 @@ oruh	𦇲
 orus	𡗟
 orus	𥾓
 orus	𦆤
-orvs	𳇬
+orvs	𳇫
 orvv	𦅖
 oryf	𨛑
 os	错
@@ -82878,7 +82886,7 @@ osam	铩
 osam	緤
 osam	𰫢
 osam	𰾕
-osam	𳇭
+osam	𳇬
 osba	𲸉
 osbf	𬘎
 osbk	𦂓
@@ -82910,7 +82918,7 @@ osfa	𣠮
 osfa	𦁜
 osfa	𦨅
 osfe	𡚟
-osfe	𲸭
+osfe	𲸬
 osff	𡘲
 osfi	𥾰
 osfl	𦆏
@@ -82923,7 +82931,7 @@ oshb	𦆶
 oshj	䦃
 oshj	𦅷
 oshj	𮉊
-oshs	𳇱
+oshs	𳇰
 oshu	𫠁
 osi	钳
 osir	钳
@@ -82980,7 +82988,7 @@ oss	⺒
 oss	⺯
 oss	⽷
 oss	
-ossa	𲸜
+ossa	𲸛
 ossd	鷞
 ossg	𦅠
 ossi	䋂
@@ -83019,7 +83027,7 @@ oswt	繖
 oswt	𦆛
 oswt	𫔌
 oswt	𰾞
-osxa	𳇰
+osxa	𳇯
 osxe	𬭒
 osxj	𮈙
 osxk	𮸝
@@ -83064,7 +83072,7 @@ othj	𫟺
 othj	𲂶
 oths	絯
 oti	終
-otic	𲸟
+otic	𲸞
 otij	𦈆
 otil	𲞬
 otir	終
@@ -83228,7 +83236,6 @@ ougc	𫔃
 ougd	𡗷
 ouge	𬗢
 ougj	𨱃
-ougk	𲸑
 ougt	𰿀
 ougu	𰾫
 ougw	𢁍
@@ -83268,7 +83275,7 @@ oul	钻
 oull	랑
 oull	량
 oull	링
-oulo	𳇴
+oulo	𳇳
 oulv	钻
 oulv	𥿕
 oulv	람
@@ -83326,7 +83333,7 @@ ouqo	镤
 ouqo	𦄾
 ouqs	綨
 ouqv	𬘑
-ourc	𲸒
+ourc	𲸑
 oure	랏
 oure	럇
 oure	릿
@@ -83371,7 +83378,7 @@ ouuf	럪
 ouuh	랟
 ouuh	럗
 ouuj	𩖈
-ouuj	𲸞
+ouuj	𲸝
 ouuk	𦇌
 ouuk	𮉜
 ouul	랞
@@ -83521,7 +83528,7 @@ ovuj	钚
 ovus	紑
 ovv	镠
 ovvb	𱆦
-ovvb	𲸮
+ovvb	𲸭
 ovvc	繆
 ovvc	镠
 ovvd	䌌
@@ -83707,7 +83714,7 @@ oxlk	纔
 oxlk	镵
 oxlo	𮉅
 oxls	𦂔
-oxlt	𲸗
+oxlt	𲸖
 oxlv	铭
 oxlv	㚚
 oxlv	𥿨
@@ -83807,7 +83814,7 @@ oylt	𰾳
 oylv	𠯶
 oypi	𥿇
 oypq	𦄦
-oyps	𲸔
+oyps	𲸓
 oypw	縃
 oyqt	𦅭
 oyre	ㅩ
@@ -83894,11 +83901,11 @@ pakt	犜
 pakz	醇
 pakz	犉
 palc	𪘨
-palc	𳃧
+palc	𳃦
 pale	𰭸
 palg	𤚮
 palj	䠭
-pall	𳃮
+pall	𳃭
 paln	𨣳
 palo	𨄞
 palv	踈
@@ -83984,7 +83991,7 @@ pbag	踺
 pbak	𨀞
 pbak	𬦫
 pbak	𰼅
-pbak	𳅖
+pbak	𳅕
 pbat	𲄓
 pbba	𨢆
 pbba	𬧉
@@ -84048,7 +84055,7 @@ pbjm	𣥸
 pbjm	𤚤
 pbka	𧿳
 pbkc	𲃺
-pbkc	𳃓
+pbkc	𳃒
 pbkd	䟕
 pbki	𲃥
 pbkq	𨃣
@@ -84062,7 +84069,7 @@ pbnb	跜
 pbnb	𤙌
 pbnb	𲰪
 pbnc	𬦵
-pbnk	𳁒
+pbnk	𳁑
 pbno	𨘭
 pbnq	䠱
 pbnq	𪚌
@@ -84103,7 +84110,7 @@ pbub	𨀆
 pbuc	𨄰
 pbum	𨡇
 pbus	𧿯
-pbus	𳃋
+pbus	𳃊
 pbvm	𪙢
 pbwl	𭷫
 pbww	䠇
@@ -84122,17 +84129,17 @@ pc	制度
 pc	制定
 pcat	𨇂
 pcb	贾
-pcba	𳃙
+pcba	𳃘
 pcbg	贡
 pcbi	𨇙
 pcbo	𪗵
-pcbo	𳃐
+pcbo	𳃏
 pcbx	贾
 pcbz	𬦥
 pcc	齒
 pcc	⿒
-pcc	𳑫
-pccj	𳃪
+pcc	𳑩
+pccj	𳃩
 pcdn	䳩
 pcdt	𮗊
 pceh	𤜅
@@ -84147,7 +84154,7 @@ pcfl	𤙓
 pcfl	𨀜
 pcfl	𪘍
 pcg	覆
-pcgk	𳃦
+pcgk	𳃥
 pcgo	𧠅
 pcgt	覆
 pcgt	𧠃
@@ -84214,7 +84221,7 @@ pcpl	𬪳
 pcpn	𰐦
 pcpp	蹝
 pcpy	𫹉
-pcqh	𳁓
+pcqh	𳁒
 pcqm	𬌧
 pcqm	𰸗
 pcqm	𲧳
@@ -84267,7 +84274,7 @@ pdda	𨇴
 pddj	躓
 pddj	齭
 pddj	𬧋
-pddj	𳅣
+pddj	𳅢
 pddm	𨤉
 pdeh	躙
 pdfi	䟬
@@ -84322,7 +84329,7 @@ pdkc	𲆭
 pdkd	跅
 pdkg	𤛞
 pdkj	𨆮
-pdkl	𳂂
+pdkl	𳂁
 pdkx	辪
 pdmc	醲
 pdmc	𪘶
@@ -84337,7 +84344,7 @@ pdna	躒
 pdna	䤕
 pdng	䲨
 pdni	𩾰
-pdnl	𳃰
+pdnl	𳃯
 pdns	䲼
 pdns	𨡹
 pdns	𬎺
@@ -84357,7 +84364,7 @@ pdrj	𨇚
 pdsn	䠘
 pdsn	𤚪
 pdsr	𪙋
-pdsr	𳃱
+pdsr	𳃰
 pdss	𲰨
 pdst	𨢼
 pdte	𭷴
@@ -84416,7 +84423,7 @@ peds	𨁬
 peeb	𨇯
 peej	𤘷
 peep	𪘡
-pefd	𳃫
+pefd	𳃪
 pefs	𨂯
 pefx	𩗏
 pegc	𬦻
@@ -84458,7 +84465,7 @@ pejx	𧟣
 pejz	𧾾
 pek	巩
 peka	𣑦
-peka	𳃑
+peka	𳃐
 pekb	𫻐
 pekc	跗
 pekc	𭔫
@@ -84484,7 +84491,7 @@ pekq	蛩
 pekq	䊄
 pekr	恐
 pekr	㼦
-pekr	𳃍
+pekr	𳃌
 peks	鞏
 pekt	銎
 pekv	䂬
@@ -84507,7 +84514,7 @@ pena	𰏊
 penb	𧿕
 penu	𨡿
 peoe	𱌝
-peoe	𳃎
+peoe	𳃍
 peof	巬
 pepc	𪚆
 pepg	𮛏
@@ -84515,7 +84522,7 @@ pepg	𰠯
 pepw	𨡽
 peqc	𧉨
 peqm	𮈀
-perc	𳃜
+perc	𳃛
 perj	𲭜
 perp	𨇏
 perp	𪙸
@@ -84837,7 +84844,7 @@ phbo	歫
 phbo	䣰
 phbo	䶙
 phbp	𣦩
-phbq	𲿰
+phbq	𲿯
 phby	䛒
 phc	蹁
 phcb	𲃫
@@ -84848,7 +84855,7 @@ phcj	𭭦
 phcn	㚽
 phco	𨆩
 phcp	𰸫
-phdl	𳃘
+phdl	𳃗
 phdn	䲾
 phdn	𩿸
 phdn	𪃋
@@ -84886,7 +84893,7 @@ phjb	䶦
 phjb	𨢦
 phjj	䚈
 phjj	𨇛
-phjj	𳃯
+phjj	𳃮
 phjr	踷
 phjr	醏
 phjr	𣦈
@@ -84915,14 +84922,14 @@ phkq	𧎬
 phkt	踜
 phkt	𣥻
 phkt	𪘵
-phkt	𳅝
+phkt	𳅜
 phku	𬌣
 phkz	酵
 phkz	踍
 phll	醧
 phll	𤛐
 phll	𨄅
-phlo	𳃡
+phlo	𳃠
 phlv	㸵
 phlv	𧿽
 phlv	𨀙
@@ -84959,10 +84966,10 @@ phri	㤍
 phrj	𰏉
 phrk	𲁊
 phrl	𤛷
-phrl	𳅡
+phrl	𳅠
 phrw	甄
 phsi	𬪧
-phsi	𳃈
+phsi	𳃇
 phsj	𫶱
 phsl	𪙛
 pht	牡
@@ -85013,9 +85020,9 @@ pic	频
 picb	𫍐
 picg	颦
 picn	𗍥
-picn	𳅕
+picn	𳅔
 picq	𮸺
-picq	𲿼
+picq	𲿻
 picy	频
 pidl	躥
 pidl	犗
@@ -85027,7 +85034,7 @@ pidt	𨇶
 pidz	𪙜
 pidz	𰙱
 pieh	𨄤
-pieh	𳅠
+pieh	𳅟
 piej	蹜
 piej	𤘺
 piej	𨢲
@@ -85044,7 +85051,7 @@ pifk	𬹷
 pifl	𨁚
 pifl	𨠻
 pifp	𨂌
-pifs	𳃤
+pifs	𳃣
 pigi	酙
 pigi	㸯
 pigi	𤯘
@@ -85156,7 +85163,7 @@ pisi	𨣛
 pisn	𤙽
 pisp	𨇥
 piss	𪽄
-pisy	𳅚
+pisy	𳅙
 pisz	䠀
 pitl	𨂥
 pitl	𪘺
@@ -85173,7 +85180,7 @@ piwe	𭮿
 piwf	𪘫
 piwj	𨆾
 piwr	𨣭
-piwr	𳃛
+piwr	𳃚
 piwy	踃
 piwy	𤙜
 piwy	𨡀
@@ -85269,7 +85276,7 @@ pjii	𤑶
 pjio	𨖸
 pjiv	𣥶
 pjiv	𨀚
-pjiz	𳃏
+pjiz	𳃎
 pjjb	躩
 pjjb	𨈍
 pjjc	𧢟
@@ -85343,7 +85350,7 @@ pjoc	𨕐
 pjoc	𲆀
 pjoe	𭑦
 pjox	𬧆
-pjox	𳅛
+pjox	𳅚
 pjpd	𰕤
 pjps	醒
 pjps	𫠛
@@ -85368,7 +85375,7 @@ pjsg	蹕
 pjsg	𨢡
 pjsi	𥘣
 pjsl	勡
-pjsl	𳑮
+pjsl	𳑬
 pjsn	犦
 pjsn	䤖
 pjsn	𨇅
@@ -85439,10 +85446,10 @@ pkdd	𨃸
 pkdj	𣂛
 pkdn	鴸
 pkeh	𨾲
-pkeh	𳃢
+pkeh	𳃡
 pkei	䟠
 pkei	𰠬
-pkei	𳃊
+pkei	𳃉
 pkej	𠙎
 pkes	𬆤
 pkez	𧾿
@@ -85486,7 +85493,7 @@ pkgg	𰠵
 pkgl	蹫
 pkgl	䤎
 pkgn	牫
-pkgo	𳃞
+pkgo	𳃝
 pkgp	㹌
 pkgp	䟥
 pkgp	𨄉
@@ -85512,7 +85519,7 @@ pkiw	𣦋
 pkiy	䣧
 pkiz	𧿑
 pkjb	鼄
-pkje	𳃩
+pkje	𳃨
 pkji	䠞
 pkjj	𮜦
 pkjm	𥅵
@@ -85532,7 +85539,7 @@ pkl	醅
 pklc	䶘
 pkld	𬹣
 pklf	𰼊
-pklf	𳑴
+pklf	𳑲
 pkli	𰩠
 pkls	𭺴
 pklv	醅
@@ -85561,7 +85568,7 @@ pkoc	𨒲
 pkos	𬗋
 pkpk	𫑼
 pkpo	𲧏
-pkpt	𳅢
+pkpt	𳅡
 pkqk	𣞊
 pkqq	𧑤
 pkrc	𣘈
@@ -85571,7 +85578,7 @@ pkri	𲃧
 pkri	𲟺
 pkrl	𨁖
 pkrl	𲎢
-pkrl	𳅘
+pkrl	𳅗
 pkrw	㼡
 pkrw	𬧜
 pksi	𨟳
@@ -85616,7 +85623,7 @@ pkxz	𨁅
 pkyf	邾
 pkyi	𨠽
 pkyi	𲏟
-pkyi	𳑭
+pkyi	𳑫
 pkzx	𡥟
 pl	告
 pl	告诉
@@ -85650,7 +85657,7 @@ plgc	𨄜
 plgo	𢁏
 plhk	𰢬
 plhu	𥂷
-plhw	𳊙
+plhw	𳊗
 plif	𭣂
 plih	𬪴
 plij	𩔤
@@ -85693,7 +85700,7 @@ pllt	䶫
 pllv	𣥧
 pllv	𬌞
 pllw	𣥼
-pllw	𳑯
+pllw	𳑭
 plmd	𠜯
 plmd	𲃬
 plmh	𥞣
@@ -85841,7 +85848,7 @@ pmlz	蹗
 pmma	𮜏
 pmmd	𮛝
 pmmi	𣥡
-pmmm	𳃥
+pmmm	𳃤
 pmmn	牦
 pmmn	𤛺
 pmms	𣬺
@@ -85891,9 +85898,9 @@ pmvm	𨂹
 pmvs	𥑱
 pmvs	𨇢
 pmvs	𱵀
-pmwj	𳃨
+pmwj	𳃧
 pmwn	𤛼
-pmwr	𳃒
+pmwr	𳃑
 pmxx	𨄼
 pmyy	𮠝
 pmyz	跃
@@ -85908,7 +85915,7 @@ pnam	柴
 pnat	𰘐
 pnau	𱜶
 pnb	此
-pnbb	𳅜
+pnbb	𳅛
 pnbc	齔
 pnbi	此
 pnbi	𣥅
@@ -85957,7 +85964,7 @@ pnit	𭭰
 pnj	踏
 pnjb	貲
 pnjb	𨢖
-pnjd	𳏴
+pnjd	𳏲
 pnje	蹞
 pnje	𨢣
 pnje	𩑽
@@ -86043,7 +86050,7 @@ pnoc	𰸙
 pnoc	𲭢
 pnod	𡘌
 pnos	紫
-pnov	𲸫
+pnov	𲸪
 pnpc	𪗶
 pnpg	𨀹
 pnpj	𨆺
@@ -86205,7 +86212,7 @@ pp	酷热
 ppam	𨃙
 ppbj	𰐤
 ppbk	𰼕
-ppcb	𳃔
+ppcb	𳃓
 ppcc	𪙹
 ppcf	𬆀
 ppcm	𨡘
@@ -86309,7 +86316,7 @@ ppzc	齪
 ppzi	𭭤
 ppzx	𬦭
 ppzz	踀
-ppzz	𳃕
+ppzz	𳃔
 pq	蹲
 pq	蹲点
 pqak	跘
@@ -86416,7 +86423,7 @@ pqto	𨣢
 pqts	䠔
 pqtu	𭤆
 pqtu	𲁍
-pqtu	𳃝
+pqtu	𳃜
 pque	踫
 pque	𨂞
 pquj	𨃋
@@ -86436,7 +86443,7 @@ pqwk	⻭
 pqwl	𪘚
 pqwl	𫠚
 pqwl	𮯃
-pqwm	𳃚
+pqwm	𳃙
 pqwn	𮮾
 pqwp	𮯇
 pqwr	𮯈
@@ -86459,7 +86466,7 @@ prce	䠯
 prce	𮯘
 prcp	跈
 prcp	𤙁
-prcp	𳅒
+prcp	𳅑
 prdj	𱡫
 prdn	𱈵
 prf	踰
@@ -86610,11 +86617,11 @@ prwg	𬎥
 prwg	𬺅
 prwg	𬺋
 prwg	𱌱
-prwg	𳑱
+prwg	𳑯
 prwh	𬹺
 prwh	𱌷
 prwi	𬹾
-prwi	𳑰
+prwi	𳑮
 prwj	龃
 prwj	龋
 prwj	𫜬
@@ -86652,13 +86659,13 @@ prwp	𬺓
 prwp	𱌩
 prwp	𱌼
 prwq	𱌴
-prwq	𳑳
+prwq	𳑱
 prwr	𬹻
 prwr	𲎨
 prws	𪚏
 prws	𫜪
 prws	𱰈
-prws	𳑲
+prws	𳑰
 prwt	𱌪
 prwt	𲎩
 prwu	𱌬
@@ -86776,9 +86783,9 @@ pslv	跏
 psly	䣦
 pslz	𧾼
 psmi	𮡍
-psmi	𳃬
+psmi	𳃫
 psmn	𤚛
-psmq	𳅥
+psmq	𳅤
 psmv	𨆟
 psmy	䤄
 psna	𨅈
@@ -86806,7 +86813,7 @@ psrc	𨈅
 psrh	𨃚
 psri	𨡸
 psrj	醛
-psry	𳅔
+psry	𳅓
 pss	生
 pss	⽣
 pss	🈢
@@ -86903,7 +86910,7 @@ ptjr	𨁴
 ptjr	𬪫
 ptjr	𭧆
 ptjx	𧟴
-ptjz	𳃗
+ptjz	𳃖
 ptka	跻
 ptka	𨠨
 ptkc	𲃪
@@ -86935,7 +86942,7 @@ ptmn	𲄄
 ptmz	𬦢
 ptoc	𨄃
 ptpn	𭷧
-ptqc	𲾶
+ptqc	𲾵
 ptri	𢛮
 ptri	𨄄
 ptsn	𤙦
@@ -86998,7 +87005,7 @@ pufk	𰼒
 pufq	䶣
 pufq	𨢉
 pufs	䤏
-pufx	𳁑
+pufx	𳁐
 pufy	𰼌
 pufz	䠊
 pugc	𬦾
@@ -87087,7 +87094,7 @@ puqo	醭
 puqo	㹒
 puqy	𨡨
 puqz	踑
-purc	𳃟
+purc	𳃞
 pure	𨂑
 puri	𨅥
 puri	𪺵
@@ -87116,7 +87123,7 @@ puvh	𮯒
 puvt	𲆴
 puvu	𨇖
 puvu	𪙾
-puvu	𳅤
+puvu	𳅣
 puvv	𦑳
 puvv	𮜍
 puw	蹦
@@ -87149,7 +87156,7 @@ pvei	𮗂
 pvfb	𤚿
 pvfi	𤘹
 pvfi	𨠙
-pvfi	𳃌
+pvfi	𳃋
 pvfk	蹰
 pvfk	𮜔
 pvfs	𬪮
@@ -87227,10 +87234,10 @@ pvvx	䟳
 pvvx	𦏺
 pvvx	𦏼
 pvvx	𮠪
-pvvx	𳑬
+pvvx	𳑪
 pvvy	𨢭
 pvvz	𮛵
-pvvz	𳍕
+pvvz	𳍓
 pvwb	𤛽
 pvwl	𨡞
 pvwn	𨢄
@@ -87253,7 +87260,7 @@ pwbc	𬚬
 pwbk	酦
 pwbk	𫏆
 pwbo	𤘸
-pwbo	𳅑
+pwbo	𳅐
 pwbu	𠒒
 pwc	物
 pwca	𭬲
@@ -87276,7 +87283,7 @@ pwcv	𫙦
 pwcy	𲏧
 pwdk	𮜧
 pwdn	𪀷
-pwdn	𳏅
+pwdn	𳏃
 pweb	𠒷
 pwec	𭀳
 pweh	𨾷
@@ -87390,12 +87397,12 @@ pwql	𭀺
 pwqm	踘
 pwqm	𲒷
 pwqo	𨃵
-pwqw	𳃠
+pwqw	𳃟
 pwr	醞
 pwre	𠈣
 pwre	𮠤
 pwri	𲟻
-pwrk	𲺝
+pwrk	𲺜
 pwrn	先
 pwrr	𣦗
 pwru	醞
@@ -87434,7 +87441,7 @@ px	西安
 px	西方
 pxaa	𨃥
 pxaj	𮠣
-pxao	𳄮
+pxao	𳄭
 pxbh	𡎙
 pxbj	𬌝
 pxbj	𬦩
@@ -87465,7 +87472,7 @@ pxjj	𧠱
 pxjk	𨢎
 pxjr	𬧔
 pxjw	𱮻
-pxjz	𳃉
+pxjz	𳃈
 pxka	𤚊
 pxka	𨁻
 pxkd	𮠘
@@ -87502,7 +87509,7 @@ pxsp	𤛳
 pxsp	𬧕
 pxsy	觕
 pxsy	𧣆
-pxsy	𳃖
+pxsy	𳃕
 pxub	𭷜
 pxub	𮛒
 pxuj	𰸒
@@ -87638,7 +87645,7 @@ qafi	𬖓
 qafk	𘖃
 qafm	𧍐
 qagc	𧎸
-qage	𲿜
+qage	𲿛
 qagg	𠦯
 qagm	𬖰
 qags	𨉲
@@ -87682,7 +87689,7 @@ qakt	𰫑
 qakw	𧍄
 qakz	蜳
 qalc	𧍍
-qalc	𲿺
+qalc	𲿹
 qalg	𧖗
 qalj	𧔣
 qall	𬛰
@@ -87709,12 +87716,12 @@ qamh	𰨲
 qami	臬
 qamm	𧐢
 qamm	𭩼
-qamm	𳐍
+qamm	𳐋
 qan	蟀
 qana	蚿
 qana	𦍫
 qana	𱮲
-qanf	𲿵
+qanf	𲿴
 qang	蟀
 qang	𥼁
 qang	𫋔
@@ -87728,8 +87735,8 @@ qanw	𥹷
 qanw	𥺞
 qanw	𦎓
 qanw	𱍮
-qanw	𲾜
-qanw	𳃽
+qanw	𲾛
+qanw	𳃼
 qaoc	𨒃
 qaoi	𫧟
 qaos	𲸋
@@ -87758,7 +87765,7 @@ qasg	𥽬
 qaso	𥽢
 qatf	𭁌
 qats	蠔
-qatu	𲾯
+qatu	𲾮
 qaug	𦏨
 qauj	𧉽
 qauk	𥻪
@@ -87782,14 +87789,14 @@ qb	弟弟
 qb	弟子
 qbag	䊕
 qbag	𲄨
-qbag	𲿄
+qbag	𲿃
 qbak	𥹧
 qbak	𧊐
 qbak	𬖘
 qbak	𰲵
 qbaq	𫋨
 qbba	𧏠
-qbba	𳀏
+qbba	𳀎
 qbbb	蝃
 qbbb	䍳
 qbbb	𦏯
@@ -87909,7 +87916,7 @@ qbg	躬
 qbga	𭪗
 qbgc	𮓶
 qbgf	𫤳
-qbgg	𲿢
+qbgg	𲿡
 qbgi	𰳉
 qbgj	𧑏
 qbgm	𥸲
@@ -87954,17 +87961,17 @@ qbkc	𫊻
 qbkd	蚇
 qbkd	粎
 qbkd	𲶹
-qbkd	𲾍
+qbkd	𲾌
 qbkf	𘖆
 qbkf	𘖇
 qbkf	𘨘
 qbki	𧋅
 qbkj	䊧
 qbkj	𧑈
-qbkk	𲿸
+qbkk	𲿷
 qbkq	糔
 qbkq	𧎇
-qbkq	𲹍
+qbkq	𲹌
 qbks	𘖈
 qbkx	𧎨
 qbla	䍷
@@ -87975,7 +87982,7 @@ qbli	𩏶
 qbli	𩏷
 qbli	𩏸
 qblk	𧓄
-qblk	𲿆
+qblk	𲿅
 qblq	糨
 qblq	糨
 qbm	蚂
@@ -88000,7 +88007,7 @@ qbob	䘎
 qboc	𧑔
 qboc	𰫎
 qbof	𧖘
-qboj	𲿔
+qboj	𲿓
 qbok	𠬠
 qbok	𘢫
 qbom	𥸩
@@ -88040,7 +88047,7 @@ qbqs	𘛰
 qbqs	𘛳
 qbqs	𘛴
 qbqs	𘪴
-qbqs	𲿅
+qbqs	𲿄
 qbqu	𘝳
 qbqy	𘛱
 qbqy	𘝮
@@ -88085,7 +88092,7 @@ qbum	剃
 qbum	鹈
 qbum	鹣
 qbum	𭄍
-qbum	𲾼
+qbum	𲾻
 qbun	𗯧
 qbun	𗯨
 qbuo	递
@@ -88118,14 +88125,14 @@ qbwh	𦏍
 qbwr	𠒁
 qbww	𥺷
 qbww	𧌑
-qbww	𳃾
+qbww	𳃽
 qbxb	𥺑
 qbxg	𬼺
 qbxu	帰
 qbxu	𧌈
 qbxu	𪾚
 qbxu	𬖥
-qbyc	𲾧
+qbyc	𲾦
 qbyd	𗒎
 qbyi	𗒏
 qbyl	𗒍
@@ -88141,7 +88148,7 @@ qcak	𲒁
 qcan	𘁯
 qcas	𘁢
 qcas	𘁶
-qcat	𳀅
+qcat	𳀄
 qcba	𧍶
 qcbb	𥽮
 qcbb	𧕖
@@ -88186,7 +88193,7 @@ qccy	𘁳
 qcdc	𫏻
 qcdl	𡢐
 qcdn	𱈲
-qcdw	𳀍
+qcdw	𳀌
 qcea	𘁦
 qcef	𘁫
 qceg	𗮘
@@ -88204,7 +88211,7 @@ qcfe	𧒰
 qcff	𘁭
 qcfg	𘂂
 qcfg	𘋚
-qcfh	𲿕
+qcfh	𲿔
 qcfi	𥹣
 qcfi	𥹤
 qcfi	𘤣
@@ -88274,13 +88281,13 @@ qcjq	𱿭
 qcjr	糟
 qcjr	螬
 qcjw	𲥆
-qcjw	𲿭
+qcjw	𲿬
 qckg	𰳕
 qckk	𘢥
 qckk	𘤜
 qckl	𥺂
 qckr	𲶻
-qckz	𲾠
+qckz	𲾟
 qcla	𘩪
 qclc	𘛗
 qcll	𦏪
@@ -88336,7 +88343,7 @@ qcru	𬐺
 qcrw	𰢦
 qcs	蠕
 qcsa	𗒆
-qcsa	𲿹
+qcsa	𲿸
 qcsc	𗑿
 qcsc	𗒇
 qcsc	𗒰
@@ -88445,7 +88452,7 @@ qddj	𧔜
 qddn	𪈬
 qddp	𨊝
 qdei	𱼨
-qdes	𳄂
+qdes	𳄁
 qdf	蚌
 qdfc	蚌
 qdfi	蚯
@@ -88464,7 +88471,7 @@ qdfu	𱿷
 qdfy	𫃃
 qdfy	𫋄
 qdgc	螝
-qdgc	𲾴
+qdgc	𲾳
 qdgh	𧒹
 qdgi	蜱
 qdgi	粺
@@ -88483,7 +88490,7 @@ qdho	𧖆
 qdhs	䊋
 qdht	𰫄
 qdia	𣛙
-qdig	𲿡
+qdig	𲿠
 qdim	𱹀
 qdim	𱼯
 qdj	蝗
@@ -88537,13 +88544,13 @@ qdqs	𬧣
 qdqt	𡕸
 qdre	䠾
 qdre	𧍳
-qdre	𲹎
+qdre	𲹍
 qdri	蟪
 qdri	𫃐
 qdrj	𧸋
 qdrn	𮇸
 qdsc	𧊋
-qdsi	𲾗
+qdsi	𲾖
 qdsn	螕
 qdsn	𧏩
 qdsn	𨉮
@@ -88561,7 +88568,7 @@ qduh	𨉯
 qduh	𫃈
 qduj	𬠒
 qduj	𱍲
-qduj	𲹌
+qduj	𲹋
 qdur	𧏕
 qdus	𧌫
 qdux	𧓗
@@ -88579,7 +88586,7 @@ qdxc	䖮
 qdxm	𥹝
 qdxq	𨉻
 qdzc	蛭
-qdzs	𳃷
+qdzs	𳃶
 qe	断
 qe	断裂
 qe	断言
@@ -88602,7 +88609,7 @@ qebk	𨈩
 qebn	𗮵
 qebn	𗮽
 qebo	𥻬
-qebo	𲾏
+qebo	𲾎
 qebr	𧑦
 qebs	𗯎
 qebu	𗯃
@@ -88626,7 +88633,7 @@ qedj	断
 qedk	𧓆
 qedm	𰄽
 qedr	𲠒
-qedt	𳆴
+qedt	𳆳
 qeeb	𧕟
 qeed	𗮰
 qeef	𗯉
@@ -88679,7 +88686,7 @@ qeic	𧈞
 qeif	𗮭
 qeig	𘨐
 qeig	𘩫
-qeih	𲾖
+qeih	𲾕
 qeii	臫
 qeik	𠔃
 qeir	𘍐
@@ -88695,7 +88702,7 @@ qeiy	𗮧
 qejc	虮
 qeje	𮨔
 qejk	𘢦
-qejk	𲿐
+qejk	𲿏
 qejm	籶
 qejx	𮇊
 qejy	𰭗
@@ -88717,7 +88724,7 @@ qekm	𦍖
 qela	𘛖
 qela	𘨊
 qela	𘨋
-qela	𲿀
+qela	𲾿
 qele	𧎚
 qele	𨉨
 qele	𮇭
@@ -88756,7 +88763,7 @@ qesc	𧈻
 qesi	𦤂
 qesj	𮇴
 qesy	羖
-qesy	𲾥
+qesy	𲾤
 qetj	𲇍
 qets	蝝
 qeua	螩
@@ -88804,7 +88811,7 @@ qfbf	𧑛
 qfbl	𧋋
 qfbp	蜨
 qfca	𗑯
-qfcc	𲾣
+qfcc	𲾢
 qfce	𗑓
 qfcf	𗓸
 qfcf	𘕥
@@ -88855,7 +88862,7 @@ qfgi	𘛎
 qfgk	𧌕
 qfgk	𗑳
 qfgp	𬧢
-qfgp	𲾓
+qfgp	𲾒
 qfgs	𗑲
 qfgs	𗒦
 qfgs	𗓺
@@ -88874,18 +88881,18 @@ qfj	粳
 qfjf	𥹚
 qfjf	𦍼
 qfjf	𧊳
-qfjp	𲿬
+qfjp	𲿫
 qfjs	粳
 qfjs	𧋑
-qfjs	𳃹
+qfjs	𳃸
 qfka	𥺼
-qfka	𲾬
+qfka	𲾫
 qfkc	虶
 qfkc	𲶶
 qfkg	𰲳
 qfkh	𧊻
 qfkl	𬠏
-qfkp	𲾭
+qfkp	𲾬
 qfkr	𥼳
 qfkr	𧑕
 qfkr	𨉼
@@ -88941,7 +88948,7 @@ qfub	𗐫
 qfub	𗑔
 qfue	𮇔
 qfue	𱍰
-qfue	𳃶
+qfue	𳃵
 qfuf	𘕋
 qfui	𗒣
 qfuj	师
@@ -88950,7 +88957,7 @@ qfuj	𧎽
 qfuj	𧐼
 qfuj	𘧿
 qfuk	蜽
-qfuk	𲻈
+qfuk	𲻇
 qful	𗒢
 qfun	𗑱
 qfup	𧑺
@@ -89002,7 +89009,7 @@ qgbo	𭣖
 qgci	𨉄
 qgcq	蝻
 qgcq	䊖
-qgcq	𳃿
+qgcq	𳃾
 qgdn	𗓖
 qgeg	𦍜
 qgei	𘤞
@@ -89026,7 +89033,7 @@ qgfk	蛾
 qgfk	𨉐
 qgfk	𲷈
 qgfq	𧕶
-qgfq	𳀀
+qgfq	𲿿
 qgfs	䗗
 qgfs	䗗
 qgfy	䣡
@@ -89046,12 +89053,12 @@ qghs	𨊂
 qght	䘃
 qght	𥽞
 qghy	𦏉
-qgic	𲾋
+qgic	𲾊
 qgik	𘢢
 qgim	籵
 qgjc	𧐀
 qgjk	𲭊
-qgjk	𳄀
+qgjk	𳃿
 qgjm	𨉾
 qgjt	蝮
 qgjt	𦎭
@@ -89077,7 +89084,7 @@ qglj	蝺
 qglv	𧑠
 qgmg	䗴
 qgmk	𭃱
-qgmk	𳀒
+qgmk	𳀑
 qgmy	𧏣
 qgna	𰲪
 qgnb	𭅐
@@ -89222,7 +89229,7 @@ qhac	蚜
 qhag	装
 qhaj	𦤧
 qhba	𮔟
-qhbh	𲿛
+qhbh	𲿚
 qhbo	粔
 qhbo	蚷
 qhbr	𦤕
@@ -89300,7 +89307,7 @@ qhje	𦤦
 qhje	類
 qhje	𛃽
 qhjh	𡔇
-qhji	𲾢
+qhji	𲾡
 qhjp	𧕪
 qhjp	𰯷
 qhjr	蝫
@@ -89327,7 +89334,7 @@ qhkt	䗀
 qhkt	𥺙
 qhkt	𧐭
 qhkt	𨉞
-qhku	𲿞
+qhku	𲿝
 qhkz	𥺄
 qhkz	𮶾
 qhl	軀
@@ -89370,7 +89377,7 @@ qhqm	𥺫
 qhqm	类
 qhqo	蟽
 qhqq	状
-qhqs	𳃳
+qhqs	𳃲
 qhqt	𣀐
 qhri	𥺃
 qhri	𧋺
@@ -89382,7 +89389,7 @@ qhs	壮
 qhsi	躯
 qhsi	𮓹
 qhsl	善
-qhsl	𲿘
+qhsl	𲿗
 qhsq	壮
 qhtc	𫊥
 qhtf	𮇫
@@ -89393,9 +89400,9 @@ qhtq	壮
 qhuj	𦏢
 qhuj	𧔖
 qhuj	𫂸
-qhuj	𲾒
+qhuj	𲾑
 qhus	𦤯
-qhvl	𲿇
+qhvl	𲿆
 qhvv	𧎥
 qhw	蜻
 qhwd	𪇒
@@ -89414,7 +89421,7 @@ qhxa	𧓜
 qhxj	𮷚
 qhxj	𲷑
 qhxq	䊦
-qhxq	𲿫
+qhxq	𲿪
 qhyf	鄓
 qhyi	𧉵
 qhyk	軇
@@ -89499,7 +89506,7 @@ qigi	🈛
 qigj	𧍖
 qigk	𱹆
 qigo	𫐽
-qigo	𲿃
+qigo	𲿂
 qigp	粆
 qigp	䖢
 qigp	𨈘
@@ -89508,7 +89515,7 @@ qigr	𰒄
 qigs	𗓑
 qigs	𗓒
 qigv	𲷣
-qigv	𳀊
+qigv	𳀉
 qigx	䖳
 qigx	𫏫
 qih	螳
@@ -89547,7 +89554,7 @@ qiix	𮊰
 qiiy	𨝲
 qij	粽
 qijb	𧎫
-qijc	𲿒
+qijc	𲿑
 qijd	羜
 qijd	𥹍
 qijd	𧉞
@@ -89585,8 +89592,8 @@ qinb	𘧽
 qine	𬠶
 qini	𭵠
 qino	𬨿
-qinr	𲿤
-qinv	𳍷
+qinr	𲿣
+qinv	𳍵
 qiod	𡙡
 qiod	𬠁
 qiod	𰪷
@@ -89595,7 +89602,7 @@ qipg	躻
 qipg	𧌆
 qipj	𨊎
 qipl	𦎩
-qipn	𲾩
+qipn	𲾨
 qipw	𱿹
 qipz	𧑽
 qiq	羹
@@ -89622,7 +89629,7 @@ qirs	𧑗
 qirs	𧒫
 qiru	𧑶
 qiru	𬖵
-qiru	𲿣
+qiru	𲿢
 qis	躺
 qisc	𱿫
 qisi	𧑚
@@ -89661,7 +89668,7 @@ qiwr	𲄪
 qiwy	蛸
 qiwy	𥹶
 qiwy	𮌭
-qiwy	𲹇
+qiwy	𲹆
 qix	羡
 qixa	蜿
 qixa	𥺹
@@ -89709,7 +89716,7 @@ qjdq	𧕬
 qjdv	𬠲
 qjec	蝢
 qjei	䫁
-qjei	𲾟
+qjei	𲾞
 qjem	頪
 qjeo	𧔷
 qjey	𥸴
@@ -89735,7 +89742,7 @@ qjfv	糧
 qjg	单
 qjgc	蛄
 qjgd	𬹤
-qjgd	𳏯
+qjgd	𳏭
 qjgi	单
 qjgi	𮮲
 qjgk	𢧐
@@ -89750,10 +89757,10 @@ qjgy	郸
 qjgy	𠵊
 qjgy	𦍩
 qjhk	𥻵
-qjhk	𲿍
+qjhk	𲿌
 qjhq	𱮁
 qjib	𥺱
-qjib	𲾱
+qjib	𲾰
 qjig	𥻠
 qjih	𧌚
 qjij	𧢪
@@ -89767,7 +89774,7 @@ qjjc	朆
 qjjc	㣒
 qjje	蠷
 qjje	𥜛
-qjje	𳊺
+qjje	𳊸
 qjjg	𧒓
 qjjg	𭨟
 qjji	𤎯
@@ -89779,7 +89786,7 @@ qjjj	𰗃
 qjjk	𢎒
 qjjk	𢨉
 qjjk	𬁮
-qjjk	𳁔
+qjjk	𳁓
 qjjl	𣍎
 qjjl	𬁭
 qjjm	粯
@@ -89799,17 +89806,17 @@ qjjr	𛁚
 qjjv	䎖
 qjjy	鄫
 qjjy	𪱗
-qjjy	𲿯
+qjjy	𲿮
 qjkc	𬖞
 qjkd	𧉣
 qjke	𧒿
 qjkl	䗑
 qjl	蜘
-qjlb	𲿱
+qjlb	𲿰
 qjlj	𧒊
 qjll	𦏤
 qjll	𧎺
-qjll	𳀌
+qjll	𳀋
 qjlv	蜘
 qjlv	蚵
 qjlv	𰪲
@@ -89829,7 +89836,7 @@ qjni	䗾
 qjnn	蜫
 qjnn	䊐
 qjnn	𬧨
-qjpk	𲿉
+qjpk	𲿈
 qjps	䗌
 qjps	𦎬
 qjps	𱹏
@@ -89899,7 +89906,7 @@ qkbs	𗮈
 qkbs	𗮉
 qkbs	𗮓
 qkbs	𘁎
-qkbw	𲿓
+qkbw	𲿒
 qkby	螂
 qkby	𨉰
 qkby	𗭻
@@ -89954,7 +89961,7 @@ qkgl	𧑐
 qkgo	𧎤
 qkgp	𰪼
 qkgp	𰫏
-qkgp	𲿥
+qkgp	𲿤
 qkgs	𨈟
 qkgs	𧐙
 qkgt	𧎄
@@ -89998,7 +90005,7 @@ qkk	
 qkk	
 qkkd	𧊥
 qkkd	𬙱
-qkkf	𲾕
+qkkf	𲾔
 qkkg	䗃
 qkkg	𦎗
 qkkj	蟙
@@ -90027,7 +90034,7 @@ qkmj	𣊆
 qkmj	𨉺
 qkmj	𩔫
 qkmj	𬳢
-qkmj	𲿟
+qkmj	𲿞
 qkmo	𡙢
 qkmq	𧏟
 qkmr	㥹
@@ -90070,7 +90077,7 @@ qksk	𰲲
 qksk	𮷓
 qksm	𮇯
 qkso	𦍰
-qkso	𲾤
+qkso	𲾣
 qksx	𱿿
 qkts	𧏹
 qku	益
@@ -90092,7 +90099,7 @@ qkuu	𭘺
 qkuw	𰥅
 qkux	𣣼
 qkuy	𨜶
-qkvc	𲾑
+qkvc	𲾐
 qkvl	𦏆
 qkvl	𧑆
 qkvt	䗜
@@ -90136,7 +90143,7 @@ qlbi	𧓏
 qlbm	𬠪
 qlbo	𧌗
 qlbo	𫃂
-qlbo	𲹉
+qlbo	𲹈
 qlcb	𲃀
 qlcc	𧈶
 qlcm	𧌵
@@ -90164,14 +90171,14 @@ qlgt	𮕍
 qlgx	𬙳
 qlhi	䗡
 qlhk	𭔸
-qlhk	𲹈
+qlhk	𲹇
 qlhs	𠢄
 qlht	𭎙
 qlih	𨉒
 qlja	𧑀
 qljb	𥻱
 qljb	𲂫
-qljb	𲿋
+qljb	𲿊
 qlji	𨉛
 qljj	䠿
 qljj	𥻍
@@ -90185,7 +90192,7 @@ qljw	𨉑
 qlka	𧊄
 qlka	𨈪
 qlka	𲷀
-qlkm	𲿙
+qlkm	𲿘
 qll	蟬
 qlla	𥼾
 qlla	𦏛
@@ -90206,7 +90213,7 @@ qlll	𬗂
 qlll	𲷏
 qllr	䍺
 qllr	䗭
-qllu	𳃺
+qllu	𳃹
 qllv	躳
 qllv	𦎑
 qllv	𱿤
@@ -90242,6 +90249,7 @@ qlwd	𫤛
 qlwe	䬇
 qlwi	𦣾
 qlwj	䫄
+qlwk	𬺧
 qlwl	蠟
 qlwl	蠟
 qlwm	𠜑
@@ -90252,7 +90260,7 @@ qlwn	𭀧
 qlwo	𨓚
 qlwr	兑
 qlwr	☱
-qlwr	𲹅
+qlwr	𲹄
 qlwt	敚
 qlwy	蜎
 qlwy	蜎
@@ -90294,7 +90302,7 @@ qmdi	𰄩
 qmdm	𫥾
 qmdm	𲒧
 qmek	𮊫
-qmek	𲾺
+qmek	𲾹
 qmer	軈
 qmer	𧕄
 qmg	蜓
@@ -90307,7 +90315,7 @@ qmgn	蜏
 qmgn	𥽓
 qmgy	蜓
 qmgy	𨉈
-qmhh	𲾨
+qmhh	𲾧
 qmhk	𥺁
 qmhk	𧔋
 qmht	粧
@@ -90325,7 +90333,7 @@ qmk	羲
 qmka	𫊸
 qmka	𬧪
 qmkc	𧏯
-qmkc	𳄁
+qmkc	𳄀
 qmkd	籾
 qmkd	𧈳
 qmkh	羲
@@ -90343,7 +90351,7 @@ qmlr	𢠒
 qmlv	蛁
 qmlv	𥹙
 qmlv	𫋏
-qmlv	𲾷
+qmlv	𲾶
 qmlw	𮔔
 qmm	米
 qmm	⽶
@@ -90359,11 +90367,11 @@ qmms	𨈥
 qmna	𮇋
 qmnn	䊌
 qmnn	𧐳
-qmns	𲾪
+qmns	𲾩
 qmny	𱉯
 qmoh	𧐷
 qmoh	𧒐
-qmqc	𲾌
+qmqc	𲾋
 qmqi	𰫈
 qmqk	蠊
 qmqk	𦤩
@@ -90393,7 +90401,7 @@ qmvl	𥻝
 qmvl	𨉢
 qmvs	𥽨
 qmvs	𰫍
-qmvs	𳀎
+qmvs	𳀍
 qmwa	𧑇
 qmwj	𧔾
 qmwm	𲷠
@@ -90460,7 +90468,7 @@ qnjr	𧌏
 qnjr	𭥣
 qnjr	𮇖
 qnjw	𤤘
-qnjy	𲾫
+qnjy	𲾪
 qnka	𬠇
 qnkc	糐
 qnkc	䍸
@@ -90552,11 +90560,11 @@ qnvk	冀
 qnvu	𪟪
 qnw	背
 qnwd	𩳿
-qnwd	𲺦
-qnwj	𲻀
+qnwd	𲺥
+qnwj	𲺿
 qnwk	𦤍
 qnwk	𮌱
-qnwk	𲾡
+qnwk	𲾠
 qnwl	𮌽
 qnwn	𦎵
 qnwn	𬛉
@@ -90644,9 +90652,9 @@ qodk	𘱺
 qodm	类
 qodm	𬮎
 qodn	𪀲
-qodn	𳎷
+qodn	𳎵
 qods	𨷑
-qods	𳃲
+qods	𳃱
 qodu	𥽔
 qodu	𧓭
 qody	美
@@ -90663,7 +90671,7 @@ qof	拳
 qofa	𩏗
 qofc	蚨
 qoff	𦏄
-qoff	𲹑
+qoff	𲹐
 qofh	䠸
 qofh	𧊘
 qofk	龹
@@ -90677,7 +90685,7 @@ qofq	𭷀
 qofr	𬙵
 qofs	拳
 qofu	𩱁
-qogo	𲹊
+qogo	𲹉
 qogs	𧎔
 qohb	𱻐
 qohh	蝰
@@ -90696,7 +90704,7 @@ qoje	纇
 qoje	𩔖
 qoje	𩔢
 qoji	𥏇
-qoji	𲻇
+qoji	𲻆
 qojj	𲁏
 qojk	𢨄
 qojk	𬍢
@@ -90779,7 +90787,7 @@ qoqi	蟟
 qoqk	蛱
 qoqm	𥼮
 qoqm	𧌥
-qoqv	𳎈
+qoqv	𳎆
 qor	蛺
 qori	𧋷
 qori	𫺉
@@ -90790,7 +90798,7 @@ qosa	𬙾
 qosc	𫊺
 qosc	𮓷
 qose	𩁫
-qosi	𲿏
+qosi	𲿎
 qosl	劵
 qoso	𢍊
 qoss	䗮
@@ -90903,7 +90911,7 @@ qpns	蟕
 qpnt	𰫔
 qpny	𬙮
 qpo	鄭
-qpoa	𲿩
+qpoa	𲿨
 qpoc	遒
 qpod	奠
 qpof	𡰙
@@ -90933,9 +90941,9 @@ qpvj	𩽫
 qpvv	𦑺
 qpvv	𩺃
 qpwj	𥽷
-qpwj	𳀓
+qpwj	𳀒
 qpwr	䊁
-qpwr	𲾛
+qpwr	𲾚
 qpwy	𥺾
 qpwy	𰳅
 qpxc	𬠂
@@ -90958,7 +90966,7 @@ qqae	𩠳
 qqak	䉽
 qqak	𧉻
 qqak	𫗹
-qqam	𲿎
+qqam	𲿍
 qqbc	𬖱
 qqbc	𘩺
 qqbd	𩠭
@@ -90971,7 +90979,7 @@ qqbk	𥻧
 qqbk	𱍵
 qqbl	𩠧
 qqbn	𗔟
-qqbo	𲾐
+qqbo	𲾏
 qqcc	䖵
 qqch	𩠯
 qqcm	𧊾
@@ -90981,7 +90989,7 @@ qqcn	𰭚
 qqcn	𱍴
 qqcn	𲄧
 qqcs	𫏪
-qqcv	𳋼
+qqcv	𳋺
 qqcy	𬱯
 qqdg	𩴨
 qqdn	𪇣
@@ -90995,13 +91003,13 @@ qqek	𩠕
 qqek	𬠙
 qqek	𮩟
 qqen	𧏙
-qqen	𳋸
+qqen	𳋶
 qqev	𦑒
 qqfk	𮩢
 qqfn	𥽃
 qqfn	𗑥
 qqfp	𬳚
-qqfq	𳋶
+qqfq	𳋴
 qqfs	𗓨
 qqfu	蛳
 qqg	蟻
@@ -91013,7 +91021,7 @@ qqgk	𫗶
 qqgk	𲄯
 qqgl	𘖄
 qqgn	𗔛
-qqgr	𳋺
+qqgr	𳋸
 qqgs	𗐻
 qqgs	𘨖
 qqgw	𩠸
@@ -91021,7 +91029,7 @@ qqgy	𩠓
 qqgz	𬳕
 qqh	糗
 qqhc	𩠛
-qqhe	𳋹
+qqhe	𳋷
 qqhq	糗
 qqhq	螑
 qqhq	䍹
@@ -91066,7 +91074,7 @@ qqlb	㪨
 qqlb	𬙽
 qqlc	𬱱
 qqld	𬚁
-qqld	𳏬
+qqld	𳏪
 qqlg	𡄰
 qqlh	𭌠
 qqlj	𩕊
@@ -91085,7 +91093,7 @@ qqlw	𨉋
 qqlw	𬙿
 qqlx	歚
 qqly	鄯
-qqmc	𲾝
+qqmc	𲾜
 qqmd	𬳙
 qqmm	𥹫
 qqmm	𩠔
@@ -91114,8 +91122,8 @@ qqod	躾
 qqod	𥻙
 qqod	𨈽
 qqod	𰳍
-qqod	𲿂
-qqof	𲿑
+qqod	𲿁
+qqof	𲿐
 qqog	𧓲
 qqoj	𮇺
 qqoj	𱵯
@@ -91155,12 +91163,12 @@ qqqm	𥼬
 qqqo	𥽌
 qqqo	𧒴
 qqqq	𩠬
-qqqq	𳀑
+qqqq	𳀐
 qqqt	𬳛
 qqqu	蠱
 qqqx	𬠺
 qqqy	羴
-qqrc	𳋷
+qqrc	𳋵
 qqrh	𮇰
 qqri	螅
 qqri	𧏮
@@ -91182,7 +91190,7 @@ qqst	𩠩
 qqth	𩠚
 qqto	𮕆
 qqts	𥻖
-qqts	𲿁
+qqts	𲿀
 qqub	𮩣
 qquc	𗒻
 qque	䗒
@@ -91244,7 +91252,7 @@ qqys	𗓭
 qqys	𗔆
 qqys	𗔧
 qqys	𘩲
-qqyt	𳋻
+qqyt	𳋹
 qqyu	𗔈
 qqyu	𘛟
 qqyw	𗓀
@@ -91339,7 +91347,7 @@ qroc	𧒖
 qroc	𨊐
 qroc	𫃓
 qrof	𲄟
-qrqc	𲿿
+qrqc	𲿾
 qrqm	𥽋
 qrqs	𮜼
 qrqy	羷
@@ -91365,7 +91373,7 @@ qrus	𫢊
 qrvv	𫋞
 qrwm	𱰋
 qrwy	𦍭
-qrxq	𳀐
+qrxq	𳀏
 qryf	鄎
 qs	身
 qs	身体
@@ -91458,7 +91466,7 @@ qshu	𧕭
 qshw	𫋛
 qsia	䗋
 qsia	𱹍
-qsia	𲿲
+qsia	𲿱
 qsic	𮓽
 qsih	𧏦
 qsik	𰰝
@@ -91471,10 +91479,10 @@ qsir	蚶
 qsir	螼
 qsir	粓
 qsis	𮜺
-qsis	𲿻
+qsis	𲿺
 qsj	蟆
 qsja	𥼧
-qsjb	𳀉
+qsjb	𳀈
 qsje	頩
 qsje	䗶
 qsje	頩
@@ -91498,7 +91506,7 @@ qskh	𥻎
 qskh	𥼉
 qskh	𧕨
 qskh	𨊙
-qskh	𳄃
+qskh	𳄂
 qskk	𧎦
 qskk	𭯱
 qskm	𥺯
@@ -91565,8 +91573,8 @@ qsrh	𰫇
 qsri	㤣
 qsri	𧍠
 qsrk	𧏥
-qsrk	𲾰
-qsrl	𳀃
+qsrk	𲾯
+qsrl	𳀂
 qsrm	粫
 qsrr	𰳥
 qsrw	瓶
@@ -91603,7 +91611,7 @@ qsun	𘁔
 qsuu	𩱵
 qsux	𬠳
 qsvt	𲀖
-qsvt	𲾿
+qsvt	𲾾
 qsvu	𱹋
 qsvv	蠇
 qsvv	䊪
@@ -91619,7 +91627,7 @@ qswt	糉
 qswt	蝬
 qswt	糤
 qswt	糭
-qsww	𲾸
+qsww	𲾷
 qsxa	蝾
 qsxf	𰲽
 qsxo	艵
@@ -91635,7 +91643,7 @@ qsyf	郱
 qt	遂
 qtak	𥹪
 qtak	𧊵
-qtam	𲾻
+qtam	𲾺
 qtaq	𬖺
 qtcn	𧊷
 qtd	蜂
@@ -91680,7 +91688,7 @@ qtka	𱹁
 qtkd	𦎜
 qtkd	𧌮
 qtkh	𤠩
-qtki	𲿦
+qtki	𲿥
 qtkk	𮕒
 qtlv	蛒
 qtlv	䠺
@@ -91741,7 +91749,7 @@ quag	𘋻
 quag	𘋽
 quag	𘋾
 quag	𘌀
-quai	𳑪
+quai	𳑨
 quaj	𫉓
 quak	𘦝
 quam	𥼠
@@ -91808,7 +91816,7 @@ quei	𘁸
 quei	𘝠
 quei	𘤝
 quei	𲷐
-quei	𲾽
+quei	𲾼
 quek	並
 quek	並
 quek	𲲔
@@ -91849,7 +91857,7 @@ qufs	𘕎
 qufs	𘛒
 qufs	𘩨
 quft	𫏭
-qufu	𲿌
+qufu	𲿋
 qufy	𗑵
 qufy	𘕏
 quga	𘌹
@@ -91928,7 +91936,7 @@ quhj	糬
 quhq	蠌
 quhq	𥼶
 quht	𧋭
-quht	𲿚
+quht	𲿙
 quib	𥼞
 quig	𘨍
 quii	𗑚
@@ -91940,7 +91948,7 @@ quir	蜖
 quiu	𘕮
 quj	帅
 qujb	𨊋
-qujb	𲾾
+qujb	𲾽
 qujd	𧌧
 qujf	𧎼
 qujg	𣌞
@@ -92060,7 +92068,7 @@ qung	𘨁
 qung	𘩤
 qunl	𧕉
 qunn	𧍘
-qunn	𳀈
+qunn	𳀇
 quno	螇
 quno	𥻺
 quns	𧎖
@@ -92105,7 +92113,7 @@ quqn	𗭰
 quqn	𘋢
 quqo	䗱
 quqo	𥼜
-quqs	𳃻
+quqs	𳃺
 quqt	𰳞
 ququ	𥃣
 quqy	𧎲
@@ -92132,20 +92140,20 @@ qusr	𧍒
 qusr	𰹄
 quss	𧔇
 qutd	𧏢
-qute	𲿴
+qute	𲿳
 quti	𫡀
 quud	𲀅
 quue	𲀄
 quuf	䊫
 quuf	𬠯
 quui	𘋟
-quuj	𲿽
+quuj	𲿼
 quuk	𫋜
 quuk	𮍟
 quuk	𲀓
 quvh	𰳘
 quvi	𧑩
-quvn	𲾲
+quvn	𲾱
 quvr	𥽜
 quvr	𧓻
 quvs	𧌹
@@ -92169,8 +92177,8 @@ quxt	𧓁
 quxx	𡖼
 quxx	𰸿
 quxx	𱿡
-quxx	𲹋
-quxx	𲾳
+quxx	𲹊
+quxx	𲾲
 quyf	𨝕
 quyg	𗐪
 quyi	𗐮
@@ -92296,14 +92304,14 @@ qvln	鼾
 qvln	𪖙
 qvln	𪖻
 qvln	齃
-qvln	𳑩
+qvln	𳑧
 qvlo	齆
 qvlo	䶌
 qvlo	𦫱
 qvlo	𪖱
 qvlo	𮮶
 qvlo	𮮷
-qvlo	𳑨
+qvlo	𳑦
 qvlp	䶑
 qvlp	𪖮
 qvlp	𪗁
@@ -92412,7 +92420,7 @@ qvyi	𮋒
 qw	前
 qw	前面
 qw	前期
-qwab	𲾵
+qwab	𲾴
 qwak	𧉳
 qwam	𧋕
 qwam	𲷇
@@ -92448,14 +92456,14 @@ qwhl	蜩
 qwhl	𥺝
 qwhl	𨉜
 qwhs	𘱩
-qwhz	𲿾
+qwhz	𲿽
 qwib	𪗲
 qwii	䍮
 qwii	䖴
 qwii	䠷
 qwir	蚐
 qwjc	虯
-qwjd	𲾘
+qwjd	𲾗
 qwje	𩑿
 qwje	𩒋
 qwje	𩒕
@@ -92512,7 +92520,7 @@ qwms	𨉸
 qwmu	𢃬
 qwmv	翦
 qwmv	𦑦
-qwna	𳃵
+qwna	𳃴
 qwnu	𬐵
 qwnw	𧎠
 qwo	逆
@@ -92535,7 +92543,7 @@ qwrw	𬎫
 qwsi	𥸼
 qwsw	𧊫
 qwtl	𡇷
-qwts	𲿊
+qwts	𲿉
 qwuf	𥸻
 qwuj	𬠄
 qwvj	𧏈
@@ -92556,12 +92564,12 @@ qwwo	遡
 qwwo	𦃗
 qwwr	愬
 qwwr	𥹊
-qwwr	𲾔
+qwwr	𲾓
 qwws	𢍥
 qwww	𥻤
 qwww	𧎷
 qwww	𬂚
-qwww	𲹏
+qwww	𲹎
 qwwy	朔
 qwwy	𧌇
 qwwy	𬙶
@@ -92657,27 +92665,27 @@ qxlk	𧕃
 qxlk	𮔛
 qxlt	蟓
 qxlv	䊅
-qxlv	𲾚
+qxlv	𲾙
 qxlw	𧓰
 qxlw	𨉏
 qxmd	𫊧
 qxn	浆
-qxnf	𳀁
+qxnf	𳀀
 qxns	浆
 qxo	奖
 qxob	𨉆
-qxoc	𲾮
+qxoc	𲾭
 qxod	奖
 qxod	𧎑
 qxod	𱹒
 qxp	酱
 qxpy	酱
 qxqc	㰩
-qxqc	𲾞
+qxqc	𲾝
 qxqm	𥸷
 qxqm	𥻒
 qxqy	𭭋
-qxsg	𲿠
+qxsg	𲿟
 qxso	𧒳
 qxsp	蠏
 qxsp	𦏘
@@ -92700,7 +92708,7 @@ qxwi	𧊼
 qxwk	𥸵
 qxwk	𦍣
 qxwk	𧉙
-qxwk	𳃴
+qxwk	𳃳
 qxwl	𦏂
 qxwr	躭
 qxwr	𮓻
@@ -92710,7 +92718,7 @@ qxxk	𲚱
 qxxq	𥼫
 qxxx	蛥
 qxxx	𥹠
-qxxx	𳃸
+qxxx	𳃷
 qxyk	𬟾
 qy	羊
 qy	羊肉
@@ -92719,13 +92727,13 @@ qyaa	𗒐
 qyam	𲦟
 qyas	𗓆
 qyay	𬠌
-qycp	𲾎
+qycp	𲾍
 qydc	𧏶
 qydf	𘨛
 qydk	𘖚
 qydl	𘖙
 qyeh	𰳜
-qyew	𲿶
+qyew	𲿵
 qyfc	𬠞
 qyfi	郋
 qyfi	𱿘
@@ -93112,12 +93120,12 @@ qyky	𘃜
 qyky	𘃟
 qyky	𘃡
 qylt	𥼲
-qylt	𲿮
+qylt	𲿭
 qynf	𧊴
 qynw	蜬
 qyoe	𥹗
 qypi	𰲷
-qypq	𲿨
+qypq	𲿧
 qypw	糈
 qypw	蝑
 qyqs	𗔯
@@ -93226,7 +93234,7 @@ qyus	𗒓
 qyus	𗓇
 qyus	𗓴
 qyve	𲀐
-qywj	𲿧
+qywj	𲿦
 qyy	羊
 qyy	𦍌
 qyy	⺶
@@ -93381,7 +93389,7 @@ rbbo	𫹷
 rbcr	𱟄
 rbcv	𲠡
 rbcx	忸
-rbdf	𳌟
+rbdf	𳌝
 rbdx	㥆
 rbdz	𫘴
 rbdz	𲠓
@@ -93643,7 +93651,7 @@ rdje	𱎥
 rdjk	𢣹
 rdjr	𢞦
 rdjr	𢢀
-rdjr	𳌞
+rdjr	𳌜
 rdjw	惶
 rdjw	𢡞
 rdjx	忻
@@ -93922,7 +93930,7 @@ rfcj	𡃋
 rfcj	𫣝
 rfcj	𫭕
 rfcj	𲘯
-rfcj	𳂢
+rfcj	𳂡
 rfck	𣗾
 rfcm	𢥬
 rfco	𫐮
@@ -93975,7 +93983,7 @@ rfji	𰟗
 rfji	𲥖
 rfjj	會
 rfjj	𣍋
-rfjj	𳊾
+rfjj	𳊼
 rfjl	𠋑
 rfjl	𲥔
 rfjm	劊
@@ -94014,7 +94022,7 @@ rfll	승
 rflp	𢙼
 rflp	𩩋
 rflq	㤱
-rflq	𳃼
+rflq	𳃻
 rflr	㥐
 rfls	㤦
 rflt	𫾽
@@ -94185,8 +94193,8 @@ rfwd	𪃎
 rfwd	𬷴
 rfwd	𪃎
 rfwe	𪜬
-rfwe	𳋌
-rfwe	𳋍
+rfwe	𳋊
+rfwe	𳋋
 rfwf	恆
 rfwf	𢰨
 rfwi	𫖾
@@ -94203,13 +94211,13 @@ rfwm	㓱
 rfwm	𪎨
 rfwo	逾
 rfwo	𢛺
-rfwo	𳋑
+rfwo	𳋏
 rfwr	愈
 rfwr	㼶
 rfwr	𢙖
 rfwr	愈
 rfwt	𢾄
-rfwu	𲾇
+rfwu	𲾆
 rfww	𮯿
 rfwx	歈
 rfwx	怽
@@ -94249,7 +94257,7 @@ rgcq	𰑳
 rgcy	𬱚
 rgdb	𤽣
 rgdn	鴓
-rgdn	𳏔
+rgdn	𳏒
 rgdw	𢥣
 rge	悔
 rgef	𩨺
@@ -95260,7 +95268,7 @@ rklb	𢜝
 rklf	惐
 rklf	㥛
 rklf	𪜗
-rklf	𳌝
+rklf	𳌛
 rklh	𰇴
 rkll	𩪟
 rkln	㖋
@@ -95482,7 +95490,7 @@ rlll	𫺢
 rlll	슝
 rlln	𢠮
 rlls	𮍸
-rlls	𲻖
+rlls	𲻕
 rllt	𢥴
 rllv	𠃳
 rllv	𢙈
@@ -95652,7 +95660,7 @@ rmvl	𩩳
 rmvl	𬎮
 rmvs	慟
 rmwm	𱟗
-rmyg	𳌛
+rmyg	𳌙
 rmyx	㤇
 rmzx	𢚵
 rn	惨
@@ -95763,7 +95771,7 @@ roge	𪬶
 rogi	㤒
 rogs	𢜘
 rogs	𰢣
-rogs	𳌜
+rogs	𳌚
 rohj	㦋
 rohl	𢢂
 roig	𩨕
@@ -97148,7 +97156,7 @@ rujz	悼
 rukc	𢚃
 rukc	𢢋
 ruke	𪫢
-rukl	𳐝
+rukl	𳐛
 rukz	𭝂
 rulk	𱞰
 rull	상
@@ -97535,7 +97543,7 @@ rxlv	𢙛
 rxlw	悗
 rxmd	𢗠
 rxob	𢙚
-rxob	𲻭
+rxob	𲻬
 rxod	愌
 rxqg	䯉
 rxqh	欱
@@ -97622,7 +97630,7 @@ sacp	㣋
 sacs	𧄨
 sacs	𗶾
 sact	蓛
-sacv	𲽰
+sacv	𲽯
 sacx	𬝜
 sacy	𫖷
 sada	𨶓
@@ -97697,7 +97705,7 @@ saiw	䔠
 saj	节
 sajb	𦹶
 sajb	𰲌
-sajb	𲼶
+sajb	𲼵
 sajc	䖇
 sajc	𦼴
 sajc	𱤅
@@ -97777,11 +97785,11 @@ salj	藾
 sall	𮑾
 salm	䓶
 salm	𩋷
-salm	𳊝
+salm	𳊛
 salo	萊
 salo	藗
 salo	䔎
-salq	𲽻
+salq	𲽺
 sals	𱾀
 salt	䔩
 salv	莕
@@ -97798,7 +97806,7 @@ samd	𠝚
 samd	𠝝
 samd	𰄪
 samf	𰄼
-samg	𳀻
+samg	𳀺
 samh	藳
 samh	𡌁
 sami	杀
@@ -97840,7 +97848,7 @@ saqf	𧅱
 saqf	𧅴
 saqf	𧆌
 saqg	𗞐
-saqg	𲽸
+saqg	𲽷
 saqi	薺
 saqj	蔐
 saqj	𧅠
@@ -98048,7 +98056,7 @@ sbjm	𥌕
 sbjm	𩋿
 sbjr	藯
 sbjr	𩌀
-sbju	𲽭
+sbju	𲽬
 sbka	茀
 sbka	𩉽
 sbkc	荨
@@ -98076,11 +98084,11 @@ sblg	𦻪
 sblh	𧂸
 sblk	薜
 sblk	𮒶
-sblk	𲽨
+sblk	𲽧
 sbll	𦽞
 sblo	𦶁
 sblo	𨗨
-sblo	𲽞
+sblo	𲽝
 sblp	𲄑
 sblq	蔃
 sblq	𩌾
@@ -98088,9 +98096,9 @@ sblq	𮓒
 sblu	𧄧
 sblv	𦮑
 sbly	𧄀
-sbml	𲽁
+sbml	𲽀
 sbmm	荱
-sbmo	𲻱
+sbmo	𲻰
 sbna	鞃
 sbna	苰
 sbna	莭
@@ -98108,7 +98116,7 @@ sbnu	𦾞
 sbnw	蔇
 sboa	虊
 sbob	𧆅
-sboc	𳄲
+sboc	𳄱
 sbof	䖂
 sboi	𪠣
 sboj	䓽
@@ -98144,7 +98152,7 @@ sbso	𧄲
 sbsr	𦯴
 sbsy	𩊾
 sbsy	𫈏
-sbth	𲽐
+sbth	𲽏
 sbtu	𢽔
 sbtu	𤼱
 sbtu	𭣵
@@ -98162,7 +98170,7 @@ sbus	䒡
 sbvs	𦷦
 sbwi	𩌿
 sbwj	𮗛
-sbwj	𲽏
+sbwj	𲽎
 sbwk	𦴛
 sbwq	䓿
 sbwr	𫟎
@@ -98203,14 +98211,14 @@ scbo	𦬣
 scbo	𦬻
 scbo	𱽎
 scbp	𱽮
-scbp	𲼏
+scbp	𲼎
 scbr	𦵚
 scbu	𦸱
 scby	𱾳
 sccc	葌
 sccc	𦮏
 sccc	𮐨
-sccc	𲼷
+sccc	𲼶
 sccf	𗞃
 scci	𗝚
 scck	𗝙
@@ -98223,7 +98231,7 @@ sccs	𗝛
 scct	𦾡
 sccy	𗚥
 scdb	䕅
-sceb	𲽑
+sceb	𲽐
 scee	𦰓
 scee	𧆑
 sceh	藿
@@ -98237,7 +98245,7 @@ scfe	薇
 scfg	𢨏
 scfj	藢
 scfk	𦳹
-scfk	𲼀
+scfk	𲻿
 scfl	茼
 scfl	𩊗
 scfo	𧃸
@@ -98404,7 +98412,7 @@ scsi	𗜨
 scsi	𗞆
 scsi	𘚍
 scsi	𘩇
-scsi	𲼻
+scsi	𲼺
 scsk	䓦
 scsk	𗛭
 scsk	𗛯
@@ -98504,7 +98512,7 @@ sddi	𤑒
 sddi	𧄖
 sddj	蔪
 sddj	𩍵
-sddj	𲼐
+sddj	𲼏
 sddk	𧅷
 sddm	𩈜
 sddn	𬟑
@@ -98558,7 +98566,7 @@ sdgy	𩈛
 sdgy	𮎬
 sdh	莊
 sdhc	𦽃
-sdhd	𳏣
+sdhd	𳏡
 sdhf	𮒾
 sdhj	𫉄
 sdhj	𮒼
@@ -98648,7 +98656,7 @@ sdkl	𪎹
 sdkl	𪎾
 sdkm	㔑
 sdkm	𪎷
-sdkm	𲼟
+sdkm	𲼞
 sdkn	𦶮
 sdkn	𧄃
 sdkn	𪏛
@@ -98713,7 +98721,7 @@ sdng	蓒
 sdng	䳬
 sdng	𫉑
 sdni	𩾘
-sdni	𳎭
+sdni	𳎫
 sdnl	𱿌
 sdnn	𦶃
 sdno	蔦
@@ -98744,7 +98752,7 @@ sdqw	𧀲
 sdr	蕙
 sdrc	𮒜
 sdre	萸
-sdre	𲼡
+sdre	𲼠
 sdri	蕙
 sdri	蕄
 sdri	𦷚
@@ -98762,7 +98770,7 @@ sdso	𱽖
 sdst	𦹰
 sdt	蔥
 sdtg	𧁗
-sdtl	𲽔
+sdtl	𲽓
 sdtr	蔥
 sdtt	薂
 sdtu	𦯎
@@ -98772,7 +98780,7 @@ sdtw	𰱄
 sdub	蓃
 sdub	𩌅
 sdug	蘤
-sduh	𳊦
+sduh	𳊤
 sduj	𦰬
 sdul	𦲩
 sdus	𦱸
@@ -98788,7 +98796,7 @@ sdwk	菂
 sdwk	莵
 sdwk	𩍌
 sdwm	𩈺
-sdwm	𳌖
+sdwm	𳌔
 sdwo	蘻
 sdwo	𦶀
 sdwr	萖
@@ -98797,11 +98805,11 @@ sdwr	𧂡
 sdwy	蕑
 sdxa	𦺯
 sdxd	𧂄
-sdxo	𲻾
+sdxo	𲻽
 sdxq	𦲽
 sdxq	𬝵
 sdyf	𱽨
-sdyu	𲼞
+sdyu	𲼝
 sdzg	𩊞
 sdzo	荎
 se	花
@@ -98831,7 +98839,7 @@ sebm	劐
 sebo	苃
 sebo	蒦
 sebo	𦳺
-sebp	𲼗
+sebp	𲼖
 sebx	𣤨
 seby	𦴩
 secg	𗜥
@@ -98843,7 +98851,7 @@ sed	舊
 sedb	𦯉
 sedi	舊
 sedj	𦮬
-sedj	𲽋
+sedj	𲽊
 sedm	𧁓
 sedr	𬞶
 seeb	𧄐
@@ -98851,7 +98859,7 @@ seee	𗞉
 seeg	𦻧
 seeh	𱾻
 seei	𦫷
-seek	𲼑
+seek	𲼐
 seel	𫈈
 seen	𗟇
 seeo	𮒊
@@ -98863,8 +98871,8 @@ seeu	𗝢
 seex	𪴳
 sef	鞭
 sefb	𩌻
-sefb	𲻼
-sefg	𳋈
+sefb	𲻻
+sefg	𳋆
 sefi	𘧡
 sefo	葻
 sefo	𬞓
@@ -99059,7 +99067,7 @@ seub	𦰞
 seuc	蓚
 seud	鵗
 seue	𨿕
-seuf	𲼭
+seuf	𲼬
 seuh	茬
 seuh	㹷
 seuh	𠡘
@@ -99384,11 +99392,11 @@ sflu	䩹
 sflu	𡿊
 sflv	葍
 sflv	𩋨
-sflv	𲻶
+sflv	𲻵
 sflw	芫
 sflw	𦣊
 sflw	𩉯
-sflw	𲽪
+sflw	𲽩
 sflx	歎
 sflx	𣥁
 sfly	酀
@@ -99409,9 +99417,9 @@ sfnj	𮐉
 sfnk	莍
 sfnk	𲩍
 sfno	𮎾
-sfnt	𲼨
+sfnt	𲼧
 sfnu	㌌
-sfoa	𲽆
+sfoa	𲽅
 sfob	𱽩
 sfoc	𨑬
 sfoc	𮞞
@@ -99515,7 +99523,7 @@ sfx	葬
 sfxb	𦯢
 sfxc	薚
 sfxc	𧀫
-sfxc	𲼁
+sfxc	𲼀
 sfxe	𠙨
 sfxe	𦾣
 sfxf	薤
@@ -99584,7 +99592,7 @@ sger	𧁋
 sges	𗛦
 sget	𱾗
 sget	𲓊
-sgew	𲽗
+sgew	𲽖
 sgfk	莪
 sgfk	𫊕
 sgft	𧁅
@@ -99626,7 +99634,7 @@ sgjk	蒖
 sgjk	𦻝
 sgjk	𩌙
 sgjn	𦼮
-sgjs	𲽬
+sgjs	𲽫
 sgjt	𩋟
 sgjt	𰱦
 sgjw	𦺓
@@ -99768,7 +99776,7 @@ shbo	菣
 shbo	𩉸
 shbo	𫉺
 shbp	𰱠
-shbp	𲼊
+shbp	𲼉
 shbu	𫉶
 shby	𧨅
 shce	萹
@@ -99777,12 +99785,12 @@ shco	茝
 shco	茞
 shco	𦽟
 shco	𬞤
-shdg	𲽍
+shdg	𲽌
 shdh	𮶩
 shdj	䓄
 shdo	𦲥
 shdo	𮏬
-shdu	𲽌
+shdu	𲽋
 sheb	𫉬
 sheh	蕥
 sheh	𩊲
@@ -99792,7 +99800,7 @@ shei	𮎽
 shei	𱾅
 shem	䓯
 shet	𦺛
-shfc	𲼣
+shfc	𲼢
 shfi	𰰠
 shfm	𧂣
 shfo	莸
@@ -99840,7 +99848,7 @@ shjb	𮧐
 shjd	𣃈
 shji	𫊔
 shji	𰱃
-shji	𲽅
+shji	𲽄
 shjj	𮐫
 shjm	𦴀
 shjo	𬞅
@@ -99852,7 +99860,7 @@ shjr	著
 shjt	𨯍
 shjt	𮣡
 shju	𥂯
-shju	𲽩
+shju	𲽨
 shjv	蘙
 shjw	䒰
 shjw	𫈃
@@ -99886,7 +99894,7 @@ shku	𩱀
 shkx	𮑠
 shky	𦵟
 shkz	䓔
-shlc	𲼲
+shlc	𲼱
 shld	薹
 shld	䕵
 shlg	𱾂
@@ -99938,7 +99946,7 @@ shov	𩺁
 shq	韃
 shqb	蕔
 shqc	𮏺
-shqf	𲽢
+shqf	𲽡
 shqg	𮒸
 shqh	𫉷
 shqi	𧂞
@@ -99971,7 +99979,7 @@ shso	莽
 shso	䒎
 shso	莽
 shsu	𮐑
-shsv	𲼺
+shsv	𲼹
 shsw	𮎻
 shtb	𮒘
 shtf	𦲏
@@ -99997,7 +100005,7 @@ shvl	䔆
 shvl	𦷯
 shvt	𦲡
 shvv	𦶋
-shvv	𲽖
+shvv	𲽕
 shw	菁
 shwd	𣃄
 shwi	荺
@@ -100259,7 +100267,7 @@ sinb	𩉺
 sinb	𱐯
 sing	𤮽
 sing	𤯀
-sing	𲼆
+sing	𲼅
 sinj	𬱊
 sinj	𭺬
 sinl	𬜷
@@ -100268,7 +100276,7 @@ sinp	𣦀
 sinr	𦹎
 sins	𬝭
 sinw	𦳾
-siod	𲻷
+siod	𲻶
 siof	𫈌
 sioi	藔
 sios	𦵫
@@ -100299,7 +100307,7 @@ siro	ザ
 siro	
 sirq	藌
 sirr	𱻰
-sirr	𲹣
+sirr	𲹢
 sirs	䔭
 siru	蔤
 siru	𦺝
@@ -100316,7 +100324,7 @@ sisi	𦺦
 sisi	𩍎
 sisi	㍋
 sisj	𬞸
-sisj	𲽷
+sisj	𲽶
 sisl	勤
 sisl	䓖
 sisl	勤
@@ -100345,10 +100353,10 @@ sivj	𬞊
 sivo	䒕
 sivs	菪
 sivt	𦼲
-sivt	𳊨
+sivt	𳊦
 siw	鞘
 siwe	𦿅
-siwi	𲻿
+siwi	𲻾
 siwj	䕓
 siwj	𩉐
 siwj	𫊀
@@ -100420,7 +100428,7 @@ sjcn	𦰇
 sjcn	𫈧
 sjco	𦴤
 sjcr	𦝙
-sjcy	𳋁
+sjcy	𳊿
 sjd	鵲
 sjdd	薡
 sjdd	𦽍
@@ -100442,7 +100450,7 @@ sjeh	薙
 sjeh	䧿
 sjei	𦮲
 sjei	𮎣
-sjei	𲽱
+sjei	𲽰
 sjej	𦭢
 sjej	𫟜
 sjem	𩔁
@@ -100487,7 +100495,7 @@ sji	菽
 sjia	𦸩
 sjib	菽
 sjib	𦵅
-sjic	𳊥
+sjic	𳊣
 sjig	𦳥
 sjig	𰱰
 sjih	𤊾
@@ -100506,11 +100514,11 @@ sjjb	𦹙
 sjjb	𧅚
 sjjc	蘡
 sjjc	𧀩
-sjjc	𲽉
+sjjc	𲽈
 sjje	𧄒
 sjje	𩉗
 sjje	𱾮
-sjje	𳊷
+sjje	𳊵
 sjjg	䩤
 sjjg	𦹵
 sjjg	𫉝
@@ -100536,7 +100544,7 @@ sjju	𮑤
 sjjx	鞐
 sjjx	𮏱
 sjjy	䔷
-sjka	𲼌
+sjka	𲼋
 sjkc	莳
 sjkd	萈
 sjkd	𩊇
@@ -100545,7 +100553,7 @@ sjke	𦽒
 sjkg	𢧉
 sjkh	𮏫
 sjkj	𦷣
-sjkj	𲽈
+sjkj	𲽇
 sjkl	𮒀
 sjkm	𮧠
 sjkq	𦇂
@@ -100554,7 +100562,7 @@ sjky	𬪖
 sjl	苛
 sjlb	蕞
 sjlh	𦹆
-sjlj	𲼹
+sjlj	𲼸
 sjll	蘁
 sjll	䔅
 sjlu	𦻋
@@ -100583,7 +100591,7 @@ sjmo	苜
 sjmo	𥄕
 sjmr	𦵞
 sjna	𱽝
-sjna	𲼙
+sjna	𲼘
 sjnb	𩊷
 sjnf	𮐢
 sjnf	𮑑
@@ -100650,7 +100658,7 @@ sjox	𮐊
 sjoy	鄚
 sjpt	𡖂
 sjpt	𬞯
-sjpt	𲽡
+sjpt	𲽠
 sjqg	靻
 sjqg	𦸫
 sjqg	𮑟
@@ -100683,7 +100691,7 @@ sjsg	鞸
 sjsh	𧃛
 sjsi	茰
 sjsi	𮶸
-sjsi	𲼠
+sjsi	𲼟
 sjsj	𣊣
 sjsl	勩
 sjsl	莇
@@ -100700,7 +100708,7 @@ sjss	𠢽
 sjst	𧅭
 sjsu	𫊘
 sjte	𫈑
-sjth	𲼪
+sjth	𲼩
 sjtu	㪚
 sjtu	𢼘
 sjtu	𢾳
@@ -100719,7 +100727,7 @@ sjut	𩍗
 sjuy	𨞼
 sjuy	𨟔
 sjuy	𱾛
-sjuy	𲽕
+sjuy	𲽔
 sjva	𦷖
 sjvi	𘱑
 sjvj	𦳱
@@ -100755,7 +100763,7 @@ sjwr	𢡗
 sjwr	𰱁
 sjwr	𱐰
 sjwt	𫉦
-sjwu	𲽇
+sjwu	𲽆
 sjwy	萌
 sjwy	葫
 sjwy	䩴
@@ -100771,7 +100779,7 @@ sjxq	𪴮
 sjxq	𫈫
 sjxq	𮐁
 sjxt	𧁎
-sjxt	𲽹
+sjxt	𲽸
 sjyf	𨛳
 sjyi	𲏰
 sjz	草
@@ -100787,7 +100795,7 @@ skaj	䩕
 skaj	𧃫
 skal	办
 skal	𮑕
-skal	𲽚
+skal	𲽙
 skam	㭟
 skam	𦸯
 skam	𱾉
@@ -100895,7 +100903,7 @@ skik	恭
 skio	芅
 skir	𫺯
 skir	が
-skir	𲹤
+skir	𲹣
 skiv	荪
 skiv	𱽚
 skj	蕴
@@ -100931,7 +100939,7 @@ skkg	𩋋
 skkg	𪭍
 skki	𱪻
 skkj	𦺿
-skkk	𲼝
+skkk	𲼜
 skkm	𰱍
 skks	䕥
 skku	𦾟
@@ -100942,7 +100950,7 @@ sklf	䓧
 sklf	䩯
 sklf	𦱂
 sklf	𩋉
-sklf	𲼿
+sklf	𲼾
 sklg	𩊌
 skli	𬔛
 skli	𮐹
@@ -101003,7 +101011,7 @@ skpg	荭
 skpz	𲃴
 skqc	蛬
 skqc	𗜠
-skqc	𲽂
+skqc	𲽁
 skqe	𧆀
 skqg	𗝗
 skqn	𗜟
@@ -101030,7 +101038,7 @@ sktm	藰
 sktu	𢼭
 sktu	𰱎
 skub	𢼦
-skuc	𲼧
+skuc	𲼦
 skuf	𦿱
 skug	菰
 skug	𦶍
@@ -101057,7 +101065,7 @@ skwn	𦵑
 skwo	茂
 skwo	𢁀
 skwo	𛃛
-skwo	𲼖
+skwo	𲼕
 skwu	蘢
 skwu	䪊
 skwu	𱰞
@@ -101095,7 +101103,7 @@ slaj	𲓶
 slal	𭫹
 slam	架
 slam	𰱅
-slam	𳐒
+slam	𳐐
 slao	𮶜
 slao	
 slb	驾
@@ -101144,7 +101152,7 @@ slfe	𫇯
 slfi	𫦥
 slfk	𦮣
 slfk	𭄻
-slfk	𲽒
+slfk	𲽑
 slfm	𦴟
 slfo	茣
 slfo	茣
@@ -101174,12 +101182,12 @@ slho	𨕸
 slhs	𦰌
 slhs	勤
 slht	𮎹
-slht	𲻺
+slht	𲻹
 slhz	𧻅
 slia	𮐪
 slib	𦷆
 slib	𭴖
-slig	𲼄
+slig	𲼃
 slih	𤇞
 slih	𦵸
 slii	𧀙
@@ -101230,7 +101238,7 @@ sll	ヵ
 sll	𘲤
 slla	𦾈
 sllc	颧
-sllc	𳉁
+sllc	𳉀
 slld	蘄
 slld	鸛
 slld	𧅧
@@ -101273,7 +101281,7 @@ slll	䖀
 slll	𧃼
 slll	𧄤
 slll	𰲖
-slll	𲽣
+slll	𲽢
 sllm	鹳
 sllm	𣰻
 sllm	𭄚
@@ -101384,7 +101392,7 @@ slxa	𭬟
 slxi	𲔢
 slxj	𩕫
 slxj	𭿃
-slxk	𲻹
+slxk	𲻸
 slxm	𠞝
 slxm	𦱝
 slxm	
@@ -101406,7 +101414,7 @@ smam	䩋
 smam	𮶢
 smao	蔴
 smav	𧁃
-smbd	𲼱
+smbd	𲼰
 smbe	䕠
 smbj	𦱮
 smbk	𮒤
@@ -101424,7 +101432,7 @@ smco	𮑌
 smco	𮟋
 smd	藐
 smdb	𱾡
-smdc	𲼦
+smdc	𲼥
 smdg	藱
 smdg	薭
 smdg	䕇
@@ -101432,7 +101440,7 @@ smdg	𩉛
 smdg	𦸣
 smdg	𧁩
 smdg	𪟋
-smdg	𲽵
+smdg	𲽴
 smdi	刈
 smdn	𦿬
 smdn	𪁾
@@ -101443,7 +101451,7 @@ smdr	𬟘
 smdw	藐
 smdw	𬟈
 smea	𣟶
-smea	𲼚
+smea	𲼙
 smeb	𮒗
 smec	𰲁
 smed	𧂶
@@ -101451,14 +101459,14 @@ smed	𮓀
 smeh	䕌
 smei	䕴
 smej	蘈
-smej	𲻻
+smej	𲻺
 smer	𧃽
 smer	𧄄
 smes	𮏷
 smfc	𧀔
 smfd	𦷑
 smff	𱽧
-smfj	𲽥
+smfj	𲽤
 smfk	𮑼
 smfr	𬝦
 smfs	藦
@@ -101483,7 +101491,7 @@ smgy	䩠
 smgy	𫸓
 smh	薦
 smhc	藊
-smhc	𲽊
+smhc	𲽉
 smhg	鞂
 smhh	𦴂
 smhh	𦽂
@@ -101521,7 +101529,7 @@ smjs	𦳅
 smjs	𧂷
 smjt	𧄦
 smju	𧀽
-smju	𲽤
+smju	𲽣
 smjw	𮑨
 smk	荞
 smka	荞
@@ -101545,7 +101553,7 @@ smkv	𦯅
 smkw	𮑏
 smky	𫉾
 smky	𬝰
-smkz	𲼒
+smkz	𲼑
 sml	蕎
 smlg	𩌫
 smlg	𦴰
@@ -101571,12 +101579,12 @@ smmg	𩉪
 smmg	𦽧
 smmg	𬝪
 smmh	䔉
-smml	𲽶
+smml	𲽵
 smmm	茘
 smmm	𣮿
 smmm	𦳁
 smmm	𧆓
-smmm	𲽧
+smmm	𲽦
 smmn	𦿾
 smmo	芼
 smmp	䔣
@@ -101621,7 +101629,7 @@ smri	𬟊
 smrk	萟
 smrk	𧀁
 smro	𦬰
-smro	𲻴
+smro	𲻳
 sms	蔗
 smsb	䩲
 smsb	𦳔
@@ -101668,17 +101676,17 @@ smwk	𦷒
 smwk	𱽱
 smwm	𦾰
 smwm	𩣻
-smwm	𲽼
+smwm	𲽻
 smwn	藜
 smwo	𮐠
-smwo	𲻳
+smwo	𲻲
 smwp	𦺙
 smwp	𰅗
 smwq	𦿺
 smwy	䔚
 smxd	蘒
 smxk	𦲦
-smxo	𲽘
+smxo	𲽗
 smxq	𦳫
 smxr	𧁨
 smxv	𦼁
@@ -101687,7 +101695,7 @@ smxx	𦰎
 smyi	𧀚
 smyo	芺
 smyt	𧄆
-smyt	𲽦
+smyt	𲽥
 sn	落
 sn	落实
 sn	落后
@@ -101732,7 +101740,7 @@ snbn	𗜕
 snbp	菠
 snbr	𦯊
 snbr	𧄢
-snbs	𲼽
+snbs	𲼼
 snby	𨟪
 snci	䓷
 snck	𘫚
@@ -101742,7 +101750,7 @@ sncn	𗛝
 snco	苌
 sncs	𘟊
 sncv	𫉗
-sncy	𲼈
+sncy	𲼇
 sndb	萡
 sndd	𦾶
 sndg	蒎
@@ -101767,7 +101775,7 @@ snek	𫇼
 snek	𮏠
 snel	𦶒
 snem	𦴷
-snen	𲼯
+snen	𲼮
 snes	莈
 snfg	𩊬
 snfm	䩉
@@ -101795,7 +101803,7 @@ snhh	𮶥
 snhj	𦼥
 snhl	𰲉
 snhn	𦲾
-snhq	𲼮
+snhq	𲼭
 snht	蔆
 snhu	蘫
 snhw	蔳
@@ -101969,7 +101977,7 @@ snqm	𦺍
 snqn	𮑲
 snqn	𗛟
 snqn	𗝐
-snqn	𲼾
+snqn	𲼽
 snqs	蓱
 snqs	蓱
 snqy	𫈭
@@ -101996,7 +102004,7 @@ snsr	𮶷
 snsu	𫉰
 snt	茫
 snte	𦯻
-snte	𲽙
+snte	𲽘
 sntf	𫈊
 sntl	落
 sntl	落
@@ -102023,7 +102031,7 @@ snuu	𬞫
 snva	𧃾
 snvc	𦾷
 snvh	𦹹
-snvi	𲽎
+snvi	𲽍
 snvj	𮒐
 snvp	𧄻
 snvv	蕅
@@ -102034,7 +102042,7 @@ snwj	𬞇
 snwl	𦲆
 snwn	𮐝
 snwn	𱽬
-snwn	𲽀
+snwn	𲼿
 snwo	萢
 snwo	𧁳
 snwq	𫉙
@@ -102047,7 +102055,7 @@ snxd	𬞋
 snxk	𦮖
 snxk	𦮛
 snxk	𰱚
-snxr	𲼼
+snxr	𲼻
 snxt	𲇩
 snxw	莐
 sny	荡
@@ -102083,8 +102091,8 @@ soco	𰺯
 socr	蒳
 socr	𨒩
 socu	𮒔
-socu	𳊪
-socv	𲼩
+socu	𳊨
+socv	𲼨
 socy	𨒗
 sodc	𫈹
 sodd	菴
@@ -102123,7 +102131,7 @@ sohb	𱾬
 sohj	𮑂
 sohk	𬟋
 sohl	𦺢
-soht	𲽠
+soht	𲽟
 soig	䔋
 soij	𧃴
 soij	𮐸
@@ -102165,7 +102173,7 @@ somc	𦿿
 somd	㓴
 somh	蓁
 somh	𩌘
-somh	𲾀
+somh	𲽿
 soml	𦹄
 somm	𦯮
 somo	𰰟
@@ -102216,7 +102224,7 @@ soqb	𧃓
 soqd	𫈸
 soqi	䩍
 soqi	𦼔
-soqi	𲽺
+soqi	𲽹
 soqk	荚
 soqk	𮎪
 soqm	𲓀
@@ -102254,7 +102262,7 @@ soub	藧
 souc	䕑
 soug	𦸷
 souq	𦸆
-sout	𲽮
+sout	𲽭
 sovt	𦹀
 sovv	𬟍
 sow	蘊
@@ -102396,15 +102404,15 @@ spwy	𰱔
 spxo	茜
 spya	𦯋
 spyf	𦭭
-spyg	𳊠
+spyg	𳊞
 spyo	莤
 spzm	𩈤
 spzm	𫏔
 spzo	莡
 sq	蒋
 sqak	靽
-sqam	𲼅
-sqam	𲼢
+sqam	𲼄
+sqam	𲼡
 sqbg	𦯔
 sqbg	𗛑
 sqbj	𰰮
@@ -102413,7 +102421,7 @@ sqbn	𗜹
 sqbn	𗞭
 sqbs	𗟋
 sqc	茧
-sqcg	𳊞
+sqcg	𳊜
 sqcg	𗞓
 sqcg	𗞔
 sqci	𧉺
@@ -102430,7 +102438,7 @@ sqct	薮
 sqct	𦽗
 sqcu	𗛏
 sqcu	𗜲
-sqcu	𲽛
+sqcu	𲽚
 sqcy	𗜰
 sqcy	𗜱
 sqeb	𧃀
@@ -102475,7 +102483,7 @@ sqjy	𫟕
 sqka	𭪙
 sqka	𘩈
 sqka	𘫬
-sqka	𲽝
+sqka	𲽜
 sqkc	𫴰
 sqkm	𦶚
 sqko	𦽽
@@ -102487,7 +102495,7 @@ sqks	𗜁
 sqks	𘚏
 sqku	𦶩
 sqku	𭄷
-sqkx	𲼘
+sqkx	𲼗
 sqlw	莌
 sqlw	𩊭
 sqmo	𱽥
@@ -102499,7 +102507,7 @@ sqnr	𬞧
 sqns	𲩰
 sqoa	菤
 sqoc	蒾
-sqoc	𳊧
+sqoc	𳊥
 sqod	䓺
 sqod	𦶘
 sqod	𩋼
@@ -102621,12 +102629,12 @@ sr	茶叶
 sr	茶馆
 sra	苍
 srab	𦷨
-srad	𳏛
+srad	𳏙
 srag	蘹
 srag	𬝗
 srai	𤯊
 sraj	苍
-sraj	𲽽
+sraj	𲽼
 srak	𬞠
 sral	𫉕
 sram	茶
@@ -102652,7 +102660,7 @@ sree	𱿀
 sref	𘜯
 sref	𘪠
 sreh	𱾆
-sreh	𲼰
+sreh	𲼯
 srei	𦬆
 srei	𦬉
 srei	𘱐
@@ -102670,7 +102678,7 @@ srff	𦵕
 srff	𬝖
 srfg	䔑
 srfg	𦹍
-srfi	𲽴
+srfi	𲽳
 srfj	薈
 srfl	𦷮
 srfm	萮
@@ -102771,7 +102779,7 @@ sroc	薖
 sroc	𨗲
 srpg	𮎥
 srpi	𦮳
-srqc	𲿗
+srqc	𲿖
 srqm	䩎
 srqo	薟
 srr	而
@@ -102920,7 +102928,7 @@ ssga	𩏧
 ssgb	𢺽
 ssgd	鷨
 ssge	𩀵
-ssgg	𳊣
+ssgg	𳊡
 ssgi	華
 ssgi	𩊈
 ssgi	𦰗
@@ -102955,7 +102963,7 @@ ssir	蓳
 ssit	𤉧
 ssiw	𮋢
 ssix	𰱡
-ssjb	𲼴
+ssjb	𲼳
 ssje	䫱
 ssje	𩍛
 ssje	𩑛
@@ -103046,7 +103054,7 @@ sssc	𩈾
 ssse	𦴾
 sssg	鞾
 sssg	𦶭
-sssg	𲼕
+sssg	𲼔
 sssh	𦓢
 sssi	䒝
 sssi	𩉤
@@ -103136,7 +103144,7 @@ steo	芠
 stf	芳
 stfo	芳
 stfs	𮧛
-stfs	𲼥
+stfs	𲼤
 stgg	𧅋
 stgg	𬞵
 stgg	𱾊
@@ -103145,7 +103153,7 @@ stgk	𦳧
 stgo	葹
 stgp	蔙
 stgu	𦹭
-stgu	𲽜
+stgu	𲽛
 stgv	𮒳
 sthg	𮧙
 sthj	藸
@@ -103157,13 +103165,13 @@ stio	𦮰
 stir	苳
 stjb	𦹺
 stje	𩓜
-stjl	𲼓
+stjl	𲼒
 stjm	𦱋
 stjo	菳
 stjr	𫈉
-stju	𲽳
+stju	𲽲
 stka	荠
-stkg	𲼤
+stkg	𲼣
 stki	萕
 stkk	𧂂
 stlc	𦮋
@@ -103178,12 +103186,12 @@ stlv	𬜵
 stlw	𮐛
 stmd	𰰹
 stmh	𮶨
-stmo	𲻰
+stmo	𲻯
 stni	𮏾
 stnu	𧄭
 stoc	蓫
 stoc	𦷷
-stoc	𳄣
+stoc	𳄢
 stps	蕤
 stps	蕤
 stqc	𦳶
@@ -103195,9 +103203,9 @@ stri	莣
 stri	𰱉
 strj	𦿻
 strq	𧰛
-stsl	𲻵
+stsl	𲻴
 stsw	𮏞
-sttf	𲼔
+sttf	𲼓
 sttu	𫈚
 sttu	𭣺
 stuf	𮑸
@@ -103259,7 +103267,7 @@ subo	𨕃
 subo	𩉲
 subo	𫇥
 subo	𬜤
-subo	𲻲
+subo	𲻱
 subp	𦵉
 subp	𮑣
 subs	𱽗
@@ -103276,7 +103284,7 @@ suco	𦼣
 suco	𧁥
 sucq	𦻷
 sucs	𦹚
-sudb	𲼋
+sudb	𲼊
 sudi	蓞
 sudi	鞱
 sudj	䔮
@@ -103307,7 +103315,7 @@ sufk	𦾒
 sufo	菲
 sufq	䔇
 sufr	𦴜
-suga	𲽾
+suga	𲽽
 suge	𦲿
 sugg	䩝
 sugh	𱾶
@@ -103349,8 +103357,8 @@ sujj	𧀂
 sujj	𪡻
 sujk	𦺩
 sujk	𦼨
-sujk	𲼍
-sujl	𲼬
+sujk	𲼌
+sujl	𲼫
 sujo	芇
 sujo	蘨
 sujo	𦾾
@@ -103369,7 +103377,7 @@ sukj	𥋚
 sukj	𬞱
 sukk	蔑
 sukm	𧀅
-sukm	𲼂
+sukm	𲼁
 suku	𢅓
 suku	𫉼
 suku	𮓅
@@ -103414,7 +103422,7 @@ suoe	蘿
 suoe	𩉙
 suoe	𩎊
 suoe	蘿
-suog	𳊟
+suog	𳊝
 suoj	䒻
 suoj	𰰴
 suoo	𦭸
@@ -103470,7 +103478,7 @@ suvk	𧃢
 suvm	蘮
 suvr	藘
 suvt	𱽻
-suvt	𲼫
+suvt	𲼪
 suvu	蘆
 suvu	𩍼
 suvu	蘆
@@ -103514,10 +103522,10 @@ suxj	𩖎
 suxk	薎
 suxk	𦸑
 suxk	𧂝
-suxk	𲾁
+suxk	𲾀
 suxl	𧄯
 suxl	𮒽
-suxm	𲽿
+suxm	𲽾
 suxn	薨
 suxo	䒐
 suxo	𦫰
@@ -103538,7 +103546,7 @@ suxt	薆
 suxt	𧀧
 suxt	𧲎
 suxt	𫉐
-suxt	𲽲
+suxt	𲽱
 suxu	𤔻
 suxv	𥕗
 suxv	𦒃
@@ -103580,7 +103588,7 @@ svdj	𦳵
 svdk	𫊅
 svdn	鶓
 svee	𦴱
-sveh	𲽄
+sveh	𲽃
 sves	𪵒
 svez	𫦫
 svff	𬞏
@@ -103595,7 +103603,7 @@ svgv	𫊑
 svgy	𦱼
 svhh	𦲒
 svhh	𫊒
-svhh	𳊡
+svhh	𳊟
 svhk	𦸎
 svho	𦫺
 svht	𰊶
@@ -103616,7 +103624,7 @@ svjr	𧀦
 svjr	𩊘
 svjr	𮎩
 svjr	𮏥
-svjr	𳊫
+svjr	𳊩
 svjt	虁
 svjt	𦷜
 svjt	𬟡
@@ -103670,7 +103678,7 @@ svsl	苈
 svsl	勱
 svsl	莮
 svsl	𱐫
-svsl	𲼃
+svsl	𲼂
 svso	𦱓
 svso	𬜽
 svtl	𤰛
@@ -103700,7 +103708,7 @@ svvo	䔡
 svvo	𨙗
 svvo	𛃇
 svvs	𦯰
-svvt	𲽟
+svvt	𲽞
 svvu	𡿉
 svvv	藟
 svvv	藞
@@ -103714,7 +103722,7 @@ svwo	𧂫
 svwt	𧀥
 svwy	𦳢
 svwy	𩋤
-svyc	𲼎
+svyc	𲼍
 svyf	𦿇
 svyf	𨟂
 svyf	𮠆
@@ -103760,7 +103768,7 @@ swcu	𦷐
 swdg	𮑎
 swdk	𧃎
 swee	𠘿
-swef	𳋇
+swef	𳋅
 sweh	𮐩
 swem	𦱞
 sweo	𧃚
@@ -103849,14 +103857,14 @@ swku	𩱅
 swkv	𦑨
 swkw	𦴠
 swkw	𦹩
-swkz	𲻸
+swkz	𲻷
 swl	苟
 swla	檠
 swla	𱅽
 swlb	警
 swlb	𢐧
-swld	𳏳
-swle	𳈽
+swld	𳏱
+swle	𳈼
 swlf	擎
 swlf	𦱩
 swlg	𦴳
@@ -103867,7 +103875,7 @@ swlj	𫄿
 swlk	𠣷
 swll	𧅕
 swll	𭋆
-swlo	𲸝
+swlo	𲸜
 swlq	蟼
 swlr	憼
 swlr	𮏆
@@ -103951,7 +103959,7 @@ swrj	𦭉
 swrr	𦯯
 swrr	𧂿
 swrr	𮎯
-swrr	𲼸
+swrr	𲼷
 swrt	𦱟
 swru	蒕
 swsa	𦼶
@@ -103986,7 +103994,7 @@ swtu	𛁁
 swub	𭣹
 swug	𦳍
 swui	𦭩
-swuj	𳊢
+swuj	𳊠
 swvt	䓒
 swvv	𮒿
 sww	兇
@@ -104025,7 +104033,7 @@ sx	带动
 sxa	荣
 sxaa	𦵴
 sxaa	𰘓
-sxad	𲽫
+sxad	𲽪
 sxaj	苑
 sxaj	𦭘
 sxaj	𦺲
@@ -104054,7 +104062,7 @@ sxdi	萏
 sxdj	𰱑
 sxdn	𦾉
 sxdn	𬝙
-sxdo	𳊩
+sxdo	𳊧
 sxdx	𦻁
 sxeg	𦿠
 sxeh	蒮
@@ -104080,7 +104088,7 @@ sxfu	𤔾
 sxfy	𨞫
 sxgf	𦭂
 sxgl	荛
-sxgv	𲼳
+sxgv	𲼲
 sxgy	𫇽
 sxht	茔
 sxi	荧
@@ -104112,7 +104120,7 @@ sxka	𩋑
 sxkd	𬜢
 sxke	𦴎
 sxki	𮏅
-sxkj	𳊰
+sxkj	𳊮
 sxkk	𦰊
 sxkn	𦯼
 sxko	𮏌
@@ -104148,7 +104156,7 @@ sxns	荥
 sxo	莲
 sxob	𦫥
 sxob	𬡞
-sxob	𲻽
+sxob	𲻼
 sxoc	莲
 sxoh	𬞔
 sxos	萦
@@ -104221,7 +104229,7 @@ sxxk	蒬
 sxxk	𩌑
 sxxm	𦰵
 sxxo	芕
-sxxq	𲼉
+sxxq	𲼈
 sxxx	茤
 sxxx	𩊥
 sxyf	茒
@@ -104328,7 +104336,7 @@ sykx	𦵮
 sylc	𬞘
 sylj	藬
 sylt	𩍉
-sylt	𲼵
+sylt	𲼴
 symc	𫉛
 syn	蒸
 synf	䒱
@@ -104336,7 +104344,7 @@ synf	𩊨
 syni	蒸
 syni	𦻛
 synl	𦲶
-syno	𲼜
+syno	𲼛
 synq	𧯷
 syns	𦭕
 synt	𦶬
@@ -104369,8 +104377,8 @@ syss	𗟁
 syss	𗟃
 syss	𗷕
 syta	𱽿
-sytc	𲽃
-sytf	𲼇
+sytc	𲽂
+sytf	𲼆
 sytp	蕯
 syua	𗝸
 syuc	𦹥
@@ -104397,7 +104405,7 @@ t	这些
 ta	条
 ta	条件
 ta	条款
-taaa	𳆼
+taaa	𳆻
 taae	𰿽
 taaj	𨭺
 taal	𫓞
@@ -104409,7 +104417,7 @@ tacc	𫓇
 tack	𨦉
 tacm	𲇐
 tacp	𬫕
-tada	𳇍
+tada	𳇌
 tadm	𬮌
 tae	闶
 taei	𨥼
@@ -104444,10 +104452,10 @@ taji	𨫜
 tajn	𨯢
 tajq	𫓜
 tajr	錬
-tajr	𳆚
+tajr	𳆙
 tajs	𰶥
 tajw	𠨑
-taka	𳅳
+taka	𳅲
 takd	鉥
 take	㪯
 take	𨧤
@@ -104455,7 +104463,7 @@ take	𬬑
 takg	𮣐
 taki	䥋
 taki	𨬤
-takn	𳆄
+takn	𳆃
 tako	𨩔
 taks	鉸
 takt	鐓
@@ -104488,7 +104496,7 @@ tanp	𧲀
 tanp	𨩏
 tanp	𫒻
 tanu	𬫪
-tanv	𳆦
+tanv	𳆥
 tanw	銃
 tanw	鋶
 tanw	旈
@@ -104511,8 +104519,8 @@ targ	錊
 tas	鑲
 tasf	鑻
 tasg	鑲
-task	𳇧
-tasv	𳇥
+task	𳇦
+tasv	𳇤
 tatg	𨮽
 tatm	𲈾
 tatm	𲈿
@@ -104567,8 +104575,8 @@ tbcv	𨫒
 tbd	鏽
 tbdf	鏽
 tbdh	𨽷
-tbdn	𳏗
-tbdu	𳇘
+tbdn	𳏕
+tbdu	𳇗
 tbdz	𫒷
 tbej	𰐡
 tbes	𨨻
@@ -104620,14 +104628,14 @@ tblb	𨫁
 tblk	鐴
 tblk	𧲉
 tblk	𰿾
-tblm	𳆷
+tblm	𳆶
 tblq	鏹
 tblq	鏹
 tbm	闯
 tbmm	闯
 tbmm	𧱎
 tbmm	𨪅
-tbmw	𳌚
+tbmw	𳌘
 tbna	𣁚
 tbna	𨥺
 tbnb	鈮
@@ -104637,7 +104645,7 @@ tbns	録
 tbod	𨰽
 tboi	变
 tboj	𨥁
-tboo	𳄽
+tboo	𳄼
 tbor	𬬦
 tbot	𨰺
 tbot	𨰼
@@ -104677,7 +104685,7 @@ tbym	訚
 tbyu	𮗺
 tc	赢
 tc	赢得
-tcak	𳇨
+tcak	𳇧
 tcbo	𧱊
 tcbw	赢
 tccj	𲤊
@@ -104698,19 +104706,19 @@ tcfw	𨨓
 tcga	䥏
 tcgj	𨯣
 tcgt	𫓍
-tchj	𳇃
+tchj	𳇂
 tcht	䤡
 tcic	𬫑
 tcic	𭤷
 tcij	𨩩
 tcil	𪦍
-tcin	𳆻
+tcin	𳆺
 tciw	𨬋
 tcje	𨬗
 tcjm	𲈶
 tcjr	鏪
 tcjw	𮣚
-tckg	𳆧
+tckg	𳆦
 tckj	𮤵
 tcks	𧰶
 tckz	𬫓
@@ -104766,7 +104774,7 @@ tcyh	颏
 td	逢
 tda	斕
 tdam	䥜
-tdam	𳆯
+tdam	𳆮
 tdaq	斕
 tdaq	鑭
 tdbj	鉑
@@ -104778,15 +104786,15 @@ tdci	𨯺
 tdcj	斖
 tdcj	𨰷
 tdcj	𰽓
-tdcj	𳅽
+tdcj	𳅼
 tdck	𨯵
 tddb	鏏
 tddi	𨰐
 tddj	鑕
 tddj	鏩
 tddj	𱡥
-tddj	𳆉
-tddm	𳈔
+tddj	𳆈
+tddm	𳈓
 tddr	𨯚
 tdei	錷
 tdek	𨥝
@@ -104839,7 +104847,7 @@ tdll	䥨
 tdls	𨭿
 tdm	鍥
 tdmc	𫓒
-tdmd	𳆆
+tdmd	𳆅
 tdmf	䤿
 tdmj	鍆
 tdmo	鍥
@@ -104871,7 +104879,7 @@ tdot	𱟦
 tdoy	𩙹
 tdpf	𭤬
 tdpj	𬫄
-tdpu	𳇢
+tdpu	𳇡
 tdqc	𧋴
 tdqh	𨮁
 tdqj	𨦈
@@ -104923,7 +104931,7 @@ teal	𮢇
 team	銝
 team	鏶
 team	䤪
-team	𳂈
+team	𳂇
 tebg	𨫡
 tebg	𮡶
 tebj	鍭
@@ -104931,12 +104939,12 @@ tebk	鈸
 tebk	鈸
 tebo	﨎
 tebo	𪯩
-tebo	𳆣
-teby	𳆙
+tebo	𳆢
+teby	𳆘
 teck	鐫
 teck	𨬺
-tecl	𳇖
-tedb	𳆀
+tecl	𳇕
+tedb	𳅿
 tedm	𨷫
 tedn	𨭷
 tedx	𮣛
@@ -104954,7 +104962,7 @@ tefs	𨩫
 tefs	𨸇
 tefs	𲤄
 tefu	𨦨
-tefx	𳅼
+tefx	𳅻
 tegi	鎨
 tegj	鏆
 tegn	鎸
@@ -104997,7 +105005,7 @@ telm	𠝪
 tels	𮢍
 telv	鉛
 telv	𨥰
-temc	𳆠
+temc	𳆟
 temj	鉧
 temq	𬫊
 temr	銋
@@ -105011,9 +105019,9 @@ tena	𮡫
 tenb	鈋
 tens	錄
 tens	錄
-teoe	𳅸
+teoe	𳅷
 teol	𧱺
-tepg	𳅵
+tepg	𳅴
 tepo	䥦
 tepo	𧲈
 tepw	䤻
@@ -105031,7 +105039,7 @@ tess	𮣆
 tets	䤸
 teuc	鎀
 teue	𨮑
-teuh	𳈕
+teuh	𳈔
 teuj	鈽
 teuj	𬫺
 teuk	銌
@@ -105039,9 +105047,9 @@ teuo	𨮓
 teuu	𤔟
 teuw	鏅
 tevs	𨮀
-tewo	𳆥
+tewo	𳆤
 tewy	銪
-texa	𳇎
+texa	𳇍
 texx	𫒬
 tf	方
 tf	方面
@@ -105090,7 +105098,7 @@ tfkj	贇
 tfkj	𣁦
 tfkj	𨫮
 tfkk	𨰡
-tfkl	𳆅
+tfkl	𳆄
 tfkp	斌
 tfkp	錻
 tfkr	鐚
@@ -105098,10 +105106,10 @@ tfks	鑈
 tfks	𭥇
 tfkt	𨭉
 tfku	𬫢
-tfla	𳇛
+tfla	𳇚
 tflj	𧸶
 tflj	𨯲
-tflk	𳈘
+tflk	𳈗
 tfll	𮣇
 tflp	鋞
 tflq	鋀
@@ -105142,7 +105150,7 @@ tfso	𫔭
 tfsr	𫔷
 tfsu	𢩸
 tfsu	𬮶
-tfsw	𳈚
+tfsw	𳈙
 tfsy	𨦹
 tftu	𭐦
 tfug	𨥳
@@ -105194,7 +105202,7 @@ tgdk	𬀣
 tgdn	𨯥
 tgdn	𪇩
 tgdo	𬀡
-tgdo	𳆲
+tgdo	𳆱
 tgdr	𰒃
 tgds	𣃵
 tgdw	𨰓
@@ -105214,14 +105222,14 @@ tgew	𧲗
 tgfa	𨨶
 tgfe	𨫝
 tgfk	鋨
-tgfk	𳇄
+tgfk	𳇃
 tgfo	𪯶
 tgfp	𧲌
 tgfs	𪰀
 tgfu	旆
 tgfu	𬀂
 tgg	銀
-tggd	𳏝
+tggd	𳏛
 tggg	𣃩
 tggi	𫒍
 tggj	銀
@@ -105266,7 +105274,7 @@ tgjb	𪯽
 tgjc	𬀑
 tgjd	鷟
 tgjd	𨰉
-tgjd	𳇤
+tgjd	𳇣
 tgje	𩀥
 tgjf	𢳈
 tgjg	𬀇
@@ -105275,7 +105283,7 @@ tgji	𮡽
 tgjj	𩔽
 tgjk	鎮
 tgjk	阗
-tgjk	𳇑
+tgjk	𳇐
 tgjl	㫊
 tgjl	𣄙
 tgjm	𬸦
@@ -105410,8 +105418,8 @@ tgsc	豮
 tgsi	𲤈
 tgsj	豶
 tgsj	鐼
-tgso	𳅲
-tgtj	𳇠
+tgso	𳅱
+tgtj	𳇟
 tgtn	𨯽
 tgu	旗
 tgua	𪰃
@@ -105426,7 +105434,7 @@ tgum	衁
 tguo	𣃼
 tguo	𫰁
 tguq	旗
-tguq	𳇒
+tguq	𳇑
 tgur	𨬹
 tgur	𮷴
 tguz	𬀄
@@ -105526,17 +105534,17 @@ thjr	鍺
 thjw	𣃱
 thjw	𨦑
 thjw	𬮣
-thjw	𳅾
+thjw	𳅽
 thjx	䥗
-thjy	𳆾
+thjy	𳆽
 thkc	𫓄
 thke	𨬓
 thkh	錴
-thkj	𳅰
+thkj	𳅯
 thkk	䤲
 thkk	𬮨
 thkk	𲣷
-thkl	𳆹
+thkl	𳆸
 thkt	錂
 thkt	𨬊
 thkx	𮢵
@@ -105555,8 +105563,8 @@ thlv	𨭎
 thlv	銡
 thlv	𮸥
 thlx	䥲
-thml	𳆿
-thmv	𳆺
+thml	𳆾
+thmv	𳆹
 thn	阖
 thna	鉣
 thna	𫒰
@@ -105568,7 +105576,7 @@ thnn	𨨙
 thns	𨦲
 thnu	阖
 thnu	鎑
-thoe	𳅴
+thoe	𳅳
 thol	𨮚
 thos	𬫵
 thqj	𮡧
@@ -105581,7 +105589,7 @@ thri	鋕
 thrl	𬬋
 thsd	𨭈
 thte	𱖐
-thtf	𳆊
+thtf	𳆉
 thtg	𨫺
 thth	𫯄
 thti	𮰟
@@ -105595,7 +105603,7 @@ thuj	鉔
 thuj	鑟
 thuq	𮢺
 thvj	𨧄
-thvl	𳆛
+thvl	𳆚
 thvv	䥇
 thwj	鐕
 thwj	鐕
@@ -105604,9 +105612,9 @@ thwy	錆
 thwy	𧱚
 thwy	𨨔
 thwy	𬮬
-thwy	𳇚
+thwy	𳇙
 thxe	𨧣
-thxk	𳆸
+thxk	𳆷
 thxq	豷
 thxq	𨸌
 thxq	𬬅
@@ -105673,7 +105681,7 @@ tiha	𰿶
 tihf	𣃛
 tihi	𭴢
 tihj	鈥
-tihl	𳇟
+tihl	𳇞
 tihm	𬮟
 tihq	𨨷
 tiht	鏜
@@ -105757,7 +105765,7 @@ tisp	鑳
 tisw	𨰬
 titl	𫒴
 tits	鎵
-tiug	𳇝
+tiug	𳇜
 tiuj	鏛
 tiuu	𨰆
 tiv	鐺
@@ -105823,7 +105831,7 @@ tjff	𱡲
 tjfi	鉭
 tjfi	𭤘
 tjfj	𫒘
-tjfj	𳇡
+tjfj	𳇠
 tjfk	鍀
 tjfn	𨫞
 tjfp	鍉
@@ -105839,7 +105847,7 @@ tjhq	𨬕
 tjhq	𨬵
 tjib	𨧷
 tjic	𨪶
-tjig	𳆑
+tjig	𳆐
 tjih	𨨋
 tjij	鉃
 tjil	鎤
@@ -105883,7 +105891,7 @@ tjkl	𨩄
 tjku	𫓈
 tjkx	𨬟
 tjlb	𲇤
-tjlj	𳇆
+tjlj	𳇅
 tjll	鎶
 tjll	鑩
 tjlv	鈳
@@ -105931,7 +105939,7 @@ tjsn	鑤
 tjsn	𧲐
 tjsn	𱕩
 tjso	𲇎
-tjso	𳈗
+tjso	𳈖
 tjsy	㐥
 tjte	𰼸
 tjtu	𰽁
@@ -106092,7 +106100,7 @@ tkmd	𰿪
 tkmj	鉚
 tkmj	𬳝
 tkmu	𨩣
-tkmu	𳅿
+tkmu	𳅾
 tkna	鈆
 tknr	𨨟
 tknr	𬫱
@@ -106111,7 +106119,7 @@ tkri	鋱
 tkrj	釞
 tkrj	𧸠
 tkrl	鋊
-tkrx	𳈙
+tkrx	𳈘
 tksd	𨨞
 tksi	𰼢
 tksj	𨩭
@@ -106120,7 +106128,7 @@ tksm	𠜡
 tkso	𪰁
 tkso	𫒞
 tksq	𬫻
-tksx	𳆡
+tksx	𳆠
 tktm	𨮸
 tkto	𬩛
 tktu	𢽴
@@ -106198,7 +106206,7 @@ tlgt	𨯃
 tlhb	𣁔
 tlhb	𨦰
 tlhh	𨪒
-tlht	𳅻
+tlht	𳅺
 tlhv	鐂
 tlik	𡫫
 tliw	𨪮
@@ -106206,7 +106214,7 @@ tlja	鏁
 tljb	鎻
 tljb	𠅳
 tljb	𪯾
-tljb	𳆞
+tljb	𳆝
 tljc	阓
 tlje	頟
 tlje	𮣍
@@ -106242,7 +106250,7 @@ tlll	𬮳
 tlll	𮣟
 tlll	𮣦
 tllo	𨫰
-tllo	𳄾
+tllo	𳄽
 tllr	𨫑
 tllt	𨰫
 tllu	鋛
@@ -106263,7 +106271,7 @@ tloc	𮞑
 tlod	𡘯
 tlod	𨦚
 tlqa	𫬪
-tlqc	𳆏
+tlqc	𳆎
 tlqg	𮊶
 tlri	懖
 tlri	㤩
@@ -106307,7 +106315,7 @@ tlwk	𣜄
 tlwl	鑞
 tlwl	䝓
 tlwr	𱏨
-tlwr	𳅷
+tlwr	𳅶
 tlwy	鋗
 tlwy	𫡻
 tlwy	鋗
@@ -106339,7 +106347,7 @@ tmbw	𣁠
 tmbw	𧱿
 tmcj	鋠
 tmcn	錗
-tmcn	𳂉
+tmcn	𳂈
 tmd	刘
 tmdc	龲
 tmde	刘
@@ -106363,7 +106371,7 @@ tmgh	鑂
 tmgn	銹
 tmgo	𠅼
 tmgs	𨪻
-tmgs	𳇜
+tmgs	𳇛
 tmgy	鋌
 tmhi	𮣘
 tmhj	鉌
@@ -106390,7 +106398,7 @@ tmll	鐈
 tmlv	鉊
 tmlv	𨨛
 tmlv	𬫷
-tmlv	𳇔
+tmlv	𳇓
 tmm	门
 tmm	⻔
 tmma	鏫
@@ -106431,12 +106439,12 @@ tmsk	鑛
 tmsl	𠡖
 tmsw	𨪸
 tmuf	𨰞
-tmul	𳆋
+tmul	𳆊
 tmv	鍾
 tmvc	𨮛
 tmvh	𨮻
 tmvl	鍾
-tmvs	𳇞
+tmvs	𳇝
 tmvt	𬬐
 tmwa	𨬏
 tmwj	𨯸
@@ -106445,7 +106453,7 @@ tmwy	䥎
 tmwy	𧱽
 tmwy	𮍈
 tmxa	𨭤
-tmxx	𳆰
+tmxx	𳆯
 tmyj	𨥜
 tmyt	𨯙
 tn	阔
@@ -106455,7 +106463,7 @@ tnbj	𨤽
 tnbo	𬫆
 tnbp	𨨏
 tnbs	𰶤
-tndb	𳆌
+tndb	𳆋
 tndg	鎃
 tndi	𨪫
 tnej	𨥡
@@ -106483,7 +106491,7 @@ tnjp	𬬔
 tnjr	錔
 tnjr	𬫏
 tnjw	𫒯
-tnjy	𳆁
+tnjy	𳆀
 tnkc	鎛
 tnkc	𣄎
 tnkc	𧱹
@@ -106502,7 +106510,7 @@ tnnc	鏒
 tnnd	鍇
 tnng	豣
 tnng	銒
-tnnk	𳇌
+tnnk	𳇋
 tnnm	鉶
 tnnr	鐖
 tnnu	𪾘
@@ -106523,7 +106531,7 @@ tnsj	淾
 tnsj	𫒎
 tnsk	𨩅
 tnsk	𮤷
-tnsl	𳅹
+tnsl	𳅸
 tnsm	𲈵
 tnso	𨮟
 tnso	𫔰
@@ -106532,8 +106540,8 @@ tntl	𰁟
 tntt	𨯋
 tntw	𬮧
 tnud	𨭡
-tnue	𳇇
-tnul	𳇕
+tnue	𳇆
+tnul	𳇔
 tnwi	𨮳
 tnwp	𤚶
 tnwr	鈗
@@ -106543,7 +106551,7 @@ tnyp	𮡿
 to	迹
 to	迹象
 toak	𫒩
-toaw	𳇉
+toaw	𳇈
 tobg	銕
 tobg	𧱅
 tobg	𨦘
@@ -106582,7 +106590,7 @@ toj	錡
 toji	𬫴
 tojj	䫯
 tojj	𨥈
-tojj	𳆩
+tojj	𳆨
 tojl	錡
 tojl	旑
 tojl	𬮮
@@ -106600,7 +106608,7 @@ tooj	鑚
 took	鐉
 tooo	𨯭
 tooq	𨰙
-topv	𳇣
+topv	𳇢
 toqh	𨨆
 toqi	鐐
 toqi	𨭼
@@ -106625,7 +106633,7 @@ toxi	𣱅
 toxj	鍲
 tp	銑
 tpam	𨫊
-tpcb	𳈖
+tpcb	𳈕
 tpcj	鑡
 tpcm	𨨪
 tpcn	𨪁
@@ -106636,7 +106644,7 @@ tpgm	𬮚
 tpha	䥮
 tphk	𨥿
 tpht	𬮱
-tpht	𳆎
+tpht	𳆍
 tpij	䤠
 tpiv	䤮
 tpiw	𣥊
@@ -106686,7 +106694,7 @@ tpwy	錹
 tpxj	𫒖
 tpxj	𲇊
 tpxm	𲈹
-tpxo	𳆱
+tpxo	𳆰
 tpyw	𮠙
 tpzi	𨀶
 tpzj	鋜
@@ -106736,9 +106744,9 @@ tqjj	𱡷
 tqjm	𨬣
 tqjr	螤
 tqjw	𨪽
-tqkc	𳆢
+tqkc	𳆡
 tqkd	𦏞
-tqkm	𳆤
+tqkm	𳆣
 tqku	鎰
 tql	阅
 tqln	𫒵
@@ -106761,10 +106769,10 @@ tqod	鎂
 tqod	𫞁
 tqod	𬮦
 tqog	𭥉
-tqog	𳇗
+tqog	𳇖
 tqoo	鎹
 tqpg	鎈
-tqpg	𳆓
+tqpg	𳆒
 tqpk	鐏
 tqpo	䥖
 tqpy	𨩊
@@ -106792,7 +106800,7 @@ tqto	𣄚
 tqts	𨪂
 tquj	鐠
 tquk	𨬁
-tqum	𳆵
+tqum	𳆴
 tquo	𮣗
 tqut	䥕
 tqvi	𮣝
@@ -106915,7 +106923,7 @@ trrj	䥘
 trrp	𮷲
 trrr	𢣫
 trrr	𬮥
-trtn	𳇋
+trtn	𳇊
 trtw	𣃢
 trum	𨫸
 trus	𣃘
@@ -106937,7 +106945,7 @@ tsam	𨦿
 tsam	𭪭
 tsam	𮢎
 tsbb	𨨭
-tsbf	𳇙
+tsbf	𳇘
 tsbk	𬫗
 tsbq	𨯷
 tsch	𨪇
@@ -106956,7 +106964,7 @@ tsdo	𨯌
 tsdq	钄
 tse	鑊
 tseb	鑊
-tsee	𳇅
+tsee	𳇄
 tsef	𨮇
 tsef	𲤉
 tseh	𨬶
@@ -106975,7 +106983,7 @@ tsfi	𫿲
 tsfk	鏋
 tsfk	𧱼
 tsfk	𪯿
-tsfm	𳆝
+tsfm	𳆜
 tsfo	𨫪
 tsfs	𨭯
 tsfu	𧲒
@@ -106995,13 +107003,13 @@ tsik	𨯱
 tsil	𨮥
 tsir	鉗
 tsir	𭤭
-tsir	𳆫
+tsir	𳆪
 tsix	𮢞
 tsj	錯
 tsje	𨭛
 tsje	𩓉
 tsje	𭥅
-tsjg	𳆔
+tsjg	𳆓
 tsjk	𰽉
 tsjm	𮣔
 tsjo	鏌
@@ -107073,7 +107081,7 @@ tstd	𨫱
 tstf	錺
 tsto	鑝
 tstw	鋩
-tsuf	𳇂
+tsuf	𳇁
 tsuj	𨯠
 tsuk	鑖
 tsux	𧲍
@@ -107125,7 +107133,7 @@ ttcn	𨯤
 ttcp	𨧗
 ttd	鋒
 ttdf	鋒
-ttdn	𳏌
+ttdn	𳏊
 ttdo	鏠
 tte	闵
 ttee	𪯢
@@ -107169,7 +107177,7 @@ ttkd	𨧧
 ttki	𪯼
 ttki	𮢕
 ttkl	𨰊
-ttko	𳄹
+ttko	𳄸
 ttks	𩜢
 ttkz	𡥮
 ttkz	𫒤
@@ -107189,7 +107197,7 @@ ttri	阏
 ttri	𨨡
 ttri	𪬆
 ttri	𫒥
-ttrj	𳇓
+ttrj	𳇒
 ttsi	𫿕
 ttss	豩
 ttsu	𰋎
@@ -107198,7 +107206,7 @@ tttd	𨐃
 ttte	𣁕
 tttf	𬀉
 ttth	𡑔
-ttth	𳆶
+ttth	𳆵
 ttti	𨰖
 tttj	鑫
 ttts	𧲏
@@ -107211,13 +107219,13 @@ ttuh	𢼵
 ttui	変
 ttui	𢼜
 ttuj	𫒋
-ttuj	𳆕
+ttuj	𳆔
 ttus	𲝪
 ttuw	𢻬
 ttux	𮣭
 ttvf	𨬦
 ttvg	𪯞
-ttvv	𳍟
+ttvv	𳍝
 ttwe	𮣮
 ttwj	釯
 ttwm	𨸁
@@ -107255,9 +107263,9 @@ tuec	𧲑
 tueg	𨭽
 tueg	𨮊
 tueh	鏙
-tueh	𳇊
+tueh	𳇉
 tuei	鍖
-tuei	𳆒
+tuei	𳆑
 tuek	𨥵
 tuel	鑴
 tuel	𧲚
@@ -107281,7 +107289,7 @@ tufs	𢹁
 tufs	𨬳
 tuft	𨬠
 tufx	𨩡
-tuga	𳇁
+tuga	𳇀
 tuge	𬫤
 tugi	𮡩
 tugj	鈲
@@ -107292,7 +107300,7 @@ tugw	𧲄
 tugw	𨬞
 tuh	鐸
 tuha	𬮷
-tuha	𳇦
+tuha	𳇥
 tuhb	𮮧
 tuhj	錿
 tuhk	𨦜
@@ -107300,7 +107308,7 @@ tuhq	鐸
 tuhq	𫓗
 tuht	䥓
 tuht	𫓡
-tuig	𳆟
+tuig	𳆞
 tuij	𫓁
 tujb	鍞
 tujb	𲇧
@@ -107321,7 +107329,7 @@ tuju	𢁙
 tujw	㠵
 tujy	𨰳
 tujz	鋽
-tujz	𳆭
+tujz	𳆬
 tukc	鋝
 tuke	𨨜
 tukz	鋢
@@ -107342,7 +107350,7 @@ tulr	𢛃
 tulv	咎
 tulv	鉆
 tulv	𪯴
-tulv	𳍝
+tulv	𳍛
 tulw	𨦸
 tulx	㰶
 tulz	鎠
@@ -107379,7 +107387,7 @@ tuqo	鏷
 tuqw	𨬭
 tuqy	𨬲
 turb	𮢊
-turc	𳆮
+turc	𳆭
 turi	𨭍
 tury	䤫
 tus	峦
@@ -107395,7 +107403,7 @@ tusw	𡵍
 tutd	鎽
 tute	𨪝
 tute	𮢹
-tutf	𳆐
+tutf	𳆏
 tutl	𨩟
 tuts	鐻
 tuts	𧲋
@@ -107415,7 +107423,7 @@ tuui	𨮣
 tuuj	銟
 tuuk	𨮗
 tuuk	𨰜
-tuul	𳆈
+tuul	𳆇
 tuus	𨰛
 tuus	𬬝
 tuut	𮣈
@@ -107428,7 +107436,7 @@ tuvu	鑪
 tuvw	𬬚
 tuw	鐲
 tuwe	𮚨
-tuwf	𳇀
+tuwf	𳆿
 tuwk	𫲓
 tuwk	𮊵
 tuwq	鐲
@@ -107464,7 +107472,7 @@ tvdi	豲
 tvdi	𨪛
 tvdj	䤺
 tvdo	𲆂
-tvei	𳆪
+tvei	𳆩
 tveo	𨙅
 tvfi	鉟
 tvfs	𨨵
@@ -107483,7 +107491,7 @@ tvjr	銆
 tvjr	𣄤
 tvjt	𮢩
 tvko	𮟦
-tvkt	𳆜
+tvkt	𳆛
 tvkx	𫓅
 tvlj	鋰
 tvlv	𨧆
@@ -107549,7 +107557,7 @@ tw	望
 tw	望见
 twam	阃
 twam	𰼮
-twat	𳅱
+twat	𳅰
 twbb	𰽎
 twbi	𫥥
 twbk	𰼦
@@ -107646,7 +107654,7 @@ twqx	𪞼
 twre	𨥱
 twrl	𣃺
 twrw	巟
-twss	𳇐
+twss	𳇏
 twsw	𨥸
 twti	𰼹
 twub	𧱯
@@ -107665,7 +107673,7 @@ twwm	𩣐
 twwo	𨘹
 twwr	𠒋
 twwr	𪯣
-twwr	𳅶
+twwr	𳅵
 twww	𨪕
 twwy	錋
 twwy	𦚾
@@ -107696,7 +107704,7 @@ txdc	𣄈
 txdd	阄
 txdi	阎
 txdi	錎
-txdn	𳏪
+txdn	𳏨
 txeh	䥃
 txej	䤟
 txeu	𭤺
@@ -107705,9 +107713,9 @@ txfs	𢵡
 txft	䥂
 txim	𮡼
 txiv	鉨
-txjb	𳆗
+txjb	𳆖
 txjk	𧱴
-txjm	𳈒
+txjm	𳈑
 txjn	𬫹
 txjt	𰽒
 txka	𨧲
@@ -107716,9 +107724,9 @@ txkd	𧰫
 txkd	𨥆
 txkp	𨬨
 txl	銘
-txli	𳆖
+txli	𳆕
 txlk	鑱
-txlk	𳇩
+txlk	𳇨
 txls	𨩯
 txlt	鐌
 txlv	銘
@@ -107784,7 +107792,7 @@ tyku	𱲗
 tylt	阚
 tylt	𨬒
 tynf	𰼬
-tynl	𳆍
+tynl	𳆌
 tynw	䤴
 typw	𮢦
 tyqh	𲇫
@@ -107829,7 +107837,7 @@ uaej	𦊵
 uaej	𰎭
 uaej	𰏔
 uafb	𲔈
-uafb	𳁱
+uafb	𳁰
 uaff	𭗁
 uafi	𦊚
 uafk	𡺄
@@ -107867,7 +107875,7 @@ uaiu	𦌦
 uaiv	𡹞
 uaiv	𡹡
 uaiv	𱜬
-uaiv	𳌦
+uaiv	𳌤
 uajc	𡿥
 uajd	嵉
 uajd	𡺣
@@ -107954,7 +107962,7 @@ uaqi	䶓
 uaqi	𡽉
 uaqi	𪊆
 uaqi	𮱲
-uaqi	𲾉
+uaqi	𲾈
 uaqj	㠃
 uaqt	艕
 uaqt	嵭
@@ -107988,7 +107996,7 @@ uaug	𪊉
 uauj	𭖐
 uaus	𡷻
 uaus	𡷼
-uavg	𳌬
+uavg	𳌪
 uavs	𭫫
 uawf	𢅒
 uawf	𨲵
@@ -108040,7 +108048,7 @@ ubb	𘠵
 ubb	
 ubb	
 ubb	
-ubb	𳑵
+ubb	𳑳
 ubba	𩮧
 ubba	𫶐
 ubba	𲉚
@@ -108088,7 +108096,7 @@ ubcl	𤔺
 ubcl	𬋹
 ubcn	𫰐
 ubco	𲆋
-ubcr	𲻧
+ubcr	𲻦
 ubcs	𰠆
 ubcs	𗁎
 ubcs	𗁹
@@ -108110,6 +108118,7 @@ ubdn	𮬵
 ubdq	𦩯
 ubdz	幄
 ubdz	𫶉
+ubeb	𬺫
 ubei	𬊐
 ubes	𗂤
 ubfe	𢅃
@@ -108207,7 +108216,7 @@ ubkr	𪫼
 ubku	𫴬
 ubla	幃
 ubla	𡺨
-ubla	𲻤
+ubla	𲻣
 ublk	㠔
 ublk	𡦯
 ublk	𡾤
@@ -108314,7 +108323,7 @@ ubwy	肾
 ubwy	𢻿
 ubwy	𮊉
 ubxb	䯹
-ubxb	𳐚
+ubxb	𳐘
 ubxi	㟜
 ubxk	𡿣
 ubxu	𡹙
@@ -108368,7 +108377,7 @@ uccc	𪩎
 uccf	𗀵
 uccn	𠧜
 uccn	𗂩
-uccy	𳌧
+uccy	𳌥
 ucdn	鵎
 ucef	𩗔
 uceh	𡾜
@@ -108469,7 +108478,7 @@ ucoc	𬩃
 ucoc	𲅗
 ucod	岟
 ucod	𮧆
-ucod	𳌤
+ucod	𳌢
 ucot	𫶛
 ucp	彪
 ucph	彪
@@ -108674,7 +108683,7 @@ udjw	崲
 udjw	㠈
 udjw	𪩅
 udka	𡾹
-udka	𲹧
+udka	𲹦
 udkc	帱
 udkc	𪩍
 udkc	𫝵
@@ -108683,7 +108692,7 @@ udkc	𮎍
 udkd	𡶜
 udkd	𪈖
 udkg	𡸤
-udku	𳍂
+udku	𳍀
 udkw	𩮷
 udkw	𲝻
 udkw	𲞵
@@ -108711,7 +108720,7 @@ udnf	𪂏
 udnf	𪂞
 udng	𪀅
 udnh	𪂬
-udnh	𲾆
+udnh	𲾅
 udnj	𢄦
 udnm	𪾖
 udno	鵃
@@ -108823,8 +108832,8 @@ uebo	𨗫
 uebo	𮣹
 uebo	𲆎
 uebo	𮱦
-uebo	𲸾
-uebo	𳄸
+uebo	𲸽
+uebo	𳄷
 uebp	𰤯
 uecd	𪈥
 uecj	𧢧
@@ -108857,7 +108866,7 @@ ueej	𡵷
 ueeu	𱜷
 ueez	𩬍
 uef	嵐
-uefb	𳌨
+uefb	𳌦
 uefc	𤯉
 uefd	𮱱
 uefh	虧
@@ -108923,7 +108932,7 @@ uejj	𢁒
 uejj	𧡪
 uejj	𧢉
 uejj	𰴔
-uejj	𳁚
+uejj	𳁙
 uejm	𥈼
 uejs	凣
 uejs	㞦
@@ -108963,7 +108972,7 @@ uell	𰈧
 uelu	𥂟
 uelv	船
 uelv	𲰖
-uelv	𲻝
+uelv	𲻜
 uemc	𨱱
 uemd	𠝻
 uemm	𣯯
@@ -108993,7 +109002,7 @@ ueoe	𱲬
 ueoj	𡸦
 ueos	縏
 uepg	䦈
-uepg	𲻜
+uepg	𲻛
 uepw	鬌
 uepw	𨲕
 uepz	𨃞
@@ -109180,7 +109189,7 @@ ufks	𩯨
 ufl	幅
 uflb	敱
 uflb	𭽷
-uflb	𳊜
+uflb	𳊚
 uflc	𰴞
 uflc	𲟟
 ufld	䴉
@@ -109258,7 +109267,7 @@ ufly	𨝾
 ufly	𨞘
 ufly	𩙽
 ufly	𬪗
-ufly	𳅊
+ufly	𳅉
 ufmj	帓
 ufml	𲝣
 ufna	𡵮
@@ -109424,7 +109433,7 @@ ugj	巔
 ugja	𪲹
 ugjc	巅
 ugjj	巔
-ugjj	𳁗
+ugjj	𳁖
 ugjk	鬒
 ugjk	嵮
 ugjk	𠔶
@@ -109560,7 +109569,7 @@ ugwo	𨔲
 ugwz	爲
 ugwz	𛄐
 ugxi	𦨎
-ugxi	𳊚
+ugxi	𳊘
 ugxj	𰹾
 ugxk	㟑
 ugxo	䖛
@@ -109756,7 +109765,7 @@ uhqj	𤜧
 uhqk	𡼈
 uhqk	𩮿
 uhqk	𫅌
-uhql	𳐙
+uhql	𳐗
 uhqm	𱥦
 uhqo	𦨚
 uhqo	𦪭
@@ -109809,7 +109818,7 @@ uhwt	㠂
 uhwt	䦋
 uhwt	𩮯
 uhwt	𫿑
-uhww	𳌯
+uhww	𳌭
 uhwy	崝
 uhwy	䑶
 uhwy	䑷
@@ -109930,7 +109939,7 @@ uihs	𡵖
 uihs	𡵼
 uiht	𰎳
 uiht	𱛣
-uiht	𲻥
+uiht	𲻤
 uihz	𬉿
 uiia	嶸
 uiia	𡽤
@@ -110061,7 +110070,7 @@ uivt	𤔶
 uivt	𫷑
 uivt	𮫒
 uiw	峭
-uiwl	𲹃
+uiwl	𲹂
 uiwm	𡹺
 uiwm	𦋞
 uiwr	㌦
@@ -110131,7 +110140,7 @@ ujdd	𧈂
 ujdd	𲎙
 ujdf	𦋸
 ujdg	𩴬
-ujdh	𲾂
+ujdh	𲾁
 ujdj	帄
 ujdj	𣂣
 ujdj	𣂫
@@ -110142,7 +110151,7 @@ ujdn	鷶
 ujdn	𪂓
 ujdn	𮭆
 ujdo	𦨍
-ujdo	𲹂
+ujdo	𲹁
 ujds	𡴵
 ujds	𠧇
 ujds	𫵲
@@ -110162,7 +110171,7 @@ ujei	𠃹
 ujei	𠧡
 ujej	幁
 ujeo	𲌣
-ujeo	𳊵
+ujeo	𳊳
 ujeq	䫏
 ujes	崸
 ujes	飖
@@ -110280,7 +110289,7 @@ ujkh	𱖻
 ujkj	𮚜
 ujkt	𦋷
 ujkw	𱜁
-ujkx	𳄖
+ujkx	𳄕
 ujky	𨟣
 ujkz	𡥣
 ujl	岢
@@ -110305,8 +110314,8 @@ ujmb	𩬞
 ujmd	崱
 ujmd	𡺢
 ujmd	𩮆
+ujmd	𲸿
 ujmd	𲹀
-ujmd	𲹁
 ujmf	𥇖
 ujmh	𮶺
 ujmn	鹞
@@ -110351,11 +110360,11 @@ ujpc	𲎥
 ujpd	𣂸
 ujpi	𣦖
 ujpi	𰙺
-ujpo	𳂩
+ujpo	𳂨
 ujps	𦩠
 ujps	𱆂
 ujpz	𨇐
-ujqa	𳂟
+ujqa	𳂞
 ujqb	䯶
 ujqh	虘
 ujqh	䖕
@@ -110369,6 +110378,7 @@ ujqs	𭖍
 ujqw	罝
 ujqz	𤔈
 ujr	旧
+ujrb	𬺩
 ujrh	䖑
 ujri	𢛂
 ujri	𢝮
@@ -110466,8 +110476,8 @@ ujwx	𦪬
 ujwy	鬍
 ujwy	𡹌
 ujxb	𡹨
-ujxh	𲾃
-ujxk	𳂜
+ujxh	𲾂
+ujxk	𳂛
 ujxq	𡺏
 ujxq	𣣗
 ujxq	𣣳
@@ -110491,12 +110501,12 @@ ukab	𩫵
 ukaj	岇
 ukaj	𡵙
 ukaj	𘯎
-ukaj	𲻛
+ukaj	𲻚
 ukas	𠔂
 ukas	𘮡
 ukas	𲝃
 ukaw	𦉵
-ukby	𲻣
+ukby	𲻢
 ukcj	𢁜
 ukcn	帹
 ukco	𡬫
@@ -111022,7 +111032,7 @@ ulzb	𩬧
 ulzj	𢁿
 ulzw	罡
 um	艇
-umal	𳐜
+umal	𳐚
 umam	𡾭
 umam	𢃅
 umas	𡻥
@@ -111077,7 +111087,7 @@ umih	鬏
 umih	𡺘
 umih	𢃸
 umih	𧇸
-umih	𲻢
+umih	𲻡
 umiv	𨲁
 umje	𩓵
 umji	𢃨
@@ -111134,7 +111144,7 @@ ummv	𡽯
 umni	𭖼
 umno	鸼
 umnq	𫛰
-umns	𳇶
+umns	𳇵
 umoc	𨓒
 umoc	𨓮
 umoc	𨔅
@@ -111157,7 +111167,7 @@ umsf	崜
 umsf	𨲉
 umsf	𩭦
 umsi	𡻠
-umsi	𲻦
+umsi	𲻥
 umsk	𡾇
 umso	𡹴
 umuf	㠧
@@ -111169,7 +111179,7 @@ umvl	㡖
 umvl	𡺍
 umvl	𦩰
 umvl	𩯬
-umvl	𳇷
+umvl	𳇶
 umvw	𭗞
 umwh	𰲟
 umwj	𰏓
@@ -111221,7 +111231,7 @@ undo	𩭶
 unea	𮫋
 uneh	𦪉
 uneh	𩀚
-unel	𳌭
+unel	𳌫
 unfb	𩭗
 unfj	𧇩
 unfs	峬
@@ -111389,7 +111399,7 @@ uo	爬
 uo	爬行
 uo	爬虫
 uoak	𪉪
-uoak	𳌥
+uoak	𳌣
 uobb	䯲
 uobf	𩇯
 uobg	峓
@@ -111418,7 +111428,7 @@ uodd	崦
 uodd	罨
 uodd	㡋
 uodd	𡹛
-uodd	𳐛
+uodd	𳐙
 uodf	奜
 uodg	𪼳
 uodh	𬟧
@@ -111488,7 +111498,7 @@ uojr	鬊
 uojr	𧇶
 uojr	𰿎
 uojr	𱛸
-uojr	𳌫
+uojr	𳌩
 uojs	岂
 uojs	屺
 uojs	𪨼
@@ -111580,7 +111590,7 @@ uoxi	罠
 uoxi	𡶗
 uoxj	𪨶
 uoxj	㟭
-uoxj	𳌩
+uoxj	𳌧
 uoxo	𭗜
 uoxq	嵚
 uoxx	𩮅
@@ -111613,7 +111623,7 @@ upgy	𪩟
 upib	𩬄
 upii	𤑀
 upij	𫶡
-upij	𳌮
+upij	𳌬
 upio	𱼷
 upis	𭖇
 upis	𲝇
@@ -111764,7 +111774,7 @@ uqjj	𡼳
 uqjj	𢅋
 uqjj	𨲯
 uqjj	𬁝
-uqjj	𲻪
+uqjj	𲻩
 uqjk	𪩔
 uqjw	𦪄
 uqk	業
@@ -111911,7 +111921,7 @@ uquk	⿋
 uquk	黹
 uquk	𗁳
 uquk	𗃈
-uquk	𳑓
+uquk	𳑑
 uqul	𗂜
 uqum	黺
 uqum	𡻘
@@ -112041,7 +112051,7 @@ urft	𢿗
 urfv	𭖺
 urfv	𱜍
 urga	𪪈
-urgh	𲾈
+urgh	𲾇
 urgi	𱊶
 urgj	𭘱
 urgp	虙
@@ -112113,7 +112123,7 @@ urkl	㟏
 urkl	㟔
 urkl	𩮩
 urkl	𰲢
-urkl	𲾅
+urkl	𲾄
 urkm	𮭦
 urkm	𮹗
 urkm	𲒫
@@ -112141,7 +112151,7 @@ urnb	𱛍
 urnu	𡷉
 uroc	𢅗
 uroc	𭺚
-uroc	𳄪
+uroc	𳄩
 urpi	峜
 urq	鹼
 urqj	𢅐
@@ -112291,7 +112301,7 @@ usjr	𢃟
 usjr	𩭡
 usju	羃
 usjw	𢅆
-usjw	𲻩
+usjw	𲻨
 uska	舼
 uska	髸
 uska	𡶵
@@ -112309,7 +112319,7 @@ uslb	𩯍
 usle	巏
 usle	𤬠
 usle	𩮙
-usle	𲻫
+usle	𲻪
 uslh	虏
 uslh	𱿎
 uslo	𬜑
@@ -112457,7 +112467,7 @@ uted	𧇤
 utef	斐
 uteh	虔
 uteh	𩁋
-uteh	𲹄
+uteh	𲹃
 utei	𤓤
 utej	處
 utej	𣊑
@@ -112467,7 +112477,7 @@ utem	𲒳
 utes	㞵
 utes	㞶
 utew	𮲖
-utew	𲾄
+utew	𲾃
 utf	舫
 utfb	髣
 utfj	𢁸
@@ -112485,7 +112495,7 @@ utir	峂
 utir	㠽
 utir	𡶞
 utir	𧆼
-utir	𲻞
+utir	𲻝
 utjf	𰿒
 utjg	𧇉
 utjg	𰢞
@@ -112574,7 +112584,7 @@ uub	爵
 uuba	𩏣
 uuba	𫨀
 uubc	𬋺
-uubd	𳐀
+uubd	𳏾
 uubj	𫶽
 uubk	爵
 uubk	𬋷
@@ -112603,7 +112613,7 @@ uucj	帳
 uucj	觑
 uucn	㟎
 uucn	𩭏
-uuco	𲻠
+uuco	𲻟
 uucp	𭛚
 uucs	𲝡
 uucs	𗎥
@@ -112615,7 +112625,7 @@ uudh	𭗩
 uudi	幍
 uudi	𡺫
 uudi	𦩹
-uudj	𲾊
+uudj	𲾉
 uudn	𪆛
 uudq	㠦
 uudq	𡾿
@@ -112766,7 +112776,7 @@ uuoe	𢅾
 uuoj	𡿘
 uuoj	𱜥
 uuoo	𦆩
-uuoo	𲻟
+uuoo	𲻞
 uupr	嶾
 uupr	㡥
 uupr	𡽸
@@ -112916,7 +112926,7 @@ uvfi	髬
 uvfk	㡡
 uvgi	𩬴
 uvh	崖
-uvhd	𳏤
+uvhd	𳏢
 uvhh	崖
 uvhh	崕
 uvhk	𢅥
@@ -113010,7 +113020,7 @@ uvri	𲡇
 uvrs	勴
 uvs	虜
 uvsb	𮫁
-uvsd	𳏵
+uvsd	𳏳
 uvsf	𦌂
 uvsf	𮀦
 uvsk	𧇽
@@ -113100,7 +113110,7 @@ uvvx	䎇
 uvvx	𦏿
 uvvx	𩭅
 uvvx	𱻛
-uvvz	𳍈
+uvvz	𳍆
 uvw	膚
 uvwb	𡾂
 uvwb	𰕘
@@ -113168,7 +113178,7 @@ uwct	𠧾
 uwdj	𦋒
 uwdk	𡾦
 uwei	𭾪
-uweo	𳄟
+uweo	𳄞
 uwf	虛
 uwfi	虛
 uwfj	𩕚
@@ -113302,7 +113312,7 @@ uwrx	𣣸
 uws	卤
 uwsb	𢿑
 uwsb	𱊼
-uwsb	𳐠
+uwsb	𳐞
 uwsc	𬸸
 uwse	𠧟
 uwse	𮭰
@@ -113317,7 +113327,7 @@ uwsk	𲎊
 uwsl	鬛
 uwsl	𠨄
 uwsl	𬸵
-uwsl	𳐟
+uwsl	𳐝
 uwsn	禼
 uwso	𬸷
 uwsp	鹾
@@ -113326,7 +113336,7 @@ uwsr	𫠗
 uwst	𬸹
 uwsu	𥃈
 uwsu	𫜊
-uwsw	𳐞
+uwsw	𳐜
 uwti	𢃠
 uwtl	𢨟
 uwto	𨔁
@@ -113357,7 +113367,7 @@ uwwy	崩
 uwwy	鬅
 uwwy	䣙
 uwwy	𡹔
-uwwy	𲻡
+uwwy	𲻠
 uwxa	𣓨
 uwyb	𩬏
 uwyc	𨱠
@@ -113806,13 +113816,13 @@ uynu	㍗
 uynw	崡
 uynw	𢃗
 uyoc	𮞂
-uyps	𲻨
+uyps	𲻧
 uypw	𡹲
 uypw	𩯕
 uyqk	𗎴
 uyqs	𗡻
 uyqs	𗡽
-uyqt	𳌪
+uyqt	𳌨
 uyrn	𲞀
 uysi	𗁡
 uysi	𘢃
@@ -113849,7 +113859,7 @@ vaa	礎
 vaaa	𡈹
 vaae	𫙤
 vaaf	𥗘
-vaag	𳁍
+vaag	𳁌
 vaah	𠪖
 vaaj	暦
 vaaj	𥖜
@@ -113945,13 +113955,13 @@ valo	䲇
 valo	𮀼
 vals	䂾
 vals	𥓜
-vals	𳍤
+vals	𳍢
 valt	𤲓
 valt	𩺽
 valv	鯠
 valv	𠁃
 valv	𱴂
-valv	𳍓
+valv	𳍑
 vamm	𮁀
 vams	䂞
 vamt	𤱃
@@ -113959,8 +113969,8 @@ vamv	𩵦
 van	硫
 vana	鮌
 vana	𪿖
-vanp	𳍽
-vant	𳍿
+vanp	𳍻
+vant	𳍽
 vanv	𩹱
 vanw	硫
 vanw	鯍
@@ -113976,11 +113986,11 @@ vaql	𲴂
 vaqo	𥖾
 vaqt	磅
 vaqt	鰟
-vaqt	𳎋
+vaqt	𳎉
 vaqu	碲
 vaqu	䱱
 var	碎
-vard	𳏲
+vard	𳏰
 vare	𥗭
 varg	碎
 varg	䱣
@@ -114067,7 +114077,7 @@ vbhf	𩻽
 vbhf	𱴵
 vbhj	䃴
 vbhj	𠪡
-vbhj	𳎌
+vbhj	𳎊
 vbht	𡌛
 vbht	𥑋
 vbht	𩶜
@@ -114094,7 +114104,7 @@ vbkc	𲳶
 vbkd	䂘
 vbkd	𥐮
 vbkj	𲴊
-vbkj	𳎁
+vbkj	𳍿
 vbkk	𩻣
 vbkk	𬒕
 vbkq	鰠
@@ -114252,9 +114262,9 @@ vcqt	䱩
 vcqu	碙
 vcqu	𩸒
 vcqu	𲱁
-vcra	𳍯
+vcra	𳍭
 vcrb	𥖟
-vcrb	𳎃
+vcrb	𳎁
 vcre	魶
 vcre	𤱅
 vcrp	磫
@@ -114273,7 +114283,7 @@ vcti	䲗
 vcvt	礌
 vcvt	鱩
 vcvv	𬵗
-vcwi	𳍪
+vcwi	𳍨
 vcy	硕
 vcyi	𭻊
 vcys	硕
@@ -114285,7 +114295,7 @@ vdak	𥑣
 vdam	𥔟
 vdam	𬵬
 vdam	𱴯
-vdam	𳍸
+vdam	𳍶
 vdaq	䃹
 vdaq	𩽥
 vdau	𮬔
@@ -114510,16 +114520,16 @@ vebo	𭺿
 vebo	𮀺
 veby	𫠻
 veby	𬒘
-veck	𳎅
+veck	𳎃
 vecl	𤳬
 vedb	𠩡
-vedd	𳏽
+vedd	𳏻
 vedi	𤑤
 vedj	贗
 vedk	𭆘
 vedn	鴈
 vedn	𫚯
-vedn	𳏚
+vedn	𳏘
 veeb	𩽧
 veeb	𮘻
 veec	赝
@@ -114588,7 +114598,7 @@ vell	𱴦
 velv	𥑛
 velv	𰢿
 velv	𰣁
-vemn	𳐅
+vemn	𳐃
 vems	砪
 vemu	𭯈
 vemv	𩶋
@@ -114616,7 +114626,7 @@ vesh	𠨻
 vesi	砜
 vess	砓
 vesv	𩵤
-vete	𳍏
+vete	𳍍
 vetq	𩽵
 vets	䱲
 veua	鰷
@@ -114626,7 +114636,7 @@ veuh	𩶦
 veuj	𥑢
 veuj	𩶉
 veuj	𩺟
-veuk	𳍎
+veuk	𳍌
 veus	𬻃
 veut	䱔
 veww	𲔁
@@ -114658,7 +114668,7 @@ vfcp	𩷙
 vfcr	𩶁
 vfcr	𩺂
 vfcr	𱳴
-vfcr	𳍑
+vfcr	𳍏
 vfdj	䱑
 vfdl	𩺢
 vfdn	䲹
@@ -114708,7 +114718,7 @@ vflq	𧒉
 vflr	𠪹
 vflr	𥓠
 vfls	𥒅
-vfls	𳍍
+vfls	𳍋
 vflu	䃒
 vflu	𩹺
 vflu	𬒖
@@ -114734,7 +114744,7 @@ vfnk	𱰶
 vfob	𱴃
 vfod	𬑾
 vfod	𬵲
-vfod	𳍇
+vfod	𳍅
 vfok	𤲖
 vfol	𩷵
 vfol	𮀙
@@ -114747,7 +114757,7 @@ vfqm	𭻔
 vfqm	𰆙
 vfqm	𱴄
 vfre	𤰵
-vfrf	𳍳
+vfrf	𳍱
 vfs	研
 vfsc	𥒱
 vfsf	揅
@@ -114765,7 +114775,7 @@ vfsq	䊙
 vfss	𱳰
 vfuc	𰆩
 vfue	𰦴
-vfuf	𳊛
+vfuf	𳊙
 vfug	𰦾
 vfuj	魳
 vfuj	䰽
@@ -114785,7 +114795,7 @@ vfws	𥑘
 vfwt	𮴾
 vfwv	鮇
 vfwy	𫟫
-vfxk	𳎂
+vfxk	𳎀
 vfxm	𥒂
 vfxm	𩶽
 vfxm	𭻎
@@ -114903,7 +114913,7 @@ vgrf	𠪪
 vgrf	𥖌
 vgrh	𮁇
 vgrj	𥑅
-vgrm	𳎆
+vgrm	𳎄
 vgrn	𱇀
 vgrq	𬒫
 vgsg	𥓈
@@ -114931,7 +114941,7 @@ vgum	𧖯
 vgum	𩶫
 vgur	𱴱
 vgut	𩻴
-vgwj	𳎇
+vgwj	𳎅
 vgwm	𥗖
 vgwm	𩽖
 vgwt	𩷸
@@ -114983,7 +114993,7 @@ vhct	𤱥
 vhct	𤱻
 vhcv	䱌
 vhd	魇
-vhdb	𳍔
+vhdb	𳍒
 vhdg	魇
 vhdg	𲴎
 vhem	碡
@@ -115006,7 +115016,7 @@ vhh	ㆷ
 vhh	𘠋
 vhhb	𫨾
 vhhb	𰆣
-vhhd	𳏃
+vhhd	𳏁
 vhhe	𰆢
 vhhj	𧡋
 vhhj	𱴴
@@ -115154,7 +115164,7 @@ vhwr	𥐵
 vhwr	𩵪
 vhwt	磝
 vhwt	厫
-vhwt	𳍵
+vhwt	𳍳
 vhwy	鯖
 vhwy	碃
 vhwy	𤲟
@@ -115202,7 +115212,7 @@ vief	𗄦
 vieh	𮀿
 vieh	𮁎
 viej	𥕯
-viej	𳍻
+viej	𳍹
 viek	砖
 vien	硡
 viey	𗄞
@@ -115266,7 +115276,7 @@ viio	礯
 viip	𱴼
 viis	磱
 viis	䲏
-viis	𳎎
+viis	𳎌
 viiw	𥕂
 viiw	𩺀
 vijb	𥔭
@@ -115284,7 +115294,7 @@ vika	畊
 vika	𥐹
 vika	𱳭
 vikg	𥒎
-viks	𳍼
+viks	𳍺
 vill	䃔
 vilp	𱵂
 vilt	𩼵
@@ -115384,7 +115394,7 @@ vjes	𭮩
 vjes	𭮮
 vjeu	𩑢
 vjev	顒
-vjev	𳍡
+vjev	𳍟
 vjey	𠨷
 vjf	碍
 vjfc	碭
@@ -115423,7 +115433,7 @@ vjic	𩹽
 vjic	𱴪
 vjig	㪶
 vjih	𥎦
-vjii	𳅮
+vjii	𳅭
 vjis	䂠
 vjiv	鮛
 vjiv	𩶇
@@ -115588,7 +115598,7 @@ vjwc	嬮
 vjwc	鯣
 vjwc	𥓘
 vjwd	魘
-vjwd	𳏹
+vjwd	𳏷
 vjwe	碣
 vjwe	𩹄
 vjwf	擪
@@ -115717,7 +115727,7 @@ vklf	㽣
 vklf	䂸
 vklf	䱛
 vklf	𰧐
-vklf	𳍢
+vklf	𳍠
 vklh	㕇
 vkls	砬
 vklt	𤱗
@@ -115741,7 +115751,7 @@ vkmj	𰧝
 vkmr	𩸂
 vkms	𮀐
 vkmu	𥔞
-vkmv	𳍊
+vkmv	𳍈
 vkna	䰸
 vknr	𪠎
 vkns	砯
@@ -115771,7 +115781,7 @@ vksk	𰦨
 vkso	𱆭
 vksu	䬩
 vktm	𠞅
-vktm	𳎉
+vktm	𳎇
 vktu	畟
 vkuf	𠪽
 vkug	𩸰
@@ -115860,7 +115870,7 @@ vlja	𥕘
 vljb	磒
 vljb	𧶏
 vljb	𮁁
-vljc	𳂭
+vljc	𳂬
 vlje	䫊
 vlji	𩻨
 vljj	𫙷
@@ -115884,7 +115894,7 @@ vlla	鱢
 vllc	𫨘
 vlle	𩹫
 vlle	𪠈
-vlle	𳍾
+vlle	𳍼
 vllg	磾
 vllg	鱓
 vllg	𠩰
@@ -115940,7 +115950,7 @@ vlwl	鱲
 vlwl	䃳
 vlwm	𥒻
 vlwm	𩷤
-vlwr	𳍉
+vlwr	𳍇
 vlws	矹
 vlwt	𥔥
 vlwy	𦝽
@@ -115985,7 +115995,7 @@ vmds	𥐛
 vmdu	𰄟
 vmdv	魛
 vmdv	魝
-vmej	𳍖
+vmej	𳍔
 vmek	𩸅
 vmer	𥗡
 vmfj	𥗎
@@ -116040,7 +116050,7 @@ vmmd	𪅼
 vmme	𠫌
 vmmg	𠫏
 vmmg	𧝏
-vmmg	𳍱
+vmmg	𳍯
 vmmh	厤
 vmmh	𡐰
 vmmh	𡓸
@@ -116050,7 +116060,7 @@ vmmi	㷴
 vmmi	𤯍
 vmmj	曆
 vmmj	曆
-vmmj	𳌂
+vmmj	𳌀
 vmmk	㻺
 vmmk	𠪱
 vmmk	𩞨
@@ -116093,7 +116103,7 @@ vmnt	𮴿
 vmnu	𫛜
 vmnv	𪉐
 vmoc	𬵑
-vmos	𳎒
+vmos	𳎐
 vmqi	𩺖
 vmqi	𫨔
 vmqi	𰧗
@@ -116153,7 +116163,7 @@ vndn	𥖧
 vndn	𩿫
 vneb	𭻒
 vneg	𮁍
-vneh	𳍺
+vneh	𳍸
 vnej	𱆨
 vnfh	㕊
 vnfk	𥒀
@@ -116223,7 +116233,7 @@ vnnq	𧖈
 vnnq	𧖎
 vnnq	𪽥
 vnnr	磯
-vnnr	𳎀
+vnnr	𳍾
 vnny	𭻲
 vnoa	𮀵
 vnoc	碜
@@ -116253,10 +116263,10 @@ vnsu	𣲮
 vnsv	𬵆
 vntf	𩺹
 vntt	𬵶
-vnuq	𳎏
+vnuq	𳎍
 vnvs	𥔨
 vnvt	𤲴
-vnwn	𳍲
+vnwn	𳍰
 vnwr	㽙
 vnwr	𥐸
 vnwu	𫨢
@@ -116396,7 +116406,7 @@ vpgs	矼
 vpgv	魟
 vpgy	𥒔
 vpht	䃌
-vpht	𳍣
+vpht	𳍡
 vpih	𱤽
 vpis	砋
 vpiv	𥒼
@@ -116583,7 +116593,7 @@ vqwa	橜
 vqwc	𠩋
 vqwc	𡡕
 vqwc	𥑺
-vqwc	𳍐
+vqwc	𳍎
 vqwd	鷢
 vqwd	𪆙
 vqwe	𩀾
@@ -116628,7 +116638,7 @@ vram	𱳼
 vrcp	畛
 vrcp	䂦
 vrcp	𠩇
-vrcp	𳍋
+vrcp	𳍉
 vrcy	𱂲
 vrdc	𥔚
 vrdn	𩾸
@@ -116656,7 +116666,7 @@ vrfj	鱠
 vrfj	𠁞
 vrfj	𥖩
 vrfm	䃋
-vrfm	𳍦
+vrfm	𳍤
 vrfn	硷
 vrfn	𰆚
 vrfx	𣤔
@@ -116725,7 +116735,7 @@ vrky	䰼
 vrle	𦖷
 vrlr	𭟜
 vrlw	𠩣
-vrmd	𳎊
+vrmd	𳎈
 vrnb	𱳯
 vroc	𥖤
 vroc	𩼣
@@ -116740,7 +116750,7 @@ vrrh	䂳
 vrrh	𠩜
 vrrh	𡍂
 vrrh	𲰾
-vrrh	𳍗
+vrrh	𳍕
 vrrj	𠪞
 vrrj	𥖴
 vrrj	𩻶
@@ -116834,7 +116844,7 @@ vshs	𥕊
 vshu	礚
 vshu	礷
 vshu	𩽭
-vshw	𳊘
+vshw	𳊖
 vsia	𤳙
 vsia	𩹮
 vsia	𲳯
@@ -116897,7 +116907,7 @@ vskw	𩹛
 vskw	𮵕
 vskx	𩺵
 vsl	历
-vsla	𳍩
+vsla	𳍧
 vsle	鱹
 vsle	礶
 vslh	历
@@ -116912,7 +116922,7 @@ vslv	𩶛
 vsmc	𤲐
 vsmc	𲓻
 vsmd	𫥳
-vsmi	𳎑
+vsmi	𳎏
 vsmm	𩸚
 vsmv	𩹠
 vsmv	𠪵
@@ -116928,7 +116938,7 @@ vsnk	𩼬
 vsnk	𩽛
 vsnn	𥔵
 vsnr	𩼰
-vsoc	𳄠
+vsoc	𳄟
 vsod	碝
 vsod	𤲬
 vsod	𩹓
@@ -116980,7 +116990,7 @@ vssr	𤳜
 vssr	𥕷
 vssr	𩻞
 vsss	𤱷
-vsss	𳍮
+vsss	𳍬
 vstj	𠪜
 vstl	𮬉
 vsts	𱴮
@@ -117053,7 +117063,7 @@ vtak	䂫
 vtak	𩷄
 vtam	𥓃
 vtar	𢢨
-vtat	𳆨
+vtat	𳆧
 vtau	𱍡
 vtcn	䃷
 vtcn	𫙜
@@ -117091,7 +117101,7 @@ vtjr	𰧃
 vtjs	碒
 vtjs	𨥴
 vtjv	𩸱
-vtkc	𳍙
+vtkc	𳍗
 vtkd	硺
 vtl	略
 vtld	𨎠
@@ -117147,7 +117157,7 @@ vubo	𮫱
 vubs	𥐚
 vubs	𫙔
 vubt	𤰘
-vubu	𳍥
+vubu	𳍣
 vubv	𬵂
 vuch	𪠍
 vucl	𮡙
@@ -117166,7 +117176,7 @@ vudi	𩹴
 vudj	厮
 vudj	䲉
 vudj	𥕶
-vudn	𳎿
+vudn	𳎽
 vue	碳
 vueb	𬒨
 vuec	𩽌
@@ -117176,7 +117186,7 @@ vueh	𫨡
 vueh	𬵧
 vuei	碳
 vuei	碪
-vuei	𳅫
+vuei	𳅪
 vuek	𥖘
 vuel	㽯
 vuel	𩽨
@@ -117377,7 +117387,7 @@ vvbp	翍
 vvbr	𦐍
 vvch	𦐘
 vvcn	𮱂
-vvco	𲹙
+vvco	𲹘
 vvcv	𤴒
 vvcv	𰣞
 vvd	習
@@ -117391,7 +117401,7 @@ vvde	飁
 vvde	𩀦
 vvdg	䎈
 vvdg	𦐪
-vvdi	𳍭
+vvdi	𳍫
 vvdj	𦑠
 vvdj	𧢇
 vvdj	𫚆
@@ -117412,7 +117422,7 @@ vve	戳
 vveb	㪬
 vveb	𦐓
 vveb	𭣟
-vvec	𲹟
+vvec	𲹞
 vved	鸐
 vvee	𩁙
 vvee	𬒡
@@ -117458,7 +117468,7 @@ vvgb	翄
 vvgc	𦐷
 vvgd	𫅲
 vvgi	𩶨
-vvgi	𲹒
+vvgi	𲹑
 vvgk	𦐅
 vvgk	𦐏
 vvgo	翐
@@ -117466,7 +117476,7 @@ vvgs	𦐒
 vvgy	𢌟
 vvha	𤳭
 vvhc	𦑮
-vvhh	𳍛
+vvhh	𳍙
 vvhj	𦑄
 vvhj	𦑥
 vvhk	𲳙
@@ -117474,7 +117484,7 @@ vvhl	𤴀
 vvhl	𦒏
 vvhl	𦒒
 vvhs	𬑹
-vvht	𲹓
+vvht	𲹒
 vvhw	𦑊
 vvhw	𦑖
 vvib	𥔕
@@ -117482,7 +117492,7 @@ vvif	𮋌
 vvij	𮁓
 vvik	𦒨
 vvik	𬚈
-vvir	𲹡
+vvir	𲹠
 vvit	𦒚
 vviy	𫑮
 vvj	厦
@@ -117490,10 +117500,10 @@ vvjb	𪓦
 vvjd	𥕠
 vvjd	𬏈
 vvjd	𱻠
-vvjd	𲻊
+vvjd	𲻉
 vvje	頨
 vvjh	㕅
-vvjk	𳍠
+vvjk	𳍞
 vvjl	𤳴
 vvjp	翨
 vvjp	𦑧
@@ -117546,7 +117556,7 @@ vvlu	翀
 vvlv	鯉
 vvlv	𥗃
 vvlv	𱴁
-vvlv	𳍒
+vvlv	𳍐
 vvlx	𪴲
 vvlz	𮀬
 vvm	碨
@@ -117575,13 +117585,13 @@ vvnw	𮋓
 vvob	𦐆
 vvod	𦑎
 vvoe	𦏸
-vvok	𲹞
+vvok	𲹝
 vvoq	𰭢
 vvor	翜
 vvos	磥
 vvos	𥑉
 vvos	𲱆
-vvos	𳍶
+vvos	𳍴
 vvov	𤴄
 vvox	𱻘
 vvpg	羾
@@ -117593,7 +117603,7 @@ vvqc	𩼞
 vvqc	𫊼
 vvqc	𮶋
 vvqj	𦒗
-vvqo	𲹠
+vvqo	𲹟
 vvqp	𦒁
 vvqt	𦒐
 vvqx	鱖
@@ -117638,7 +117648,7 @@ vvrs	𠢯
 vvrt	𪯖
 vvru	𥂔
 vvru	𥂨
-vvru	𲹔
+vvru	𲹓
 vvrv	𤴇
 vvrw	𢒥
 vvry	鄝
@@ -117657,7 +117667,7 @@ vvso	𦒅
 vvso	𩸷
 vvss	砳
 vvss	𥗠
-vvss	𳎐
+vvss	𳎎
 vvst	翪
 vvsv	礪
 vvsv	鮖
@@ -117685,7 +117695,7 @@ vvuv	𩵣
 vvv	魚
 vvv	禺
 vvv	⿂
-vvv	𳍚
+vvv	𳍘
 vvva	櫐
 vvva	𰘾
 vvvb	𣀜
@@ -117800,7 +117810,7 @@ vvxj	𦑿
 vvxj	𰣖
 vvxm	𭯩
 vvxo	𦐙
-vvxw	𲹗
+vvxw	𲹖
 vvxx	羽
 vvxx	翚
 vvxx	⽻
@@ -117825,12 +117835,12 @@ vwck	𠩌
 vwcp	魩
 vwcp	𤰿
 vwcp	𰢽
-vwcr	𳍞
-vwcr	𳍧
+vwcr	𳍜
+vwcr	𳍥
 vwdk	𩼯
 vwfq	𩺉
 vwh	碉
-vwha	𳍹
+vwha	𳍷
 vwhl	鯛
 vwhl	碉
 vwid	𣂥
@@ -118031,7 +118041,7 @@ vxva	鮠
 vxva	𤱯
 vxvb	䃫
 vxvb	𲱋
-vxvb	𳎄
+vxvb	𳎂
 vxvj	𰧞
 vxvl	𥖷
 vxvs	𥔩
@@ -118100,7 +118110,7 @@ vypq	𥕨
 vypw	䱬
 vyqt	𥖐
 vysg	𗄡
-vysl	𳍌
+vysl	𳍊
 vytp	𱴶
 vyxr	𮁉
 w	出
@@ -118109,7 +118119,7 @@ w	出口
 wa	服
 wa	服务
 wa	服装
-waac	𲺮
+waac	𲺭
 waaj	𦡞
 waam	𦝃
 waba	𣔚
@@ -118121,7 +118131,7 @@ wabo	𫨳
 wabp	𤿔
 wabq	𧌘
 wac	彤
-wack	𲺎
+wack	𲺍
 wacp	彤
 wacp	𦟬
 wadn	鴅
@@ -118146,7 +118156,7 @@ wagy	𮕹
 waif	𦠢
 waiv	𬳮
 waiv	𰗉
-waiw	𲺰
+waiw	𲺯
 wajd	𦝞
 wajd	𩤙
 waje	𠂄
@@ -118163,14 +118173,14 @@ wakd	𰆎
 wakd	𮯱
 wake	臃
 wake	脝
-wakf	𲺻
+wakf	𲺺
 wakg	𩦪
 wakh	𱼤
 wakk	𡴀
 wakk	𡴫
 wakr	㥖
 wakr	𢚿
-wakr	𲻂
+wakr	𲻁
 waks	胶
 waks	駮
 waks	㬵
@@ -118212,8 +118222,8 @@ wang	膟
 want	𦠣
 wanw	𦚳
 wanw	𦝑
-wanw	𲺘
-wanw	𳌌
+wanw	𲺗
+wanw	𳌊
 wapg	𩧝
 waq	膀
 waqg	𪱭
@@ -118261,7 +118271,7 @@ wawt	𩤐
 wawy	𣎪
 waxa	𩦆
 waxg	𦠸
-waxw	𲺙
+waxw	𲺘
 way	围
 wayf	䢷
 wayf	𨚦
@@ -118298,7 +118308,7 @@ wbbo	𡇑
 wbbo	𧧙
 wbbo	𩢃
 wbbo	𰴱
-wbbq	𲻃
+wbbq	𲻂
 wbbu	𢂟
 wbbu	𢂭
 wbbu	𰎈
@@ -118326,12 +118336,12 @@ wbgl	𬂁
 wbgo	邎
 wbgo	䌛
 wbgp	𭨭
-wbgu	𲺺
+wbgu	𲺹
 wbgy	𭨧
 wbhf	䐸
-wbhf	𲺲
+wbhf	𲺱
 wbhj	圕
-wbhj	𲻄
+wbhj	𲻃
 wbht	𦙾
 wbib	騢
 wbib	腵
@@ -118483,7 +118493,7 @@ wcf	胴
 wcfc	𡇭
 wcfc	𱑀
 wcfi	𦚻
-wcfi	𲺍
+wcfi	𲺌
 wcfj	𱑂
 wcfl	胴
 wcfl	駧
@@ -118503,7 +118513,7 @@ wcir	𦙇
 wcjb	𰶶
 wcje	𩑮
 wcjj	𧠿
-wcjj	𳁕
+wcjj	𳁔
 wcjm	䀜
 wcjo	𬨰
 wcjp	𲤧
@@ -118544,7 +118554,7 @@ wcpi	𪴵
 wcpp	𭭩
 wcpw	𡆱
 wcpy	肜
-wcqi	𲺸
+wcqi	𲺷
 wcqj	㬟
 wcqm	𦝓
 wcqt	𪱣
@@ -118630,7 +118640,7 @@ wdfc	𡴇
 wdfi	駈
 wdfk	𡇥
 wdfk	𦛼
-wdfl	𲺔
+wdfl	𲺓
 wdfq	𦡊
 wdfs	𩦓
 wdfu	𩥐
@@ -118695,7 +118705,7 @@ wdna	𩧂
 wdnb	𡇠
 wdnb	𫩃
 wdnf	𮌸
-wdnm	𳏙
+wdnm	𳏗
 wdns	腺
 wdns	騡
 wdnw	𡈙
@@ -118751,7 +118761,7 @@ wdxq	𦜓
 wdxy	𲥚
 wdyf	𦜅
 wdyf	𨛟
-wdyu	𲺪
+wdyu	𲺩
 wdzm	駤
 wdzw	𡇓
 wdzy	胵
@@ -118823,7 +118833,7 @@ wemy	胟
 wena	肱
 wenb	囮
 weng	𱼇
-weoa	𲺫
+weoa	𲺪
 weoe	𱄕
 weol	𦟑
 wepo	膸
@@ -118842,7 +118852,7 @@ wesy	股
 wets	腞
 weuj	𡇊
 weuj	𮌧
-weuj	𲺋
+weuj	𲺊
 weuk	𦛊
 weuk	𫭇
 weuw	䐰
@@ -118903,7 +118913,7 @@ wfim	𫠉
 wfjf	𠣙
 wfjf	𦚸
 wfjm	𦞖
-wfjp	𲺴
+wfjp	𲺳
 wfjr	旹
 wfjs	𦛟
 wfjs	𬳬
@@ -119036,7 +119046,7 @@ wgeo	𫧅
 wget	𱼣
 wgfk	騀
 wgfk	𬚾
-wgfk	𲺷
+wgfk	𲺶
 wgfp	𩣜
 wgfy	𨚄
 wggi	㬳
@@ -119143,7 +119153,7 @@ whbh	𡈭
 whbh	𮌲
 whbi	𤋝
 whbj	臔
-whbn	𲺞
+whbn	𲺝
 whbo	駏
 whbo	𦜌
 whbo	𰮒
@@ -119205,7 +119215,7 @@ whkh	𦜣
 whkh	𩣱
 whkk	𦛘
 whkk	𲋹
-whkk	𲺽
+whkk	𲺼
 whkl	𦟷
 whkt	䮚
 whkt	𦝄
@@ -119270,7 +119280,7 @@ whqk	𣎖
 whqm	䭾
 whqm	𦜔
 whqo	𦡯
-whqo	𳌓
+whqo	𳌑
 whqy	圉
 whqy	肰
 whri	䏯
@@ -119326,7 +119336,7 @@ wibb	
 wibi	𤑩
 wibj	𩦿
 wibj	𬛜
-wibj	𲺒
+wibj	𲺑
 wibo	𦛀
 wibw	𦡆
 wiby	𧥻
@@ -119338,7 +119348,7 @@ widl	𦟈
 widl	𩥌
 widl	𮪠
 widn	𩿃
-widt	𲺹
+widt	𲺸
 widz	膣
 widz	腟
 wied	𩥥
@@ -119403,7 +119413,7 @@ wiih	𮪋
 wiii	𡭰
 wiii	𤎢
 wiii	𰯚
-wiii	𳌒
+wiii	𳌐
 wiij	頫
 wiij	覜
 wiij	𠒮
@@ -119450,7 +119460,7 @@ wioi	𤒧
 wip	腔
 wipg	腔
 wipg	𩣼
-wipi	𳌋
+wipi	𳌉
 wips	𣍺
 wiqb	𠤊
 wiqk	𤑃
@@ -119472,7 +119482,7 @@ wiso	𣍹
 wisp	䮿
 wisy	𣎃
 witj	𨥒
-witj	𲻁
+witj	𲻀
 witl	𦝣
 witu	𢼇
 wiub	𢻸
@@ -119503,7 +119513,7 @@ wj	国
 wj	国家
 wj	国际
 wjag	𦣙
-wjai	𲺶
+wjai	𲺵
 wjaj	𦛪
 wjam	騍
 wjam	腂
@@ -119517,7 +119527,7 @@ wjby	𱼉
 wjco	𫑂
 wjdm	𩡯
 wjdn	𪀽
-wjdn	𳏆
+wjdn	𳏄
 wjds	𲘪
 wjdy	𦘭
 wjew	𣎏
@@ -119528,7 +119538,7 @@ wjfc	腸
 wjfc	𩤟
 wjfc	𫭍
 wjfe	𡆸
-wjfe	𲺈
+wjfe	𲺇
 wjfi	胆
 wjfj	𬛡
 wjfk	𡘬
@@ -119550,7 +119560,7 @@ wjgy	𦙶
 wjhq	𦝳
 wjht	𦛠
 wjic	騴
-wjic	𲺧
+wjic	𲺦
 wjio	𡈴
 wjj	丱
 wjj	ㄐ
@@ -119802,7 +119812,7 @@ wklg	𫌎
 wklj	𩥳
 wklk	𢧷
 wklk	𭍲
-wklm	𳌆
+wklm	𳌄
 wklo	𦅹
 wklr	𢠝
 wklr	𤮋
@@ -119827,7 +119837,7 @@ wkmr	𦝅
 wkmu	𱼐
 wkn	脉
 wkna	𡆾
-wkna	𲺉
+wkna	𲺈
 wknd	䳮
 wknm	𱊓
 wknr	䐋
@@ -119857,15 +119867,15 @@ wksi	䭸
 wksm	圙
 wksn	𡴟
 wkso	駴
-wkso	𲺖
+wkso	𲺕
 wksq	𫘔
-wksx	𲺨
+wksx	𲺧
 wktf	圀
 wkts	𮪑
 wktu	𭣲
 wkub	𢻭
 wkum	𰮳
-wkum	𳌏
+wkum	𳌍
 wkus	𠄓
 wkvh	𠣐
 wkvj	𩤭
@@ -119926,8 +119936,8 @@ wldn	鴝
 wldn	𪀟
 wlds	腦
 wlds	𩤘
-wldx	𳌊
-wlef	𳋄
+wldx	𳌈
+wlef	𳋂
 wleh	雊
 wlei	𦛖
 wlei	𩣘
@@ -120002,7 +120012,7 @@ wllk	𩦤
 wlll	䯀
 wlll	𡈨
 wlll	𦣀
-wlll	𲺡
+wlll	𲺠
 wllo	𦞡
 wllt	𡕭
 wllt	𲥭
@@ -120043,7 +120053,7 @@ wltu	敂
 wlu	肿
 wlua	𰮹
 wlub	𢼒
-wlud	𳏾
+wlud	𳏼
 wlug	𤫱
 wluj	𦛉
 wlur	𦜦
@@ -120197,7 +120207,7 @@ wmwk	𱄸
 wmwn	𩧋
 wmwp	𩦄
 wmym	𩡻
-wmyt	𲺾
+wmyt	𲺽
 wmyy	𬁷
 wn	勾
 wn	勾结
@@ -120446,7 +120456,7 @@ woti	𲌀
 woub	𢼌
 wovs	𪽕
 wovv	𩹙
-wowm	𳌇
+wowm	𳌅
 wowo	𡈲
 woxi	囻
 woxj	𦝮
@@ -120534,7 +120544,7 @@ wqbg	匑
 wqbg	𮌏
 wqbk	膁
 wqbk	𫘕
-wqbo	𳌎
+wqbo	𳌌
 wqcb	𠣜
 wqcc	𧈪
 wqcm	𫆨
@@ -120723,7 +120733,7 @@ wrfm	騟
 wrfn	脸
 wrfo	𩥽
 wrfr	𱢻
-wrfs	𲺩
+wrfs	𲺨
 wrfu	𩤼
 wrgi	𦙈
 wrgl	𡴩
@@ -120734,7 +120744,7 @@ wrgp	䏟
 wrgu	𦞟
 wrgy	𦞽
 wrhb	匌
-wrhm	𳌉
+wrhm	𳌇
 wrhw	𡇞
 wrhy	䏩
 wril	𦞔
@@ -120767,7 +120777,7 @@ wrkm	騧
 wrkn	𦜲
 wrkr	腍
 wrkr	騐
-wrkr	𲺗
+wrkr	𲺖
 wrky	腡
 wrky	肣
 wrky	𰉍
@@ -120776,7 +120786,7 @@ wrls	𭨻
 wrlu	𡴑
 wrmm	𣭃
 wrnb	囵
-wrnb	𲺊
+wrnb	𲺉
 wrng	𮲪
 wroc	膼
 wroc	𨒊
@@ -120795,7 +120805,7 @@ wrr	𘯦
 wrr	
 wrr	
 wrr	
-wrr	𖿲
+wrr	𳑺
 wrrb	𰴿
 wrrc	𡜰
 wrrd	𪆍
@@ -120838,7 +120848,7 @@ wsbo	𩦟
 wscc	𡈌
 wsch	䐟
 wsck	𮍆
-wscn	𲺠
+wscn	𲺟
 wsco	朠
 wsco	𮪒
 wscr	𦜬
@@ -120885,13 +120895,13 @@ wshu	𠤅
 wshu	𡈮
 wshw	𠣲
 wsia	腜
-wsia	𳌐
+wsia	𳌎
 wsib	匁
 wsii	䏮
 wsir	騹
 wsir	𦚕
 wsir	𩢨
-wsir	𲺯
+wsir	𲺮
 wsit	𣎙
 wsiw	龱
 wsiw	𱕻
@@ -120905,7 +120915,7 @@ wsjn	𦢐
 wsjo	膜
 wsjo	䮬
 wsjo	𡈗
-wsjo	𳄳
+wsjo	𳄲
 wsjr	腊
 wsjr	𩤈
 wsjr	𭥘
@@ -120938,7 +120948,7 @@ wsmy	腼
 wsnk	𦡰
 wsnk	𦢸
 wsnl	𡇾
-wsnl	𲺣
+wsnl	𲺢
 wsnn	𰯡
 wsob	𫆾
 wsod	腝
@@ -120969,7 +120979,7 @@ wsse	𤕣
 wssg	驊
 wssg	𦠜
 wssi	駁
-wssi	𲺑
+wssi	𲺐
 wssk	𦜞
 wssl	𦟯
 wssl	𩢊
@@ -120992,8 +121002,8 @@ wsuu	𱢼
 wsux	䑅
 wsvm	𦣑
 wsvt	𠣯
-wsvt	𲺤
-wsvu	𲺜
+wsvt	𲺣
+wsvu	𲺛
 wsw	匈
 wswb	𩧛
 wswb	𱄦
@@ -121037,7 +121047,7 @@ wtdo	膖
 wtem	馼
 wtew	𪢨
 wtf	肪
-wtfm	𳌅
+wtfm	𳌃
 wtfs	𲉈
 wtfw	𡇅
 wtfy	肪
@@ -121055,7 +121065,7 @@ wtir	𦙭
 wtir	𩢦
 wtiw	𲘣
 wtjb	𫆷
-wtje	𲺿
+wtje	𲺾
 wtjr	𦟢
 wtjw	𬂀
 wtjy	𫆤
@@ -121101,7 +121111,7 @@ wtum	駇
 wtus	𲘨
 wtw	脑
 wtwb	匄
-wtwe	𳌕
+wtwe	𳌓
 wtwj	𪜡
 wtwj	𱼙
 wtwk	脑
@@ -121112,7 +121122,7 @@ wtwr	𩣇
 wtww	𡆲
 wtwy	𦜂
 wtwy	𦜢
-wtwy	𲺇
+wtwy	𲺆
 wtxu	𪯊
 wu	圜
 wuag	𦢄
@@ -121268,8 +121278,8 @@ wuve	𦡑
 wuvj	𥅱
 wuvn	䮗
 wuvr	𦢛
-wuvr	𳌔
-wuvs	𲺛
+wuvr	𳌒
+wuvs	𲺚
 wuvu	驢
 wuvu	臚
 wuvw	𦢚
@@ -121323,7 +121333,7 @@ wvo	騾
 wvoc	𰗊
 wvos	騾
 wvos	䐯
-wvpi	𲺏
+wvpi	𲺎
 wvpk	𮪝
 wvqx	𦠑
 wvqx	𩦒
@@ -121503,7 +121513,7 @@ wwjo	䄐
 wwjo	𥛁
 wwjq	𧑎
 wwjq	𱵰
-wwjq	𳀆
+wwjq	𳀅
 wwjr	駨
 wwjr	𠃕
 wwjr	𢡈
@@ -121511,7 +121521,7 @@ wwjr	𤭽
 wwjr	𦚧
 wwjr	𫭈
 wwjs	祟
-wwjs	𳌑
+wwjs	𳌏
 wwjt	𥜱
 wwjw	𡰇
 wwjw	𦛢
@@ -121614,7 +121624,7 @@ wwtf	𢶗
 wwtf	芳
 wwth	𤢝
 wwti	𤏺
-wwti	𲺚
+wwti	𲺙
 wwtj	𧸞
 wwtj	𧸟
 wwtj	𩕣
@@ -121752,7 +121762,7 @@ wxkc	𭔬
 wxlk	𡇹
 wxlk	𩣮
 wxln	𰮼
-wxlv	𳌈
+wxlv	𳌆
 wxlw	脕
 wxlw	𩣦
 wxlw	𲥜
@@ -121925,7 +121935,7 @@ xaks	𩚴
 xakt	𧝋
 xakx	舛
 xakx	⾇
-xakz	𳎞
+xakz	𳎜
 xalc	𧝝
 xalc	𱈖
 xale	𦕕
@@ -121958,7 +121968,7 @@ xanw	裗
 xanw	䘪
 xanw	䘻
 xanw	裗
-xanw	𳎛
+xanw	𳎙
 xaqc	䖤
 xaqi	𧞓
 xaqj	䙗
@@ -122025,7 +122035,7 @@ xbbp	皱
 xbbp	𤿥
 xbcn	𡛹
 xbcv	𧜾
-xbcv	𳎖
+xbcv	𳎔
 xbcy	𧘥
 xbcy	𬱕
 xbdf	𲁆
@@ -122118,7 +122128,7 @@ xbqy	𧞆
 xbr	急
 xbrd	𪂺
 xbre	袂
-xbre	𳋫
+xbre	𳋩
 xbri	急
 xbrk	𲠐
 xbrk	𲵭
@@ -122128,7 +122138,7 @@ xbrm	𱟙
 xbro	𪬎
 xbs	辗
 xbsm	辗
-xbso	𳁋
+xbso	𳁊
 xbsy	鲬
 xbsy	𧚔
 xbt	煞
@@ -122166,9 +122176,9 @@ xbyy	𨛰
 xc	负
 xc	负担
 xc	负责
-xcaj	𳎧
+xcaj	𳎥
 xcat	𠖢
-xcba	𳁀
+xcba	𳀿
 xcbj	鳕
 xcbm	负
 xcdj	𧝩
@@ -122201,7 +122211,7 @@ xcod	𫚐
 xcod	𬨄
 xcod	𱃵
 xcoi	𮬣
-xcou	𳎡
+xcou	𳎟
 xcp	衫
 xcpp	褷
 xcpy	衫
@@ -122242,7 +122252,7 @@ xdd	龟
 xddb	𫐕
 xddf	裫
 xddi	𧟈
-xddj	𳀺
+xddj	𳀹
 xddm	龟
 xddm	𧟒
 xddm	⻳
@@ -122273,7 +122283,7 @@ xdgj	䙉
 xdgj	𬨐
 xdgj	𮝸
 xdgp	𧙟
-xdgs	𳋰
+xdgs	𳋮
 xdhf	襷
 xdhk	𧚗
 xdhk	𧞏
@@ -122323,7 +122333,7 @@ xdom	𰃰
 xdov	鲉
 xdoy	袖
 xdpi	𬆂
-xdpy	𳅙
+xdpy	𳅘
 xdpz	𫏐
 xdq	襖
 xdqo	襖
@@ -122346,7 +122356,7 @@ xdue	𧘷
 xduh	褫
 xdur	𭂅
 xdus	𫌈
-xduu	𳁉
+xduu	𳁈
 xdvs	𲳦
 xdw	鲵
 xdwi	冩
@@ -122381,7 +122391,7 @@ xebk	𫐈
 xebo	𧘺
 xebo	𮖤
 xed	鶴
-xedb	𳀷
+xedb	𳀶
 xedg	𠖒
 xedn	鶴
 xedn	𫛏
@@ -122390,7 +122400,7 @@ xefi	𘲊
 xefs	𫚣
 xefu	𧙱
 xegi	𧘬
-xegj	𳁈
+xegj	𳁇
 xegu	𧚙
 xeh	袱
 xehi	𨾅
@@ -122405,9 +122415,9 @@ xeiv	𱇍
 xeiy	𮕤
 xej	冗
 xeje	𩑜
-xeje	𳊻
+xeje	𳊹
 xejj	𮷖
-xejl	𳀶
+xejl	𳀵
 xejm	冗
 xejm	冗
 xejs	饥
@@ -122430,7 +122440,7 @@ xemn	鹤
 xemr	袵
 xenb	𠕿
 xenb	𮕬
-xenb	𳎔
+xenb	𳎒
 xeng	𫚘
 xeng	𮕽
 xenk	𬯳
@@ -122443,7 +122453,7 @@ xepw	𬳅
 xesi	䘠
 xesj	𨐅
 xesq	𣪄
-xess	𳋪
+xess	𳋨
 xesy	𧘣
 xets	褖
 xets	𱄄
@@ -122533,7 +122543,7 @@ xfmy	袜
 xfnk	𩾁
 xfod	𠕹
 xfof	𧞁
-xfoj	𳄔
+xfoj	𳄓
 xfol	𮖂
 xfou	䙣
 xfov	鱿
@@ -122556,6 +122566,7 @@ xfwf	𧙸
 xfwv	𱇛
 xfwy	𧙕
 xfwy	𣍟
+xfwy	𫜾
 xfxa	𬚮
 xfxi	𲀼
 xfxm	𧙷
@@ -122565,7 +122576,7 @@ xfyn	㌘
 xg	农
 xg	农民
 xg	农村
-xgaf	𳎥
+xgaf	𳎣
 xgam	𧙤
 xgbc	褄
 xgbg	𢎯
@@ -122711,7 +122722,7 @@ xhem	𬶡
 xhfi	写
 xhfi	𫚈
 xhfi	㊢
-xhgj	𳁏
+xhgj	𳁎
 xhgu	襤
 xhgu	襤
 xhgy	裱
@@ -122752,7 +122763,7 @@ xhlx	𧞨
 xhna	袪
 xhna	𱇜
 xhnj	鳍
-xhnk	𳀹
+xhnk	𳀸
 xhnu	馌
 xhnu	𧛾
 xhnu	𫐔
@@ -122783,7 +122794,7 @@ xi	东
 xi	东西
 xi	东部
 xial	𭵫
-xiam	𳋮
+xiam	𳋬
 xib	馆
 xibb	馆
 xibb	䘾
@@ -122823,7 +122834,7 @@ xigp	𧘡
 xigp	𫚌
 xigp	𫡓
 xigx	𩽽
-xiha	𳁂
+xiha	𳁁
 xihq	𧛗
 xiht	𰴇
 xiht	𱖚
@@ -122841,7 +122852,7 @@ xiib	𱄂
 xiih	裧
 xiih	𱃿
 xiin	鲿
-xiiw	𳎣
+xiiw	𳎡
 xij	玺
 xijd	䘢
 xijd	𬲲
@@ -122854,7 +122865,7 @@ xijv	𨤰
 xikc	𡭫
 xikd	𫹬
 xilb	𧜮
-xild	𳑔
+xild	𳑒
 xilw	𨐈
 ximn	鸫
 ximn	𲍰
@@ -122869,14 +122880,14 @@ xioi	𬋘
 xipg	𧚬
 xipl	𧛪
 xiqc	𫊱
-xirb	𳀸
+xirb	𳀷
 xiri	𢘞
 xiri	𰁕
 xirl	褣
 xirl	𫚦
 xirm	グ
 xiru	鿹
-xirx	𳋱
+xirx	𳋯
 xisa	𧝱
 xisg	𧞼
 xisp	䙭
@@ -122895,10 +122906,10 @@ xivl	𲇁
 xivm	尔
 xivt	襠
 xiwj	𧞍
-xiwr	𳁅
+xiwr	𳁄
 xiwy	䘯
 xiwy	𱇯
-xiwy	𳋬
+xiwy	𳋪
 xixa	䘼
 xixa	𬶝
 xixa	𰺑
@@ -122943,7 +122954,7 @@ xjdd	鼏
 xjdn	𪃓
 xjdq	𧖅
 xjds	饤
-xjdv	𳎓
+xjdv	𳎑
 xjdy	𲀤
 xjes	𭁿
 xjey	𮖗
@@ -123007,6 +123018,7 @@ xjqy	袓
 xjr	鲁
 xjri	𢚞
 xjrm	𠕾
+xjrm	𬺨
 xjrm	
 xjrv	鲁
 xjry	衵
@@ -123064,7 +123076,7 @@ xkam	𣮥
 xkam	𘲆
 xkam	
 xkam	𲒇
-xkam	𳁁
+xkam	𳁀
 xkao	𨓫
 xkao	𲅢
 xkat	𢾣
@@ -123188,7 +123200,7 @@ xksa	𣓪
 xksi	𩽻
 xksi	𰹵
 xksi	𲍇
-xksk	𳎕
+xksk	𳎓
 xksm	𪞓
 xkso	裓
 xkso	𮶇
@@ -123268,7 +123280,7 @@ xley	𧙫
 xlfj	㌛
 xlgb	𢻇
 xlgc	褸
-xlhk	𳀲
+xlhk	𳀱
 xlhu	𡒒
 xlik	𡖚
 xlj	馈
@@ -123280,7 +123292,7 @@ xljc	䙌
 xlje	𬱃
 xljj	䙡
 xljo	𧞸
-xljo	𳋴
+xljo	𳋲
 xljw	裎
 xlka	轵
 xlka	𧙋
@@ -123418,17 +123430,17 @@ xlww	𭀰
 xlww	𰯭
 xlwy	裐
 xlwy	𨞭
-xlwy	𳎙
+xlwy	𳎗
 xlxq	𭭊
 xlxs	𭄧
 xlyf	𨚷
-xlyf	𳎟
+xlyf	𳎝
 xlzy	𧘿
 xm	切
 xm	切实
 xm	切断
 xmag	袃
-xmay	𳁊
+xmay	𳁉
 xmbd	𩾌
 xmbl	𬳍
 xmbl	𮖩
@@ -123460,7 +123472,7 @@ xmgn	𬳔
 xmgy	𧞱
 xmgy	𬶓
 xmh	稣
-xmhi	𳁌
+xmhi	𳁋
 xmhs	𲋣
 xmhv	稣
 xmib	𧞧
@@ -123491,13 +123503,13 @@ xmmj	𬨁
 xmmm	𲁄
 xmnj	𮷙
 xmny	𬡍
-xmod	𳋲
+xmod	𳋰
 xmpn	𤙟
 xmpr	𦠫
 xmps	𤯦
 xmqk	𧞋
 xmqk	𬶶
-xmqn	𳀾
+xmqn	𳀽
 xmqy	𧘜
 xmr	衽
 xmri	𢗧
@@ -123506,7 +123518,7 @@ xmrs	饪
 xmry	衽
 xmsa	𲁂
 xmsb	𰺕
-xmsf	𳀽
+xmsf	𳀼
 xmsi	𧜥
 xmsu	褯
 xmtj	𨥓
@@ -123551,7 +123563,7 @@ xnkt	馂
 xnkt	𧚉
 xnkt	𱇳
 xnl	饴
-xnlr	𳁄
+xnlr	𳁃
 xnlv	饴
 xnlv	鲐
 xnna	𣗸
@@ -123628,29 +123640,29 @@ xoey	衪
 xofh	袴
 xofh	𱇦
 xofo	辏
-xofr	𲻯
+xofr	𲻮
 xofv	𩽺
 xofy	衭
 xogh	𰰛
 xogs	𱃼
 xoib	𤇗
 xoib	𤈖
-xoib	𳀴
+xoib	𳀳
 xoij	𰰗
-xoiu	𲻮
+xoiu	𲻭
 xoje	𦫤
 xojj	𧜴
 xojl	裿
 xojl	𠖏
 xojl	𫐎
-xojl	𳎜
+xojl	𳎚
 xojr	䲠
 xojv	鱾
 xojy	𬡆
 xokd	𧘹
 xokd	𮷗
 xokl	𰰖
-xolh	𲻬
+xolh	𲻫
 xomd	𱐜
 xomh	𰺖
 xomv	𲍆
@@ -123688,7 +123700,7 @@ xoyf	𨛉
 xp	鳔
 xpcm	𧚳
 xpcn	䙅
-xpcn	𳎠
+xpcn	𳎞
 xpgv	𫚉
 xpgy	𧘍
 xphj	𥛛
@@ -123759,7 +123771,7 @@ xqmm	冞
 xqmv	𲍐
 xqmx	𪤹
 xqnk	䙫
-xqnk	𳎦
+xqnk	𳎤
 xqnn	𧛏
 xqnn	𫚤
 xqns	𰴄
@@ -123779,14 +123791,14 @@ xqq	⽋
 xqq	𘯜
 xqql	鳝
 xqql	𮖯
-xqql	𳋳
+xqql	𳋱
 xqri	𬳋
 xqs	饼
 xqsj	𫐍
 xqso	饼
 xqso	𧚭
 xqso	𫐌
-xqsv	𳎚
+xqsv	𳎘
 xqsy	裑
 xqt	襚
 xqto	襚
@@ -123820,7 +123832,7 @@ xrev	𩵋
 xrev	𬶁
 xrf	输
 xrfa	馀
-xrfa	𳎝
+xrfa	𳎛
 xrfc	𧛈
 xrff	𱈇
 xrff	𱈈
@@ -123831,7 +123843,7 @@ xrfm	褕
 xrfm	𱄁
 xrfn	裣
 xrfp	𲀬
-xrfs	𳁆
+xrfs	𳁅
 xrgp	袐
 xrgp	𫗣
 xrgp	𫚑
@@ -123855,7 +123867,7 @@ xrka	衸
 xrka	𬶇
 xrkb	袊
 xrkb	𫐉
-xrkb	𳎗
+xrkb	𳎕
 xrkl	𫤺
 xrkl	𬡧
 xrkr	鲶
@@ -123899,7 +123911,7 @@ xsam	鲽
 xsam	褋
 xsam	𬡕
 xsan	𧣙
-xsaq	𳁠
+xsaq	𳁟
 xsas	𧣦
 xsas	𮗱
 xsat	𧤞
@@ -123960,7 +123972,7 @@ xses	𬡟
 xseu	𮖆
 xsew	𧤓
 xsew	𬳁
-xsfe	𳁞
+xsfe	𳁝
 xsff	䚙
 xsff	𧣰
 xsfg	𧣘
@@ -124006,7 +124018,7 @@ xshk	𬡵
 xshn	襼
 xshq	𠖪
 xshs	𧜒
-xshs	𳁜
+xshs	𳁛
 xsht	𧤁
 xshu	𧞔
 xshu	𧟋
@@ -124025,7 +124037,7 @@ xsin	𧣖
 xsir	馑
 xsir	𩠁
 xsir	𫠐
-xsiv	𳁝
+xsiv	𳁜
 xsiw	𧣪
 xsiy	袣
 xsja	𬶯
@@ -124086,14 +124098,14 @@ xsmd	𧥁
 xsmd	𬷺
 xsmf	𢵠
 xsmh	㙰
-xsmh	𳁟
+xsmh	𳁞
 xsmi	𧟆
 xsmi	𧥍
 xsmk	𧥌
 xsmk	𫌯
 xsml	䚩
 xsmm	𮗥
-xsmn	𳁥
+xsmn	𳁤
 xsmo	邂
 xsmp	解
 xsmp	🈖
@@ -124109,7 +124121,7 @@ xsnb	𧢶
 xsnf	𧜿
 xsnj	𮗬
 xsnl	𲁛
-xsnl	𳁡
+xsnl	𳁠
 xsns	𧤋
 xsob	𧣃
 xsob	𧣧
@@ -124141,14 +124153,14 @@ xsqg	觯
 xsqg	𧥐
 xsqp	觲
 xsqp	𧤕
-xsqt	𳁧
+xsqt	𳁦
 xsqy	觧
 xsrc	𧣵
-xsrg	𳁢
+xsrg	𳁡
 xsrh	褡
-xsrh	𳋯
+xsrh	𳋭
 xsrj	𮝵
-xsrj	𳁦
+xsrj	𳁥
 xsrk	𧣋
 xsrk	𧤐
 xsrp	𬢘
@@ -124241,7 +124253,7 @@ xsxa	𧤇
 xsxa	𧤠
 xsxb	𧥎
 xsxe	𧣍
-xsxe	𳁣
+xsxe	𳁢
 xsxg	𧤢
 xsxj	𧣬
 xsxk	𧥒
@@ -124293,11 +124305,11 @@ xtlv	辂
 xtlv	袼
 xtlv	饹
 xtlv	𱇪
-xtlv	𳋭
+xtlv	𳋫
 xtoc	𱈏
 xtod	𲀺
 xtqc	𬡯
-xtsb	𳁐
+xtsb	𳁏
 xtss	𮸿
 xtsv	𧰼
 xtul	𱇼
@@ -124359,7 +124371,7 @@ xuhy	裭
 xuih	𱫌
 xuij	𫌌
 xuij	𬳐
-xuij	𳎤
+xuij	𳎢
 xuin	鿸
 xujb	𧵏
 xujb	𬡥
@@ -124387,7 +124399,7 @@ xuni	𧟍
 xunn	襬
 xunn	𣬋
 xuno	䙎
-xuno	𳎢
+xuno	𳎠
 xuns	鳏
 xuns	𧜋
 xunx	𬶷
@@ -124413,7 +124425,7 @@ xurb	𧛎
 xurh	𡎥
 xurh	𫮋
 xury	𬶒
-xury	𳀵
+xury	𳀴
 xusj	𫐅
 xusm	冚
 xusm	𡴲
@@ -124497,7 +124509,7 @@ xvjh	𧞣
 xvji	矦
 xvjj	𰷐
 xvjk	𬳎
-xvjk	𳀿
+xvjk	𳀾
 xvjr	袹
 xvjr	𭦌
 xvjs	𪞕
@@ -124558,8 +124570,8 @@ xvvv	𧞭
 xvvv	𫐙
 xvvv	𱈂
 xvvv	𰺢
-xvvv	𳁎
-xvvv	𳋵
+xvvv	𳁍
+xvvv	𳋳
 xvvx	𲀮
 xvwg	𫿶
 xvwk	𭔷
@@ -124661,7 +124673,7 @@ xwos	𰺂
 xwpn	𤘰
 xwqj	𦌛
 xwqm	𱇽
-xwqm	𳀼
+xwqm	𳀻
 xwqr	𧝮
 xwqs	𧟁
 xwqu	𡴢
@@ -124693,7 +124705,7 @@ xwus	𡵭
 xwus	𭖊
 xwuu	𮊏
 xwuy	𡴣
-xwvi	𳍨
+xwvi	𳍦
 xwvs	𭂂
 xwvt	𬨉
 xwvv	𩵫
@@ -124714,7 +124726,7 @@ xwyj	䢁
 xwyl	㌚
 xwym	肎
 xwyv	𬶈
-xwyy	𳀰
+xwyy	𳀯
 xx	军
 xx	军事
 xx	军队
@@ -124973,7 +124985,7 @@ yaii	𗰽
 yain	𗳱
 yais	𗱊
 yais	𗱋
-yaiv	𳈦
+yaiv	𳈥
 yaj	陳
 yajd	𨺱
 yaje	𩑫
@@ -124982,7 +124994,7 @@ yajm	𱎈
 yajq	螴
 yajr	陳
 yajt	敶
-yaju	𳈺
+yaju	𳈹
 yajx	𨼤
 yaka	𲉊
 yaki	丮
@@ -125061,14 +125073,14 @@ ybbr	𮥚
 ybff	𫕘
 ybfq	隥
 ybfq	𨻭
-ybgl	𳈢
+ybgl	𳈡
 ybhj	𨼑
 ybht	𫔽
 ybib	𨺽
 ybji	𱎀
 yblk	隦
 ybmf	𬮺
-ybnb	𳈟
+ybnb	𳈞
 ybns	𠃮
 ybob	𨹣
 ybof	𨸕
@@ -125234,7 +125246,7 @@ yepr	𢡢
 yepr	𢢠
 yepr	𩩜
 yept	𧱞
-yept	𳇈
+yept	𳇇
 yepu	嶞
 yepu	𡽃
 yepu	𭗱
@@ -125280,7 +125292,7 @@ yfca	𮥫
 yfce	陋
 yfce	陋
 yfch	𭎴
-yfcm	𳈹
+yfcm	𳈸
 yfcr	陃
 yfdn	𩾗
 yfeh	𨾆
@@ -125714,7 +125726,7 @@ yfjy	퀡
 yfjy	퀵
 yfjy	퀶
 yfjy	퀽
-yfkc	𳈜
+yfkc	𳈛
 yfkp	陚
 yfks	隬
 yfl	隔
@@ -125769,7 +125781,7 @@ yfly	큒
 yfly	큙
 yflz	𱀌
 yfmd	𰄚
-yfmn	𳐂
+yfmn	𳐀
 yfna	𨸞
 yfna	𲏌
 yfnh	𨻋
@@ -126308,7 +126320,7 @@ yhwu	𨽨
 yhww	𨽐
 yhww	𱀲
 yhwy	𮸨
-yhxq	𳈯
+yhxq	𳈮
 yhyi	阸
 yhyk	隯
 yhz	陡
@@ -126417,7 +126429,7 @@ yiky	㌂
 yiky	𘆌
 yilw	𨹂
 yin	陀
-yina	𳈝
+yina	𳈜
 yinb	陀
 yink	𭔴
 yio	买
@@ -126442,8 +126454,8 @@ yiri	𘡏
 yiri	𲏇
 yirj	𫕂
 yirj	𱀊
-yirl	𳈨
-yish	𳈳
+yirl	𳈧
+yish	𳈲
 yiso	𨼭
 yiub	겵
 yiub	겾
@@ -126607,7 +126619,7 @@ yjfy	궦
 yjfy	궭
 yjgf	𱀆
 yjgh	𲚀
-yjgh	𳈫
+yjgh	𳈪
 yjgs	𨺒
 yjhf	곧
 yjhf	굳
@@ -126629,25 +126641,25 @@ yjkc	𮥎
 yjkc	𱀤
 yjkm	𨺸
 yjku	𥁝
-yjla	𳈲
+yjla	𳈱
 yjlb	𨼥
 yjlc	娿
-yjld	𳏍
+yjld	𳏋
 yjle	𨼼
-yjlf	𳈥
-yjlg	𳈵
+yjlf	𳈤
+yjlg	𳈴
 yjlh	𫮄
 yjlj	𨼓
 yjlj	𬯣
 yjlj	𬯩
 yjlj	𮥌
-yjlj	𳈷
+yjlj	𳈶
 yjll	𮥯
 yjll	공
 yjll	궁
-yjln	𳈱
+yjln	𳈰
 yjlo	𲉤
-yjlo	𳈰
+yjlo	𳈯
 yjlr	𬯜
 yjlv	阿
 yjlv	𲉦
@@ -126695,7 +126707,7 @@ yjrr	궀
 yjs	际
 yjsf	际
 yjsg	𬯕
-yjso	𳈠
+yjso	𳈟
 yjub	𮥝
 yjub	𲉋
 yjub	과
@@ -127103,7 +127115,7 @@ yltk	饏
 yltr	憨
 yltu	敢
 yltu	𫶔
-yltw	𳈧
+yltw	𳈦
 ylui	𗳅
 ylui	𗴀
 ylus	䦿
@@ -127267,7 +127279,7 @@ yorr	陜
 yosa	𨽬
 yoss	𫕐
 youc	𨻝
-youc	𳈪
+youc	𳈩
 yoxi	𬼢
 yoxo	𨼎
 yp	蛋
@@ -127276,7 +127288,7 @@ yp	蛋白
 ypa	疏
 ypal	疎
 ypaw	疏
-ypbm	𳈡
+ypbm	𳈠
 ypbp	𭼀
 ypdd	𲱑
 ypdn	𪀑
@@ -127310,7 +127322,7 @@ ypqo	𲀏
 ypqq	𰳢
 yprm	𭼄
 ypsj	𱱈
-ypsl	𳈞
+ypsl	𳈝
 ypsw	𫥦
 yptl	𱀺
 ypum	㿿
@@ -127340,8 +127352,8 @@ yqoa	𨹵
 yqoc	𫡮
 yqod	𨺰
 yqod	𫕀
-yqog	𳈶
-yqpg	𳈩
+yqog	𳈵
+yqpg	𳈨
 yqpk	𱀵
 yqpo	𬯚
 yqpy	𨺧
@@ -127367,7 +127379,7 @@ yqtn	𱁂
 yqto	隧
 yqto	𨗎
 yqto	𪥡
-yqtq	𲿷
+yqtq	𲿶
 yqts	隊
 yqtt	鐆
 yqtu	𨻖
@@ -127850,7 +127862,7 @@ ytfq	𨻦
 ytfs	鿧
 ytfv	䃧
 ytgo	𫕗
-ytgp	𳈮
+ytgp	𳈭
 ythf	陔
 ytht	埅
 ytht	𡏇
@@ -127961,7 +127973,7 @@ yubo	걎
 yubo	깆
 yubr	隠
 yuca	𗈷
-yucf	𳈣
+yucf	𳈢
 yucf	𘨹
 yuch	𫕋
 yuck	𘜜
@@ -127982,7 +127994,7 @@ yudk	𘒼
 yudn	𘒤
 yudn	𘒨
 yudn	𘒻
-yudq	𳈸
+yudq	𳈷
 yuds	𘒩
 yudu	𘒥
 yudy	𘒣
@@ -128103,7 +128115,7 @@ yuhq	𨼸
 yuht	𨻼
 yuht	𨼂
 yuig	𱀒
-yuij	𳈬
+yuij	𳈫
 yuil	갛
 yuil	걓
 yuil	깋
@@ -128174,7 +128186,7 @@ yure	걋
 yure	깃
 yuri	𨼚
 yuri	𩙻
-yuri	𳋓
+yuri	𳋑
 yurk	䧙
 yurr	갔
 yurr	걌
@@ -128260,7 +128272,7 @@ yuuy	걝
 yuvu	𨽜
 yuwq	𮥦
 yuww	𨻱
-yuxj	𳈴
+yuxj	𳈳
 yuxk	𘲙
 yuya	𗈩
 yuyf	갘
@@ -128335,7 +128347,7 @@ ywih	𨹾
 ywj	陶
 ywjf	陶
 ywjf	𬯒
-ywjh	𳈭
+ywjh	𳈬
 ywjn	𱕂
 ywjr	𮥄
 ywjs	際
