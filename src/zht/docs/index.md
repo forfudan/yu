@@ -5,6 +5,8 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 # 宇浩系列輸入法
 
+[點擊此處加入QQ交流群](https://qm.qq.com/q/1hYF5Shdbg)
+
 ## 基本特點
 
 <MultiChaifen chars="宇浩系列輸入法" :size="50" loc='left' />
