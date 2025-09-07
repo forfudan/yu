@@ -15,7 +15,7 @@ hero:
       text: 介紹
       link: /zht/docs/
     - theme: brand
-      text: 教程
+      text: 學習
       link: /zht/learn/division
     - theme: alt
       text: 練習
@@ -23,6 +23,12 @@ hero:
     - theme: alt
       text: 安裝
       link: /zht/install
+    - theme: alt
+      text: 跟打
+      link: genda.shurufa.app
+    - theme: alt
+      text: 測評
+      link: ceping.shurufa.app
 
 ---
 
