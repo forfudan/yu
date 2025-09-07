@@ -104,13 +104,13 @@ th {
   background: #00bcd4 !important;
 }
 
-/* 扁平化悬停效果 */
+/* 扁平化懸停效果 */
 .VPHero .action .VPButton:hover {
   transform: translateY(-3px) scale(1.08) !important;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15) !important;
 }
 
-/* 每个按钮的悬停效果 - 稍微加深颜色 */
+/* 每個按鈕的懸停效果 - 稍微加深顏色 */
 .VPHero .action:nth-child(1) .VPButton:hover {
   background: #1976d2 !important;
 }
@@ -135,7 +135,7 @@ th {
   background: #0097a7 !important;
 }
 
-/* 暗色模式下保持相同的扁平化样式 */
+/* 暗色模式下保持相同的扁平化樣式 */
 .dark .VPHero .action:nth-child(1) .VPButton {
   background: #1976d2 !important;
   color: #ffffff !important;
@@ -172,7 +172,7 @@ th {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* 使用 CSS content 替换按钮文字为竖排双字 */
+/* 使用 CSS content 替換按鈕文字為竪排雙字 */
 .VPHero .action:nth-child(1) .VPButton .text {
   font-size: 0;
 }
@@ -277,7 +277,7 @@ th {
   }
 }
 
-/* 超小屏幕优化 */
+/* 超小屏幕優化 */
 @media (max-width: 480px) {
   .VPHero .actions {
     gap: 0.2rem !important;
@@ -301,7 +301,7 @@ th {
   }
 }
 
-/* 确保在有图片的情况下也居中 */
+/* 確保在有圖片的情況下也居中 */
 .VPHero.has-image .actions {
   justify-content: center !important;
 }

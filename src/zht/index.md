@@ -25,10 +25,10 @@ hero:
       link: /zht/install
     - theme: alt
       text: 跟打
-      link: genda.shurufa.app
+      link: https://genda.shurufa.app
     - theme: alt
       text: 測評
-      link: ceping.shurufa.app
+      link: https://ceping.shurufa.app
 
 ---
 
