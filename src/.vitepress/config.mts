@@ -451,7 +451,7 @@ export default defineConfig({
     },
     zht: {
       label: "傳統漢字",
-      lang: "zh-Hans-CN",
+      lang: "zh-Hant",
       title: "宇浩系列輸入法",
       description: "情繫漢字 溝通古今",
       themeConfig: {

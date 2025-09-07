@@ -1,12 +1,313 @@
 th {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 :root {
-    --vp-font-family-base: 'Chinese Quotes', 'Inter var', 'Inter', ui-sans-serif,
-      system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      'Helvetica Neue', Helvetica, Arial, 'Noto Sans', sans-serif,
-      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    --vp-font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco,
-      Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  --vp-font-family-base: 'Chinese Quotes',
+  'Inter var',
+  'Inter',
+  ui-sans-serif,
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  'Helvetica Neue',
+  Hel.VPHero .action:nth-child(6) .VPButton .text::after {
+    content: "测评";
+    font-size: 1.3rem;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    line-height: 1.8;
+    letter-spacing: 0.3rem;
   }
+
+  Arial,
+  'Noto Sans',
+  sans-serif,
+  'Apple Color Emoji',
+  'Segoe UI Emoji',
+  'Segoe UI Symbol',
+  'Noto Color Emoji';
+  --vp-font-family-mono: ui-monospace,
+  SFMono-Regular,
+  'SF Mono',
+  Menlo,
+  Monaco,
+  Consolas,
+  'Liberation Mono',
+  'Courier New',
+  monospace;
+}
+
+/* 首页 Hero Actions 布局 - 竹简风格 */
+.VPHero .actions {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  justify-content: center !important;
+  gap: 0.3rem !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding-top: 32px !important;
+}
+
+.VPHero .action {
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+}
+
+.VPHero .action .VPButton {
+  width: 2.8rem !important;
+  height: 6rem !important;
+  border-radius: 0.8rem !important;
+  padding: 0.5rem 0 !important;
+  font-size: 1.3rem !important;
+  font-weight: 600 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: 'Noto Serif SC', serif !important;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+  writing-mode: vertical-rl !important;
+  text-orientation: upright !important;
+}
+
+/* 為每個按鈕設置不同的扁平純色 - 增加透明度減少刺眼感 */
+.VPHero .action:nth-child(1) .VPButton {
+  background: rgba(33, 150, 243, 0.8) !important;
+}
+
+.VPHero .action:nth-child(2) .VPButton {
+  background: rgba(156, 39, 176, 0.8) !important;
+}
+
+.VPHero .action:nth-child(3) .VPButton {
+  background: rgba(76, 175, 80, 0.8) !important;
+}
+
+.VPHero .action:nth-child(4) .VPButton {
+  background: rgba(251, 140, 0, 0.8) !important;
+}
+
+.VPHero .action:nth-child(5) .VPButton {
+  background: rgba(233, 30, 99, 0.8) !important;
+}
+
+.VPHero .action:nth-child(6) .VPButton {
+  background: rgba(0, 188, 212, 0.8) !important;
+}
+
+/* 扁平化懸停效果 - 懸停時稍微提高不透明度 */
+.VPHero .action .VPButton:hover {
+  transform: translateY(-3px) scale(1.08) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 每個按鈕的懸停效果 - 稍微加深顏色且提高不透明度 */
+.VPHero .action:nth-child(1) .VPButton:hover {
+  background: rgba(25, 118, 210, 0.9) !important;
+}
+
+.VPHero .action:nth-child(2) .VPButton:hover {
+  background: rgba(123, 31, 162, 0.9) !important;
+}
+
+.VPHero .action:nth-child(3) .VPButton:hover {
+  background: rgba(56, 142, 60, 0.9) !important;
+}
+
+.VPHero .action:nth-child(4) .VPButton:hover {
+  background: rgba(230, 81, 0, 0.9) !important;
+}
+
+.VPHero .action:nth-child(5) .VPButton:hover {
+  background: rgba(194, 24, 91, 0.9) !important;
+}
+
+.VPHero .action:nth-child(6) .VPButton:hover {
+  background: rgba(0, 151, 167, 0.9) !important;
+}
+
+/* 暗色模式下保持相同的扁平化樣式 - 增加透明度 */
+.dark .VPHero .action:nth-child(1) .VPButton {
+  background: rgba(25, 118, 210, 0.5) !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark .VPHero .action:nth-child(2) .VPButton {
+  background: rgba(123, 31, 162, 0.5) !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark .VPHero .action:nth-child(3) .VPButton {
+  background: rgba(56, 142, 60, 0.5) !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark .VPHero .action:nth-child(4) .VPButton {
+  background: rgba(230, 81, 0, 0.5) !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark .VPHero .action:nth-child(5) .VPButton {
+  background: rgba(194, 24, 91, 0.5) !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark .VPHero .action:nth-child(6) .VPButton {
+  background: rgba(0, 151, 167, 0.5) !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 使用 CSS content 替換按鈕文字為竪排雙字 */
+.VPHero .action:nth-child(1) .VPButton .text {
+  font-size: 0;
+}
+
+.VPHero .action:nth-child(1) .VPButton .text::after {
+  content: "介紹";
+  font-size: 1.3rem;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  line-height: 1.8;
+  letter-spacing: 0.3rem;
+}
+
+.VPHero .action:nth-child(2) .VPButton .text {
+  font-size: 0;
+}
+
+.VPHero .action:nth-child(2) .VPButton .text::after {
+  content: "教程";
+  font-size: 1.3rem;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  line-height: 1.8;
+  letter-spacing: 0.3rem;
+}
+
+.VPHero .action:nth-child(3) .VPButton .text {
+  font-size: 0;
+}
+
+.VPHero .action:nth-child(3) .VPButton .text::after {
+  content: "練習";
+  font-size: 1.3rem;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  line-height: 1.8;
+  letter-spacing: 0.3rem;
+}
+
+.VPHero .action:nth-child(4) .VPButton .text {
+  font-size: 0;
+}
+
+.VPHero .action:nth-child(4) .VPButton .text::after {
+  content: "安裝";
+  font-size: 1.3rem;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  line-height: 1.6;
+  letter-spacing: 0.2rem;
+}
+
+.VPHero .action:nth-child(5) .VPButton .text {
+  font-size: 0;
+}
+
+.VPHero .action:nth-child(5) .VPButton .text::after {
+  content: "跟打";
+  font-size: 1.3rem;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  line-height: 1.8;
+  letter-spacing: 0.3rem;
+}
+
+.VPHero .action:nth-child(6) .VPButton .text {
+  font-size: 0;
+}
+
+.VPHero .action:nth-child(6) .VPButton .text::after {
+  content: "測評";
+  font-size: 1.3rem;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  line-height: 1.6;
+  letter-spacing: 0.2rem;
+}
+
+/* 移動端響應式 - 較小屏幕時調整按鈕大小 */
+@media (max-width: 640px) {
+  .VPHero .actions {
+    gap: 0.25rem !important;
+    padding-top: 24px !important;
+  }
+
+  .VPHero .action .VPButton {
+    width: 2.4rem !important;
+    height: 5rem !important;
+    font-size: 1.1rem !important;
+    padding: 0.3rem 0 !important;
+  }
+
+  .VPHero .action:nth-child(1) .VPButton .text::after,
+  .VPHero .action:nth-child(2) .VPButton .text::after,
+  .VPHero .action:nth-child(3) .VPButton .text::after,
+  .VPHero .action:nth-child(4) .VPButton .text::after,
+  .VPHero .action:nth-child(5) .VPButton .text::after,
+  .VPHero .action:nth-child(6) .VPButton .text::after {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    letter-spacing: 0.25rem;
+  }
+}
+
+/* 超小屏幕優化 */
+@media (max-width: 480px) {
+  .VPHero .actions {
+    gap: 0.2rem !important;
+  }
+
+  .VPHero .action .VPButton {
+    width: 2.2rem !important;
+    height: 4.5rem !important;
+    font-size: 1rem !important;
+  }
+
+  .VPHero .action:nth-child(1) .VPButton .text::after,
+  .VPHero .action:nth-child(2) .VPButton .text::after,
+  .VPHero .action:nth-child(3) .VPButton .text::after,
+  .VPHero .action:nth-child(4) .VPButton .text::after,
+  .VPHero .action:nth-child(5) .VPButton .text::after,
+  .VPHero .action:nth-child(6) .VPButton .text::after {
+    font-size: 1rem;
+    line-height: 1.6;
+    letter-spacing: 0.2rem;
+  }
+}
+
+/* 確保在有圖片的情況下也居中 */
+.VPHero.has-image .actions {
+  justify-content: center !important;
+}
+
+@media (min-width: 960px) {
+  .VPHero.has-image .actions {
+    justify-content: center !important;
+  }
+}
