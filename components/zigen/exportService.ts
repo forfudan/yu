@@ -138,7 +138,7 @@ export class ZigenExportService {
                 color: #1f2937;
                 font-family: 'Noto Serif SC', serif;
             `
-            titleElement.textContent = `${schemeName}輸入法字根圖表·乙巳中元版`
+            titleElement.textContent = `${schemeName}輸入法字根圖表`
             element.insertBefore(titleElement, element.firstChild)
 
             // 5. 修复特定按键的文字布局问题（导出时横排处理）
