@@ -34,12 +34,26 @@ const columnMinWidth = computed(() => {
     switch (activeScheme.value) {
         case 'ming':
             return '2rem'
-        case 'wafel':
-        case 'joy':
-        case 'light':
-        case 'star':
         default:
             return '1.4rem'
+    }
+})
+
+const columnMinWidthCodeBelow = computed(() => {
+    switch (activeScheme.value) {
+        case 'ming':
+            return '1.0rem'
+        default:
+            return '1.0rem'
+    }
+})
+
+const defaultCodePositionBelow = computed(() => {
+    switch (activeScheme.value) {
+        case 'ming':
+            return true
+        default:
+            return false
     }
 })
 
@@ -79,7 +93,9 @@ function handleSchemeChange(schemeId: string) {
 
         <!-- 字根圖組件 -->
         <div class="zigen-section mt-8">
-            <ZigenMap :default-scheme="activeScheme" :column-min-width="columnMinWidth" />
+            <ZigenMap :default-scheme="activeScheme" :column-min-width="columnMinWidth"
+                :column-min-width-code-below="columnMinWidthCodeBelow"
+                :default-code-position-below="defaultCodePositionBelow" />
         </div>
     </div>
 </template>
