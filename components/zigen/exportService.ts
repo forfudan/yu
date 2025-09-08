@@ -9,7 +9,7 @@ export class ZigenExportService {
     static generateFileName(schemeName: string = '未命名方案', isListView: boolean = false): string {
         const today = new Date().toISOString().split('T')[0].replace(/-/g, '')
         const viewType = isListView ? '字根表' : '字根圖'
-        return `宇浩-${schemeName}-${viewType}-${today}.png`
+        return `${schemeName}輸入法${viewType}${today}.png`
     }
 
     /**
@@ -136,7 +136,7 @@ export class ZigenExportService {
                 font-size: 1.5rem;
                 font-weight: bold;
                 margin-bottom: 1.5rem;
-                color: #1f2937;
+                color: #5400a2ff;
                 font-family: 'Noto Serif SC', serif;
             `
             titleElement.textContent = `${schemeName}輸入法字根圖表`
@@ -326,7 +326,8 @@ export class ZigenExportService {
                 htmlDiv.style.cssText = ''
             })
         })
-    }    /**
+    }
+    /**
      * 檢查瀏覽器是否支持剪貼板API
      */
     static isClipboardSupported(): boolean {
@@ -338,7 +339,7 @@ export class ZigenExportService {
     }
 
     /**
-     * 获取方案的中文名称
+     * 獲取方案的中文名稱
      */
     static getSchemeDisplayName(schemeId: string): string {
         const schemeNames: Record<string, string> = {
@@ -347,9 +348,7 @@ export class ZigenExportService {
             'star': '星陳',
             'ming': '日月',
             'wafel': '吉旦餅',
-            'tianma': '天馬',
-            'sunmoon': '日月',
-            'yuniversus': 'Yuniversus'
+            'tianma': '天碼',
         }
         return schemeNames[schemeId] || schemeId
     }
