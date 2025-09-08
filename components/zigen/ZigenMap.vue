@@ -18,6 +18,7 @@ const MAX_EXAMPLES = 8;
 import { ref, computed, onMounted, onUnmounted, watch, toRef } from 'vue'
 import { fetchZigen } from "../search/share";
 import ChaiDataLoader from "../search/ChaiDataLoader";
+import { ZigenExportService } from "./exportService";
 import type { ZigenMap as ZigenMapType, ChaifenMap, Chaifen } from "../search/share";
 
 const props = defineProps<{
@@ -134,6 +135,10 @@ const pinnedZigen = ref<string | null>(null);
 const pinnedZigenInfo = ref<{ visible: Array<{ font: string, code: string }>, hidden: Array<{ font: string, code: string }> } | null>(null);
 const pinnedZigenExampleChars = ref<{ [zigenFont: string]: string[] }>({});
 const isPinned = ref(false);
+
+// 導出功能相關狀態
+const isExporting = ref(false);
+const exportMessage = ref('');
 
 // 監聽方案變化，清除拆分數據緩存
 watch(() => props.defaultScheme, () => {
@@ -420,6 +425,69 @@ function closePinnedPopup() {
     pinnedZigenExampleChars.value = {};
 }
 
+// 導出字根圖功能
+async function exportZigenMap() {
+    if (isExporting.value) return;
+
+    isExporting.value = true;
+    exportMessage.value = '';
+
+    try {
+        // 找到字根圖容器元素
+        const containerElement = document.querySelector('.zigen-map-container') as HTMLElement;
+        if (!containerElement) {
+            throw new Error('找不到字根圖容器元素');
+        }
+
+        // 關閉任何開啟的彈窗，避免影響導出
+        if (isPinned.value) {
+            closePinnedPopup();
+        }
+
+        // 等待一下讓彈窗完全關閉
+        await new Promise(resolve => setTimeout(resolve, 100));
+
+        // 獲取方案顯示名稱
+        const schemeName = ZigenExportService.getSchemeDisplayName(activeScheme.value);
+
+        // 導出圖片
+        const result = await ZigenExportService.exportZigenMapToPNG(
+            containerElement,
+            schemeName,
+            isListView.value,
+            {
+                copyToClipboard: false, // 不复制到剪贴板
+                download: true,
+                scale: 3, // 提高分辨率
+                addWatermark: true
+            }
+        );
+
+        if (result.success) {
+            exportMessage.value = result.message;
+            // 3秒後清除消息
+            setTimeout(() => {
+                exportMessage.value = '';
+            }, 3000);
+        } else {
+            exportMessage.value = result.message;
+            // 5秒後清除錯誤消息
+            setTimeout(() => {
+                exportMessage.value = '';
+            }, 5000);
+        }
+
+    } catch (error) {
+        console.error('導出字根圖失敗:', error);
+        exportMessage.value = `導出失敗: ${error instanceof Error ? error.message : '未知錯誤'}`;
+        setTimeout(() => {
+            exportMessage.value = '';
+        }, 5000);
+    } finally {
+        isExporting.value = false;
+    }
+}
+
 // 輔助函數：找到所有相同完整編碼的字根
 function findSameCodeZigens(targetFont: string, targetFullCode: string) {
     const visible: Array<{ font: string, code: string }> = [];
@@ -483,6 +551,20 @@ onMounted(() => {
 
             <!-- 桌面端控制按鈕 -->
             <div v-if="!isMobileView" class="flex items-center space-x-4">
+                <!-- 導出按鈕 -->
+                <div class="flex items-center space-x-2">
+                    <button @click="exportZigenMap" class="export-btn layout-toggle-btn"
+                        :class="{ 'layout-toggle-active': isExporting }" :disabled="isExporting"
+                        :title="isExporting ? '導出中...' : '導出字根圖'">
+                        <span v-if="!isExporting">📸</span>
+                        <span v-else>⏳</span>
+                    </button>
+                    <span v-if="exportMessage" class="text-xs"
+                        :class="exportMessage.includes('失敗') ? 'text-red-500' : 'text-green-500'">
+                        {{ exportMessage }}
+                    </span>
+                </div>
+
                 <div class="flex items-center space-x-2">
                     <span class="text-xs text-gray-400">切換字根圖和字根表：</span>
                     <button @click="toggleDesktopLayout" class="layout-toggle-btn"
@@ -505,6 +587,14 @@ onMounted(() => {
 
             <!-- 移動端按鍵排序切換按鈕 -->
             <div v-if="isMobileView" class="flex items-center space-x-2">
+                <!-- 移動端導出按鈕 -->
+                <button @click="exportZigenMap" class="export-btn layout-toggle-btn"
+                    :class="{ 'layout-toggle-active': isExporting }" :disabled="isExporting"
+                    :title="isExporting ? '導出中...' : '導出字根圖'">
+                    <span v-if="!isExporting">📸</span>
+                    <span v-else>⏳</span>
+                </button>
+
                 <span class="text-xs text-gray-400">按鍵排序：</span>
                 <button @click="toggleKeyOrder" class="layout-toggle-btn"
                     :class="{ 'layout-toggle-active': sortKeysByAlphabet }"
@@ -512,6 +602,13 @@ onMounted(() => {
                     <span v-if="!sortKeysByAlphabet">🔤</span>
                     <span v-else>⌨️</span>
                 </button>
+            </div>
+
+            <!-- 移動端導出消息 -->
+            <div v-if="isMobileView && exportMessage" class="mt-2 text-center">
+                <span class="text-xs" :class="exportMessage.includes('失敗') ? 'text-red-500' : 'text-green-500'">
+                    {{ exportMessage }}
+                </span>
             </div>
         </div>
 
@@ -1014,6 +1111,29 @@ onMounted(() => {
 .layout-toggle-active:hover {
     background-color: rgb(37 99 235);
     border-color: rgb(37 99 235);
+}
+
+/* 導出按鈕特殊樣式 */
+.export-btn {
+    position: relative;
+}
+
+.export-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.export-btn:disabled:hover {
+    transform: none;
+    background-color: rgb(243 244 246);
+    border-color: rgb(209 213 219);
+    color: rgb(107 114 128);
+}
+
+.dark .export-btn:disabled:hover {
+    background-color: rgb(55 65 81);
+    border-color: rgb(75 85 99);
+    color: rgb(156 163 175);
 }
 
 .scheme-button-active:hover {

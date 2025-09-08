@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.9.0",
-    "hanzi-writer": "^3.7.2"
+    "hanzi-writer": "^3.7.2",
+    "html2canvas-pro": "^1.5.11"
   }
 }
