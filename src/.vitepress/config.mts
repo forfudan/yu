@@ -487,7 +487,7 @@ export default defineConfig({
                   link: "/zht/docs/joy",
                 },
                 {
-                  text: "日月大明輸入法",
+                  text: "日月輸入法",
                   link: "/zht/docs/ming",
                 },
                 {

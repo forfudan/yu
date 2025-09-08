@@ -53,7 +53,7 @@ const defaultCodePositionBelow = computed(() => {
         case 'ming':
             return true
         default:
-            return false
+            return true
     }
 })
 

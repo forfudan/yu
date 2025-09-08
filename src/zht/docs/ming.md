@@ -1,4 +1,4 @@
-# 日月有常
+# 日月大明輸入法
 
 ::: warning 注意
 
@@ -44,8 +44,9 @@
 <script setup>
 import ZigenMap from "@/zigen/ZigenMap.vue"
 </script>
-<ZigenMap :default-scheme="'ming'" column-min-width="1.52rem" />
+<ZigenMap :default-scheme="'ming'" column-min-width-code-below="1.0rem" :default-code-position-below="true" />
 
+<!-- 
 ::: details 更新
 
 20250618 更新
@@ -114,7 +115,8 @@ import ZigenMap from "@/zigen/ZigenMap.vue"
 
 1. `スマ癶`， -> `Vo` （解决約十個類似「領頷」的靜態重碼）
 
-:::
+::: 
+-->
 
 ## 對比
 

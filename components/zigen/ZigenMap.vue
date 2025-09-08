@@ -591,7 +591,7 @@ onMounted(() => {
                 </div>
 
                 <div class="flex items-center space-x-2">
-                    <span class="text-xs text-gray-400">切換字根圖和字根表：</span>
+                    <span class="text-xs text-gray-400">切換圖表形態</span>
                     <button @click="toggleDesktopLayout" class="layout-toggle-btn"
                         :class="{ 'layout-toggle-active': isListView }" :title="isListView ? '切換為網格布局' : '切換為列表布局'">
                         <span v-if="!isListView">☰</span>
@@ -600,7 +600,7 @@ onMounted(() => {
                 </div>
                 <!-- 桌面端列表視圖按鍵排序切換按鈕 -->
                 <div v-if="isListView" class="flex items-center space-x-2">
-                    <span class="text-xs text-gray-400">按鍵排序：</span>
+                    <span class="text-xs text-gray-400">按鍵排序</span>
                     <button @click="toggleKeyOrder" class="layout-toggle-btn"
                         :class="{ 'layout-toggle-active': sortKeysByAlphabet }"
                         :title="sortKeysByAlphabet ? '切換為鍵盤順序' : '切換為字母順序'">
@@ -610,7 +610,7 @@ onMounted(() => {
                 </div>
                 <!-- 桌面端编码位置切换按钮 -->
                 <div v-if="!isListView" class="flex items-center space-x-2">
-                    <span class="text-xs text-gray-400">編碼位置：</span>
+                    <span class="text-xs text-gray-400">編碼位置</span>
                     <button @click="toggleCodePosition" class="layout-toggle-btn"
                         :class="{ 'layout-toggle-active': codePositionBelow }"
                         :title="codePositionBelow ? '切換為右側顯示' : '切換為下方顯示'">
@@ -630,7 +630,7 @@ onMounted(() => {
                     <span v-else>⏳</span>
                 </button>
 
-                <span class="text-xs text-gray-400">按鍵排序：</span>
+                <span class="text-xs text-gray-400">按鍵排序</span>
                 <button @click="toggleKeyOrder" class="layout-toggle-btn"
                     :class="{ 'layout-toggle-active': sortKeysByAlphabet }"
                     :title="sortKeysByAlphabet ? '切換為鍵盤順序' : '切換為字母順序'">
@@ -671,7 +671,7 @@ onMounted(() => {
                             @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code" :class="{ 'zigen-code-below': codePositionBelow }">{{ zigen.code
-                                }}</span>
+                            }}</span>
                         </span>
                         <!-- 如果有隱藏的字根，顯示省略號 -->
                         <span v-if="zigenByKey[key].hidden.length > 0" class="more-indicator">⋯</span>
@@ -735,7 +735,7 @@ onMounted(() => {
                             }" @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code" :class="{ 'zigen-code-below': codePositionBelow }">{{ zigen.code
-                                }}</span>
+                            }}</span>
                         </span>
                     </div>
                 </div>

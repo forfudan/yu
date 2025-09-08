@@ -41,6 +41,242 @@ th {
   monospace;
 }
 
+/* ===== 強制覆蓋導航欄和標題欄的下划線樣式 ===== */
+/* 強制覆蓋導航欄和標題欄的下划線樣式 - 防止第三方庫污染 */
+/* 目前發現 html2canvas-pro 會污染這些鏈接樣式 */
+/* 使用高優先級選擇器來確保樣式不被覆蓋 */
+
+/* 頂部導航欄鏈接 */
+.VPNavBar a,
+.VPNavBar .VPNavBarTitle a,
+.VPNavBar .VPNavBarMenu a,
+.VPNavBar .VPNavBarMenuLink,
+.VPNavBar .VPMenuLink,
+html .VPNavBar a,
+html body .VPNavBar a,
+.dark .VPNavBar a,
+html.dark .VPNavBar a,
+html.dark body .VPNavBar a {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* 側邊欄導航鏈接 */
+.VPSidebar a,
+.VPSidebarGroup a,
+.VPSidebarItem a,
+.VPSidebarLink,
+.VPLocalNavOutlineDropdown a,
+html .VPSidebar a,
+html body .VPSidebar a,
+.dark .VPSidebar a,
+html.dark .VPSidebar a,
+html.dark body .VPSidebar a {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* 文檔內導航鏈接 */
+.VPDocOutlineItem a,
+.VPDocAsideOutline a,
+html .VPDocOutlineItem a,
+html body .VPDocOutlineItem a,
+.dark .VPDocOutlineItem a,
+html.dark .VPDocOutlineItem a,
+html.dark body .VPDocOutlineItem a {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* 所有導航相關的鏈接 - 通用覆蓋 */
+nav a,
+.nav a,
+[class*="nav"] a,
+[class*="Nav"] a,
+[class*="sidebar"] a,
+[class*="Sidebar"] a,
+[class*="menu"] a,
+[class*="Menu"] a,
+html nav a,
+html body nav a,
+.dark nav a,
+html.dark nav a,
+html.dark body nav a {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* 針對可能被污染的所有鏈接元素 */
+a[href]:not(.VPButton),
+html a[href]:not(.VPButton),
+html body a[href]:not(.VPButton),
+.dark a[href]:not(.VPButton),
+html.dark a[href]:not(.VPButton),
+html.dark body a[href]:not(.VPButton) {
+  text-decoration: none !important;
+}
+
+/* 特別針對可能出現的下划線樣式 */
+*[style*="text-decoration"],
+*[style*="border-bottom"],
+*[style*="box-shadow"] {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* 強制覆蓋滾動條樣式 - 特別針對 Edge 瀏覽器 */
+/* 左側導航欄滾動條 */
+.VPSidebar,
+.VPSidebar *,
+.VPLocalNav,
+.VPLocalNav *,
+.VPDocAside,
+.VPDocAside *,
+html .VPSidebar,
+html .VPSidebar *,
+html body .VPSidebar,
+html body .VPSidebar * {
+  /* Webkit 滾動條樣式 (Chrome, Safari, Edge) */
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(136, 136, 136, 0.3) transparent !important;
+}
+
+.VPSidebar::-webkit-scrollbar,
+.VPSidebar *::-webkit-scrollbar,
+.VPLocalNav::-webkit-scrollbar,
+.VPLocalNav *::-webkit-scrollbar,
+.VPDocAside::-webkit-scrollbar,
+.VPDocAside *::-webkit-scrollbar,
+html .VPSidebar::-webkit-scrollbar,
+html .VPSidebar *::-webkit-scrollbar,
+html body .VPSidebar::-webkit-scrollbar,
+html body .VPSidebar *::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+.VPSidebar::-webkit-scrollbar-track,
+.VPSidebar *::-webkit-scrollbar-track,
+.VPLocalNav::-webkit-scrollbar-track,
+.VPLocalNav *::-webkit-scrollbar-track,
+.VPDocAside::-webkit-scrollbar-track,
+.VPDocAside *::-webkit-scrollbar-track,
+html .VPSidebar::-webkit-scrollbar-track,
+html .VPSidebar *::-webkit-scrollbar-track,
+html body .VPSidebar::-webkit-scrollbar-track,
+html body .VPSidebar *::-webkit-scrollbar-track {
+  background: transparent !important;
+  border-radius: 3px !important;
+}
+
+.VPSidebar::-webkit-scrollbar-thumb,
+.VPSidebar *::-webkit-scrollbar-thumb,
+.VPLocalNav::-webkit-scrollbar-thumb,
+.VPLocalNav *::-webkit-scrollbar-thumb,
+.VPDocAside::-webkit-scrollbar-thumb,
+.VPDocAside *::-webkit-scrollbar-thumb,
+html .VPSidebar::-webkit-scrollbar-thumb,
+html .VPSidebar *::-webkit-scrollbar-thumb,
+html body .VPSidebar::-webkit-scrollbar-thumb,
+html body .VPSidebar *::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.3) !important;
+  border-radius: 3px !important;
+  border: none !important;
+}
+
+.VPSidebar::-webkit-scrollbar-thumb:hover,
+.VPSidebar *::-webkit-scrollbar-thumb:hover,
+.VPLocalNav::-webkit-scrollbar-thumb:hover,
+.VPLocalNav *::-webkit-scrollbar-thumb:hover,
+.VPDocAside::-webkit-scrollbar-thumb:hover,
+.VPDocAside *::-webkit-scrollbar-thumb:hover,
+html .VPSidebar::-webkit-scrollbar-thumb:hover,
+html .VPSidebar *::-webkit-scrollbar-thumb:hover,
+html body .VPSidebar::-webkit-scrollbar-thumb:hover,
+html body .VPSidebar *::-webkit-scrollbar-thumb:hover {
+  background: rgba(136, 136, 136, 0.5) !important;
+}
+
+/* 暗色主題下的滾動條樣式 */
+.dark .VPSidebar,
+.dark .VPSidebar *,
+.dark .VPLocalNav,
+.dark .VPLocalNav *,
+.dark .VPDocAside,
+.dark .VPDocAside *,
+html.dark .VPSidebar,
+html.dark .VPSidebar *,
+html.dark body .VPSidebar,
+html.dark body .VPSidebar * {
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent !important;
+}
+
+.dark .VPSidebar::-webkit-scrollbar-thumb,
+.dark .VPSidebar *::-webkit-scrollbar-thumb,
+.dark .VPLocalNav::-webkit-scrollbar-thumb,
+.dark .VPLocalNav *::-webkit-scrollbar-thumb,
+.dark .VPDocAside::-webkit-scrollbar-thumb,
+.dark .VPDocAside *::-webkit-scrollbar-thumb,
+html.dark .VPSidebar::-webkit-scrollbar-thumb,
+html.dark .VPSidebar *::-webkit-scrollbar-thumb,
+html.dark body .VPSidebar::-webkit-scrollbar-thumb,
+html.dark body .VPSidebar *::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.dark .VPSidebar::-webkit-scrollbar-thumb:hover,
+.dark .VPSidebar *::-webkit-scrollbar-thumb:hover,
+.dark .VPLocalNav::-webkit-scrollbar-thumb:hover,
+.dark .VPLocalNav *::-webkit-scrollbar-thumb:hover,
+.dark .VPDocAside::-webkit-scrollbar-thumb:hover,
+.dark .VPDocAside *::-webkit-scrollbar-thumb:hover,
+html.dark .VPSidebar::-webkit-scrollbar-thumb:hover,
+html.dark .VPSidebar *::-webkit-scrollbar-thumb:hover,
+html.dark body .VPSidebar::-webkit-scrollbar-thumb:hover,
+html.dark body .VPSidebar *::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* 通用滾動條強制覆蓋 - 防止被第三方庫污染 */
+* {
+  scrollbar-width: thin !important;
+}
+
+*::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.3) !important;
+  border-radius: 3px !important;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(136, 136, 136, 0.5) !important;
+}
+
+/* 暗色主題通用滾動條 */
+.dark *::-webkit-scrollbar-thumb,
+html.dark *::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.dark *::-webkit-scrollbar-thumb:hover,
+html.dark *::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* ===== 首页 Hero Actions 布局 ===== */
 /* 首页 Hero Actions 布局 - 竹简风格 */
 .VPHero .actions {
   display: flex !important;
@@ -312,236 +548,56 @@ th {
   }
 }
 
-/* 強制覆蓋導航欄和標題欄的下划線樣式 - 防止第三方庫污染 */
-/* 目前發現 html2canvas-pro 會污染這些鏈接樣式 */
-/* 使用高優先級選擇器來確保樣式不被覆蓋 */
 
-/* 頂部導航欄鏈接 */
-.VPNavBar a,
-.VPNavBar .VPNavBarTitle a,
-.VPNavBar .VPNavBarMenu a,
-.VPNavBar .VPNavBarMenuLink,
-.VPNavBar .VPMenuLink,
-html .VPNavBar a,
-html body .VPNavBar a,
-.dark .VPNavBar a,
-html.dark .VPNavBar a,
-html.dark body .VPNavBar a {
-  text-decoration: none !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
+/* ===== VitePress Hero 布局调整 ===== */
+/* 调整Hero文本左边距以与右侧logo更好平衡 */
+@media (min-width: 960px) {
+  .VPHero.has-image .main {
+    margin-left: 2rem !important;
+    /* 增加左边距 */
+    max-width: 560px !important;
+    /* 稍微减少最大宽度以保持平衡 */
+  }
 }
 
-/* 側邊欄導航鏈接 */
-.VPSidebar a,
-.VPSidebarGroup a,
-.VPSidebarItem a,
-.VPSidebarLink,
-.VPLocalNavOutlineDropdown a,
-html .VPSidebar a,
-html body .VPSidebar a,
-.dark .VPSidebar a,
-html.dark .VPSidebar a,
-html.dark body .VPSidebar a {
-  text-decoration: none !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
+/* 对于更大的屏幕，进一步调整边距 */
+@media (min-width: 1200px) {
+  .VPHero.has-image .main {
+    margin-left: 6rem !important;
+    /* 在大屏幕上增加更多左边距 */
+    max-width: 540px !important;
+  }
 }
 
-/* 文檔內導航鏈接 */
-.VPDocOutlineItem a,
-.VPDocAsideOutline a,
-html .VPDocOutlineItem a,
-html body .VPDocOutlineItem a,
-.dark .VPDocOutlineItem a,
-html.dark .VPDocOutlineItem a,
-html.dark body .VPDocOutlineItem a {
-  text-decoration: none !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
+/* 针对超宽屏幕的额外调整 */
+@media (min-width: 1400px) {
+  .VPHero.has-image .main {
+    margin-left: 8rem !important;
+    /* 超宽屏幕上的更大左边距 */
+    max-width: 520px !important;
+  }
 }
 
-/* 所有導航相關的鏈接 - 通用覆蓋 */
-nav a,
-.nav a,
-[class*="nav"] a,
-[class*="Nav"] a,
-[class*="sidebar"] a,
-[class*="Sidebar"] a,
-[class*="menu"] a,
-[class*="Menu"] a,
-html nav a,
-html body nav a,
-.dark nav a,
-html.dark nav a,
-html.dark body nav a {
-  text-decoration: none !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
+/* ===== Hero 按钮对齐调整 ===== */
+/* 让按钮与标题文本左对齐 */
+@media (min-width: 960px) {
+  .VPHero.has-image .actions {
+    margin-left: 0rem !important;
+    /* 与标题文本保持相同左边距 */
+    justify-content: flex-start !important;
+  }
 }
 
-/* 針對可能被污染的所有鏈接元素 */
-a[href]:not(.VPButton),
-html a[href]:not(.VPButton),
-html body a[href]:not(.VPButton),
-.dark a[href]:not(.VPButton),
-html.dark a[href]:not(.VPButton),
-html.dark body a[href]:not(.VPButton) {
-  text-decoration: none !important;
+@media (min-width: 1200px) {
+  .VPHero.has-image .actions {
+    margin-left: 0rem !important;
+    /* 与标题文本保持相同左边距 */
+  }
 }
 
-/* 特別針對可能出現的下划線樣式 */
-*[style*="text-decoration"],
-*[style*="border-bottom"],
-*[style*="box-shadow"] {
-  text-decoration: none !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
-}
-
-/* 強制覆蓋滾動條樣式 - 特別針對 Edge 瀏覽器 */
-/* 左側導航欄滾動條 */
-.VPSidebar,
-.VPSidebar *,
-.VPLocalNav,
-.VPLocalNav *,
-.VPDocAside,
-.VPDocAside *,
-html .VPSidebar,
-html .VPSidebar *,
-html body .VPSidebar,
-html body .VPSidebar * {
-  /* Webkit 滾動條樣式 (Chrome, Safari, Edge) */
-  scrollbar-width: thin !important;
-  scrollbar-color: rgba(136, 136, 136, 0.3) transparent !important;
-}
-
-.VPSidebar::-webkit-scrollbar,
-.VPSidebar *::-webkit-scrollbar,
-.VPLocalNav::-webkit-scrollbar,
-.VPLocalNav *::-webkit-scrollbar,
-.VPDocAside::-webkit-scrollbar,
-.VPDocAside *::-webkit-scrollbar,
-html .VPSidebar::-webkit-scrollbar,
-html .VPSidebar *::-webkit-scrollbar,
-html body .VPSidebar::-webkit-scrollbar,
-html body .VPSidebar *::-webkit-scrollbar {
-  width: 6px !important;
-  height: 6px !important;
-}
-
-.VPSidebar::-webkit-scrollbar-track,
-.VPSidebar *::-webkit-scrollbar-track,
-.VPLocalNav::-webkit-scrollbar-track,
-.VPLocalNav *::-webkit-scrollbar-track,
-.VPDocAside::-webkit-scrollbar-track,
-.VPDocAside *::-webkit-scrollbar-track,
-html .VPSidebar::-webkit-scrollbar-track,
-html .VPSidebar *::-webkit-scrollbar-track,
-html body .VPSidebar::-webkit-scrollbar-track,
-html body .VPSidebar *::-webkit-scrollbar-track {
-  background: transparent !important;
-  border-radius: 3px !important;
-}
-
-.VPSidebar::-webkit-scrollbar-thumb,
-.VPSidebar *::-webkit-scrollbar-thumb,
-.VPLocalNav::-webkit-scrollbar-thumb,
-.VPLocalNav *::-webkit-scrollbar-thumb,
-.VPDocAside::-webkit-scrollbar-thumb,
-.VPDocAside *::-webkit-scrollbar-thumb,
-html .VPSidebar::-webkit-scrollbar-thumb,
-html .VPSidebar *::-webkit-scrollbar-thumb,
-html body .VPSidebar::-webkit-scrollbar-thumb,
-html body .VPSidebar *::-webkit-scrollbar-thumb {
-  background: rgba(136, 136, 136, 0.3) !important;
-  border-radius: 3px !important;
-  border: none !important;
-}
-
-.VPSidebar::-webkit-scrollbar-thumb:hover,
-.VPSidebar *::-webkit-scrollbar-thumb:hover,
-.VPLocalNav::-webkit-scrollbar-thumb:hover,
-.VPLocalNav *::-webkit-scrollbar-thumb:hover,
-.VPDocAside::-webkit-scrollbar-thumb:hover,
-.VPDocAside *::-webkit-scrollbar-thumb:hover,
-html .VPSidebar::-webkit-scrollbar-thumb:hover,
-html .VPSidebar *::-webkit-scrollbar-thumb:hover,
-html body .VPSidebar::-webkit-scrollbar-thumb:hover,
-html body .VPSidebar *::-webkit-scrollbar-thumb:hover {
-  background: rgba(136, 136, 136, 0.5) !important;
-}
-
-/* 暗色主題下的滾動條樣式 */
-.dark .VPSidebar,
-.dark .VPSidebar *,
-.dark .VPLocalNav,
-.dark .VPLocalNav *,
-.dark .VPDocAside,
-.dark .VPDocAside *,
-html.dark .VPSidebar,
-html.dark .VPSidebar *,
-html.dark body .VPSidebar,
-html.dark body .VPSidebar * {
-  scrollbar-color: rgba(255, 255, 255, 0.3) transparent !important;
-}
-
-.dark .VPSidebar::-webkit-scrollbar-thumb,
-.dark .VPSidebar *::-webkit-scrollbar-thumb,
-.dark .VPLocalNav::-webkit-scrollbar-thumb,
-.dark .VPLocalNav *::-webkit-scrollbar-thumb,
-.dark .VPDocAside::-webkit-scrollbar-thumb,
-.dark .VPDocAside *::-webkit-scrollbar-thumb,
-html.dark .VPSidebar::-webkit-scrollbar-thumb,
-html.dark .VPSidebar *::-webkit-scrollbar-thumb,
-html.dark body .VPSidebar::-webkit-scrollbar-thumb,
-html.dark body .VPSidebar *::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3) !important;
-}
-
-.dark .VPSidebar::-webkit-scrollbar-thumb:hover,
-.dark .VPSidebar *::-webkit-scrollbar-thumb:hover,
-.dark .VPLocalNav::-webkit-scrollbar-thumb:hover,
-.dark .VPLocalNav *::-webkit-scrollbar-thumb:hover,
-.dark .VPDocAside::-webkit-scrollbar-thumb:hover,
-.dark .VPDocAside *::-webkit-scrollbar-thumb:hover,
-html.dark .VPSidebar::-webkit-scrollbar-thumb:hover,
-html.dark .VPSidebar *::-webkit-scrollbar-thumb:hover,
-html.dark body .VPSidebar::-webkit-scrollbar-thumb:hover,
-html.dark body .VPSidebar *::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5) !important;
-}
-
-/* 通用滾動條強制覆蓋 - 防止被第三方庫污染 */
-* {
-  scrollbar-width: thin !important;
-}
-
-*::-webkit-scrollbar {
-  width: 6px !important;
-  height: 6px !important;
-}
-
-*::-webkit-scrollbar-track {
-  background: transparent !important;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: rgba(136, 136, 136, 0.3) !important;
-  border-radius: 3px !important;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background: rgba(136, 136, 136, 0.5) !important;
-}
-
-/* 暗色主題通用滾動條 */
-.dark *::-webkit-scrollbar-thumb,
-html.dark *::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3) !important;
-}
-
-.dark *::-webkit-scrollbar-thumb:hover,
-html.dark *::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5) !important;
+@media (min-width: 1400px) {
+  .VPHero.has-image .actions {
+    margin-left: 0rem !important;
+    /* 与标题文本保持相同左边距 */
+  }
 }

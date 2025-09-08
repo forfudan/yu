@@ -120,7 +120,7 @@ export class ZigenExportService {
             hintTexts.forEach((hint, index) => {
                 const hintElement = hint as HTMLElement
                 if (hintElement.textContent?.includes('點擊字根可查看例字') ||
-                    hintElement.textContent?.includes('切換字根圖和字根表') ||
+                    hintElement.textContent?.includes('切換圖表形態') ||
                     hintElement.textContent?.includes('按鍵排序') ||
                     hintElement.textContent?.includes('編碼位置')) {
                     originalHintDisplays[index] = hintElement.style.display
