@@ -71,7 +71,7 @@ function handleSchemeChange(schemeId: string) {
                 <!-- 方案信息 -->
                 <div class="scheme-info hidden md:block">
                     <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                        當前輸入法：{{ currentScheme.name }}
+                        {{ currentScheme.name }}輸入法
                     </h3>
                     <p class="text-sm text-gray-500 dark:text-gray-400">
                         {{ currentScheme.description }}
@@ -80,6 +80,11 @@ function handleSchemeChange(schemeId: string) {
 
                 <!-- 方案按鈕 -->
                 <div class="scheme-buttons">
+                    <!-- 方案選擇提示 -->
+                    <div class="scheme-hint">
+                        <span class="hint-text">點擊下方按鈕選擇輸入法</span>
+                        <div class="hint-divider"></div>
+                    </div>
                     <SchemeSelector :schemes="SCHEMES" :active-scheme="activeScheme"
                         @scheme-changed="handleSchemeChange" />
                 </div>
@@ -129,6 +134,54 @@ function handleSchemeChange(schemeId: string) {
 
 .scheme-buttons {
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    /* 增加间距，让提示离按钮更远 */
+}
+
+/* 方案選擇提示樣式 */
+.scheme-hint {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: -0.5rem;
+    /* 向上移动，缩小与上方边框的距离 */
+    gap: 0.5rem;
+    /* 文字和分割线之间的间距 */
+}
+
+.hint-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right,
+            transparent 0%,
+            var(--vp-c-divider) 20%,
+            var(--vp-c-divider) 80%,
+            transparent 100%);
+    opacity: 0.5;
+}
+
+.hint-text {
+    font-size: 0.75rem;
+    color: var(--vp-c-text-2);
+    font-weight: 500;
+    white-space: nowrap;
+    /* 移除所有背景、边框和阴影，保持简约 */
+}
+
+/* 简约的提示hover效果 */
+.hint-text:hover {
+    color: var(--vp-c-brand);
+}
+
+/* 暗色模式下的提示样式 */
+.dark .hint-text {
+    color: var(--vp-c-text-2);
 }
 
 .scheme-info h3 {
@@ -176,8 +229,23 @@ function handleSchemeChange(schemeId: string) {
 
     .scheme-buttons {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         width: 100%;
+        gap: 1rem;
+        /* 移动端稍微缩小间距 */
+    }
+
+    .scheme-hint {
+        margin-top: -0.25rem;
+        /* 移动端向上移动的距离稍小 */
+        gap: 0.4rem;
+        /* 移动端稍微缩小文字和线的间距 */
+    }
+
+    .hint-text {
+        font-size: 0.7rem;
     }
 
     .section-title {

@@ -52,7 +52,7 @@ export const SCHEMES: SearchScheme[] = [
     },
     {
         id: 'ming',
-        name: '明',
+        name: '日月',
         description: '日月有常星辰有行',
         chaifenUrl: '/chaifen.csv',
         zigenUrl: '/zigen-ming.csv',
@@ -62,7 +62,7 @@ export const SCHEMES: SearchScheme[] = [
     {
         id: 'wafel',
         name: '吉旦餅',
-        description: 'Wafel·華夫·三碼全碼方案',
+        description: 'Wafel·華夫·三碼方案',
         chaifenUrl: '/chaifen.csv',
         zigenUrl: '/zigen-wafel.csv',
         supplement: false,

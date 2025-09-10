@@ -14,7 +14,7 @@ hero:
     - theme: alt
       text: 介紹
       link: /zht/docs/
-    - theme: brand
+    - theme: alt
       text: 學習
       link: /zht/learn/division
     - theme: alt
