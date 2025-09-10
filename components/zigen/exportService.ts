@@ -95,9 +95,9 @@ export class ZigenExportService {
         let originalThemeClasses: { element: Element, hadDarkClass: boolean }[] = []
 
         try {
-            // 1. 强制应用亮色主题样式
+            // 1. 強制應用亮色主題樣式
 
-            // 移除所有暗色类，确保亮色显示
+            // 移除所有暗色類，確保亮色顯示
             const darkElements = document.querySelectorAll('.dark')
             darkElements.forEach(el => {
                 const hadDarkClass = el.classList.contains('dark')
@@ -107,7 +107,7 @@ export class ZigenExportService {
                 }
             })
 
-            // 2. 暂时隐藏所有控制按钮
+            // 2. 暫時隱藏所有控制按鈕
             controlButtons = element.querySelectorAll('.layout-toggle-btn, .export-btn')
             controlButtons.forEach((btn, index) => {
                 const htmlBtn = btn as HTMLElement
@@ -115,7 +115,7 @@ export class ZigenExportService {
                 htmlBtn.style.display = 'none'
             })
 
-            // 3. 隐藏提示文字
+            // 3. 隱藏提示文字
             hintTexts = element.querySelectorAll('.text-sm.text-gray-500, .text-xs.text-gray-400')
             hintTexts.forEach((hint, index) => {
                 const hintElement = hint as HTMLElement
@@ -128,7 +128,7 @@ export class ZigenExportService {
                 }
             })
 
-            // 4. 添加标题栏
+            // 4. 添加標題欄
             titleElement = document.createElement('div')
             titleElement.className = 'export-title'
             titleElement.style.cssText = `
@@ -142,7 +142,55 @@ export class ZigenExportService {
             titleElement.textContent = `${schemeName}輸入法字根圖表`
             element.insertBefore(titleElement, element.firstChild)
 
-            // 5. 修复特定按键的文字布局问题（导出时横排处理）
+            // 5. 修復字根編碼間距問題（導出時確保穩定間距）
+            const zigenCodes = element.querySelectorAll('.zigen-code-below')
+            zigenCodes.forEach(codeElement => {
+                const htmlCodeElement = codeElement as HTMLElement
+                originalKeyStyles.push({
+                    element: htmlCodeElement,
+                    originalStyle: htmlCodeElement.style.cssText
+                })
+
+                // 為導出設置更穩定的間距
+                htmlCodeElement.style.cssText += `
+                    margin-top: 1px !important;
+                    padding-top: 1px !important;
+                    min-height: 8px !important;
+                    line-height: 1.0 !important;
+                `
+            })
+
+            // 5.1. 修復垂直佈局字根項的間距
+            const verticalZigenItems = element.querySelectorAll('.zigen-item-vertical')
+            verticalZigenItems.forEach(item => {
+                const htmlItem = item as HTMLElement
+                originalKeyStyles.push({
+                    element: htmlItem,
+                    originalStyle: htmlItem.style.cssText
+                })
+
+                // 為導出設置更穩定的垂直間距
+                htmlItem.style.cssText += `
+                    gap: 1px !important;
+                    padding: 1px !important;
+                `
+
+                // 特别处理其中的编码元素
+                const codeInItem = item.querySelector('.zigen-code') as HTMLElement
+                if (codeInItem) {
+                    originalKeyStyles.push({
+                        element: codeInItem,
+                        originalStyle: codeInItem.style.cssText
+                    })
+
+                    codeInItem.style.cssText += `
+                        margin-top: 1px !important;
+                        min-height: 2px !important;
+                    `
+                }
+            })
+
+            // 6. 修復特定按鍵的文字佈局問題（導出時橫排處理）
             const specialKeys = element.querySelectorAll('.keyboard-key')
             specialKeys.forEach(keyElement => {
                 const keyLabel = keyElement.querySelector('.key-label')?.textContent?.toLowerCase()
@@ -154,7 +202,7 @@ export class ZigenExportService {
                             originalStyle: noZigenText.style.cssText
                         })
 
-                        // 应用横排布局样式，适合导出图片
+                        // 應用橫排佈局樣式，適合導出圖片
                         noZigenText.style.cssText = `
                             display: flex !important;
                             flex-direction: column !important;
