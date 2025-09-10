@@ -625,12 +625,6 @@ onBeforeUnmount(() => {
                         ]">
                             {{ zigen.font }}
                         </div>
-                        <div v-if="showAnswer" :class="[
-                            'text-sm text-gray-600 dark:text-gray-300 font-mono bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded',
-                            windowWidth < 768 ? 'text-xs px-1 py-0.5' : ''  // 手機端縮小編碼顯示
-                        ]">
-                            {{ zigen.ma }}
-                        </div>
                         <!-- 顯示相關漢字 - 響應式大小和間距，使用 zigen-font -->
                         <div :class="[
                             'text-gray-600 dark:text-gray-300 font-medium tracking-tight zigen-font',
@@ -677,7 +671,7 @@ onBeforeUnmount(() => {
                     <span :class="[
                         'text-gray-800 dark:text-gray-200',
                         windowWidth < 768 ? 'text-sm' : ''  // 手機端縮小文字
-                    ]">答案是</span>
+                    ]">答案是 </span>
                     <span :class="[
                         'font-mono font-bold text-blue-600 dark:text-blue-400',
                         windowWidth < 768 ? 'text-lg' : 'text-xl'  // 手機端縮小答案文字
