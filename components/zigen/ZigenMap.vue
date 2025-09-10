@@ -226,26 +226,56 @@ const sortedZigenByKey = computed(() => {
         result[key] = [];
     }
 
-    // 嚴格依照 zigenMap.value 的原始順序分配
+    // 先收集所有有效的字根數據
+    const validZigens: Array<{ font: string, ma: string, firstLetter: string, code: string }> = [];
+
     for (const [key, data] of zigenMap.value) {
         const font = data.font;
         const ma = data.ma?.trim();
-        if (!ma || font === null || font === undefined) continue;
+
+        // 只檢查編碼必須存在，字根字段存在即可（因為某些字根是私有區）
+        if (!ma || ma.length === 0) continue;
+        if (font === null || font === undefined) continue;
+
         const firstLetter = ma[0].toLowerCase();
         const code = ma.slice(1);
 
-        // 判斷是否為隱藏字根（同 key 下已出現過相同 code 則為隱藏）
-        const isHidden = result[firstLetter].some(z => z.code === code);
-        result[firstLetter].push({ font, code, isHidden });
+        validZigens.push({ font, ma, firstLetter, code });
     }
 
-    // 保持鍵盤順序（原始文件順序），不再在這裡進行字根排序
-    // 原始文件的排序是經過了一定的歸併處理的
+    // 按按鍵分組並處理連續相同編碼的字根
+    for (let i = 0; i < validZigens.length; i++) {
+        const zigen = validZigens[i];
+        const { font, ma, firstLetter, code } = zigen;
+
+        // 檢查前一個字根是否有相同的編碼和按鍵
+        const prevZigen = i > 0 ? validZigens[i - 1] : null;
+        const isPrevSameCodeAndKey = prevZigen &&
+            prevZigen.code === code &&
+            prevZigen.firstLetter === firstLetter;
+
+        // 檢查是否已經有相同編碼的字根在當前按鍵下
+        const existingWithSameCode = result[firstLetter].find(item => item.code === code && !item.isHidden);
+
+        let isHidden = false;
+        if (!existingWithSameCode) {
+            // 第一個具有此編碼的字根，顯示為可見
+            isHidden = false;
+        } else if (isPrevSameCodeAndKey) {
+            // 只有當前字根與前一個字根編碼相同且連續時，才標記為隱藏
+            isHidden = true;
+        } else {
+            // 編碼相同但不連續，作為新的可見字根顯示
+            isHidden = false;
+        }
+
+        result[firstLetter].push({ font, code, isHidden });
+    }
 
     return result;
 });
 
-// 获取包含指定字根的例字
+// 獲取包含指定字根的例字
 const getExampleChars = async (zigen: string): Promise<string[]> => {
     // 確保字根是正確的 Unicode 字符串
     const normalizedZigen = zigen.normalize('NFC');
