@@ -138,7 +138,12 @@ export class ZigenExportService {
                 color: #5400a2ff;
                 font-family: 'Noto Serif SC', serif;
             `
-            titleElement.textContent = `${schemeName}輸入法字根圖表`
+
+            // 根據顯示模式設置不同的標題
+            const isListView = element.querySelector('.desktop-list-layout') !== null ||
+                element.querySelector('.mobile-key-row') !== null
+            const titleSuffix = isListView ? '字根表' : '字根圖'
+            titleElement.textContent = `${schemeName}輸入法${titleSuffix}`
             element.insertBefore(titleElement, element.firstChild)
 
             // 5. 調整導出時的容器和元素尺寸
