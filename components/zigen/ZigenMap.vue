@@ -11,6 +11,7 @@
   - 2025-08-17 by 朱複丹: 移除懸停顯示功能，改為僅點擊顯示以提升性能
   - 2025-08-21 by 朱複丹: 允許字根列表模式下按鍵按照字母表順序排列
   - 2025-09-08 by 朱複丹: 添加編碼位置切換功能
+  - 2025-09-10 by 朱複丹: 移除編碼位置切換功能，統一使用編碼在下方的佈局
 -->
 
 <script setup lang="ts">
@@ -25,8 +26,6 @@ import type { ZigenMap as ZigenMapType, ChaifenMap, Chaifen } from "../search/sh
 const props = defineProps<{
     defaultScheme?: string
     columnMinWidth?: string
-    columnMinWidthCodeBelow?: string // 編碼在下方時的列寬
-    defaultCodePositionBelow?: boolean // 默認編碼位置，true為下方，false為右側
     zigenFontClass?: string // 自定義字根字體類名
 }>()
 
@@ -35,16 +34,9 @@ const zigenFontClass = computed(() => props.zigenFontClass || 'zigen-font')
 
 const columnMinWidth = toRef(props, 'columnMinWidth')
 
-// Dynamic grid template columns based on columnMinWidth parameter and code position
+// Dynamic grid template columns based on columnMinWidth parameter
 const gridTemplateColumns = computed(() => {
-    let width: string
-    if (codePositionBelow.value) {
-        // 编码在下方时使用 columnMinWidthCodeBelow，如果没有则使用默认值
-        width = props.columnMinWidthCodeBelow || props.columnMinWidth || '1.0rem'
-    } else {
-        // 编码在右侧时使用 columnMinWidth
-        width = columnMinWidth.value || '1.4rem'
-    }
+    const width = columnMinWidth.value || '1.0rem'
     return `repeat(auto-fill, minmax(${width}, max-content))`
 })
 
@@ -67,16 +59,6 @@ const isListView = ref(false);
 // 列表視圖中按鍵排序模式切換（鍵盤順序 vs 字母順序）
 const sortKeysByAlphabet = ref(false);
 
-// 编码位置控制（右侧 vs 下方）
-const codePositionBelow = ref(props.defaultCodePositionBelow ?? false);
-
-// 监听 defaultCodePositionBelow prop 的变化
-watch(() => props.defaultCodePositionBelow, (newValue) => {
-    if (newValue !== undefined) {
-        codePositionBelow.value = newValue
-    }
-})
-
 // 檢測屏幕尺寸
 // 小於此寬度則為移動端顯示模式
 const checkMobileView = () => {
@@ -91,11 +73,6 @@ const toggleDesktopLayout = () => {
 // 切換按鍵排序模式
 const toggleKeyOrder = () => {
     sortKeysByAlphabet.value = !sortKeysByAlphabet.value;
-};
-
-// 切换编码位置
-const toggleCodePosition = () => {
-    codePositionBelow.value = !codePositionBelow.value;
 };
 
 onMounted(() => {
@@ -608,16 +585,6 @@ onMounted(() => {
                         <span v-else>⌨️</span>
                     </button>
                 </div>
-                <!-- 桌面端编码位置切换按钮 -->
-                <div v-if="!isListView" class="flex items-center space-x-2">
-                    <span class="text-xs text-gray-400">編碼位置</span>
-                    <button @click="toggleCodePosition" class="layout-toggle-btn"
-                        :class="{ 'layout-toggle-active': codePositionBelow }"
-                        :title="codePositionBelow ? '切換為右側顯示' : '切換為下方顯示'">
-                        <span v-if="!codePositionBelow">➡️</span>
-                        <span v-else>⬇️</span>
-                    </button>
-                </div>
             </div>
 
             <!-- 移動端按鍵排序切換按鈕 -->
@@ -636,14 +603,6 @@ onMounted(() => {
                     :title="sortKeysByAlphabet ? '切換為鍵盤順序' : '切換為字母順序'">
                     <span v-if="!sortKeysByAlphabet">🔤</span>
                     <span v-else>⌨️</span>
-                </button>
-
-                <span class="text-xs text-gray-400">編碼位置：</span>
-                <button @click="toggleCodePosition" class="layout-toggle-btn"
-                    :class="{ 'layout-toggle-active': codePositionBelow }"
-                    :title="codePositionBelow ? '切換為右側顯示' : '切換為下方顯示'">
-                    <span v-if="!codePositionBelow">➡️</span>
-                    <span v-else>⬇️</span>
                 </button>
             </div>
 
@@ -667,11 +626,10 @@ onMounted(() => {
                     <div v-if="!emptyKeys.includes(key) && zigenByKey[key]?.visible.length > 0"
                         class="zigen-list text-indigo-800 dark:text-indigo-300" :style="{ gridTemplateColumns }">
                         <span v-for="(zigen, index) in zigenByKey[key].visible" :key="index" class="zigen-item"
-                            :class="{ 'zigen-item-vertical': codePositionBelow }"
                             @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
-                            <span class="zigen-code" :class="{ 'zigen-code-below': codePositionBelow }">{{ zigen.code
-                            }}</span>
+                            <span class="zigen-code">{{ zigen.code
+                                }}</span>
                         </span>
                         <!-- 如果有隱藏的字根，顯示省略號 -->
                         <span v-if="zigenByKey[key].hidden.length > 0" class="more-indicator">⋯</span>
@@ -730,12 +688,11 @@ onMounted(() => {
                         <!-- 顯示按編碼排序的所有字根 -->
                         <span v-for="(zigen, index) in sortedZigenByKey[key]" :key="`sorted-${index}`"
                             class="mobile-zigen-item" :class="{
-                                'mobile-hidden-zigen': zigen.isHidden,
-                                'mobile-zigen-item-vertical': codePositionBelow
+                                'mobile-hidden-zigen': zigen.isHidden
                             }" @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
-                            <span class="zigen-code" :class="{ 'zigen-code-below': codePositionBelow }">{{ zigen.code
-                            }}</span>
+                            <span class="zigen-code">{{ zigen.code
+                                }}</span>
                         </span>
                     </div>
                 </div>
@@ -886,16 +843,11 @@ onMounted(() => {
     /* grid-template-columns will be set dynamically via :style */
     justify-items: start !important;
     align-items: start !important;
-    gap: 0.01rem 0.01rem !important;
+    gap: 0.05rem 0.01rem !important;
     width: 100% !important;
     margin-top: 0.0rem;
     line-height: 1.0;
     /* Column width controlled by columnMinWidth parameter */
-}
-
-/* 垂直布局时进一步压缩间距 */
-.zigen-list:has(.zigen-item-vertical) {
-    gap: 0.05rem 0.01rem !important;
 }
 
 .zigen-list::after {
@@ -904,17 +856,19 @@ onMounted(() => {
 }
 
 .zigen-item {
-    display: block !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
     font-size: 0.9rem;
-    padding: 0.01rem 0.01rem;
+    padding: 0.01rem 0.01rem !important;
     border-radius: 0.2rem;
     transition: all 0.15s ease;
     white-space: nowrap;
     cursor: pointer;
     border: 1px solid transparent;
-    line-height: 1.0;
+    line-height: 1.0 !important;
     margin: 0rem 0rem !important;
-    text-align: left !important;
 }
 
 .zigen-item:hover {
@@ -966,10 +920,14 @@ onMounted(() => {
 }
 
 .zigen-code {
+    display: block !important;
+    margin-top: 0.01rem !important;
+    text-align: center !important;
     font-family: monospace;
-    font-size: 0.7rem;
+    font-size: 0.6rem !important;
     color: #666666 !important;
     font-weight: 400;
+    line-height: 1.0 !important;
 }
 
 /* 在亮色模式下使用更深的顏色 */
@@ -989,25 +947,6 @@ onMounted(() => {
 
 .zigen-item:hover .zigen-code {
     color: var(--fallback-pc, oklch(var(--pc)/0.8));
-}
-
-/* 垂直布局的字根项 */
-.zigen-item-vertical {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    padding: 0.01rem 0.01rem !important;
-    line-height: 1.0 !important;
-}
-
-/* 编码在下方显示 */
-.zigen-code-below {
-    display: block !important;
-    margin-top: 0.01rem !important;
-    text-align: center !important;
-    font-size: 0.6rem !important;
-    line-height: 1.0 !important;
 }
 
 /* 彈出框樣式 - 與鍵位樣式一致 */
@@ -1485,24 +1424,9 @@ onMounted(() => {
 
 .mobile-zigen-item .zigen-code {
     font-family: monospace;
-    font-size: 0.625rem;
-    color: #666666;
-    margin-top: 0.125rem;
-}
-
-/* 移动端垂直布局的字根项 */
-.mobile-zigen-item-vertical {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    padding: 0.2rem 0.25rem !important;
-    line-height: 1.0 !important;
-}
-
-.mobile-zigen-item-vertical .zigen-code {
-    margin-top: 0.05rem !important;
     font-size: 0.55rem !important;
+    color: #666666;
+    margin-top: 0.05rem !important;
     line-height: 1.0 !important;
 }
 
