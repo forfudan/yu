@@ -105300,7 +105300,6 @@ ufmz	佱
 ufnl	𮡉
 ufnw	𤭉
 ufnx	𢗁
-ufoe	𮈺
 ufof	슼
 ufof	슾
 ufoi	슥
@@ -108045,6 +108044,7 @@ utuz	𲟈
 utvj	𪪛
 utwc	𗎧
 utwe	𫷽
+utwe	𮈺
 utwn	𡚶
 utwn	𫃵
 utwn	𫷹

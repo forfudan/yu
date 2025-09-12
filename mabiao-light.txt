@@ -88627,7 +88627,6 @@ bflh	𭽄
 bflq	𭀭
 bflw	𭽃
 bfuy	𭞊
-bfva	𮈺
 bgbu	𮝲
 bgjc	𮈧
 bgpd	𭃢
@@ -88683,6 +88682,7 @@ bmmw	𭕼
 bmmw	𮉛
 bmni	𮈣
 bmog	𮈫
+bmqa	𮈺
 bmsr	𭿰
 bmuw	𮈘
 bndg	𮈗
@@ -131351,7 +131351,6 @@ ooww	寪
 jsbu	岅
 jqvb	岋
 jtaf	岻
-jjts	峀
 jwss	崜
 jpst	嵃
 jtfl	嵢
@@ -135961,7 +135960,6 @@ hyfq	売
 ctlq	娧
 chrj	㛼
 ueac	将
-jjts	峀
 jlxg	𡷤
 jpst	嵃
 jpsw	嵼
