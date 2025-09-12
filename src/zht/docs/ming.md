@@ -44,7 +44,7 @@
 <script setup>
 import ZigenMap from "@/zigen/ZigenMap.vue"
 </script>
-<ZigenMap :default-scheme="'ming'" column-min-width-code-below="1.0rem" :default-code-position-below="true" />
+<ZigenMap :default-scheme="'ming'" :column-min-width="'1.0rem'" />
 
 <!-- 
 ::: details 更新

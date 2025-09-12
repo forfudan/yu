@@ -51,7 +51,7 @@
 <script setup>
 import ZigenMap from "@/zigen/ZigenMap.vue"
 </script>
-<ZigenMap :default-scheme="'star'" column-min-width="1.5rem" />
+<ZigenMap :default-scheme="'star'" :column-min-width="'1.0rem'" />
 
 ## 大碼規律
 
