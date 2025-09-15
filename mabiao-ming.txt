@@ -772,7 +772,6 @@ gso	逃
 gto	置
 gvi	压
 gwi	历
-gwo	眾人
 gxi	厥
 hba	赚
 hbe	败
@@ -9836,7 +9835,7 @@ hjyfu	郇
 hkdke	冏
 hke	內
 hkfu	匍
-hkji	曶
+hkje	曶
 hkjxo	忽
 hkka	勿
 hkndi	匆
@@ -50299,10 +50298,10 @@ hkhto	𱐼
 hkjbb	𫻜
 hkjci	𠣵
 hkjcu	𢽨
-hkje	㫚
 hkjfi	𠣡
 hkjgo	𱆘
 hkjhs	𲤧
+hkji	㫚
 hkjlr	𬨰
 hkjrn	𪂒
 hkjtj	𣊸
@@ -63772,6 +63771,7 @@ lsbbu	𫃚
 lsbcu	𥾲
 lsbcu	𦁭
 lsbdk	𥿕
+lsbfj	𮈺
 lsbfn	𫃿
 lsbfp	𫃭
 lsbgb	𣦓
@@ -63912,7 +63912,6 @@ lsdyd	𦄈
 lse	𣥄
 lsfbh	𬟰
 lsfcg	䋼
-lsfcj	𮈺
 lsfcn	𥾙
 lsfcu	𬗅
 lsfdd	䌔
@@ -82626,7 +82625,6 @@ rnfi	𫠓
 rnfja	𩿼
 rnfja	𪀋
 rnfja	𪀌
-rnfja	𲰹
 rnfjl	𮬳
 rnfkh	𬷜
 rnfki	𱈝
@@ -100069,10 +100067,10 @@ xcfdp	𲲆
 xcffe	𠔄
 xcfhe	𬱙
 xcfhl	𮞍
-xcfjd	𲳄
 xcfjs	𭘊
 xcfjx	𢘤
 xcfjx	𬑵
+xcfjx	𲳄
 xcfkg	𦏁
 xcfkg	𭟱
 xcflb	𭅐
@@ -101191,6 +101189,7 @@ xnci	𱉇
 xncma	𲍬
 xndkb	𱉙
 xne	𦍤
+xnfja	𲰹
 xnfkg	𲍯
 xnfvk	𡷊
 xngft	𫜅
@@ -123193,7 +123192,6 @@ wdke	𘯔
 wdsme	𛂺
 wdsme	𛂻
 wfcci	슦
-wfcdk	㋿
 wfcdl	슪
 wfcfi	슼
 wfci	슥
@@ -123684,6 +123682,7 @@ wmjgi	𛀽
 wmjgi	𛀾
 wmkba	𛀮
 wmlgi	𘰙
+wncdk	㋿
 wncjx	念
 wnru	𘰓
 wnvge	領
