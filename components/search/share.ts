@@ -20,7 +20,7 @@ export type ZigenMap = Map<string, Zigen>
 
 export type ChaifenMap = Map<string, Chaifen>
 
-/** 根据拆分表生成编码 */
+/** 根據拆分表生成編碼 */
 export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, supplement: boolean, ming: boolean, wafel?: boolean) {
     const divisionArray = [...division]
 
@@ -47,7 +47,7 @@ export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, supp
     }
 
     else if (wafel) {
-        // 依次取一、二、末根大码
+        // 依次取一、二、末根大碼
         let result: string[] = []
 
         if (divisionArray.length >= 1) {
@@ -61,7 +61,7 @@ export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, supp
             result.push(zigenMap.get(lastZigen)?.ma?.[0] || '?')
         }
 
-        // 不足三码时，补上末根小码
+        // 不足三碼時，補上末根小碼
         if (result.length < 3) {
             const lastZigen = divisionArray[divisionArray.length - 1]
             result.push(zigenMap.get(lastZigen)?.ma?.[1] || '?')
@@ -71,16 +71,16 @@ export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, supp
     }
 
     else {
-        // 依次取一、二、三、末根大码
+        // 依次取一、二、三、末根大碼
         let result = divisionArray.map(zigen => zigenMap.get(zigen)?.ma?.[0] || '?')
 
-        // 不足四码时，补上末根小码。
+        // 不足四碼時，補上末根小碼。
         if (result.length < 4) {
             const lastZigen = divisionArray[divisionArray.length - 1]
             result.push(zigenMap.get(lastZigen)?.ma?.[1] || '?')
         }
 
-        // 仍然不足四码时，补上首根小码。
+        // 仍然不足四碼時，補上首根小碼。
         if ((result.length < 4) && supplement) {
             const firstZigen = divisionArray[0]
             result.push(zigenMap.get(firstZigen)?.ma?.[1] || '?')
@@ -91,8 +91,8 @@ export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, supp
 }
 
 /**
- * 请求一个csv文件，并解析它，转成map对象，
- * 类似python里的csv.DictReader，不过会按照第一列为键，转成KV数据。
+ * 請求一個csv文件，並解析它，轉成map對象，
+ * 類似python里的csv.DictReader，不過會按照第一列為鍵，轉成KV數據。
  */
 export async function fetchCsvAsMap(url: string) {
     if (url in cache) {
@@ -106,7 +106,7 @@ export async function fetchCsvAsMap(url: string) {
         return result
     } catch (error) {
         if (error instanceof Error)
-            alert(`无法下载或解析《${url}》文件：${error.cause}`)
+            alert(`無法下載或解析《${url}》文件：${error.cause}`)
         throw error
     }
 }
@@ -125,12 +125,21 @@ function parseCsv(content: string): CsvMap {
             continue
 
         const lineSplit = line.split(',').map(v => v.trim())
-        if (lineSplit.length !== titleListLength)
-            throw new Error(`CSV文件中 ${line} 数据不够 ${titleListLength} 条。`);
+
+        // 允許列數不足的情況，用空字符串填充缺失的列
+        if (lineSplit.length < titleListLength) {
+            // 填充缺失的列為空字符串
+            while (lineSplit.length < titleListLength) {
+                lineSplit.push('')
+            }
+        } else if (lineSplit.length > titleListLength) {
+            // 如果列數過多，拋出錯誤
+            throw new Error(`CSV文件中 ${line} 數據過多，期望 ${titleListLength} 列，实际 ${lineSplit.length} 列。`);
+        }
 
         const tmp: Record<string, string> = {}
         for (let i = 0; i < titleListLength; i++) {
-            tmp[titleList[i]] = lineSplit[i]
+            tmp[titleList[i]] = lineSplit[i] || '' // 確保不會是undefined
         }
         result.set(lineSplit[0], tmp)
     }
@@ -146,8 +155,8 @@ export async function fetchZigen(url: string) {
 }
 
 /**
- * 优化的拆分数据读取函数
- * 优先使用压缩的JSON格式，失败时回退到CSV格式
+ * 優化的拆分數據讀取函數
+ * 優先使用壓縮的JSON格式，失敗時回退到CSV格式
  */
 export async function fetchChaifenOptimized(url: string): Promise<ChaifenMap> {
     // 检查缓存
@@ -157,11 +166,11 @@ export async function fetchChaifenOptimized(url: string): Promise<ChaifenMap> {
     }
 
     try {
-        // 首先尝试使用压缩的JSON格式
+        // 首先嘗試使用壓縮的JSON格式
         const loader = ChaiDataLoader.getInstance(url);
         const optimizedData = await loader.loadData();
 
-        // 将优化格式转换为ChaifenMap格式
+        // 將優化格式轉換為ChaifenMap格式
         const chaifenMap = new Map<string, { char: string, division: string, division_tw: string, region: string }>();
 
         for (const [char, data] of Object.entries(optimizedData)) {
@@ -173,25 +182,25 @@ export async function fetchChaifenOptimized(url: string): Promise<ChaifenMap> {
             });
         }
 
-        console.log(`✅ 成功使用压缩JSON格式加载拆分数据: ${chaifenMap.size} 个字符`);
+        console.log(`✅ 成功使用壓縮JSON格式加載拆分數據: ${chaifenMap.size} 个字符`);
 
         // 缓存结果
         cache[cacheKey] = chaifenMap;
         return chaifenMap as ChaifenMap;
 
     } catch (error) {
-        console.warn('JSON格式加载失败，回退到CSV格式:', error);
+        console.warn('JSON格式加載失敗，回退到CSV格式:', error);
 
-        // 回退到原有的CSV读取方式
+        // 回退到原有的CSV讀取方式
         try {
             const result = await fetchCsvAsMap(url) as unknown as ChaifenMap;
-            console.log(`⚠️ 使用CSV格式加载拆分数据: ${result.size} 个字符`);
+            console.log(`⚠️ 使用CSV格式加載拆分數據: ${result.size} 個字符`);
 
-            // 缓存结果
+            // 緩存結果
             cache[cacheKey] = result;
             return result;
         } catch (csvError) {
-            console.error('CSV格式也加载失败:', csvError);
+            console.error('CSV格式也加載失敗:', csvError);
             throw csvError;
         }
     }
