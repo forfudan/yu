@@ -13163,8 +13163,8 @@ ltto	衣
 ltvkt	褻
 ltwdt	褒
 ltwjf	亱
-ltwjn	夜
-ltwjr	鵺
+ltwtn	夜
+ltwtr	鵺
 ltwwg	顇
 ltwwt	卒
 ltwww	雜
@@ -42456,6 +42456,7 @@ fwmso	𫙭
 fwnbb	𤈿
 fwnbm	𩣗
 fwnci	𲏢
+fwndi	𬻌
 fwndj	䥭
 fwndj	𨭻
 fwnge	𩒮
@@ -65376,27 +65377,27 @@ ltwdt	𬡭
 ltwfl	𰙙
 ltwfv	𠅚
 ltwfy	𠅜
-ltwjc	𲐏
-ltwjd	㖱
-ltwjd	𡖵
-ltwjd	𭐿
-ltwjd	𱘩
-ltwjk	𭑁
-ltwjl	𭯑
-ltwjn	𬂃
-ltwjn	𭐺
-ltwjn	𭐻
 ltwjt	𧚤
 ltwjt	𮕻
-ltwjv	𭎲
-ltwjw	𨿤
-ltwjx	𲍿
 ltwko	𣱵
 ltwkv	𤕚
 ltwlr	𨘰
 ltwnt	𧘭
 ltwsf	𮮺
+ltwtc	𲐏
+ltwtd	㖱
+ltwtd	𡖵
+ltwtd	𭐿
+ltwtd	𱘩
+ltwtk	𭑁
+ltwtl	𭯑
+ltwtn	𬂃
+ltwtn	𭐺
+ltwtn	𭐻
 ltwto	𬡡
+ltwtv	𭎲
+ltwtw	𨿤
+ltwtx	𲍿
 ltwwb	𣖛
 ltwwc	𡣼
 ltwwc	𪜤
@@ -65550,6 +65551,7 @@ ltxmy	𨜷
 ltxmy	𰄺
 ltxnj	𡖍
 ltxnj	𣎘
+ltxtl	𨒳
 ltyjx	𢛫
 lvfki	𫷟
 lvge	𮨉
@@ -72306,7 +72308,6 @@ ndlls	𦣐
 ndlqi	𣤍
 ndlro	𨖈
 ndlsi	𧪬
-ndlxl	𨒳
 ndmdk	㕻
 ndmdy	𠝒
 ndmkg	𦠾
@@ -90581,7 +90582,6 @@ tkjlg	𪪂
 tkjlx	䙘
 tkjmt	𧂽
 tkjnc	𫡯
-tkjnd	𬻌
 tkjnl	𨗛
 tkjnn	𣎠
 tkjnr	𪆘
@@ -117525,8 +117525,8 @@ ltto	⾐
 ltto	衣
 ltto	𛀑
 ltto	𛀒
-ltwjn	㊰
-ltwjn	𛃢
+ltwtn	㊰
+ltwtn	𛃢
 ltwwt	🩭
 ltxcf	𘛇
 ltxcf	𘛈

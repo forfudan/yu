@@ -4842,11 +4842,12 @@ odt	诔
 odv	读
 odx	谌
 oed	宿
+oee	夜
 oef	宾
 oeh	谖
 oel	客
 oeo	诉
-oer	夜
+oer	讹
 oew	谣
 ofa	宇
 ofc	语
@@ -7542,7 +7543,7 @@ hskt	考
 uisu	应
 rqje	復
 oryb	衣
-oero	夜
+oeeo	夜
 fhwi	元
 bhlv	結
 behj	改
@@ -18384,6 +18385,7 @@ stfb	冷
 iyqf	深
 yjds	象
 walv	周
+oero	夜
 tfbu	令
 qvbu	及
 fqvb	极
@@ -22260,7 +22262,7 @@ nysu	黵
 nyxx	蹹
 oawg	瓬
 ocge	鞌
-oerr	鵺
+oeer	鵺
 ofhc	宼
 ogym	寳
 omkr	褱
@@ -32877,11 +32879,11 @@ odlb	㪡
 odlg	㝬
 odlq	㲅
 odlv	㕻
+oeel	㖱
 oeft	㝛
 oehl	㪣
 oell	㝯
 oepd	䢟
-oerl	㖱
 ofap	䢓
 ofde	䫅
 offv	㝝
@@ -59372,7 +59374,9 @@ oedr	𧝥
 oedt	𡪴
 oedt	𢳔
 oedw	𤛝
+oeel	𡖵
 oeem	𨐿
+oeew	𨿤
 oefe	𡫎
 oefl	𡧻
 oefm	𠅜
@@ -59403,9 +59407,7 @@ oeoe	𡫀
 oeqa	𡧜
 oeri	𡨇
 oerj	𡩹
-oerl	𡖵
 oerr	𧚤
-oerw	𨿤
 oesj	𡩤
 oevk	𡥮
 oevx	𡨻
@@ -59565,7 +59567,6 @@ ohtp	𨔎
 ohtt	𡨁
 ohuh	𡫓
 ohup	𡫭
-ohup	𨒳
 ohwb	𡧉
 ohyb	𡨊
 oifv	𡩁
@@ -60107,6 +60108,7 @@ oubr	𣮸
 oubr	𪂸
 oudo	𥪈
 oudp	𣄚
+oudp	𨒳
 ouds	𡩙
 ouej	𣃎
 oujj	𡪠
@@ -85680,6 +85682,7 @@ oeao	𬣺
 oecy	𬣢
 oede	𫴉
 oeen	𬣯
+oeew	𬂃
 oefr	𬇄
 oegn	𬤍
 oelr	𬡭
@@ -85688,7 +85691,6 @@ oeok	𫿨
 oeou	𫴊
 oeqc	𫳨
 oerq	𫳷
-oerw	𬂃
 oesl	𫳌
 oess	𫿕
 oewb	𫲻
@@ -89110,7 +89112,6 @@ djjf	𭽝
 djjj	𭻹
 djks	𭽈
 djln	𮦰
-djod	𬻌
 djqh	𭮩
 djqs	𭽎
 djqy	𭝸
@@ -89754,6 +89755,7 @@ fkjp	𮞸
 fkjt	𭻍
 fkmb	𭣯
 fkmo	𭩦
+fkod	𬻌
 fkod	𮨗
 fkow	𭱉
 fkqc	𮠑
@@ -92588,19 +92590,19 @@ odpd	𮞼
 odss	𮍒
 odvu	𮙋
 oebf	𮮺
+oeee	𭐺
+oeeh	𭎲
 oeek	𭓹
+oeel	𭐿
+oeer	𭑁
+oeer	𭯑
+oeev	𭐻
 oefv	𭓭
 oehb	𭤿
 oejg	𭔁
 oejr	𮕻
 oell	𮙐
 oelm	𭃺
-oere	𭐺
-oerh	𭎲
-oerl	𭐿
-oerr	𭑁
-oerr	𭯑
-oerv	𭐻
 oeyi	𭜰
 ofhm	𭔢
 ofhp	𭓾
@@ -103178,11 +103180,11 @@ odfa	𱚒
 odku	𲂐
 odmb	𱚏
 odri	𱚆
+oeel	𱘩
+oeey	𲍿
 oefv	𱣬
 oeln	𲄅
 oerd	𲂊
-oerl	𱘩
-oery	𲍿
 ofeb	𲂎
 ofha	𱍝
 ofjf	𲅅
@@ -118368,13 +118370,13 @@ odlm	🈹
 odlm	𲜛
 odob	𮱞
 odsb	𛀢
+oeeo	㊰
+oeeo	𛃢
+oeev	𲐏
 oefw	𲤄
 oejl	𲤀
 oelf	𲐍
-oero	㊰
-oero	𛃢
 oero	𳏊
-oerv	𲐏
 oety	𳍝
 ofan	𗇊
 ofar	𳎴
@@ -131175,6 +131177,7 @@ hhgg	臷
 hkgg	蛓
 pjsa	襅
 wjsa	魓
+oerr	鵺
 wwrh	壆
 oayf	亴
 etlq	侻
@@ -132141,6 +132144,7 @@ cwal	䧓
 rhmt	䬉
 hwal	䯾
 sjsa	㓖
+oerl	㖱
 hhgg	㘽
 yxyi	㥐
 shgg	㦱
@@ -134691,6 +134695,7 @@ lhwg	𡁶
 nyxj	𡇳
 hijg	𡑌
 ijgh	𡑠
+oerl	𡖵
 cjsa	𡠚
 chlg	𡣳
 jjsa	𡻞
@@ -134800,6 +134805,7 @@ wuhg	𨰸
 hhwg	𨲹
 khlg	𨷡
 cona	𨼛
+oerw	𨿤
 dhlg	𩆧
 yijg	𩞡
 yhwg	𩟙
@@ -135213,6 +135219,7 @@ lwhg	𫬾
 conn	𫲒
 hfmg	𫻭
 yxeh	𫾽
+oerw	𬂃
 gyxj	𬍱
 iyxj	𬔣
 vhhg	𬘹
@@ -135492,12 +135499,18 @@ ehlg	𭀁
 eurg	𭀋
 lhlg	𭋲
 lbfj	𭌺
+oerh	𭎲
 hhlg	𭎶
 hjsa	𭏬
+oere	𭐺
+oerv	𭐻
+oerl	𭐿
+oerr	𭑁
 oqhg	𭔡
 jhlg	𭗨
 yyxj	𭝕
 ahog	𭢚
+oerr	𭯑
 iyxj	𭰷
 jsac	𭻠
 jxhg	𭻮
@@ -135869,6 +135882,7 @@ hmtk	𲊼
 dhmt	𲋹
 djsa	𱑓
 vlhg	𱔖
+oerl	𱘩
 ndmg	𱟞
 hlug	𱤐
 fryx	𱥐
@@ -135879,6 +135893,7 @@ ijgm	𱳓
 mhjg	𲂸
 dhtg	𲊂
 tuhg	𲍃
+oery	𲍿
 ywht	⻆
 yktt	⻇
 sjti	⻩
@@ -136318,6 +136333,7 @@ gqqg	㊩
 nqmn	㊬
 sekb	㊮
 dxti	㊯
+oero	㊰
 tobl	㋿
 xsvi	🈀
 buuu	🈁
@@ -136351,6 +136367,7 @@ gocj	⚌
 mqcw	⚍
 mqcj	⚎
 gocw	⚏
+oero	𛃢
 llvv	𛄂
 llvv	𛄃
 vmft	갖
@@ -138809,6 +138826,7 @@ hccc	🩤
 urac	🩧
 xmmm	🩪
 hccc	🩫
+oerv	𲐏
 lmyx	𲗌
 luig	𲘐
 djsa	𲴀

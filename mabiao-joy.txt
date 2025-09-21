@@ -25979,6 +25979,7 @@ fiic	虿
 fiic	𧓊
 fiid	扚
 fiid	𢪍
+fiid	𬻌
 fiif	𪭪
 fiig	𢭗
 fiii	𧕿
@@ -40646,7 +40647,6 @@ ial	蜥
 ialb	蚲
 ialb	匉
 ialj	蜥
-ialu	𨒳
 ialz	𮱜
 iam	宋
 iam	蚞
@@ -88383,7 +88383,25 @@ resl	𭄴
 resl	𮘑
 resl	𱐱
 resq	𬅗
+ret	夜
+retb	𭯑
+retd	𭐻
 retf	𮮺
+reth	𭎲
+reti	夜
+reti	𭑁
+reti	㊰
+reti	𛃢
+retk	㖱
+retk	𡖵
+retk	𭐿
+retk	𱘩
+retn	𭐺
+reto	𨿤
+reto	𲐏
+retq	鵺
+retx	𲍿
+rety	𬂃
 reub	𗅑
 reuh	𭅨
 reun	𧭯
@@ -88402,27 +88420,9 @@ rewn	𧨐
 rewp	闭
 rewp	𲁡
 rexh	𬣋
-rey	夜
-reyb	𭯑
-reyd	𭐻
-reyh	𭎲
-reyi	夜
-reyi	𭑁
-reyi	㊰
-reyi	𛃢
-reyk	㖱
-reyk	𡖵
-reyk	𭐿
-reyk	𱘩
-reyn	𭐺
-reyo	𨿤
-reyo	𲐏
-reyq	鵺
 reys	𧚤
 reyv	譋
-reyx	𲍿
 reyy	𧩀
-reyy	𬂃
 rf	幅
 rf	幅度
 rfak	𠂦
@@ -89073,7 +89073,6 @@ rjid	訒
 rjid	㠴
 rjid	𠜨
 rjid	𧦮
-rjid	𬻌
 rjie	𣄶
 rjij	䛽
 rjim	𡙑
@@ -89839,6 +89838,7 @@ rlrc	𗅢
 rlri	𧩵
 rlri	𧬊
 rlrj	𗄽
+rlru	𨒳
 rlrw	𗅎
 rls	詍
 rls	𧥞
