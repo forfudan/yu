@@ -22905,11 +22905,11 @@ efjg	𠙊
 efji	𠍶
 efjq	𧍻
 efjr	凬
-efjr	𫽑
 efjs	便
 efjs	便
 efjt	𫢽
 efjt	𬿒
+efjy	𫽑
 efka	俹
 efka	𩗠
 efka	𩗽
@@ -29054,6 +29054,7 @@ fihs	𤆎
 fiht	摚
 fiht	𢭭
 fii	一
+fii	ㄧ
 fii	𪛙
 fii	⼀
 fii	㇀
@@ -30083,7 +30084,6 @@ fluj	𢬢
 fluj	𰀌
 fluk	𬃅
 flum	𭀩
-flur	𢘑
 flus	𢪠
 flus	𗙨
 flv	扣
@@ -55609,6 +55609,7 @@ jlqi	𤒒
 jlqo	𥜁
 jlqq	𰳖
 jlrh	𥏧
+jlri	𢘑
 jlri	𢜔
 jlry	𥆽
 jlsb	𧵳
@@ -56822,7 +56823,6 @@ jrqs	𥜋
 jrr	日
 jrr	𫩏
 jrr	⽇
-jrr	⽈
 jrr	㈰
 jrr	㊐
 jrr	𛂪
@@ -58626,6 +58626,7 @@ jytu	𢼁
 jyui	𥅀
 jyxd	𥊥
 jyy	曰
+jyy	⽈
 jyyi	𘬕
 jyyk	𱮵
 jz	早
@@ -80003,11 +80004,11 @@ oajg	𦆪
 oaji	𦂠
 oajm	緗
 oajr	𡘐
-oajr	練
 oajt	𦂊
 oajv	𱺉
 oajw	𰖫
 oajx	𣣩
+oajy	練
 oak	铰
 oakc	𦀹
 oakd	奉
@@ -112354,7 +112355,6 @@ usrs	峏
 usrw	㼷
 uss	山
 uss	丨
-uss	ㄧ
 uss	⼁
 uss	⼭
 uss	㇑

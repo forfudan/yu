@@ -39964,7 +39964,6 @@ fdjxo	𭜓
 fdke	𠮛
 fdkfo	𡈧
 fdlbi	𬶍
-fdljx	𢘑
 fdlkb	𬃅
 fdlro	𮞄
 fdmfi	𭈰
@@ -58619,6 +58618,7 @@ kddfy	𠶘
 kddge	𩑸
 kddgm	𪾌
 kddhe	𲊻
+kddjx	𢘑
 kddkd	𠾳
 kddkd	𡃭
 kddkd	𧭳
@@ -72703,7 +72703,7 @@ nhji	𬛄
 nhjjx	𮌢
 nhjxo	𦞜
 nhke	䶺
-nhkji	䐇
+nhkje	䐇
 nhkjx	𦜩
 nhkjx	𦝰
 nhkne	𰮱
@@ -78765,7 +78765,7 @@ qjxci	𠘵
 qjxht	𠙘
 qjxo	𠙌
 qjyfu	䢳
-qkgji	𫽑
+qkgje	𫽑
 qki	𫞕
 qklcu	𫩃
 qklo	𬆞
@@ -113478,6 +113478,7 @@ fi	㆒
 fi	㈠
 fi	㊀
 fi	🈩
+fi	ㄧ
 fi	ㆪ
 fi	ー
 fi	ᅳ
@@ -115538,6 +115539,7 @@ jdke	𘭎
 jdndi	刃
 jdnjx	忍
 jdsji	𛁆
+je	⽈
 jfcfp	𗄩
 jfcfp	𗅗
 jfcjr	𗄮
@@ -115611,7 +115613,6 @@ jhkka	易
 jhksa	𗄰
 jhpda	🈙
 ji	⽇
-ji	⽈
 ji	㈰
 ji	㊐
 ji	𛂪
@@ -117038,7 +117039,6 @@ lgi	〡
 lgi	〳
 lgi	〴
 lgi	〵
-lgi	ㄧ
 lgi	ㆳ
 lgi	ᅵ
 lgi	ㅣ
@@ -117276,7 +117276,7 @@ lslxo	䌴
 lsmre	紐
 lso	
 lssgk	𛀐
-lssji	練
+lssje	練
 lsskx	練
 lsskx	練
 lsso	𘮗
