@@ -9861,6 +9861,7 @@ ckn	试
 ckng	试
 ckng	𰧶
 cknw	𪡑
+cknx	𢘑
 cko	诚
 ckob	䣖
 ckof	𬤉
@@ -25875,6 +25876,7 @@ fi	㆒
 fi	㈠
 fi	㊀
 fi	🈩
+fi	ㄧ
 fi	ㆪ
 fi	ー
 fi	ᅳ
@@ -27811,7 +27813,6 @@ fklm	𬃅
 fklm	𰶙
 fkln	豇
 fkln	䜻
-fkln	𢘑
 fkln	𧯬
 fkln	𰶢
 fklo	剅
@@ -49617,7 +49618,6 @@ jr	日
 jr	日本
 jr	𫩏
 jr	⽇
-jr	⽈
 jr	㈰
 jr	㊐
 jr	𛂪
@@ -50533,6 +50533,7 @@ jv	𠂎
 jv	𠙴
 jv	𱍸
 jv	⼐
+jv	⽈
 jv	凵
 jv	ㄩ
 jv	
@@ -62209,7 +62210,6 @@ ls	〣
 ls	〳
 ls	〴
 ls	〵
-ls	ㄧ
 ls	ㆳ
 ls	𛁒
 ls	𛁓
@@ -92632,8 +92632,8 @@ sfjm	𥏈
 sfjm	𧝄
 sfjr	凬
 sfjr	𥅏
-sfjr	𫽑
 sfjs	𥄝
+sfjv	𫽑
 sfjw	𠙊
 sfke	𮖰
 sfkg	𱲷
@@ -104148,9 +104148,9 @@ uajf	馇
 uajl	𬘆
 uajm	𱬔
 uajo	𢋬
-uajr	練
 uajs	𱺉
 uajv	𦣹
+uajv	練
 uajx	𭾉
 uajy	𢊌
 uakf	𢌐
