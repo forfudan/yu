@@ -20966,13 +20966,13 @@ morv	睕
 motd	睟
 mquw	罛
 mrob	鵙
-mspd	逥
 mssi	甝
 mtff	賖
 mugd	眹
 mwkr	鸀
 njmd	劏
 nmlv	跕
+nnsp	逥
 norv	踠
 nusj	跰
 nvpd	蹆
@@ -22274,7 +22274,6 @@ mqgu	眣
 mque	歑
 msgs	贜
 mswp	髄
-msxn	廽
 mtai	眂
 mtbd	帉
 muda	幮
@@ -22296,6 +22295,7 @@ neoe	躈
 nhts	坣
 nmhu	圛
 nmmw	躣
+nnsx	廽
 noqj	囥
 npxb	齢
 nsvv	囩
@@ -23465,7 +23465,6 @@ mpwf	盿
 mqod	骪
 mrbf	韰
 msgg	賎
-msiw	囬
 msjr	齰
 msmm	矒
 msqf	狊
@@ -23503,6 +23502,7 @@ nhvx	踋
 nkvw	囦
 nmds	躆
 nnma	踄
+nnsi	囬
 nosr	躟
 nqbm	黣
 nrde	蹞
@@ -26461,9 +26461,9 @@ kmmc	蠳
 kmmw	蠷
 kmnv	泴
 kmoc	虲
-kmsi	蜖
 knec	蟔
 knht	闛
+knns	蜖
 knrh	蜠
 kodl	螛
 koff	蝖
@@ -39028,8 +39028,6 @@ cmqm	𨻶
 cmrf	𡤋
 cmri	𨹨
 cmsg	𡣬
-cmsi	𡜼
-cmsi	𨹰
 cmvn	𡡆
 cmwg	𡣯
 cmwu	𡤗
@@ -39051,6 +39049,8 @@ cnmd	𨽥
 cnne	𡤭
 cnnf	𨺗
 cnnn	𡢋
+cnns	𡜼
+cnns	𨹰
 cnor	𡣖
 cnpd	𡢤
 cnqm	𡡸
@@ -57547,7 +57547,6 @@ msmd	𩕾
 msmg	𡙷
 msmm	𢅴
 msmq	𢅘
-msmr	𣰣
 msmr	𥌋
 msmr	𥍇
 msmv	𢁻
@@ -58692,6 +58691,7 @@ nnpd	𨔀
 nnrb	𨄐
 nnrf	𪑽
 nnry	𡇴
+nnsr	𣰣
 nnss	𢍷
 nnsx	𣥫
 nntt	𣦁
@@ -67906,7 +67906,6 @@ smro	𧄞
 smrs	𦸟
 smsh	𧃛
 smsn	𦻼
-smsp	𨖘
 smst	𧅢
 smug	𦳟
 smuo	𤊾
@@ -67997,6 +67996,7 @@ snma	𦯝
 snmd	𧅵
 snme	𦴲
 snne	𧅗
+snnp	𨖘
 snod	𧃐
 snom	𧀰
 snpd	𨗲
@@ -71553,7 +71553,6 @@ umqm	𧗍
 umrf	𧭸
 umri	𧨛
 umsq	𤋀
-umsr	𢊸
 umta	𣱔
 umta	𤮕
 umta	𦗥
@@ -71616,6 +71615,7 @@ unmv	𢊥
 unnf	𢋹
 unnn	𤎠
 unnn	𧬃
+unnr	𢊸
 unns	𧧚
 unpw	𤋩
 unqr	𧫆
@@ -73146,8 +73146,8 @@ vogn	𩱌
 vogp	𣃤
 vojh	𢐻
 voli	𠮸
-vomc	𨝣
 vomd	𠚵
+vonc	𨝣
 vonv	𢐹
 voot	𠬊
 vopm	𨸍
@@ -74658,10 +74658,10 @@ wmmc	𨰃
 wmmi	𤛏
 wmmi	𦟰
 wmmq	𦣜
-wmms	𠣱
 wmmw	𩵅
 wmnc	𠣠
 wmne	𣍽
+wmns	𠣱
 wmom	𨈒
 wmou	𩱻
 wmoy	𦘱
@@ -81485,7 +81485,7 @@ sohj	𫉄
 sohs	𪞥
 soko	𫈛
 sokr	𫈶
-somh	𫉿
+sonh	𫉿
 sory	𫈮
 sosh	𫉲
 sotd	𫇈
@@ -82014,7 +82014,7 @@ vcla	𪫀
 vdbu	𪦶
 vdcn	𪾈
 vdfi	𫄞
-vdms	𪜖
+vdns	𪜖
 vdto	𫄵
 vdug	𫄪
 vdul	𫄱
@@ -90516,13 +90516,13 @@ hmjy	𭐁
 hmlv	𭙀
 hmms	𮚬
 hmmu	𮮟
-hmsi	𭍥
 hmti	𮂀
 hmvp	𭽴
 hmxy	𮗍
 hnht	𭏠
 hnjt	𮫒
 hnlv	𭍠
+hnns	𭍥
 hnqd	𮨢
 hnri	𭎔
 hnvt	𭎣
@@ -90891,8 +90891,8 @@ iodm	𭲨
 iodm	𮄼
 ioeo	𮄳
 iokt	𭳪
-iomm	𭳧
 ionm	𭲳
+ionm	𭳧
 ioog	𭠈
 ioqa	𭰓
 ioqy	𭳩
@@ -92551,8 +92551,8 @@ nucj	𮠊
 nugc	𮜇
 nugv	𮫔
 nujj	𭍳
-numh	𮜥
 nunf	𮛙
+nunh	𮜥
 nuoi	𭭝
 nusi	𮛔
 nute	𭭥
@@ -97480,7 +97480,7 @@ igti	𰛟
 igus	𰛎
 igxk	𰛞
 iheh	𰊢
-ihms	𰜲
+ihns	𰜲
 ihtd	𰉢
 ihts	𰛌
 ihww	𰝓
@@ -98249,7 +98249,6 @@ mrrk	𰷂
 mrua	𰴬
 mrwf	𰦃
 msbb	𰷅
-mslr	𰈅
 msqc	𱌚
 msrg	𱅭
 mstf	𰥸
@@ -98356,6 +98355,7 @@ nmml	𰸭
 nnde	𰸰
 nngx	𰙯
 nnnf	𰘭
+nnsr	𰈅
 nnwy	𰸕
 noan	𰸥
 nobm	𱆉
@@ -99971,7 +99971,6 @@ ummf	𰭜
 umns	𰞭
 umqp	𰰦
 umrm	𰚱
-umsi	𰏸
 umti	𰴼
 umtk	𰳝
 umtk	𱌇
@@ -99984,6 +99983,7 @@ unaq	𰞏
 unbh	𰞤
 unbh	𰴹
 ungv	𰟋
+unns	𰏸
 unsq	𰟵
 unuo	𰞥
 uofv	𰴺
@@ -103238,7 +103238,7 @@ ohcr	𲀯
 ohlr	𱒷
 ohry	𲂏
 oikg	𱢽
-oimp	𱹟
+oinp	𱹟
 ojfu	𱫹
 ojfv	𱚉
 ojkg	𲂒
@@ -104796,7 +104796,7 @@ xfux	𱭕
 xfvf	𱭐
 xgpd	𲅳
 xhep	𱭏
-xhms	𱭔
+xhns	𱭔
 xhto	𱑛
 xjwx	𱑙
 xkfi	𱝟
@@ -115449,7 +115449,6 @@ immg	𲪹
 immq	𲩻
 immr	𳏬
 imqp	𛁃
-imsx	𲩶
 imwm	𲪧
 imxw	𗕉
 inbu	𘮛
@@ -115457,6 +115456,7 @@ ingf	𳑁
 ingn	𳐭
 inki	𮸸
 inlm	𲡗
+innx	𲩶
 inpd	𛂶
 inqm	𲒹
 inre	𮳑

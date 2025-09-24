@@ -6849,13 +6849,18 @@ bkyw	悜
 bkyy	𫻠
 bl	圈
 bl	～
+blab	𰈅
+blae	囬
 blae	𰑐
 blae	𱶳
+blag	廽
+blag	𣰣
 blak	怑
 blam	慄
 blam	惵
 blam	䑜
 blam	慄
+blau	逥
 blb	𥦎
 blb	𧴦
 blb	𭜼
@@ -11974,6 +11979,7 @@ dbkw	𧂜
 dblb	𦵊
 dble	蔨
 dblj	𱡪
+dblu	𨖘
 dblz	𲻷
 dbm	茵
 dbm	𲻰
@@ -17540,9 +17546,11 @@ dral	𬞕
 dral	𬞖
 dram	䒳
 dram	𦻆
+drbc	𫉿
 drbf	䕊
 drbg	𦼹
 drbk	𱽲
+drbp	𨝣
 drbs	𦧐
 drbs	𦧠
 drcc	𗚩
@@ -17771,9 +17779,7 @@ drws	㣋
 drws	𗞲
 drwu	緜
 drww	𗞏
-drxc	𫉿
 drxm	𦰆
-drxp	𨝣
 drxr	𦮘
 dryu	𰏝
 dryv	𰱇
@@ -19170,7 +19176,6 @@ dx	若是
 dxag	蓒
 dxai	𦯞
 dxak	𮒄
-dxau	𨖘
 dxbo	𮒭
 dxc	莗
 dxc	𨋧
@@ -36304,6 +36309,7 @@ hbkv	𡋙
 hbkv	𦒵
 hbkv	𧻢
 hbkv	𭍠
+hbla	𭍥
 hblj	𪊼
 hbm	𲃉
 hbmb	𪸦
@@ -40397,7 +40403,6 @@ hwyu	壠
 hwyu	𧾪
 hx	頁
 hx	⾴
-hxae	𭍥
 hxbo	夁
 hxc	𡌄
 hxc	𪋀
@@ -40729,6 +40734,7 @@ ibkg	𧍚
 ibkl	𧒪
 ibks	𲿉
 ibkv	蛔
+ibla	蜖
 iblb	𣄌
 ibm	蚂
 ibm	𡧁
@@ -44756,6 +44762,7 @@ iu	室内
 iuad	𫊹
 iuaj	𠤂
 iub	虲
+iuba	𠣱
 iubb	𰲰
 iubs	𧌖
 iubu	𣃷
@@ -44918,7 +44925,6 @@ iuwn	𧊷
 iuws	𪧉
 iuwt	𮔈
 iuwu	𧕻
-iuxa	𠣱
 iuxn	𳐏
 iuxr	𮕗
 iuyl	𧓩
@@ -45434,7 +45440,6 @@ ix	𘱾
 ix	
 ix	
 ix	
-ixae	蜖
 ixai	𭓰
 ixai	𮕋
 ixam	𫋇
@@ -68533,6 +68538,7 @@ nbkv	呰
 nblb	貲
 nblc	𣾋
 nble	𬈨
+nblg	𲩶
 nblo	𠟓
 nblp	𨝳
 nblq	𳏲
@@ -69774,6 +69780,7 @@ ngz	𲩇
 nh	法
 nh	法国
 nham	𣒿
+nhba	𰜲
 nhbb	㳣
 nhbj	𣹡
 nhbk	𭱹
@@ -69995,7 +70002,6 @@ nhx	𩑙
 nhx	𩑢
 nhx	𩖁
 nhx	㊠
-nhxa	𰜲
 nhxd	𣼄
 nhxi	𰛳
 nhxl	瀆
@@ -72025,6 +72031,7 @@ nral	澜
 nram	𬹵
 nram	𰛵
 nrbc	𪷤
+nrbe	𭳧
 nrbf	澶
 nrbf	𪙵
 nrbg	澟
@@ -72263,7 +72270,6 @@ nrwj	𱨿
 nrwn	𭳩
 nrxa	𣼆
 nrxa	𪶗
-nrxe	𭳧
 nrxm	𲩐
 nrxn	𭲖
 nrxs	瀤
@@ -73548,7 +73554,6 @@ nx	⼼
 nxaa	𲪑
 nxaf	𭲽
 nxag	𣺕
-nxag	𲩶
 nxam	𬇼
 nxar	𱨔
 nxc	𣵐
@@ -79760,6 +79765,7 @@ oral	𪩱
 oram	䑮
 oram	𩶹
 oray	𗘠
+orba	𪜖
 orbf	鱣
 orbf	𬙉
 orbg	𩼤
@@ -79946,7 +79952,6 @@ orwf	𗗡
 orwf	𗘔
 orwg	㓃
 orwl	𗘞
-orxa	𪜖
 orxn	𱊛
 os	上
 os	上面
@@ -81276,6 +81281,7 @@ pbfj	𫕂
 pbhk	𨼈
 pbhx	𨻺
 pbjr	𩊝
+pbla	𨹰
 pbm	𬮺
 pbm	𮳺
 pbmd	鞇
@@ -83562,7 +83568,6 @@ pwyu	䪊
 pwyu	𤜆
 px	随
 px	随着
-pxae	𨹰
 pxc	陣
 pxdb	犤
 pxdi	𧲯
@@ -88788,6 +88793,7 @@ rib	𬢛
 ribb	詑
 ribb	𭘙
 ribb	𮗽
+ribt	𱹟
 ribu	𰩕
 ric	闽
 ric	蜝
@@ -88948,7 +88954,6 @@ rix	𡭘
 rix	𡭜
 rix	𮤭
 rixm	𫞯
-rixt	𱹟
 riyc	𧭂
 riye	帵
 riye	䛷
@@ -98514,6 +98519,7 @@ th	🐯
 th	
 th	
 thba	𫒰
+thba	𱭔
 thbb	銠
 thbb	粩
 thbb	䥝
@@ -98717,7 +98723,6 @@ thx	顉
 thx	頪
 thx	𲊰
 thx	𲭍
-thxa	𱭔
 thxc	𨌄
 thxl	牘
 thxl	匵
@@ -104349,7 +104354,9 @@ ubkv	㔽
 ubkv	𰁿
 ubky	𫡾
 ubl	舒
+ubla	𰏸
 ublb	𬗨
+ublg	𢊸
 ublq	𪅰
 ublv	舒
 ubm	𰏲
@@ -109357,8 +109364,6 @@ uwyu	龐
 uwyu	䌬
 uwyu	䡁
 ux	庫
-uxae	𰏸
-uxag	𢊸
 uxai	𢊤
 uxc	庫
 uxc	𦀺
@@ -113876,6 +113881,7 @@ wbkl	𫱾
 wbks	𢒤
 wbkv	徊
 wbkv	𮱃
+wbla	𡜼
 wblb	𫱇
 wblc	𡡪
 wble	𠒇
@@ -119520,7 +119526,6 @@ wwyu	𫲘
 wwyw	𭒧
 wx	血
 wx	血液
-wxae	𡜼
 wxbb	𫋪
 wxc	𡝀
 wxc	𡞍
@@ -119791,7 +119796,6 @@ xacs	𨆱
 xacs	𪑨
 xadf	𦌂
 xadm	転
-xae	囬
 xae	た
 xaes	𨀰
 xaes	𨋲
@@ -119805,7 +119809,6 @@ xag	䍐
 xag	䵟
 xag	𧿂
 xag	𱉋
-xagi	廽
 xahc	𨍭
 xahc	𬧅
 xahf	𩐑
@@ -119825,7 +119828,6 @@ xajf	蹅
 xajr	𨌿
 xaju	𨖞
 xajy	蹐
-xakb	𰈅
 xakf	𳃦
 xakh	𦌊
 xakl	䠭
@@ -119846,10 +119848,8 @@ xaru	𲅦
 xasj	𦊵
 xati	𫏲
 xatk	𨃶
-xauc	逥
 xavf	𨅰
 xaww	𪓊
-xaxg	𣰣
 xb	蹿
 xbam	𨁉
 xbb	㔫
@@ -122354,6 +122354,7 @@ xub	𨊣
 xub	𪐙
 xubb	𬦧
 xubb	𱻆
+xubc	𮜥
 xubc	𳃧
 xuc	連
 xuc	迓
@@ -122519,7 +122520,6 @@ xuws	𪐲
 xuws	𮊃
 xuxc	𨍓
 xuxc	𮜇
-xuxc	𮜥
 xuxs	𦌾
 xuxs	𦍆
 xuxs	𦌾

@@ -123,7 +123,7 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 `中`字中，雖然`⼁`穿`口`而過，但並未被完全包含在`口`中。由於`口`中沒有完整的筆畫，故而用`口` `kǒu`。
 :::
 
-此規定也適用於另外幾個包含`口`的字根。
+為防止拆分不直觀，此規定也適用於另外幾個包含`口`或者封閉空間的字根：`口古合户戶戸目皿罒自見早`等等。
 
 ::: tip 例
 
@@ -141,6 +141,7 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
     <Chaifen char='會' :parts='[5,3,1,4]' :colors='[1,2,1,3]' />
     ❌
     </div>
+
 :::
 
 ## 弱根不分寫
