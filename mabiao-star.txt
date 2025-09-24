@@ -3272,7 +3272,6 @@ antt	𣞒
 antu	𪲏
 anuj	𱤤
 anuk	𬬘
-anuq	𱹟
 anus	𭩡
 anuu	𤣧
 anux	夣
@@ -3301,6 +3300,7 @@ anwo	逳
 anwo	𨓞
 anwo	𱣮
 anwq	𧰖
+anwq	𱹟
 anwr	充
 anwr	㐬
 anwr	㭇
@@ -16560,7 +16560,6 @@ cuic	𧗣
 cuic	𲀛
 cuij	𩅃
 cuik	𡬥
-cuir	𡜼
 cuir	𭁠
 cuiy	𮟯
 cuj	徭
@@ -16927,6 +16926,7 @@ cwru	媼
 cwsi	𭑯
 cwsw	𡣃
 cwts	𢒤
+cwui	𡜼
 cwvo	𩇍
 cww	姗
 cwwf	姗
@@ -18811,7 +18811,6 @@ dhub	𠭭
 dhuc	𮫘
 dhud	𳏧
 dhuh	𱼱
-dhui	𱭔
 dhuj	牘
 dhuj	𨏔
 dhuj	𬌏
@@ -18831,6 +18830,7 @@ dhvv	䡪
 dhvv	𫍸
 dhwa	𨍼
 dhwh	𮝝
+dhwi	𱭔
 dhwj	谮
 dhwj	𤘄
 dhwj	𤾶
@@ -44792,7 +44792,6 @@ huil	𭏐
 huil	닿
 huil	댷
 huil	딯
-huir	𭍥
 huiu	𤞹
 huiw	𤘍
 huj	匝
@@ -45539,6 +45538,7 @@ hwtx	鳌
 hwu	靜
 hwug	𣄺
 hwug	𦢳
+hwui	𭍥
 hwuj	𦠰
 hwus	𦧄
 hwuu	𲊘
@@ -73835,8 +73835,6 @@ muib	爢
 muig	𲣿
 muih	㸏
 muij	𥡶
-muim	𢊸
-muir	𰏸
 mujb	𤸘
 mujb	𬏽
 mujb	𬓲
@@ -74340,6 +74338,8 @@ mwrm	𣬜
 mwrr	𤼔
 mwsw	𧲳
 mwts	𤹁
+mwui	𰏸
+mwum	𢊸
 mwvc	廫
 mww	乌
 mwwb	𤺅
@@ -74809,16 +74809,15 @@ naua	𣼆
 naub	𱩯
 naug	瀤
 naui	𣿱
-nauj	𭳧
 naul	𲩡
 naum	䀀
-nauy	𨝣
 navg	𣿞
 navj	𪶯
 navt	𬈠
 nawf	澶
 nawg	𬈟
 nawj	𪷤
+nawj	𭳧
 nawm	澟
 nawo	𤅻
 nawq	湅
@@ -74827,6 +74826,7 @@ nawt	𣿊
 nawu	𭲳
 nawx	𲫀
 nawy	𤅝
+nawy	𨝣
 nawy	𭳇
 naxa	𣽘
 naxw	𱨠
@@ -76243,7 +76243,6 @@ nhtu	𭰗
 nhu	瀆
 nhub	𱥴
 nhuf	𪶬
-nhui	𰜲
 nhuj	瀆
 nhur	𭲓
 nhvj	𭰙
@@ -76253,6 +76252,7 @@ nhw	清
 nhwc	𪷍
 nhwh	𣶕
 nhwi	𣾤
+nhwi	𰜲
 nhwj	潛
 nhwj	㵾
 nhwj	𤂯
@@ -79166,7 +79166,6 @@ nuht	𡊏
 nuht	𣻺
 nuig	𢆽
 nuig	𱨔
-nuig	𲩶
 nuih	𣴽
 nuij	漴
 nuij	𣿼
@@ -79665,6 +79664,7 @@ nwsw	𣺷
 nwsw	𱩒
 nwtj	𨥣
 nwts	溷
+nwug	𲩶
 nwuq	㶠
 nwux	𣶡
 nwvc	㶀
@@ -85887,7 +85887,6 @@ pmsu	𮛸
 pmu	踮
 pmuf	釄
 pmuf	𨇻
-pmuj	𮜥
 pmul	踮
 pmv	踵
 pmvh	躔
@@ -85899,6 +85898,7 @@ pmvm	𨂹
 pmvs	𥑱
 pmvs	𨇢
 pmvs	𱵀
+pmwj	𮜥
 pmwj	𳃧
 pmwn	𤛼
 pmwr	𳃑
@@ -91945,7 +91945,6 @@ quij	𧐿
 quik	𮕋
 quik	𘕯
 quin	𗔱
-quir	蜖
 quiu	𘕮
 quj	帅
 qujb	𨊋
@@ -92546,6 +92545,7 @@ qwsw	𧊫
 qwtl	𡇷
 qwts	𲿉
 qwuf	𥸻
+qwui	蜖
 qwuj	𬠄
 qwvj	𧏈
 qwvt	蜔
@@ -97897,7 +97897,6 @@ satu	𰲈
 saub	𠡙
 saub	𢼢
 saue	𦾢
-sauj	𫉿
 sauk	𗞍
 sauq	𦻊
 sauq	𬞹
@@ -97907,6 +97906,7 @@ sawf	䕊
 sawf	𩉊
 sawf	𩍕
 sawg	𮐀
+sawj	𫉿
 sawk	𦯪
 sawl	𱽲
 sawm	𦼹
@@ -103341,7 +103341,6 @@ suht	𦸀
 suib	𦻹
 suih	𤋂
 suin	𗟄
-suio	𨖘
 suis	𗞁
 suiw	𦿃
 sujb	蕒
@@ -103996,6 +103995,7 @@ swub	𭣹
 swug	𦳍
 swui	𦭩
 swuj	𳊠
+swuo	𨖘
 swvt	䓒
 swvv	𮒿
 sww	兇
@@ -109930,7 +109930,6 @@ uigp	䯯
 uigp	𡵯
 uigp	𦨖
 uigx	𭘝
-uigy	廽
 uihb	𩬊
 uihf	𩇭
 uihh	𬟩
@@ -110005,7 +110004,6 @@ uila	𘮙
 uilb	𪉼
 uilj	𡾡
 uill	𲝵
-uiln	𰈅
 uilw	𦊫
 uilw	𦨻
 uilw	𩭂
@@ -110021,7 +110019,6 @@ uinb	𭘙
 uinj	𲬮
 uinp	𭗰
 uinw	𩭕
-uioc	逥
 uioc	𨑝
 uiod	𲝖
 uiol	𦪌
@@ -110050,7 +110047,6 @@ uirs	𰀠
 uirs	
 uirt	𦪁
 uiru	𭗏
-uirw	囬
 uisa	𡼌
 uisb	𬴬
 uisj	𪺖
@@ -110063,7 +110059,6 @@ uitl	㟯
 uitl	𡺀
 uitl	𩭽
 uits	幏
-uium	𣰣
 uivs	𡻼
 uivt	艡
 uivt	𡽊
@@ -121190,7 +121185,12 @@ wuhq	驛
 wuhq	圛
 wuhq	䐾
 wuid	𦠠
+wuig	廽
+wuim	𣰣
+wuin	𰈅
+wuio	逥
 wuio	𨒢
+wuir	囬
 wujc	𡴅
 wujd	𦠔
 wuje	𠣿
@@ -121268,7 +121268,6 @@ wutf	圐
 wuts	臄
 wutu	𦞬
 wuue	驉
-wuui	𠣱
 wuuj	𦛎
 wuuk	𡈣
 wuuk	𦣅
@@ -121283,6 +121282,7 @@ wuvs	𲺚
 wuvu	驢
 wuvu	臚
 wuvw	𦢚
+wuwi	𠣱
 wuwi	𤌝
 wuwq	臅
 wuwq	䮷
@@ -126230,7 +126230,6 @@ yguf	𗗩
 ygug	𗉒
 ygug	𗘋
 ygug	𗘏
-ygui	𪜖
 yguj	𗘊
 ygul	𗘍
 ygun	𮥏
@@ -126248,6 +126247,7 @@ ygus	𗘑
 ygus	𗘒
 ygus	𘡕
 yguy	𗉞
+ygwi	𪜖
 ygwm	𩡵
 ygxi	𮤹
 ygyf	𗶜
@@ -128116,7 +128116,6 @@ yuij	𳈫
 yuil	갛
 yuil	걓
 yuil	깋
-yuir	𨹰
 yujb	𨺟
 yujc	𨽑
 yujz	𨺑
@@ -128357,6 +128356,7 @@ ywlv	䧁
 ywmf	䧞
 ywqm	陱
 ywre	𨸤
+ywui	𨹰
 ywwc	𠃨
 ywwj	𨻍
 ywww	𨼖
