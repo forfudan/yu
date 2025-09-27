@@ -601,3 +601,10 @@ html.dark *::-webkit-scrollbar-thumb:hover {
     /* 与标题文本保持相同左边距 */
   }
 }
+
+/* ===== 隱藏導航欄外部鏈接箭頭圖標 ===== */
+/* 針對導航欄中的外部鏈接隱藏箭頭圖標 */
+.VPNavBar .VPNavBarMenuLink .vp-external-link-icon::after,
+.VPNavBar .VPNavBarMenuLink.vp-external-link-icon::after {
+  display: none !important;
+}

@@ -8,7 +8,7 @@
 import ZigenMap from "@/zigen/ZigenMap.vue"
 </script>
 
-<ZigenMap :default-scheme="'tianma'" column-min-width="1.5rem" :zigenFontClass="'zigen-font-tianma'" />
+<ZigenMap :default-scheme="'tianma'" column-min-width="1rem" :zigenFontClass="'zigen-font-tianma'" />
 
 ## 規則
 
