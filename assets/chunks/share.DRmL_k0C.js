@@ -1,0 +1,1 @@
+import"./framework.D3o4Ln5n.js";function h(c,s){const o=[];for(const n of s.values())if(n.division.includes(c)){const r=n.char;if(r&&r.trim()){const f=Array.from(r.trim());for(const i of f){const t=i.codePointAt(0);i&&t!==void 0&&t>=19968&&t<=40959&&o.length<8&&o.push(i)}if(o.length>=8)break}}const e=o.join("");return Array.from(e).slice(0,8).join("")}export{h as f};
