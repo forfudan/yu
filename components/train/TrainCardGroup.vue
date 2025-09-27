@@ -14,7 +14,7 @@ interface ZigenGroup {
     /** 編碼 */
     code: string;
     /** 字根列表 */
-    zigens: Array<{ font: string; ma: string }>;
+    zigens: Array<{ font: string; ma: string; pinyin?: string }>;
 }
 
 const p = defineProps<{
@@ -172,6 +172,29 @@ const practiceProgress = computed(() => {
 }); const progress = computed(() =>
     practiceProgress.value.percentage
 );
+
+// 檢測當前字根組是否包含拼音信息
+const hasPinyinData = computed(() => {
+    if (!currentGroup.value) return false;
+    return currentGroup.value.zigens.some(zigen =>
+        zigen.font && zigen.font.trim() !== '' &&  // 確保字根不為空
+        zigen.pinyin && zigen.pinyin.trim() !== ''  // 確保拼音有效
+    );
+});
+
+// 獲取當前字根組的拼音列表
+const pinyinList = computed(() => {
+    if (!hasPinyinData.value || !currentGroup.value) return [];
+    return currentGroup.value.zigens
+        .filter(zigen =>
+            zigen.font && zigen.font.trim() !== '' &&  // 確保字根不為空
+            zigen.pinyin && zigen.pinyin.trim() !== '' && zigen.pinyin !== 'Ø'  // 確保拼音有效
+        )
+        .map(zigen => ({
+            font: zigen.font,
+            pinyin: zigen.pinyin
+        }));
+});
 
 // 檢查是否已完成所有學習
 const isCompleted = computed(() => {
@@ -493,7 +516,7 @@ onBeforeUnmount(() => {
                     <span>已練習: {{ practiceProgress.current }} / {{ practiceProgress.total }} ({{
                         practiceProgress.percentage }}%) | 已掌握: {{ practiceProgress.mastered }}</span>
                     <span v-if="wrongInputCount > 0" class="text-red-600 dark:text-red-400">錯誤次數: {{ wrongInputCount
-                    }}</span>
+                        }}</span>
                 </div>
                 <div :class="[
                     'w-full bg-gray-200 dark:bg-gray-700 rounded-full',
@@ -603,13 +626,12 @@ onBeforeUnmount(() => {
 
             <!-- 字根組顯示 -->
             <div :class="[
-                'text-center',
-                windowWidth < 768 ? 'py-4' : 'py-12'  // 手機端大幅減少垂直間距
+                'text-center flex items-center justify-center',
+                windowWidth < 768 ? 'h-32' : 'h-48'  // 固定高度：手機端128px，桌面端192px
             ]">
                 <!-- 字根組 - 響應式大小設計 -->
                 <div :class="[
                     'flex justify-center items-center flex-wrap',
-                    windowWidth < 768 ? 'mb-4' : 'mb-12',  // 手機端減少底部間距
                     zigenGapClass
                 ]">
                     <div v-for="(zigen, index) in currentGroup.zigens" :key="index"
@@ -644,7 +666,7 @@ onBeforeUnmount(() => {
             <!-- 輸入區域 -->
             <div :class="[
                 'flex justify-center',
-                windowWidth < 768 ? 'pb-3' : 'pb-8'  // 手機端減少底部間距
+                windowWidth < 768 ? 'pt-2 pb-3' : 'pt-4 pb-8'  // 減少上方間距，保持底部間距
             ]">
                 <input ref="inputElement" v-model="inputValue" type="text" placeholder="編碼" :class="[
                     'text-center border-2 rounded-xl font-mono',
@@ -676,6 +698,37 @@ onBeforeUnmount(() => {
                         'font-mono font-bold text-blue-600 dark:text-blue-400',
                         windowWidth < 768 ? 'text-lg' : 'text-xl'  // 手機端縮小答案文字
                     ]">{{ currentGroup.code }}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 聲碼韵碼解析區域 - 獨立顯示 -->
+        <div v-if="hasPinyinData" :class="[
+            'mx-auto max-w-md mt-4',
+            windowWidth < 768 ? 'max-w-xs mt-2' : 'max-w-md mt-4'  // 手機端縮小最大寬度和間距
+        ]">
+            <div :class="[
+                'border-2 border-dashed border-blue-300 dark:border-blue-600 rounded-lg bg-blue-50 dark:bg-blue-900/20 p-3 transition-all duration-300',
+                windowWidth < 768 ? 'p-2' : 'p-3'  // 手機端減少內邊距
+            ]">
+                <!-- 標題 -->
+                <div :class="[
+                    'text-center font-medium text-blue-800 dark:text-blue-300 mb-2',
+                    windowWidth < 768 ? 'text-xs mb-1' : 'text-sm mb-2'  // 手機端縮小標題
+                ]">
+                    漢語拼音 到 聲碼韻碼 關係解析
+                </div>
+                <!-- 拼音列表 -->
+                <div :class="[
+                    'text-center space-y-1',
+                    windowWidth < 768 ? 'text-xs space-y-0.5' : 'text-sm space-y-1'
+                ]">
+                    <div v-for="(item, index) in pinyinList" :key="`${item.font}-${item.pinyin}-${index}`" :class="[
+                        'text-blue-700 dark:text-blue-300'
+                    ]">
+                        <span class="zigen-font">{{ item.font }}</span>
+                        <span class="font-mono"> ({{ item.pinyin }})</span>
+                    </div>
                 </div>
             </div>
         </div>

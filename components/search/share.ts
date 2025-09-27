@@ -13,7 +13,8 @@ export interface Chaifen {
 
 export interface Zigen {
     font: string,
-    ma: string
+    ma: string,
+    pinyin?: string
 }
 
 export type ZigenMap = Map<string, Zigen>
