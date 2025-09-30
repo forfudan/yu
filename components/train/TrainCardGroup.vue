@@ -716,7 +716,7 @@ onBeforeUnmount(() => {
                     'text-center font-medium text-blue-800 dark:text-blue-300 mb-2',
                     windowWidth < 768 ? 'text-xs mb-1' : 'text-sm mb-2'  // 手機端縮小標題
                 ]">
-                    漢語拼音 到 聲碼韻碼 關係解析
+                    拼音到音托之關係解析
                 </div>
                 <!-- 拼音列表 -->
                 <div :class="[
