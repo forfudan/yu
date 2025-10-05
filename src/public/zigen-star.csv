@@ -79,7 +79,7 @@ font,ma,pinyin
 鬥,Du,Dòu -> d
 乚,Ei,yí = i
 隹,Eh,ZHuī -> h ㊟取第二字母h
-亻,Er,rén -> r ㊟取第二字母r
+亻,Er,rén -> r
 ,Ez,Zuǒ -> z
 風,Ef,Fēng -> f
 几,Ej,Jǐ -> j
@@ -169,7 +169,7 @@ font,ma,pinyin
 ,Km,
 ,Km,
 ,Km,
-纟,Kj,Sī -> s
+纟,Kj,JiǎoSī -> j ㊟特例取絞絲音j
 ,Kj,
 了,Ke,Le -> e ㊟聲l被立佔用故取韻e
 子,Kz,Zǐ -> z
@@ -178,7 +178,7 @@ font,ma,pinyin
 ,Kc,
 乀,Kd,
 丶,Kd,
-八,Ka,Ba -> a ㊟取韻a
+八,Ka,Bā -> a ㊟取韻a
 ,Ka,
 入,Kr,rù -> r
 食,Ks,SHí -> s
@@ -202,7 +202,7 @@ font,ma,pinyin
 〇,Ll,Líng -> l
 舌,Ls,SHé -> s
 口,Lv,Kǒu -> v ㊟特例
-正,Lz,ZHeng -> z
+正,Lz,ZHèng -> z
 鸟,Mn,Niǎo -> n
 ,Mn,
 乌,Mw,wū -> w
@@ -300,7 +300,7 @@ font,ma,pinyin
 亥,Th,Hài -> h
 亦,Ti,yì = i
 门,Tm,Mén -> m
-豕,Ts,SHi -> s
+豕,Ts,SHǐ -> s
 ,Ts,
 夊,Tu,Pū -> u ㊟取韻e
 亡,Tw,wáng -> w
