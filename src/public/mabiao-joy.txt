@@ -13321,6 +13321,7 @@ deff	𲼬
 defj	𦬖
 defj	𗝲
 defk	𲻻
+defy	𗝃
 dego	𬝒
 degq	𦬴
 degu	莋
@@ -13403,7 +13404,6 @@ deme	𦲮
 demh	𰉿
 demj	𦮪
 demk	𱱾
-demy	𗝃
 denl	𧁓
 denn	𫈾
 denr	荏
@@ -20383,9 +20383,11 @@ eflp	𨚑
 eflq	𘦷
 efls	𠀌
 eflw	𗈕
+efmb	𘤴
 efmc	儞
 efmc	䦵
 efmc	𩰞
+efmc	𘄓
 efmd	𨳨
 efmd	𫢋
 efme	𭀍
@@ -20396,6 +20398,7 @@ efmf	𨷆
 efmn	𠍴
 efmn	𠑓
 efmn	𢞋
+efmy	𘄔
 efnx	𠎩
 efo	侧
 efoa	𗕏
@@ -21732,6 +21735,7 @@ elqc	𗈑
 elqo	𗇺
 elri	𠋜
 elrm	𱘳
+elrs	𠦁
 elrs	𧞐
 elrs	𗇬
 elrt	𠍯
@@ -21895,11 +21899,8 @@ emed	𫣌
 emes	傣
 emf	伕
 emfa	𘗸
-emfc	𘄓
-emfi	𘤴
 emfq	𠈝
 emfs	侉
-emfy	𘄔
 emg	傀
 emgj	闚
 emgj	𠏌
@@ -28476,6 +28477,8 @@ fmak	捧
 fmak	𡘸
 fmam	𱫒
 fmb	扒
+fmb	𠔀
+fmb	𢌬
 fmb	𬺢
 fmb	𰞴
 fmb	𲫎
@@ -28655,6 +28658,7 @@ fmnx	𲟵
 fmob	𪥉
 fmoc	𢶾
 fmoh	𰔳
+fmos	𘭼
 fmpf	𰻡
 fmqe	𰋡
 fmqk	𠀹
@@ -28717,6 +28721,7 @@ fmuc	𨓌
 fmuc	𫐧
 fmuc	𳄜
 fmur	𘬪
+fmur	𘭹
 fmut	𫽤
 fmuu	挾
 fmvd	𢹚
@@ -41529,6 +41534,7 @@ iflk	𧎴
 iflr	𡩅
 iflt	𡫄
 iflz	𡥜
+ifmb	𡦿
 ifmb	𡧆
 ifmb	𘮩
 ifmb	𲻋
@@ -43157,7 +43163,6 @@ imdq	𪂸
 imds	𱃉
 imf	蚨
 imf	𫲷
-imfi	𡦿
 imfk	𦎚
 imfl	𥐉
 imfm	𦦅
@@ -44538,7 +44543,6 @@ ithx	𮨓
 ithy	𱥭
 iti	虬
 iti	兦
-iti	𠤬
 iti	𧈞
 iti	ら
 iti	𘢨
@@ -58546,11 +58550,15 @@ lefb	𗔸
 lefb	𘛧
 lefc	𗔉
 lefc	𘖅
+lefc	𘖈
 leff	𗯦
+leff	𘖇
 leff	𘩻
 lefi	𘛨
 lefi	𘤪
 lefj	𰣥
+lefm	𘖆
+lefm	𘨘
 lefn	𧸔
 lefq	𘨗
 legs	𲆸
@@ -58609,10 +58617,6 @@ lelu	𣍄
 lem	𤷱
 lemb	𤷢
 lemc	𗔬
-lemc	𘖈
-lemf	𘖆
-lemf	𘖇
-lemf	𘨘
 lenr	𤶄
 lenr	𨠲
 lenx	𤺯
@@ -64480,9 +64484,7 @@ mffn	𩭙
 mffn	𩳍
 mffs	𤉣
 mfhd	𪥍
-mfi	𠔀
 mfi	𡗓
-mfi	𢌬
 mfi	𤆂
 mfiw	𩲬
 mfix	㌬
@@ -64556,7 +64558,6 @@ mfmx	𫯮
 mfoc	𤊲
 mfoh	𮫇
 mfoi	𮫎
-mfos	𘭼
 mfou	㌫
 mfow	髨
 mfow	𠒏
@@ -64608,7 +64609,6 @@ mfsw	𱘼
 mfsw	𘁆
 mfsx	𫛦
 mfte	㌭
-mfur	𘭹
 mfvi	𩬾
 mfvi	𪿊
 mfvj	𪹓
@@ -71742,7 +71742,6 @@ nors	汛
 nors	𣥇
 nors	𣲌
 nors	𤬫
-nort	𥹦
 noru	𱦮
 nos	沉
 nos	𣥌
@@ -72373,6 +72372,7 @@ nsiq	𳏬
 nsir	𠦘
 nsit	銎
 nsit	䊄
+nsit	𥹦
 nsiv	𫻐
 nsiw	渺
 nsix	涼
@@ -80178,6 +80178,7 @@ othq	𰙒
 othx	𮨁
 oti	䰲
 oti	𠃲
+oti	𠤬
 oti	𢎘
 oti	𫄙
 oti	㋝
@@ -88325,7 +88326,6 @@ rekx	𲄅
 rel	𢃇
 rel	𫟯
 reld	𧦾
-rels	𠦁
 rels	𧞗
 rem	颠
 rem	𪩴
@@ -88512,6 +88512,7 @@ rfmd	䚶
 rfmd	𬮜
 rfmf	𧬩
 rfmi	𧨩
+rfms	𧘙
 rfmw	𭘓
 rfnz	𰅷
 rfoa	𘀞
@@ -89983,7 +89984,6 @@ rmfd	𗅸
 rmfm	𧩻
 rmfs	誇
 rmfs	㡁
-rmfs	𧘙
 rmfx	𧨦
 rmg	謉
 rmg	𢄊
@@ -92664,6 +92664,7 @@ sflj	䀿
 sflj	䁀
 sflj	𩗙
 sflk	𥉭
+sfmb	𧘒
 sfmb	具
 sfmc	襧
 sfmc	𥌃
@@ -94277,7 +94278,6 @@ smf	畉
 smf	颫
 smf	𥄑
 smfh	𩄀
-smfi	𧘒
 smfl	𳊔
 smfm	𭿅
 smfs	袴
@@ -98129,6 +98129,7 @@ tflw	델
 tflw	딀
 tflz	𡱟
 tfmb	𥼞
+tfmb	𨥃
 tfmc	鑈
 tfmd	鋄
 tfmd	𠮉
@@ -100264,7 +100265,6 @@ tmf	𠤱
 tmf	𩽺
 tmf	𬖐
 tmf	𬟨
-tmfi	𨥃
 tmfj	𨦌
 tmfm	𨨯
 tmfm	𪉮
@@ -107667,6 +107667,7 @@ urei	𦁹
 urem	縝
 urem	𳃿
 ures	𮭴
+urfi	𦥴
 urga	𰏥
 urgu	𲸙
 urh	絯
@@ -107728,7 +107729,6 @@ urmc	饺
 urmd	𦄸
 urme	𦁙
 urmh	纐
-urmi	𦥴
 urms	𦄣
 urn	𥾋
 urnx	𢗊
