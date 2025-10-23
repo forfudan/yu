@@ -52,7 +52,7 @@ font,ma,pinyin
 儿,Ee,ér -> e
 ,Ee,
 也,Ei,yě = iě -> i
-,Ei,yà = ià -> i ㊟取亞韻a
+,Ei,yà = ià -> i ㊟取亞聲
 ,Ei,
 ,Ei,
 㔾,Ej,Jié -> j
@@ -109,7 +109,7 @@ font,ma,pinyin
 勹,Ib,Bāo -> b
 ,Ib,
 虫,Ic,Chóng -> c
-乀,Id,
+乀,Id,Diǎn -> d ㊟同丶
 丶,Id,
 方,If,Fāng -> f
 艮,Ig,Gěn -> g
@@ -132,7 +132,7 @@ font,ma,pinyin
 ,Je,èr -> e
 丱,Jg,Guān -> g
 弓,Jg,Gōng -> g
-幺,Ji,yāo -> a ㊟取韻a
+幺,Ji,yāo = iāo -> i
 ,Ji,yí = í
 ,Ji,yí = í
 丩,Jj,Jiū -> j
@@ -143,7 +143,7 @@ font,ma,pinyin
 ,Jr,rì -> r ㊟同日歸併
 ,Jr,
 山,Js,SHān -> s
-ㄩ,Jv,Kǎn -> k
+ㄩ,Jv,Ø -> v ㊟無讀音或生僻部首
 曰,Jv,yuē = ǖe -> v
 ,Jv,Ø -> v ㊟無讀音或生僻部首
 ,Jv,Ø -> v ㊟無讀音或生僻部首
@@ -153,7 +153,7 @@ font,ma,pinyin
 辛,Jx,Xīn -> x
 早,Jz,Zǎo -> z
 长,Kc,CHáng -> c
-而,Ke,ér -> r ㊟取第二字母r
+而,Ke,ér -> e
 戈,Kg,Gē -> g
 弋,Ki,yì = i
 〇,Kl,Líng -> l
@@ -167,7 +167,7 @@ font,ma,pinyin
 ,Kw,wǔ -> w
 习,Kx,Xí -> x
 之,Kz,ZHī -> z
-丷,Lb,Cǎo -> k ㊟特例
+丷,Lb,Bā -> b
 ,Lb,
 疒,Lb,Bìng -> b
 貝,Lb,Bèi -> b
@@ -203,7 +203,7 @@ font,ma,pinyin
 ,Mr,rén -> r
 矢,Ms,SHǐ -> s
 尢,Mw,wǎng -> w
-页,Mx,yè = iè -> i
+页,Mx,xiè -> x ㊟取古音
 正,Mz,ZHèng -> z
 不,Nb,Bù -> b
 齒,Nc,CHǐ -> c
@@ -212,7 +212,7 @@ font,ma,pinyin
 壬,Nr,rén -> r
 巳,Ns,Sì -> s
 氵,Ns,SHuǐ -> s
-瓦,Nw,wǎ -> wa
+瓦,Nw,wǎ -> w
 心,Nx,Xīn -> x
 止,Nz,ZHǐ -> z
 龰,Nz,
@@ -269,11 +269,11 @@ font,ma,pinyin
 亥,Rh,Hài -> h
 言,Ri,yán = ián -> i
 巾,Rj,Jīn -> j
-,Rj,SHi -> i ㊟取韻i
+,Rj,Jiè -> j ㊟取介音j
 门,Rm,Mén -> m
 乃,Rn,Nǎi -> n
 其,Rq,Qí -> q
-十,Rs,SHi -> i ㊟取韻i
+十,Rs,SHi -> s
 亠,Rt,Tóu = t
 風,Sf,Fēng -> f
 合,Sh,Hé -> h
@@ -303,7 +303,7 @@ font,ma,pinyin
 鹵,Tl,Lǔ -> l
 米,Tm,Mǐ -> m
 夊,Tp,Pū -> p
-爿,Tp,Qiáng -> q
+爿,Tp,Pán -> p
 片,Tp,Piàn -> p
 尸,Ts,SHī -> s
 ,Ts,
@@ -313,8 +313,8 @@ font,ma,pinyin
 辶,Uc,CHuò -> c
 ⻍,Uc,
 广,Ug,Guǎng -> g
-由,Ui,yóu -> o ㊟取韻o
-人,Ur,rén -> e ㊟取韻e
+由,Ui,yóu = ióu -> i
+人,Ur,rén -> r
 糸,Us,Sī -> s
 身,Us,SHēn -> s
 饣,Us,SHi -> s
@@ -325,13 +325,13 @@ font,ma,pinyin
 厂,Vc,CHǎng -> c
 瓜,Vg,Guā -> g
 丆,Vh,hǎn -> h ㊟古音
-业,Vi,yè -> e ㊟取韻e
+业,Vi,yè = iè -> i
 彐,Vj,Jì -> j
 ,Vj,
 肀,Vj,
 钅,Vj,Jīn -> J
 了,Vl,Le -> l
-麻,Vm,Má -> a
+麻,Vm,Má -> m
 食,Vs,SHí -> s
 禺,Vv,yǔ = ǚ -> v
 壴,Vz,ZHú -> z

@@ -43,7 +43,7 @@ q	我们
 r	得到
 s	有的
 t	人们
-u	着力
+u	北京
 v	了解
 w	然后
 x	出来
@@ -68,7 +68,7 @@ q	我的
 r	得意
 s	有些
 t	人群
-u	着手
+u	着力
 v	了事
 w	然而
 x	出现
@@ -133,7 +133,7 @@ cg	姨
 ch	阵
 ci	陪
 cj	阳
-ck	娉
+ck	预
 cl	如
 cm	姐
 cn	女
@@ -339,7 +339,7 @@ km	则
 kn	螳
 ko	由
 kp	遇
-kq	蜘
+kq	曲
 kr	蝌
 ks	冒
 kt	内
@@ -483,7 +483,7 @@ qg	失
 qh	等
 qi	篇
 qj	几
-qk	舰
+qk	顺
 ql	知
 qm	怎
 qn	延
@@ -751,12 +751,12 @@ cb	努力
 cc	她们
 cd	姑娘
 ce	附近
-cf	隔离
+cf	隔开
 cg	姨妈
 ch	阵容
 ci	陪伴
 cj	阳光
-ck	妯娌
+ck	预防
 cl	如果
 cm	姐姐
 cn	女人
@@ -777,7 +777,7 @@ dc	要求
 dd	、
 de	故事
 df	感到
-dg	越南
+dg	越来
 dh	基本
 di	十分
 dj	其他
@@ -957,7 +957,7 @@ km	叔叔
 kn	螳螂
 ko	由于
 kp	遇到
-kq	蜘蛛
+kq	曲折
 kr	蝌蚪
 ks	冒险
 kt	内容
@@ -1096,7 +1096,7 @@ qg	失去
 qh	等等
 qi	篇章
 qj	几个
-qk	舰队
+qk	顺利
 ql	知道
 qm	怎么
 qn	延长
@@ -1361,12 +1361,12 @@ cb	努嘴
 cc	她家
 cd	姑息
 ce	附件
-cf	隔壁
+cf	隔离
 cg	姨夫
 ch	阵营
 ci	陪同
 cj	阳台
-ck	娉婷
+ck	预计
 cl	如何
 cm	姐妹
 cn	女子
@@ -1386,7 +1386,7 @@ dc	要是
 dd	慧眼
 de	斯文
 df	感觉
-dg	越发
+dg	越南
 dh	石头
 di	十足
 dj	其中
@@ -1562,6 +1562,7 @@ kl	蝇头
 km	则是
 ko	由此
 kp	遇见
+kq	曲线
 ks	冒充
 kt	内部
 ku	赚取
@@ -1696,7 +1697,7 @@ qg	失误
 qh	等待
 qi	篇幅
 qj	几乎
-qk	舰艇
+qk	顺应
 ql	知识
 qm	怎样
 qn	延续
@@ -2379,8 +2380,8 @@ cjg	隈
 cjm	媪
 cjv	隰
 ckf	嫻
-cki	预
 cko	妯
+cks	娉
 cky	隅
 cla	韋
 clb	絮
@@ -4194,6 +4195,7 @@ kpw	蚊
 kpx	螭
 kqa	蛾
 kqj	虮
+kql	蜘
 kqm	蚱
 kqn	蜒
 kqp	曳
@@ -5311,10 +5313,9 @@ qjs	舢
 qjx	鳎
 qjy	鳃
 qkf	鳢
-qki	顺
 qkj	簡
 qko	笛
-qkx	笕
+qkx	舰
 qld	簍
 qli	鲱
 qlj	智
@@ -15306,8 +15307,8 @@ yvte	悛
 inis	沚
 xasb	彟
 qjac	鲥
-qkxk	笕
 udwy	煳
+qkxk	笕
 dwod	尥
 fwxk	劢
 tovq	锍
@@ -37808,6 +37809,7 @@ bnbn	𡖈
 bnbs	𤟶
 bnbu	𤼬
 bncs	𥿑
+bndi	𠦁
 bndm	𦅵
 bnes	𦄿
 bngf	𦄰
@@ -39748,7 +39750,6 @@ dbms	𧰷
 dbmv	𢺶
 dbmx	𧡽
 dbnf	𥒧
-dbns	𠦁
 dbnu	𩄙
 dbod	𥐮
 dbod	𧺫
@@ -45148,6 +45149,8 @@ ftgg	𣚙
 fthf	𣛻
 fthk	𡐜
 ftht	𡉊
+ftii	𠔀
+ftii	𢌬
 ftio	𢀘
 ftjr	𣅆
 ftjr	𣇮
@@ -50741,6 +50744,7 @@ iqng	𤀈
 iqod	𩓲
 iqof	𣑃
 iqoh	𡋋
+iqop	𥹦
 iqpm	𥁷
 iqpn	𤄪
 iqpt	𤄤
@@ -51170,7 +51174,6 @@ ivbm	𣽪
 ivde	𤀪
 ivdg	𢩍
 ivdi	𣲌
-ivdp	𥹦
 iveh	𢼚
 ivei	𣢛
 ivei	𣢵
@@ -59527,10 +59530,12 @@ ofrr	𧙩
 ofrr	𩫓
 ofrt	𡩟
 ofsr	𧘎
+ofti	𡦿
 ofti	𡧆
 ofti	𡧢
 oftm	𥋩
 oftn	𠆏
+oftr	𧘙
 oftr	𧙰
 oftv	𡨭
 ofud	𡩵
@@ -60081,11 +60086,9 @@ otcb	𩎮
 otdg	𠲩
 oteb	𡦼
 otff	𡨀
-otfi	𡦿
 otfl	𣄅
 otfm	𡩗
 otfn	𣄇
-otfr	𧘙
 otfr	𧜪
 otfr	𧝾
 otht	𩫊
@@ -60388,7 +60391,6 @@ oxfr	𧙵
 oxfy	𡪗
 oxhf	𨐶
 oxhr	𧚌
-oxid	𠤬
 oxmb	𡧁
 oxnl	𠾃
 oxnl	𡃬
@@ -60906,6 +60908,7 @@ pfsj	𧙧
 pfsj	𪎙
 pfsk	𧘚
 pfsm	𤷷
+pfti	𧘒
 pftk	𧜝
 pftk	𧟐
 pftw	𤻞
@@ -61752,7 +61755,6 @@ ptfe	𤻍
 ptff	𤶠
 ptff	𥥸
 ptff	𥺌
-ptfi	𧘒
 ptfj	𤺠
 ptfl	𧚼
 ptfn	𤷔
@@ -69373,6 +69375,7 @@ tdde	𩓄
 tddi	𩶨
 tdei	𩑎
 tdfd	𩓭
+tdfr	𦥴
 tdfv	𩺤
 tdgf	𩽅
 tdgk	𩻅
@@ -69399,7 +69402,6 @@ tdsq	𩻿
 tdta	𩽔
 tdto	𩷙
 tdto	𩻬
-tdtr	𦥴
 tdup	𤖯
 tduy	𩵣
 tdvr	𥠌
@@ -69485,8 +69487,6 @@ tfgd	𠇄
 tfgl	𩷵
 tfhs	𩹟
 tfhw	𡰈
-tfii	𠔀
-tfii	𢌬
 tfja	𠨣
 tfja	𣍋
 tfja	𩸋
@@ -73532,6 +73532,7 @@ vxgv	𠙸
 vxhj	𣋧
 vxht	𡉸
 vxig	𢎞
+vxii	𠤬
 vxii	𢎘
 vxiv	𠫖
 vxjm	𢇔
@@ -74057,6 +74058,7 @@ wfsm	𩁱
 wfso	𨦐
 wfst	𩺄
 wfte	𦜒
+wfti	𨥃
 wfto	𨰡
 wfts	𤙀
 wftw	𦢈
@@ -75398,7 +75400,6 @@ wtey	𢜕
 wtfa	𨉅
 wtfd	𩓬
 wtff	𤙛
-wtfi	𨥃
 wtfj	𨭗
 wtfj	𨮃
 wtfm	𤚎
@@ -108444,6 +108445,7 @@ bfsl	즣
 bfss	𗕋
 bfte	릇
 bfte	즛
+bfti	𘤴
 bftn	𘛽
 bftn	𘛿
 bftn	𘪆
@@ -108456,6 +108458,8 @@ bftt	즜
 bftv	𗕖
 bftw	𗕌
 bftw	𗕱
+bftw	𘄓
+bftw	𘄔
 bftw	𘛾
 bfua	𗕦
 bfur	𗕗
@@ -109452,10 +109456,7 @@ bsxa	𲸉
 btej	ᆳ
 btej	ㄽ
 bteu	𘲒
-btfi	𘤴
 btfq	𗇠
-btfw	𘄓
-btfw	𘄔
 btkf	𗈘
 btlv	𘲟
 btwa	𘑾
@@ -112024,9 +112025,11 @@ ftbb	𮲴
 ftfm	𗀕
 ftfr	𗀅
 ftfv	𲦃
+ftks	𘭼
 ftmw	𛂋
 ftmw	𛂌
 ftte	𮲭
+ftte	𘭹
 fttk	𘬎
 fttx	𲓄
 ftvw	𳆂
@@ -120180,6 +120183,7 @@ sbam	𗞘
 sbaw	𗝂
 sbfr	𗄛
 sbfs	𗝲
+sbfw	𗝃
 sbfw	𗷐
 sbhe	𲽟
 sbje	𲽭
@@ -120193,7 +120197,6 @@ sbkw	𘫹
 sblv	𲽧
 sbqw	𗶲
 sbrw	𗜆
-sbtw	𗝃
 sbuh	𲽿
 sbvf	𗜇
 sbvr	𗝆
@@ -121997,7 +122000,6 @@ tfjl	𲥔
 tfjs	𲥖
 tfkb	𮸉
 tfkf	𗅕
-tfks	𘭼
 tfkt	𗏈
 tfkt	𳍏
 tfkw	𗅯
@@ -122107,7 +122109,6 @@ tfsv	𗅔
 tfsw	𗆚
 tfte	슷
 tfte	ㅾ
-tfte	𘭹
 tftt	슸
 tfur	𗅱
 tfur	𗅲
@@ -124207,6 +124208,7 @@ uawm	𮷕
 ubar	𲹵
 ubbn	𘁋
 ubff	𗯦
+ubff	𘖇
 ubff	𘩻
 ubfi	𘤪
 ubfk	𘨗
@@ -124215,8 +124217,11 @@ ubfr	𗔣
 ubfr	𗔫
 ubfr	𗔸
 ubfr	𘛧
+ubft	𘖆
+ubft	𘨘
 ubfw	𗔉
 ubfw	𘖅
+ubfw	𘖈
 ubhk	𲟈
 ubkf	𘍺
 ubkf	𘍽
@@ -124268,15 +124273,11 @@ ubnr	𗯨
 ubnw	𘩼
 ubok	𲹌
 ubta	𘛷
-ubtf	𘖆
-ubtf	𘖇
-ubtf	𘨘
 ubtq	𘛬
 ubtq	𘛶
 ubtq	𘛻
 ubtq	𘛼
 ubtr	𘛺
-ubtw	𘖈
 ubtw	𘛭
 ubtw	𘛵
 ubtw	𘛸
@@ -134956,6 +134957,7 @@ qong	𥵭
 qahg	𥷪
 qihg	𥷰
 quhg	𥸔
+iwvp	𥹦
 byxj	𦁸
 bhog	𦅞
 hbyx	𦅫
