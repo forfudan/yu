@@ -208,3 +208,13 @@ import ZigenMap from "@/zigen/ZigenMap.vue"
 | ㄢ       | 〡ㄣ      | ㄣ 〡ㄢ\* | 〡ㄢ\* ㄨㄢ ㄩㄢ ㄩㄣ |      |
 |          | 〡ㄤ ㄨㄤ | ㄤ ㄥ     | 〡ㄥ ㄩㄥ             |      |
 | (ㄕ)ㄖ\* | ㄖㄣ      | ㄖㄨ      | ㄖ\*                  |      |
+
+以下爲極簡歸納表：
+
+| 韻                               | 韻碼 |
+| :------------------------------- | :--- |
+| a ia ua an                       | A    |
+| o uo er ei ui in iang uang       | O    |
+| e ê ü ai ou ie üe en ian ang eng | E    |
+| i ao iao ian uan uen ing iong    | I    |
+| u iu                             | U    |
