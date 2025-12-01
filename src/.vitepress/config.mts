@@ -77,8 +77,12 @@ export default defineConfig({
               link: "/docs/ming",
             },
             {
-              text: "吉旦餅输入法",
+              text: "吉旦饼输入法",
               link: "/docs/wafel",
+            },
+            {
+              text: "常见问题",
+              link: "/docs/faq",
             },
           ],
         },
@@ -493,6 +497,10 @@ export default defineConfig({
                 {
                   text: "吉旦餅輸入法",
                   link: "/zht/docs/wafel",
+                },
+                {
+                  text: "常見問題",
+                  link: "/zht/docs/faq",
                 },
               ],
             },

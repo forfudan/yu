@@ -30,6 +30,7 @@ paths_of_docs = [
     "/docs/characteristics.md",
     "/docs/sypy.md",
     "/docs/coverage.md",
+    "/docs/faq.md",
     # 教程
     "/learn/index.md",
     "/learn/division.md",
