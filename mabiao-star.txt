@@ -20930,6 +20930,7 @@ dsel	诺
 dsel	𨵫
 dses	𣪞
 dsfa	𤾹
+dsfe	𡴓
 dsfh	𩴴
 dsfi	䜩
 dsfi	𤽧
@@ -21130,6 +21131,7 @@ dsws	𤗩
 dswt	𨍈
 dswu	𨎽
 dsxa	𤾔
+dsxn	𠤣
 dsxs	𬣿
 dsxt	䴌
 dsxt	𤘁
@@ -34792,11 +34794,9 @@ gcrw	𪒣
 gcsa	𥮣
 gcsa	𥴘
 gcsa	𗂕
-gcse	𡴓
 gcsk	𥮏
 gcsl	𥵶
 gcsl	𥶚
-gcsn	𠤣
 gcsw	𥳫
 gctv	𱸣
 gcui	𮉼
@@ -43017,7 +43017,6 @@ hlvv	翓
 hlvz	喜
 hlvz	𧺚
 hlvz	🉣
-hlvz	𛀛
 hlvz	𛀣
 hlvz	😗
 hlvz	😘
@@ -44287,6 +44286,7 @@ hslv	嘉
 hslv	㹢
 hslv	𡊗
 hslv	𭐒
+hslv	𛀛
 hslz	赲
 hsm	鸥
 hsmd	𠛅
@@ -56831,6 +56831,7 @@ jrr	㈰
 jrr	㊐
 jrr	𛂪
 jrr	
+jrr	
 jrre	𤦴
 jrre	𤨜
 jrre	𥇥
@@ -63578,7 +63579,6 @@ ledt	𠿬
 lee	耳
 lee	⽿
 lee	𛂍
-lee	𛂎
 leei	𠮪
 leer	𠳎
 leez	𲔖
@@ -65687,6 +65687,7 @@ ljbl	𫬊
 ljbo	遣
 ljbo	𫑍
 ljbo	𬩠
+ljbo	𛀷
 ljbo	몾
 ljbo	뭊
 ljbo	옺
@@ -65938,7 +65939,6 @@ ljjk	𰷒
 ljjm	𥅌
 ljjn	𭌴
 ljjo	遺
-ljjo	𛀷
 ljjo	𛄑
 ljjq	𭉷
 ljjq	𲂴
@@ -102784,6 +102784,7 @@ srqm	䩎
 srqo	薟
 srr	而
 srr	⽽
+srr	𛂎
 srr	𘬡
 srra	蘂
 srre	苁
@@ -121424,6 +121425,7 @@ wwdk	𣎫
 wwdl	𠺤
 wwdn	鵬
 wwdn	𩿩
+wwdr	𱾲
 wwdu	𧂥
 wwdw	𦯦
 wwee	𠙢
@@ -121455,7 +121457,6 @@ wwft	𫿪
 wwfx	𬅡
 wwgh	𪐽
 wwgp	𮌚
-wwgr	𱾲
 wwgw	𦛴
 wwgw	𦽱
 wwhi	𤉐
