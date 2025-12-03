@@ -48190,6 +48190,7 @@ jjoo	𱁐
 jjos	𰖦
 jjot	𢐍
 jjot	𭧊
+jjou	𱾲
 jjow	㫯
 jjow	𠒄
 jjox	𨌗
@@ -48325,7 +48326,6 @@ jjwk	𡻍
 jjwl	𣈫
 jjwn	𦹼
 jjwu	𨙏
-jjwu	𱾲
 jjx	峷
 jjx	辡
 jjx	㢹
@@ -49631,6 +49631,7 @@ jr	㈰
 jr	㊐
 jr	𛂪
 jr	
+jr	
 jrad	𬽀
 jraf	𰐝
 jrah	𭧧
@@ -52147,6 +52148,7 @@ kdyw	喤
 ke	而
 ke	而且
 ke	⽽
+ke	𛂎
 ke	𘬡
 kea	咻
 keae	𱒊
@@ -55573,7 +55575,6 @@ kolt	묃
 kolt	왼
 kolt	왿
 kolu	遺
-kolu	𛀷
 kolu	𛄑
 kolu	뫿
 kolu	묁
@@ -55696,6 +55697,7 @@ kott	𪢀
 kotu	遣
 kotu	𫑍
 kotu	𬩠
+kotu	𛀷
 kotu	몭
 kotu	뮩
 kotu	옩
@@ -58510,7 +58512,6 @@ le	耳
 le	耳机
 le	⽿
 le	𛂍
-le	𛂎
 leac	𗁞
 leac	𗲿
 leai	𤸨
@@ -74447,6 +74448,7 @@ ocfo	궑
 ocfo	궥
 ocfo	궦
 ocfo	궭
+ocft	𡴓
 ocft	𲌱
 ocft	권
 ocft	궏
@@ -74552,6 +74554,7 @@ ocmx	𱾷
 ocnh	顖
 ocnm	𱂶
 ocnx	恖
+ocob	𠤣
 ococ	雠
 ococ	𗗿
 ococ	𗘄
@@ -111535,7 +111538,6 @@ vkv	叾
 vkv	𢊠
 vkv	𬬪
 vkv	🉣
-vkv	𛀛
 vkv	𛀣
 vkv	😗
 vkv	😘
@@ -112765,6 +112767,7 @@ vsku	𩟽
 vskv	嘉
 vskv	铅
 vskv	𢑔
+vskv	𛀛
 vsl	历
 vsl	𰽖
 vslc	𮸣
@@ -117973,8 +117976,6 @@ wqai	𘉩
 wqam	𡠿
 wqas	媢
 wqas	𥅉
-wqcb	𠤣
-wqct	𡴓
 wqdi	𠬦
 wqdm	婰
 wqdm	𥜻
