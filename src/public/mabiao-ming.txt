@@ -1727,7 +1727,6 @@ jmse	闲
 jmta	畢
 jmte	阁
 jmve	晖
-jnve	晖
 jrci	緊
 jrco	賢
 jrcu	堅
@@ -2231,7 +2230,7 @@ smfo	柄
 smga	株
 smge	橋
 smgo	桃
-smhe	棗
+smhe	枸
 smhi	刺
 smho	棗
 smja	楊
@@ -33037,7 +33036,6 @@ ddfms	𦱴
 ddfnd	𰴳
 ddfrj	𦬟
 ddfwo	𫥤
-ddfwo	𱾲
 ddga	𠩃
 ddgbb	𢋱
 ddgbo	𧪼
@@ -33117,6 +33115,7 @@ ddltp	𢾕
 ddltp	𪍾
 ddlu	𠒄
 ddlwc	𮋚
+ddlwo	𱾲
 ddlxi	𡭧
 ddlzi	𧧕
 ddmci	𦬧
@@ -41888,8 +41887,6 @@ fphsg	𥅉
 fphsi	𠂛
 fphsi	𠂜
 fphti	𤰳
-fphvc	𡴓
-fphvl	𠤣
 fphwl	𣬌
 fpja	㼲
 fpjba	𪥉
@@ -66371,6 +66368,7 @@ lxvdk	𥥭
 lxvdm	𣫶
 lxvdu	𥤧
 lxvdu	𫡒
+lxvfc	𡴓
 lxvfd	𮄁
 lxvfk	𫤭
 lxvfx	䆸
@@ -66390,6 +66388,7 @@ lxvll	𥩊
 lxvlq	𥦔
 lxvme	𱶶
 lxvmi	𥥪
+lxvml	𠤣
 lxvms	𱷄
 lxvmw	𱷡
 lxvne	𮄄
@@ -109719,7 +109718,6 @@ dkjff	몯
 dkjfv	몿
 dkjfw	몺
 dkjgb	𛀩
-dkjgl	𛀷
 dkjgl	𛄑
 dkjgm	嗢
 dkjhc	喝
@@ -109757,6 +109755,7 @@ dkjlw	묐
 dkjrf	뫂
 dkjsd	뫃
 dkjsj	뫁
+dkjsl	𛀷
 dkjvo	몾
 dkjwo	못
 dkjww	몼
@@ -113922,6 +113921,7 @@ fo	㋖
 fo	㋼
 fo	キ
 fo	ヰ
+fo	𛂎
 fo	𛅤
 fo	𘠩
 fo	𘬡
@@ -115621,6 +115621,7 @@ ji	𛂪
 ji	
 ji	
 ji	
+ji	
 jjcdk	㍼
 jjdfp	𗅓
 jjgmo	㬈
@@ -118470,7 +118471,6 @@ mo	コ
 mo	ュ
 mo	ユ
 mo	𛂍
-mo	𛂎
 mo	𛅕
 mo	𘠛
 mo	
@@ -122391,7 +122391,6 @@ vrwo	쥿
 vrwwo	즀
 vscso	㍇
 vsdke	🉣
-vsdke	𛀛
 vsdke	𛀣
 vsdke	😗
 vsdke	😘
@@ -122462,6 +122461,7 @@ vsqku	殺
 vsqrn	𪄅
 vsrwo	閷
 vstcu	⿎
+vswdk	𛀛
 vswli	勇
 vswli	勇
 vvbbu	짜
