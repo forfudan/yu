@@ -8,6 +8,7 @@
 
   Modification History:
   - 2025-08-14 by 朱複丹: 初版
+  - 2025-12-16 by 朱複丹: 增加靈明方案.
 -->
 
 <script setup lang="ts">
@@ -25,6 +26,7 @@ interface SearchScheme {
     supplement?: boolean    // 是否支持回頭碼
     ming?: boolean          // 日月方案
     wafel?: boolean         // 華方案
+    ling?: boolean          // 靈明方案
 }
 
 const props = defineProps<{
@@ -72,6 +74,11 @@ const effectiveWafel = computed(() => {
     return currentScheme.value.wafel || false
 })
 
+const effectiveLing = computed(() => {
+    // ling 屬性主要由當前方案決定
+    return currentScheme.value.ling || false
+})
+
 // Switch to a different scheme
 function switchScheme(schemeId: string) {
     if (schemes.find(s => s.id === schemeId)) {
@@ -86,6 +93,7 @@ function getSchemeChar(schemeId: string): string {
         'light': '光',
         'star': '星',
         'ming': '明',
+        'ling': '靈',
         'wafel': '華'
     };
     return charMap[schemeId] || '?';
@@ -117,7 +125,7 @@ const componentKey = computed(() => `search-${activeScheme.value}`)
         <!-- Search Component -->
         <OptimizedFetchSearch :key="componentKey" :chaifenUrl="currentScheme.chaifenUrl"
             :zigenUrl="currentScheme.zigenUrl" :supplement="effectiveSupplement" :ming="effectiveMing"
-            :wafel="effectiveWafel" v-model="sharedUserInput" />
+            :wafel="effectiveWafel" :ling="effectiveLing" v-model="sharedUserInput" />
     </div>
 </template>
 
@@ -169,8 +177,9 @@ const componentKey = computed(() => `search-${activeScheme.value}`)
 }
 
 .scheme-text {
-    font-family: 'Noto Serif SC', serif;
-    /* 使用宋體字體 */
+    font-family: 'Noto Serif TC', 'Noto Serif SC', 'Source Han Serif', 'Source Han Serif TC',
+        'Source Han Serif SC', serif;
+    /* 使用支持繁體字的字體 */
 }
 
 /* 暗色模式下的圓形按鈕 */

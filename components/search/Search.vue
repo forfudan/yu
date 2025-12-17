@@ -8,6 +8,7 @@
   - 2024-04-24 by 朱複丹: 增加對天碼的支持
   - 2024-03-27 by 朱複丹: 增加參數 supplement，判斷是否需要回頭碼
   - 2024-03-27 by yb6b: 製作拆分查詢的組件
+  - 2025-12-16 by 朱複丹: 增加靈明方案.
 -->
 
 <script setup lang="ts">
@@ -21,6 +22,7 @@ const p = defineProps<{
     supplement: boolean,
     ming: boolean,
     wafel?: boolean,
+    ling?: boolean,
     /** 是否启用URL里的搜索Params */
     searchParam?: boolean,
     /** 用户输入 */
@@ -82,7 +84,7 @@ const poet: string = poets[ind];
     <div v-if="!localUserInput" class="opacity-40 text-center p-9 tracking-widest">{{ poet }}</div>
     <div class="flex justify-center flex-wrap my-8" v-else>
         <Card v-for="zigen in searchZigens" :key="zigen" :chaifen="chaifenMap.get(zigen)" :zigenMap
-            :supplement="p.supplement" :ming="p.ming" :wafel="p.wafel" />
+            :supplement="p.supplement" :ming="p.ming" :wafel="p.wafel" :ling="p.ling" />
     </div>
 
 </template>

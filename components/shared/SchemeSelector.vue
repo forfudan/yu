@@ -5,6 +5,7 @@
 
   Modification History:
   - 2025-08-14 by 朱複丹: 初版
+  - 2025-12-16 by 朱複丹: 增加靈明方案.
 -->
 
 <script setup lang="ts">
@@ -30,7 +31,8 @@ function getSchemeChar(schemeId: string): string {
         'wafel': '華',
         'star': '星',
         'joy': '卿',
-        'ming': '明'
+        'ming': '明',
+        'ling': '靈'
     }
     return charMap[schemeId] || '?'
 }

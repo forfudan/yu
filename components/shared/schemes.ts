@@ -14,6 +14,7 @@ export interface SearchScheme extends BaseScheme {
     supplement: boolean
     ming: boolean
     wafel?: boolean
+    ling?: boolean
 }
 
 export interface ZigenScheme extends BaseScheme {
@@ -58,6 +59,16 @@ export const SCHEMES: SearchScheme[] = [
         zigenUrl: '/zigen-ming.csv',
         supplement: false,
         ming: true
+    },
+    {
+        id: 'ling',
+        name: '靈明',
+        description: '明明上天·配天之靈',
+        chaifenUrl: '/chaifen.csv',
+        zigenUrl: '/zigen-ling.csv',
+        supplement: false,
+        ming: false,
+        ling: true
     },
     {
         id: 'wafel',

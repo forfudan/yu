@@ -471,6 +471,7 @@ export class ZigenExportService {
             'light': '光華',
             'star': '星陳',
             'ming': '日月',
+            'ling': '靈明',
             'wafel': '吉旦餅',
             'tianma': '天碼',
         }
