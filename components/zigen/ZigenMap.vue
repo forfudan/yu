@@ -110,7 +110,7 @@ const flatKeyList = computed(() => {
 
 // 宇浩輸入法系列方案
 // 共用拆分哦！
-const BaseSchemes = ['joy', 'light', 'star', 'ming', 'wafel'];
+const BaseSchemes = ['joy', 'light', 'star', 'ming', 'wafel', 'ling'];
 
 // 獲取方案對應的文件URL
 function getSchemeUrls(schemeId: string) {
