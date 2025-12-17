@@ -58,25 +58,10 @@ const currentScheme = computed(() => {
     return schemes.find(s => s.id === activeScheme.value) || schemes[0]
 })
 
-// Computed properties for supplement and ming based on current scheme
-const effectiveSupplement = computed(() => {
-    // 使用当前方案的supplement配置
-    return currentScheme.value.supplement || false
-})
-
-const effectiveMing = computed(() => {
-    // ming 屬性主要由當前方案決定
-    return currentScheme.value.ming || false
-})
-
-const effectiveWafel = computed(() => {
-    // wafel 屬性主要由當前方案決定
-    return currentScheme.value.wafel || false
-})
-
-const effectiveLing = computed(() => {
-    // ling 屬性主要由當前方案決定
-    return currentScheme.value.ling || false
+// Computed property for rule based on current scheme
+const effectiveRule = computed(() => {
+    // 直接使用方案的 id 作为 rule
+    return currentScheme.value.id
 })
 
 // Switch to a different scheme
@@ -119,13 +104,12 @@ const componentKey = computed(() => `search-${activeScheme.value}`)
         <div v-if="!hideSchemeButtons" class="mb-3 text-sm text-gray-600 dark:text-gray-400 text-center">
             <span class="font-medium">當前方案</span>：{{ currentScheme.name }}
             <span v-if="currentScheme.description" class="ml-2 text-xs opacity-75">{{ currentScheme.description
-            }}</span>
+                }}</span>
         </div>
 
         <!-- Search Component -->
         <OptimizedFetchSearch :key="componentKey" :chaifenUrl="currentScheme.chaifenUrl"
-            :zigenUrl="currentScheme.zigenUrl" :supplement="effectiveSupplement" :ming="effectiveMing"
-            :wafel="effectiveWafel" :ling="effectiveLing" v-model="sharedUserInput" />
+            :zigenUrl="currentScheme.zigenUrl" :rule="effectiveRule" v-model="sharedUserInput" />
     </div>
 </template>
 

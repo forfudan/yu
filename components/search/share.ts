@@ -1,3 +1,14 @@
+/**
+ * share.ts - 搜索和訓練組件共享工具函數
+ * 
+ * Modification History:
+ * - 2024-03-27 by 朱複丹: 初始化倉庫，創建共享工具函數
+ * - 2024-03-27 by 朱複丹: 添加 supplement 開關以啟用補碼功能
+ * - 2025-08-13 by 朱複丹: 為日月增加拆分查詢，添加 ming 參數支持
+ * - 2025-12-17 by 朱複丹: 增加靈明反查編碼邏輯，支持主根（兩碼字根）判斷和大碼大寫
+ * - 2025-12-17 by 朱複丹: 重構參數系統，將 supplement, ming, wafel, ling 合併為單一 rule 參數
+ */
+
 import { withBase } from "vitepress";
 import ChaiDataLoader from "./ChaiDataLoader";
 export let cache: Record<string, object> = {}
@@ -22,8 +33,14 @@ export type ZigenMap = Map<string, Zigen>
 export type ChaifenMap = Map<string, Chaifen>
 
 /** 根據拆分表生成編碼 */
-export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, supplement: boolean, ming: boolean, wafel?: boolean, ling?: boolean) {
+export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, rule: string) {
     const divisionArray = [...division]
+
+    // 根據 rule 確定編碼規則
+    const supplement = rule === 'star' || rule === 'light'
+    const ming = rule === 'ming'
+    const wafel = rule === 'wafel'
+    const ling = rule === 'ling'
 
     if (ling) {
         // 靈明碼編碼邏輯

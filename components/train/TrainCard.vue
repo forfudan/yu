@@ -25,8 +25,7 @@ const p = defineProps<{
     chaifenMap: ChaifenMap,
     /** 训练模式：字根、单字练习 */
     mode: 'g' | 'z'
-    supplement: boolean
-    ming: boolean
+    rule: string
 }>()
 
 let thisSchedule: Schedule<Card>;
@@ -63,7 +62,7 @@ watch(userKeys, (newKeys) => {
 
     // Check if we should trigger checkNextItem
     const shouldCheck = newKeys.length >= card.value.key.length ||
-        (p.ming && mingAlternatives[card.value.name] && newKeys.toLowerCase() === mingAlternatives[card.value.name])
+        (p.rule === 'ming' && mingAlternatives[card.value.name] && newKeys.toLowerCase() === mingAlternatives[card.value.name])
 
     if (!shouldCheck) return
 
@@ -88,7 +87,7 @@ function checkNextItem(answer: string) {
     let isCorrectAnswer = answerLowercase === keyLowercase
 
     // Check for alternative solutions when ming is true
-    if (!isCorrectAnswer && p.ming && mingAlternatives[card.value.name]) {
+    if (!isCorrectAnswer && p.rule === 'ming' && mingAlternatives[card.value.name]) {
         isCorrectAnswer = answerLowercase === mingAlternatives[card.value.name]
     }
 
@@ -175,7 +174,8 @@ function restartTraining() {
 
             <div :class="['text-center', { 'opacity-0': !isFirstLearn }]">答案是 <b class="font-mono">{{ card.key }}</b>
                 <span v-if="mode === 'z'">（{{ chaifenMap?.get(card.name)?.division }}）</span>
-                <div v-if="p.ming && ['的', '是', '我', '不', '了'].includes(card.name)" class="text-sm text-gray-500 mt-1">
+                <div v-if="p.rule === 'ming' && ['的', '是', '我', '不', '了'].includes(card.name)"
+                    class="text-sm text-gray-500 mt-1">
                     也可直接使用韻碼 <b class="font-mono text-blue-600">{{
                         card.name === '的' ? 'E' :
                             card.name === '是' ? 'I' :

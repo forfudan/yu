@@ -10,17 +10,14 @@ import { Chaifen, ZigenMap, makeCodesFromDivision } from "./share";
 const p = defineProps<{
     chaifen: Chaifen,
     zigenMap: ZigenMap,
-    supplement: boolean,
-    ming: boolean,
-    wafel?: boolean,
-    ling?: boolean,
+    rule: string,
 }>()
 
 const uriText = computed(() => encodeURIComponent(p.chaifen.char))
 const unicode = computed(() => p.chaifen.char.codePointAt(0).toString(16).toUpperCase())
 
-const codes = computed(() => makeCodesFromDivision(p.chaifen.division, p.zigenMap, p.supplement, p.ming, p.wafel, p.ling))
-const codes_tw = computed(() => p.chaifen.division_tw == '' ? '' : makeCodesFromDivision(p.chaifen.division_tw, p.zigenMap, p.supplement, p.ming, p.wafel, p.ling))
+const codes = computed(() => makeCodesFromDivision(p.chaifen.division, p.zigenMap, p.rule))
+const codes_tw = computed(() => p.chaifen.division_tw == '' ? '' : makeCodesFromDivision(p.chaifen.division_tw, p.zigenMap, p.rule))
 
 </script>
 

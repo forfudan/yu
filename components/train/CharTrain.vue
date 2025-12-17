@@ -13,9 +13,7 @@ const p = defineProps<{
   zigenUrl: string
   /** 练习的范围，从第几条到第几条，不填则是全部 */
   range?: [start: number, end: number]
-  supplement: boolean
-  ming: boolean
-  wafel?: boolean
+  rule: string
 }>()
 
 let cardsName = p.name + '_char'
@@ -42,7 +40,7 @@ onMounted(async () => {
 
   cards.value = chaifenValues.map(cf => ({
     name: cf.char,
-    key: makeCodesFromDivision(cf.division, zigenMap, p.supplement, p.ming, p.wafel)
+    key: makeCodesFromDivision(cf.division, zigenMap, p.rule)
   }))
 
   cache[cardsName] = cards.value
@@ -50,7 +48,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <Train v-if="cards && chaifenMap" :name="cardsName" :cards :chaifenMap mode="z" :supplement :ming />
+  <Train v-if="cards && chaifenMap" :name="cardsName" :cards :chaifenMap mode="z" :rule="p.rule" />
   <h2 class="text-gray-700 text-center" v-else>
     下载数据中……
   </h2>

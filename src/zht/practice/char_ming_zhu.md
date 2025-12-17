@@ -9,5 +9,5 @@ aside: false
 import Train from "@/train/CharTrain.vue"
 </script>
 <div class="zigen-font">
-<Train name="ming"  chaifenUrl="/chaifen_zhu.csv" zigenUrl="/zigen-ming.csv" :range="[0,500]" :supplement="false" :ming="true" />
+<Train name="ming" chaifenUrl="/chaifen_zhu.csv" zigenUrl="/zigen-ming.csv" :range="[0,1000]" rule="ming" />
 </div>

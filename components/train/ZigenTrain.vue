@@ -25,14 +25,12 @@ const p = defineProps<{
     name: string,
     /** 字根映射的csv文件URL */
     zigenUrl: string
-    /** 練習的範圍，從第幾條到第幾條，不填則是全部 */
+    /** 練習的範圍，從第幾條到第幾條，不填则是全部 */
     range?: [start: number, end: number]
     /** 字根練習的模式 */
     mode: 'A' | 'a' | 'both'
-    /** 是否顯示補充，保持向後兼容 */
-    supplement?: boolean
-    /** 是否顯示拆分名詞，保持向後兼容 */
-    ming?: boolean
+    /** 編碼規則，可選值: joy, light, star, ming, wafel, ling */
+    rule?: string
 }>()
 
 let cardsName = p.name + '_zigen_grouped'
@@ -261,8 +259,8 @@ onMounted(async () => {
 <template>
     <div v-if="cardGroups && chaifenMap">
         <TrainCardGroup :name="cardsName" :card-groups="cardGroups" :chaifen-map="chaifenMap" mode="g"
-            :supplement="p.supplement ?? false" :ming="p.ming ?? false" :is-frequency-order="isFrequencyOrder"
-            :on-toggle-sort="toggleSortOrder" :on-reset="resetTraining" />
+            :rule="p.rule || p.name" :is-frequency-order="isFrequencyOrder" :on-toggle-sort="toggleSortOrder"
+            :on-reset="resetTraining" />
     </div>
     <h2 class="text-gray-700 dark:text-gray-300 text-center" v-else>
         下載資料中……

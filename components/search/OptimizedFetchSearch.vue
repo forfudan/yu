@@ -15,10 +15,7 @@ import ChaiDataLoader from "./ChaiDataLoader";
 const p = defineProps<{
     chaifenUrl: string,  // Required - specifies which chaifen file to use
     zigenUrl: string,
-    supplement: boolean,
-    ming?: boolean,
-    wafel?: boolean,
-    ling?: boolean,
+    rule: string,
     modelValue?: string, // 支持 v-model 传入用户输入
 }>()
 
@@ -187,8 +184,7 @@ function quickSearch(query: string) {
 
         <!-- Search component (only when data is loaded) -->
         <Search v-if="isDataLoaded && chaifenMap && zigenMap" :chaifenMap="chaifenMap" :zigenMap="zigenMap"
-            :supplement="p.supplement" :ming="p.ming || false" :wafel="p.wafel || false" :ling="p.ling || false"
-            v-model:userInput="userInput" />
+            :rule="p.rule" v-model:userInput="userInput" />
 
         <!-- Show poetry when no input and no data loaded yet -->
         <div v-else-if="!userInput.trim() && !isLoading && !loadError"

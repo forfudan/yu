@@ -10,7 +10,7 @@ import Train from "@/train/ZigenTrain.vue"
 import ZigenMap from "@/zigen/ZigenMap.vue"
 </script>
 <div class="zigen-font">
-<Train name="ming" zigenUrl="/zigen-ming.csv" :range="[0,]" :mode='"both"' :supplement='false' :ming='false' />
+<Train name="ming" zigenUrl="/zigen-ming.csv" :range="[0,]" :mode='"both"' rule="ming" />
 </div>
 
 <ZigenMap :default-scheme="'ming'" column-min-width="1rem" />

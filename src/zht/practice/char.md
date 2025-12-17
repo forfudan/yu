@@ -10,7 +10,7 @@ import Train from "@/train/CharTrain.vue"
 import ZigenMap from "@/zigen/ZigenMap.vue"
 </script>
 <div class="zigen-font">
-<Train name="star" chaifenUrl="/chaifen_zhu.csv" zigenUrl="/zigen-star.csv" :range="[0,500]" :supplement="true" :ming="false" />
+<Train name="star" chaifenUrl="/chaifen_zhu.csv" zigenUrl="/zigen-star.csv" :range="[0,500]" rule="star" />
 </div>
 
 <ZigenMap :default-scheme="'star'" column-min-width="1.5rem" />
