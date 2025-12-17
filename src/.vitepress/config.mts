@@ -322,6 +322,23 @@ export default defineConfig({
           ],
         },
         {
+          text: "配天之靈",
+          items: [
+            {
+              text: "靈明字根",
+              link: "/practice/root_ling",
+            },
+            {
+              text: "靈明单字",
+              link: "/practice/char_ling",
+            },
+            {
+              text: "靈明·作品高频字",
+              link: "/practice/char_ling_zhu",
+            },
+          ],
+        },
+        {
           text: "吉旦饼",
           items: [
             {
@@ -745,6 +762,23 @@ export default defineConfig({
                 {
                   text: "日月·作品高頻字",
                   link: "/zht/practice/char_ming_zhu",
+                },
+              ],
+            },
+            {
+              text: "配天之靈",
+              items: [
+                {
+                  text: "靈明字根",
+                  link: "/zht/practice/root_ling",
+                },
+                {
+                  text: "靈明單字",
+                  link: "/zht/practice/char_ling",
+                },
+                {
+                  text: "靈明·作品高頻字",
+                  link: "/zht/practice/char_ling_zhu",
                 },
               ],
             },
