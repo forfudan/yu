@@ -659,7 +659,7 @@ onMounted(() => {
                             @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code
-                                }}</span>
+                            }}</span>
                         </span>
                         <!-- 如果有隱藏的字根，顯示省略號 -->
                         <span v-if="zigenByKey[key].hidden.length > 0" class="more-indicator">⋯</span>
@@ -722,7 +722,7 @@ onMounted(() => {
                             }" @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code
-                                }}</span>
+                            }}</span>
                         </span>
                     </div>
                 </div>
