@@ -1,58 +1,58 @@
 font,ma,pinyin
-⺈,bma,
 乂,bi,yì = i
+,bi,
 九,bju,Jiǔ -> j
-冖,ba,Miǎn -> m
+⺈,bo,
+冖,bo,Ø -> v ㊟無讀音或生僻部首
+,bo,Ø -> v ㊟無讀音或生僻部首
+彐,bji,Jì -> j
+肀,bji,Jì -> j
+,bji,
+隶,bi,Lì -> l
 立,bli,Lì -> l
 纟,bsi,Sī -> s
+,bsi,
 臣,be,CHén -> c
+,byi,yí = í
+,byi,yí = í
 舟,bvo,ZHōu -> z
 虫,bo,Chóng -> c
 辛,bxi,Xīn -> x
 门,bme,Mén -> m
-,bji,
-,byi,yí = í
-,byi,
-,bo,Ø -> v ㊟無讀音或生僻部首
-,bsi,
-彐,bji,Jì -> j
-肀,bi,Jì -> j
-隶,bi,Lì -> l
-,bi,yí = í
-㔾,cje,Jié -> j
-䒑,cba,cǎo -> c
 不,cu,Bù -> b
 丬,ca,Qiáng -> q
+䒑,ca,cǎo -> c
 丷,ca,Bā -> b
+,ca,
 山,csa,SHān -> s
 己,cji,Jǐ -> j
 已,cyi,yǐ = i
 巳,csi,Sì -> s
+㔾,cje,Jié -> j
+麻,cma,Má -> m
+鹿,clu,Lù -> l
+,clu,
 贝,cbe,Bèi -> b
 金,ci,Jīn -> j
 門,cme,Mén -> m
 高,cga,Gāo -> g
-鬥,co,Dòu -> d
-鹿,clu,Lù -> l
-麻,cma,Má -> m
-,cba,
-,co,Ø -> v ㊟無讀音或生僻部首
-,cvo,
-,co,Ø -> v ㊟無讀音或生僻部首
 ,cga,
-,clu,
-亍,du,CHù -> c
+,co,
+,co,Ø -> v ㊟無讀音或生僻部首
+,co,Ø -> v ㊟無讀音或生僻部首
+亍,dcu,CHù -> c
+〇,dli,Líng -> l
+口,do,Kǒu -> v ㊟特例
+早,da,Zǎo -> z
 皮,di,Pí -> p
 目,dmu,Mù -> m
 耳,dje,ěr -> e
 长,dca,CHáng -> c
 雨,dyu,yǔ = ǚ -> v
 ,do,Ø -> v ㊟無讀音或生僻部首
-〇,dli,Líng -> l
-口,do,Kǒu -> v ㊟特例
 一,fi,yī = ī
-丆,fha,hǎn -> h ㊟古音
 丑,fo,CHǒu -> c
+丆,fa,hǎn -> h ㊟古音
 厂,fa,CHǎng -> c
 女,fu,Nǚ -> n
 正,fe,ZHèng -> z
@@ -60,12 +60,16 @@ font,ma,pinyin
 見,fja,Jiàn -> j
 足,fvu,Zú -> z
 頁,fye,xiè -> x ㊟取古音
+馬,fma,Mǎ -> m
+,fma,
 ,fo,Ø -> v ㊟無讀音或生僻部首
+丌,gi,Jì -> j
 世,gi,SHì -> s
 其,gqi,Qí -> q
 厶,gsi,Mǒu -> m
-工,ggo,Gōng -> g
+,gsi,
 幺,gya,yāo = iāo -> i
+工,ggo,Gōng -> g
 弓,go,Gōng -> g
 彑,gji,Jì -> j
 母,gu,Mǔ -> m
@@ -76,153 +80,153 @@ font,ma,pinyin
 阝,gu,Fǔ -> f
 鱼,gyu,yú = ǘ -> v
 ,go,Ø -> v ㊟無讀音或生僻部首
-,gsi,
 ,go,Ø -> v ㊟無讀音或生僻部首
 ,go,
 ,go,
 丁,hdi,Dīng -> d
 丅,hdi,Xià -> x
+下,ha,Xià -> x
 三,hsa,Sān -> s
-下,hxa,Xià -> x
+且,hqe,Qiě -> q
+,hqe,
 了,hle,Le -> l
-予,hyu,yǔ = ǚ -> v
 子,hvi,Zǐ -> z
+予,hyu,yǔ = ǚ -> v
 广,hga,Guǎng -> g
+疒,hne,Bìng -> b
 文,hwe,wén -> w
 日,hri,rì -> r
-早,hva,Zǎo -> z
+,hri,
+,hri,rì -> r ㊟同日歸併
 曰,hye,yuē = ǖe -> v
 牙,hya,yá = iá -> i
-疒,hne,Bìng -> b
 示,hsi,SHì -> s
 走,hvo,Zǒu -> z
 身,he,SHēn -> s
 钅,hi,Jīn -> J
-長,ha,CHáng -> c
+長,hca,CHáng -> c
 镸,hca,CHáng -> c
-隹,hi,Cuī -> c
 髟,hba,Biāo -> b
-,hri,
-,hri,rì -> r ㊟同日歸併
-ㄩ,ja,Ø -> v ㊟無讀音或生僻部首
+隹,hi,Cuī -> c
 丩,ju,Jiū -> j
+,ju,
 丱,jga,Guān -> g
 习,ji,Xí -> x
 亠,jo,Tóu = t
 亻,je,rén -> r
 入,jru,rù -> r
+ㄩ,ja,Ø -> v ㊟無讀音或生僻部首
 向,ja,Xiàng -> x
+,ja,Xiàng -> x
 夊,jvi,Zhì -> p
 寸,jcu,Cùn -> c
+屮,jca,Cǎo -> c
 曲,jqu,Qǔ -> q
 生,je,SHēng -> s
 ,jo,Mù -> m ㊟木無枝也故取木音
-,ja,Xiàng -> x
-,jju,
-〢,ksu,
-〣,ksu,
-丄,ksa,
+丄,ka,
 上,ka,SHàng -> s
+,ka,
+〢,ku,
+〣,ku,
 丨,ku,SHù -> s ㊟同豎
 丿,ke,Piě -> p
 亡,kwa,wáng -> w
-冎,kga,
 几,kji,Jǐ -> j
 力,kli,Lì -> l
 卩,kje,Jié -> j
-叀,kce,
+,kje,
+冎,ka,
 咼,ka,Kuǎi -> k ㊟古音
 宀,ka,Miǎn -> m
 尚,ksa,SHàng -> s
-彡,ksa,SHān -> s
+,ksa,
 彳,ku,CHì -> c
+彡,ksa,SHān -> s
+,ksa,
+,ko,Ø -> v ㊟無讀音或生僻部首
 殳,ku,SHǔ -> s
 白,kba,Bái -> b
 矢,ksi,SHǐ -> s
 穴,kxe,Xuè -> x
 缶,kfo,Fǒu -> f
 至,kvi,ZHì -> z
+叀,kce,
 車,kce,CHē -> c
+,kce,
 風,ke,Fēng -> f
 骨,kgu,Gǔ -> g
-,kce,
-,ksa,
-,ksa,
-,kwu,wǔ -> w
-,ksa,
-,ko,Ø -> v ㊟無讀音或生僻部首
+鬥,kdo,Dòu -> d
 ,klo,Luó -> l
-,kje,
+,kwu,wǔ -> w
 八,la,Bā -> b
 冂,ljo,Jiǒng -> j
+,ljo,
+,ljo,
 冊,lce,Cè -> c
-十,lsi,SHi -> s
+,lce,
 千,lqa,Qiān -> q
 壬,lre,rén -> r
+舌,lse,SHé -> s
+毛,lma,Máo -> m
+十,lsi,SHi -> s
 夕,li,Xī -> x
 月,le,yuè = y
+,le,
+,le,
 止,lvi,ZHǐ -> z
-毛,lma,Máo -> m
-舌,lse,SHé -> s
+龰,lvi,
 飛,lfe,Fēi -> f
 齒,lci,CHǐ -> c
-龰,lvi,
-,ljo,
-,lce,
-,ljo,
-,lye,
-,lye,
 ,lvo,wéi -> w ㊟取爲音w
-⺧,mno,
-七,mqi,Qī -> q
 尸,msi,SHī -> s
+,msi,
+七,mqi,Qī -> q
 弋,mi,yì = i
-心,mxi,Xīn -> x
-忄,mi,Xīn -> x
 戈,mge,Gē -> g
 戊,mwu,wù -> w
+心,mxi,Xīn -> x
+忄,mi,Xīn -> x
 方,mfa,Fāng -> f
 未,me,wèi -> w
 末,mo,Mò -> m
 爪,ma,ZHuǎ -> z
-牛,mno,Niú -> n
 瓜,mga,Guā -> g
+⺧,mno,
+牛,mno,Niú -> n
 癶,mo,Bō -> b
-馬,mma,Mǎ -> m
-,mma,
 ,mvo,Zuǒ -> z
 ,mi,Duī -> d
-,msi,
-⺌,nxa,
-⺍,na,Xiǎo -> x
-⺮,nvu,
-丌,nji,Jì -> j
+人,ne,rén -> r
+合,nhe,Hé -> h
+,nhe,
+,nhe,
+僉,na,Qiān -> q
+食,nsi,SHí -> s
 兀,nwu,wù -> w
 囗,nwe,wéi = w
+⺌,nxa,
 小,nxa,Xiǎo -> x
-气,nqi,Qì -> q
+,nxa,
+⺍,na,Xiǎo -> x
+,na,
+⺮,nu,
 竹,nu,ZHú -> z
+,no,
+,no,
+气,nqi,Qì -> q
 米,nmi,Mǐ -> m
 自,nvi,Zì -> z
 艮,nge,Gěn -> g
 西,ni,Xī -> x
 貝,nbe,Bèi -> b
 酉,nyo,yǒu = iǒu -> i
-,nxa,
-,no,
-,nvo,
-,nhe,
-,nhe,
 ,no,yī = ī ㊟取衣音y
-,nvo,
-,nxa,
-人,ne,rén -> r
-僉,na,Qiān -> q
-合,nhe,Hé -> h
-食,nsi,SHí -> s
-⺽,pju,
+,no,
 儿,pe,ér -> e
+,pe,ér -> e
 勹,pa,Bāo -> b
+,pa,
 巛,pca,CHuān -> c
 巜,pca,
 川,pca,CHuān -> c
@@ -230,142 +234,138 @@ font,ma,pinyin
 火,po,Huǒ -> h
 灬,pba,Biāo -> b
 甫,pfu,Fǔ -> f
-甶,pu,Fǔ -> f
 石,psi,SHí -> s
+⺽,pu,
 臼,pu,Jìù -> j
 页,pye,xiè -> x ㊟取古音
 鬼,pgi,Guǐ -> g
-黑,phe,Hēi -> h
-,pfu,
 ,pgi,
-,pje,
-,pba,
+甶,pu,Fǔ -> f
+,pu,
+黑,phe,Hēi -> h
+又,qo,yòu = iòu -> i
 ス,qo,yòu = iòu -> i
-マ,qvo,
-乌,qwu,wū -> w
-卄,qca,
+マ,qo,
+卄,qa,
+廾,qa,Niàn -> n ㊟生僻音
+艹,qa,Cǎo -> c
+,qa,
+,qa,
+,qa,
 卅,qsa,Sà -> s
 卌,qi,Xì -> x
-又,qo,yòu = iòu -> i
-廾,qca,Niàn -> n ㊟生僻音
-艹,qa,Cǎo -> c
 鸟,qna,Niǎo -> n
-,qca,
-,qca,
-,qca,
 ,qna,
-⺀,rje,èr -> e
-⺊,rbu,
-⺷,rya,
+乌,qwu,wū -> w
+,ro,Kuāng -> k ㊟取框音
+,ro,
 丂,rka,Kào -> k
 之,ri,ZHī -> z
+⺀,rje,èr -> e
 二,rje,èr -> e
-來,rla,Lái -> l
 冫,rje,èr -> e
+,rje,èr -> e
+來,rla,Lái -> l
+⺊,rbu,
 卜,rbu,Bǔ -> b
-屮,ra,Cǎo -> c
-皿,rmi,Mǐn -> m
-罒,rwa,wǎng -> w
-羊,rya,yáng = iáng -> i
+,ro,Ø -> v ㊟無讀音或生僻部首
+,ro,Ø -> v ㊟無讀音或生僻部首
 虍,rhu,
 虎,rhu,Hǔ -> h
+,rhu,
+鹵,rlu,Lǔ -> l
+罒,rwa,wǎng -> w
+皿,rmi,Mǐn -> m
+,ro,Ø -> v ㊟無讀音或生僻部首
+⺷,rya,
+羊,rya,yáng = iáng -> i
+,re,rén -> r
 言,ra,yán = ián -> i
 车,rce,CHè -> c
 马,rma,Mǎ -> m
-鹵,ru,Lǔ -> l
-,rvo,Ø -> v ㊟無讀音或生僻部首
-,ro,Ø -> v ㊟無讀音或生僻部首
-,rhu,
-,ro,Ø -> v ㊟無讀音或生僻部首
-,rje,èr -> e
-,re,rén -> r
-,ro,Kuāng -> k ㊟取框音
-,rvo,
-乜,sme,Miē -> m
 也,sye,yě = iě -> i
-土,su,Tǔ -> t
+乜,sme,Miē -> m
 士,si,SHēng -> s
-壴,svu,ZHú -> z
-尢,sa,wǎng -> w
-尤,syo,yóu = ióu -> i
-廴,syi,yín = ín -> i
-烏,swu,wū -> w
-耂,sa,Lǎo -> l
-鳥,sna,Niǎo -> n
+土,su,Tǔ -> t
 龶,se,SHēng -> s
-,ska,Kuǎ -> k
+耂,sa,Lǎo -> l
+壴,svu,ZHú -> z
 ,so,Ø -> v ㊟無讀音或生僻部首
-,ska,Kuǎ -> k
-,swu,
+尤,syo,yóu = ióu -> i
+尢,sa,wǎng -> w
+廴,syi,yín = ín -> i
+魚,syu,yú = ü -> v
+鳥,sna,Niǎo -> n
 ,sna,
+烏,swu,wū -> w
+,swu,
+,ska,Kuǎ -> k
+,ska,Kuǎ -> k
 丶,ta,Diǎn -> d ㊟點
-乀,tda,Diǎn -> d ㊟同丶
+乀,ta,Diǎn -> d ㊟同丶
 匕,ti,Bi -> b
 古,tu,Gǔ -> g
 户,thu,Hù -> h
 戸,thu,
 手,tso,SHǒu -> s
+龵,tso,
 扌,to,SHǒu -> s
 欠,tqa,Qiān -> q
 用,to,yòng = iòng -> i
 见,tja,Jiàn -> j
 辰,tce,CHén -> c
 饣,tsi,SHi -> s
-龵,tso,
-且,ve,Qiě -> q
 亥,vha,Hài -> h
 亦,vyi,yì = ì
 刀,vda,Dāo -> d
-刂,va,Dāo -> d
+刂,vda,Dāo -> d
 巾,vji,Jīn -> j
 水,vi,SHuǐ -> s
 氵,vi,SHuǐ -> s
-,vqe,
-⻍,wco,
 业,wye,yè = iè -> i
 丰,we,Fēng -> f
 乃,wna,Nǎi -> n
-亅,wyi,
+乙,wi,yǐ = ǐ
+乚,wi,yí = i
+亅,wi,
 卯,wma,Mǎo -> m
-夭,wya,yāo = iāo -> i
-爿,wa,Pán -> p
+,wo,
+,wo,
+,wo,Ø -> v ㊟無讀音或生僻部首
+,wo,
 片,wpa,Piàn -> p
+爿,wa,Pán -> p
 犬,wqa,Quǎn -> q
 犭,wqa,
 禾,whe,Hé -> h
+夭,wya,yāo = iāo -> i
 讠,wa,yán = ián -> i
 豸,wvi,ZHì -> z
+⻍,wo,
 辶,wo,CHuò -> c
 革,wge,Gé -> g
-魚,wyu,yú = ü -> v
-,wvo,
-,wo,yà = iè -> i
-,wvo,
-,wvo,
-,wvo,
-,wo,Ø -> v ㊟無讀音或生僻部首
-,wvo,
 ,wdo,Dòu -> d
-乙,wi,yǐ = ǐ
-乚,wi,yí = i
-⺁,xyi,yì -> ì
+,wo,
+,wo,yà = iè -> i
+,wo,
 匚,xfa,Fāng -> f
 干,xga,Gān -> g
-戶,xhu,Hù -> h
-斤,xji,Jīn -> j
 木,xu,Mù -> m
-朩,xmu,
+朩,xu,
 甲,xa,Jiā -> j
+里,xli,Lǐ -> l
 禺,xyu,yǔ = ǚ -> v
 而,xje,ér -> e
-豕,xi,SHǐ -> s
-里,xli,Lǐ -> l
 面,xma,Miàn -> m
-,xsi,
+豕,xi,SHǐ -> s
+,xi,
+⺁,xyi,yì -> ì
+斤,xji,Jīn -> j
+戶,xhu,Hù -> h
 大,yda,Dà -> d
 夫,yfu,Fū -> f
+,ydi,Dí -> d
 王,ya,wáng -> w
 瓦,ywa,wǎ -> w
 糸,yi,Sī -> s
 非,yfe,Fēi -> f
-,ydi,Dí -> d
