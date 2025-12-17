@@ -19,9 +19,19 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 const projectRoot = path.join(__dirname, '..')
 
-// 文件路径配置
-const INPUT_FILE = path.join(projectRoot, 'src', 'public', 'mabiao-ming.txt')
-const OUTPUT_COMPRESSED = path.join(projectRoot, 'src', 'public', 'mabiao-ming.json')
+// 文件路径配置 - 支持多个码表文件
+const MABIAO_FILES = [
+    {
+        input: path.join(projectRoot, 'src', 'public', 'mabiao-ming.txt'),
+        output: path.join(projectRoot, 'src', 'public', 'mabiao-ming.json'),
+        name: '日月码表'
+    },
+    {
+        input: path.join(projectRoot, 'src', 'public', 'mabiao-ling.txt'),
+        output: path.join(projectRoot, 'src', 'public', 'mabiao-ling.json'),
+        name: '灵明码表'
+    }
+]
 
 /**
  * 解析 TSV 格式的碼表文件
@@ -98,56 +108,75 @@ function compressData(data) {
 }
 
 /**
+ * 處理單個碼表文件
+ */
+function processFile(fileConfig) {
+    const { input, output, name } = fileConfig
+
+    console.log(`\n--- 處理 ${name} ---`)
+    console.log(`輸入文件: ${input}`)
+    console.log(`輸出文件: ${output}`)
+
+    // 檢查輸入文件
+    if (!fs.existsSync(input)) {
+        throw new Error(`輸入文件不存在: ${input}`)
+    }
+
+    // 讀取和解析
+    console.log('正在讀取輸入文件...')
+    const content = fs.readFileSync(input, 'utf-8')
+
+    console.log('正在解析碼表數據...')
+    const rawData = parseMabiao(content)
+
+    console.log('正在排序碼表...')
+    const sortedRawData = Object.entries(rawData).sort((a, b) => {
+        if (a[0] < b[0]) return -1;
+        if (a[0] > b[0]) return 1;
+        return 0;
+    });
+
+    console.log('正在優化數據結構...')
+    const optimizedData = optimizeData(Object.fromEntries(sortedRawData))
+
+    console.log('正在壓縮數據...')
+    const compressed = compressData(optimizedData)
+
+    // 確保輸出目錄存在
+    const outputDir = path.dirname(output)
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true })
+    }
+
+    // 寫入文件
+    console.log('正在寫入輸出文件...')
+    fs.writeFileSync(output, compressed)
+
+    console.log(`✅ ${name} 構建完成！`)
+}
+
+/**
  * 主處理函數
  */
 async function main() {
     try {
         console.log('=== 碼表預構建工具 ===')
-        console.log(`輸入文件: ${INPUT_FILE}`)
-        console.log(`輸出文件: ${OUTPUT_COMPRESSED}`)
-        console.log()
+        console.log(`共需處理 ${MABIAO_FILES.length} 個碼表文件\n`)
 
-        // 檢查輸入文件
-        if (!fs.existsSync(INPUT_FILE)) {
-            throw new Error(`輸入文件不存在: ${INPUT_FILE}`)
+        // 處理所有碼表文件
+        for (const fileConfig of MABIAO_FILES) {
+            try {
+                processFile(fileConfig)
+            } catch (error) {
+                console.error(`❌ ${fileConfig.name} 處理失敗:`, error.message)
+                throw error
+            }
         }
 
-        // 讀取和解析
-        console.log('正在讀取輸入文件...')
-        const content = fs.readFileSync(INPUT_FILE, 'utf-8')
-
-        console.log('正在解析碼表數據...')
-        const rawData = parseMabiao(content)
-
-        console.log('正在對碼表進行...')
-        const sortedRawData = Object.entries(rawData).sort((a, b) => {
-            if (a[0] < b[0]) return -1;
-            if (a[0] > b[0]) return 1;
-            return 0; // 相同 code 保持原順序
-        });
-
-        console.log('正在優化數據結構...')
-        const optimizedData = optimizeData(Object.fromEntries(sortedRawData))
-
-        console.log('正在壓縮數據...')
-        const compressed = compressData(optimizedData)
-
-        // 確保輸出目錄存在
-        const outputDir = path.dirname(OUTPUT_COMPRESSED)
-        if (!fs.existsSync(outputDir)) {
-            fs.mkdirSync(outputDir, { recursive: true })
-        }
-
-        // 寫入文件
-        console.log('正在寫入輸出文件...')
-        fs.writeFileSync(OUTPUT_COMPRESSED, compressed)
-
-        console.log()
-        console.log('✅ 構建完成！')
-        console.log(` 壓縮文件: ${OUTPUT_COMPRESSED}`)
+        console.log('\n🎉 所有碼表構建完成！')
 
     } catch (error) {
-        console.error('❌ 構建失敗:', error.message)
+        console.error('\n❌ 構建失敗:', error.message)
         process.exit(1)
     }
 }

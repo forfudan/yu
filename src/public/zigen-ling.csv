@@ -16,9 +16,9 @@ font,ma,pinyin
 ,bo,Ø -> v ㊟無讀音或生僻部首
 ,bsi,
 彐,bji,Jì -> j
-肀,bji,Jì -> j
+肀,bi,Jì -> j
 隶,bi,Lì -> l
-,byi,yí = í
+,bi,yí = í
 㔾,cje,Jié -> j
 䒑,cba,cǎo -> c
 不,cu,Bù -> b
@@ -28,7 +28,6 @@ font,ma,pinyin
 己,cji,Jǐ -> j
 已,cyi,yǐ = i
 巳,csi,Sì -> s
-见,cja,Jiàn -> j
 贝,cbe,Bèi -> b
 金,ci,Jīn -> j
 門,cme,Mén -> m
@@ -58,10 +57,9 @@ font,ma,pinyin
 女,fu,Nǚ -> n
 正,fe,ZHèng -> z
 衤,fyi,yī = ī
+見,fja,Jiàn -> j
 足,fvu,Zú -> z
 頁,fye,xiè -> x ㊟取古音
-馬,fma,Mǎ -> m
-,fma,
 ,fo,Ø -> v ㊟無讀音或生僻部首
 世,gi,SHì -> s
 其,gqi,Qí -> q
@@ -190,17 +188,16 @@ font,ma,pinyin
 牛,mno,Niú -> n
 瓜,mga,Guā -> g
 癶,mo,Bō -> b
+馬,mma,Mǎ -> m
+,mma,
 ,mvo,Zuǒ -> z
 ,mi,Duī -> d
 ,msi,
 ⺌,nxa,
-⺍,nxa,Xiǎo -> x
+⺍,na,Xiǎo -> x
 ⺮,nvu,
 丌,nji,Jì -> j
-人,ne,rén -> r
-僉,na,Qiān -> q
 兀,nwu,wù -> w
-合,nhe,Hé -> h
 囗,nwe,wéi = w
 小,nxa,Xiǎo -> x
 气,nqi,Qì -> q
@@ -209,10 +206,8 @@ font,ma,pinyin
 自,nvi,Zì -> z
 艮,nge,Gěn -> g
 西,ni,Xī -> x
-見,nja,Jiàn -> j
 貝,nbe,Bèi -> b
 酉,nyo,yǒu = iǒu -> i
-食,nsi,SHí -> s
 ,nxa,
 ,no,
 ,nvo,
@@ -221,6 +216,10 @@ font,ma,pinyin
 ,no,yī = ī ㊟取衣音y
 ,nvo,
 ,nxa,
+人,ne,rén -> r
+僉,na,Qiān -> q
+合,nhe,Hé -> h
+食,nsi,SHí -> s
 ⺽,pju,
 儿,pe,ér -> e
 勹,pa,Bāo -> b
@@ -309,6 +308,7 @@ font,ma,pinyin
 扌,to,SHǒu -> s
 欠,tqa,Qiān -> q
 用,to,yòng = iòng -> i
+见,tja,Jiàn -> j
 辰,tce,CHén -> c
 饣,tsi,SHi -> s
 龵,tso,
