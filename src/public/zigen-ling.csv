@@ -23,6 +23,7 @@ font,ma,pinyin
 ,ca,
 䒑,ca,Cǎo -> Ca 🈤不取聲母
 丬,ca,Qiáng -> Qa 🈤不取聲母
+,co,㊟無讀音或生僻字
 山,csa,SHān -> Sa
 己,cji,Jǐ
 已,cyi,Yǐ
@@ -38,7 +39,6 @@ font,ma,pinyin
 ,cga,㊟同高
 ,co,㊟無讀音或生僻字
 ,co,
-,co,㊟無讀音或生僻字
 亍,dcu,CHù -> Cu
 〇,dli,Líng -> Li
 口,do,Kǒu -> Ko 🈤不取聲母

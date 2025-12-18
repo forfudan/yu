@@ -63,7 +63,7 @@ export const SCHEMES: SearchScheme[] = [
     {
         id: 'ling',
         name: '靈明',
-        description: '明明上天·配天之靈',
+        description: '明明上天配天之靈',
         chaifenUrl: '/chaifen.csv',
         zigenUrl: '/zigen-ling.csv',
         supplement: false,

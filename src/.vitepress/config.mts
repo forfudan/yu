@@ -77,6 +77,10 @@ export default defineConfig({
               link: "/docs/ming",
             },
             {
+              text: "灵明输入法",
+              link: "/docs/ling",
+            },
+            {
               text: "吉旦饼输入法",
               link: "/docs/wafel",
             },
@@ -510,6 +514,10 @@ export default defineConfig({
                 {
                   text: "日月輸入法",
                   link: "/zht/docs/ming",
+                },
+                {
+                  text: "靈明輸入法",
+                  link: "/zht/docs/ling",
                 },
                 {
                   text: "吉旦餅輸入法",
