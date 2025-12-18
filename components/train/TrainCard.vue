@@ -62,7 +62,7 @@ watch(userKeys, (newKeys) => {
 
     // Check if we should trigger checkNextItem
     const shouldCheck = newKeys.length >= card.value.key.length ||
-        (p.rule === 'ming' && mingAlternatives[card.value.name] && newKeys.toLowerCase() === mingAlternatives[card.value.name])
+        ((p.rule === 'ming' || p.rule === 'ling') && mingAlternatives[card.value.name] && newKeys.toLowerCase() === mingAlternatives[card.value.name])
 
     if (!shouldCheck) return
 
@@ -86,8 +86,8 @@ function checkNextItem(answer: string) {
 
     let isCorrectAnswer = answerLowercase === keyLowercase
 
-    // Check for alternative solutions when ming is true
-    if (!isCorrectAnswer && p.rule === 'ming' && mingAlternatives[card.value.name]) {
+    // Check for alternative solutions when ming or ling is true
+    if (!isCorrectAnswer && (p.rule === 'ming' || p.rule === 'ling') && mingAlternatives[card.value.name]) {
         isCorrectAnswer = answerLowercase === mingAlternatives[card.value.name]
     }
 
@@ -174,7 +174,7 @@ function restartTraining() {
 
             <div :class="['text-center', { 'opacity-0': !isFirstLearn }]">答案是 <b class="font-mono">{{ card.key }}</b>
                 <span v-if="mode === 'z'">（{{ chaifenMap?.get(card.name)?.division }}）</span>
-                <div v-if="p.rule === 'ming' && ['的', '是', '我', '不', '了'].includes(card.name)"
+                <div v-if="(p.rule === 'ming' || p.rule === 'ling') && ['的', '是', '我', '不', '了'].includes(card.name)"
                     class="text-sm text-gray-500 mt-1">
                     也可直接使用韻碼 <b class="font-mono text-blue-600">{{
                         card.name === '的' ? 'E' :
