@@ -63,14 +63,14 @@ font,ma,pinyin
 見,fja,Jiàn -> Ja
 頁,fye,Yè
 足,fvu,Zú -> Vu 🈤Z和Ẑ取V
+工,go,Gōŋ -> Go 🈤不取聲母
 丌,gi,Jì
 世,gi,Ŝì -> Si
 其,gqi,Qí
 厶,gsi,Sī
 ,gsi,
 幺,gya,Yāo -> Ya
-工,ggo,Gōŋ -> Go
-弓,go,Gōŋ -> Go
+弓,ggo,Gōŋ -> Go
 田,gta,Tián -> Ta
 由,gyo,Yóu = Yo
 申,gse,Ŝēn -> Se
@@ -81,7 +81,6 @@ font,ma,pinyin
 馬,gma,Mǎ
 ,gma,
 ,go,㊟無讀音 🈤不取聲母
-,go,㊟無讀音 🈤不取聲母
 ,go,㊟無讀音 🈤不取聲母
 丁,hdi,Dīŋ -> d
 丅,hdi,㊟同丁
@@ -132,7 +131,7 @@ font,ma,pinyin
 〢,ku,
 〣,ku,
 丿,ke,Piě -> Pe 🈤基本筆畫不取聲母
-彳,ku,Ĉù 🈤不取聲母
+彳,ki,Ĉì 🈤不取聲母
 彡,ka,Ŝān -> Sa
 ,ka,
 ,ko,㊟無讀音 🈤不取聲母
@@ -315,7 +314,7 @@ font,ma,pinyin
 辰,tce,Ĉén -> Ce
 ,vo,㊟無讀音 🈤不取聲母
 ,vo,
-亥,vha,Hài -> He
+亥,vha,Hài -> Ha
 亦,vyi,Yì
 刀,va,Dāo -> Da 🈤不取聲母
 刂,vda,Dāo -> Da
@@ -350,6 +349,7 @@ font,ma,pinyin
 辶,wo,Ĉuò -> Co 🈤不取聲母
 ⻍,wo,
 革,wge,Gé
+,wo,㊟無讀音 🈤不取聲母
 匚,xfa,Fāŋ -> Fa
 干,xga,Gān -> Ga
 木,xu,Mù 🈤不取聲母
