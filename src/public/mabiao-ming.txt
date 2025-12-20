@@ -117637,6 +117637,7 @@ ltkba	㊅
 ltkdi	𘢘
 ltklv	𗇔
 ltkmw	🀌
+ltko	直󠄆
 ltkto	裏
 ltkvc	𗇐
 ltkvc	𘋉
@@ -119168,6 +119169,7 @@ mzcnd	𘭯
 mzdke	㊨
 mzdke	🈮
 mzfff	㌨
+mzgci	直󠄇
 mzjgi	㊧
 mzjgi	🈬
 mzjgi	𛀿
@@ -121816,9 +121818,14 @@ tkfxf	𗍮
 tkfxf	𗍴
 tkfxs	𗍭
 tkfxs	𗍲
+tkgci	直󠄁
+tkgci	直󠄂
 tkgck	真
+tkgjk	直󠄃
+tkhkf	直󠄅
 tkhnd	𘬾
 tkho	𘬽
+tkhsf	直󠄈
 tkhti	𛁡
 tkhxo	🀁
 tkhxo	𛁾
@@ -121827,6 +121834,7 @@ tkjyc	☰
 tkkhk	戴
 tkkjc	博
 tkkkb	真
+tkko	直󠄄
 tkko	直
 tkko	直
 tkksa	𘣔
@@ -121839,6 +121847,7 @@ tkmo	
 tkmsm	桒
 tkmtk	卉
 tkmvc	鼖
+tknlj	直󠄉
 tknqh	襁
 tksfv	𗢋
 tksks	𗢍
@@ -146286,6 +146295,9 @@ lxmct	光華
 /a	Ą
 /c	ć
 /ch	Ĉ
+/c	Ĉ
+/ch	ĉ
+/c	ĉ
 /c	ċ
 /c	č
 /d	Ď
@@ -146346,7 +146358,10 @@ lxmct	光華
 /r	Ŗ
 /r	Ř
 /s	Ś
+/sh	Ŝ
+/s	Ŝ
 /sh	ŝ
+/s	ŝ
 /s	Ş
 /s	Š
 /t	ţ
@@ -146561,7 +146576,9 @@ lxmct	光華
 /digamma	Ϝ
 /digamma	ϝ
 /zh	Ẑ
+/z	Ẑ
 /zh	ẑ
+/z	ẑ
 /pz	——
 /sl	……
 /en	 
@@ -147565,12 +147582,15 @@ lxmct	光華
 /pyu	ù
 /pyu	ú
 /pya	ā
+/pych	ĉ
+/pyc	ĉ
 /pye	ē
 /pye	ě
 /pyi	ī
 /pyng	ŋ
 /pyo	ō
 /pysh	ŝ
+/pys	ŝ
 /pyu	ū
 /pya	ǎ
 /pyi	ǐ
@@ -147586,6 +147606,7 @@ lxmct	光華
 /pyyp	ˊ
 /pyqs	ˋ
 /pyzh	ẑ
+/pyz	ẑ
 /bdsmz	《
 /bdsmy	》
 /bdkg	　

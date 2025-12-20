@@ -5341,6 +5341,7 @@ bbb	𫧇
 bbb	⽐
 bbb	𛂫
 bbb	𳌕
+bbbb	㐂󠄁
 bbbb	𢗽
 bbbb	𣬅
 bbbb	𥤻
@@ -71867,6 +71868,7 @@ npkq	𪄣
 npks	㧭
 npkt	𮳒
 npkv	浩
+npkv	浩󠄁
 npkv	䶜
 npkv	𤭚
 npkv	浩
@@ -88361,6 +88363,8 @@ reoc	𪜤
 reoi	讇
 req	直
 req	詛
+req	直󠄄
+req	直󠄆
 req	𢂈
 req	𬽈
 req	直
@@ -90466,6 +90470,7 @@ rqae	䛁
 rqae	𱜳
 rqae	𘦍
 rqae	𘦏
+rqaf	直󠄈
 rqam	䛶
 rqao	𘋁
 rqas	帽
@@ -90611,6 +90616,7 @@ rqw	𢄓
 rqw	𧪛
 rqwc	𗭏
 rqww	𗅓
+rqyf	直󠄅
 rqyf	𗭙
 rqyh	𪧡
 rqys	𗄰
@@ -90843,6 +90849,7 @@ rsod	𠜆
 rsoi	畝
 rsoi	畞
 rsoj	𧨬
+rsos	直󠄃
 rsos	𧚽
 rsos	𧛁
 rsos	𰥑
@@ -90897,6 +90904,8 @@ rst	亩
 rst	𧦵
 rst	𰿭
 rsth	𫹦
+rsti	直󠄁
+rsti	直󠄂
 rstm	真
 rstn	悳
 rsto	𗭤
@@ -91717,6 +91726,7 @@ ryja	𪗄
 ryje	𬽆
 rykk	讍
 rykv	詺
+rylo	直󠄉
 rylz	𡥗
 rymd	𱜱
 ryms	𧜈
@@ -122167,6 +122177,7 @@ xsst	𨎿
 xst	䟧
 xst	䡒
 xsth	𧈌
+xsti	直󠄇
 xstk	𨎟
 xstk	𫏾
 xstt	𲎙

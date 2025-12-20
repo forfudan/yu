@@ -2200,6 +2200,7 @@ ajqm	査
 ajqm	𪳑
 ajqq	𧓕
 ajqr	𢥦
+ajqt	直󠄆
 ajqt	𬽈
 ajqu	𱲡
 ajqw	𦏧
@@ -23838,6 +23839,7 @@ ejcn	𪜿
 ejdd	𫣨
 ejdr	仃
 ejeh	顀
+ejei	直󠄇
 ejei	논
 ejei	눈
 ejej	𩑏
@@ -34708,6 +34710,7 @@ gcgt	𥳇
 gcht	𥬕
 gchz	𥱰
 gcic	筕
+gcif	直󠄈
 gcig	𥭝
 gcij	𥅉
 gcin	䉙
@@ -34726,6 +34729,7 @@ gcki	𲓜
 gckj	𥯂
 gcko	𥱁
 gckz	𥫚
+gclf	直󠄅
 gclf	𥰪
 gclk	𪧡
 gclr	䉹
@@ -35957,6 +35961,8 @@ gjeh	䉜
 gjeh	𪑸
 gjeh	𨿨
 gjei	乹
+gjei	直󠄁
+gjei	直󠄂
 gjei	𮅍
 gjej	𥬶
 gjej	𲑣
@@ -36024,6 +36030,7 @@ gjjr	𬕑
 gjjt	䥅
 gjjt	𥷍
 gjju	𫧩
+gjjv	直󠄃
 gjjv	𰥑
 gjjx	𥬷
 gjjy	𠄊
@@ -36116,6 +36123,7 @@ gjps	篂
 gjq	直
 gjqh	𪐵
 gjqi	直
+gjqi	直󠄄
 gjqi	直
 gjqi	直
 gjqp	𨢈
@@ -38468,6 +38476,7 @@ gwsl	筋
 gwso	𡘻
 gwsr	𱞜
 gwtu	䇱
+gwuj	直󠄉
 gwus	𥳙
 gwvr	𥵖
 gww	黜
@@ -77763,6 +77772,7 @@ nnna	㕖
 nnna	𣛁
 nnna	𣳯
 nnnb	沘
+nnnb	㐂󠄁
 nnnb	𢿈
 nnnc	參
 nnnc	滲
@@ -78150,6 +78160,7 @@ nplt	𮳒
 nplu	𬇧
 nplu	𬻶
 nplv	浩
+nplv	浩󠄁
 nplv	浩
 nplx	𭊼
 npm	鸿

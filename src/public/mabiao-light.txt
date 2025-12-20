@@ -29186,7 +29186,14 @@ djdi	龺
 djfw	鿨
 djst	龭
 djth	鿬
+dkff	直󠄅
+dksf	直󠄈
+dmii	直󠄄
+dmks	直󠄃
+dmxi	直󠄁
+dmxi	直󠄂
 dtek	龪
+dwnk	直󠄉
 dxxt	龮
 exql	鿚
 exqq	鿙
@@ -29209,11 +29216,13 @@ hsbu	鿆
 ibof	鿄
 idjv	鿰
 iojm	鿌
+iwlv	浩󠄁
 jjhj	龧
 lpqm	鿽
 mbww	鿡
 mgrr	鿃
 nwlw	龱
+omib	直󠄆
 oxvw	鿥
 pdlv	鿋
 qesi	鿴
@@ -29239,6 +29248,7 @@ shtw	鿛
 sini	鿊
 skgq	鿦
 skij	鿒
+smxi	直󠄇
 tall	鿔
 tdpu	鿪
 texf	鿗
@@ -33900,6 +33910,7 @@ rroj	䳔
 rror	䘡
 rrrf	㯔
 rrrh	䄟
+rrri	㐂󠄁
 rrry	㦌
 rrst	㺞
 rrsu	㷇
