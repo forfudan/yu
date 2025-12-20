@@ -66,6 +66,7 @@ font,ma,pinyin
 足,fvu,Zú -> Vu 🈤Z和Ẑ取V
 丌,gi,Jì
 世,gi,Ŝì -> Si
+丰,ge,Fēŋ -> Fe 🈤不取聲母
 其,gqi,Qí
 厶,gsi,Sī 🈕Mǒu
 ,gsi,
@@ -331,7 +332,6 @@ font,ma,pinyin
 ,wo,
 ,wo,
 ,wdo,Dòu -> Do
-丰,we,Fēŋ -> Fe 🈤不取聲母
 乃,wna,Nǎi -> Na
 乙,wi,Yǐ 🈤基本筆畫不取聲母 ㊟一切折筆皆同碼
 乚,wi,Yí 🈤基本筆畫不取聲母 ㊟一切折筆皆同碼
