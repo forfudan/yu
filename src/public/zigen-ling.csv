@@ -8,7 +8,7 @@ font,ma,pinyin
 彐,bji,Jì
 肀,bji,㊟同彐歸併
 ,bji,
-隶,bi,Lì 🈤不取聲母 🈕Dì
+隶,bi,Lì 🈤不取聲母 🈑逮本字 🈕Dài Yì Dì
 立,bli,Lì
 辛,bxi,Xīn -> Xi
 臣,be,Ĉén -> Ce 🈤不取聲母
@@ -97,7 +97,7 @@ font,ma,pinyin
 ,hri,
 ,hri,㊟同日歸併
 曰,hye,Yuē -> Ye
-牙,hya,yá = Yá
+牙,hya,Yá
 示,hsi,Ŝì -> Si
 走,hvo,Zǒu -> Zo 🈤Z和Ẑ取V
 身,he,Ŝēn -> Se 🈤不取聲母
@@ -108,7 +108,7 @@ font,ma,pinyin
 隹,hi,Cuī -> Ci 🈤不取聲母 🈕Ẑuī Cuī Wéi
 习,ji,Xí -> x
 亠,jo,Tóu -> To 🈤不取聲母 ㊟俗稱京字頭
-亻,je,Rén -> Re
+亻,je,Rén -> Re ㊟俗稱單人旁
 ⺁,jyi,Yì -> Yi
 入,jru,Rù
 風,jfe,Fēŋ -> Fe
@@ -151,7 +151,7 @@ font,ma,pinyin
 骨,kgu,Gǔ
 宀,ka,Miǎn -> Ma 🈤不取聲母 ㊟俗稱寶蓋頭
 尚,ksa,Ŝàŋ -> Sa
-,ksa,
+,ksa,㊟同尚歸併
 白,kba,Bái -> Ba
 ,kdi,Duī -> Di
 穴,kxe,Xuè -> Xe
@@ -267,8 +267,8 @@ font,ma,pinyin
 二,rje,èr -> Je 🈤零聲母小碼取J
 ⺀,rje,㊟同二歸併
 ,rje,㊟同二歸併
-來,rla,Lái -> La
 冫,rje,èr -> Je 🈑同二 🈑冰本字 🈕Bīng
+來,rla,Lái -> La
 卜,rbu,Bǔ
 ⺊,rbu,㊟同⺊歸併
 ,ro,🈤無讀音取o
