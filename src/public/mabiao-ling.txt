@@ -220,7 +220,7 @@ gu	院
 ho	这
 hu	时
 jo	过
-ju	保
+ju	发
 ke	很
 ki	復
 ko	知
@@ -242,7 +242,7 @@ ru	着
 sa	考
 se	地
 so	喜
-ta	为
+ta	把
 te	找
 tu	看
 vo	治
@@ -257,13 +257,12 @@ xo	格
 ye	非
 yi	理
 yo	奇
-yu	玩
+yu	太
 bdi	象
 bke	軍
 bla	親
 ble	産
 bna	尔
-btu	解
 cla	鐵
 cna	京
 cno	道
@@ -284,11 +283,13 @@ fse	她
 fwi	婚
 fya	天
 gco	轻
+gcu	转
 gge	阵
 gqu	基
 gsi	能
 hgi	應
 hgo	度
+hgu	底
 hra	影
 hre	明
 hro	最
@@ -300,6 +301,7 @@ jca	出
 jce	們
 jci	帝
 jdi	事
+jdu	保
 jfi	使
 jgi	率
 jhi	但
@@ -307,7 +309,6 @@ jka	倒
 jki	候
 jno	作
 jnu	個
-jqa	发
 jse	他
 jvi	市
 jvu	处
@@ -370,6 +371,7 @@ ryi	變
 sdi	臺
 sgi	去
 shu	都
+sru	執
 tbu	接
 vje	濟
 vle	活
@@ -388,6 +390,7 @@ yfa	現
 yfo	經
 yro	環
 yso	結
+yta	现
 bbbo	蟲
 bbbr	蠱
 bbda	蟑
@@ -462,9 +465,9 @@ bdpw	逸
 bdqo	冣
 bdsk	勨
 bdss	象
-bdta	蚸
 bdtg	酁
 bdtt	毚
+bdtu	蚸
 bdtv	劖
 bdww	鼏
 bdxj	蠕
@@ -559,6 +562,7 @@ bhya	蚜
 bhyv	幂
 bi	隶
 bi	乂
+bi	冖
 bja	凶
 bjbk	蛜
 bjbt	螕
@@ -641,9 +645,9 @@ bjsn	鳩
 bjsr	衋
 bjss	建
 bjsv	劃
-bjta	丸
 bjtf	奿
 bjti	鬯
+bjtu	丸
 bju	九
 bju	虯
 bjvi	录
@@ -903,9 +907,9 @@ bmsh	阇
 bmsr	阖
 bmss	闺
 bmsw	闱
-bmta	蚇
 bmti	蚭
 bmtn	阆
+bmtu	蚇
 bmvb	蠾
 bmvg	郗
 bmvh	阂
@@ -975,7 +979,6 @@ bnxa	尔
 bnyt	玺
 bnyt	蝈
 bo	虫
-bo	冖
 bpa	色
 bpa	蚆
 bpcs	蚫
@@ -1003,8 +1006,8 @@ bprj	蚐
 bpsd	蜩
 bpsn	鴆
 bpsn	鵮
-bpta	虳
 bptq	欿
+bptu	虳
 bpu	臽
 bpvi	沊
 bpyw	瓭
@@ -1076,15 +1079,14 @@ bsle	蜻
 bsrw	蟽
 bssn	蟯
 bssu	蛙
-bsta	冢
 bsth	螧
 bsti	蛯
+bstu	冢
 bswu	螐
 bsxu	蟂
 bsye	虵
 bsyi	螦
 bsyo	蚘
-bta	久
 btbc	觤
 btbg	螂
 btbi	蚁
@@ -1128,6 +1130,7 @@ btss	觟
 btti	蚍
 bttk	蝔
 btts	蜌
+btu	久
 btvb	蟹
 btvm	解
 btvn	觖
@@ -1381,9 +1384,9 @@ cbrd	贴
 cbsh	赌
 cbsk	銉
 cbss	鍵
-cbta	纨
-cbta	釻
 cbtc	赈
+cbtu	纨
+cbtu	釻
 cbvd	则
 cbvh	赅
 cbvi	绿
@@ -1836,7 +1839,6 @@ cksa	鋿
 cksi	鉃
 ckss	鎵
 cksu	鏜
-ckta	釩
 cktb	蠁
 cktg	鄉
 ckth	響
@@ -1845,6 +1847,7 @@ cktj	嚮
 cktm	鋨
 cktn	饗
 ckts	鐣
+cktu	釩
 cku	丫
 cku	鈠
 ckvi	绖
@@ -2130,10 +2133,10 @@ cmss	閨
 cmsu	塺
 cmsw	闥
 cmsw	闧
-cmta	鈬
 cmti	鈮
 cmtn	閬
 cmts	摩
+cmtu	鈬
 cmvb	钃
 cmvh	閡
 cmvi	閖
@@ -2277,8 +2280,8 @@ cprr	銚
 cpsd	绸
 cpsd	錭
 cpsi	鉐
-cpta	约
-cpta	釣
+cptu	约
+cptu	釣
 cqa	并
 cqbi	銰
 cqbp	艵
@@ -2319,8 +2322,8 @@ cqsh	鐯
 cqsk	绎
 cqsn	鵧
 cqsr	鑉
-cqta	釵
 cqto	銿
+cqtu	釵
 cqvd	鍣
 cqvj	鑮
 cqvl	剙
@@ -2838,9 +2841,9 @@ cvlv	幣
 cvlw	獘
 cvne	鈌
 cvsg	鍅
-cvta	纫
-cvta	釰
-cvta	釼
+cvtu	纫
+cvtu	釰
+cvtu	釼
 cwcy	鏷
 cwdd	鐈
 cwfd	鉰
@@ -2863,9 +2866,9 @@ cwpv	鑗
 cwqa	状
 cwrj	鑆
 cwsh	鑙
-cwta	级
-cwta	鈒
 cwtn	鉯
+cwtu	级
+cwtu	鈒
 cwvd	鋓
 cwvx	鏫
 cwwn	绣
@@ -2887,7 +2890,7 @@ cxma	缅
 cxnc	鍊
 cxpb	錰
 cxph	鐕
-cxta	鉥
+cxtu	鉥
 cxu	鈢
 cxvj	鉔
 cxvo	鉅
@@ -2934,11 +2937,11 @@ cyss	豢
 cyss	鍷
 cysy	鯗
 cysy	鮝
-cyta	鈦
-cyta	鈺
 cytn	養
 cytn	飬
 cyts	拳
+cytu	鈦
+cytu	鈺
 cyva	券
 cyvj	帣
 cywo	送
@@ -3315,11 +3318,11 @@ djsd	聐
 djsl	聙
 djsn	鵈
 djsy	咃
-djta	斥
 djtc	噥
 djti	吪
 djtl	哗
 djtq	欣
+djtu	斥
 dju	叫
 djvd	刵
 djvi	呚
@@ -3687,8 +3690,8 @@ dmsn	瞗
 dmsr	瞌
 dmss	睦
 dmss	眭
-dmta	呎
 dmti	呢
+dmtu	呎
 dmtv	眿
 dmu	目
 dmvb	囑
@@ -3912,9 +3915,9 @@ dssn	嘵
 dssr	啩
 dssu	哇
 dssy	哋
-dsta	啄
 dsth	嗜
 dsti	咾
+dstu	啄
 dsu	吐
 dswj	嚋
 dswu	嗚
@@ -3966,7 +3969,7 @@ dwqa	吠
 dwrj	嚉
 dwsg	哪
 dwss	嚡
-dwta	吸
+dwtu	吸
 dwvd	唎
 dwwn	唀
 dwyd	吳
@@ -4091,8 +4094,8 @@ dyrw	霒
 dyrw	霊
 dysk	唪
 dyss	喹
-dyta	呔
 dytc	震
+dytu	呔
 dyu	雨
 dyvd	霑
 dyvd	霘
@@ -4153,8 +4156,8 @@ fbnb	媍
 fbnx	妳
 fbpe	妉
 fbsf	嫿
-fbta	奺
 fbtt	嫓
+fbtu	奺
 fbvi	娽
 fbxi	厗
 fbxu	娴
@@ -4721,7 +4724,7 @@ fprr	姚
 fpsd	婤
 fpsi	妬
 fpsu	坙
-fpta	妁
+fptu	妁
 fpwo	迈
 fqa	开
 fqcc	孏
@@ -4812,8 +4815,8 @@ fsro	婞
 fssn	嬈
 fssu	娃
 fssu	厓
-fsta	压
 fsti	姥
+fstu	压
 fsu	圧
 fswj	嬦
 fsye	她
@@ -5042,7 +5045,6 @@ fvsn	鳾
 fvss	跬
 fvss	踛
 fvsw	躂
-fvta	求
 fvtd	皳
 fvtf	裘
 fvtf	蹞
@@ -5051,6 +5053,7 @@ fvtl	跸
 fvtm	慦
 fvtn	踉
 fvtr	盚
+fvtu	求
 fvtw	逑
 fvty	跓
 fvu	足
@@ -5111,8 +5114,8 @@ fwsg	娜
 fwsn	鵶
 fwsu	堊
 fwsu	垩
-fwta	夨
 fwtn	姒
+fwtu	夨
 fwvd	娳
 fwwf	婣
 fwwh	曆
@@ -5605,14 +5608,14 @@ gkqh	陹
 gkqs	陞
 gksu	塦
 gksu	隚
-gkta	巩
-gkta	曵
 gktb	蛩
 gktc	銎
 gktd	聓
 gktf	跫
 gkti	陀
 gktm	恐
+gktu	巩
+gktu	曵
 gktw	鞏
 gkya	隍
 gkyf	巬
@@ -6618,9 +6621,9 @@ hkqs	铿
 hksa	躺
 hkss	镓
 hksu	镗
-hkta	钒
 hkti	铊
 hktm	锇
+hktu	钒
 hkvi	铚
 hkvj	锦
 hkxu	躲
@@ -6650,7 +6653,7 @@ hlqf	锤
 hlse	铦
 hlsi	铤
 hlsn	鶽
-hlta	孓
+hltu	孓
 hlva	躮
 hlvl	镇
 hlwo	辽
@@ -6941,7 +6944,7 @@ hpqn	鹪
 hprj	钧
 hprr	铫
 hpsn	鷦
-hpta	钓
+hptu	钓
 hpvd	劁
 hqbk	铹
 hqgt	锚
@@ -6954,7 +6957,7 @@ hqmd	锘
 hqo	隻
 hqrj	钳
 hqsk	铎
-hqta	钗
+hqtu	钗
 hqwu	钨
 hrbd	暲
 hrbg	晕
@@ -7542,8 +7545,8 @@ hwpo	锹
 hwpv	斖
 hwsn	鳼
 hwsn	鴍
-hwta	钑
 hwtn	斏
+hwtu	钑
 hwvd	刘
 hwwn	锈
 hwwo	这
@@ -7607,8 +7610,8 @@ hylq	锛
 hypy	预
 hyqn	鸦
 hysn	鴉
-hyta	钰
-hyta	钛
+hytu	钰
+hytu	钛
 hyu	予
 hywo	迓
 ja	向
@@ -8090,9 +8093,9 @@ jkrm	侐
 jksa	倘
 jksj	偫
 jkss	傢
-jkta	囪
 jkti	佗
 jktm	俄
+jktu	囪
 jku	伇
 jkvd	倒
 jkvi	侄
@@ -8215,10 +8218,10 @@ jmqo	伖
 jmrq	假
 jmsu	垡
 jmsu	垈
-jmta	仗
-jmta	伬
 jmti	伲
 jmtr	侭
+jmtu	仗
+jmtu	伬
 jmvj	佈
 jmvj	帒
 jmvo	佀
@@ -8319,7 +8322,7 @@ jprj	伨
 jprr	佻
 jpsd	倜
 jpsi	佦
-jpta	仢
+jptu	仢
 jqdj	傇
 jqfc	豊
 jqfg	鄷
@@ -8345,9 +8348,9 @@ jqpj	儆
 jqpt	僃
 jqrj	佄
 jqrl	儚
-jqta	发
 jqtc	農
 jqto	俑
+jqtu	发
 jqu	曲
 jra	信
 jrbb	僶
@@ -8466,8 +8469,8 @@ jvrh	昝
 jvrj	冬
 jvsk	夅
 jvsw	逄
-jvta	仞
-jvta	仭
+jvtu	仞
+jvtu	仭
 jvxu	条
 jwco	侨
 jwcy	僕
@@ -8491,8 +8494,8 @@ jwpo	偢
 jwqa	伏
 jwrj	僅
 jwsh	储
-jwta	伋
 jwtn	似
+jwtu	伋
 jwvd	俐
 jwya	俇
 jwya	仸
@@ -9065,8 +9068,8 @@ kjnr	宱
 kjqo	凤
 kjrg	凨
 kjsn	鳯
-kjta	凡
-kjta	卪
+kjtu	凡
+kjtu	卪
 kjvj	凧
 kjxu	朵
 kjxu	凩
@@ -9175,8 +9178,8 @@ kmrm	寍
 kmrq	徦
 kmrs	鸋
 kmrw	寜
-kmta	鿈
 kmto	甯
+kmtu	鿈
 kmva	彻
 kmvm	徲
 kmvm	悹
@@ -9237,7 +9240,7 @@ kpqo	叜
 kprr	宨
 kpsd	徟
 kpsi	宕
-kpta	彴
+kptu	彴
 kpye	须
 kqa	升
 kqbl	竖
@@ -9424,7 +9427,7 @@ kwpe	巟
 kwps	舝
 kwqa	宊
 kwra	寣
-kwta	彶
+kwtu	彶
 kwxu	杗
 kwya	宎
 kxbd	窘
@@ -9547,7 +9550,7 @@ kykl	劮
 kykn	寶
 kymx	怣
 kysn	鴩
-kyta	宝
+kytu	宝
 kywo	迭
 la	八
 lbdg	爺
@@ -9590,8 +9593,8 @@ lbqn	臔
 lbrm	盃
 lbsn	鴀
 lbss	腱
-lbta	肒
 lbto	甭
+lbtu	肒
 lbu	不
 lbwo	还
 lbxc	釜
@@ -10124,7 +10127,7 @@ lppo	腅
 lppt	尦
 lprr	朓
 lprr	脁
-lpta	肑
+lptu	肑
 lpya	尩
 lpyn	爒
 lqa	千
@@ -10171,7 +10174,7 @@ lqrx	腜
 lqsn	鳷
 lqsq	鼖
 lqsu	圱
-lqta	肞
+lqtu	肞
 lqvd	刋
 lqwo	迁
 lqxh	濌
@@ -10306,7 +10309,6 @@ lvsj	歭
 lvsn	鳻
 lvsn	歵
 lvsu	坌
-lvta	肕
 lvtc	赀
 lvtc	鈭
 lvtd	眥
@@ -10325,6 +10327,7 @@ lvtr	訾
 lvts	鮆
 lvts	鴜
 lvtt	觜
+lvtu	肕
 lvtx	柴
 lvtx	歶
 lvty	紫
@@ -10398,7 +10401,7 @@ lyfy	腠
 lyga	腌
 lygg	胰
 lynn	脥
-lyta	肽
+lytu	肽
 ma	爪
 ma	爫
 mbda	慞
@@ -10708,7 +10711,7 @@ mkrm	恤
 mksa	惝
 mksn	鷂
 mksu	憆
-mkta	忛
+mktu	忛
 mku	癹
 mkvi	恎
 mkwa	忙
@@ -11067,7 +11070,6 @@ mssj	屆
 mssn	鳲
 mssn	憢
 msss	鷵
-msta	尺
 mstc	屒
 mstf	昼
 msth	愭
@@ -11076,6 +11078,7 @@ msti	恅
 mstl	咫
 mstr	尽
 mstt	屁
+mstu	尺
 mstw	迟
 mstw	迡
 msu	坕
@@ -11131,7 +11134,7 @@ mvpr	盔
 mvqo	友
 mvqr	盋
 mvqt	犮
-mvta	丈
+mvtu	丈
 mvvj	布
 mwcv	懰
 mwdd	憍
@@ -11159,8 +11162,8 @@ mwo	爲
 mwpo	愀
 mwrj	慬
 mwrk	懄
-mwta	戍
-mwta	忣
+mwtu	戍
+mwtu	忣
 mwu	戊
 mwvd	悧
 mwwg	郕
@@ -11190,7 +11193,7 @@ mxmy	繠
 mxph	憯
 mxqo	爰
 mxqs	鶢
-mxta	怵
+mxtu	怵
 mxu	采
 mxvo	怇
 mxxl	憷
@@ -11208,7 +11211,7 @@ myfr	恗
 mygg	恞
 mynn	悏
 mysn	鶏
-myta	忲
+mytu	忲
 mywi	乿
 na	僉
 nbbd	賠
@@ -11320,9 +11323,9 @@ nbsn	鵙
 nbsn	鷑
 nbsn	鴬
 nbsy	貤
-nbta	笂
 nbtc	賑
 nbtj	觉
+nbtu	笂
 nbvd	則
 nbvh	賅
 nbvi	箓
@@ -11606,8 +11609,8 @@ nkqs	簺
 nkri	覂
 nksi	笶
 nksk	鼡
-nkta	竼
 nktq	簐
+nktu	竼
 nku	个
 nkvd	箌
 nkwa	笀
@@ -12080,7 +12083,6 @@ nsye	竾
 nsyg	餣
 nsyq	餴
 nsyw	甄
-nta	亽
 ntbd	倉
 ntbm	戧
 ntbs	鶬
@@ -12113,6 +12115,7 @@ ntqy	瓴
 ntrr	籜
 ntti	笓
 nttl	筚
+ntu	亽
 ntwc	贪
 ntwd	含
 ntwf	頷
@@ -12178,8 +12181,8 @@ nvrj	翺
 nvrl	臯
 nvrs	鷱
 nvsy	筂
-nvta	劒
-nvta	劔
+nvtu	劒
+nvtu	劔
 nvvx	簗
 nvwg	鄓
 nvwi	臫
@@ -12272,8 +12275,8 @@ nwsr	圔
 nwss	圂
 nwss	豗
 nwsw	围
-nwta	笈
 nwtn	笖
+nwtu	笈
 nwu	兀
 nwvd	刉
 nwvd	筣
@@ -12329,7 +12332,7 @@ nxnw	光
 nxph	簪
 nxsn	鷅
 nxsu	尘
-nxta	尐
+nxtu	尐
 nxu	栗
 nxwg	籕
 nxxa	筪
@@ -12821,10 +12824,10 @@ pkqg	鄋
 pkqo	叟
 pkqw	遚
 pkrm	烅
-pkta	匆
 pkti	炨
 pktm	怱
 pkto	甮
+pktu	匆
 pku	炈
 pkvd	刎
 pkvj	龦
@@ -12992,8 +12995,8 @@ ppsn	鶂
 ppsn	鶑
 ppsu	烾
 ppsu	爅
-ppta	灼
 pptq	欻
+pptu	灼
 ppvd	剡
 ppye	烦
 pqa	舁
@@ -13383,12 +13386,12 @@ psyt	砡
 psyu	龽
 psyw	鿎
 psyw	砙
-pta	勺
 ptha	炞
 pti	匂
 ptng	烺
 ptqa	炊
 pttk	煯
+ptu	勺
 ptya	炷
 pu	臼
 pu	甶
@@ -13416,7 +13419,7 @@ pxkk	爩
 pxnc	煉
 pxph	熸
 pxrb	烞
-pxta	炢
+pxtu	炢
 pxu	炑
 pxvo	炬
 pxyd	煗
@@ -13489,9 +13492,9 @@ qbsk	藙
 qbsk	茟
 qbsn	鴱
 qbsu	茔
-qbta	芄
 qbtl	蔛
 qbtm	薢
+qbtu	芄
 qbtv	葪
 qbvd	苅
 qbvi	荥
@@ -13670,8 +13673,8 @@ qfrk	芌
 qfrp	蔫
 qfsa	芜
 qfss	蒃
-qfta	萈
 qftj	薅
+qftu	萈
 qfvf	顢
 qfvj	芾
 qfvt	莍
@@ -13966,8 +13969,8 @@ qkpt	菂
 qkqt	藆
 qkrx	薬
 qksk	羋
-qkta	芃
 qktm	莪
+qktu	芃
 qku	芟
 qkvd	菿
 qkve	萓
@@ -14117,9 +14120,9 @@ qmqw	薍
 qmrd	蒧
 qmrq	葭
 qmrw	蕸
-qmta	荗
 qmti	苨
 qmtr	荩
+qmtu	荗
 qmva	苆
 qmvo	苢
 qmwb	藏
@@ -14245,7 +14248,7 @@ qppp	蕮
 qppp	藀
 qppp	藞
 qprl	藇
-qpta	芍
+qptu	芍
 qpye	鿒
 qqfv	蔕
 qqgo	茎
@@ -14271,7 +14274,7 @@ qqqv	剟
 qqqw	逫
 qqqx	桑
 qqrj	苷
-qqta	芆
+qqtu	芆
 qqtw	蓪
 qrbd	瞢
 qrbf	顭
@@ -14362,7 +14365,6 @@ qswh	蘇
 qswi	苇
 qswj	薵
 qswo	蓫
-qta	叉
 qtbg	蓈
 qtbl	蓢
 qtbl	菈
@@ -14395,6 +14397,7 @@ qtrr	蘀
 qtti	芘
 qttk	蒈
 qttl	荜
+qtu	叉
 qtvd	萔
 qtwf	蘔
 qtwo	通
@@ -14511,8 +14514,8 @@ qwsi	莊
 qwsj	薐
 qwsy	莸
 qwsy	蘓
-qwta	芨
 qwtn	苡
+qwtu	芨
 qwu	乌
 qwvd	莉
 qwve	蒩
@@ -14653,7 +14656,7 @@ rbpu	諂
 rbqo	攴
 rbrm	盀
 rbsn	鳪
-rbta	訙
+rbtu	訙
 rbu	卜
 rcbl	謙
 rcbp	讇
@@ -14700,7 +14703,7 @@ rdlf	謱
 rdpe	詋
 rdpi	詖
 rdqo	諏
-rdta	訴
+rdtu	訴
 rdxj	譳
 rfbl	誱
 rfdg	諨
@@ -14950,9 +14953,9 @@ rkmx	譓
 rkng	譒
 rknq	諔
 rkph	讜
-rkta	訉
 rkti	詑
 rktm	誐
+rktu	訉
 rku	設
 rkve	誼
 rkvi	誈
@@ -15089,7 +15092,7 @@ rmqs	驿
 rmqt	詙
 rmrr	骉
 rmsy	驰
-rmta	訳
+rmtu	訳
 rmty	驻
 rmve	驵
 rmvh	骇
@@ -15154,7 +15157,7 @@ rppp	爕
 rppq	燮
 rprr	誂
 rpsd	調
-rpta	訋
+rptu	訋
 rqdh	讙
 rqfp	讌
 rqhq	護
@@ -15171,8 +15174,8 @@ rqqq	諁
 rqrj	詌
 rqrx	謀
 rqsg	讛
-rqta	訍
 rqto	誦
+rqtu	訍
 rra	誩
 rrbb	譝
 rrbj	謔
@@ -15206,7 +15209,7 @@ rsrn	讀
 rsrr	讟
 rssn	譊
 rssu	詿
-rsta	諑
+rstu	諑
 rswj	譸
 rsye	訑
 rsyo	訧
@@ -15222,9 +15225,9 @@ rve	詛
 rvha	該
 rvhr	誻
 rvne	訣
-rvta	訒
 rvtl	譅
 rvtm	認
+rvtu	訒
 rwa	罒
 rwbh	罯
 rwbx	罿
@@ -15298,7 +15301,7 @@ rwsr	罫
 rwss	罣
 rwss	鸅
 rwst	歝
-rwta	訯
+rwtu	訯
 rwty	罜
 rwvd	誗
 rwve	罝
@@ -15327,7 +15330,7 @@ rxga	訐
 rxhr	諌
 rxnc	諫
 rxph	譖
-rxta	訹
+rxtu	訹
 rxvo	詎
 rxxg	詽
 rxxu	諃
@@ -15505,7 +15508,7 @@ scsa	圸
 scsi	圯
 scsk	坢
 scss	壕
-scta	赱
+sctu	赱
 scyc	埢
 scys	堘
 sdbk	臺
@@ -15536,8 +15539,8 @@ sdrg	墵
 sdsd	喆
 sdsd	嚞
 sdsn	鴶
-sdta	坼
 sdtq	欯
+sdtu	坼
 sdwl	壩
 sdwo	迼
 sdxj	壖
@@ -15919,8 +15922,8 @@ sprj	均
 sprr	垗
 spsi	坧
 spss	龳
-spta	尥
-spta	圴
+sptu	尥
+sptu	圴
 sqdh	壦
 sqfv	墆
 sqgl	墴
@@ -16029,7 +16032,7 @@ ssss	豩
 sssu	垚
 sssw	遶
 sssx	櫫
-ssta	豖
+sstu	豖
 sstv	剢
 ssu	圭
 ssvd	刲
@@ -16042,7 +16045,6 @@ sswu	塢
 ssxx	豣
 ssye	地
 ssyi	塐
-sta	圡
 stbg	鿾
 stdl	塡
 sthr	耆
@@ -16053,6 +16055,7 @@ stng	埌
 stpd	耈
 stqa	坎
 sttk	堦
+stu	圡
 su	土
 svdd	嚭
 svdd	囍
@@ -16103,8 +16106,8 @@ swll	壻
 swmi	坁
 swmt	坻
 swrj	墐
-swta	圾
 swtq	歍
+swtu	圾
 swu	烏
 swxu	垜
 swxu	尮
@@ -16419,9 +16422,6 @@ syyf	鯡
 syyg	鮧
 syyh	鰆
 syyr	鮬
-ta	丶
-ta	乀
-ta	乁
 tbbv	掃
 tbbw	挣
 tbdo	掊
@@ -16468,7 +16468,6 @@ tbpe	抌
 tbpu	掐
 tbqs	摼
 tbss	揵
-tbta	执
 tbtb	蛰
 tbtc	贽
 tbtk	势
@@ -16477,6 +16476,7 @@ tbtp	热
 tbtq	鸷
 tbts	垫
 tbtt	挚
+tbtu	执
 tbty	絷
 tbxk	摋
 tbxl	撞
@@ -16578,8 +16578,8 @@ tdqq	摄
 tdra	誓
 tdrr	摂
 tdsu	埑
-tdta	拆
 tdtq	掀
+tdtu	拆
 tdwf	顚
 tdwi	乴
 tdwl	眞
@@ -16811,10 +16811,10 @@ tkqt	觺
 tkrb	拤
 tkri	抸
 tksu	摚
-tkta	为
 tkti	拕
 tktq	欵
 tkts	撑
+tktu	为
 tku	投
 tkvd	捯
 tkvi	挃
@@ -16917,9 +16917,9 @@ tmpu	搯
 tmqf	搌
 tmqo	抜
 tmqt	拔
-tmta	扙
-tmta	択
 tmti	抳
+tmtu	扙
+tmtu	択
 tmvj	抪
 tmvm	摨
 tmwd	挶
@@ -17024,7 +17024,7 @@ tprj	抣
 tprr	挑
 tprs	攑
 tpsi	拓
-tpta	扚
+tptu	扚
 tpvi	揼
 tpye	顷
 tqa	欠
@@ -17057,9 +17057,9 @@ tqqx	搡
 tqrj	拑
 tqsh	擆
 tqsk	择
-tqta	扠
 tqtb	搔
 tqto	捅
+tqtu	扠
 trbu	扑
 trda	掉
 trdm	撯
@@ -17191,6 +17191,9 @@ ttti	批
 tttk	揩
 ttxu	枈
 ttya	拄
+tu	丶
+tu	乀
+tu	乁
 tvdo	招
 tve	抯
 tvfy	潁
@@ -17200,7 +17203,7 @@ tvi	氷
 tvne	抉
 tvnk	挱
 tvpy	颍
-tvta	扨
+tvtu	扨
 twco	挢
 twcy	撲
 twdd	撟
@@ -17223,8 +17226,8 @@ twpo	揪
 twpy	颖
 twrl	擈
 twsg	挪
-twta	扱
 twtn	拟
+twtu	扱
 twvf	拯
 twxu	挅
 twya	扷
@@ -17333,9 +17336,9 @@ vbsf	澅
 vbsk	津
 vbss	堻
 vbss	湕
-vbta	汍
-vbta	汣
 vbtm	澥
+vbtu	汍
+vbtu	汣
 vbvi	渌
 vbvo	洀
 vbwf	潚
@@ -17472,8 +17475,8 @@ vdps	碆
 vdqq	滠
 vdrg	澐
 vdsu	垽
-vdta	泝
 vdtq	欩
+vdtu	泝
 vdvd	刟
 vdwl	灞
 vdwo	迢
@@ -17888,11 +17891,11 @@ vkrr	潨
 vksa	淌
 vkss	漥
 vksu	漟
-vkta	汎
 vkti	沱
 vktm	涐
 vktp	漑
 vktr	盕
+vktu	汎
 vku	没
 vkvi	洷
 vkvi	湶
@@ -18037,10 +18040,10 @@ vmrj	灂
 vmrp	溌
 vmrq	溊
 vmsh	潳
-vmta	沢
 vmti	泥
 vmtr	浕
 vmts	埿
+vmtu	沢
 vmva	沏
 vmvb	灟
 vmvm	漽
@@ -18192,7 +18195,7 @@ vpsd	淍
 vpsi	沯
 vpsi	沰
 vpsu	濹
-vpta	汋
+vptu	汋
 vqbf	瀟
 vqbk	涝
 vqbl	潇
@@ -18244,11 +18247,11 @@ vqrt	瀎
 vqrx	湈
 vqsk	泽
 vqsr	濭
-vqta	汊
 vqtb	溞
 vqtk	湧
 vqtm	慂
 vqto	涌
+vqtu	汊
 vqwq	漭
 vqxy	澫
 vrbb	澠
@@ -18334,7 +18337,7 @@ vssh	瀦
 vssj	湗
 vssn	澆
 vssu	洼
-vsta	涿
+vstu	涿
 vsu	坔
 vsu	汢
 vswj	濤
@@ -18343,8 +18346,6 @@ vsye	池
 vsyi	溸
 vsyo	沋
 vsyu	漁
-vta	刃
-vta	刄
 vtce	浱
 vtdj	浙
 vtdo	滣
@@ -18360,6 +18361,8 @@ vtnh	湁
 vtrm	盜
 vtti	沘
 vttk	湝
+vtu	刃
+vtu	刄
 vtvi	泳
 vtvl	歰
 vtwo	溈
@@ -18417,8 +18420,8 @@ vwrj	漌
 vwrl	澲
 vwrq	灇
 vwsh	潴
-vwta	汲
 vwtn	泤
+vwtu	汲
 vwvd	浰
 vwvf	洆
 vwvj	涵
@@ -18458,7 +18461,7 @@ vxnv	漆
 vxph	潛
 vxpk	灊
 vxss	溎
-vxta	沭
+vxtu	沭
 vxu	沐
 vxvo	洰
 vxvx	渠
@@ -18504,9 +18507,9 @@ vyqn	鸾
 vyqo	变
 vysk	淎
 vysn	鵉
-vyta	汰
-vyta	亪
 vyts	挛
+vytu	汰
+vytu	亪
 vyvi	溙
 vyvj	帟
 vywh	溱
@@ -18551,7 +18554,7 @@ wdla	识
 wdlm	聼
 wdpi	诐
 wdqo	诹
-wdta	诉
+wdtu	诉
 wfdf	覗
 wfdh	孠
 wfdo	司
@@ -19007,7 +19010,6 @@ wmng	鄮
 wmpe	诜
 wmpo	诙
 wmqa	诫
-wmta	氐
 wmtg	邸
 wmth	孵
 wmtk	毈
@@ -19015,6 +19017,7 @@ wmtn	贕
 wmtq	鸱
 wmts	鴟
 wmtt	卵
+wmtu	氐
 wmvj	帋
 wmwi	诚
 wmwi	乮
@@ -19038,10 +19041,10 @@ wnqo	夃
 wnqr	盈
 wnrm	盁
 wnro	诈
-wnta	及
 wntd	牄
 wnti	论
 wntm	谂
+wntu	及
 wnwi	讫
 wnwo	谜
 wnwo	辸
@@ -19313,14 +19316,14 @@ wsnd	牆
 wspo	焋
 wsqa	弉
 wssu	诖
-wsta	诼
+wstu	诼
 wswi	讳
 wsyd	奘
-wta	乄
 wtbi	议
 wthr	诣
 wtne	以
 wttk	谐
+wtu	乄
 wvbs	貄
 wvbv	貈
 wvcr	貖
@@ -19370,8 +19373,8 @@ wvpt	豹
 wvqg	貓
 wvqh	貛
 wvqy	貘
-wvta	讱
 wvtt	豼
+wvtu	讱
 wvvb	蠫
 wvvd	貂
 wvxd	貙
@@ -19479,10 +19482,10 @@ xbpe	枕
 xbpo	棂
 xbqs	樫
 xbss	楗
-xbta	杦
 xbtl	槲
 xbtm	檞
 xbto	桷
+xbtu	杦
 xbvi	椂
 xbwf	橚
 xbxf	櫬
@@ -19600,8 +19603,8 @@ xdqo	棷
 xdrg	橒
 xdrk	枵
 xdsn	鵣
-xdta	柝
 xdtq	欶
+xdtu	柝
 xdtw	遬
 xdva	枴
 xdvd	剌
@@ -19992,10 +19995,10 @@ xkrm	桖
 xkrx	檪
 xkss	榢
 xksu	樘
-xkta	杋
 xkti	柁
 xkti	梎
 xktp	槪
+xktu	杋
 xku	杸
 xkvd	椡
 xkve	椬
@@ -20147,8 +20150,8 @@ xmqt	柭
 xmrn	樲
 xmrq	椵
 xmsu	堏
-xmta	杖
 xmti	柅
+xmtu	杖
 xmvb	欘
 xmvj	柨
 xmvm	樨
@@ -20263,7 +20266,7 @@ xprs	櫸
 xprt	欅
 xpsd	椆
 xpsi	柘
-xpta	杓
+xptu	杓
 xpu	桕
 xqbf	櫹
 xqbs	檬
@@ -20306,8 +20309,8 @@ xqrl	橫
 xqrt	櫗
 xqrx	楳
 xqsu	柽
-xqta	杈
 xqto	桶
+xqtu	杈
 xqtw	樋
 xqvj	欂
 xqxd	櫙
@@ -20373,17 +20376,15 @@ xsrn	櫝
 xsrw	橽
 xssn	橈
 xssu	桂
-xsta	椓
 xsth	榰
 xsti	栳
+xstu	椓
 xsu	杜
 xswh	櫯
 xswj	檮
 xsxl	榸
 xsye	杝
 xsyi	榡
-xta	术
-xta	朮
 xtbg	榔
 xtbl	樃
 xtce	桭
@@ -20400,6 +20401,8 @@ xtso	杽
 xtti	枇
 xttk	楷
 xtts	梐
+xtu	术
+xtu	朮
 xtvi	栐
 xtwo	述
 xtws	鶐
@@ -20413,8 +20416,8 @@ xve	査
 xvha	核
 xvla	椇
 xvnk	桫
-xvta	杒
 xvtm	梕
+xvtu	杒
 xvvx	樑
 xwbj	棅
 xwbo	蚻
@@ -20447,7 +20450,7 @@ xwrq	欉
 xwsg	梛
 xwsh	槠
 xwsi	梉
-xwta	极
+xwtu	极
 xwvd	梸
 xwwf	棩
 xwxu	桗
@@ -20561,9 +20564,9 @@ ybpe	紞
 ybsf	繣
 ybsk	珒
 ybss	縁
-ybta	玖
-ybta	紈
 ybtm	繲
+ybtu	玖
+ybtu	紈
 ybvi	琭
 ybvi	緑
 ybvo	珘
@@ -20707,9 +20710,9 @@ ydsk	奉
 ydsl	奲
 ydss	奎
 ydsu	圶
-ydta	太
 ydtm	态
 ydtr	盇
+ydtu	太
 ydtw	迏
 ydvf	奫
 ydvh	奒
@@ -21188,8 +21191,8 @@ yprr	絩
 ypsd	綢
 ypsd	琱
 ypsu	纆
-ypta	約
-ypta	玓
+yptu	約
+yptu	玓
 ypye	顼
 yqa	弄
 yqdh	瓘
@@ -21214,8 +21217,8 @@ yqrj	紺
 yqrj	玵
 yqsr	瓂
 yqsu	経
-yqta	紁
 yqtb	瑵
+yqtu	紁
 yqww	璓
 yra	琂
 yrbb	繩
@@ -21273,16 +21276,14 @@ ysrw	繨
 yssn	繞
 yssu	珪
 yssu	絓
-ysta	琢
 ysti	珯
+ystu	琢
 yswi	玮
 yswj	璹
 yswp	瓙
 yswu	瑦
 ysyi	縤
 ysyo	紌
-yta	玉
-yta	玊
 ytbg	瑯
 ytha	玣
 ytja	现
@@ -21291,6 +21292,8 @@ ytng	琅
 ytti	紕
 ytti	玭
 yttk	瑎
+ytu	玉
+ytu	玊
 ytya	紸
 yva	糿
 yvdo	紹
@@ -21301,8 +21304,8 @@ yvha	絯
 yvne	玦
 yvpa	絕
 yvsg	琺
-yvta	紉
 yvtm	綛
+yvtu	紉
 yvxx	璖
 ywa	瓦
 ywcy	璞
@@ -21331,7 +21334,7 @@ ywo	迋
 ywpv	瓈
 ywqa	紎
 ywrj	瑾
-ywta	級
+ywtu	級
 ywvd	琍
 ywvi	絼
 ywwn	琇
@@ -21348,7 +21351,7 @@ yxli	理
 yxma	緬
 yxnc	練
 yxnc	瑓
-yxta	絉
+yxtu	絉
 yxxl	璴
 yxxu	琳
 yxxu	綝
@@ -21372,8 +21375,8 @@ yynw	琴
 yypa	琶
 yysk	琫
 yysn	鷥
-yyta	珏
 yytt	琵
+yytu	珏
 yywa	珁
 yywh	瑧
 yywh	縥
@@ -21512,11 +21515,11 @@ bbsn	𰳟
 bbsr	𬠨
 bbss	𧏹
 bbss	𲿃
-bbta	𧈮
 bbtf	𤕥
 bbtl	𲿟
 bbto	𰲾
 bbtr	𧒻
+bbtu	𧈮
 bbvd	𠛄
 bbve	𮔎
 bbvi	𧌍
@@ -22099,6 +22102,7 @@ bhys	𧐷
 bhys	𧒐
 bhyu	𲾐
 bi	㐅
+bi	𠂊
 bi	𠂭
 bja	䖮
 bja	𠚍
@@ -22673,8 +22677,6 @@ bksa	𱿫
 bkss	𫋕
 bkss	𮙡
 bksu	𰳇
-bkta	䖠
-bkta	𠕵
 bktf	𬠶
 bkti	𠤓
 bktj	䢆
@@ -22683,6 +22685,8 @@ bktq	𢼐
 bktq	𣣞
 bktq	𭭆
 bkts	𳍵
+bktu	䖠
+bktu	𠕵
 bku	𧈻
 bku	𰯯
 bkvd	𧌼
@@ -23588,11 +23592,11 @@ bmsl	𬮬
 bmsr	𬮯
 bmsu	𧋭
 bmsu	𮤬
-bmta	𧊥
 bmtj	𲈶
 bmtr	𧋅
 bmtt	𰿫
 bmtt	𲨃
+bmtu	𧊥
 bmva	𫊧
 bmvd	𧔸
 bmvf	𩒽
@@ -23755,14 +23759,14 @@ bnss	𲿉
 bnsu	䗎
 bnsu	𱖚
 bnsy	𧉮
-bnta	𧉍
-bnta	𫹬
 bntd	𫤺
 bnti	𰲰
 bntj	𫌨
 bntm	𬠖
 bntq	𳀏
 bntr	𥂭
+bntu	𧉍
+bntu	𫹬
 bnvd	𧍡
 bnvj	𬠄
 bnwn	𱸿
@@ -23784,7 +23788,6 @@ bnyd	𰳍
 bnyi	𦂳
 bnym	𲜱
 bnyx	𨤰
-bo	𠂊
 bpba	𤇸
 bpbd	𦥵
 bpbl	𰰖
@@ -23965,10 +23968,10 @@ bqsj	𬠟
 bqsk	𰲵
 bqsl	𫋛
 bqss	𪅤
-bqta	𲾌
 bqtb	𧎇
 bqtk	𧍛
 bqtt	㻨
+bqtu	𲾌
 bqtw	𧐺
 bqvj	𢃥
 bqvj	𮕓
@@ -24110,8 +24113,8 @@ bssi	䖶
 bssi	𧰼
 bssr	𬠎
 bsst	𧏂
-bsta	𧌮
-bsta	𬟶
+bstu	𧌮
+bstu	𬟶
 bsu	𫊥
 bsvd	𱿪
 bswj	𫋤
@@ -24120,7 +24123,6 @@ bsxl	𲿆
 bsye	𬼜
 bsye	𲎿
 bsyu	䗨
-bta	𠚤
 btbh	𰴥
 btbh	𳁢
 btbk	𧣍
@@ -24358,6 +24360,7 @@ btts	𪄢
 bttw	𬌾
 bttx	𣗸
 btty	𧣓
+btu	𠚤
 btvc	𱜒
 btvd	㓩
 btvd	𳁠
@@ -24728,10 +24731,10 @@ bvss	𩺔
 bvsw	𦪭
 bvsw	𨕳
 bvsx	𱼼
-bvta	𧈳
 bvtg	𲻢
 bvtm	𬠍
 bvtq	𬅣
+bvtu	𧈳
 bvtv	𦨬
 bvvc	𦨲
 bvvd	𦨉
@@ -24921,12 +24924,12 @@ bxsf	𩕺
 bxsk	𣫖
 bxsn	𪀣
 bxss	𧱏
-bxta	𣏂
-bxta	𧉱
 bxtb	𨐘
 bxtd	𪲽
 bxtp	𩳙
 bxtq	𠮁
+bxtu	𣏂
+bxtu	𧉱
 bxu	𣎾
 bxva	𰄪
 bxvb	㵷
@@ -24997,10 +25000,10 @@ byqb	𡚥
 byqm	𬠥
 byqo	𠭃
 byra	𧧃
-byta	𧉑
-byta	𧉣
 bytq	𣢮
 bytr	𮔡
+bytu	𧉑
+bytu	𧉣
 byvp	𧑾
 byvv	𦣤
 bywa	𤬦
@@ -25158,12 +25161,12 @@ cbsk	𫎦
 cbsl	䞍
 cbsw	𮢱
 cbsy	𰷠
-cbta	𨥆
 cbtm	𨮂
 cbtm	𰬽
 cbto	𰼰
 cbtt	𧹑
 cbtt	𲇚
+cbtu	𨥆
 cbvo	𨦞
 cbwi	𮷌
 cbwk	𰷟
@@ -25367,11 +25370,11 @@ cdsj	𭔸
 cdsk	𠢄
 cdsu	𭎙
 cdsu	𳅺
-cdta	𦈈
 cdtc	𨯂
 cdti	㖜
 cdti	𨧏
 cdti	𫒐
+cdtu	𦈈
 cdvj	𬘣
 cdwh	㐯
 cdwi	𰇈
@@ -26026,10 +26029,10 @@ cjsu	𰚷
 cjsw	𫒜
 cjsw	𰽂
 cjsy	𳅷
-cjta	𭅲
 cjtc	𫓒
 cjtl	𱽣
 cjtq	𣢇
+cjtu	𭅲
 cjtx	𰘒
 cju	䤛
 cju	𭁄
@@ -27181,8 +27184,6 @@ cmsw	𮟥
 cmsy	𨶢
 cmsy	𫔫
 cmsy	𬮆
-cmta	𨥅
-cmta	𨳉
 cmth	𨳲
 cmth	𨴆
 cmti	𱺙
@@ -27197,6 +27198,8 @@ cmts	䦐
 cmts	𪎚
 cmts	𭢽
 cmtt	𨶦
+cmtu	𨥅
+cmtu	𨳉
 cmtv	𠠒
 cmtx	𨧲
 cmtx	𬘸
@@ -27739,10 +27742,10 @@ cqsh	𬙅
 cqsu	𡉢
 cqsu	𫒔
 cqsy	𬼩
-cqta	𲇅
-cqta	𮵿
 cqtb	𨪊
 cqtk	𮢛
+cqtu	𲇅
+cqtu	𮵿
 cqtw	𨫤
 cqvd	𠛼
 cqvd	𨮎
@@ -29185,7 +29188,6 @@ cssw	𭗤
 cssy	𡵔
 cssy	𪨥
 cssy	𱜊
-csta	𨧧
 cstc	𡷰
 cstd	𡺗
 cstd	𭗀
@@ -29209,6 +29211,7 @@ cstq	㰞
 cstr	㟛
 cstr	𬻼
 csts	𫒰
+cstu	𨧧
 cstv	𲝎
 cstw	𨓹
 csty	𭖒
@@ -29803,8 +29806,6 @@ cysk	𫒩
 cysn	𪀲
 cysn	𳎵
 cysw	𱂇
-cyta	𮶀
-cyta	𲸰
 cytc	𫓈
 cyth	𩁥
 cyti	𨦊
@@ -29815,6 +29816,8 @@ cytp	𩴽
 cyts	𩏗
 cytt	𨫎
 cytt	𱃮
+cytu	𮶀
+cytu	𲸰
 cyvf	𬱋
 cyvi	𣳾
 cyvi	𬇦
@@ -29941,11 +29944,11 @@ dbsn	𪀎
 dbss	𠸻
 dbss	𭉇
 dbsy	𭈽
-dbta	𠮬
-dbta	𠮻
 dbtb	𫬼
 dbtb	𱔿
 dbtm	𠿇
+dbtu	𠮬
+dbtu	𠮻
 dbtx	𠳸
 dbvi	㖨
 dbvo	𪠾
@@ -30083,10 +30086,10 @@ dcsk	𠰢
 dcss	𠸌
 dcst	𭉈
 dcsw	𡀟
-dcta	𠯁
 dcti	𫩡
 dctl	𰈉
 dctq	𠾬
+dctu	𠯁
 dcvd	𠺓
 dcvd	𰇘
 dcvj	𰈡
@@ -30394,8 +30397,8 @@ ddst	𲖇
 ddsu	𡋐
 ddsu	𡋑
 ddsw	𮞮
-ddta	𭇓
 ddtq	𪡗
+ddtu	𭇓
 ddvj	𠲢
 ddwd	𠻌
 ddwd	𥀴
@@ -31401,7 +31404,6 @@ djst	𦕳
 djsu	𣂓
 djsy	𮋭
 djsy	𰭴
-djta	𠮼
 djtb	𮋬
 djtd	㿭
 djtd	𦕶
@@ -31425,6 +31427,7 @@ djtq	𪉄
 djtq	𫆁
 djts	𩿪
 djtt	𫩳
+djtu	𠮼
 djtv	𦕟
 djtw	𠼮
 djtw	𦖯
@@ -31724,12 +31727,12 @@ dksn	𳎭
 dksr	𭋔
 dkss	𠺢
 dkss	𪡽
-dkta	㕨
-dkta	𮓰
 dktj	𠁶
 dktq	𡁌
 dktq	𫫉
 dkts	𫫮
+dktu	㕨
+dktu	𮓰
 dkty	𭈕
 dkty	𲕌
 dku	𠮝
@@ -32904,7 +32907,6 @@ dmsy	𥃸
 dmsy	𩶔
 dmsy	𪾡
 dmsy	𪾵
-dmta	𠲌
 dmtb	𥌤
 dmtb	𭾺
 dmtb	𮵅
@@ -32931,6 +32933,7 @@ dmts	𥆯
 dmtt	䀝
 dmtt	𥅿
 dmtt	𥆶
+dmtu	𠲌
 dmtw	𠸽
 dmtx	𠴬
 dmty	𥅖
@@ -33248,7 +33251,6 @@ dnsu	𪠶
 dnsw	𭌸
 dnsy	𠰹
 dnsy	𭋡
-dnta	𠯙
 dntc	𰇲
 dntd	𭌬
 dntf	𠹸
@@ -33260,6 +33262,7 @@ dntq	𠺼
 dntq	𠿮
 dntq	𡄥
 dntq	𱢴
+dntu	𠯙
 dnu	𪠿
 dnvd	𠷌
 dnvd	𡃍
@@ -33485,8 +33488,8 @@ dpsn	𥀲
 dpsn	𳎯
 dpsu	𰉤
 dpsw	㿹
-dpta	𠮭
 dptq	𣢱
+dptu	𠮭
 dpu	𠲼
 dpva	𤿇
 dpvd	㓟
@@ -33642,12 +33645,12 @@ dqsr	𡀽
 dqst	𠺜
 dqsu	𠱅
 dqsu	𡊙
-dqta	𫩗
 dqtb	𠹏
 dqtk	㗈
 dqto	𠳀
 dqtq	𭇲
 dqtq	𭇳
+dqtu	𫩗
 dqvc	𲕤
 dqvd	𡀩
 dqvd	𭃒
@@ -34156,12 +34159,12 @@ dvsg	𠵽
 dvsg	𰇹
 dvsh	𠹲
 dvsy	𠲨
-dvta	𠯄
 dvtl	𠽼
 dvtm	𠴍
 dvtm	𢙟
 dvtn	𠺘
 dvtq	𠺡
+dvtu	𠯄
 dvtv	𠶇
 dvvd	𠜏
 dvvd	𠶕
@@ -34369,8 +34372,8 @@ dxsn	𪁣
 dxss	𠺺
 dxsu	𠴗
 dxsu	𭊩
-dxta	𠰲
 dxts	𫫕
+dxtu	𠰲
 dxty	𭈴
 dxu	㕲
 dxvd	𠰙
@@ -35045,7 +35048,6 @@ dysw	𲊋
 dysx	䨪
 dysx	𮦐
 dysy	𩅔
-dyta	𠰧
 dytc	𩃧
 dytf	𩄔
 dyti	𱁑
@@ -35056,6 +35058,7 @@ dytl	𩅜
 dytr	㗐
 dytt	𫕫
 dytt	𲉵
+dytu	𠰧
 dytw	𩃑
 dyvb	𩃜
 dyvb	𳉢
@@ -35340,10 +35343,10 @@ fbrs	𡎄
 fbsk	𣪴
 fbss	𡞹
 fbsw	𤣉
-fbta	𡚺
-fbta	𪜂
 fbtm	𪠘
 fbtm	𭞉
+fbtu	𡚺
+fbtu	𪜂
 fbtv	𠝙
 fbvi	𡝘
 fbvv	𢄀
@@ -35746,7 +35749,7 @@ fdsk	𩰬
 fdsn	𬷑
 fdsr	𠁱
 fdsy	𩶯
-fdta	𡛴
+fdtu	𡛴
 fdve	𲛓
 fdvj	𪥳
 fdvj	𰀌
@@ -35847,7 +35850,7 @@ ffrn	𡣧
 ffsn	𩿍
 ffss	𡟇
 ffst	𡟼
-ffta	𠀕
+fftu	𠀕
 ffu	㚣
 ffu	𡛵
 ffvf	𫱹
@@ -35965,10 +35968,10 @@ fgsn	𩿒
 fgsu	𡉝
 fgta	㚼
 fgta	𤰓
-fgta	𬻌
 fgta	𰢴
 fgtq	𭆇
 fgtt	𭒇
+fgtu	𬻌
 fgu	𨚣
 fgvj	𢁴
 fgvw	𤟐
@@ -36547,8 +36550,6 @@ fksm	𣃪
 fksn	𫚯
 fksq	𠩍
 fksu	𡠠
-fkta	𠨳
-fkta	𫰉
 fktc	𡡪
 fkti	𡛥
 fktk	𪠔
@@ -36557,6 +36558,8 @@ fktq	㜛
 fktq	𣣭
 fkts	𡤝
 fkts	𬷭
+fktu	𠨳
+fktu	𫰉
 fku	𠨻
 fku	𡚾
 fku	𣪅
@@ -37242,12 +37245,12 @@ fmsn	𡣴
 fmst	𰭪
 fmsu	㦱
 fmsu	𡝇
-fmta	𡚹
-fmta	𡛄
-fmta	𡜐
 fmtq	𠩦
 fmtr	𮱁
 fmts	𡌰
+fmtu	𡚹
+fmtu	𡛄
+fmtu	𡜐
 fmtx	𡝥
 fmvj	㚴
 fmvm	㜨
@@ -37922,8 +37925,6 @@ fsyo	㚭
 fsyo	𡯊
 fsyu	𡠵
 fsyw	𰢢
-fta	𡚦
-fta	𰋵
 ftbi	𰆕
 ftbi	𮰸
 ftbk	𡟧
@@ -37954,6 +37955,8 @@ ftso	𡛊
 ftti	𠨽
 fttl	𡞂
 fttl	𰋾
+ftu	𡚦
+ftu	𰋵
 ftvi	𡛻
 ftya	𠩈
 fva	𬺳
@@ -39185,12 +39188,12 @@ fwsr	𰤊
 fwsu	𰉧
 fwsy	𩸇
 fwsy	𩸖
-fwta	㚫
 fwtq	㰳
 fwtq	𠪁
 fwtq	𭭈
 fwts	𰓙
 fwtt	𭯋
+fwtu	㚫
 fwvd	𠜲
 fwvd	𫥼
 fwvj	𫱂
@@ -39960,8 +39963,6 @@ fyss	𩖔
 fyst	𳀸
 fysu	𬡃
 fysw	𧞅
-fyta	𡛕
-fyta	𡛼
 fytb	𰋪
 fytg	𧜛
 fyti	𰳰
@@ -39970,6 +39971,8 @@ fytl	𬡨
 fytm	𮱉
 fytn	𧚅
 fytt	𧘱
+fytu	𡛕
+fytu	𡛼
 fytv	𰳶
 fyvb	𬡯
 fyvd	𮕥
@@ -40809,14 +40812,14 @@ ggsu	𨼂
 ggsw	𨕿
 ggsy	𢐗
 ggta	䧃
-ggta	𢎚
-ggta	𢎛
-ggta	𢎡
 ggtk	𩱌
 ggtk	𩱜
 ggtk	𩱨
 ggtl	𪪼
 ggts	㧭
+ggtu	𢎚
+ggtu	𢎛
+ggtu	𢎡
 ggu	𨸙
 ggvg	𢏠
 ggvj	𢎭
@@ -41843,7 +41846,6 @@ gmsw	䮱
 gmsw	𳌑
 gmsy	𩥭
 gmsy	𱄩
-gmta	𨹒
 gmtd	𩣩
 gmth	𩡼
 gmti	𮩲
@@ -41853,6 +41855,7 @@ gmtl	𩢈
 gmtq	𮩹
 gmts	𱄒
 gmtt	𲋳
+gmtu	𨹒
 gmtv	𲋶
 gmva	𮤺
 gmvh	𩣯
@@ -42017,7 +42020,7 @@ gpps	𨽃
 gppt	𨽓
 gpsd	䧓
 gpsd	𨺃
-gpta	𭘅
+gptu	𭘅
 gpvn	𡘱
 gpya	𨹋
 gqbd	𫤴
@@ -43003,7 +43006,7 @@ gwsm	𢙷
 gwsp	𥒽
 gwst	𢭤
 gwsw	𩊳
-gwta	𨸚
+gwtu	𨸚
 gwvd	𮥉
 gwvj	𨺂
 gwvv	𮥨
@@ -45241,13 +45244,13 @@ hkrb	𰽩
 hkry	𰿊
 hksa	𲈆
 hksi	䠶
-hkta	𨈔
 hkti	𨈷
 hktk	𫏯
 hktm	𨉐
 hktm	𫠰
 hktq	𨉻
 hkts	𳇲
+hktu	𨈔
 hku	𨱁
 hku	𬆨
 hkve	𳇭
@@ -45323,7 +45326,7 @@ hlse	𨈸
 hlsi	𨉈
 hlsn	𬶼
 hlsu	𨈭
-hlta	𬼷
+hltu	𬼷
 hlty	𲄬
 hlva	𫟴
 hlvc	𲄥
@@ -45380,7 +45383,7 @@ hmqf	𬭫
 hmqt	𨈩
 hmrq	𨉣
 hmrq	𰾤
-hmta	𮥺
+hmtu	𮥺
 hmwl	𮸀
 hmws	𰾔
 hmwu	𨱆
@@ -49046,7 +49049,6 @@ hvst	𧽓
 hvsu	𧺔
 hvsw	𧽋
 hvsy	𧺏
-hvta	𲇰
 hvtb	𧏄
 hvtb	𭒻
 hvtd	㝂
@@ -49059,6 +49061,7 @@ hvtm	𳃃
 hvtn	𧻴
 hvtq	𭓄
 hvtt	𧺲
+hvtu	𲇰
 hvtv	𬦋
 hvtv	𳂹
 hvtx	𬧪
@@ -49289,8 +49292,8 @@ hwsu	𱖐
 hwsv	𲣸
 hwsy	𩵳
 hwsy	𲣳
-hwta	𠀨
 hwts	𰓉
+hwtu	𠀨
 hwva	𰄢
 hwvd	𮸊
 hwvh	𱡣
@@ -49322,7 +49325,7 @@ hxph	𮮞
 hxph	𰾷
 hxsn	𪆐
 hxsu	𬭊
-hxta	𬬸
+hxtu	𬬸
 hxvj	𫓬
 hxxj	𨉿
 hxxu	𮸑
@@ -49716,9 +49719,6 @@ jbsf	𲑒
 jbsk	𲑠
 jbss	𠎵
 jbsy	𠋞
-jbta	𬽦
-jbta	𬽧
-jbta	𭺳
 jbtb	𧖕
 jbtf	𩔙
 jbtk	㔟
@@ -49731,6 +49731,9 @@ jbtq	𪉔
 jbts	𪄆
 jbtt	𣬈
 jbtt	𣬉
+jbtu	𬽦
+jbtu	𬽧
+jbtu	𭺳
 jbtv	𠞇
 jbvi	𠉎
 jbwf	𠏐
@@ -50326,7 +50329,7 @@ jdrg	𠎉
 jdrj	𠇝
 jdrk	𬽱
 jdrk	𰢬
-jdta	𪜲
+jdtu	𪜲
 jdvj	𢂋
 jdvs	𡯶
 jdwi	㑙
@@ -51540,8 +51543,6 @@ jksk	𫢹
 jksn	䲳
 jksn	𭀊
 jksu	㑽
-jkta	𠆩
-jkta	𪜠
 jkti	𰅡
 jktl	𪘕
 jktm	𤯫
@@ -51552,6 +51553,8 @@ jktq	𫩃
 jktq	𲐜
 jkts	𰂱
 jktt	㺸
+jktu	𠆩
+jktu	𪜠
 jkty	𠉫
 jku	𦓐
 jku	𫢇
@@ -51774,11 +51777,11 @@ jlsu	𫢢
 jlsu	𲘶
 jlsv	𠟇
 jlsy	𩷀
-jlta	𠆱
 jlti	𬽇
 jlti	𱰗
 jlto	𠋊
 jltr	𠉃
+jltu	𠆱
 jlty	𱏑
 jlvf	𠑘
 jlvf	𧘠
@@ -52123,12 +52126,12 @@ jnsn	𠑬
 jnsr	㒁
 jnsu	𬾶
 jnsy	𬽲
-jnta	𠇂
 jntd	𠉐
 jntf	𧘭
 jntm	㑫
 jntq	𠑁
 jnts	𠌧
+jntu	𠇂
 jntv	𫢣
 jnvd	𠐘
 jnvi	㑑
@@ -52360,12 +52363,12 @@ jqsn	𣍕
 jqsn	𱈦
 jqsr	𠑏
 jqsu	𮯻
-jqta	𮯷
 jqtb	𠋺
 jqtk	𠋀
 jqtl	𣰊
 jqts	𪆯
 jqtt	𫢭
+jqtu	𮯷
 jqvd	𭃗
 jqvv	𢂟
 jqwi	𠃪
@@ -52600,8 +52603,8 @@ jssf	𧛲
 jssf	𧡞
 jssk	𠡬
 jssn	𪀆
-jsta	𭍼
 jsts	𲡤
+jstu	𭍼
 jsu	𤯓
 jsu	𫡒
 jsvu	𠊪
@@ -52778,8 +52781,6 @@ jvsp	𰞓
 jvsr	𥃏
 jvss	𰋎
 jvsu	𪢶
-jvta	𬻲
-jvta	𭃚
 jvtb	𮔇
 jvtj	𭽂
 jvtl	㒊
@@ -52788,6 +52789,8 @@ jvtm	𲐫
 jvtn	𮇓
 jvto	𤰅
 jvts	𢩸
+jvtu	𬻲
+jvtu	𭃚
 jvty	𭑕
 jvty	𮈛
 jvvi	𠊥
@@ -52869,8 +52872,8 @@ jwsn	𬷛
 jwss	𲑜
 jwsu	𱖌
 jwsw	𫧔
-jwta	𭀗
 jwtl	𫣵
+jwtu	𭀗
 jwva	𭃜
 jwve	𲐧
 jwvh	𠉹
@@ -52930,8 +52933,8 @@ jxpd	𪝏
 jxpm	𠎱
 jxpo	𤈢
 jxsn	𪀪
-jxta	𠇲
 jxtf	𬽼
+jxtu	𠇲
 jxtw	𬾬
 jxu	𠅅
 jxu	𬎳
@@ -53076,9 +53079,9 @@ jysh	𠍽
 jysk	𪽃
 jyss	𬼍
 jyss	𮰀
-jyta	㑀
-jyta	𠇤
 jytm	𫺑
+jytu	㑀
+jytu	𠇤
 jywa	𱰈
 jywo	𠉂
 jywr	𥂼
@@ -53424,9 +53427,6 @@ kbst	𤾐
 kbsu	𭎊
 kbsw	𤾮
 kbsw	𪫓
-kbta	㝌
-kbta	𡧄
-kbta	𢓃
 kbtb	𪓨
 kbtc	𭽁
 kbtd	𬐌
@@ -53446,6 +53446,9 @@ kbto	𭓲
 kbtt	𣢼
 kbtt	𤽊
 kbtt	𤽏
+kbtu	㝌
+kbtu	𡧄
+kbtu	𢓃
 kbty	𤾷
 kbty	𱘻
 kbvc	𢄝
@@ -55404,8 +55407,6 @@ kjsr	𥂃
 kjss	𡨱
 kjst	𱻧
 kjsy	𪅔
-kjta	𠁽
-kjta	𪛝
 kjtf	𠙤
 kjtg	𨙮
 kjtg	𰣇
@@ -55419,6 +55420,8 @@ kjts	𩾨
 kjtt	𠘻
 kjtt	𠨖
 kjtt	𭂮
+kjtu	𠁽
+kjtu	𪛝
 kjtw	𨑙
 kjty	𰍀
 kju	𢒾
@@ -55593,8 +55596,6 @@ kksn	𪁛
 kksq	𠂸
 kkss	𢔻
 kkss	𳀜
-kkta	𭂫
-kkta	𱝬
 kktf	𪧩
 kktg	𬼐
 kkti	𡨇
@@ -55605,6 +55606,8 @@ kktk	𭛕
 kktq	𡪮
 kktq	𢕢
 kktq	𭭎
+kktu	𭂫
+kktu	𱝬
 kku	𡧔
 kku	𫹋
 kkvd	𭃸
@@ -56088,14 +56091,14 @@ kmsi	𠧕
 kmsl	𫠽
 kmsn	𪁔
 kmst	𡬕
-kmta	𠧛
-kmta	𪧆
-kmta	𭚠
 kmtf	𩕋
 kmti	𢓚
 kmtm	𡨉
 kmto	𭓰
 kmts	𪆢
+kmtu	𠧛
+kmtu	𪧆
+kmtu	𭚠
 kmtw	𦚯
 kmvb	𨐝
 kmvg	𨜌
@@ -56506,10 +56509,10 @@ kqsu	𡉼
 kqsu	𮱻
 kqsv	𱗓
 kqsy	𱘌
-kqta	𰌵
 kqtb	𢔳
 kqtk	𧗴
 kqto	𢓶
+kqtu	𰌵
 kqwd	𭔣
 kqwo	𬨠
 kqwu	𫲻
@@ -57074,7 +57077,6 @@ ksyr	𥏣
 ksyr	𥏤
 ksyt	𰢃
 ksyx	𥏢
-kta	𱝪
 ktbb	𢕉
 ktdm	𡩒
 ktdo	𪧊
@@ -57110,6 +57112,7 @@ ktsn	𮬲
 ktsu	𲙄
 ktti	𡧏
 kttk	𢔡
+ktu	𱝪
 ktyd	𡧠
 ktyw	㼠
 kvbh	𦥌
@@ -57197,13 +57200,13 @@ kvrq	𦤺
 kvry	𰐳
 kvsg	𭓼
 kvsh	𡪦
-kvta	𫲶
 kvtl	𢕬
 kvtl	𲟦
 kvtq	𣢶
 kvtq	𣢻
 kvtq	𫳎
 kvtq	𫴣
+kvtu	𫲶
 kvvd	𠛯
 kvvd	𫦄
 kvvd	𰤠
@@ -57526,8 +57529,8 @@ kwsf	𮨉
 kwsj	㣸
 kwsk	𡩽
 kwsn	𪆹
-kwta	𫲼
 kwtq	𣢅
+kwtu	𫲼
 kwtv	𫑌
 kwu	𫝀
 kwvd	𡨖
@@ -58235,10 +58238,10 @@ kyrt	𡪐
 kyry	𫴂
 kysk	𢔓
 kysn	𪀱
-kyta	㣖
 kytk	𭹊
 kytq	𣣇
 kytt	𡬏
+kytu	㣖
 kyvd	𫥹
 kywa	𡧗
 kywi	𫃛
@@ -59030,11 +59033,11 @@ ldrk	𦚊
 ldrn	𭩗
 ldry	𮊪
 ldsn	𪂂
-ldta	𬺿
 ldtc	𭩒
 ldti	𭅓
 ldtq	𠦰
 ldtq	𦜓
+ldtu	𬺿
 ldvj	𦛉
 ldwi	𦛖
 ldwj	𫹦
@@ -60037,10 +60040,10 @@ ljss	𬷇
 ljss	𭁱
 ljsw	𮌨
 ljsx	𤱣
-ljta	𠔇
 ljtl	𱼇
 ljtn	𠕘
 ljts	𢯄
+ljtu	𠔇
 ljvi	𣷙
 ljvk	𦞈
 ljwf	𮗘
@@ -60185,13 +60188,13 @@ lksi	𢨻
 lksj	𦞒
 lkss	𬂍
 lkss	𬂎
-lkta	䏎
-lkta	𰆎
 lkti	𦚐
 lktm	𢚿
 lktm	𬚾
 lktp	𬛑
 lkts	𰯗
+lktu	䏎
+lktu	𰆎
 lkwa	𲺆
 lkwo	𦟪
 lkwq	𦝬
@@ -61249,12 +61252,12 @@ lqsn	𩿜
 lqsr	𦢃
 lqsu	𦙾
 lqsw	𦣑
-lqta	𭣔
 lqtb	𦞣
 lqto	𦛸
 lqts	𢫪
 lqtt	𢮗
 lqtt	𮌋
+lqtu	𭣔
 lqva	𠚲
 lqvd	𠚽
 lqvd	𠛟
@@ -61537,11 +61540,11 @@ lssu	𱢹
 lssu	𲓤
 lssy	𦧇
 lssy	𱼆
-lsta	䐁
-lsta	𫆖
 lsth	𦞯
 lsti	𦚱
 lstq	𣢯
+lstu	䐁
+lstu	𫆖
 lsu	𡉀
 lsvd	𦧞
 lsvg	𮍽
@@ -62228,9 +62231,9 @@ lwsg	𬛁
 lwsh	𣗓
 lwsh	𣠕
 lwsn	𩿲
-lwta	䏜
-lwta	𠬬
 lwtm	𢡷
+lwtu	䏜
+lwtu	𠬬
 lwvc	𦜕
 lwvd	𠛐
 lwvf	𦚦
@@ -62657,11 +62660,11 @@ mbss	𢟰
 mbss	𧱌
 mbss	𱞻
 mbsu	𡋧
-mbta	𮱿
 mbtj	𱭃
 mbtj	𮷄
 mbto	𰐏
 mbts	𢮣
+mbtu	𮱿
 mbvi	𱞩
 mbwh	𪺓
 mbwh	𬋨
@@ -62813,10 +62816,10 @@ mdpe	𪺎
 mdqo	𢛏
 mdqo	𪺐
 mdqo	𰇂
-mdta	𢘛
 mdtc	𢤟
 mdti	𢚉
 mdtl	𭟘
+mdtu	𢘛
 mdve	𭶴
 mdwg	𤔞
 mdwi	㤴
@@ -63866,10 +63869,10 @@ mksp	𢙧
 mkss	𢜿
 mkss	𲠞
 mksw	𢤪
-mkta	𤓲
 mkti	𰑏
 mktm	𱞛
 mktq	𣣳
+mktu	𤓲
 mkty	𢛛
 mku	𢗎
 mkve	𪬃
@@ -64046,10 +64049,10 @@ mmrk	𤼮
 mmrn	㦐
 mmrq	𢝄
 mmsu	𢘪
-mmta	㤜
-mmta	𢗆
-mmta	𢗜
 mmti	𭜏
+mmtu	㤜
+mmtu	𢗆
+mmtu	𢗜
 mmtx	㥡
 mmtx	𢛐
 mmva	𢗠
@@ -64754,8 +64757,8 @@ mpsd	𬋬
 mpsi	𫹺
 mpsn	𪅎
 mpsu	𭟓
-mpta	㣿
 mptq	𰙗
+mptu	㣿
 mpu	𦥝
 mpvd	𠞞
 mpvd	𦦌
@@ -64846,8 +64849,8 @@ mqrl	𲬾
 mqrx	𢜮
 mqsl	𫻄
 mqsr	𢣏
-mqta	㣾
 mqtb	𤔢
+mqtu	㣾
 mqtw	𢠆
 mqvd	𢣅
 mqvk	𢥉
@@ -65510,7 +65513,6 @@ mssu	𲬻
 mssv	𰅂
 mssw	𱟒
 mssy	𡰽
-msta	𪛛
 mstc	𬤶
 mstc	𬸼
 mstd	𪨎
@@ -65558,6 +65560,7 @@ msts	𭕙
 msts	𱈟
 mstt	𣢞
 mstt	𪨐
+mstu	𪛛
 mstv	𠛾
 mstv	𫵧
 mstv	𱚹
@@ -65653,9 +65656,6 @@ msyq	𡱯
 msys	𱯢
 msyu	𢠐
 msyu	𳍆
-mta	㣺
-mta	𠫓
-mta	𢍺
 mtbd	𢣊
 mtbg	𮲈
 mtbl	𢠯
@@ -65687,6 +65687,9 @@ mtrt	𫎣
 mttc	𱞾
 mtti	𢗽
 mttk	𢝷
+mtu	㣺
+mtu	𠫓
+mtu	𢍺
 mtvf	𣼿
 mtwo	𤔡
 mtxg	𨜎
@@ -65833,7 +65836,6 @@ mvsi	𤔊
 mvsu	𡉄
 mvsx	𢆐
 mvsy	𭝔
-mvta	㣼
 mvti	㔫
 mvti	𡯃
 mvtl	𢡉
@@ -65841,6 +65843,7 @@ mvtm	𢚴
 mvts	𲡛
 mvtt	𠀋
 mvtt	𱍓
+mvtu	㣼
 mvvd	𢃊
 mvvd	𭘹
 mvvd	𱞤
@@ -66285,6 +66288,7 @@ nbhw	𰶹
 nbhw	𲂲
 nbi	𥫜
 nbi	𥮤
+nbi	𰃮
 nbjb	𲿜
 nbjc	𡬴
 nbjc	𧴫
@@ -66475,7 +66479,6 @@ nbnx	𥬞
 nbny	𧹈
 nbny	𭺩
 nbny	𳂘
-nbo	𰃮
 nbo	𲾘
 nbpa	𧵅
 nbpc	𧵢
@@ -68641,8 +68644,6 @@ nmst	𲷝
 nmsw	𥻼
 nmsy	𫂴
 nmsy	𮇆
-nmta	𫁶
-nmta	𮅇
 nmtd	𥺈
 nmth	𮇖
 nmti	𥬩
@@ -68652,6 +68653,8 @@ nmtk	𥻄
 nmtl	𫁽
 nmtp	𥺕
 nmtq	𥸷
+nmtu	𫁶
+nmtu	𮅇
 nmtx	𥮧
 nmty	𮇐
 nmva	𮅀
@@ -68942,13 +68945,13 @@ nnsu	𡔗
 nnsu	𥯑
 nnsv	𡎬
 nnsw	𫐩
-nnta	𠇍
 nntd	𠲒
 nntf	𥵝
 nntk	𨍁
 nntm	𥮘
 nntn	𥱷
 nntp	𬕬
+nntu	𠇍
 nntw	𠇏
 nnu	𮅋
 nnvd	㔄
@@ -69047,8 +69050,8 @@ npsr	𥰬
 npss	𧟼
 npss	𪈅
 npss	𮭝
-npta	𥫩
 npti	𥬜
+nptu	𥫩
 npu	𮍥
 npwh	𥰂
 nqa	𠇎
@@ -69195,10 +69198,10 @@ nqsr	𲨮
 nqsu	𲨔
 nqsw	𨗵
 nqsw	𬇓
-nqta	𥫢
 nqtb	𥰱
 nqti	𰚻
 nqtq	㰟
+nqtu	𥫢
 nqtw	𥲆
 nqva	𣱕
 nqvd	𮆗
@@ -70763,15 +70766,15 @@ nwsn	𭍬
 nwsn	𲶩
 nwsw	𡈎
 nwsy	𭍯
-nwta	𠐖
-nwta	𠮚
-nwta	𡆡
-nwta	𭀖
 nwtg	𫭅
 nwth	𥴉
 nwtn	𥱉
 nwtq	𣢆
 nwts	𡆺
+nwtu	𠐖
+nwtu	𠮚
+nwtu	𡆡
+nwtu	𭀖
 nwty	𠱵
 nwvc	𲘨
 nwvd	𠚯
@@ -71676,10 +71679,6 @@ nyst	𨠬
 nysw	𨣺
 nysy	𨠄
 nysy	𨢭
-nyta	𥫵
-nyta	𧟧
-nyta	𧟪
-nyta	𬔵
 nytb	𨟳
 nytd	𨡥
 nytf	𨢣
@@ -71689,6 +71688,10 @@ nytl	𮡇
 nytq	𨠅
 nytq	𮗁
 nytt	𨟵
+nytu	𥫵
+nytu	𧟧
+nytu	𧟪
+nytu	𬔵
 nytv	𨠕
 nytw	𨗇
 nyvd	𠛮
@@ -71877,13 +71880,13 @@ pbrk	𱬚
 pbrp	𱬇
 pbsk	𤈠
 pbsv	𤌛
-pbta	𰝹
-pbta	𰝺
 pbtb	𧥔
 pbtm	𤐃
 pbtm	𧤭
 pbto	𧣌
 pbtr	𬣏
+pbtu	𰝹
+pbtu	𰝺
 pbvj	𢃵
 pbvo	𠣘
 pbwy	𡘅
@@ -72206,8 +72209,8 @@ pdrb	𪓟
 pdrg	𭶀
 pdrk	𭴒
 pdrq	𢼒
-pdta	𤇚
 pdtq	𤉚
+pdtu	𤇚
 pdty	𠴦
 pdvd	𠛎
 pdvj	𪸧
@@ -73188,8 +73191,8 @@ pjru	𱪡
 pjry	𱫦
 pjsi	𤇧
 pjsk	𤇺
-pjta	𮯱
 pjti	𤆷
+pjtu	𮯱
 pju	𠃕
 pjvi	𭴅
 pjvj	𭅈
@@ -73367,13 +73370,13 @@ pkss	䝆
 pkss	𮳵
 pksu	𤎌
 pksv	𢑼
-pkta	𤆘
-pkta	𭴄
 pkti	𤈥
 pktk	𠡻
 pktm	𢛦
 pkto	𰢰
 pktq	𣢊
+pktu	𤆘
+pktu	𭴄
 pku	𦥔
 pku	𫧁
 pkve	𤊃
@@ -73606,7 +73609,7 @@ pmrk	𤊳
 pmrk	𪺄
 pmrq	𤓡
 pmrw	𤋠
-pmta	𭴐
+pmtu	𭴐
 pmtx	𤉬
 pmva	𤆻
 pmvj	𲫓
@@ -73766,6 +73769,7 @@ ppbg	𰟯
 ppbh	䪯
 ppbh	𡦃
 ppbh	𤒎
+ppbi	𤇾
 ppbi	𬊇
 ppbj	䎕
 ppbj	𤈤
@@ -73782,7 +73786,6 @@ ppbl	𣂈
 ppbm	𢥒
 ppbm	𤬐
 ppbn	𦟴
-ppbo	𤇾
 ppbp	䃕
 ppbp	𤏭
 ppbp	𤐺
@@ -75163,9 +75166,6 @@ pssx	𥕄
 pssx	𱴯
 pssy	𥐨
 pssy	𥐶
-psta	䂖
-psta	𠣥
-psta	𤆧
 pstb	𥐟
 pstb	𧑧
 pstb	𲳧
@@ -75185,6 +75185,9 @@ pstr	𥕔
 psts	𥖧
 psts	𱳰
 pstt	𰦨
+pstu	䂖
+pstu	𠣥
+pstu	𤆧
 pstw	䃣
 psu	𡉷
 psu	𪢾
@@ -75367,8 +75370,8 @@ pvpp	𤌝
 pvpr	𥃔
 pvqo	𤊰
 pvsg	𲫮
-pvta	𪸐
 pvtm	𤉃
+pvtu	𪸐
 pvve	𠜞
 pvyd	㷜
 pwbj	𤊔
@@ -75404,8 +75407,8 @@ pwrj	𮳛
 pwrl	㸁
 pwsg	𭴴
 pwsn	𳏑
-pwta	𤆣
 pwts	𢱀
+pwtu	𤆣
 pwvf	𤇶
 pwvi	𤉒
 pwvi	𭵔
@@ -75498,9 +75501,9 @@ pypy	𬱛
 pyqa	𬊊
 pyry	𠣮
 pysk	𤊡
-pyta	𪸛
 pyts	𢲓
 pyts	𦥹
+pytu	𪸛
 pywa	𤬬
 pywh	𲫹
 pywo	𬊉
@@ -75589,6 +75592,7 @@ qbht	𫉮
 qbhw	𮒍
 qbhx	𫉂
 qbhy	𬝫
+qbi	𫇦
 qbjg	𦾌
 qbjh	𦻤
 qbjj	𮐭
@@ -75642,7 +75646,6 @@ qbnr	𫊗
 qbns	𪈭
 qbnx	𦬼
 qbo	𧈡
-qbo	𫇦
 qbpa	𲻼
 qbpe	䒞
 qbpe	𦬮
@@ -75675,7 +75678,6 @@ qbsn	𧃤
 qbsv	𱾉
 qbsw	𰻍
 qbsy	𦴍
-qbta	𬜢
 qbtj	𲁖
 qbtk	𮏴
 qbtm	𦺠
@@ -75683,6 +75685,7 @@ qbtn	𦿙
 qbtn	𲼣
 qbto	𬜲
 qbtp	𮏅
+qbtu	𬜢
 qbvj	𦭬
 qbvl	𬝬
 qbvo	𦭸
@@ -76039,10 +76042,10 @@ qdsu	𮎹
 qdsu	𲻹
 qdsw	𨕸
 qdsw	𫉩
-qdta	𦭐
 qdtq	𦲽
 qdtq	𫈀
 qdtt	𮏰
+qdtu	𦭐
 qdva	𱽕
 qdvc	𫈕
 qdwd	𧄳
@@ -76824,7 +76827,6 @@ qhsu	𦯖
 qhsu	𫇺
 qhsu	𬞄
 qhsy	𬞓
-qhta	𠀪
 qhtc	𬞀
 qhtd	𮑯
 qhth	𦷣
@@ -76835,6 +76837,7 @@ qhtq	𪴮
 qhtq	𭭕
 qhtq	𮐁
 qhtt	𫈋
+qhtu	𠀪
 qhva	𠝖
 qhvd	𰰹
 qhve	䔃
@@ -77775,9 +77778,9 @@ qmsn	𧀘
 qmss	𦽬
 qmsu	𦱬
 qmsu	𰱆
-qmta	𦬨
 qmtf	𦼘
 qmto	𦯞
+qmtu	𦬨
 qmtx	𦯧
 qmty	𮏌
 qmvd	𰰲
@@ -78308,9 +78311,9 @@ qqrx	𦳑
 qqry	𧂛
 qqsa	𦬢
 qqsn	𩿏
-qqta	𱽌
 qqtk	𠭺
 qqto	𫈏
+qqtu	𱽌
 qqvd	𠚿
 qqwo	𨑱
 qqwt	𱑶
@@ -78702,8 +78705,6 @@ qsyo	𠬭
 qsyo	𦬓
 qsys	𩺁
 qsyu	䔡
-qta	𠀖
-qta	𢌭
 qtbb	𧎮
 qtbb	𱾞
 qtbh	𦾣
@@ -78781,10 +78782,12 @@ qtra	𰴸
 qtrl	𦻴
 qtrq	㪌
 qtsr	𦾃
-qtta	㕚
 qttp	𱪻
 qttq	𦰙
+qttu	㕚
 qtty	𦷅
+qtu	𠀖
+qtu	𢌭
 qtvd	𭃆
 qtvi	𣵳
 qtvi	𦭔
@@ -78974,11 +78977,11 @@ qvsh	𦼥
 qvsn	𮒒
 qvsr	𲼭
 qvsy	𫇻
-qvta	𦬄
 qvtg	𬝰
 qvtl	䔼
 qvtn	𦮟
 qvts	𲼤
+qvtu	𦬄
 qvvc	𨬛
 qvvd	𠛚
 qvvl	𦻟
@@ -79343,8 +79346,8 @@ qxrv	𧁒
 qxsj	𦼊
 qxsn	𪁁
 qxsu	𰊶
-qxta	𦬸
 qxtq	𦰻
+qxtu	𦬸
 qxtw	𦳯
 qxu	㭉
 qxu	𣎼
@@ -79479,9 +79482,9 @@ qysj	𲽟
 qysn	𦿲
 qysq	𱾬
 qyst	𬟋
-qyta	𱽑
 qyth	𬞙
 qytm	𢚥
+qytu	𱽑
 qyvd	㔈
 qyvd	𦹄
 qyvi	𦴼
@@ -80032,8 +80035,8 @@ rgph	𧭲
 rgqa	𬢢
 rgrk	䛣
 rgsu	𧫠
-rgta	𧦮
 rgta	𧦵
+rgtu	𧦮
 rgu	𫑟
 rgvy	𧩶
 rgxu	䛶
@@ -82944,10 +82947,10 @@ sbrm	𫮠
 sbss	𫮑
 sbst	𡋶
 sbsv	𡔹
-sbta	𡉌
-sbta	𡉕
 sbtl	𡐗
 sbtm	𱘆
+sbtu	𡉌
+sbtu	𡉕
 sbve	𱖴
 sbvi	𡍖
 sbvs	𲙱
@@ -83956,11 +83959,11 @@ sksn	𪅏
 sksu	𭏠
 sksu	𰊙
 sksx	𱣎
-skta	𪢵
 skth	𰊺
 sktj	𱡚
 sktk	𥏷
 skts	𡑄
+sktu	𪢵
 skve	𪣯
 skvi	𡎏
 skvj	𡍈
@@ -84378,11 +84381,11 @@ smss	𪤞
 smst	𫭺
 smsu	𮰣
 smsw	𫯇
-smta	㘮
-smta	𡉋
 smtj	𬢌
 smtn	𧷀
 smtr	𡋤
+smtu	㘮
+smtu	𡉋
 smtx	𡍕
 smva	𭎄
 smvj	㘵
@@ -84931,9 +84934,9 @@ sqsb	𡒹
 sqsd	𫮽
 sqsk	𰉣
 sqsu	𱖜
-sqta	𮰚
 sqtk	𱗚
 sqtq	𰋂
+sqtu	𮰚
 sqtw	𫮢
 sqxc	𫮉
 sqxy	𫮮
@@ -85328,7 +85331,6 @@ sssx	𰋇
 sssx	𰘨
 sssx	𲧇
 sssy	𧰰
-ssta	㙇
 sstc	𢁁
 sstd	𣂡
 ssth	𬳝
@@ -85345,6 +85347,7 @@ sstm	𢧈
 sstp	𩳥
 sstq	㰪
 sstq	𢽚
+sstu	㙇
 ssu	𣪝
 ssu	𪢴
 ssvd	𫦀
@@ -85370,7 +85373,6 @@ ssyu	𡐚
 ssyu	𩵛
 ssyw	𤬿
 ssyy	𧱪
-sta	𡈽
 stbh	𮧹
 stbl	㙟
 stce	𲙉
@@ -85437,6 +85439,7 @@ stti	㘩
 stti	𫵏
 stts	㙄
 stty	𦒼
+stu	𡈽
 stvd	𲙕
 stvi	𣴐
 stvi	𪣉
@@ -85730,7 +85733,7 @@ sxma	𭎹
 sxmm	𲚄
 sxpp	𱘓
 sxqs	𡒫
-sxta	𡊍
+sxtu	𡊍
 sxu	𡉿
 sxu	𡯐
 sxu	𣏅
@@ -86554,8 +86557,6 @@ sysy	𩵔
 sysy	𩺰
 sysy	𬵡
 sysy	𰀸
-syta	𡊀
-syta	𡊩
 sytc	𩷩
 sytd	䱑
 sytd	𩸉
@@ -86576,6 +86577,8 @@ sytq	𩵢
 sytr	𡎌
 syts	𮫺
 sytt	𩺶
+sytu	𡊀
+sytu	𡊩
 sytv	𩶙
 sytv	𬵌
 sytw	𩻔
@@ -86796,8 +86799,6 @@ tbrm	𭢋
 tbsf	㩇
 tbsf	𢶝
 tbsk	𢫫
-tbta	𢩾
-tbta	𫼖
 tbtf	𬡓
 tbtf	𰸈
 tbtg	𫐋
@@ -86811,6 +86812,8 @@ tbtr	𱅊
 tbts	𢬋
 tbts	𫾅
 tbts	𳎲
+tbtu	𢩾
+tbtu	𫼖
 tbtv	𰛣
 tbvi	𢮑
 tbvl	𢰺
@@ -87405,10 +87408,10 @@ thsk	𱠆
 thsr	𰔩
 thst	𪭽
 thsu	𢬂
-thta	𢩴
 thth	𠤞
 thti	𢬒
 thtq	𣢾
+thtu	𢩴
 thtw	𣤃
 thvd	𢵒
 thvh	𢱙
@@ -87737,13 +87740,13 @@ tksj	𢱜
 tksn	𪁬
 tkss	𫽻
 tkss	𲢏
-tkta	𭅳
 tktc	𫽴
 tktf	𢳢
 tktg	𰻦
 tkti	𠤗
 tktk	𫥡
 tktm	㧴
+tktu	𭅳
 tktw	𳄙
 tkty	𲡹
 tkvd	𫽟
@@ -88174,12 +88177,12 @@ tnsj	𫾡
 tnsk	𢬧
 tnss	㨡
 tnsu	𭠜
-tnta	𢪍
 tntd	𫼹
 tntn	𰔣
 tntq	𢹦
 tnts	𢲡
 tntt	𢷨
+tntu	𢪍
 tnva	𢪅
 tnvd	𢯩
 tnve	𢲶
@@ -88822,7 +88825,6 @@ tsss	𮸿
 tsst	𰔟
 tssy	𲋩
 tssy	𲡩
-tsta	㧻
 tstd	𪮒
 tsth	𢫶
 tsth	𱃴
@@ -88833,6 +88835,7 @@ tstn	𫗨
 tsts	𢪒
 tsts	𱗄
 tstt	𰓁
+tstu	㧻
 tstv	𭢈
 tstw	𰔐
 tsty	𫼠
@@ -88881,7 +88884,6 @@ tsyr	𲡨
 tsys	𢺒
 tsyu	𢳶
 tsyw	𩠅
-tta	𬻿
 ttbb	𧔯
 ttbb	𧔻
 ttbg	𢲲
@@ -88962,6 +88964,7 @@ ttts	𭠷
 tttt	𢺪
 tttt	𣬅
 tttt	𲢰
+ttu	𬻿
 ttvf	㩩
 ttvf	𬱄
 ttvi	𢫕
@@ -89191,7 +89194,7 @@ txsn	𪀶
 txsn	𮬰
 txsn	𳎿
 txsu	𢭰
-txta	𢫖
+txtu	𢫖
 txu	𢪮
 txvj	㧜
 txwi	𢫄
@@ -89265,9 +89268,9 @@ tyrd	𱡂
 tysn	𩿢
 tyss	㨒
 tysu	𭠨
-tyta	𢪯
-tyta	𢫛
 tytj	𰓻
+tytu	𢪯
+tytu	𢫛
 tyty	𰀩
 tyvd	𲖶
 tyvj	𪭬
@@ -91447,8 +91450,6 @@ vmsh	𭄎
 vmsi	𱥱
 vmsk	𣴅
 vmsu	𣳃
-vmta	㳚
-vmta	𲨶
 vmtj	𬈤
 vmtj	𬉚
 vmtj	𲩒
@@ -91458,6 +91459,8 @@ vmto	𣹄
 vmtr	𤀛
 vmts	𩸧
 vmtt	𬉫
+vmtu	㳚
+vmtu	𲨶
 vmtv	𰜋
 vmvd	𲩁
 vmvi	㳮
@@ -91687,7 +91690,6 @@ vnsl	𭱿
 vnsn	𪃷
 vnsu	𭏄
 vnsu	𭏈
-vnta	𣲡
 vntf	𲪜
 vntg	𣸊
 vntg	𣸮
@@ -91700,6 +91702,7 @@ vntn	𨢯
 vntq	㶑
 vntq	𣹱
 vntq	𤀔
+vntu	𣲡
 vntv	𣵂
 vntv	𣶗
 vntv	𲪈
@@ -91828,9 +91831,9 @@ vprm	𥂈
 vprr	𣴝
 vpsk	𲩽
 vpsu	𡏋
-vpta	𰄛
 vpti	𭯻
 vptk	𠡑
+vptu	𰄛
 vpu	㳫
 vpvi	𣸐
 vpvj	𣹷
@@ -92038,10 +92041,10 @@ vqsk	𣴱
 vqsl	𣾖
 vqsn	𱈤
 vqsu	𣲾
-vqta	𭃇
 vqtn	𣻡
 vqto	𰛼
 vqts	㳗
+vqtu	𭃇
 vqtw	𣻢
 vqvj	𭳭
 vqwf	𣺜
@@ -92464,7 +92467,6 @@ vvql	㶂
 vvqo	𣷷
 vvrm	𣹉
 vvsn	𪂔
-vvta	㲽
 vvtc	𱧨
 vvtd	𣿠
 vvtn	𥹭
@@ -92474,6 +92476,7 @@ vvtq	𱧆
 vvtr	𥁤
 vvts	𮭊
 vvtt	𭱟
+vvtu	㲽
 vvtx	𬇲
 vvva	𱐕
 vvvc	𱧬
@@ -92796,9 +92799,9 @@ vyss	𪶙
 vyst	𣽗
 vysu	𮰟
 vysy	𤀸
-vyta	𱥼
 vytc	𣺚
 vytr	𣹆
+vytu	𱥼
 vyvi	𣵟
 vyvi	𰛪
 vyvy	𠅯
@@ -92846,9 +92849,9 @@ wblx	𬤂
 wbpe	𰵒
 wbrb	𨐾
 wbst	𢌤
-wbta	𲏉
 wbto	𧢼
 wbto	𱎆
+wbtu	𲏉
 wbxl	𫍼
 wccf	𬤚
 wccl	𬤥
@@ -94437,7 +94440,6 @@ whsy	䄬
 whsy	𡙾
 whsy	𮂱
 whsy	𮃣
-whta	𫀦
 whtc	𥞯
 whtg	𱶞
 whth	𥟠
@@ -94449,6 +94451,7 @@ whtl	𥣖
 whto	𥞖
 whtq	𮂸
 whtr	𱶘
+whtu	𫀦
 whtv	𭄐
 whty	𮂿
 whva	𰨛
@@ -94660,9 +94663,9 @@ wkps	𱳲
 wkqc	𰶋
 wkqf	𬤯
 wkqs	𲂌
-wkta	𲂂
 wkti	𫍡
 wktm	𰵮
+wktu	𲂂
 wku	𰠎
 wkvd	𰄝
 wkwk	𦏲
@@ -94844,7 +94847,6 @@ wmsn	𫚵
 wmsn	𮚧
 wmsu	𡊎
 wmsu	𭎁
-wmta	𭶾
 wmtb	𧐏
 wmtc	𱑚
 wmtf	𧠟
@@ -94868,6 +94870,7 @@ wmts	𣱒
 wmts	𫧾
 wmts	𮬺
 wmts	𰓅
+wmtu	𭶾
 wmtv	𬇉
 wmtw	䢑
 wmty	㲳
@@ -94948,7 +94951,6 @@ wnrm	𨡰
 wnsu	𬤇
 wnsy	𤕴
 wnsy	𫍟
-wnta	𱍹
 wntb	𰆾
 wnth	𠂪
 wnth	𲏁
@@ -94970,6 +94972,7 @@ wntr	𰩕
 wntr	𳈎
 wnts	䲯
 wntt	𲡬
+wntu	𱍹
 wntv	𠚵
 wntw	𬩩
 wntw	𳄵
@@ -95912,8 +95915,6 @@ wqsx	𭸲
 wqsy	𤜣
 wqsy	𤠚
 wqsy	𲮲
-wqta	𬌩
-wqta	𲂃
 wqtb	𤜥
 wqtc	𪺼
 wqtg	𤠸
@@ -95924,6 +95925,8 @@ wqtq	𤜹
 wqtq	𤝆
 wqtt	𤜻
 wqtt	𱭳
+wqtu	𬌩
+wqtu	𲂃
 wqtv	𤝣
 wqty	㹥
 wqvd	㹦
@@ -96120,8 +96123,6 @@ wsye	𤕮
 wsye	𫍙
 wsyo	𰀳
 wsyo	𰵎
-wta	𠂑
-wta	𰍨
 wtbg	𨜮
 wtbg	𱎋
 wtce	𫍨
@@ -96139,6 +96140,8 @@ wtnv	𬿠
 wtso	𢩦
 wtso	𢪇
 wtso	𫼓
+wtu	𠂑
+wtu	𰍨
 wtvi	𰵞
 wtwo	𱭑
 wtwo	𲅋
@@ -96415,8 +96418,8 @@ wwkh	𣅞
 wwll	𰶁
 wwnx	𮷇
 wwpa	𤕰
-wwta	𠁾
-wwta	𲂅
+wwtu	𠁾
+wwtu	𲂅
 wwvd	𰵭
 wwwd	𤖣
 wwwi	𠄑
@@ -96447,8 +96450,8 @@ wxlj	𤕹
 wxln	𦝍
 wxnv	𬤘
 wxry	𬌄
-wxta	𰵓
 wxtp	𱫭
+wxtu	𰵓
 wxxu	𰵱
 wybg	𡙶
 wyca	𰵢
@@ -98404,12 +98407,12 @@ xmsn	𮧐
 xmst	𬄫
 xmsw	𩈺
 xmsy	𩈊
-xmta	𣏧
 xmti	𭩝
 xmtj	䩄
 xmtl	𩉏
 xmtr	𰗦
 xmtt	䩃
+xmtu	𣏧
 xmtv	𩈗
 xmtw	𣖗
 xmtx	𭪱
@@ -99073,7 +99076,6 @@ xswu	㮧
 xsxu	𣘖
 xsyo	𣏞
 xsyu	𩵴
-xta	㝳
 xtbi	𭩚
 xtbk	𬃌
 xtdf	㰜
@@ -99102,6 +99104,7 @@ xtsn	𩿯
 xttc	𪜅
 xttl	𮲰
 xttm	𭬐
+xtu	㝳
 xtvi	𣐚
 xtwf	𣟤
 xtwo	𨓸
@@ -99483,10 +99486,10 @@ xysh	𭫠
 xysn	𪃍
 xysu	㯇
 xysu	𣑖
-xyta	𮲬
 xytj	𬃀
 xytq	𱤸
 xytr	𣖁
+xytu	𮲬
 xytw	𰗱
 xyve	𬄗
 xyvi	𣗘
@@ -100248,8 +100251,6 @@ ydsw	𨕎
 ydsw	𱘾
 ydsw	𳄥
 ydsy	𩶓
-ydta	𤤐
-ydta	𥿊
 ydtd	𡙍
 ydtd	𥆴
 ydtg	𡘒
@@ -100263,6 +100264,8 @@ ydtj	𠚀
 ydtn	𡘳
 ydtt	𡙒
 ydtt	𣣥
+ydtu	𤤐
+ydtu	𥿊
 ydtv	𫥲
 ydtw	𡘁
 ydva	𪥂
@@ -101084,12 +101087,12 @@ ykss	𤨎
 ykss	𦃲
 yksu	𤨠
 yksu	𱺃
-ykta	㺬
-ykta	𬗄
 ykti	𭹂
 yktl	𱯰
 yktq	𣣜
 ykts	𮴴
+yktu	㺬
+yktu	𬗄
 ykty	𫃮
 yku	𤤄
 yku	𩰊
@@ -101359,13 +101362,13 @@ ymrj	𲰒
 ymrk	𫟁
 ymrt	𦇌
 ymss	𦄘
-ymta	䋇
-ymta	𤣸
-ymta	𮴈
 ymti	𤤗
 ymti	𥿡
 ymtn	𱯅
 ymtt	𮈌
+ymtu	䋇
+ymtu	𤣸
+ymtu	𮴈
 ymtx	𦁛
 ymtx	𦂋
 ymva	𥾛
@@ -102270,7 +102273,7 @@ yxpe	𤤍
 yxph	㻸
 yxpw	𭺍
 yxqo	𫩆
-yxta	㺷
+yxtu	㺷
 yxu	䊾
 yxu	𬍓
 yxvo	䋌
@@ -102357,7 +102360,7 @@ yysn	𪆓
 yyss	𤧊
 yysu	𦄕
 yysu	𪻗
-yyta	𬗈
+yytu	𬗈
 yyvi	𤦗
 yyvi	𪼃
 yywo	𨖾
@@ -102402,12 +102405,16 @@ bhga	⻲
 bhri	
 bhrm	蝹
 bhsn	鶴
+bi	⼍
 bi	⾪
+bi	⺈
 bi	〤
+bi	㋗
 bi	㋱
 bi	ㄨ
 bi	ㆨ
 bi	ㆫ
+bi	ク
 bi	メ
 bi	𘠘
 bi	𘱌
@@ -103035,10 +103042,10 @@ bjsh	書
 bjsk	⾀
 bjsq	𠭣
 bjsu	
-bjta	丸
-bjta	𘯽
-bjta	
 bjti	⾿
+bjtu	丸
+bjtu	𘯽
+bjtu	
 bju	㈨
 bju	㊈
 bju	𛀭
@@ -103087,7 +103094,7 @@ blxd	🈟
 blxd	𛁉
 bme	⻔
 bmi	𘲂
-bmta	𘲃
+bmtu	𘲃
 bmvj	𛀴
 bmwo	蟡
 bndd	臨
@@ -103096,11 +103103,7 @@ bnfq	䗗
 bnnr	蝹
 bnrm	㈼
 bnrm	㊬
-bo	⼍
 bo	⾍
-bo	⺈
-bo	㋗
-bo	ク
 bo	
 bpa	⾊
 bpe	⺳
@@ -103119,12 +103122,12 @@ brwa	
 bshr	蝫
 bsu	𘱏
 bsu	𘲋
-bta	々
-bta	𛀫
-bta	𛀬
-bta	𘯞
-bta	𘱍
 bto	⻆
+btu	々
+btu	𛀫
+btu	𛀬
+btu	𘯞
+btu	𘱍
 btvm	🈖
 bvcq	䑫
 bvkr	𛂢
@@ -104680,14 +104683,14 @@ csnl	崙
 cspb	𘱷
 csqd	善
 csro	﨨
-csta	𘮞
+cstu	𘮞
 csu	壮
 csu	𘤙
 ctgl	冀
 cti	北
 cti	北
 cti	🀃
-ctta	𘦜
+cttu	𘦜
 cvcb	𘛮
 cvcb	𘛯
 cvcb	𘛰
@@ -105314,7 +105317,6 @@ cwss	𗒐
 cwst	𗅂
 cwst	𗅃
 cwst	𗆂
-cwta	𘱴
 cwtb	𗆃
 cwtb	𗓋
 cwtb	𘗦
@@ -105335,6 +105337,7 @@ cwtt	𗓌
 cwtt	𘗣
 cwtt	𘗥
 cwtt	𘦭
+cwtu	𘱴
 cwtw	𗒘
 cwwb	𗑬
 cwwb	𗒛
@@ -105363,7 +105366,7 @@ cxnc	鍊
 cxph	鐕
 cxxv	鉶
 cyda	𘱺
-cyta	𘱻
+cytu	𘱻
 dbss	喙
 ddku	串
 ddli	ㅰ
@@ -106638,7 +106641,7 @@ dsvy	喫
 dtqa	🈥
 dwi	𘯑
 dwi	
-dwta	吸
+dwtu	吸
 dxdv	喇
 dxve	喳
 dya	呈
@@ -108240,7 +108243,7 @@ fksb	𗶙
 fksf	𗶛
 fksk	𗶚
 fksk	𘣖
-fkta	𘬆
+fktu	𘬆
 fku	ᅥ
 fku	ᅦ
 fku	ᅴ
@@ -108261,8 +108264,8 @@ fkxg	𘣕
 fkxs	𗶗
 fkxw	𗶘
 fla	𘮒
+flbi	
 flbj	𛀌
-flbo	
 flcb	𗍶
 flcb	𗍻
 flcb	𘞝
@@ -108452,7 +108455,7 @@ flrw	𗸍
 flrw	𗸚
 flsu	再
 flsu	🈞
-flta	𘬝
+fltu	𘬝
 flvb	𛂋
 flvb	𛂌
 flvd	列
@@ -108499,7 +108502,7 @@ fmi	
 fmke	𘬦
 fmlv	𛃐
 fmnb	貫
-fmta	𘬤
+fmtu	𘬤
 fmu	⺟
 fmu	𛃗
 fmwk	𡛪
@@ -109260,7 +109263,7 @@ fska	𘡠
 fssn	嬈
 fsu	𘬱
 fti	𘠴
-ftta	𘡴
+fttu	𘡴
 fu	⼥
 fu	女
 fu	㊛
@@ -109313,8 +109316,8 @@ fvlw	𗹃
 fvmg	戛
 fvmt	跋
 fvrj	𘬙
-fvta	𛀱
-fvta	𘬉
+fvtu	𛀱
+fvtu	𘬉
 fvu	⾜
 fvu	⻊
 fvwt	𗀉
@@ -109405,12 +109408,6 @@ fwrj	ず
 fwrj	ぢ
 fwsk	𘣪
 fwst	𗄠
-fwta	ぉ
-fwta	お
-fwta	む
-fwta	𘬼
-fwta	𘭑
-fwta	𘮏
 fwtb	𘈷
 fwtb	𘈸
 fwtb	𘔨
@@ -109434,6 +109431,12 @@ fwtr	𘪤
 fwtt	𗀟
 fwtt	𘡳
 fwtt	𘣭
+fwtu	ぉ
+fwtu	お
+fwtu	む
+fwtu	𘬼
+fwtu	𘭑
+fwtu	𘮏
 fwtv	𘧮
 fwwb	𘈫
 fwwb	𘔢
@@ -110149,8 +110152,8 @@ gslt	𛂜
 gslx	𘳑
 gsmn	𛃒
 gsqo	叟
-gsta	𘡝
 gstl	𘳎
+gstu	𘡝
 gswk	𘳐
 gta	⽥
 gtcq	𤲒
@@ -110372,7 +110375,7 @@ hwhq	﨎
 hwjh	離
 hwjh	☲
 hwjh	𛃷
-hwta	𘱓
+hwtu	𘱓
 hya	⽛
 hye	⽈
 hyke	⽭
@@ -110386,7 +110389,7 @@ jbke	𛀇
 jca	⼬
 jca	屮
 jca	屮
-jcbo	
+jcbi	
 jcbv	𛁴
 jcdp	侻
 jcfb	蚩
@@ -110679,8 +110682,8 @@ jqll	𘚿
 jqo	𘰛
 jqo	𘰞
 jqo	
-jqta	𘰟
 jqtc	𛂝
+jqtu	𘰟
 jrfb	𘛀
 jrfb	𘛂
 jrfh	𘛁
@@ -110696,10 +110699,10 @@ jsi	𘰖
 jsi	🩡
 jsla	𘰚
 jssu	𛀗
-jsta	𘰗
+jstu	𘰗
 jti	𘢞
 jti	𘰤
-jtta	𘤗
+jttu	𘤗
 ju	ㄐ
 ju	ㆢ
 ju	
@@ -110724,7 +110727,7 @@ jvo	𘭍
 jvrj	冬
 jvrj	🀩
 jvrj	ダ
-jvta	𘯠
+jvtu	𘯠
 jwfu	𛄈
 jwi	ㄮ
 jwi	せ
@@ -110764,8 +110767,8 @@ jwrj	ぜ
 jwrj	𘰥
 jwrl	㌢
 jwrr	㌣
-jwta	𘰝
-jwta	𘰠
+jwtu	𘰝
+jwtu	𘰠
 jwwb	𗭧
 jwwb	𗭭
 jwwi	𘢜
@@ -111420,7 +111423,6 @@ kbrw	𗣻
 kbrw	𗥀
 kbsb	𗧤
 kbsk	律
-kbta	𘢒
 kbtb	𗬚
 kbtb	𗬛
 kbtb	𗬜
@@ -111437,6 +111439,7 @@ kbts	𗬡
 kbtt	𗏕
 kbtt	𗬟
 kbtt	𗬠
+kbtu	𘢒
 kbtw	𗬘
 kbvb	𗏣
 kbvb	𗏱
@@ -111696,7 +111699,7 @@ kca	⻓
 kca	𘬷
 kcbb	𗂂
 kcbi	𗀳
-kcbo	
+kcbi	
 kccb	𗏅
 kccx	𗏆
 kce	⾞
@@ -111942,9 +111945,9 @@ kjrj	𘯬
 kjrj	
 kjrk	𘣻
 kjrw	𘣼
-kjta	𘯪
-kjta	
 kjtk	𘯫
+kjtu	𘯪
+kjtu	
 kjwt	𘯱
 kjya	𘯲
 kjyt	𘯳
@@ -112259,10 +112262,10 @@ klrj	𘯺
 klrk	𘯻
 klrq	㌏
 klrt	𘉩
-klta	か
-klta	ゕ
-klta	𘲥
 kltr	が
+kltu	か
+kltu	ゕ
+kltu	𘲥
 klvi	⾡
 klvl	寘
 klvw	𘉥
@@ -112412,15 +112415,15 @@ ksjf	𛃜
 kska	𘢄
 kssi	𛀢
 kssu	𛁞
-kta	
 ktfi	𘮕
 kti	𘡆
 ktmg	𛀜
 ktrf	𘮘
-ktta	𘢕
-ktta	𘢖
-ktta	𘤈
 kttr	𗬶
+kttu	𘢕
+kttu	𘢖
+kttu	𘤈
+ktu	
 ku	⼁
 ku	⽎
 ku	㇑
@@ -112499,7 +112502,6 @@ kwrj	ど
 kwrj	ヷ
 kwsb	𗁠
 kwsh	𗃀
-kwta	𘥾
 kwtb	𘉲
 kwtb	𘉷
 kwtb	𘉺
@@ -112536,6 +112538,7 @@ kwtt	𘊀
 kwtt	𘊂
 kwtt	𘊈
 kwtt	𘊎
+kwtu	𘥾
 kwtw	𘉪
 kwtw	𘉯
 kwtw	𘊅
@@ -112570,8 +112573,8 @@ la	𛂞
 la	𘰨
 la	
 lbi	⽗
+lbi	
 lbjj	朡
-lbo	
 lbpa	脃
 lbpe	䏙
 lbu	不
@@ -112586,7 +112589,7 @@ lci	⿒
 lco	𘰬
 lcyf	媵
 lcyk	🉇
-ldbo	
+ldbi	
 ldji	𛁗
 ldji	𛁘
 ldka	直󠄃
@@ -112624,8 +112627,8 @@ lhjd	啓
 lhlw	𛂶
 lhsa	𘣔
 lhsi	㉀
-lhta	𘰪
 lhtm	恵
+lhtu	𘰪
 lhvi	𘰳
 li	⼗
 li	〸
@@ -112717,7 +112720,7 @@ ljrp	冕
 ljrr	𗢆
 ljrw	𗢄
 ljsu	𘯍
-ljta	𘮮
+ljtu	𘮮
 ljvq	𗟛
 ljvw	𗇄
 ljwi	𘠿
@@ -112752,7 +112755,7 @@ llre	䏕
 llrf	直󠄈
 llro	🀁
 llro	𛁾
-llta	𘬾
+lltu	𘬾
 lma	⽑
 lma	𛃘
 lma	𛃙
@@ -112763,7 +112766,7 @@ lmli	卉
 lmnl	𣎓
 lmo	𛃃
 lmo	𛃄
-lmta	𘰰
+lmtu	𘰰
 lndo	⾕
 lne	𘰮
 lnka	𘰴
@@ -112861,8 +112864,8 @@ ma	⺥
 ma	爫
 mbgp	慨
 mbi	𘦅
+mbi	
 mbmj	𛀃
-mbo	
 mbqo	𛁊
 mca	𘮓
 mchh	憎
@@ -112896,7 +112899,7 @@ mlck	惘
 mlqn	憤
 mlvl	慎
 mlvl	慎
-mmta	㤜
+mmtu	㤜
 mnfm	悔
 mnls	憐
 mnqt	犕
@@ -112936,7 +112939,7 @@ msvi	尿
 msvm	犀
 msvw	遲
 msvw	𛁨
-mta	ㄊ
+mtu	ㄊ
 mv	㌨
 mva	切
 mvca	𘭮
@@ -112959,8 +112962,8 @@ mvo	㋤
 mvo	ナ
 mvrj	た
 mvrr	だ
-mvta	𘮃
 mvtt	𘮄
+mvtu	𘮃
 mvtw	な
 mvvj	𛂲
 mvwi	ㄝ
@@ -114365,9 +114368,9 @@ nwpe	𛁇
 nwpx	🀊
 nwsi	𘮶
 nwsk	𗕃
-nwta	ㄖ
-nwta	𘰐
 nwtt	𘰑
+nwtu	ㄖ
+nwtu	𘰐
 nwu	⺎
 nwu	兀
 nwu	ㄫ
@@ -114478,7 +114481,7 @@ nxls	𘌣
 nxlt	𘕱
 nxlt	𘮫
 nxnl	兤
-nxta	⺗
+nxtu	⺗
 nxu	栗
 nxu	𘰄
 nxu	𘰹
@@ -114604,7 +114607,7 @@ pkhv	𣊸
 pkla	𠔜
 pkli	𘱮
 pklw	𨗭
-pkta	匆
+pktu	匆
 plfp	爨
 pli	卑
 pli	卑
@@ -114654,14 +114657,14 @@ pspc	🩬
 pspl	碑
 pspp	磊
 pspt	𥐝
-psta	䂖
+pstu	䂖
 pstw	䃣
 pswt	𛁼
 psxy	礪
-pta	勺
-pta	𘯗
-pta	𘱫
 ptfi	㍓
+ptu	勺
+ptu	𘯗
+ptu	𘱫
 pu	⾅
 pu	⺽
 pu	
@@ -114709,7 +114712,7 @@ qcwt	𗷑
 qcww	𗷆
 qcxc	蘭
 qcxc	🀣
-qdbo	
+qdbi	
 qdfy	茣
 qdqa	𦳕
 qdsk	勤
@@ -115224,7 +115227,7 @@ qo	
 qo	
 qo	
 qo	
-qpbo	㍆
+qpbi	㍆
 qpdj	敬
 qpnm	菊
 qpnm	🀥
@@ -116387,15 +116390,15 @@ qsxt	𗝏
 qsxt	𗝐
 qsxw	𗚈
 qsxw	𗚼
-qta	𘭥
-qta	𘭦
-qta	𘭧
-qta	𘭩
-qta	𘲜
 qtka	𘲞
 qtkl	勇
 qtkl	勇
-qtta	𘭨
+qttu	𘭨
+qtu	𘭥
+qtu	𘭦
+qtu	𘭧
+qtu	𘭩
+qtu	𘲜
 qvcq	蓱
 qvjd	落
 qvkb	𗶲
@@ -116428,8 +116431,8 @@ qydf	𧃒
 ra	⾔
 rb	㌧
 rbbb	
+rbbi	
 rbbj	⿌
-rbbo	
 rbdp	🉄
 rbku	ᅢ
 rbku	ㅐ
@@ -117534,7 +117537,7 @@ swgj	𛁋
 swi	𘭞
 swi	𘭢
 swrj	𘭠
-swta	𘭟
+swtu	𘭟
 swtw	𘭡
 swu	
 sye	𛃝
@@ -117544,16 +117547,6 @@ syke	⻰
 syns	鱗
 syo	尢
 syu	⿂
-ta	⼂
-ta	㇏
-ta	㇔
-ta	㇝
-ta	乁
-ta	㋬
-ta	ㄟ
-ta	へ
-ta	ヘ
-ta	ㆍ
 tbbv	掃
 tbdp	挽
 tbgl	朗
@@ -117565,7 +117558,7 @@ tbjp	㌶
 tbju	𘯿
 tbli	拉
 tbpe	㌯
-tbta	𘱎
+tbtu	𘱎
 tce	⾠
 tce	辰
 tcnx	掠
@@ -117637,11 +117630,21 @@ trwm	㩬
 tsi	⻠
 tso	⼿
 tso	🈐
-tta	𘡞
 tthr	🈯
 tti	⽐
 tti	𛂫
 ttti	㐂󠄁
+ttu	𘡞
+tu	⼂
+tu	㇏
+tu	㇔
+tu	㇝
+tu	乁
+tu	㋬
+tu	ㄟ
+tu	へ
+tu	ヘ
+tu	ㆍ
 twi	ぅ
 twi	う
 twi	ぇ
@@ -117997,7 +118000,7 @@ vkrj	𘧁
 vkrk	𘨩
 vkrr	𗈢
 vkrt	𗇿
-vkta	汎
+vktu	汎
 vku	𘲐
 vku	𘲔
 vku	
@@ -118148,11 +118151,11 @@ vslw	瀞
 vssk	㴳
 vswh	𘃴
 vswt	𘃷
-vta	刃
 vtmx	忍
 vtng	浪
-vtta	𘤾
-vtta	𘤿
+vttu	𘤾
+vttu	𘤿
+vtu	刃
 vtya	㊟
 vv	🈁
 vvcf	𗰮
@@ -118408,7 +118411,7 @@ wbkl	𗗺
 wbnb	𗗽
 wbnw	𗗱
 wbrr	𗗴
-wbta	𘳆
+wbtu	𘳆
 wbvb	𗗹
 wbvb	𗗻
 wbwb	𗗿
@@ -120525,10 +120528,10 @@ wne	𘳅
 wnfi	𘲾
 wnq	🌔
 wnqr	𛀏
-wnta	及
-wnta	𘯶
 wntf	𘯸
 wntt	𘯷
+wntu	及
+wntu	𘯶
 wntw	﨤
 wnvp	㌴
 wnxa	𘲦
@@ -121349,14 +121352,6 @@ wsu	𘲻
 wsvt	𗳻
 wswb	𗱌
 wswt	𗱁
-wta	㋦
-wta	ぃ
-wta	い
-wta	ヌ
-wta	𘲪
-wta	𘲫
-wta	𘳊
-wta	
 wtge	𘧔
 wtkb	𘇫
 wtkb	𘇭
@@ -121426,7 +121421,6 @@ wtst	𘇪
 wtst	𘙰
 wtsw	𘇦
 wtsw	𘇨
-wtta	𘡛
 wttb	𗘥
 wttb	𗘦
 wttb	𗘩
@@ -121453,9 +121447,18 @@ wttt	𗘨
 wttt	𗘫
 wttt	𗘮
 wttt	𘙽
+wttu	𘡛
 wttw	𘓋
 wttw	𘙿
 wttw	𘟖
+wtu	㋦
+wtu	ぃ
+wtu	い
+wtu	ヌ
+wtu	𘲪
+wtu	𘲫
+wtu	𘳊
+wtu	
 wvcb	𗃸
 wvi	⾘
 wvkx	𧲨
@@ -123629,7 +123632,7 @@ xmcq	𩈚
 xmkf	榣
 xmla	㈱
 xmla	㊑
-xmta	杖
+xmtu	杖
 xnbk	櫛
 xnfm	梅
 xnfm	梅
@@ -123638,7 +123641,7 @@ xnge	𛂕
 xnlt	﨔
 xpgt	椔
 xprb	㌾
-xpta	杓
+xptu	杓
 xqjj	﨓
 xr	㌿
 xrje	ボ
@@ -123694,10 +123697,10 @@ ydne	𘭸
 ydnn	𘮂
 ydsh	奢
 ydsk	𛂽
-ydta	𘭷
 ydtf	☯
 ydtg	⚏
 ydtk	⚌
+ydtu	𘭷
 ydwi	𘮀
 yfe	⾮
 yfe	𛂭
@@ -123734,11 +123737,11 @@ yjgp	琉
 yjrj	🈡
 ykco	紐
 ykry	䌴
-ykta	㺬
+yktu	㺬
 ykwo	璉
 yla	𘬌
 yle	玥
-ylta	𘬍
+yltu	𘬍
 ylvl	瑱
 ylvl	瑱
 ynfu	䌁
@@ -123752,9 +123755,9 @@ yqa	弄
 ysfm	瑇
 yshr	𛄙
 yslj	綾
-ysta	琢
-yta	⽟
+ystu	琢
 yti	𘬭
+ytu	⽟
 ywa	⽡
 ywwi	𥾆
 yxhy	練
