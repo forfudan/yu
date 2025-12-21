@@ -25,15 +25,6 @@ export interface ZigenScheme extends BaseScheme {
 // 統一的方案配置
 export const SCHEMES: SearchScheme[] = [
     {
-        id: 'joy',
-        name: '卿雲',
-        description: '卿雲爛兮糾縵縵兮',
-        chaifenUrl: '/chaifen.csv',
-        zigenUrl: '/zigen-joy.csv',
-        supplement: false,
-        ming: false
-    },
-    {
         id: 'light',
         name: '光華',
         description: '日月光華旦復旦兮',
@@ -49,6 +40,25 @@ export const SCHEMES: SearchScheme[] = [
         chaifenUrl: '/chaifen.csv',
         zigenUrl: '/zigen-star.csv',
         supplement: true,
+        ming: false
+    },
+    {
+        id: 'wafel',
+        name: '吉旦餅',
+        description: 'Wafel·華夫·三碼方案',
+        chaifenUrl: '/chaifen.csv',
+        zigenUrl: '/zigen-wafel.csv',
+        supplement: false,
+        ming: false,
+        wafel: true
+    },
+    {
+        id: 'joy',
+        name: '卿雲',
+        description: '卿雲爛兮糾縵縵兮',
+        chaifenUrl: '/chaifen.csv',
+        zigenUrl: '/zigen-joy.csv',
+        supplement: false,
         ming: false
     },
     {
@@ -70,16 +80,6 @@ export const SCHEMES: SearchScheme[] = [
         ming: false,
         ling: true
     },
-    {
-        id: 'wafel',
-        name: '吉旦餅',
-        description: 'Wafel·華夫·三碼方案',
-        chaifenUrl: '/chaifen.csv',
-        zigenUrl: '/zigen-wafel.csv',
-        supplement: false,
-        ming: false,
-        wafel: true
-    },
 ]
 
 // 轉換為 ZigenScheme 格式（用於字根圖）
@@ -92,4 +92,4 @@ export const ZIGEN_SCHEMES: ZigenScheme[] = SCHEMES.map(scheme => ({
 }))
 
 // 默認方案
-export const DEFAULT_SCHEME = 'star'
+export const DEFAULT_SCHEME = 'ling'
