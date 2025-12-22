@@ -66771,7 +66771,6 @@ sdsj	𠗦
 sdsl	𣂇
 sdsq	𠙥
 sdss	𣁿
-sdsu	𦸻
 sdta	𧂭
 sdtd	𧂻
 sdtd	𧄥
@@ -67316,6 +67315,7 @@ shqm	𦵬
 shqr	𠒌
 shqs	𦏡
 shqu	𦴉
+shqu	𦸻
 shqv	𢐱
 shrh	𦾫
 shrm	𪙐
@@ -134972,6 +134972,7 @@ whlg	𦞁
 whlg	𦢙
 ebwl	𦥓
 shlg	𦳦
+sdsu	𦸻
 sijg	𦺿
 shlg	𦼺
 sbig	𧄕

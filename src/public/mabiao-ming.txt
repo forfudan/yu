@@ -70082,7 +70082,6 @@ mctfo	𦮔
 mctfo	𦮧
 mctfw	𦳼
 mctgb	𧅃
-mctgd	𦸻
 mctgm	𦴔
 mcthe	𮐚
 mcthj	𬞆
@@ -70244,6 +70243,7 @@ mcvdt	𱾂
 mcvdx	𱾎
 mcvfc	𣗅
 mcvfc	𧂣
+mcvfd	𦸻
 mcvff	𦏡
 mcvff	𦽬
 mcvfh	𦽪

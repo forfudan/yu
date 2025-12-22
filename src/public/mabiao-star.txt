@@ -99752,7 +99752,6 @@ sgum	𦹧
 sguq	𩍮
 sgur	𱽓
 sguw	𦭾
-sgvb	𦸻
 sgvm	𮑊
 sgxi	𦬃
 sgxk	荸
@@ -99821,6 +99820,7 @@ shfy	𦳻
 shg	藍
 shgb	薣
 shgb	𢐱
+shgb	𦸻
 shgd	𪈭
 shgg	𦴭
 shgh	𦏡
