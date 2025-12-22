@@ -61,6 +61,7 @@ gy	幾個
 hd	可能
 hg	应该
 hl	钥
+hn	痪
 hr	时候
 hs	社会
 hv	孑
