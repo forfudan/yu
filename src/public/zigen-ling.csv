@@ -17,6 +17,7 @@ font,ma,pinyin
 舟,bvo,Ẑōu -> Vo 🈤Z和Ẑ取V
 虫,bo,Ĉóŋ -> Co 🈤不取聲母 🈕Huǐ
 门,bme,Mén -> Me
+页,cye,Yè
 丷,ca,Bā 🈤不取聲母
 ,ca,
 䒑,ca,Cǎo -> Ca 🈤不取聲母
@@ -45,7 +46,7 @@ font,ma,pinyin
 皮,dpi,Pí
 目,dmu,Mù
 耳,dje,ěr -> Je 🈤零聲母小碼取J
-雨,dyu,yǔ
+雨,dyu,Yǔ
 ,do,🈤無讀音取o
 斤,dji,Jīn -> Ji
 一,fi,Yī 🈤基本筆畫不取聲母 ㊟俗稱横
@@ -89,8 +90,8 @@ font,ma,pinyin
 了,hle,Le
 子,hvi,Zǐ -> Vi 🈤Z和Ẑ取V
 予,hyu,Yǔ
-广,hga,Guǎŋ -> Ga
-疒,hne,Nè
+广,hga,Guǎŋ -> Ga 🈕Yǎn ān
+疒,hne,Nè ㊟俗稱病字頭
 文,hwe,Wén -> We
 三,hsa,Sān -> Sa
 日,hri,Rì
@@ -229,7 +230,6 @@ font,ma,pinyin
 西,ni,Xī 🈤不取聲母
 酉,nyo,Yǒu -> Yo
 石,psi,Ŝí
-页,pye,Yè
 儿,pe,ér -> Je 🈤零聲母小碼取J
 ,pe,🈤無讀音取o
 川,pca,Ĉuān -> Ca
@@ -263,6 +263,11 @@ font,ma,pinyin
 ,qna,
 乌,qwu,Wū
 丂,rka,Kào -> Ka
+业,rye,Yè
+,ro,🈤無讀音取o
+,ro,
+,ro,
+,rdo,Dòu -> Do
 之,ri,Ẑī -> Vi 🈤不取聲母 🈤Z和Ẑ取V
 二,rje,èr -> Je 🈤零聲母小碼取J
 ⺀,rje,㊟同二歸併
@@ -283,6 +288,7 @@ font,ma,pinyin
 羊,rya,Yáŋ -> Ya
 ⺷,rya,
 ,ro,🈤生僻字取o
+见,rja,Jiàn -> j
 言,ra,Yán -> Ya 🈤不取聲母
 马,rma,Mǎ
 也,sye,Yě
@@ -314,7 +320,6 @@ font,ma,pinyin
 龵,tso,
 扌,to,Ŝǒu -> So 🈤不取聲母 ㊟俗稱提手旁
 用,to,Yòŋ -> Yo 🈤不取聲母
-见,tja,Jiàn -> j
 辰,tce,Ĉén -> Ce
 ,vo,🈤無讀音取o
 ,vo,
@@ -327,11 +332,6 @@ font,ma,pinyin
 ,ve,㊟同且歸併
 水,vi,Ŝuǐ -> Si 🈤不取聲母
 氵,vi,Ŝuǐ -> Si 🈤不取聲母 ㊟俗稱三點水
-业,wye,Yè
-,wo,🈤無讀音取o
-,wo,
-,wo,
-,wdo,Dòu -> Do
 乃,wna,Nǎi -> Na
 乙,wi,Yǐ 🈤基本筆畫不取聲母 ㊟一切折筆皆同碼
 乚,wi,Yí 🈤基本筆畫不取聲母 ㊟一切折筆皆同碼
