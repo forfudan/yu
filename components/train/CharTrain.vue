@@ -38,6 +38,7 @@ if (range) {
 
 const cards = shallowRef<Card[]>(cache[cardsName] as Card[])
 const chaifenMap = shallowRef<ChaifenMap>()
+const zigenMap = shallowRef<Map<string, { font: string; ma: string; pinyin?: string }>>()
 
 // 使用新版調度算法
 let thisSchedule: AdvancedSchedule;
@@ -88,6 +89,39 @@ const practiceProgress = computed(() => {
   };
 });
 
+// 檢測當前字符是否有字根拼音數據
+const hasPinyinData = computed(() => {
+  if (!card.value || !chaifenMap.value || !zigenMap.value) return false;
+  const chaifen = chaifenMap.value.get(card.value.name);
+  if (!chaifen || !chaifen.division) return false;
+
+  // 檢查拆分中的字根是否有拼音信息
+  const zigens = Array.from(chaifen.division);
+  return zigens.some(zigen => {
+    const zigenInfo = zigenMap.value?.get(zigen);
+    return zigenInfo?.pinyin && zigenInfo.pinyin.trim() !== '' && zigenInfo.pinyin !== 'Ø';
+  });
+});
+
+// 獲取當前字符的字根拼音列表
+const pinyinList = computed(() => {
+  if (!hasPinyinData.value || !card.value || !chaifenMap.value || !zigenMap.value) return [];
+
+  const chaifen = chaifenMap.value.get(card.value.name);
+  if (!chaifen || !chaifen.division) return [];
+
+  const zigens = Array.from(chaifen.division);
+  return zigens
+    .map(zigen => {
+      const zigenInfo = zigenMap.value?.get(zigen);
+      return {
+        font: zigen,
+        pinyin: zigenInfo?.pinyin || ''
+      };
+    })
+    .filter(item => item.pinyin && item.pinyin.trim() !== '' && item.pinyin !== 'Ø');
+});
+
 onMounted(async () => {
   if (cards.value && chaifenMap.value) {
     // 初始化調度系統
@@ -107,7 +141,8 @@ onMounted(async () => {
 
   // 使用优化的JSON格式读取拆分数据
   chaifenMap.value = await fetchChaifenOptimized(p.chaifenUrl)
-  const zigenMap = await fetchZigen(p.zigenUrl)
+  const fetchedZigenMap = await fetchZigen(p.zigenUrl)
+  zigenMap.value = fetchedZigenMap
 
   let chaifenValues = [...chaifenMap.value.values()]
 
@@ -117,7 +152,7 @@ onMounted(async () => {
 
   cards.value = chaifenValues.map(cf => ({
     name: cf.char,
-    key: makeCodesFromDivision(cf.division, zigenMap, p.rule)
+    key: makeCodesFromDivision(cf.division, fetchedZigenMap, p.rule)
   }))
 
   cache[cardsName] = cards.value
@@ -336,7 +371,7 @@ const handleKeydown = (event: KeyboardEvent) => {
           windowWidth < 768 ? 'mb-1' : 'mb-2'
         ]">
           <span>已練習: {{ practiceProgress.current }} / {{ practiceProgress.total }} ({{ practiceProgress.percentage
-            }}%) | 已掌握: {{ practiceProgress.mastered }}</span>
+          }}%) | 已掌握: {{ practiceProgress.mastered }}</span>
           <span v-if="wrongInputCount > 0" class="text-red-600 dark:text-red-400">錯誤次數: {{ wrongInputCount }}</span>
         </div>
         <div :class="[
@@ -486,6 +521,37 @@ const handleKeydown = (event: KeyboardEvent) => {
       </div>
       <div v-else class="text-blue-600 dark:text-blue-400 font-medium">
         繼續輸入正確編碼
+      </div>
+    </div>
+
+    <!-- 聲碼韵碼解析區域 - 獨立顯示 -->
+    <div v-if="hasPinyinData" :class="[
+      'mx-auto max-w-md mt-4',
+      windowWidth < 768 ? 'max-w-xs mt-2' : 'max-w-md mt-4'
+    ]">
+      <div :class="[
+        'border-2 border-dashed border-blue-300 dark:border-blue-600 rounded-lg bg-blue-50 dark:bg-blue-900/20 p-3 transition-all duration-300',
+        windowWidth < 768 ? 'p-2' : 'p-3'
+      ]">
+        <!-- 標題 -->
+        <div :class="[
+          'text-center font-medium text-blue-800 dark:text-blue-300 mb-2',
+          windowWidth < 768 ? 'text-xs mb-1' : 'text-sm mb-2'
+        ]">
+          拼音到音托之關係解析
+        </div>
+        <!-- 拼音列表 -->
+        <div :class="[
+          'text-center space-y-1',
+          windowWidth < 768 ? 'text-xs space-y-0.5' : 'text-sm space-y-1'
+        ]">
+          <div v-for="(item, index) in pinyinList" :key="`${item.font}-${item.pinyin}-${index}`" :class="[
+            'text-blue-700 dark:text-blue-300'
+          ]">
+            <span class="zigen-font">{{ item.font }}</span>
+            <span class="font-mono"> ({{ item.pinyin }})</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
