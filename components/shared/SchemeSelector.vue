@@ -28,8 +28,8 @@ const emit = defineEmits<Emits>()
 function getSchemeChar(schemeId: string): string {
     const charMap: Record<string, string> = {
         'light': '光',
-        'star': '星',
         'wafel': '華',
+        'star': '星',
         'joy': '卿',
         'ming': '明',
         'ling': '靈'

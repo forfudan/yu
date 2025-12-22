@@ -34,15 +34,6 @@ export const SCHEMES: SearchScheme[] = [
         ming: false
     },
     {
-        id: 'star',
-        name: '星陳',
-        description: '明明上天爛然星陳',
-        chaifenUrl: '/chaifen.csv',
-        zigenUrl: '/zigen-star.csv',
-        supplement: true,
-        ming: false
-    },
-    {
         id: 'wafel',
         name: '吉旦餅',
         description: 'Wafel·華夫·三碼方案',
@@ -51,6 +42,15 @@ export const SCHEMES: SearchScheme[] = [
         supplement: false,
         ming: false,
         wafel: true
+    },
+    {
+        id: 'star',
+        name: '星陳',
+        description: '明明上天爛然星陳',
+        chaifenUrl: '/chaifen.csv',
+        zigenUrl: '/zigen-star.csv',
+        supplement: true,
+        ming: false
     },
     {
         id: 'joy',
