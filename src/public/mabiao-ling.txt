@@ -60,6 +60,7 @@ jc	出来
 jd	事情
 jh	但是
 jl	什麽
+jm	代表
 jq	发现
 js	他们
 kj	几个
@@ -76,7 +77,6 @@ mn	东西
 ms	情况
 mv	有没有
 mw	感觉
-my	代表
 nb	觉得
 ng	第一
 nk	个人
