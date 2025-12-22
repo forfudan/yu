@@ -19,7 +19,7 @@ hero:
       link: /zht/learn/division
     - theme: alt
       text: 練習
-      link: /zht/practice/root
+      link: /zht/practice/root_ling
     - theme: alt
       text: 安裝
       link: /zht/install
