@@ -2,6 +2,7 @@
   CharTrain.vue - 單字練習組件
   
   Modification History:
+  - 2025-12-23 by 朱宇浩: 允許前綴碼方案在單字練習中輸入無空格簡碼
   - 2025-12-22 by 朱宇浩: 合併 TrainCard.vue，升級使用 advancedSchedule.ts，現代化UI設計
   - 2025-08-14 by 朱宇浩: 增加參數 ming，允許日月字根訓練對五個一碼上屏字增加兼容輸入
   - 2025-08-14 by 朱宇浩: 編碼提示區分大小寫
@@ -442,7 +443,7 @@ const handleKeydown = (event: KeyboardEvent) => {
           windowWidth < 768 ? 'mb-1' : 'mb-2'
         ]">
           <span>已練習: {{ practiceProgress.current }} / {{ practiceProgress.total }} ({{ practiceProgress.percentage
-          }}%) | 已掌握: {{ practiceProgress.mastered }}</span>
+            }}%) | 已掌握: {{ practiceProgress.mastered }}</span>
           <span v-if="wrongInputCount > 0" class="text-red-600 dark:text-red-400">錯誤次數: {{ wrongInputCount }}</span>
         </div>
         <div :class="[
