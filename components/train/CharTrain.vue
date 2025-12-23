@@ -28,6 +28,10 @@ const p = defineProps<{
   /** 练习的范围，从第几条到第几条，不填则是全部 */
   range?: [start: number, end: number]
   rule: string
+  /** 碼表文件URL（可選） */
+  mabiaoUrl?: string
+  /** popLevel（用於過濾碼表，默認為0。如果大於0則為前綴碼方案） */
+  popLevel?: number
 }>()
 
 let cardsName = p.name + '_char'
@@ -39,6 +43,7 @@ if (range) {
 const cards = shallowRef<Card[]>(cache[cardsName] as Card[])
 const chaifenMap = shallowRef<ChaifenMap>()
 const zigenMap = shallowRef<Map<string, { font: string; ma: string; pinyin?: string }>>()
+const shortCodeMap = shallowRef<Map<string, string>>(new Map())
 
 // 使用新版調度算法
 let thisSchedule: AdvancedSchedule;
@@ -55,6 +60,50 @@ const userKeys = shallowRef('')
 const forceUpdate = ref(0)
 const showResetConfirm = ref(false)
 const wrongInputCount = ref(0)
+
+// 讀取和過濾碼表的函數
+async function loadAndFilterMabiao() {
+  if (!p.mabiaoUrl) return;
+
+  const popLevel = p.popLevel ?? 0;
+  // 如果 popLevel 為 0，則不過濾
+  if (popLevel === 0) return;
+  const vowels = new Set(['a', 'e', 'i', 'o', 'u']);
+  const tempMap = new Map<string, string>();
+
+  try {
+    const response = await fetch(p.mabiaoUrl);
+    const text = await response.text();
+    const lines = text.split('\n');
+
+    for (const line of lines) {
+      const trimmedLine = line.trim();
+      if (!trimmedLine) continue;
+
+      const [code, chars] = trimmedLine.split('\t');
+      if (!code || !chars) continue;
+
+      // 過濾條件：
+      // 1. 編碼長度 <= popLevel
+      // 2. 以 aeiou 結尾
+      const codeLower = code.toLowerCase();
+      if (codeLower.length <= popLevel && vowels.has(codeLower[codeLower.length - 1])) {
+        // 只處理單字（不處理詞組）
+        if (chars.length === 1) {
+          const char = chars;
+          // 如果該字還沒有記錄，或者新編碼更短，則更新
+          if (!tempMap.has(char) || code.length < tempMap.get(char)!.length) {
+            tempMap.set(char, code);
+          }
+        }
+      }
+    }
+
+    shortCodeMap.value = tempMap;
+  } catch (error) {
+    console.error('Failed to load mabiao:', error);
+  }
+}
 
 // 響應式窗口大小
 const windowWidth = ref(typeof window !== 'undefined' ? window.innerWidth : 1024);
@@ -122,7 +171,21 @@ const pinyinList = computed(() => {
     .filter(item => item.pinyin && item.pinyin.trim() !== '' && item.pinyin !== 'Ø');
 });
 
+// 獲取當前字符的簡碼（從碼表中查詢）
+const currentShortCode = computed(() => {
+  if (!card.value || !shortCodeMap.value || shortCodeMap.value.size === 0) return null;
+  const shortCode = shortCodeMap.value.get(card.value.name);
+  // 如果簡碼和主要答案長度相同，則不返回（不需要顯示）
+  if (shortCode && shortCode.toLowerCase() !== card.value.key.toLowerCase() && shortCode.length !== card.value.key.length) {
+    return shortCode;
+  }
+  return null;
+});
+
 onMounted(async () => {
+  // 讀取碼表（如果提供了）
+  await loadAndFilterMabiao();
+
   if (cards.value && chaifenMap.value) {
     // 初始化調度系統
     thisSchedule = new AdvancedSchedule(cardsName)
@@ -191,23 +254,31 @@ watch(userKeys, (newKeys) => {
   const input = newKeys.trim().toLowerCase()
   const expectedCode = card.value.key.toLowerCase()
 
-  // Alternative solutions for ming mode
-  const mingAlternatives: Record<string, string> = {
-    '的': 'e',
-    '是': 'i',
-    '我': 'o',
-    '不': 'u',
-    '了': 'a'
-  }
+  // 獲取簡碼（如果存在）
+  const shortCode = shortCodeMap.value.get(card.value.name)?.toLowerCase()
+  const hasShortCode = shortCode && shortCode !== expectedCode
 
-  // 檢查輸入長度是否達到預期編碼長度
-  const hasAlternative = (p.rule === 'ming' || p.rule === 'ling') && mingAlternatives[card.value.name]
-  const shouldCheck = input.length >= expectedCode.length || (hasAlternative && input === mingAlternatives[card.value.name])
+  // 判斷是否應該檢查
+  const popLevel = p.popLevel ?? 0
+  let shouldCheck = false
+
+  if (popLevel > 0) {
+    // 前綴碼方案：需滿足以下條件之一
+    // 1. 輸入長度達到全碼長度
+    // 2. 輸入中出現了 aeiou 字母（可能是簡碼）
+    const hasVowel = /[aeiou]/.test(input)
+    shouldCheck = input.length >= expectedCode.length || hasVowel
+  } else {
+    // 非前綴碼方案：達到全碼長度或簡碼長度即檢查
+    shouldCheck = input.length >= expectedCode.length ||
+      (hasShortCode && input.length >= shortCode.length)
+  }
 
   if (!shouldCheck) return
 
-  // 檢查答案是否正確
-  const isCorrectAnswer = input === expectedCode || (hasAlternative && input === mingAlternatives[card.value.name])
+  // 檢查答案是否正確（包括簡碼）
+  const isCorrectAnswer = input === expectedCode ||
+    (hasShortCode && input === shortCode)
 
   if (isCorrectAnswer) {
     // 正確答案，直接進入下一個字符（不論是否第一次學習）
@@ -480,17 +551,11 @@ const handleKeydown = (event: KeyboardEvent) => {
             windowWidth < 768 ? 'text-xs' : 'text-sm'
           ]">（{{ chaifenMap.get(card.name)?.division }}）</span>
         </div>
-        <div v-if="(p.rule === 'ming' || p.rule === 'ling') && ['的', '是', '我', '不', '了'].includes(card.name)" :class="[
+        <div v-if="currentShortCode" :class="[
           'text-gray-500 dark:text-gray-400 mt-2',
           windowWidth < 768 ? 'text-xs' : 'text-sm'
         ]">
-          也可直接使用韻碼 <b class="font-mono text-blue-600 dark:text-blue-400">{{
-            card.name === '的' ? 'E' :
-              card.name === '是' ? 'I' :
-                card.name === '我' ? 'O' :
-                  card.name === '不' ? 'U' :
-                    card.name === '了' ? 'A' : ''
-          }}</b> 直接上屏
+          也可以使用簡碼 <b class="font-mono text-blue-600 dark:text-blue-400">{{ currentShortCode }}</b> 直接上屏
         </div>
       </div>
     </div>
