@@ -717,6 +717,7 @@ fo	如
 gu	院
 ho	这
 hu	时
+ja	你
 jo	过
 ju	发
 ke	很
@@ -794,7 +795,6 @@ hre	明
 hro	最
 hru	時
 hse	神
-jba	你
 jbe	们
 jca	出
 jce	們
@@ -2205,7 +2205,6 @@ chyu	纾
 ci	金
 ci	纟
 ci	釒
-cja	銄
 cjbj	鎫
 cjbt	鎞
 cjca	屰
@@ -2273,6 +2272,7 @@ cjvj	鈰
 cjvk	缑
 cjvk	鍭
 cjwo	逆
+cjxa	銄
 cjxu	绦
 cjxu	銝
 cka	鍋
@@ -3693,7 +3693,6 @@ dhwi	吼
 dhwo	遭
 dhxg	哻
 dhya	呀
-dja	响
 djbh	職
 djbk	咿
 djbp	耽
@@ -3830,6 +3829,7 @@ djvk	喉
 djwi	耴
 djwm	聊
 djwo	近
+djxa	响
 djxj	聏
 djxu	咻
 djym	聽
@@ -4872,7 +4872,6 @@ fhya	厊
 fhyu	妤
 fi	一
 fja	見
-fja	姠
 fjbb	覐
 fjbt	媲
 fjbx	彙
@@ -4918,6 +4917,7 @@ fjvi	彔
 fjvv	剝
 fjwn	娰
 fjwo	迂
+fjxa	姠
 fka	媧
 fkce	厙
 fkco	妞
@@ -7568,8 +7568,6 @@ hrhw	旼
 hrhw	暍
 hrhx	晘
 hri	日
-hrja	晌
-hrja	晑
 hrjb	晈
 hrjc	时
 hrjd	晷
@@ -7587,6 +7585,8 @@ hrjm	戥
 hrjq	昄
 hrjr	昸
 hrjw	遢
+hrjx	晌
+hrjx	晑
 hrkc	晼
 hrkf	晏
 hrkf	暄
@@ -8114,7 +8114,6 @@ hytu	钰
 hytu	钛
 hyu	予
 hywo	迓
-ja	向
 ja	凵
 jbbl	傡
 jbbq	侵
@@ -8988,7 +8987,6 @@ jwkj	仰
 jwll	偦
 jwmt	低
 jwna	仍
-jwo	逈
 jwpm	僽
 jwpo	偢
 jwqa	伏
@@ -8999,6 +8997,7 @@ jwtu	伋
 jwvd	俐
 jwya	俇
 jwya	仸
+jxa	向
 jxbi	伛
 jxca	伻
 jxdd	傴
@@ -9018,6 +9017,7 @@ jxqn	鸺
 jxsn	鵂
 jxu	休
 jxvo	佢
+jxwo	逈
 jxxh	僸
 jxxl	儊
 jxyd	偄
@@ -10306,7 +10306,6 @@ lhhf	顧
 lhhi	雇
 lhi	脽
 lhja	脑
-lhja	扄
 lhjd	啓
 lhje	腥
 lhjf	扆
@@ -10315,6 +10314,7 @@ lhjj	扇
 lhjj	腑
 lhjs	肇
 lhjx	棨
+lhjx	扄
 lhjy	綮
 lhkx	腬
 lhlc	扁
@@ -11144,7 +11144,6 @@ mhyu	忬
 mi	七
 mi	忄
 mja	屯
-mja	恦
 mjcr	懠
 mjcu	忖
 mjcu	寽
@@ -11172,6 +11171,7 @@ mjrf	懐
 mjrh	虢
 mjtc	憹
 mjwo	迍
+mjxa	恦
 mjxu	恘
 mkba	怕
 mkca	怅
@@ -12485,7 +12485,6 @@ nshx	餜
 nsi	食
 nsi	廼
 nsi	飠
-nsja	餉
 nsjb	餃
 nsjc	等
 nsjd	餎
@@ -12495,6 +12494,7 @@ nsjj	飿
 nsjk	餱
 nsjl	餁
 nsjq	飯
+nsjx	餉
 nska	年
 nske	笼
 nskg	餶
@@ -16173,7 +16173,6 @@ shxg	垾
 shxu	堁
 si	士
 si	廴
-sja	垧
 sja	凷
 sjcd	墒
 sjcl	墑
@@ -16205,6 +16204,7 @@ sjvi	麦
 sjvi	坆
 sjvk	堠
 sjwq	垘
+sjxa	垧
 sjxm	麺
 sjyf	麸
 ska	堝
@@ -17631,13 +17631,13 @@ tshr	擼
 tsht	馄
 tshx	馃
 tsi	饣
-tsja	饷
 tsjb	饺
 tsjc	持
 tsjd	饹
 tsjf	饻
 tsjj	饳
 tsjq	饭
+tsjx	饷
 tske	拢
 tskg	馉
 tskj	饥
@@ -21382,7 +21382,6 @@ yhya	玡
 yhyu	紓
 yi	糸
 yi	糹
-yja	珦
 yjbj	繌
 yjcm	縍
 yjcr	璾
@@ -21436,6 +21435,7 @@ yju	糾
 yjvi	玫
 yjvk	緱
 yjwq	絥
+yjxa	珦
 yka	緺
 ykba	珀
 ykba	絈
@@ -22603,7 +22603,6 @@ bhyu	𲾐
 bi	㐅
 bi	𠂊
 bi	𠂭
-bja	䖮
 bja	𠚍
 bjbb	𨐕
 bjbb	𪓥
@@ -23062,6 +23061,7 @@ bjwt	𠖁
 bjwv	㔅
 bjww	𰻕
 bjwy	𦀱
+bjxa	䖮
 bjxa	𢑖
 bjxg	𧉲
 bjxj	𦓏
@@ -26259,7 +26259,6 @@ chhv	𫒤
 chhv	𰝉
 chhw	𪱗
 chhw	𰼸
-chja	𮣛
 chjb	𮕁
 chjc	𡼖
 chjc	𨰋
@@ -26286,6 +26285,7 @@ chjs	𪆝
 chjt	𠆓
 chjt	𨪡
 chjv	㪟
+chjx	𮣛
 chkd	𰬻
 chke	𨥨
 chkf	𨪶
@@ -31587,7 +31587,6 @@ djhx	𦖍
 djhx	𱓹
 djhy	𦕆
 djja	𡶸
-djja	𣂝
 djjb	𪢄
 djjf	𠵱
 djjf	𡁕
@@ -31614,6 +31613,7 @@ djjv	𠲠
 djjv	𪯱
 djjv	𫾬
 djjv	𱔂
+djjx	𣂝
 djjx	𫜽
 djkb	䏁
 djkb	𪡈
@@ -32356,12 +32356,12 @@ dlhf	𲕪
 dlhi	𨿔
 dlhs	㗫
 dlhu	𠯖
-dlja	𠽘
 dljb	𠸀
 dlje	𱓢
 dljj	𦐽
 dljj	𭉮
 dljv	𠳰
+dljx	𠽘
 dlka	𠯧
 dlkf	𠹓
 dlkk	𲔾
@@ -40054,7 +40054,6 @@ fyht	𫯬
 fyhw	𫌐
 fyhx	𲁂
 fyhy	𧘪
-fyja	𧙹
 fyjb	䘨
 fyjc	𫌓
 fyjd	䙉
@@ -40108,6 +40107,7 @@ fyjv	𳁈
 fyjw	䙜
 fyjw	𧘷
 fyjw	𧜨
+fyjx	𧙹
 fyjy	𬡢
 fyka	𧘕
 fyka	𩑘
@@ -46222,7 +46222,6 @@ hnhx	㾧
 hnhx	𭼫
 hnhy	𤵈
 hni	𬭄
-hnja	𤵼
 hnjb	𤶀
 hnjb	𰣥
 hnjc	𬏣
@@ -46281,6 +46280,7 @@ hnjw	𤸿
 hnjw	𪽩
 hnjw	𭼣
 hnjx	㾋
+hnjx	𤵼
 hnjx	𤶫
 hnjy	𤸍
 hnjy	𤺾
@@ -48536,7 +48536,6 @@ hshv	𮂡
 hshv	𱵎
 hshw	𮂘
 hsi	𱍐
-hsja	𰧽
 hsjc	𥘑
 hsjd	𥙐
 hsjd	𮁩
@@ -48572,6 +48571,7 @@ hsjv	𥘦
 hsjv	𥙅
 hsjw	𥛝
 hsjw	𮵜
+hsjx	𰧽
 hsjx	𰨂
 hsjx	𲴯
 hsjy	𥜌
@@ -49225,7 +49225,6 @@ hvhw	𪦹
 hvhx	𧻧
 hvhy	㜿
 hvhy	𧺥
-hvja	𮚹
 hvjb	𡥡
 hvjb	𧻨
 hvjc	𧺘
@@ -49252,6 +49251,7 @@ hvjr	䞾
 hvjr	𧺌
 hvjr	𧼄
 hvjr	𧾙
+hvjx	𮚹
 hvjx	𳂻
 hvka	𡥾
 hvka	𧼽
@@ -50169,7 +50169,6 @@ jbhg	𫣒
 jbhj	𪝯
 jbhl	𠋶
 jbhr	𠏫
-jbhr	𩐢
 jbhr	𰂋
 jbhw	𠌒
 jbi	𪜧
@@ -50954,7 +50953,6 @@ jfhv	𲐳
 jfhw	𩖰
 jfhx	𩗤
 jfi	𫢅
-jfja	䚁
 jfjb	𩗒
 jfjb	𩙠
 jfjd	𩗇
@@ -51486,7 +51484,6 @@ jhxu	𠍱
 jhxu	𬾛
 jhyg	𱏋
 jhyh	𪝾
-jja	𰁼
 jjbc	𦐙
 jjbe	𬛤
 jjbf	𮋕
@@ -51802,7 +51799,6 @@ jjvd	𠞏
 jjvh	䎓
 jjvi	𤯛
 jjvi	𰁦
-jjvj	𫷇
 jjvk	𠋫
 jjvl	𰚭
 jjvn	𦐍
@@ -51819,6 +51815,7 @@ jjwr	𦐭
 jjwt	𦐅
 jjwt	𦐏
 jjwt	𦐠
+jjxa	𰁼
 jjxc	𦐜
 jjxf	𰂶
 jjxg	𦏹
@@ -51837,7 +51834,6 @@ jjyk	𱻠
 jjys	𡏙
 jka	𠈥
 jka	𠊰
-jka	𫝙
 jka	𲟝
 jkba	𲰩
 jkbb	𧎆
@@ -53173,7 +53169,6 @@ jvbo	𧈸
 jvbo	𫣢
 jvbr	𠑈
 jvco	𡕓
-jvda	𲒦
 jvdc	𱂥
 jvdd	㪾
 jvdd	𥇠
@@ -53392,6 +53387,7 @@ jwxa	𲐶
 jwxu	𪜷
 jwyt	㺱
 jxa	𠇺
+jxbh	𩐢
 jxdc	𱏔
 jxdj	𠍏
 jxdj	𰁳
@@ -53407,6 +53403,7 @@ jxff	𧡊
 jxff	𫌠
 jxff	𬅗
 jxfi	𠇾
+jxfj	䚁
 jxgm	𩢮
 jxhf	𠍾
 jxhf	𧝺
@@ -53416,6 +53413,8 @@ jxhp	𤑅
 jxhs	𪅬
 jxjq	𠈯
 jxjv	𪝅
+jxjv	𫷇
+jxka	𫝙
 jxkb	𫢾
 jxkl	𭄴
 jxkr	𰂥
@@ -53442,6 +53441,7 @@ jxtw	𬾬
 jxu	𠅅
 jxu	𬎳
 jxvd	𬽰
+jxvd	𲒦
 jxvh	㒑
 jxvj	𠇽
 jxxj	𪝥
@@ -58277,7 +58277,6 @@ kxhw	𥨚
 kxhy	䆨
 kxhy	𥦏
 kxhy	𥧤
-kxja	𥥩
 kxjc	𱷚
 kxjd	𫁓
 kxjf	𥥴
@@ -58301,6 +58300,7 @@ kxjt	𥨞
 kxju	𬔅
 kxjv	𠞀
 kxjv	𥦹
+kxjx	𥥩
 kxjx	𰩏
 kxjy	𥨩
 kxkb	𥨫
@@ -59142,7 +59142,6 @@ lcht	𮌴
 lchw	𪘹
 lci	𫆤
 lci	𳑩
-lcja	𮯄
 lcjc	𣍮
 lcjc	𮮿
 lcjd	𪘇
@@ -59167,6 +59166,7 @@ lcjv	𱌛
 lcjw	𦞮
 lcjw	𱌤
 lcjx	𪘆
+lcjx	𮯄
 lcka	𪙃
 lckb	𭩂
 lckc	𨰢
@@ -60088,7 +60088,6 @@ lhyd	𦜃
 lhyi	䋀
 li	𬂛
 lja	𠙷
-lja	𲥚
 ljbc	𡶬
 ljbc	𦊠
 ljbc	𦌏
@@ -60556,6 +60555,7 @@ ljwo	𨑿
 ljwp	𤆙
 ljwq	𭆬
 ljww	𥠠
+ljxa	𲥚
 ljxu	䏫
 ljxu	𣎻
 ljyb	𪓛
@@ -65599,7 +65599,6 @@ mshw	𮟈
 mshx	𡱼
 mshx	𰘤
 msi	𠃜
-msja	𭕜
 msjc	𱚱
 msjd	𢞄
 msjd	𰕟
@@ -65623,6 +65622,7 @@ msjq	𫵜
 msjs	𪂗
 msjt	𡲮
 msjv	𠜾
+msjx	𭕜
 mska	㤶
 mskb	𡲟
 mskb	𫇂
@@ -68018,7 +68018,6 @@ nhyw	𬎪
 nhyw	𭑦
 nhyw	𱰊
 nhyy	𪼉
-nja	𥭈
 njbd	𫂕
 njbl	𬕅
 njbq	䈜
@@ -68105,6 +68104,7 @@ njwi	𭀙
 njwo	𨖬
 njwo	𰩻
 njwq	𲵸
+njxa	𥭈
 njxf	𥮋
 njxv	𥮃
 njxy	𥰉
@@ -68715,7 +68715,6 @@ nmhx	𥺰
 nmhx	𬖝
 nmi	𮯲
 nmja	𥫱
-nmja	𥹝
 nmja	𱐍
 nmjb	𥹜
 nmjb	𬖲
@@ -68759,6 +68758,7 @@ nmjv	𢄞
 nmjv	𮇱
 nmjv	𮗄
 nmjw	𱹚
+nmjx	𥹝
 nmkb	𥻮
 nmkc	𥸰
 nmkc	𥺹
@@ -73582,7 +73582,6 @@ phyt	𪐥
 phyt	𭵑
 phyu	㶦
 phyw	𪒆
-pja	𤈍
 pjbc	𠨧
 pjbc	𫓓
 pjbf	𡢗
@@ -73701,6 +73700,7 @@ pjvi	𭴅
 pjvj	𭅈
 pjvy	𪹍
 pjwt	𲞨
+pjxa	𤈍
 pjys	𱫷
 pka	𬉷
 pka	𰃊
@@ -74353,7 +74353,6 @@ pphr	𤈎
 pphs	𥚡
 pphv	𡥲
 pphx	𤍒
-ppja	𤍀
 ppjb	𤊲
 ppjc	𠣵
 ppjc	𦦐
@@ -74369,6 +74368,7 @@ ppjq	𫸢
 ppjq	𰞵
 ppjv	𢽻
 ppjw	𤑓
+ppjx	𤍀
 ppka	𤆞
 ppkf	𡠺
 ppkk	𭶋
@@ -75992,8 +75992,8 @@ pyga	㷈
 pygg	𤈙
 pyhd	𪸴
 pyhq	𤋓
-pyja	𪹔
 pyjr	𤍑
+pyjx	𪹔
 pylq	𪯅
 pypj	𤒔
 pypt	𤋢
@@ -76458,12 +76458,12 @@ qdhv	𮑤
 qdhw	𦻱
 qdhw	𬜰
 qdhy	𮐍
-qdja	𰱣
 qdjb	𦺏
 qdjm	𧃿
 qdjq	𮑅
 qdjv	𢾳
 qdjv	𦱛
+qdjx	𰱣
 qdkb	𦴁
 qdkd	𦸜
 qdkd	𮐎
@@ -77389,7 +77389,6 @@ qhyt	𱰠
 qhyv	𦿹
 qhyv	𪷂
 qhyw	𥡡
-qja	𲻽
 qjbd	𦴨
 qjbe	𦯱
 qjbh	𦲴
@@ -77589,6 +77588,7 @@ qjwt	㗡
 qjwt	𦰣
 qjwv	𬝒
 qjww	𰰯
+qjxa	𲻽
 qjxp	𮑜
 qjxu	𦰏
 qjxy	𦸲
@@ -80911,7 +80911,6 @@ rhyh	𧇶
 rhyr	𧈆
 rhyr	𰲤
 rhyu	𧦃
-rja	𧧦
 rjbc	𫥊
 rjbd	𪞬
 rjbf	𫥝
@@ -81482,6 +81481,7 @@ rjww	𫬯
 rjww	𲅐
 rjwy	㓇
 rjxa	𠖹
+rjxa	𧧦
 rjxd	𠄾
 rjxf	𡣂
 rjxh	𪞩
@@ -90859,8 +90859,6 @@ vhyi	𪶸
 vhyi	𱨂
 vhyn	𱩏
 vhyy	𤂽
-vja	𰄫
-vja	𲩄
 vjbc	𢂕
 vjbc	𰏟
 vjbd	𢂽
@@ -91354,6 +91352,8 @@ vjws	𫷂
 vjwt	㠷
 vjwt	𣲖
 vjwy	𢁱
+vjxa	𰄫
+vjxa	𲩄
 vjxc	𢃿
 vjxc	𣺨
 vjxd	𢄠
@@ -94397,7 +94397,6 @@ whhy	𥝱
 whhy	𫗽
 whhy	𳋾
 whja	𠚉
-whja	𲵇
 whjb	𥡪
 whjc	𡬟
 whjd	䅂
@@ -94442,6 +94441,7 @@ whjv	𥞑
 whjv	𥠒
 whjv	𱶝
 whjw	𮃩
+whjx	𲵇
 whjy	𥠢
 whjy	𥣜
 whka	𥝞
@@ -95155,7 +95155,6 @@ wi	𠄌
 wi	𠄎
 wi	𡿨
 wi	𬼂
-wja	𰠒
 wjbj	𫍺
 wjci	𨧋
 wjdo	𰵤
@@ -95192,6 +95191,7 @@ wjwi	𭀘
 wjwi	𲚯
 wjwk	𬌇
 wjwt	𭀜
+wjxa	𰠒
 wka	𠀄
 wka	𠃓
 wkcj	𫍞
@@ -95602,7 +95602,6 @@ wphm	𢡕
 wphp	𤗱
 wphr	𤗖
 wphr	𲭎
-wpja	𤖽
 wpjb	𧌿
 wpjf	𤖼
 wpjf	𬌕
@@ -95614,6 +95613,7 @@ wpjm	𤖿
 wpjm	𤗒
 wpjr	𤗢
 wpjt	𰠝
+wpjx	𤖽
 wpka	𰠐
 wpkc	𤗍
 wpkf	𬤁
@@ -98185,7 +98185,6 @@ xhxw	𨙠
 xhxx	𪳻
 xhyd	𮲲
 xhyw	㼯
-xja	𬂭
 xjbd	𱤆
 xjbi	㭡
 xjbj	𣙺
@@ -98314,6 +98313,7 @@ xjwn	𰗗
 xjwo	𨒩
 xjwo	𨓣
 xjwo	𭪆
+xjxa	𬂭
 xjxf	䫱
 xjxh	𩁃
 xjxj	𦓔
@@ -98562,7 +98562,6 @@ xlhs	𣘤
 xlhs	𬫀
 xlhw	𰁍
 xli	𲥮
-xlja	𣗉
 xljc	𣑣
 xlje	𰢮
 xlje	𲦏
@@ -98575,6 +98574,7 @@ xljp	𮮗
 xljq	𣒉
 xljv	𣡁
 xljv	𫒁
+xljx	𣗉
 xljx	𰘮
 xlkc	𲦅
 xlkg	𣝗
@@ -101300,7 +101300,6 @@ yhys	𬷱
 yhys	𳏥
 yhyu	𤤂
 yja	𠚖
-yja	𥿧
 yjbi	𥿳
 yjbi	𰡹
 yjbj	𰫜
@@ -101422,6 +101421,7 @@ yjvk	𤧝
 yjwi	𫃝
 yjwo	𲯮
 yjwt	𥾭
+yjxa	𥿧
 yjxu	𪻜
 yjxu	𫃢
 yjya	𭹞
@@ -124709,7 +124709,7 @@ gsvv	台湾
 wxjn	评价
 csfw	结婚
 dwxl	哪里
-mfja	方向
+mfjx	方向
 nblv	简直
 lbmv	不在
 blwd	意识
@@ -125784,7 +125784,7 @@ kslx	知名
 gtty	男主
 nyrw	配置
 wqrw	犯罪
-jtja	倾向
+jtjx	倾向
 cwrj	状况
 nkyf	篮球
 ghxl	阿里
@@ -126367,7 +126367,7 @@ rmlg	马克
 dlhs	鄙视
 sdjs	吉他
 cgrj	高二
-hvja	走向
+hvjx	走向
 stlb	老爷
 tptm	把握
 hrks	时尚
@@ -126628,6 +126628,7 @@ csnn	民众
 rjwd	见识
 klxd	加速
 jcts	出手
+jxka	向上
 dmnx	眼光
 fylv	天真
 tmxq	授权
@@ -127454,7 +127455,7 @@ jvfh	备好
 yfvs	非法
 hwkf	文案
 clmf	前方
-jlja	偏向
+jljx	偏向
 nmhr	粗暴
 tgrj	抬头
 mndj	靠近
@@ -127560,7 +127561,7 @@ tqmf	措施
 slqn	青岛
 tyxk	主机
 gqss	基地
-ljja	内向
+ljjx	内向
 tkje	为生
 tbtw	挣扎
 lxry	膝盖
@@ -127693,7 +127694,7 @@ hvka	赶上
 vkms	激情
 tlvk	扮演
 rjne	二人
-xmja	面向
+xmjx	面向
 lbgg	脆弱
 kjjh	几何
 dhtd	曹操
@@ -127702,6 +127703,7 @@ lvfh	真好
 tykl	主力
 syxj	素材
 cbbn	贝尔
+jxkt	向往
 hwpe	这儿
 lxtb	名义
 fhtk	更为
@@ -129188,7 +129190,7 @@ tsfy	手裡
 fhdj	好聽
 ymnm	純粹
 blgc	部隊
-jtja	傾向
+jtjx	傾向
 wwrj	狀况
 wwvd	狀況
 nbyf	籃球
@@ -130250,7 +130252,7 @@ lhhw	房產
 qfka	帶上
 slsn	青島
 tyxg	主機
-ljja	內向
+ljjx	內向
 mwje	爲生
 twje	為生
 tmtw	掙扎
