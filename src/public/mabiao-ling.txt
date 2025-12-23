@@ -46,7 +46,7 @@ fd	如果
 fh	好的
 fj	于是
 fk	原因
-fl	两个
+fl	殄
 fn	来了
 fq	开始
 fs	无法
@@ -66,7 +66,6 @@ hr	时候
 hs	社会
 hv	孑
 hw	这样
-jb	你们
 jc	出来
 jd	事情
 jf	使用
@@ -432,7 +431,7 @@ hrc	顥
 hrf	曬
 hrh	越來越
 hrk	暄
-hrm	暅
+hrm	暇
 hrp	昒
 hrq	曄
 hrw	旸
@@ -728,7 +727,6 @@ lo	还
 me	有
 mo	告
 mu	在
-na	笑
 no	回
 pi	包
 qa	英
@@ -758,6 +756,7 @@ yi	理
 yo	奇
 yu	太
 bdi	象
+bjsi	晝
 bke	軍
 bla	親
 ble	韵
@@ -844,6 +843,7 @@ mse	情
 mso	展
 mvi	存
 mvo	友
+mvu	在
 nbu	購
 nfi	會
 nfo	途
@@ -890,6 +890,10 @@ yfo	經
 yra	现
 yro	環
 yso	結
+csfe	顗
+csje	峯
+hrbe	暉
+msdu	嬖
 bbbo	蟲
 bbbr	蠱
 bbda	蟑
