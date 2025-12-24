@@ -45,7 +45,7 @@ function switchScheme(schemeId: string) {
 
 <template>
     <div class="scheme-selector">
-        <div class="flex justify-center space-x-4">
+        <div class="flex justify-center space-x-2 sm:space-x-3 md:space-x-4">
             <button v-for="scheme in schemes" :key="scheme.id" @click="switchScheme(scheme.id)" :class="[
                 'scheme-button',
                 { 'scheme-button-active': activeScheme === scheme.id }
@@ -124,6 +124,24 @@ function switchScheme(schemeId: string) {
     .scheme-button-active:hover {
         background-color: rgb(126 34 206);
         border-color: rgb(126 34 206);
+    }
+}
+
+/* 響應式設計 - 小屏幕下縮小按鈕 */
+@media (max-width: 640px) {
+    .scheme-button {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* 極小屏幕（iPhone SE等）進一步縮小 */
+@media (max-width: 375px) {
+    .scheme-button {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 0.85rem;
     }
 }
 </style>
