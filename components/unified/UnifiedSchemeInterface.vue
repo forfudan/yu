@@ -34,6 +34,8 @@ const columnMinWidth = computed(() => {
     switch (activeScheme.value) {
         case 'ming':
             return '1.0rem'
+        case 'ling':
+            return '1.0rem'
         default:
             return '1.0rem'
     }
@@ -88,7 +90,7 @@ function handleSchemeChange(schemeId: string) {
 <style scoped>
 .unified-scheme-interface {
     width: 100%;
-    max-width: 56rem;
+    max-width: 66rem;
     margin: 0 auto;
 }
 
@@ -98,6 +100,9 @@ function handleSchemeChange(schemeId: string) {
     padding: 1.5rem;
     margin-bottom: 2rem;
     border: 1px solid var(--vp-c-divider);
+    max-width: 56rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .scheme-header-row {

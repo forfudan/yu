@@ -577,7 +577,7 @@ onMounted(() => {
         </div>
 
         <!-- 使用提示和控制按鈕 -->
-        <div v-if="!isLoading" class="flex justify-between items-center mb-4">
+        <div v-if="!isLoading" class="flex justify-between items-center mb-4 px-5">
             <div class="text-sm text-gray-500 dark:text-gray-400">
                 點擊字根可查看例字
             </div>
