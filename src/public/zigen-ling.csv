@@ -98,6 +98,7 @@ font,ma,pinyin
 ,hri,
 ,hri,㊟同日歸併
 曰,hye,Yuē -> Ye
+犬,hqa,Quǎn -> Qa
 牙,hya,Yá
 示,hsi,Ŝì -> Si
 走,hvo,Zǒu -> Zo 🈤Z和Ẑ取V
@@ -153,6 +154,8 @@ font,ma,pinyin
 宀,ka,Miǎn -> Ma 🈤不取聲母 ㊟俗稱寶蓋頭
 尚,ksa,Ŝàŋ -> Sa
 ,ksa,㊟同尚歸併
+犭,kqa,Quǎn -> Qa ㊟俗稱反犬旁
+豸,kvi,Ẑì -> Vi 🈤Z和Ẑ取V
 白,kba,Bái -> Ba
 ,kdi,Duī -> Di
 穴,kxe,Xuè -> Xe
@@ -343,9 +346,6 @@ font,ma,pinyin
 ,wo,
 片,wpa,Piàn -> Pa
 爿,wa,Pán -> Pa 🈤不取聲母 🈕Qiáng
-犬,wqa,Quǎn -> Qa
-犭,wqa,Quǎn -> Qa ㊟俗稱反犬旁
-豸,wvi,Ẑì -> Vi 🈤Z和Ẑ取V
 禾,whe,Hé
 夭,wya,yāo -> Ya
 讠,wa,Yán -> Ya 🈤不取聲母
