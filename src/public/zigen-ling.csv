@@ -178,12 +178,13 @@ font,ma,pinyin
 ,ljo,
 冊,lce,Cè
 ,lce,
+十,li,Ŝi -> Si 🈤不取聲母
+干,lga,Gān -> Ga
 千,lqa,Qiān -> Qa
 壬,lre,Rén -> Re
-舌,lse,Ŝé
 毛,lma,Máo -> Ma
-十,li,Ŝi -> Si 🈤不取聲母
 古,lgu,Gǔ
+舌,lse,Ŝé
 户,lhu,Hù
 戸,lhu,
 戶,lu,Hù -> Hu 🈤不取聲母
@@ -354,10 +355,9 @@ font,ma,pinyin
 革,wge,Gé
 ,wo,🈤無讀音取o
 匚,xfa,Fāŋ -> Fa
-干,xga,Gān -> Ga
 木,xu,Mù 🈤不取聲母
 朩,xu,
-甲,xa,Jiā -> Ja 🈤不取聲母
+甲,xja,Jiā -> Ja 🈤不取聲母
 里,xli,Lǐ
 禺,xyu,yǔ
 而,xje,ér -> Je 🈤零聲母小碼取J
