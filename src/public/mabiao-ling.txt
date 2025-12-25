@@ -90,7 +90,7 @@ kl	办法
 kq	坚持
 kr	实际
 ks	當然
-kv	至于
+kv	豸
 kw	過程
 kx	容易
 ky	系统
@@ -307,7 +307,7 @@ csf	峘
 csg	酆
 csh	鍺
 csj	嵐
-csk	嶓
+csk	嶽
 csl	巅
 csm	嵅
 csn	岑
@@ -432,7 +432,7 @@ hrh	越來越
 hrk	暄
 hrl	旰
 hrm	暇
-hrp	昫
+hrp	曷
 hrq	曄
 hrw	旸
 hrx	暕
@@ -494,7 +494,7 @@ lpj	膊
 lvn	龅
 lvt	訾
 lxc	眢
-mfn	𬸦
+mfn	旄
 mgm	剗
 mgy	谿
 mlq	爰
@@ -892,7 +892,6 @@ xdu	相
 xne	根
 xri	樣
 xxi	楚
-ye	非
 yfa	現
 yfo	經
 yra	现
