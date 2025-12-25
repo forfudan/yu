@@ -109083,7 +109083,6 @@ bmvv	잒
 bmvv	쟊
 bmvw	𘄝
 bmvw	𘄞
-bmwy	🌒
 bmxi	란
 bmxi	랸
 bmxi	잔
@@ -114945,10 +114944,6 @@ hbsq	𲴱
 hbsx	𲽒
 hcaj	𳌧
 hcfh	𲙍
-hcgf	🌍
-hcgf	🌎
-hcgf	🌏
-hcgf	🌐
 hclv	𲔟
 hcud	𳌨
 hcyr	𲚁
@@ -115366,7 +115361,6 @@ ifrs	𲪕
 ifsc	𲩎
 ifsj	𲵲
 ifuo	𮳉
-ifwy	🌑
 ifxx	𲹕
 ifyq	𲩔
 igal	𮳌
@@ -115554,7 +115548,6 @@ isth	𲪐
 istm	𮳘
 iswk	𲪇
 iswl	𲩣
-iswy	🌕
 iswy	𳐧
 itbm	𲪀
 itfn	𳐵
@@ -126015,7 +126008,6 @@ vbmi	𲏛
 vbmn	𛀏
 vbod	𮵿
 vbui	𘲚
-vbwy	🌔
 vccc	ㆣ
 vccc	ㆻ
 vcjk	𳅄
@@ -127429,7 +127421,6 @@ voqw	𘥖
 voqx	𘈄
 vory	𳀭
 votw	𘧕
-vowy	🌓
 voyy	𲠏
 vpra	𲜅
 vptl	𮶅

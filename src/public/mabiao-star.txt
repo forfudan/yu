@@ -5529,7 +5529,6 @@ bawr	𮌂
 bawr	𮘈
 baws	𠣂
 bawt	𧩂
-bawy	🌓
 bb	双
 bb	双方
 bb	双重
@@ -8955,7 +8954,6 @@ bjwr	𲌆
 bjwy	𧥶
 bjwy	𱎐
 bjwy	䚾
-bjwy	🌒
 bjwy	𳁯
 bjxi	𫵇
 bjxj	투
@@ -34664,7 +34662,6 @@ gbvv	翅
 gbwl	𥶏
 gbwo	𭣘
 gbww	𥮝
-gbwy	🌔
 gbwy	𲥘
 gbxg	𮅏
 gbxi	𥮜
@@ -43578,10 +43575,6 @@ hoit	𡉏
 hoj	猗
 hojc	𭘍
 hoje	𩔥
-hojf	🌍
-hojf	🌎
-hojf	🌏
-hojf	🌐
 hoji	𭸡
 hojl	猗
 hojl	埼
@@ -58796,7 +58789,6 @@ kawf	饘
 kawf	𬙉
 kawq	𨐤
 kawq	𱺧
-kawy	🌑
 kay	纬
 kayf	𮟵
 kayi	纬
@@ -78899,7 +78891,6 @@ nswt	𤀂
 nswt	𱩗
 nsww	𣳸
 nswy	𣷎
-nswy	🌕
 nsx	濛
 nsxa	溁
 nsxa	𣸱

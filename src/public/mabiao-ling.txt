@@ -736,7 +736,7 @@ ku	得
 lo	还
 me	有
 mo	告
-mu	在
+mu	特
 no	回
 pi	包
 qa	英
@@ -753,7 +753,7 @@ ta	掉
 te	找
 tu	看
 vo	治
-vu	海
+vu	没
 wa	利
 we	说
 wo	和
@@ -762,7 +762,7 @@ xa	样
 xe	整
 xi	想
 xo	格
-ye	秦
+ye	非
 yi	理
 yo	奇
 yu	太
@@ -853,6 +853,7 @@ mse	情
 mso	展
 mvi	存
 mvo	友
+mvu	在
 nbu	購
 nfi	會
 nfo	途
@@ -884,8 +885,8 @@ tbu	接
 vje	濟
 vle	活
 vno	酒
+vnu	海
 vsi	法
-vu	没
 wle	话
 wte	以
 xdu	相
@@ -103599,7 +103600,6 @@ blmq	竮
 blsl	靖
 blsl	靖
 bltl	𥪧
-blx	🌑
 blxd	🈟
 blxd	𛁉
 bme	⻔
@@ -110011,7 +110011,6 @@ gfnw	阮
 gfye	㊠
 ggcq	弢
 ggfi	𛁵
-ggj	🌓
 ggjb	弢
 ggo	⼸
 ggvx	
@@ -113513,7 +113512,6 @@ mqx	🀍
 mrbj	爵
 mrbj	爵
 msch	層
-msd	🌒
 msdf	屢
 msdw	𛂬
 msi	⼫
@@ -118106,10 +118104,6 @@ ssi	
 ssje	甤
 ssye	㆞
 ssye	𛁣
-ssyf	🌍
-ssyf	🌎
-ssyf	🌏
-ssyf	🌐
 sti	⽼
 sti	老
 stqa	☵
@@ -118731,7 +118725,6 @@ vqfy	漢
 vqfy	漢
 vqgg	滋
 vqkb	𗈥
-vql	🌕
 vqlc	港
 vqlc	🈵
 vqlw	𗇽
@@ -121123,7 +121116,6 @@ wne	𘯵
 wne	𘲎
 wne	𘳅
 wnfi	𘲾
-wnq	🌔
 wnqr	𛀏
 wntf	𘯸
 wntt	𘯷
@@ -142536,19 +142528,33 @@ dqnn	中華人民共和國
 /jz	🙌
 /hs	🙏
 /dq	🌍
+/diqiu	🌍
 /dq	🌎
+/diqiu	🌎
 /dq	🌏
+/diqiu	🌏
 /dq	🌐
+/diqiu	🌐
 /yq	🌑
 /xy	🌑
+/xinyue	🌑
+/yue	🌑
 /yq	🌒
 /my	🌒
+/meiyue	🌒
+/yue	🌒
 /yq	🌓
 /xy	🌓
+/xianyue	🌓
+/yue	🌓
 /yq	🌔
 /yy	🌔
+/yingyue	🌔
+/yue	🌔
 /yq	🌕
 /my	🌕
+/manyue	🌕
+/yue	🌕
 /huo	🔥
 /fire	🔥
 /mojo	🔥

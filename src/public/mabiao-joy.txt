@@ -18017,7 +18017,6 @@ drus	𫈶
 druu	𧄶
 drvd	蘐
 drvn	𢅞
-drvr	𦸻
 drvw	萋
 drwa	𗜗
 drwb	𗛨
@@ -36985,10 +36984,6 @@ hewk	𫮷
 hewp	䞗
 hewt	𡓀
 hexz	𮚼
-heyf	🌍
-heyf	🌎
-heyf	🌏
-heyf	🌐
 heys	塅
 heyu	𫐫
 heyv	𲚇
@@ -50023,7 +50018,6 @@ jrxs	𡾨
 jrxs	𭧵
 jrxx	𱲚
 jryu	𨔲
-jryv	🌓
 js	山
 js	山东
 js	⼭
@@ -69292,7 +69286,6 @@ ndyt	潵
 ndyv	㳙
 ndyv	𣷎
 ndyv	𭳇
-ndyv	🌕
 ndyw	湟
 ndyw	𣹛
 ndyy	𱨥
@@ -88509,7 +88502,6 @@ rdyu	逳
 rdyu	𫑆
 rdyv	育
 rdyv	育
-rdyv	🌔
 rdyv	𲥘
 rdyw	諻
 rdyw	𬛠
@@ -102003,7 +101995,6 @@ tsyv	膚
 tsyv	𥺵
 tsyv	𨩋
 tsyv	𱈃
-tsyv	🌒
 tt	断
 tt	断裂
 ttad	鍜
@@ -113857,7 +113848,6 @@ wawu	逬
 wawu	𥪐
 waww	𗎨
 waxl	𬔫
-wayv	🌑
 wb	妈
 wb	妈妈
 wbad	𢍘
