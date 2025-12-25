@@ -762,7 +762,7 @@ xa	样
 xe	整
 xi	想
 xo	格
-ye	非
+ye	給
 yi	理
 yo	奇
 yu	太
@@ -778,9 +778,10 @@ cna	京
 cno	道
 cqo	经
 cso	選
+dce	呗
 dka	别
 dle	味
-dne	員
+dne	唄
 dye	震
 fde	頭
 fhi	好
@@ -895,6 +896,7 @@ xri	樣
 xxi	楚
 yfa	現
 yfo	經
+yji	總
 yra	现
 yro	環
 yso	結

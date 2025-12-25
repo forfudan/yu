@@ -3,7 +3,9 @@ th {
 }
 
 :root {
-  --vp-font-family-base: 'Chinese Quotes',
+  /* 宇浩字根字體優先 */
+  --vp-font-family-base: 'yuhao-font',
+    'Chinese Quotes',
     'Inter var',
     'Inter',
     ui-sans-serif,

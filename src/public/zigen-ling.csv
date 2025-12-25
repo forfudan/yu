@@ -158,11 +158,11 @@ font,ma,pinyin
 冎,ka,㊟同咼歸併
 骨,kgu,Gǔ
 宀,ka,Miǎn -> Ma 🈤不取聲母 ㊟俗稱寶蓋頭
+穴,kxe,Xuè -> Xe
 尚,ksa,Ŝàŋ -> Sa
 ,ksa,㊟同尚歸併
 白,kba,Bái -> Ba
 ,kdi,Duī -> Di
-穴,kxe,Xuè -> Xe
 至,kvi,Ẑì -> Vi 🈤Z和Ẑ取V
 車,kce,Ĉē
 叀,kce,
@@ -227,6 +227,7 @@ font,ma,pinyin
 ,nxa,
 ⺍,na,Xiǎo -> Xa 🈤不取聲母 🈑同小
 ,na,
+米,nmi,Mǐ
 自,nvi,Zì -> Vi 🈤Z和Ẑ取V
 貝,nbe,Bèi -> Be
 竹,nu,Ẑú -> Vu 🈤不取聲母 🈤Z和Ẑ取V
@@ -234,7 +235,6 @@ font,ma,pinyin
 ,no,🈤無讀音取o
 ,no,
 气,nqi,Qì
-米,nmi,Mǐ
 西,ni,Xī 🈤不取聲母
 酉,nyo,Yǒu -> Yo
 石,psi,Ŝí
