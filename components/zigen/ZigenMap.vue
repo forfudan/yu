@@ -34,7 +34,7 @@ const props = defineProps<{
 const zigenFontClass = computed(() => props.zigenFontClass || 'zigen-font')
 
 // 為始終顯示的字根列表設定默認值
-const alwaysVisibleZigens = computed(() => props.alwaysVisibleZigens || '廾冫乚虍')
+const alwaysVisibleZigens = computed(() => props.alwaysVisibleZigens || '冫')
 
 const columnMinWidth = toRef(props, 'columnMinWidth')
 
@@ -670,7 +670,7 @@ onMounted(() => {
                             @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code
-                            }}</span>
+                                }}</span>
                         </span>
                         <!-- 如果有隱藏的字根，顯示省略號 -->
                         <span v-if="zigenByKey[key].hidden.length > 0" class="more-indicator">⋯</span>
@@ -733,7 +733,7 @@ onMounted(() => {
                             }" @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code
-                            }}</span>
+                                }}</span>
                         </span>
                     </div>
                 </div>
