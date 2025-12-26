@@ -300,7 +300,7 @@ font,ma,pinyin
 士,si,Ŝì 🈤不取聲母
 土,su,Tǔ -> Tu 🈤不取聲母
 龶,se,Ŝēŋ -> Se 🈤不取聲母
-耂,sa,Lǎo -> La 🈤不取聲母
+耂,sla,Lǎo -> La
 壴,svu,Ẑú -> Vu 🈤Z和Ẑ取V
 ,so,🈤無讀音取o
 尤,syo,Yóu -> Yo
@@ -334,7 +334,7 @@ font,ma,pinyin
 水,vi,Ŝuǐ -> Si 🈤不取聲母
 氵,vi,Ŝuǐ -> Si 🈤不取聲母 ㊟俗稱三點水
 ,vo,🈤無讀音取o
-甫,vu,Fǔ -> Fu
+甫,vu,Fǔ -> Fu 🈤不取聲母
 乃,wna,Nǎi -> Na
 乙,wi,Yǐ 🈤基本筆畫不取聲母 ㊟一切折筆皆同碼
 乚,wi,Yí 🈤基本筆畫不取聲母 ㊟一切折筆皆同碼

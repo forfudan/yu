@@ -576,7 +576,6 @@ ryy	鑾
 sbf	壼
 scb	坝
 sgk	坳
-shx	翥
 skw	韨
 snb	垻
 snf	𪣻
@@ -868,7 +867,8 @@ rvi	認
 ryi	變
 sdi	臺
 sgi	去
-shu	都
+sli	老
+slu	都
 sru	執
 tbu	接
 vje	濟
@@ -16158,7 +16158,6 @@ ryyv	灓
 ryyx	欒
 ryyy	奱
 sa	尢
-sa	耂
 sbbq	埐
 sbbv	埽
 sbbw	埩
@@ -16358,40 +16357,29 @@ shbi	隷
 shbl	墉
 shdg	壜
 shdi	圢
-shdj	斱
 shdo	坷
 shfi	坦
-shfj	覩
 shfk	場
 shfl	堤
 shga	圹
-shgu	都
 shhy	垿
 shi	堆
 shja	垴
 shjc	埘
 shjc	塮
-shjv	教
-shku	殾
 shlg	垾
-shpb	煮
 shpk	埸
-shpo	煑
 shpw	堨
 shql	壙
 shqp	墌
-shri	者
 shrm	塭
 shrq	墁
 shsj	塒
 shtq	款
 shtt	堒
-shvi	孝
 shwe	坟
-shwi	乽
 shxu	堁
 shxx	塌
-shxx	翥
 si	士
 si	廴
 sja	凷
@@ -16462,7 +16450,6 @@ sksi	垁
 skti	坨
 sku	坄
 skvi	垤
-skvi	耊
 skwi	韦
 skwo	塠
 skwp	韬
@@ -16473,6 +16460,7 @@ skww	违
 skxe	坹
 skxu	垛
 skya	堭
+sla	耂
 slbp	靘
 slbu	坏
 slbw	静
@@ -16488,10 +16476,22 @@ slfi	垇
 slfj	靚
 slgu	郬
 slgx	塕
+slhd	斱
+slhf	覩
+slhg	都
 slhh	壎
+slhj	教
+slhk	殾
+slhp	煮
+slhp	煑
+slhr	者
+slhv	孝
+slhw	乽
+slhx	翥
 sljv	夌
 slka	靑
 slkl	靛
+slkv	耊
 slld	埛
 slle	堋
 sllx	垑
@@ -16500,12 +16500,15 @@ slnn	靗
 slnn	靝
 slnq	靔
 slnx	埗
+slpd	耇
 slqa	圲
 slqf	埵
 slqn	墳
 slrb	鼀
+slrd	耉
 slrf	壊
 slrj	靓
+slrk	考
 slsg	驇
 slsh	暬
 slsk	勢
@@ -16519,6 +16522,11 @@ slst	摰
 slsu	坴
 slsw	逵
 slsx	槷
+sltd	耈
+slth	耆
+slti	老
+sltk	耋
+sltl	耄
 slva	坋
 slve	埴
 slvi	址
@@ -16625,7 +16633,6 @@ snxu	梟
 snxu	塛
 spca	圳
 spcs	垉
-spdo	耇
 spdo	坸
 spe	圥
 spgi	塊
@@ -16695,13 +16702,11 @@ srby	縶
 srcd	墡
 srcy	墣
 srdo	坫
-srdo	耉
 srfd	垢
 srfe	堽
 srgr	壚
 srgs	坛
 srjr	盩
-srka	考
 srkq	報
 srlu	塷
 srmf	塄
@@ -16788,12 +16793,7 @@ ssye	地
 ssyi	塐
 stbg	鿾
 stdl	塡
-sthr	耆
-sti	老
-stkv	耋
-stlm	耄
 stng	埌
-stpd	耈
 stqa	坎
 sttk	堦
 stu	圡
@@ -84257,7 +84257,6 @@ ryyx	𫅠
 ryyx	𬙾
 ryyy	㽋
 sbbc	㚃
-sbbd	𱻮
 sbbk	𪣱
 sbbl	𡖘
 sbbm	𱗔
@@ -84356,7 +84355,6 @@ sbht	𬅭
 sbjc	𫭯
 sbjj	𡒇
 sbjt	𡏓
-sbju	𬚉
 sbjx	𡒩
 sbka	𭎿
 sbkc	𡍦
@@ -84449,7 +84447,6 @@ scfs	𭏡
 scgg	𰊊
 scgg	𱗎
 scgk	𡌡
-scgp	𱻬
 schd	𪣹
 schh	𰊾
 schi	𡰋
@@ -84672,7 +84669,6 @@ sdna	𲘻
 sdng	𭎼
 sdnl	𲷥
 sdnm	𣫗
-sdnw	𱻫
 sdo	𠮷
 sdo	𫭙
 sdpc	𡔠
@@ -84713,7 +84709,6 @@ sdvk	𣻅
 sdwi	㐖
 sdwj	𭐙
 sdwo	𭎱
-sdwo	𲅟
 sdww	䵺
 sdww	𪔄
 sdwy	𡔣
@@ -84760,7 +84755,6 @@ sfi	𣪊
 sfjd	𱘅
 sfjj	𣪹
 sfjo	㝼
-sfjo	𰭨
 sfju	𡯍
 sfjv	𪣴
 sfkb	𲯊
@@ -84878,8 +84872,6 @@ sgfv	𠬕
 sgfv	𠬖
 sgfy	䪺
 sggd	𡑏
-sggd	𦓃
-sggd	𦓆
 sggg	㙼
 sggg	𰋀
 sggk	𠡺
@@ -84934,7 +84926,6 @@ sgnq	𱗟
 sgns	𱘔
 sgnw	𡌱
 sgo	𡉎
-sgo	𦒳
 sgpb	𤈔
 sgpe	𪣁
 sgpl	𠬈
@@ -84991,7 +84982,6 @@ sgyi	𡏱
 sgyk	𫮅
 sgym	𫨯
 sgyo	𡊡
-shbb	䘄
 shbi	𡐓
 shbl	𰊵
 shbl	𮰧
@@ -85005,46 +84995,26 @@ shcf	𭐐
 shcj	𡍩
 shcl	𱘉
 shcn	𡐹
-shcp	𡦲
-shcp	𡦳
 shcs	𡌕
-shcw	𰌲
 shdf	𲙡
-shdi	𦒱
 shdj	𡎕
 shdo	𪣠
-shdp	𥀁
-shdp	𨜞
 shdq	𡐄
 shdq	𱗸
-shdr	𦓍
-shdr	𱙾
-shdt	㗯
 she	𡌏
 shfd	𱕡
-shff	𨇜
 shfj	𧡘
 shfj	𪤕
 shfj	𰊸
 shfj	𲙘
 shfl	𡯻
-shfl	𧺂
 shfu	𪣚
 shfv	𨄟
 shfv	𰄳
 shfx	𡑆
-shfy	𲊴
-shgf	𲄆
 shgp	㙷
-shgt	𡳣
-shgt	𰈷
-shgu	𨛨
-shgw	𨗊
 shgy	𫮂
-shhd	𠁂
 shhe	𱗻
-shhh	𡦊
-shhi	𬯯
 shhq	𭏽
 shhr	𪣧
 shi	𲉨
@@ -85052,32 +85022,24 @@ shjc	𲤘
 shje	𲙥
 shjg	𪤋
 shjj	𲙝
-shjm	𢠛
 shjn	𥻳
 shjw	𡓔
-shkc	䡤
 shkf	𪤃
 shkg	𡒷
-shkj	𰆑
 shkm	𡊾
-shku	𪵋
 shkx	𭏋
 shky	𰊘
 shla	𣏄
 shlc	𡓾
 shle	𪣦
 shle	𭎯
-shlf	䬡
 shli	𲓪
 shlj	𲚐
-shll	𡗀
 shmg	𡍢
-shmg	𫻷
 shmk	𡓊
 shml	𡓋
 shml	𲝁
 shmw	𫮕
-shmx	𢝬
 shmx	𢣯
 shnn	𱗢
 shnr	𱗑
@@ -85085,10 +85047,6 @@ shns	𡎻
 shnx	𭐘
 shpb	𤍫
 shpd	𡒧
-shpg	䰩
-shpg	𩳔
-shph	𰟴
-shpn	𱬝
 shqa	𡉩
 shqb	𧎹
 shql	𭏬
@@ -85096,57 +85054,36 @@ shqq	𡍨
 shqv	𭏖
 shqv	𱧲
 shrd	𡌽
-shrh	𲹡
 shri	𡉭
 shri	𡯙
-shrj	𬢎
-shrl	𣂃
 shrm	𡑦
 shro	𡍔
-shrq	𢾀
 shry	𱗗
 shry	𲙤
 shsd	𡒅
 shsd	𡓜
-shsh	𬚍
 shsi	𡊆
 shsi	𬆭
 shsi	𰧭
 shsj	𱢑
-shsl	𳂰
-shsn	𪃙
 shsn	𪅧
-shsn	𱈩
 shss	𮰬
 shsu	㘿
-shsu	𡎉
 shsu	𪣐
 shtg	𭏱
 shti	㞁
-shtq	𬅩
-shtw	𬦼
 shvd	𡎣
-shvd	𪟈
 shvd	𫮘
-shvh	𱻯
 shvi	𡉗
-shwf	𲃼
-shwi	䎞
 shwi	𡋀
-shwi	𪜕
 shwi	𪣂
-shwl	𬦃
 shwn	𪣍
-shwo	𨔾
 shwo	𨖫
 shwo	𱗽
 shwo	𲙞
-shwp	𤗡
 shwt	𡍓
 shwt	𫮥
-shxd	𲜟
 shxk	𲚚
-shxk	𳄒
 shxl	𡏂
 shxs	㙻
 shxu	㙫
@@ -85334,7 +85271,6 @@ skhj	𡐙
 skhl	𱗿
 skhq	𤠼
 skhr	𭎡
-skhr	𮋝
 skhs	𫮁
 skjd	𲙪
 skje	𫭘
@@ -85469,8 +85405,10 @@ skyi	𭐈
 skyl	𱗤
 skyn	𪤮
 sla	𫭗
+slbd	𱻮
 slbh	𡋯
 slbi	𰉙
+slbj	𬚉
 slbk	𡍧
 slbk	𫕸
 slbl	𭏔
@@ -85480,6 +85418,7 @@ slbp	𫕼
 slbq	𱁮
 slci	𪤭
 slcj	𡋞
+slcp	𱻬
 slcs	𫕺
 slcy	𫮗
 sldf	㚂
@@ -85491,12 +85430,15 @@ sldo	𮰞
 sldq	𡔮
 sldr	𮧃
 sldt	𬅲
+sldw	𱻫
+sldw	𲅟
 sldx	𰊝
 sle	𪢻
 slfc	𧯣
 slfc	𪤡
 slfi	𡉉
 slfi	𣪛
+slfj	𰭨
 slfk	㱿
 slfm	𢤶
 slfp	𩇞
@@ -85509,19 +85451,75 @@ slfx	𣖫
 slfy	𩓨
 slga	𡯋
 slga	𱖇
+slgd	𦓃
+slgd	𦓆
 slgd	𩇚
+slgo	𦒳
 slgr	𬰗
 slgs	𱖍
 slgt	𤱒
 slgu	𡊜
 slgu	𡋓
-slgu	𬚋
 slgy	𡍻
+slhb	䘄
+slhd	𥀁
+slhd	𦒱
+slhd	𲜟
+slhf	𨇜
+slhf	𲃼
+slhf	𲄆
+slhf	𲊴
+slhg	𨛨
+slhh	𠁂
+slhh	𡦊
+slhh	𬚍
+slhh	𬯯
+slhh	𰟴
+slhh	𱻯
+slhh	𲹡
 slhi	𨿬
+slhk	䡤
 slhk	𡓕
+slhk	𪵋
+slhk	𰆑
+slhk	𳄒
+slhl	䬡
+slhl	𡗀
+slhl	𣂃
+slhl	𧺂
+slhl	𬦃
+slhl	𳂰
+slhm	𢝬
+slhm	𢠛
+slhm	𫻷
+slhn	𱬝
+slhp	䰩
 slhp	𡑋
+slhp	𡦲
+slhp	𡦳
+slhp	𨜞
+slhp	𩳔
+slhq	𢾀
+slhr	𦓍
+slhr	𬢎
+slhr	𱙾
+slhs	𡎉
+slhs	𪃙
 slhs	𭏥
+slhs	𱈩
+slht	㗯
+slht	𡳣
+slht	𬅩
+slht	𰈷
 slhu	𡉴
+slhv	𪟈
+slhw	䎞
+slhw	𤗡
+slhw	𨔾
+slhw	𨗊
+slhw	𪜕
+slhw	𬦼
+slhw	𰌲
 sli	𡈿
 sljd	𭐭
 sljd	𲚮
@@ -85543,6 +85541,7 @@ sljv	𫮆
 sljv	𲞢
 sljy	𭐨
 slka	𩇕
+slkh	𮋝
 slkk	𣪗
 slkk	𫕻
 slkl	𡐐
@@ -85560,14 +85559,16 @@ sllc	𱗍
 slle	𡎁
 slle	𪣩
 sllf	𡊢
+sllg	𬚋
 sllg	𭎎
 slll	𪤛
+sllm	𦒷
+slln	𦙩
 sllr	𡎜
 sllv	𡍍
 sllx	𬆯
 slly	𰉰
 slma	㘪
-slma	𦒷
 slma	𰉝
 slmd	𭎶
 slmf	𡍀
@@ -85579,15 +85580,18 @@ slne	㘨
 slnh	𡐑
 slnj	𡎫
 slnl	𡍬
-slnn	𦙩
 slnn	𧸇
 slnq	𩇙
+slns	𫗍
 slnt	𭜙
 slnw	𨙜
 slnw	𲊕
 slpa	𡯔
 slpe	𪣕
+slpg	𩲘
 slpj	𡏠
+slpk	𦒶
+slpo	𤆯
 slpp	𡕁
 slpp	𱘋
 slpu	𡍪
@@ -85602,11 +85606,14 @@ slqq	䨼
 slqq	𩇥
 slqu	𫭭
 slrb	𭎉
+slrd	𦒻
 slrf	𱗦
 slrj	𡉱
+slrl	𬁥
 slrn	𧷏
 slrt	𣤶
 slrw	𨙋
+slry	㼥
 slsb	𧐨
 slsc	𨫔
 slsc	𨬝
@@ -85625,6 +85632,7 @@ slsg	𰐢
 slsh	𣁞
 slsh	𨿲
 slsh	𭧳
+slsh	𱻭
 slsi	𡋺
 slsj	𱡛
 slsk	𨎐
@@ -85653,19 +85661,79 @@ slsw	𬓺
 slsx	𡏝
 slsy	𤭝
 slsy	𤮅
+sltb	𰭫
+sltc	𦒴
 sltc	𮰮
+sltd	㖈
+sltd	䎛
+sltd	𠺛
+sltd	𦒵
+sltd	𦒽
+sltd	𦒾
+sltd	𦒿
+sltd	𦓂
+sltd	𦓇
+sltd	𦓉
+sltd	𮋛
+sltd	𮋜
+sltd	𱉦
+sltd	𳐇
+sltf	𦓁
+sltf	𧡺
+sltf	𱻩
+sltg	𩥞
+slth	𦓀
+slth	𦓊
+slth	𫅶
+slth	𬚊
+slth	𮧹
 slti	𭎔
+sltj	𫅵
 sltk	𡏨
+sltk	𦒲
+sltk	𦒸
+sltk	𭅷
+sltk	𱻨
+sltl	𣭢
+sltl	𣯆
+sltl	𦒹
+sltl	𫅸
 sltp	𡎵
+sltp	𨚻
+sltp	𪸦
+sltp	𱻪
+sltq	𦒺
+sltq	𫅴
+sltr	𭾀
+slts	䳓
+slts	𪀧
+slts	𪄖
+slts	𱖠
+sltt	䎜
+sltt	𦓈
+sltt	𦓋
+sltt	𫅳
 sltt	𲚏
+sltv	𣴐
+sltw	㐗
+sltw	𨘝
+sltw	𫐥
+sltx	䎝
 sltx	𡍥
+sltx	𦓅
+slty	𦒼
+slty	𦓜
 slty	𱗺
 slva	𡯕
 slvd	𠝜
+slvg	𰻪
+slvj	㠻
 slvr	𡎛
 slvu	𪤔
 slvx	𰊧
 slwe	𫭥
+slwi	𰭧
+slwl	𮋞
 slwo	𨓽
 slww	𲊗
 slxi	𡯌
@@ -86174,7 +86242,6 @@ snsc	𪆖
 snsd	𪁄
 snsf	𡑰
 snsh	𪃲
-snsi	𫗍
 snsi	𲍚
 snsj	𪀔
 snsj	𫮨
@@ -86260,7 +86327,6 @@ spfv	𡎗
 spfy	𩓁
 spfy	𰊹
 spgi	𩲄
-spgi	𩲘
 spgk	𡒂
 spgs	㘬
 spgt	𭎧
@@ -86294,7 +86360,6 @@ spjx	𣘢
 spjx	𳅮
 spka	𡐫
 spka	𡯖
-spka	𦒶
 spkc	𬫔
 spke	𡉍
 spkf	𡍒
@@ -86310,7 +86375,6 @@ spnn	𡓤
 spnn	𫮇
 spnv	𡓍
 spnw	𡒏
-spo	𤆯
 sppd	𲚦
 sppk	𡑍
 sppl	𡐕
@@ -86430,7 +86494,6 @@ srda	𡯴
 srdf	𭏟
 srdk	𱖧
 srdm	𡒾
-srdo	𦒻
 srdp	𤿹
 srdp	𥀀
 srdt	𣤺
@@ -86474,7 +86537,6 @@ srli	㘰
 srli	𠦧
 srli	𡯏
 srlq	𢻏
-srlq	𬁥
 srlw	𪣰
 srlw	𱘇
 srlx	𫭽
@@ -86538,7 +86600,6 @@ srya	𦍒
 sryd	𡎤
 sryj	𡔖
 sryr	𥃁
-sryw	㼥
 sryw	㼬
 sryx	𱘞
 ssbb	𡐉
@@ -86623,7 +86684,6 @@ sshl	𳂱
 sshq	𡌤
 sshq	𧱰
 sshr	𡓇
-sshr	𱻭
 ssht	𧱟
 sshv	𡌉
 sshv	𧲐
@@ -86841,81 +86901,25 @@ ssyu	𡐚
 ssyu	𩵛
 ssyw	𤬿
 ssyy	𧱪
-stbh	𮧹
 stbl	㙟
 stce	𲙉
 stci	䤰
-stcs	𦒴
-stdb	𰭫
 stdd	𡏥
-stdm	𦒿
-stdn	𱉦
-stdn	𳐇
-stdo	㖈
-stdo	䎛
-stdo	𦒵
 stdo	𱗜
-stdp	𨚻
-stdq	𦒺
-stdt	𫅳
-stfd	𦓉
 stfg	𡍹
-stfl	𫅸
-stfq	𫅴
-sthd	𦓂
-sthd	𮋛
-sthf	𧡺
-sthg	𩥞
 sthl	𡐾
-sthl	𣯆
-sthl	𬚊
-sths	𪄖
-sthw	𨘝
 stjc	𡏌
-stjd	𠺛
-stjl	𦒹
-stkj	𦒲
-stkj	𭅷
-stkj	𱻨
 stld	𡌮
 stlg	𡌾
-stlm	𣭢
-stmf	𦓁
-stmj	𫅵
-stnf	𱻩
-stnh	𦓊
 sto	𡊤
-stpa	𱻪
-stpb	𪸦
-stpk	𦒸
-stqx	𦓅
-strd	𦒾
-strm	𭾀
-stsd	𮋜
-stsh	𫅶
-stsn	䳓
-stsn	𪀧
 stso	㨌
-stst	䎜
-stst	𦓈
-stst	𦓋
-stsu	𱖠
-stth	𦓀
 stti	㘩
 stti	𫵏
 stts	㙄
-stty	𦒼
 stu	𡈽
 stvd	𲙕
-stvi	𣴐
 stvi	𪣉
-stwd	𦒽
-stwi	㐗
-stwo	𫐥
-stxd	𦓇
 stxf	𡓡
-stxx	䎝
-stxy	𦓜
 stya	𡊲
 sva	𭃌
 svbt	𭐕
@@ -86964,7 +86968,6 @@ svfu	𰌌
 svfy	𩓊
 svfy	𲊳
 svgt	𭏉
-svgu	𰻪
 svhc	𨲗
 svhd	𱳊
 svhr	𡌩
@@ -86973,7 +86976,6 @@ svi	㝽
 svi	𡉺
 svi	𪢿
 svjc	㙛
-svji	㠻
 svjj	𩙏
 svjq	𡔷
 svjr	𰋋
@@ -87094,7 +87096,6 @@ swdd	𡰑
 swdj	𡑒
 swdj	𡔽
 swdj	𪤳
-swdl	𮋞
 swfk	𠂶
 swfk	𡊶
 swfo	𡊮
@@ -87126,7 +87127,6 @@ swi	㐊
 swi	㐋
 swi	𫭖
 swi	𰉕
-swi	𰭧
 swi	𮰙
 swjf	𧞒
 swkj	𡊁
@@ -93682,7 +93682,6 @@ vrys	𱨰
 vryt	𱦌
 vryy	𤅇
 vryy	𤅹
-vsa	𰛌
 vsbd	𣼯
 vsbk	𭱅
 vsbm	𤅮
@@ -93742,6 +93741,7 @@ vskn	𭳜
 vskq	𤃕
 vsks	㙙
 vsky	𤄏
+vsla	𰛌
 vslb	𰝓
 vsld	𲎄
 vsle	𣵒
@@ -117996,7 +117996,6 @@ ryym	戀
 ryys	鸞
 sa	⼪
 sa	⺐
-sa	⺹
 sa	ㄤ
 sa	𘭴
 sbdt	堍
@@ -118016,15 +118015,6 @@ sfww	埴
 sgse	☷
 shbi	隸
 shbv	隷
-shgu	都
-shgu	𛁬
-shpb	煮
-shpb	煮
-shri	者
-shri	者
-shri	者
-shri	𛂥
-shri	𛂦
 shti	㞁
 si	⼠
 si	⼵
@@ -118057,16 +118047,28 @@ skrr	㌐
 skvf	㌒
 skwc	𘟲
 skwi	⻙
+sla	⺹
 sla	𘭉
 sla	𘭗
 sla	
 sle	⻘
+slhg	都
+slhg	𛁬
+slhp	煮
+slhp	煮
+slhr	者
+slhr	者
+slhr	者
+slhr	𛂥
+slhr	𛂦
 sljo	𘭃
 slka	⾭
 slnd	﨏
 slqn	墳
 slsk	𛁕
 slsp	𛂖
+slti	⽼
+slti	老
 smcq	塀
 smhd	城
 smkd	𛁖
@@ -118089,8 +118091,6 @@ ssi	
 ssje	甤
 ssye	㆞
 ssye	𛁣
-sti	⽼
-sti	老
 stqa	☵
 su	⼟
 su	㈯
@@ -124276,7 +124276,7 @@ jhhr	但是
 fdhr	如果
 nbkh	觉得
 lbhr	还是
-shhr	都是
+slhr	都是
 nkne	个人
 kscn	知道
 ldwt	所以
@@ -124309,7 +124309,7 @@ dynf	需要
 ydks	大家
 lbmv	还有
 lbgs	不能
-mgsh	或者
+mgsl	或者
 jcfn	出来
 hgwf	应该
 mwnb	感觉
@@ -124358,7 +124358,7 @@ jdms	事情
 jvwh	各种
 ldmv	所有
 msrj	情况
-stcf	老师
+slcf	老师
 wntk	认为
 cqlb	并不
 rffn	后来
@@ -124409,7 +124409,7 @@ mvrb	有点
 yxbt	理解
 hlbt	了解
 lbhd	不可
-shmv	都有
+slmv	都有
 kxhr	容易
 bldd	产品
 jfto	使用
@@ -124491,7 +124491,7 @@ chcq	曾经
 gqps	基础
 wnwd	认识
 ydlx	太多
-srrh	考虑
+slrh	考虑
 dklx	另外
 hrdj	最近
 wtka	以上
@@ -124503,7 +124503,7 @@ jcwh	过程
 ljhr	同时
 mxyx	心理
 hrlb	是否
-shjg	教育
+sljg	教育
 krgh	实际
 cyvt	关注
 rjjv	准备
@@ -124616,7 +124616,7 @@ lbnx	不少
 cnnd	就算
 kfny	安全
 xhrj	标准
-jnsh	作者
+jnsl	作者
 synr	也会
 lxns	多年
 gcdm	项目
@@ -124670,7 +124670,7 @@ ggvk	帮助
 blbm	新闻
 sfyr	表现
 lwfn	未来
-srwm	考试
+slwm	考试
 yxwn	理论
 tsjc	看过
 nmnb	数学
@@ -124706,11 +124706,11 @@ mfjx	方向
 nblv	简直
 lbmv	不在
 blwd	意识
-gssr	参考
+gssl	参考
 tkrj	投资
 tbbt	接触
 dnts	吃饭
-gtsr	思考
+gtsl	思考
 rqfe	反正
 ljxr	同样
 ddwp	品牌
@@ -124738,7 +124738,7 @@ nflb	要不
 qkkh	获得
 gmjf	随便
 mslh	居然
-cgsr	高考
+cgsl	高考
 mwxf	成本
 nccv	介绍
 dyfv	需求
@@ -124749,7 +124749,7 @@ mxnf	必要
 cjfj	终于
 mvcy	有关
 lghr	平时
-stxr	老板
+slxr	老板
 xfdk	区别
 jrcj	传统
 rthr	背景
@@ -124759,7 +124759,7 @@ flns	两年
 frlq	严重
 jnto	作用
 xbnt	概念
-shnf	都要
+slnf	都要
 nvkt	自我
 whcl	利益
 ntcs	领导
@@ -124977,7 +124977,7 @@ jbhe	健身
 nhls	合适
 hdmb	可爱
 jdpe	事儿
-stvd	老婆
+slvd	老婆
 jwkc	似乎
 fnnw	来回
 kftb	定义
@@ -125067,7 +125067,7 @@ rjjq	头发
 krwl	实话
 wvwn	承认
 fvhw	距离
-srps	考研
+slps	考研
 nllk	舒服
 whtl	科技
 jlhr	交易
@@ -125083,7 +125083,7 @@ mfvm	旅游
 gtmj	男性
 blbm	部门
 psnw	周围
-stlg	老公
+sllg	老公
 fjnx	政策
 fhdp	好吧
 ryfh	美好
@@ -125207,7 +125207,7 @@ crlh	普遍
 rjbm	专门
 kjqr	客观
 lgrj	干净
-khsh	宗教
+khsl	宗教
 fvfv	姐姐
 xdjx	整体
 djhr	聪明
@@ -125234,7 +125234,7 @@ vkjd	没事
 mfkk	旅行
 ydnn	大众
 lxkg	多么
-shtm	教授
+sltm	教授
 tdhr	摄影
 vsnw	法国
 yfkf	规定
@@ -125339,7 +125339,7 @@ fdnt	如今
 csty	民主
 yxmj	理性
 hdhd	哥哥
-ddsh	患者
+ddsl	患者
 jcnw	出国
 nmhr	数量
 gjsk	攻击
@@ -125360,7 +125360,7 @@ bldl	意味
 ydnx	大小
 kyky	宝宝
 qkyd	节奏
-stne	老人
+slne	老人
 hwjb	这位
 gnmn	限制
 gtkb	男的
@@ -125640,7 +125640,7 @@ lgjv	公务
 jhhv	段子
 ngnw	第四
 swka	场上
-shnb	教学
+slnb	教学
 cgnl	高兴
 hgka	床上
 xdjv	相处
@@ -125750,7 +125750,7 @@ whps	科研
 dknl	中午
 kdlv	彼此
 wftm	证据
-mwsh	成都
+mwsl	成都
 hrfy	明天
 gccl	连续
 wnsr	论坛
@@ -125760,7 +125760,7 @@ gqci	基金
 jxjb	偶像
 bfgn	危险
 vlry	活着
-shcm	教练
+slcm	教练
 bgjd	军事
 thhg	推广
 nknk	个个
@@ -125868,7 +125868,7 @@ mvcf	在线
 ryfl	美丽
 nxfv	小姐
 jhrj	何况
-shxj	教材
+slxj	教材
 jrjl	信任
 nfrj	命运
 fsgn	无限
@@ -125896,7 +125896,7 @@ hrfy	最初
 nvnb	自学
 jqtb	发挥
 gyxd	幻想
-wcsh	记者
+wcsl	记者
 pcnt	包含
 xwgq	极其
 gqkn	基督
@@ -125928,12 +125928,12 @@ xdff	相互
 tbms	热情
 ydfv	套路
 hbbv	键盘
-stkr	老实
+slkr	老实
 kfjf	案例
 msrj	层次
 kfsl	安静
 djxk	耳机
-flsh	两者
+flsl	两者
 cgbl	高端
 hvjv	超市
 ljhr	网易
@@ -125975,7 +125975,7 @@ mbka	爱上
 tvdj	招聘
 kfrs	安装
 fstk	无疑
-shcf	教师
+slcf	教师
 jglv	充分
 rjtb	姿势
 lxbt	多久
@@ -126005,7 +126005,7 @@ lbkh	还得
 fhfj	百姓
 hvtb	趋势
 wlxd	迅速
-shwh	教程
+slwh	教程
 vnky	消失
 xksw	机场
 whjr	私信
@@ -126040,8 +126040,8 @@ dkmm	遗憾
 dkdw	呼吸
 qvrf	落后
 lwmx	未必
-stks	老家
-wlsh	读者
+slks	老家
+wlsl	读者
 nhlj	合同
 vhkn	浏览
 nnlb	从不
@@ -126054,7 +126054,7 @@ cnfv	道路
 rjnq	运气
 nltk	举报
 gqbc	欺负
-jgsh	佛教
+jgsl	佛教
 yfdc	球员
 djnh	联合
 fyjk	天才
@@ -126067,9 +126067,9 @@ blgy	新鲜
 hsyd	神奇
 dwpe	哪儿
 fqkx	形容
-sthv	老子
+slhv	老子
 ryqh	羡慕
-rfsh	后者
+rfsl	后者
 lgjt	干货
 cdnr	总会
 jcfj	出于
@@ -126083,7 +126083,7 @@ nmmx	精彩
 ggkk	强行
 ttcs	指导
 ksmf	家族
-styd	老大
+slyd	老大
 jvnv	各自
 qdwl	鸡蛋
 mvlx	有名
@@ -126115,7 +126115,7 @@ tnmx	良心
 msmj	属性
 ggmk	帮忙
 tklv	为止
-nbsh	学者
+nbsl	学者
 mlwn	怀孕
 jvfu	处女
 cjvg	统治
@@ -126197,7 +126197,7 @@ jjqk	收获
 wvnm	函数
 csmj	异性
 nhmn	复制
-shkk	教室
+slkk	教室
 nwli	四十
 wngq	及其
 blfh	立刻
@@ -126279,13 +126279,13 @@ tkjf	为例
 frvn	亚洲
 tbmw	换成
 vbvb	深深
-nysh	全都
+nysl	全都
 chkq	单独
 jsks	他家
 vmvd	洗澡
 cgvl	高潮
 swnh	场合
-clsh	前者
+clsl	前者
 jlts	做饭
 cglb	毫不
 whhr	透明
@@ -126361,7 +126361,7 @@ dlhs	鄙视
 sdjs	吉他
 cgrj	高二
 hvjx	走向
-stlb	老爷
+sllb	老爷
 tptm	把握
 hrks	时尚
 ljwh	胜利
@@ -126496,7 +126496,7 @@ ydrb	大战
 ydcs	大半
 tdlc	折腾
 psgq	周期
-rysh	业者
+rysl	业者
 gyjm	邮件
 rqhr	反映
 qjlx	对外
@@ -126767,7 +126767,7 @@ lxqr	外观
 wrwr	讲讲
 yfvl	玩具
 btnn	解答
-ydsh	大都
+ydsl	大都
 mnmv	愉快
 gcgc	轻轻
 mwne	成人
@@ -126881,7 +126881,7 @@ ksgq	短期
 yfjm	替代
 hlhv	锤子
 csks	异常
-srkf	考完
+slkf	考完
 hgcf	底线
 wnkv	乃至
 blvt	新浪
@@ -126933,7 +126933,7 @@ hylv	牙齿
 nncl	从前
 jcjv	商务
 lblg	不干
-stlb	老爸
+sllb	老爸
 mnbl	特意
 nwxd	回想
 vgsm	县城
@@ -126977,7 +126977,7 @@ rmfv	马路
 kxjf	穿衣
 tknh	投票
 psrj	石头
-srje	考生
+slje	考生
 jrnb	入学
 ddkl	听力
 mvxj	在校
@@ -127044,7 +127044,7 @@ lgkf	公安
 nqnq	气氛
 vnjq	沙发
 lvyx	真理
-stfr	老妈
+slfr	老妈
 wkxl	讽刺
 lvwm	真诚
 bmlq	希腊
@@ -127052,7 +127052,7 @@ rjsl	冷静
 bgne	军人
 ktha	往下
 cjmn	改造
-shkh	都得
+slkh	都得
 nxjd	当事
 gsnm	参数
 dqdh	哎呀
@@ -127163,7 +127163,7 @@ xqmw	权威
 kfgq	定期
 ljyx	同理
 hrhs	暗示
-strj	老头
+slrj	老头
 mbjc	受过
 qjgg	花费
 vpvy	淘汰
@@ -127214,7 +127214,7 @@ rfgs	后台
 lvvm	分泌
 knda	很早
 jvxl	市里
-stns	老年
+slns	老年
 qbnx	荣耀
 mvry	友善
 vgqk	江苏
@@ -127245,7 +127245,7 @@ nhxj	合格
 xjxf	校区
 gghr	费时
 qmhr	若是
-stlx	老外
+sllx	老外
 ttfe	指正
 gctb	转换
 nxhr	光是
@@ -127436,7 +127436,7 @@ mvms	有情
 lgkj	平凡
 jhhr	何时
 tvdk	招呼
-jvsr	备考
+jvsl	备考
 ncbl	介意
 pnjn	炒作
 rjvb	资深
@@ -127464,10 +127464,10 @@ jcsw	出场
 wpqk	调节
 jnjc	作出
 gcgc	车辆
-sthr	老是
+slhr	老是
 jnwf	粤语
 mwbt	感触
-shnr	教会
+slnr	教会
 cglv	高分
 rtka	北上
 khfm	字母
@@ -127528,7 +127528,7 @@ nsnx	年少
 hfpc	钱包
 pdhv	句子
 lxnq	名气
-cyst	养老
+cysl	养老
 kfmn	定制
 hvlv	起步
 fyfy	衬衫
@@ -127596,7 +127596,7 @@ lgkf	平安
 nfnt	命令
 nbwh	简称
 qbry	营业
-stpv	老鼠
+slpv	老鼠
 jjcb	收购
 btqv	角落
 wvwq	承诺
@@ -127679,7 +127679,7 @@ kmdc	官员
 hrns	明年
 ncfg	创始
 wclm	记载
-dksr	中考
+dksl	中考
 nxne	小人
 bvfm	航母
 tsdk	看中
@@ -127709,7 +127709,7 @@ tpmn	挑选
 drps	号码
 bjfv	寻求
 nmvn	糊涂
-shkh	教徒
+slkh	教徒
 kgwl	审计
 kqyd	犹太
 wpbm	询问
@@ -127734,11 +127734,11 @@ rjve	况且
 hrvy	暗恋
 kxdk	空中
 cmtk	摩托
-srrm	考验
+slrm	考验
 rjwh	专科
 vhrt	河北
 xwnx	极少
-shwp	教训
+slwp	教训
 rybg	美军
 rffy	后天
 ydyf	大夫
@@ -127828,7 +127828,7 @@ wmra	留言
 nhhv	拿起
 mvsr	有幸
 ffbm	厦门
-srkl	考察
+slkl	考察
 wnnm	诊断
 rjcf	二线
 vscf	法师
@@ -127848,7 +127848,7 @@ kjkj	凤凰
 qtcn	通道
 ssbm	封闭
 llrt	南北
-tksr	报考
+tksl	报考
 ljlv	同龄
 flcs	殖民
 lbms	不屑
@@ -127878,7 +127878,7 @@ hgyd	庞大
 lxwf	外语
 tkcm	按摩
 vpvl	泡沫
-strh	老虎
+slrh	老虎
 klnq	力气
 fpfn	万元
 tkmg	疑惑
@@ -128225,7 +128225,7 @@ nhjp	合伙
 smxl	城里
 lgts	干扰
 bjnw	建国
-jcsh	帝都
+jcsl	帝都
 jgfv	充足
 gsrj	参见
 knkq	监狱
@@ -128315,7 +128315,7 @@ wsjn	那個
 kcry	專業
 jvwh	各種
 msvd	情況
-stkd	老師
+slkd	老師
 rvmw	認爲
 rvtw	認為
 crlb	並不
@@ -128389,7 +128389,7 @@ dltr	數據
 chyf	曾經
 gqps	基礎
 rvrb	認識
-srrh	考慮
+slrh	考慮
 yfgm	經驗
 ksjx	家裏
 ksfy	家裡
@@ -128495,7 +128495,7 @@ ssvk	幫助
 blcm	新聞
 sfyf	表現
 lwrl	未來
-srrm	考試
+slrm	考試
 yxrn	理論
 tskw	看過
 dlpb	數學
@@ -128526,7 +128526,7 @@ dwjx	哪裏
 dwfy	哪裡
 nclv	簡直
 blrb	意識
-gssr	參考
+gssl	參考
 tkrj	投資
 tbbt	接觸
 dgns	喫飯
@@ -128554,7 +128554,7 @@ nxpb	小學
 yjmf	終於
 mvcm	有關
 lghr	平時
-stcm	老闆
+slcm	老闆
 xfdk	區别
 xfdp	區別
 jkyj	傳統
@@ -129102,7 +129102,7 @@ kcyd	較大
 schc	增長
 lghy	公務
 shka	場上
-shpb	教學
+slpb	教學
 cgpl	高興
 xdrh	相處
 gyhh	幾點
@@ -129172,7 +129172,7 @@ srmn	報告
 tmto	採用
 bfgn	危險
 vlqs	活著
-shyx	教練
+slyx	教練
 bkjd	軍事
 thhg	推廣
 jnjn	個個
@@ -129255,7 +129255,7 @@ ysms	結局
 mjdp	性別
 nvpb	自學
 mgtb	發揮
-rcsh	記者
+rcsl	記者
 xhgq	極其
 kwlx	過多
 knxj	從而
@@ -129274,11 +129274,11 @@ whvc	利潤
 nbhy	財務
 slms	熱情
 cbbv	鍵盤
-stkf	老實
+slkf	老實
 msrj	層次
 kfsl	安靜
 djxg	耳機
-fvsh	兩者
+fvsl	兩者
 ylhr	網易
 kcjr	輸入
 ppbl	兒童
@@ -129306,7 +129306,7 @@ fkjn	五個
 mbka	愛上
 kfws	安裝
 nqtk	無疑
-shkd	教師
+slkd	教師
 rjsl	姿勢
 bfbk	冠軍
 hdmn	可憐
@@ -129345,7 +129345,7 @@ vljq	具備
 gmhr	隨時
 dkmm	遺憾
 qvkg	落後
-rssh	讀者
+rssl	讀者
 vwbn	瀏覽
 knlb	從不
 hdrw	歌詞
@@ -129361,7 +129361,7 @@ thkc	打擊
 blsy	新鮮
 dwpp	哪兒
 ryqh	羨慕
-kgsh	後者
+kgsl	後者
 ldjt	乾貨
 yjnf	總會
 jcmf	出於
@@ -129390,7 +129390,7 @@ msmj	屬性
 ssmk	幫忙
 mwlv	爲止
 twlv	為止
-pbsh	學者
+pbsl	學者
 mjwn	懷孕
 rhfu	處女
 yjvg	統治
@@ -129530,7 +129530,7 @@ pcwh	順利
 lbqf	不難
 gmlg	馬克
 dlhs	鄙視
-stlb	老爺
+sllb	老爺
 hrks	時尚
 lcwh	勝利
 bdgg	勉強
@@ -129613,7 +129613,7 @@ kfkg	實體
 yddd	大戰
 tdlc	折騰
 psgq	週期
-rysh	業者
+rysl	業者
 lqjm	郵件
 rylx	對外
 nqks	無知
@@ -129934,7 +129934,7 @@ qpcs	驚豔
 hhrv	默認
 nqnq	氣氛
 vnmg	沙發
-stfg	老媽
+slfg	老媽
 rjxl	諷刺
 lvrm	真誠
 bmlp	希臘
@@ -130010,7 +130010,7 @@ kwnf	過敏
 lbbn	不負
 tdjb	攝像
 xqmw	權威
-stfd	老頭
+slfd	老頭
 mbkw	受過
 qjgg	花費
 nkqs	覆蓋
@@ -130174,7 +130174,7 @@ hcbt	長久
 ydcm	大門
 kfdj	實質
 jhhr	何時
-jqsr	備考
+jqsl	備考
 rjvb	資深
 rwml	謹慎
 hrhr	曖昧
@@ -130190,7 +130190,7 @@ kckc	車輛
 jnrf	粤語
 jkrf	粵語
 mwbt	感觸
-shnf	教會
+slnf	教會
 kwcg	過高
 bjka	書上
 dkqk	中藥
@@ -130227,7 +130227,7 @@ mvdp	有別
 jmnb	代購
 cmpc	錢包
 lxnq	名氣
-cyst	養老
+cysl	養老
 kfmn	定製
 fyfy	襯衫
 qrqp	蘿蔔
@@ -130359,10 +130359,10 @@ pbrc	學説
 pbrl	學說
 vdve	況且
 hrry	暗戀
-srgm	考驗
+slgm	考驗
 kcwh	專科
 xhnx	極少
-shrp	教訓
+slrp	教訓
 rybk	美軍
 kgfy	後天
 fqwh	形狀
@@ -130429,7 +130429,7 @@ kjhg	客廳
 rslx	諸多
 kjkj	鳳凰
 sscm	封閉
-srsr	報考
+srsl	報考
 ljlc	同齡
 yhhe	紋身
 sskq	地獄
