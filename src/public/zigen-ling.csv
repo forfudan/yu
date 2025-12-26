@@ -23,6 +23,7 @@ font,ma,pinyin
 䒑,ca,Cǎo -> Ca 🈤不取聲母
 丬,ca,Qiáŋ -> Qa 🈤不取聲母
 ,co,🈤無讀音取o
+丌,ci,Jì 🈤不取聲母 🈕Qí
 山,csa,Ŝān -> Sa
 己,cji,Jǐ
 已,cyi,Yǐ
@@ -56,6 +57,7 @@ font,ma,pinyin
 厂,fa,Ĉǎŋ -> Ca 🈤不取聲母 🈕Hǎn Yán ān
 丆,fa,Hǎn -> Ha 🈤不取聲母
 正,fe,Ẑèŋ -> Ve 🈤Z和Ẑ取V
+亥,fha,Hài -> Ha
 女,fu,Nǚ 🈤不取聲母
 母,fmu,Mǔ
 ,fo,🈤無讀音取o
@@ -68,7 +70,6 @@ font,ma,pinyin
 見,fja,Jiàn -> Ja
 頁,fye,Yè
 足,fvu,Zú -> Vu 🈤Z和Ẑ取V
-丌,gji,Jì
 世,gi,Ŝì -> Si
 丰,ge,Fēŋ -> Fe 🈤不取聲母
 其,gqi,Qí 🈕Jī Jì
@@ -86,7 +87,6 @@ font,ma,pinyin
 阝,gu,Fǔ 🈤不取聲母 ㊟俗稱掛耳旁 🈑在左同阜在右同邑
 馬,gma,Mǎ
 ,gma,
-,go,🈤無讀音取o
 丁,hdi,Dīŋ -> d
 丅,hdi,㊟同丁歸併 🈑下本字
 下,ha,Xià -> x
@@ -327,7 +327,6 @@ font,ma,pinyin
 辰,tce,Ĉén -> Ce
 ,vo,🈤無讀音取o
 ,vo,
-亥,vha,Hài -> Ha
 亦,vyi,Yì
 刀,va,Dāo -> Da 🈤不取聲母
 刂,vda,Dāo -> Da ㊟俗稱立刀旁
@@ -336,6 +335,7 @@ font,ma,pinyin
 ,ve,㊟同且歸併
 水,vi,Ŝuǐ -> Si 🈤不取聲母
 氵,vi,Ŝuǐ -> Si 🈤不取聲母 ㊟俗稱三點水
+,vo,🈤無讀音取o
 乃,wna,Nǎi -> Na
 乙,wi,Yǐ 🈤基本筆畫不取聲母 ㊟一切折筆皆同碼
 乚,wi,Yí 🈤基本筆畫不取聲母 ㊟一切折筆皆同碼
