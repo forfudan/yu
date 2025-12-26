@@ -827,6 +827,7 @@ lha	然
 lja	刚
 ljo	同
 lqi	動
+lve	些
 lxo	名
 lxu	外
 mbi	愛
@@ -8430,8 +8431,8 @@ jltc	儂
 jlti	佌
 jltx	偨
 jlva	份
-jlve	值
 jlvl	傎
+jlvo	值
 jlwe	佅
 jlxk	働
 jlxl	偅
@@ -9387,11 +9388,11 @@ klsg	郔
 klsi	延
 klsn	鸁
 kltf	頿
-klve	徝
 klvi	辵
 klvk	衠
 klvl	寘
 klvm	憄
+klvo	徝
 klwi	劜
 klwo	边
 klxk	衝
@@ -10752,7 +10753,6 @@ lvcy	颁
 lvda	刖
 lvdt	兺
 lvdt	嗭
-lve	直
 lvfy	頒
 lvfy	頉
 lvgu	邠
@@ -10802,6 +10802,7 @@ lvnt	龀
 lvnv	龃
 lvnw	龁
 lvnx	步
+lvo	直
 lvpo	炃
 lvqa	弅
 lvrm	盆
@@ -16527,9 +16528,9 @@ slti	老
 sltk	耋
 sltl	耄
 slva	坋
-slve	埴
 slvi	址
 slvl	填
+slvo	埴
 slxl	尰
 slxl	堹
 slyd	坱
@@ -18696,9 +18697,9 @@ vlsx	滐
 vltc	濃
 vlti	泚
 vlva	汾
-vlve	淔
 vlvi	沚
 vlvl	滇
+vlvo	淔
 vlvr	湓
 vlwe	沬
 vlwy	渎
@@ -20538,9 +20539,9 @@ xltx	欁
 xlty	橴
 xlva	枌
 xlvd	刺
-xlve	植
 xlvi	杫
 xlvl	槙
+xlvo	植
 xlvx	椕
 xlwy	椟
 xlxl	棘
@@ -27051,12 +27052,12 @@ clvc	𳅾
 clvd	𮢏
 clvd	𱐨
 clve	𢉺
-clve	𫒦
 clvf	𧛯
 clvi	䤠
 clvj	𫓆
 clvk	𪊹
 clvn	𳑃
+clvo	𫒦
 clvp	𤋎
 clvq	𱊾
 clvr	𨩣
@@ -32395,7 +32396,6 @@ dlvc	𫬟
 dlvd	𠰙
 dlvd	𠵯
 dlvd	𭃬
-dlve	𠶗
 dlvf	𡅥
 dlvi	𠯬
 dlvi	𠯽
@@ -32403,6 +32403,7 @@ dlvj	𠽢
 dlvk	𡂌
 dlvm	𠴮
 dlvm	𢞈
+dlvo	𠶗
 dlvr	㖹
 dlwh	𫲱
 dlwi	𭈅
@@ -37579,8 +37580,6 @@ flvd	𥅮
 flvd	𫰘
 flvd	𭽹
 flvd	𭽻
-flve	𪠋
-flve	𰌈
 flvf	𠫉
 flvf	𫲅
 flvf	𱭌
@@ -37607,6 +37606,8 @@ flvm	𭒄
 flvm	𭝇
 flvn	𣧎
 flvn	𲋗
+flvo	𪠋
+flvo	𰌈
 flvq	𣀑
 flvq	𰐊
 flvr	𡟆
@@ -52283,7 +52284,6 @@ jvdv	㓢
 jvdv	𪕘
 jvdw	𮞑
 jvdx	䎊
-jve	𬽈
 jvfc	𭐞
 jvfj	㚅
 jvfj	𡕚
@@ -52350,6 +52350,7 @@ jvnq	𱘣
 jvnv	𠛴
 jvnx	𠇡
 jvny	𠐴
+jvo	𬽈
 jvpn	𡕝
 jvpw	𲅹
 jvpw	𲆃
@@ -60932,10 +60933,10 @@ llsx	𮌪
 lltc	𮰐
 llti	𦚚
 llvd	𠜳
-llve	䐈
 llvi	𭨪
 llvl	䐜
 llvm	𦝅
+llvo	䐈
 llvr	𱼐
 llvu	𮌸
 llwi	㔺
@@ -64597,10 +64598,10 @@ mlsx	𢞼
 mltt	𪬰
 mlva	㤋
 mlva	𤓼
-mlve	㥀
 mlvi	𪫣
 mlvm	𭝗
 mlvn	𢠈
+mlvo	㥀
 mlvr	𢞂
 mlwi	𠃹
 mlwn	𢜁
@@ -68575,9 +68576,9 @@ nlty	𫇕
 nlu	𥫿
 nlvd	䈀
 nlvd	𠈛
-nlve	𥮖
 nlvi	䇛
 nlvl	䈯
+nlvo	𥮖
 nlvs	𪄏
 nlvu	䈻
 nlwe	𪜬
@@ -73828,12 +73829,12 @@ plsy	𭅤
 plty	𱬒
 plva	𤆶
 plvd	𠜱
-plve	𤊧
 plvi	𠣏
 plvi	𪸔
 plvj	𢄚
 plvj	𦥱
 plvl	𤌭
+plvo	𤊧
 plwe	𪸙
 plwh	𡦆
 plxi	㶤
@@ -89370,13 +89371,13 @@ tlvc	𭣇
 tlvd	𢯔
 tlvd	𤁙
 tlvd	𲡥
-tlve	㨁
 tlvj	𱠲
 tlvl	𠤤
 tlvl	𢺗
 tlvm	𢚅
 tlvm	𢮈
 tlvn	𰔢
+tlvo	㨁
 tlvr	𢱔
 tlvt	㧳
 tlvt	𢯌
@@ -101745,8 +101746,8 @@ yltc	𲰃
 yltr	𲸁
 ylty	𬎏
 ylu	𲯜
-ylve	𲯠
 ylvi	䊼
+ylvo	𲯠
 ylvr	𤧒
 ylvy	𤦦
 ylvy	𫄐
@@ -111191,7 +111192,6 @@ ju	ㆢ
 ju	
 ju	
 jvdo	𘯢
-jve	直󠄆
 jvfq	㌤
 jvge	夆
 jvi	⼡
@@ -111206,6 +111206,7 @@ jvku	𘯣
 jvku	𘰙
 jvla	𛀯
 jvne	𘯡
+jvo	直󠄆
 jvo	𘭍
 jvrj	冬
 jvrj	🀩
@@ -113362,9 +113363,6 @@ lse	
 lska	𘰵
 lsu	𘰱
 lu	⼾
-lve	直󠄄
-lve	直
-lve	直
 lvi	⽌
 lvi	
 lvjc	博
@@ -113374,6 +113372,9 @@ lvnf	頻
 lvnf	頻
 lvnj	⻭
 lvnj	⻮
+lvo	直󠄄
+lvo	直
+lvo	直
 lwcb	𗎆
 lwcb	𗎍
 lwcb	𗎖
@@ -118273,7 +118274,6 @@ vdpe	免
 vdpe	免
 vdpi	𛂡
 vdpt	兔
-ve	
 vfck	𗕣
 vfcr	𗕍
 vfcs	𗕦
@@ -118697,6 +118697,7 @@ vo	ュ
 vo	ユ
 vo	𛅕
 vo	𘠛
+vo	
 vo	
 vo	
 vo	
