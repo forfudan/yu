@@ -50,10 +50,14 @@ paths_of_docs = [
     # 日月
     "/learn/roots_ming.md",
     "/learn/chars_ming.md",
+    # 靈明
+    "/learn/roots_ling.md",
+    "/learn/chars_ling.md",
     # 例子
     "/learn/examples.md",
     "/learn/frequent.md",
     "/learn/frequent_tc.md",
+    # 練習
     "/practice/root.md",
     "/practice/char.md",
     "/practice/char_tw.md",
@@ -70,6 +74,7 @@ paths_of_docs = [
     "/practice/char_ling_zhu.md",
     "/practice/root_wafel.md",
     "/practice/tupa.md",
+    # 拆分
     "/chaifen/index.md",
     "/chaifen/light.md",
     "/chaifen/joy.md",

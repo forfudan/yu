@@ -247,6 +247,19 @@ export default defineConfig({
           ],
         },
         {
+          text: "灵明教程",
+          items: [
+            {
+              text: "字根编码",
+              link: "/learn/roots_ling",
+            },
+            {
+              text: "单字编码",
+              link: "/learn/chars_ling",
+            },
+          ],
+        },
+        {
           text: "附录",
           items: [
             {
@@ -682,6 +695,19 @@ export default defineConfig({
                 {
                   text: "單字编码",
                   link: "/zht/learn/chars_ming",
+                },
+              ],
+            },
+            {
+              text: "靈明教程",
+              items: [
+                {
+                  text: "字根編碼",
+                  link: "/zht/learn/roots_ling",
+                },
+                {
+                  text: "單字编码",
+                  link: "/zht/learn/chars_ling",
                 },
               ],
             },

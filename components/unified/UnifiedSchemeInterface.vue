@@ -45,7 +45,7 @@ const columnMinWidth = computed(() => {
 const alwaysVisibleZigens = computed(() => {
     switch (activeScheme.value) {
         case 'ling':
-            return '廾 乚 冫虍 乀龵用 巛巴   䒑 氵 ⺈肀 ⺌⺮ ⺧'
+            return '廾スマ 乚 冫虍 乀龵用 巛巴   䒑 氵 ⺈肀 ⺌⺮ ⺧'
         default:
             return ''
     }
