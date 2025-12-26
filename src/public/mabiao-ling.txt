@@ -159,12 +159,11 @@ sc	增加
 sd	臺灣
 sf	表现
 sg	去年
-sh	都是
+sl	都是
 sm	城市
 sn	責任
 sr	幸福
 ss	幫助
-st	老师
 sy	也是
 tb	接受
 td	操作
