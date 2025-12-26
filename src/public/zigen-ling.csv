@@ -109,7 +109,7 @@ font,ma,pinyin
 長,hca,Ĉáŋ -> Ca
 镸,hca,Ĉáŋ -> Ca
 髟,hba,Biāo -> Ba
-隹,hi,Cuī -> Ci 🈤不取聲母 🈕Ẑuī Cuī Wéi
+隹,hi,Cuī -> Ci 🈤不取聲母 🈕Ẑuī Wéi
 亠,jo,Tóu -> To 🈤不取聲母 ㊟俗稱京字頭
 亻,je,Rén -> Re ㊟俗稱單人旁
 入,jru,Rù
@@ -219,9 +219,9 @@ font,ma,pinyin
 兀,nwu,Wù
 囗,nwe,Wéi 🈑圍本字 ㊟不是口
 小,nxa,Xiǎo -> Xa
-⺌,nxa,
+⺌,nxa,Xiǎo -> Xa 🈑同小
 ,nxa,
-⺍,na,Xiǎo -> Xa 🈤不取聲母 🈑同小
+⺍,na,Xiǎo -> Xa 🈤不取聲母
 ,na,
 米,nmi,Mǐ
 自,nvi,Zì -> Vi 🈤Z和Ẑ取V
