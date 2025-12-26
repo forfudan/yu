@@ -112,10 +112,8 @@ font,ma,pinyin
 镸,hca,Ĉáŋ -> Ca
 髟,hba,Biāo -> Ba
 隹,hi,Cuī -> Ci 🈤不取聲母 🈕Ẑuī Cuī Wéi
-习,ji,Xí -> x
 亠,jo,Tóu -> To 🈤不取聲母 ㊟俗稱京字頭
 亻,je,Rén -> Re ㊟俗稱單人旁
-⺁,jyi,Yì -> Yi
 入,jru,Rù
 風,jfe,Fēŋ -> Fe
 ㄩ,ja,Kǎn -> Ka 🈤不取聲母
@@ -277,6 +275,7 @@ font,ma,pinyin
 ⺀,rje,㊟同二歸併
 ,rje,㊟同二歸併
 冫,rje,èr -> Je 🈑同二 🈑冰本字 🈕Bīng
+⺁,ri,Yì -> Yi
 來,rla,Lái -> La
 卜,rbu,Bǔ
 ⺊,rbu,㊟同⺊歸併
@@ -354,6 +353,7 @@ font,ma,pinyin
 ⻍,wo,
 革,wge,Gé
 ,wo,🈤無讀音取o
+习,xi,Xí -> x
 匚,xfa,Fāŋ -> Fa
 木,xu,Mù 🈤不取聲母
 朩,xu,
