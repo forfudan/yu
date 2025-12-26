@@ -27,10 +27,14 @@ const props = defineProps<{
     defaultScheme?: string
     columnMinWidth?: string
     zigenFontClass?: string // 自定義字根字體類名
+    alwaysVisibleZigens?: string // 始終顯示的字根列表（不會被隱藏）
 }>()
 
 // 字根字體類名，默認為 'zigen-font'
 const zigenFontClass = computed(() => props.zigenFontClass || 'zigen-font')
+
+// 為始終顯示的字根列表設定默認值
+const alwaysVisibleZigens = computed(() => props.alwaysVisibleZigens || '廾冫乚虍')
 
 const columnMinWidth = toRef(props, 'columnMinWidth')
 
@@ -200,14 +204,17 @@ const zigenByKey = computed(() => {
         // 检查是否已经有相同编码的字根在visible中
         const existingWithSameCode = result[firstLetter].visible.find(item => item.code === code);
 
+        // 检查当前字根是否在始終顯示列表中
+        const shouldAlwaysShow = alwaysVisibleZigens.value.includes(font);
+
         if (!existingWithSameCode) {
             // 第一个具有此编码的字根，放在visible中
             result[firstLetter].visible.push({ font, code });
-        } else if (isPrevSameCodeAndKey) {
-            // 只有当前字根与前一个字根编码相同且连续时，才放在hidden中
+        } else if (isPrevSameCodeAndKey && !shouldAlwaysShow) {
+            // 只有当前字根与前一个字根编码相同且连续时，且不在始終顯示列表中，才放在hidden中
             result[firstLetter].hidden.push({ font, code });
         } else {
-            // 编码相同但不连续，作为新的visible字根显示
+            // 编码相同但不连续，或在始終顯示列表中，作为新的visible字根显示
             result[firstLetter].visible.push({ font, code });
         }
     }
@@ -257,15 +264,18 @@ const sortedZigenByKey = computed(() => {
         // 檢查是否已經有相同編碼的字根在當前按鍵下
         const existingWithSameCode = result[firstLetter].find(item => item.code === code && !item.isHidden);
 
+        // 检查当前字根是否在始終顯示列表中
+        const shouldAlwaysShow = alwaysVisibleZigens.value.includes(font);
+
         let isHidden = false;
         if (!existingWithSameCode) {
             // 第一個具有此編碼的字根，顯示為可見
             isHidden = false;
-        } else if (isPrevSameCodeAndKey) {
-            // 只有當前字根與前一個字根編碼相同且連續時，才標記為隱藏
+        } else if (isPrevSameCodeAndKey && !shouldAlwaysShow) {
+            // 只有當前字根與前一個字根編碼相同且連續時，且不在始終顯示列表中，才標記為隱藏
             isHidden = true;
         } else {
-            // 編碼相同但不連續，作為新的可見字根顯示
+            // 編碼相同但不連續，或在始終顯示列表中，作為新的可見字根顯示
             isHidden = false;
         }
 
