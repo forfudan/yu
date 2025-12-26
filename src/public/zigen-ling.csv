@@ -123,7 +123,6 @@ font,ma,pinyin
 ,ju,
 屮,jca,Cǎo -> Ca
 丱,jga,Guān -> Ga
-曲,jqu,Qǔ
 向,jxa,Xiàŋ -> Xa
 ,jo,🈤無讀音取o
 ,jo,🈤無讀音取o
@@ -178,6 +177,7 @@ font,ma,pinyin
 ,ljo,
 冊,lce,Cè
 ,lce,
+曲,lqu,Qǔ
 十,li,Ŝi -> Si 🈤不取聲母
 干,lga,Gān -> Ga
 千,lqa,Qiān -> Qa
