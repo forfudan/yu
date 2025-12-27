@@ -257,6 +257,10 @@ export default defineConfig({
               text: "单字编码",
               link: "/learn/chars_ling",
             },
+            {
+              text: "简码设置",
+              link: "/learn/quick_ling",
+            },
           ],
         },
         {
@@ -708,6 +712,10 @@ export default defineConfig({
                 {
                   text: "單字编码",
                   link: "/zht/learn/chars_ling",
+                },
+                {
+                  text: "簡碼設置",
+                  link: "/zht/learn/quick_ling",
                 },
               ],
             },
