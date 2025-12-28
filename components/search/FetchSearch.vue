@@ -16,8 +16,7 @@ import { ZigenMap, ChaifenMap, fetchChaifen, fetchZigen } from "./share";
 const p = defineProps<{
     chaifenUrl: string,
     zigenUrl: string,
-    supplement: boolean,
-    ming?: boolean,
+    rule: string,
 }>()
 
 const chaifenMap = shallowRef<ChaifenMap>()
@@ -73,7 +72,7 @@ watch(userInput, (newValue) => {
 
         <!-- Search component (only when data is loaded) -->
         <Search v-else-if="isDataLoaded && chaifenMap && zigenMap" :chaifenMap="chaifenMap" :zigenMap="zigenMap"
-            :supplement="p.supplement" :ming="p.ming || false" v-model:userInput="userInput" />
+            :rule="p.rule" v-model:userInput="userInput" />
 
         <!-- Empty state -->
         <div v-else-if="userInput.trim().length > 0" class="text-gray-500 text-center py-4">

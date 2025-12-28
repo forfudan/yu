@@ -29186,7 +29186,14 @@ djdi	龺
 djfw	鿨
 djst	龭
 djth	鿬
+dkff	直󠄅
+dksf	直󠄈
+dmii	直󠄄
+dmks	直󠄃
+dmxi	直󠄁
+dmxi	直󠄂
 dtek	龪
+dwnk	直󠄉
 dxxt	龮
 exql	鿚
 exqq	鿙
@@ -29209,11 +29216,13 @@ hsbu	鿆
 ibof	鿄
 idjv	鿰
 iojm	鿌
+iwlv	浩󠄁
 jjhj	龧
 lpqm	鿽
 mbww	鿡
 mgrr	鿃
 nwlw	龱
+omib	直󠄆
 oxvw	鿥
 pdlv	鿋
 qesi	鿴
@@ -29239,6 +29248,7 @@ shtw	鿛
 sini	鿊
 skgq	鿦
 skij	鿒
+smxi	直󠄇
 tall	鿔
 tdpu	鿪
 texf	鿗
@@ -33900,6 +33910,7 @@ rroj	䳔
 rror	䘡
 rrrf	㯔
 rrrh	䄟
+rrri	㐂󠄁
 rrry	㦌
 rrst	㺞
 rrsu	㷇
@@ -66760,7 +66771,6 @@ sdsj	𠗦
 sdsl	𣂇
 sdsq	𠙥
 sdss	𣁿
-sdsu	𦸻
 sdta	𧂭
 sdtd	𧂻
 sdtd	𧄥
@@ -67305,6 +67315,7 @@ shqm	𦵬
 shqr	𠒌
 shqs	𦏡
 shqu	𦴉
+shqu	𦸻
 shqv	𢐱
 shrh	𦾫
 shrm	𪙐
@@ -109072,7 +109083,6 @@ bmvv	잒
 bmvv	쟊
 bmvw	𘄝
 bmvw	𘄞
-bmwy	🌒
 bmxi	란
 bmxi	랸
 bmxi	잔
@@ -114934,10 +114944,6 @@ hbsq	𲴱
 hbsx	𲽒
 hcaj	𳌧
 hcfh	𲙍
-hcgf	🌍
-hcgf	🌎
-hcgf	🌏
-hcgf	🌐
 hclv	𲔟
 hcud	𳌨
 hcyr	𲚁
@@ -115355,7 +115361,6 @@ ifrs	𲪕
 ifsc	𲩎
 ifsj	𲵲
 ifuo	𮳉
-ifwy	🌑
 ifxx	𲹕
 ifyq	𲩔
 igal	𮳌
@@ -115543,7 +115548,6 @@ isth	𲪐
 istm	𮳘
 iswk	𲪇
 iswl	𲩣
-iswy	🌕
 iswy	𳐧
 itbm	𲪀
 itfn	𳐵
@@ -126004,7 +126008,6 @@ vbmi	𲏛
 vbmn	𛀏
 vbod	𮵿
 vbui	𘲚
-vbwy	🌔
 vccc	ㆣ
 vccc	ㆻ
 vcjk	𳅄
@@ -127418,7 +127421,6 @@ voqw	𘥖
 voqx	𘈄
 vory	𳀭
 votw	𘧕
-vowy	🌓
 voyy	𲠏
 vpra	𲜅
 vptl	𮶅
@@ -134961,6 +134963,7 @@ whlg	𦞁
 whlg	𦢙
 ebwl	𦥓
 shlg	𦳦
+sdsu	𦸻
 sijg	𦺿
 shlg	𦼺
 sbig	𧄕

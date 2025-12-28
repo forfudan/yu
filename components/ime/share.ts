@@ -27,14 +27,32 @@ export interface ImeRule {
     keys: 26 | 27
 }
 
-export const YuhaoRule: ImeRule = {
-    pop: 0,
-    len: 4,
-    autoCm: 5,
-    cm1: ' ',
-    cm2: ';',
-    cm3: "'",
-    keys: 26,
+/**
+ * 根據規則名稱獲取輸入法配置
+ * @param ruleName 規則名稱：'ling'（靈明4碼）、'ming'（日月5碼）或其他（默認宇浩5碼）
+ */
+export function getRuleConfig(ruleName?: string): ImeRule {
+    if (ruleName === 'ling') {
+        return {
+            pop: 0,
+            len: 4,
+            autoCm: 4,
+            cm1: ' ',
+            cm2: ';',
+            cm3: "'",
+            keys: 26,
+        }
+    }
+    // 'ming' 和其他所有方案都使用 5 碼自動上屏
+    return {
+        pop: 0,
+        len: 4,
+        autoCm: 5,
+        cm1: ' ',
+        cm2: ';',
+        cm3: "'",
+        keys: 26,
+    }
 }
 //#endregion
 

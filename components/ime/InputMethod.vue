@@ -2,7 +2,7 @@
     InputMethod.vue - 在線輸入法核心組件
 
     Modification History:
-    - 2025-08-16 by 朱複丹: 優化中文標點的輸入
+    - 2024-06-25 by yb6b: 初版
     - 2025-08-15 by 朱複丹: 完全重構代碼，優化輸入法引擎和用戶體驗
         支持日月方案
         支持額外的候選框
@@ -10,7 +10,8 @@
         支持標點符號頂屏
         支持韻碼提示
         支持中英文模式切換
-    - 2024-06-25 by yb6b: 初版
+    - 2025-08-16 by 朱複丹: 優化中文標點的輸入
+    - 2025-12-16 by 朱複丹: 拓展上屏邏輯,支持最大碼長不是5的情況.
 -->
 
 <script setup lang="ts">
@@ -411,8 +412,9 @@ watch(candidateHanzi, (newCandidates) => {
     // 檢查是否需要自動上屏唯一候選項
     if (newCandidates.length === 1 && candidateCodes.value) {
         const cd = candidateCodes.value
-        // 只有編碼長度>=5或最後一位為aeiou時才自動上屏
-        if (cd.length >= 5 || 'aeiou'.includes(cd.at(-1)!)) {
+        const autoCmLen = props.rule.autoCm
+        // 只有編碼長度>=autoCm或最後一位為aeiou時才自動上屏
+        if (cd.length >= autoCmLen || 'aeiou'.includes(cd.at(-1)!)) {
             console.log('檢測到唯一候選項，自動上屏:', newCandidates[0].name)
             selectCandidateAndClear(newCandidates[0].name)
         }
@@ -472,7 +474,7 @@ watch(candidateCodes, (cd) => {
     // 頂屏邏輯已移到 checkAutoCommit 函數中處理
     // 這裡保留原有的延時頂功邏輯（如果配置了 popLen）
     const popLen = props.rule.pop
-    const codeLen = 5 // 修改為5碼上屏
+    const codeLen = props.rule.autoCm // 使用規則配置的自動上屏碼長
 
     if (cd.length > codeLen) {
         // 延時頂功
@@ -485,7 +487,7 @@ watch(candidateCodes, (cd) => {
             commit(popCard.name)
             candidateCodes.value = candidateCodes.value.slice(popLen)
         }
-        // 定長（5碼）
+        // 定長自動上屏
         else {
             const topIndex = searchTop(props.data, cd.slice(0, codeLen))
             if (topIndex !== null) {
@@ -514,10 +516,12 @@ function checkAutoCommit(nextKey: string) {
         当前候选项: currentCandidates.map(c => c.name).slice(0, 5)
     })
 
-    // 1. 如果當前候選項唯一，只有編碼長度>=5或末碼為aeiou時才自動上屏
+    const autoCmLen = props.rule.autoCm
+
+    // 1. 如果當前候選項唯一，只有編碼長度>=autoCm或末碼為aeiou時才自動上屏
     if (currentCandidates.length === 1) {
         const cd = candidateCodes.value
-        if (cd.length >= 5 || 'aeiou'.includes(cd.at(-1)!)) {
+        if (cd.length >= autoCmLen || 'aeiou'.includes(cd.at(-1)!)) {
             console.log('当前候选项唯一，上屏:', currentCandidates[0].name)
             selectCandidateAndClear(currentCandidates[0].name)
             return
@@ -526,9 +530,9 @@ function checkAutoCommit(nextKey: string) {
 
     // 2. 如果候選項不唯一，分情況處理
     if (currentCandidates.length > 1) {
-        // 2a. 如果當前編碼已經達到5碼，下一個編碼（第6碼）頂出前序首選字
-        if (cd.length >= 5) {
-            console.log('當前編碼達到5碼，即將輸入第6碼，上屏首選:', currentCandidates[0].name)
+        // 2a. 如果當前編碼已經達到autoCm碼，下一個編碼頂出前序首選字
+        if (cd.length >= autoCmLen) {
+            console.log(`當前編碼達到${autoCmLen}碼，即將輸入第${autoCmLen + 1}碼，上屏首選:`, currentCandidates[0].name)
             selectCandidateAndClear(currentCandidates[0].name)
             return
         }
@@ -780,7 +784,7 @@ function onKeydown(e: KeyboardEvent) {
                                 <span class="text-xs text-slate-400 dark:text-slate-500">{{ i + 1 }}</span>
                                 <!-- 詞條 -->
                                 <span class="text-xl select-text px-2 text-slate-900 dark:text-slate-200">{{ n.name
-                                }}</span>
+                                    }}</span>
                                 <!-- 後序編碼 -->
                                 <span class="text-base text-blue-400 dark:text-blue-500 mt-0">{{
                                     n.key!.slice(candidateCodes.length) }}</span>
@@ -840,7 +844,7 @@ function onKeydown(e: KeyboardEvent) {
                             </div>
                             <!-- 編碼 -->
                             <div class="text-xs text-blue-400 dark:text-blue-500 mt-1 truncate max-w-full">{{ n.key
-                                }}</div>
+                            }}</div>
                         </button>
                     </div>
                 </div>

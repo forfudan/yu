@@ -17,8 +17,8 @@ const p = defineProps<{
     mabiaoUrl: string
     /** 方案的ID，用于保存localstorage */
     id?: string
-    /** 方案的配置 */
-    //rule: utils.ImeRule
+    /** 方案的規則名稱：'ling'（靈明4碼）、'ming'（日月5碼）或其他（默認宇浩5碼） */
+    ruleName?: string
 }>()
 
 const mabiaoList = shallowRef<utils.MabiaoItem[]>()
@@ -42,7 +42,7 @@ onMounted(async () => {
         <progress class="progress progress-info w-full max-w-screen-sm" :value="progress.current"
             :max="progress.max"></progress>
     </div>
-    <InputMethod v-else :id="id || mabiaoUrl" :rule="utils.YuhaoRule" :data="mabiaoList">
+    <InputMethod v-else :id="id || mabiaoUrl" :rule="utils.getRuleConfig(p.ruleName)" :data="mabiaoList">
         <slot></slot>
     </InputMethod>
 </template>

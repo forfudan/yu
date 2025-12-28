@@ -44,12 +44,10 @@ export default defineConfig({
     logo: "/logo_blue.png",
     nav: [
       { text: "介绍", link: "/docs/" },
-      { text: "教程", link: "/learn/" },
+      { text: "学习", link: "/learn/" },
       { text: "练习", link: "/practice/root" },
       { text: "安装", link: "/install" },
-      { text: "体验", link: "/ming" },
-      { text: "跟打", link: "https://genda.shurufa.app/" },
-      { text: "测评", link: "https://ceping.shurufa.app/" },
+      { text: "体验", link: "/ling" },
     ],
     sidebar: {
       "/docs": [
@@ -75,6 +73,10 @@ export default defineConfig({
             {
               text: "日月输入法",
               link: "/docs/ming",
+            },
+            {
+              text: "灵明输入法",
+              link: "/docs/ling",
             },
             {
               text: "吉旦饼输入法",
@@ -243,6 +245,23 @@ export default defineConfig({
           ],
         },
         {
+          text: "灵明教程",
+          items: [
+            {
+              text: "字根编码",
+              link: "/learn/roots_ling",
+            },
+            {
+              text: "单字编码",
+              link: "/learn/chars_ling",
+            },
+            {
+              text: "简码设置",
+              link: "/learn/quick_ling",
+            },
+          ],
+        },
+        {
           text: "附录",
           items: [
             {
@@ -318,6 +337,23 @@ export default defineConfig({
             {
               text: "日月·作品高频字",
               link: "/practice/char_ming_zhu",
+            },
+          ],
+        },
+        {
+          text: "配天之靈",
+          items: [
+            {
+              text: "靈明字根",
+              link: "/practice/root_ling",
+            },
+            {
+              text: "靈明单字",
+              link: "/practice/char_ling",
+            },
+            {
+              text: "靈明·作品高频字",
+              link: "/practice/char_ling_zhu",
             },
           ],
         },
@@ -462,12 +498,10 @@ export default defineConfig({
         logo: "/logo_purple.png",
         nav: [
           { text: "介紹", link: "/zht/docs/" },
-          { text: "教程", link: "/zht/learn/" },
+          { text: "學習", link: "/zht/learn/" },
           { text: "練習", link: "/zht/practice/root" },
           { text: "安裝", link: "/zht/install" },
-          { text: "體驗", link: "/ming" },
-          { text: "跟打", link: "https://genda.shurufa.app/" },
-          { text: "測評", link: "https://ceping.shurufa.app/" },
+          { text: "體驗", link: "/ling" },
         ],
         sidebar: {
           "/zht/docs": [
@@ -493,6 +527,10 @@ export default defineConfig({
                 {
                   text: "日月輸入法",
                   link: "/zht/docs/ming",
+                },
+                {
+                  text: "靈明輸入法",
+                  link: "/zht/docs/ling",
                 },
                 {
                   text: "吉旦餅輸入法",
@@ -661,6 +699,23 @@ export default defineConfig({
               ],
             },
             {
+              text: "靈明教程",
+              items: [
+                {
+                  text: "字根編碼",
+                  link: "/zht/learn/roots_ling",
+                },
+                {
+                  text: "單字编码",
+                  link: "/zht/learn/chars_ling",
+                },
+                {
+                  text: "簡碼設置",
+                  link: "/zht/learn/quick_ling",
+                },
+              ],
+            },
+            {
               text: "附錄",
               items: [
                 {
@@ -745,6 +800,23 @@ export default defineConfig({
                 {
                   text: "日月·作品高頻字",
                   link: "/zht/practice/char_ming_zhu",
+                },
+              ],
+            },
+            {
+              text: "配天之靈",
+              items: [
+                {
+                  text: "靈明字根",
+                  link: "/zht/practice/root_ling",
+                },
+                {
+                  text: "靈明單字",
+                  link: "/zht/practice/char_ling",
+                },
+                {
+                  text: "靈明·作品高頻字",
+                  link: "/zht/practice/char_ling_zhu",
                 },
               ],
             },

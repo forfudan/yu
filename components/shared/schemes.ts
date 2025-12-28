@@ -14,6 +14,7 @@ export interface SearchScheme extends BaseScheme {
     supplement: boolean
     ming: boolean
     wafel?: boolean
+    ling?: boolean
 }
 
 export interface ZigenScheme extends BaseScheme {
@@ -24,15 +25,6 @@ export interface ZigenScheme extends BaseScheme {
 // 統一的方案配置
 export const SCHEMES: SearchScheme[] = [
     {
-        id: 'joy',
-        name: '卿雲',
-        description: '卿雲爛兮糾縵縵兮',
-        chaifenUrl: '/chaifen.csv',
-        zigenUrl: '/zigen-joy.csv',
-        supplement: false,
-        ming: false
-    },
-    {
         id: 'light',
         name: '光華',
         description: '日月光華旦復旦兮',
@@ -42,12 +34,31 @@ export const SCHEMES: SearchScheme[] = [
         ming: false
     },
     {
+        id: 'wafel',
+        name: '吉旦餅',
+        description: 'Wafel·華夫·三碼方案',
+        chaifenUrl: '/chaifen.csv',
+        zigenUrl: '/zigen-wafel.csv',
+        supplement: false,
+        ming: false,
+        wafel: true
+    },
+    {
         id: 'star',
         name: '星陳',
         description: '明明上天爛然星陳',
         chaifenUrl: '/chaifen.csv',
         zigenUrl: '/zigen-star.csv',
         supplement: true,
+        ming: false
+    },
+    {
+        id: 'joy',
+        name: '卿雲',
+        description: '卿雲爛兮糾縵縵兮',
+        chaifenUrl: '/chaifen.csv',
+        zigenUrl: '/zigen-joy.csv',
+        supplement: false,
         ming: false
     },
     {
@@ -60,14 +71,14 @@ export const SCHEMES: SearchScheme[] = [
         ming: true
     },
     {
-        id: 'wafel',
-        name: '吉旦餅',
-        description: 'Wafel·華夫·三碼方案',
+        id: 'ling',
+        name: '靈明',
+        description: '明明上天配天之靈',
         chaifenUrl: '/chaifen.csv',
-        zigenUrl: '/zigen-wafel.csv',
+        zigenUrl: '/zigen-ling.csv',
         supplement: false,
         ming: false,
-        wafel: true
+        ling: true
     },
 ]
 
@@ -81,4 +92,4 @@ export const ZIGEN_SCHEMES: ZigenScheme[] = SCHEMES.map(scheme => ({
 }))
 
 // 默認方案
-export const DEFAULT_SCHEME = 'star'
+export const DEFAULT_SCHEME = 'ling'

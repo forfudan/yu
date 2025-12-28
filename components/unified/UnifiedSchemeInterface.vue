@@ -34,10 +34,23 @@ const columnMinWidth = computed(() => {
     switch (activeScheme.value) {
         case 'ming':
             return '1.0rem'
+        case 'ling':
+            return '1.0rem'
         default:
             return '1.0rem'
     }
 })
+
+// 根據方案決定始終顯示的字根
+const alwaysVisibleZigens = computed(() => {
+    switch (activeScheme.value) {
+        case 'ling':
+            return '廾スマ 乚 冫虍 乀龵用 巴   䒑 氵 ⺈肀 ⺌⺮ ⺧'
+        default:
+            return ''
+    }
+})
+
 
 // 方案切換處理
 function handleSchemeChange(schemeId: string) {
@@ -80,7 +93,8 @@ function handleSchemeChange(schemeId: string) {
 
         <!-- 字根圖組件 -->
         <div class="zigen-section mt-8">
-            <ZigenMap :default-scheme="activeScheme" :column-min-width="columnMinWidth" />
+            <ZigenMap :default-scheme="activeScheme" :column-min-width="columnMinWidth"
+                :always-visible-zigens="alwaysVisibleZigens" />
         </div>
     </div>
 </template>
@@ -88,7 +102,7 @@ function handleSchemeChange(schemeId: string) {
 <style scoped>
 .unified-scheme-interface {
     width: 100%;
-    max-width: 56rem;
+    max-width: 66rem;
     margin: 0 auto;
 }
 
@@ -98,6 +112,9 @@ function handleSchemeChange(schemeId: string) {
     padding: 1.5rem;
     margin-bottom: 2rem;
     border: 1px solid var(--vp-c-divider);
+    max-width: 56rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .scheme-header-row {

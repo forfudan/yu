@@ -26,10 +26,8 @@ const p = defineProps<{
     chaifenMap: ChaifenMap,
     /** 練習模式 */
     mode: 'c' | 'g' | 'b',
-    /** 是否顯示補充，僅對單字練習有效 */
-    supplement?: boolean,
-    /** 是否顯示拆分名詞，僅對單字練習有效 */
-    ming?: boolean,
+    /** 編碼規則，可選值: joy, light, star, ming, wafel, ling */
+    rule?: string,
     /** 是否為字頻序 */
     isFrequencyOrder?: boolean,
     /** 排序切換回調 */
@@ -38,7 +36,7 @@ const p = defineProps<{
     onReset?: () => void
 }>()
 
-const { name, cardGroups, mode, supplement, ming, isFrequencyOrder, onToggleSort, onReset } = p;
+const { name, cardGroups, mode, rule, isFrequencyOrder, onToggleSort, onReset } = p;
 
 console.log(`載入分組練習會話: ${name}`);
 
@@ -516,7 +514,7 @@ onBeforeUnmount(() => {
                     <span>已練習: {{ practiceProgress.current }} / {{ practiceProgress.total }} ({{
                         practiceProgress.percentage }}%) | 已掌握: {{ practiceProgress.mastered }}</span>
                     <span v-if="wrongInputCount > 0" class="text-red-600 dark:text-red-400">錯誤次數: {{ wrongInputCount
-                        }}</span>
+                    }}</span>
                 </div>
                 <div :class="[
                     'w-full bg-gray-200 dark:bg-gray-700 rounded-full',

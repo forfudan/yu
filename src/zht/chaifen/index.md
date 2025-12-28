@@ -8,7 +8,7 @@ import Search from '@/search/OptimizedFetchSearch.vue'
 # 星陳拆分查詢
 
 <div class="zigen-font">
-<Search chaifenUrl="/chaifen.csv" zigenUrl="/zigen-star.csv" :supplement="true" />
+<Search chaifenUrl="/chaifen.csv" zigenUrl="/zigen-star.csv" rule="star" />
 </div>
 
 ::: tip 提示

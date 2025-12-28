@@ -1,3 +1,14 @@
+/**
+ * share.ts - 搜索和訓練組件共享工具函數
+ * 
+ * Modification History:
+ * - 2024-03-27 by 朱複丹: 初始化倉庫，創建共享工具函數
+ * - 2024-03-27 by 朱複丹: 添加 supplement 開關以啟用補碼功能
+ * - 2025-08-13 by 朱複丹: 為日月增加拆分查詢，添加 ming 參數支持
+ * - 2025-12-17 by 朱複丹: 增加靈明反查編碼邏輯，支持主根（兩碼字根）判斷和大碼大寫
+ * - 2025-12-17 by 朱複丹: 重構參數系統，將 supplement, ming, wafel, ling 合併為單一 rule 參數
+ */
+
 import { withBase } from "vitepress";
 import ChaiDataLoader from "./ChaiDataLoader";
 export let cache: Record<string, object> = {}
@@ -22,10 +33,101 @@ export type ZigenMap = Map<string, Zigen>
 export type ChaifenMap = Map<string, Chaifen>
 
 /** 根據拆分表生成編碼 */
-export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, supplement: boolean, ming: boolean, wafel?: boolean) {
+export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, rule: string) {
     const divisionArray = [...division]
 
-    if (ming) {
+    // 根據 rule 確定編碼規則
+    const supplement = rule === 'star' || rule === 'light'
+    const ming = rule === 'ming'
+    const wafel = rule === 'wafel'
+    const ling = rule === 'ling'
+
+    if (ling) {
+        // 靈明碼編碼邏輯
+        const lenRoots = divisionArray.length
+        const rootA = divisionArray[0]
+        const rootB = divisionArray[1] || ''
+        const rootC = divisionArray[2] || ''
+        const rootZ = divisionArray[lenRoots - 1]
+
+        // 提取各個字根的編碼
+        const getMa = (root: string) => zigenMap.get(root)?.ma || ''
+        const maA = getMa(rootA)
+        const maZ = getMa(rootZ)
+
+        // 判斷是否為主根（兩碼字根）
+        const isZhugen = (ma: string) => ma.length === 2
+
+        // 提取大碼、聲碼、韻碼
+        const getDama = (ma: string) => ma[0] || ''
+        const getShengma = (ma: string) => ma.length === 3 ? ma[1] : ''
+        const getYunma = (ma: string) => ma[ma.length - 1] || ''
+
+        const aIsZhugen = isZhugen(maA)
+        const zIsZhugen = isZhugen(maZ)
+
+        const aD = getDama(maA)
+        const aS = getShengma(maA)
+        const aY = getYunma(maA)
+        const bD = getDama(getMa(rootB))
+        const cD = getDama(getMa(rootC))
+        const zD = getDama(maZ)
+        const zS = getShengma(maZ)
+        const zY = getYunma(maZ)
+
+        let code = ''
+
+        if (aIsZhugen) {
+            // 首根是主根
+            if (lenRoots === 1) {
+                // 1根: AdAy
+                code = aD.toUpperCase() + aY
+            } else if (lenRoots === 2) {
+                // 2根: AdZd[Zs]Zy
+                if (zIsZhugen) {
+                    // 末根是主根: AdZdZy
+                    code = aD.toUpperCase() + zD.toUpperCase() + zY
+                } else {
+                    // 末根不是主根: AdZdZsZy
+                    code = aD.toUpperCase() + zD.toUpperCase() + zS + zY
+                }
+            } else if (lenRoots === 3) {
+                // 3根: AdBdZd[Zs][Zy]
+                if (zIsZhugen) {
+                    // 末根是主根: AdBdZdZy
+                    code = aD.toUpperCase() + bD.toUpperCase() + zD.toUpperCase() + zY
+                } else {
+                    // 末根不是主根: AdBdZdZs
+                    code = aD.toUpperCase() + bD.toUpperCase() + zD.toUpperCase() + zS
+                }
+            } else {
+                // 4+根: AdBdCdZd
+                code = aD.toUpperCase() + bD.toUpperCase() + cD.toUpperCase() + zD.toUpperCase()
+            }
+        } else {
+            // 首根不是主根
+            if (lenRoots === 1) {
+                // 1根: AdAsAy
+                code = aD.toUpperCase() + aS + aY
+            } else if (lenRoots === 2) {
+                // 2根: AdAsZd[Zs][Zy]
+                if (zIsZhugen) {
+                    // 末根是主根: AdAsZdZy
+                    code = aD.toUpperCase() + aS + zD.toUpperCase() + zY
+                } else {
+                    // 末根不是主根: AdAsZdZs
+                    code = aD.toUpperCase() + aS + zD.toUpperCase() + zS
+                }
+            } else {
+                // 3+根: AdAsBdZd
+                code = aD.toUpperCase() + aS + bD.toUpperCase() + zD.toUpperCase()
+            }
+        }
+
+        return code
+    }
+
+    else if (ming) {
         let result: string[] = []
         const firstZigen = divisionArray[0]
         const lastZigen = divisionArray[divisionArray.length - 1]

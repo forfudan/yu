@@ -25,14 +25,12 @@ const p = defineProps<{
     name: string,
     /** 字根映射的csv文件URL */
     zigenUrl: string
-    /** 練習的範圍，從第幾條到第幾條，不填則是全部 */
+    /** 練習的範圍，從第幾條到第幾條，不填则是全部 */
     range?: [start: number, end: number]
     /** 字根練習的模式 */
     mode: 'A' | 'a' | 'both'
-    /** 是否顯示補充，保持向後兼容 */
-    supplement?: boolean
-    /** 是否顯示拆分名詞，保持向後兼容 */
-    ming?: boolean
+    /** 編碼規則，可選值: joy, light, star, ming, wafel, ling */
+    rule?: string
 }>()
 
 let cardsName = p.name + '_zigen_grouped'
@@ -76,7 +74,7 @@ function saveSortOrder() {
 const highFreqZigens = ['口', '一', '月', '丶', '日', '人', '亻', '扌', '白', '土', '丷', '二', '又', '丿', '宀', '木', '尚', '辶', '小', '冖', '厶', '心', '氵', '八', '女', '大', '艹', '𠂇', '匕', '寸', '也', '乙', '戈', '目', '讠', '不', '龰', '阝', '竹', '了', '十', '夂', '王', '刂', '儿', '力', '凵', '冂', '子', '斤', '火', '米', '丁', '彐', '纟', '文', '立', '士', '夕', '乂', '门', '卜', '自', '尤', '彳', '羊', '止', '禾', '贝', '尸', '工', '乚', '上', '囗', '至', '手', '𬺰', '艮', '车', '石', '田', '己', '几', '牛', '见', '走', '甲', '且', '彡', '犬', '巾', '西', '方', '刀', '殳', '七', '弓', '巴', '矢', '示']
 
 // 低頻字根（排到最後）
-const lowFreqZigens = ['鳥', '烏', '魚', '馬', '風', '來', '車', '長', '門', '鬥', '齒', '飛', '見', '貝', '鹵', '僉', '韋', '咼', '黽']
+const lowFreqZigens = ['鳥', '烏', '魚', '馬', '風', '來', '車', '長', '門', '鬥', '齒', '飛', '見', '貝', '鹵', '僉', '咼']
 
 const getCode = (ma: string) => {
     switch (p.mode) {
@@ -232,7 +230,7 @@ onMounted(async () => {
     loadSortOrder()
 
     // 获取方案对应的拆分文件URL
-    const BaseSchemes = ['joy', 'light', 'star', 'ming', 'wafel'];
+    const BaseSchemes = ['joy', 'light', 'star', 'ming', 'wafel', 'ling'];
     const isBase = BaseSchemes.includes(p.name);
     const chaifenUrl = isBase ? '/chaifen.json' : `/chaifen-${p.name}.json`;
 
@@ -261,8 +259,8 @@ onMounted(async () => {
 <template>
     <div v-if="cardGroups && chaifenMap">
         <TrainCardGroup :name="cardsName" :card-groups="cardGroups" :chaifen-map="chaifenMap" mode="g"
-            :supplement="p.supplement ?? false" :ming="p.ming ?? false" :is-frequency-order="isFrequencyOrder"
-            :on-toggle-sort="toggleSortOrder" :on-reset="resetTraining" />
+            :rule="p.rule || p.name" :is-frequency-order="isFrequencyOrder" :on-toggle-sort="toggleSortOrder"
+            :on-reset="resetTraining" />
     </div>
     <h2 class="text-gray-700 dark:text-gray-300 text-center" v-else>
         下載資料中……

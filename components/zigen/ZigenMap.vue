@@ -27,10 +27,14 @@ const props = defineProps<{
     defaultScheme?: string
     columnMinWidth?: string
     zigenFontClass?: string // 自定義字根字體類名
+    alwaysVisibleZigens?: string // 始終顯示的字根列表（不會被隱藏）
 }>()
 
 // 字根字體類名，默認為 'zigen-font'
 const zigenFontClass = computed(() => props.zigenFontClass || 'zigen-font')
+
+// 為始終顯示的字根列表設定默認值
+const alwaysVisibleZigens = computed(() => props.alwaysVisibleZigens || '冫')
 
 const columnMinWidth = toRef(props, 'columnMinWidth')
 
@@ -110,7 +114,7 @@ const flatKeyList = computed(() => {
 
 // 宇浩輸入法系列方案
 // 共用拆分哦！
-const BaseSchemes = ['joy', 'light', 'star', 'ming', 'wafel'];
+const BaseSchemes = ['joy', 'light', 'star', 'ming', 'wafel', 'ling'];
 
 // 獲取方案對應的文件URL
 function getSchemeUrls(schemeId: string) {
@@ -134,7 +138,7 @@ const cachedExampleChars = ref<Map<string, Set<string>>>(new Map());
 const cachedCheckedCount = ref<number>(0);
 // 固定彈窗狀態
 const pinnedZigen = ref<string | null>(null);
-const pinnedZigenInfo = ref<{ visible: Array<{ font: string, code: string }>, hidden: Array<{ font: string, code: string }> } | null>(null);
+const pinnedZigenInfo = ref<{ visible: Array<{ font: string, code: string, pinyin?: string }>, hidden: Array<{ font: string, code: string, pinyin?: string }> } | null>(null);
 const pinnedZigenExampleChars = ref<{ [zigenFont: string]: string[] }>({});
 const isPinned = ref(false);
 
@@ -200,14 +204,17 @@ const zigenByKey = computed(() => {
         // 检查是否已经有相同编码的字根在visible中
         const existingWithSameCode = result[firstLetter].visible.find(item => item.code === code);
 
+        // 检查当前字根是否在始終顯示列表中
+        const shouldAlwaysShow = alwaysVisibleZigens.value.includes(font);
+
         if (!existingWithSameCode) {
             // 第一个具有此编码的字根，放在visible中
             result[firstLetter].visible.push({ font, code });
-        } else if (isPrevSameCodeAndKey) {
-            // 只有当前字根与前一个字根编码相同且连续时，才放在hidden中
+        } else if (isPrevSameCodeAndKey && !shouldAlwaysShow) {
+            // 只有当前字根与前一个字根编码相同且连续时，且不在始終顯示列表中，才放在hidden中
             result[firstLetter].hidden.push({ font, code });
         } else {
-            // 编码相同但不连续，作为新的visible字根显示
+            // 编码相同但不连续，或在始終顯示列表中，作为新的visible字根显示
             result[firstLetter].visible.push({ font, code });
         }
     }
@@ -257,15 +264,18 @@ const sortedZigenByKey = computed(() => {
         // 檢查是否已經有相同編碼的字根在當前按鍵下
         const existingWithSameCode = result[firstLetter].find(item => item.code === code && !item.isHidden);
 
+        // 检查当前字根是否在始終顯示列表中
+        const shouldAlwaysShow = alwaysVisibleZigens.value.includes(font);
+
         let isHidden = false;
         if (!existingWithSameCode) {
             // 第一個具有此編碼的字根，顯示為可見
             isHidden = false;
-        } else if (isPrevSameCodeAndKey) {
-            // 只有當前字根與前一個字根編碼相同且連續時，才標記為隱藏
+        } else if (isPrevSameCodeAndKey && !shouldAlwaysShow) {
+            // 只有當前字根與前一個字根編碼相同且連續時，且不在始終顯示列表中，才標記為隱藏
             isHidden = true;
         } else {
-            // 編碼相同但不連續，作為新的可見字根顯示
+            // 編碼相同但不連續，或在始終顯示列表中，作為新的可見字根顯示
             isHidden = false;
         }
 
@@ -522,14 +532,15 @@ async function exportZigenMap() {
 
 // 輔助函數：找到所有相同完整編碼的字根
 function findSameCodeZigens(targetFont: string, targetFullCode: string) {
-    const visible: Array<{ font: string, code: string }> = [];
-    const hidden: Array<{ font: string, code: string }> = [];
+    const visible: Array<{ font: string, code: string, pinyin?: string }> = [];
+    const hidden: Array<{ font: string, code: string, pinyin?: string }> = [];
 
     if (!zigenMap.value || !targetFullCode) return { visible, hidden };
 
     for (const [key, data] of zigenMap.value) {
         const font = data.font;
         const ma = data.ma?.trim();
+        const pinyin = data.pinyin?.trim();
 
         if (!ma || !font || font === null || font === undefined) continue;
 
@@ -537,10 +548,10 @@ function findSameCodeZigens(targetFont: string, targetFullCode: string) {
         if (ma === targetFullCode) {
             if (font === targetFont) {
                 // 當前懸停的字根放在最前面
-                visible.unshift({ font, code: ma }); // 使用完整編碼顯示
+                visible.unshift({ font, code: ma, pinyin }); // 使用完整編碼顯示
             } else {
                 // 其他相同完整編碼的字根
-                hidden.push({ font, code: ma }); // 使用完整編碼顯示
+                hidden.push({ font, code: ma, pinyin }); // 使用完整編碼顯示
             }
         }
     }
@@ -576,7 +587,7 @@ onMounted(() => {
         </div>
 
         <!-- 使用提示和控制按鈕 -->
-        <div v-if="!isLoading" class="flex justify-between items-center mb-4">
+        <div v-if="!isLoading" class="flex justify-between items-center mb-4 px-5">
             <div class="text-sm text-gray-500 dark:text-gray-400">
                 點擊字根可查看例字
             </div>
@@ -754,33 +765,47 @@ onMounted(() => {
                     <div class="zigen-rows text-indigo-800 dark:text-indigo-300">
                         <!-- 可見字根 -->
                         <div v-for="(zigen, index) in pinnedZigenInfo.visible" :key="`pinned-visible-${index}`"
-                            class="zigen-row-inline">
-                            <div class="zigen-header-inline current-zigen">
-                                <span :class="zigenFontClass">{{ zigen.font }}</span>
+                            class="zigen-row-wrapper">
+                            <div class="zigen-row-inline">
+                                <div class="zigen-header-inline current-zigen">
+                                    <span :class="zigenFontClass">{{ zigen.font }}</span>
+                                </div>
+                                <!-- 該字根的例字 - 直接跟在字根後面 -->
+                                <div v-if="pinnedZigenExampleChars[zigen.font]?.length > 0"
+                                    class="example-chars-same-line">
+                                    <span v-for="char in pinnedZigenExampleChars[zigen.font].slice(0, MAX_EXAMPLES)"
+                                        :key="char" class="example-char zigen-font">{{ char }}</span>
+                                </div>
+                                <div v-else class="example-chars-same-line">
+                                    <span class="loading-text">正在加載...</span>
+                                </div>
                             </div>
-                            <!-- 該字根的例字 - 直接跟在字根後面 -->
-                            <div v-if="pinnedZigenExampleChars[zigen.font]?.length > 0" class="example-chars-same-line">
-                                <span v-for="char in pinnedZigenExampleChars[zigen.font].slice(0, MAX_EXAMPLES)"
-                                    :key="char" class="example-char zigen-font">{{ char }}</span>
-                            </div>
-                            <div v-else class="example-chars-same-line">
-                                <span class="loading-text">正在加載...</span>
+                            <!-- 顯示 pinyin 信息 -->
+                            <div v-if="zigen.pinyin" class="pinyin-info">
+                                {{ zigen.pinyin }}
                             </div>
                         </div>
 
                         <!-- 隱藏字根 -->
                         <div v-for="(zigen, index) in pinnedZigenInfo.hidden" :key="`pinned-hidden-${index}`"
-                            class="zigen-row-inline">
-                            <div class="zigen-header-inline other-zigen">
-                                <span :class="zigenFontClass">{{ zigen.font }}</span>
+                            class="zigen-row-wrapper">
+                            <div class="zigen-row-inline">
+                                <div class="zigen-header-inline other-zigen">
+                                    <span :class="zigenFontClass">{{ zigen.font }}</span>
+                                </div>
+                                <!-- 該字根的例字 - 直接跟在字根後面 -->
+                                <div v-if="pinnedZigenExampleChars[zigen.font]?.length > 0"
+                                    class="example-chars-same-line">
+                                    <span v-for="char in pinnedZigenExampleChars[zigen.font].slice(0, 8)" :key="char"
+                                        class="example-char zigen-font">{{ char }}</span>
+                                </div>
+                                <div v-else class="example-chars-same-line">
+                                    <span class="loading-text">正在加載...</span>
+                                </div>
                             </div>
-                            <!-- 該字根的例字 - 直接跟在字根後面 -->
-                            <div v-if="pinnedZigenExampleChars[zigen.font]?.length > 0" class="example-chars-same-line">
-                                <span v-for="char in pinnedZigenExampleChars[zigen.font].slice(0, 8)" :key="char"
-                                    class="example-char zigen-font">{{ char }}</span>
-                            </div>
-                            <div v-else class="example-chars-same-line">
-                                <span class="loading-text">正在加載...</span>
+                            <!-- 顯示 pinyin 信息 -->
+                            <div v-if="zigen.pinyin" class="pinyin-info">
+                                {{ zigen.pinyin }}
                             </div>
                         </div>
                     </div>
@@ -1233,15 +1258,26 @@ onMounted(() => {
 }
 
 /* 新的行內佈局樣式 - 字根和例字在同一行 */
+.zigen-row-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 0.5rem;
+}
+
 .zigen-row-inline {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 0.75rem;
     padding: 0.5rem 0.75rem;
-    border-radius: 0.5rem;
+    border-radius: 0.5rem 0.5rem 0 0;
     background: var(--fallback-b2, oklch(var(--b2)/var(--tw-bg-opacity)));
     border: 1px solid var(--fallback-bc, oklch(var(--bc)/0.1));
+}
+
+.zigen-row-wrapper:not(:has(.pinyin-info)) .zigen-row-inline {
+    border-radius: 0.5rem;
 }
 
 .zigen-header-inline {
@@ -1504,5 +1540,19 @@ onMounted(() => {
 
 .desktop-list-layout .mobile-key-desc {
     font-size: 0.875rem;
+}
+
+/* Pinyin 信息样式 */
+.pinyin-info {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: var(--fallback-bc, oklch(var(--bc)/0.7));
+    background: var(--fallback-b3, oklch(var(--b3)/0.5));
+    border: 1px solid var(--fallback-bc, oklch(var(--bc)/0.1));
+    border-top: none;
+    border-radius: 0 0 0.5rem 0.5rem;
+    font-style: normal;
 }
 </style>
