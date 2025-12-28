@@ -53,6 +53,7 @@ paths_of_docs = [
     # 靈明
     "/learn/roots_ling.md",
     "/learn/chars_ling.md",
+    "/learn/quick_ling.md",
     # 例子
     "/learn/examples.md",
     "/learn/frequent.md",
