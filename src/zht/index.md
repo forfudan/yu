@@ -19,7 +19,7 @@ hero:
       link: /zht/learn/division
     - theme: alt
       text: 練習
-      link: /zht/practice/root_ling
+      link: /zht/practice/root
     - theme: alt
       text: 安裝
       link: /zht/install
@@ -37,7 +37,7 @@ import UnifiedSchemeInterface from '@/unified/UnifiedSchemeInterface.vue'
 </script>
 
 <div class="zigen-font">
-<UnifiedSchemeInterface defaultScheme="ling" />
+<UnifiedSchemeInterface defaultScheme="star" />
 </div>
 
 ::: tip 致有緣人
