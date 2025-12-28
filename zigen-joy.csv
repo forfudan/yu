@@ -1,12 +1,14 @@
 font,ma,pinyin
 二,Ae,èr -> e
+⺀,Ae,
+,Ae,
 冫,Ae,èr -> e
 甫,Af,Fǔ -> f
 干,Ag,Gān -> g
 用,Ai,yòng = iòng -> i
 甲,Aj,Jiā -> j
 ,Ak,Kuǎ -> k
-,Ak,Kuǎ -> k
+,Ak,
 木,Am,Mù -> m
 朩,Am,
 匕,Bb,Bi -> b
@@ -36,13 +38,16 @@ font,ma,pinyin
 ,Dc,
 卄,Dc,
 高,Dg,Gāo -> g
+,Dg,
 ,Dg,
+,Dg,
 又,Di,yòu = iòu -> i
 マ,Di,
 ス,Di,
 见,Dj,Jiàn -> j
+,Dl,Luó -> l
 厶,Dm,Mǒu -> m
-,Dm,Mǒu -> m
+,Dm,
 廾,Dn,Niàn -> n ㊟生僻音
 卅,Ds,Sà -> s
 卌,Ds,
@@ -67,7 +72,6 @@ font,ma,pinyin
 且,Eq,Qiě -> q
 ,Eq,
 亻,Er,rén -> r
-水,Es,SHuǐ -> s
 文,Ew,wén -> w
 贝,Fb,Bèi -> b
 巛,Fc,CHuān -> c
@@ -109,7 +113,7 @@ font,ma,pinyin
 勹,Ib,Bāo -> b
 ,Ib,
 虫,Ic,Chóng -> c
-乀,Id,Diǎn -> d ㊟同丶
+乀,Id,
 丶,Id,
 方,If,Fāng -> f
 艮,Ig,Gěn -> g
@@ -128,19 +132,17 @@ font,ma,pinyin
 屮,Jc,Cǎo -> c
 臣,Jc,CHén -> c
 刀,Jd,Dāo -> d
-⺀,Je,èr -> e
-,Je,èr -> e
 丱,Jg,Guān -> g
 弓,Jg,Gōng -> g
 幺,Ji,yāo = iāo -> i
 ,Ji,yí = í
-,Ji,yí = í
+,Ji,
 丩,Jj,Jiū -> j
 ,Jj,
 卯,Jm,Mǎo -> m
 千,Jq,Qiān -> q
 日,Jr,rì -> r
-,Jr,rì -> r ㊟同日歸併
+,Jr,
 ,Jr,
 山,Js,SHān -> s
 ㄩ,Jv,Ø -> v ㊟無讀音或生僻部首
@@ -176,6 +178,7 @@ font,ma,pinyin
 耳,Le,ěr -> e
 酉,Li,yǒu = iǒu -> i
 斤,Lj,Jīn -> j
+了,Ll,Le -> l
 世,Ls,SHì -> s
 丨,Ls,SHù -> s ㊟同豎
 〣,Ls,
@@ -210,7 +213,7 @@ font,ma,pinyin
 工,Ng,Gōng -> g
 曲,Nq,Qǔ -> q
 壬,Nr,rén -> r
-巳,Ns,Sì -> s
+水,Ns,SHuǐ -> s
 氵,Ns,SHuǐ -> s
 瓦,Nw,wǎ -> w
 心,Nx,Xīn -> x
@@ -231,6 +234,7 @@ font,ma,pinyin
 上,Os,SHàng -> s
 ,Os,
 丄,Os,
+巳,Os,Sì -> s
 纟,Os,Sī -> s
 ,Os,
 魚,Ov,yú = ü -> v
@@ -285,15 +289,12 @@ font,ma,pinyin
 几,Sj,Jǐ -> j
 丂,Sk,Kào -> k
 力,Sl,Lì -> l
-,Sl,Luó -> l
 目,Sm,Mù -> m
 僉,Sq,Qiān -> q
 殳,Ss,SHǔ -> s
 田,St,Tián -> t
 雨,Sv,yǔ = ǚ -> v
 ,Sv,Ø -> v ㊟無讀音或生僻部首
-,Sv,Ø -> v ㊟無讀音或生僻部首
-,Sv,
 匚,Tf,Fāng -> f
 虎,Th,Hǔ -> h
 ,Th,
@@ -319,7 +320,7 @@ font,ma,pinyin
 身,Us,SHēn -> s
 饣,Us,SHi -> s
 ,Uv,Ø -> v ㊟無讀音或生僻部首
-,Uv,Ø -> v ㊟無讀音或生僻部首
+,Uv,
 亡,Uw,wáng -> w
 至,Uz,ZHì -> z
 厂,Vc,CHǎng -> c
@@ -330,7 +331,6 @@ font,ma,pinyin
 ,Vj,
 肀,Vj,
 钅,Vj,Jīn -> J
-了,Vl,Le -> l
 麻,Vm,Má -> m
 食,Vs,SHí -> s
 禺,Vv,yǔ = ǚ -> v
@@ -356,7 +356,7 @@ font,ma,pinyin
 黑,Xh,Hēi -> h
 牙,Xi,yá = iá -> i
 皿,Xm,Mǐn -> m
-罒,Xm,wǎng -> w
+罒,Xm,
 鸟,Xn,Niǎo -> n
 ,Xn,
 乌,Xw,wū -> w

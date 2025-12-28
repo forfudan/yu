@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-16T22:12:45.698Z",
+  "timestamp": "2025-12-28T15:38:16.920Z",
   "version": "0.0.1",
   "node_version": "v18.20.8",
   "optimized_files": [
@@ -7,11 +7,13 @@
     "chaifen-tianma.json",
     "chaifen_tw.json",
     "chaifen_zhu.json",
-    "mabiao-ming.json"
+    "mabiao-ming.json",
+    "mabiao-ling.json"
   ],
   "compression_stats": {
     "chaifen.csv": "2.79MB → 883KB (69.1% reduction)",
     "chaifen-tianma.csv": "2.44MB → 796KB (68.2% reduction)",
-    "mabiao-ming.txt": "2.8MB → 1.5MB (37.4% reduction)"
+    "mabiao-ming.txt": "2.8MB → 1.5MB (37.4% reduction)",
+    "mabiao-ling.txt": "Processing..."
   }
 }
