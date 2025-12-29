@@ -16,6 +16,6 @@ import CharTrain from "@/train/CharTrain.vue"
   :range="[0,500]"
   rule="ling"
   mabiaoUrl="/mabiao-ling.txt"
-  :popLevel="2"
+  :popLevel="3"
 />
 </div>
