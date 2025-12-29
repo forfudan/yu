@@ -95,7 +95,6 @@ gk	功能
 gl	阴影
 gm	随便
 gn	除了
-gq	其他
 gs	能力
 gt	男人
 gv	阻止
@@ -111,7 +110,7 @@ hk	铁路
 hl	钥
 hn	银行
 hp	焦虑
-hq	错误
+hq	其他
 hr	时候
 hs	社会
 hv	孑
@@ -539,6 +538,7 @@ hbl	鬒
 hdd	铝
 hfh	越来越
 hgb	鹒
+hgh	锕
 hgs	廒
 hhg	黪
 hjg	锍
@@ -654,7 +654,8 @@ ppb	罃
 prj	勻
 psc	磑
 psd	𥕢
-psg	磡
+psg	磣
+psh	磡
 psj	碸
 psk	硨
 psl	碘
@@ -676,6 +677,7 @@ qfq	荊
 qfv	䓣
 qgv	刭
 qhq	蕻
+qhw	芤
 qhy	鄚
 qkb	蘖
 qkh	葖
@@ -920,11 +922,11 @@ fse	她
 fwi	婚
 fya	天
 gme	阵
-gqu	基
 gsi	能
 hgi	應
 hgo	度
 hgu	底
+hqu	基
 hra	影
 hre	明
 hro	最
@@ -1147,7 +1149,6 @@ bfvt	蛷
 bfye	蝢
 bfye	頣
 bga	龟
-bgdj	蟖
 bge	蚌
 bggg	蠝
 bggn	蟣
@@ -1157,7 +1158,6 @@ bgle	蝟
 bgma	螞
 bgmn	蛑
 bgo	虹
-bgqi	蜞
 bgxu	蝶
 bgyi	螺
 bgyo	蚰
@@ -1167,6 +1167,7 @@ bhcj	蝷
 bhcl	蠊
 bhco	蛴
 bhdi	虰
+bhdj	蟖
 bhdn	鹤
 bhdo	蚵
 bhfk	蝪
@@ -1186,6 +1187,7 @@ bhpb	蟭
 bhpk	蜴
 bhpt	蠍
 bhpw	蝎
+bhqi	蜞
 bhqp	蟅
 bhri	蚎
 bhrm	蜢
@@ -2180,7 +2182,6 @@ cgcn	鐨
 cgco	绋
 cgco	鉘
 cgdb	鏹
-cgdj	鐁
 cgdo	绐
 cgdo	鈶
 cgdx	髞
@@ -2235,7 +2236,6 @@ cgo	红
 cgo	釭
 cgpe	鈗
 cgpk	髝
-cgqi	錤
 cgql	兾
 cgrq	敲
 cgsb	亴
@@ -2251,7 +2251,6 @@ cgvi	銾
 cgvy	鍥
 cgwh	稁
 cgwh	稾
-cgwi	鍖
 cgxu	槀
 cgxu	鍱
 cgyi	缧
@@ -2269,6 +2268,7 @@ chcl	亸
 chcn	鐛
 chdd	鎶
 chdi	釘
+chdj	鐁
 chdl	嚲
 chdn	鹑
 chdo	鈳
@@ -2313,6 +2313,7 @@ chpb	烹
 chpb	鐎
 chpk	錫
 chpw	鍻
+chqi	錤
 chql	鏎
 chql	鑛
 chqp	鏣
@@ -2333,6 +2334,7 @@ chvi	享
 chvi	釨
 chwe	纹
 chwe	鈫
+chwi	鍖
 chwn	鎸
 chxl	缠
 chxu	錁
@@ -2521,7 +2523,6 @@ clff	麠
 clfi	鉟
 clga	釬
 clgd	麛
-clgq	麒
 clgs	銩
 clgs	鈆
 clgu	鄜
@@ -2530,6 +2531,7 @@ clgx	鎓
 clhd	麐
 clhh	鑂
 clhj	麝
+clhq	麒
 clhq	錑
 clhu	鈩
 cli	針
@@ -3117,7 +3119,6 @@ csgr	豓
 csgr	鎑
 csgs	鉣
 csgu	邖
-csgw	嵁
 csgy	岫
 csgy	峀
 cshb	嵻
@@ -3140,6 +3141,7 @@ cshr	鑥
 csht	崑
 csht	嵚
 csht	崐
+cshw	嵁
 cshw	嵑
 cshy	岈
 csi	巳
@@ -3759,7 +3761,6 @@ dfyd	吴
 dga	黾
 dgcb	唝
 dgco	咈
-dgdj	嘶
 dgdo	咍
 dgfo	喂
 dggb	嘒
@@ -3779,13 +3780,11 @@ dgmn	哞
 dgnb	嗊
 dgo	叿
 dgpe	吮
-dgqi	唭
 dgse	呻
 dgve	唨
 dgvl	囓
 dgvy	喫
 dgvy	噄
-dgwi	啿
 dgxu	喋
 dgya	吆
 dha	吓
@@ -3793,6 +3792,7 @@ dhbl	喅
 dhbl	嘃
 dhco	哜
 dhdi	叮
+dhdj	嘶
 dhdo	呵
 dhdq	嘬
 dhfi	呾
@@ -3807,6 +3807,7 @@ dhni	嗮
 dhpb	噍
 dhpw	喝
 dhqa	吠
+dhqi	唭
 dhql	嗶
 dhql	嚝
 dhqp	嗻
@@ -3822,6 +3823,7 @@ dhvi	吇
 dhvo	唗
 dhwe	呅
 dhwi	吼
+dhwi	啿
 dhwo	遭
 dhya	呀
 djbh	職
@@ -4928,7 +4930,6 @@ ffvj	姉
 ffvu	娖
 ffye	頙
 ffyt	婖
-fgdj	厮
 fgdo	始
 fge	妦
 fgff	畺
@@ -4949,12 +4950,10 @@ fgml	嫷
 fgmx	媤
 fgmx	恵
 fgo	妅
-fgqi	娸
 fgrk	娉
 fgrr	嫋
 fgse	妽
 fgu	邚
-fgwi	媅
 fgxu	媟
 fgyi	嫘
 fgyo	妯
@@ -4968,6 +4967,7 @@ fhcl	嬚
 fhcy	颏
 fhdi	厅
 fhdi	奵
+fhdj	厮
 fhdo	妸
 fhfh	皕
 fhfi	妲
@@ -5004,6 +5004,7 @@ fhns	餍
 fhpb	嫶
 fhpg	魇
 fhqa	厌
+fhqi	娸
 fhqp	嫬
 fhri	百
 fhrm	媪
@@ -5013,6 +5014,7 @@ fhtt	婫
 fhvd	刻
 fhvi	好
 fhwe	妏
+fhwi	媅
 fhxj	厣
 fhxm	靥
 fhxu	婐
@@ -5555,8 +5557,6 @@ fvgi	跇
 fvgj	踌
 fvgj	踆
 fvgk	跩
-fvgq	踑
-fvgw	踸
 fvgx	蹀
 fvhc	跻
 fvhd	踮
@@ -5570,8 +5570,10 @@ fvhl	蹕
 fvhl	踶
 fvhp	蹠
 fvhq	踱
+fvhq	踑
 fvhs	躔
 fvhv	跿
+fvhw	踸
 fvhx	蹋
 fvhx	蹂
 fvhx	踝
@@ -5852,7 +5854,6 @@ fygg	姨
 fygi	袣
 fygk	襂
 fygk	袎
-fygq	褀
 fygt	褦
 fygx	褋
 fygy	袖
@@ -5869,6 +5870,7 @@ fyhl	褆
 fyhl	奣
 fyhl	襅
 fyhm	裤
+fyhq	褀
 fyhq	襊
 fyhr	衵
 fyhr	褞
@@ -6309,7 +6311,6 @@ gmgm	騦
 gmgm	騳
 gmgp	騞
 gmgp	馻
-gmgq	騏
 gmgr	騁
 gmgs	墮
 gmgt	隳
@@ -6324,6 +6325,7 @@ gmhi	騅
 gmhl	騠
 gmhl	駻
 gmhl	驆
+gmhq	騏
 gmhr	馹
 gmht	騉
 gmhw	馼
@@ -6493,29 +6495,7 @@ gpnm	陱
 gpo	阦
 gpsi	砉
 gpvd	剨
-gqbo	蜝
-gqdb	蟴
-gqdj	斯
 gqgo	陉
-gqi	其
-gqle	期
-gqle	朞
-gqmx	惎
-gqps	碁
-gqra	諅
-gqsu	基
-gqtq	欺
-gqvd	剘
-gqwi	甚
-gqwk	勘
-gqwk	尠
-gqwl	斟
-gqwl	卙
-gqwl	夦
-gqwm	戡
-gqwt	歁
-gqxu	棊
-gqyi	綦
 grco	阱
 grdo	阽
 grfm	隵
@@ -6721,7 +6701,6 @@ gygg	畿
 gygk	鲹
 gygm	鳃
 gygn	幾
-gygq	鲯
 gygu	邮
 gygx	鲽
 gygy	鲉
@@ -6733,6 +6712,7 @@ gyhj	鲥
 gyhl	鳙
 gyhl	鳀
 gyhq	鳗
+gyhq	鲯
 gyhr	鲁
 gyhr	鳁
 gyht	鲲
@@ -7011,7 +6991,6 @@ hgdm	廰
 hgfc	廲
 hgfj	廈
 hgfs	庑
-hggd	廝
 hggg	廕
 hggl	廙
 hggo	躬
@@ -7019,6 +6998,7 @@ hggs	広
 hggu	邝
 hggy	庙
 hggy	緳
+hghd	廝
 hghd	锕
 hghd	庁
 hghr	镥
@@ -7158,11 +7138,11 @@ hhgk	黝
 hhgk	黪
 hhgk	黲
 hhgu	铘
-hhgw	黮
 hhhi	雥
 hhhi	雦
 hhhq	默
 hhhr	锠
+hhhw	黮
 hhhx	雧
 hhi	锥
 hhi	雔
@@ -7333,6 +7313,9 @@ hptu	钓
 hpvd	劁
 hqa	犬
 hqbk	铹
+hqbo	蜝
+hqdb	蟴
+hqdj	斯
 hqgt	锚
 hqhb	飙
 hqhh	猋
@@ -7340,14 +7323,33 @@ hqhj	飆
 hqhq	镬
 hqhr	错
 hqhy	镆
+hqi	其
 hqkw	铓
+hqle	期
+hqle	朞
 hqly	锳
 hqmd	锘
+hqmx	惎
 hqo	隻
+hqps	碁
+hqra	諅
 hqrj	钳
 hqsk	铎
+hqsu	基
+hqtq	欺
 hqtu	钗
+hqvd	剘
+hqwi	甚
+hqwk	勘
+hqwk	尠
+hqwl	斟
+hqwl	卙
+hqwl	夦
+hqwm	戡
 hqwo	迖
+hqwt	歁
+hqxu	棊
+hqyi	綦
 hrbd	暲
 hrbh	暗
 hrbj	旯
@@ -7696,17 +7698,17 @@ hsgl	禩
 hsgm	禡
 hsgm	禗
 hsgn	禨
-hsgq	祺
 hsgs	神
-hsgs	禥
 hsgu	祁
 hsgy	禊
 hshd	禟
 hshf	禵
 hshk	禓
 hshl	禔
+hshq	祺
 hshr	锗
 hshs	祘
+hshs	禥
 hshx	祼
 hshx	禢
 hsi	示
@@ -8272,7 +8274,6 @@ jgnk	玅
 jgo	仜
 jgpe	充
 jgqa	弃
-jgqi	倛
 jgql	棄
 jgrk	俜
 jgrl	率
@@ -8281,9 +8282,7 @@ jgse	伸
 jgsi	仏
 jgta	亩
 jgta	佃
-jgtq	僛
 jgvy	偰
-jgwi	偡
 jgxu	偞
 jgya	玄
 jgyi	傫
@@ -8312,13 +8311,16 @@ jhnx	亰
 jhpb	僬
 jhpw	偈
 jhqa	伏
+jhqi	倛
 jhql	儣
 jhqv	儤
 jhrq	僈
 jhsa	仨
+jhtq	僛
 jhtt	倱
 jhvi	仔
 jhwe	伩
+jhwi	偡
 jhxf	裹
 jhxu	倮
 jhxx	傝
@@ -9618,7 +9620,6 @@ kqgm	獁
 kqgn	猕
 kqgo	径
 kqgp	狁
-kqgq	猉
 kqgy	猰
 kqhd	獝
 kqhf	狚
@@ -9631,6 +9632,7 @@ kqhl	猂
 kqhn	狲
 kqhq	獌
 kqhq	犾
+kqhq	猉
 kqhr	猛
 kqhr	徣
 kqhs	狋
@@ -11161,8 +11163,8 @@ mfnd	旂
 mfnd	旇
 mfnf	旅
 mfnf	旜
-mfng	旗
 mfng	旛
+mfnh	旗
 mfnh	斿
 mfnh	旚
 mfnh	旝
@@ -11236,7 +11238,6 @@ mgrr	愵
 mgsb	瓥
 mgvd	划
 mgwb	臧
-mgwi	愖
 mgwi	戉
 mgxu	惵
 mgyd	奚
@@ -11276,6 +11277,7 @@ mhtt	惃
 mhvi	孚
 mhwe	忟
 mhwi	乳
+mhwi	愖
 mhxu	惈
 mhyu	忬
 mi	七
@@ -12093,9 +12095,7 @@ nfxw	途
 nfye	顩
 ngci	箅
 ngco	笰
-ngdj	簛
 ngdo	笞
-ngdp	簸
 nge	艮
 ngfh	獣
 nggb	篲
@@ -12121,10 +12121,8 @@ ngnx	篨
 ngo	仝
 ngo	笁
 ngqa	笲
-ngqi	箕
 ngrr	篛
 ngsu	垦
-ngsu	簊
 ngta	畄
 ngwo	退
 ngyo	笛
@@ -12133,8 +12131,10 @@ nhbr	龕
 nhbv	簶
 nhcl	簾
 nhcy	颌
+nhdj	簛
 nhdn	鸽
 nhdo	笴
+nhdp	簸
 nhe	合
 nhfi	笪
 nhfi	鿖
@@ -12169,6 +12169,7 @@ nhnr	盫
 nhnt	剱
 nhnv	剣
 nhqa	弇
+nhqi	箕
 nhql	篳
 nhqo	篗
 nhrm	盒
@@ -12177,6 +12178,7 @@ nhsi	票
 nhsi	佘
 nhsk	龛
 nhsn	鴿
+nhsu	簊
 nhtq	欱
 nhts	拿
 nhtt	搻
@@ -12330,20 +12332,20 @@ nmgk	糝
 nmgk	糁
 nmgk	粌
 nmgl	糞
-nmgq	簱
-nmgq	粸
 nmgr	糑
 nmgt	畨
-nmgw	糂
 nmgy	粙
 nmhb	糠
 nmhc	粻
 nmhd	糖
 nmhf	類
 nmhk	糃
+nmhq	簱
+nmhq	粸
 nmhs	粧
 nmhv	籽
 nmhv	筟
+nmhw	糂
 nmhx	糧
 nmhx	粿
 nmhx	糅
@@ -12387,8 +12389,8 @@ nmml	糏
 nmmt	粀
 nmmt	粎
 nmmw	糙
-nmng	籏
 nmnh	糗
+nmnh	籏
 nmnh	粭
 nmnh	糩
 nmni	粞
@@ -12945,9 +12947,9 @@ nxdo	笸
 nxdt	簌
 nxfi	笨
 nxfj	覍
-nxgq	簯
 nxhb	蠽
 nxhi	雀
+nxhq	簯
 nxhr	虩
 nxja	笚
 nxkd	省
@@ -13250,17 +13252,16 @@ pfye	煩
 pgcl	魐
 pgco	炥
 pgdj	鬿
-pgdj	燍
 pgdo	炲
 pge	炐
 pgfj	魎
 pgfn	魉
 pgfo	煨
 pggn	魕
-pggq	魌
 pghg	魑
 pghi	魋
 pghl	魓
+pghq	魌
 pgi	鬼
 pgka	鬽
 pgkl	舅
@@ -13286,7 +13287,6 @@ pgsi	勾
 pgta	甸
 pgta	畑
 pgu	邩
-pgwi	煁
 pgxu	煠
 phbd	煻
 phbl	煜
@@ -13296,6 +13296,7 @@ phcl	燫
 phcn	燝
 phdd	匔
 phdi	灯
+phdj	燍
 phdo	炣
 phdq	熶
 phfi	炟
@@ -13325,6 +13326,7 @@ phsu	爅
 phtt	焜
 phvp	燳
 phwe	炆
+phwi	煁
 phwo	迿
 pjcd	熵
 pjdo	烙
@@ -13696,7 +13698,6 @@ psgc	砩
 psgf	碨
 psgg	礧
 psgk	碜
-psgk	磡
 psgk	磣
 psgm	碼
 psgn	磯
@@ -13705,7 +13706,6 @@ psgo	矼
 psgr	熆
 psgs	砷
 psgt	鿬
-psgw	碪
 psgx	碟
 psgy	碶
 psgy	磥
@@ -13717,12 +13717,14 @@ pshg	砿
 pshi	碓
 pshj	碍
 pshk	碭
+pshk	磡
 pshl	礦
 pshl	碮
 pshp	礁
 pshp	礘
 pshv	矷
 pshw	碣
+pshw	碪
 pshw	砇
 pshx	磼
 pshy	砑
@@ -14326,7 +14328,6 @@ qgng	蔭
 qgnn	莁
 qgnx	蒢
 qgqh	虇
-qgqi	萁
 qgrr	蒻
 qgry	藓
 qgsn	鶓
@@ -14335,13 +14336,10 @@ qgu	邓
 qgvd	蓟
 qgvd	刭
 qgvy	葜
-qgwi	葚
-qgwl	蘛
 qgwo	迳
 qgxh	蔯
 qgxu	葉
 qgyi	蔂
-qgyi	藄
 qgyo	苖
 qha	芐
 qhbd	蓎
@@ -14384,6 +14382,7 @@ qhpb	蕉
 qhpu	舊
 qhpw	葛
 qhqa	莽
+qhqi	萁
 qhql	蓽
 qhql	蕻
 qhqo	蒦
@@ -14399,7 +14398,9 @@ qhtt	菎
 qhvd	剒
 qhvi	芓
 qhwe	芠
+qhwi	葚
 qhwi	芤
+qhwl	蘛
 qhwo	逪
 qhwt	菧
 qhxu	菒
@@ -14411,6 +14412,7 @@ qhyg	驀
 qhyg	鄚
 qhyg	蓭
 qhyh	暮
+qhyi	藄
 qhyk	募
 qhyr	蓦
 qhyr	謩
@@ -15336,9 +15338,7 @@ rgmm	讔
 rgmx	諰
 rgnn	誣
 rgo	訌
-rgqi	諆
 rgse	訷
-rgwi	諶
 rgxu	諜
 rhbj	虐
 rhcl	譧
@@ -15389,6 +15389,7 @@ rhpb	譙
 rhpk	虝
 rhpw	謁
 rhqa	状
+rhqi	諆
 rhqo	謢
 rhqp	謶
 rhqr	甝
@@ -15410,6 +15411,7 @@ rhu	虍
 rhvd	皻
 rhve	虘
 rhvf	覰
+rhwi	諶
 rhxk	虨
 rhxu	課
 rhya	訝
@@ -15445,7 +15447,6 @@ rjfe	諷
 rjff	冱
 rjfv	冽
 rjgd	冶
-rjgd	凘
 rjgk	动
 rjgk	凴
 rjgm	憑
@@ -15458,6 +15459,7 @@ rjgs	云
 rjgw	运
 rjgw	叇
 rjgy	詃
+rjhd	凘
 rjhi	准
 rjhl	凖
 rjhv	觃
@@ -15664,11 +15666,11 @@ rmgd	骀
 rmgj	骏
 rmgk	骖
 rmgo	試
-rmgq	骐
 rmgr	骋
 rmgy	骡
 rmgy	謑
 rmhi	骓
+rmhq	骐
 rmhr	驲
 rmhx	骒
 rmi	皿
@@ -15792,7 +15794,6 @@ rngm	瘛
 rngo	疘
 rngq	痩
 rngr	癣
-rngw	瘎
 rngy	瘰
 rngy	瘈
 rngy	癳
@@ -15810,6 +15811,7 @@ rnhp	癄
 rnhr	瘟
 rnhs	癦
 rnhs	謤
+rnhw	瘎
 rnhy	疨
 rnjc	疛
 rnjf	瘋
@@ -16486,8 +16488,6 @@ sgsi	去
 sgva	刧
 sgvd	刦
 sgvt	刼
-sgwi	堪
-sgwk	墈
 sgwo	迲
 sgxu	堞
 sha	圷
@@ -16517,6 +16517,8 @@ shsj	塒
 shtq	款
 shtt	堒
 shwe	坟
+shwi	堪
+shwk	墈
 shxu	堁
 shxx	塌
 si	士
@@ -16730,13 +16732,13 @@ snfv	堬
 snge	垠
 sngj	鵔
 sngm	鷌
-sngq	鶀
 sngt	墖
 sngu	鄥
 snhd	鴚
 snhe	垥
 snhi	鵻
 snhk	塲
+snhq	鶀
 snhq	鵿
 snhs	墂
 snhv	鸔
@@ -17065,7 +17067,6 @@ sygk	鯵
 sygm	鰓
 sygm	鰢
 sygo	魟
-sygq	鯕
 sygr	鰯
 sygx	鰈
 sygy	鮋
@@ -17085,6 +17086,7 @@ syhk	鰑
 syhl	鯷
 syhl	鱅
 syhq	鰻
+syhq	鯕
 syhr	魯
 syhr	堾
 syhr	鯭
@@ -17507,7 +17509,6 @@ tfye	頃
 tfyt	掭
 tgco	拂
 tgdb	摾
-tgdj	撕
 tgdo	抬
 tgfo	揋
 tggg	攂
@@ -17527,13 +17528,11 @@ tgnb	摃
 tgo	扛
 tgpe	抁
 tgqa	拚
-tgqi	掑
 tgqo	捜
 tgrr	搦
 tgse	抻
 tgsi	払
 tgvy	揳
-tgwi	揕
 tgwi	抝
 tgxu	揲
 tgyi	摞
@@ -17548,6 +17547,7 @@ thcn	撔
 thco	挤
 thcy	颕
 thdi	打
+thdj	撕
 thdo	抲
 thdq	撮
 thfi	担
@@ -17571,6 +17571,7 @@ thpb	撨
 thpk	掦
 thpt	掲
 thpw	揭
+thqi	掑
 thql	擴
 thqp	摭
 thrd	掂
@@ -17583,6 +17584,7 @@ thsu	捏
 thtq	揿
 thtt	掍
 thwe	抆
+thwi	揕
 thwn	携
 thwt	掋
 thxu	捰
@@ -18416,7 +18418,6 @@ vgci	淠
 vgco	沸
 vgcs	溿
 vgdb	漒
-vgdj	澌
 vgdj	渳
 vgdn	鸿
 vgdn	濻
@@ -18450,7 +18451,6 @@ vgnx	滁
 vgo	江
 vgpe	沇
 vgps	湱
-vgqi	淇
 vgql	潩
 vgrk	涄
 vgrr	溺
@@ -18460,10 +18460,8 @@ vgta	沺
 vgta	畓
 vgu	郙
 vgvy	潔
-vgwi	湛
 vgxu	渫
 vgyi	漯
-vgyi	濝
 vgyk	渗
 vgyo	油
 vgyu	渔
@@ -18480,6 +18478,7 @@ vhcr	済
 vhcy	滪
 vhdd	滒
 vhdi	汀
+vhdj	澌
 vhdo	河
 vhfi	泹
 vhfj	淂
@@ -18509,6 +18508,7 @@ vhpb	潐
 vhpt	渇
 vhpw	渴
 vhqa	汱
+vhqi	淇
 vhql	滭
 vhql	瀇
 vhqq	渡
@@ -18528,12 +18528,14 @@ vhtt	混
 vhvd	浏
 vhvi	汓
 vhwe	汶
+vhwi	湛
 vhww	沔
 vhxs	瀍
 vhxu	潗
 vhxu	淉
 vhxx	溻
 vhye	汩
+vhyi	濝
 vhyu	汿
 vhyu	沀
 vi	水
@@ -18581,7 +18583,6 @@ vjgk	幓
 vjgl	淯
 vjgn	幊
 vjgp	流
-vjgq	帺
 vjgt	瑬
 vjgw	漨
 vjgx	幉
@@ -18595,6 +18596,7 @@ vjhn	幜
 vjhn	鿌
 vjhq	幔
 vjhq	洑
+vjhq	帺
 vjhw	幆
 vji	巾
 vjja	泏
@@ -19551,7 +19553,6 @@ wgvt	靱
 wgwc	鞒
 wgwd	鞽
 wgwh	鞂
-wgwi	谌
 wgwp	鞦
 wgwt	靸
 wgxu	谍
@@ -19614,7 +19615,6 @@ whgk	穇
 whgl	稩
 whgl	穓
 whgn	穖
-whgq	稘
 whgs	私
 whgy	秞
 whgy	稧
@@ -19634,6 +19634,7 @@ whhm	馢
 whhn	馩
 whhn	馪
 whhp	穛
+whhq	稘
 whhq	穝
 whhr	香
 whhr	馧
@@ -19801,6 +19802,7 @@ whvx	梨
 whwd	穚
 whwf	頺
 whwh	秝
+whwi	谌
 whwl	稰
 whwm	秖
 whwn	秀
@@ -20383,17 +20385,13 @@ xgnb	槓
 xgnc	楐
 xgo	杠
 xgo	杢
-xgqi	棋
 xgrk	梬
 xgrr	榒
 xgse	柛
-xgsu	樭
 xgvy	楔
-xgwi	椹
 xgxh	樄
 xgxu	楪
 xgyi	樏
-xgyi	櫀
 xgyk	椮
 xgyl	桳
 xgyo	柚
@@ -20439,6 +20437,7 @@ xhnn	榥
 xhpb	樵
 xhpw	楬
 xhqa	枤
+xhqi	棋
 xhql	櫎
 xhqp	樜
 xhri	東
@@ -20451,14 +20450,17 @@ xhsj	櫥
 xhsj	榯
 xhsn	鶇
 xhsu	桩
+xhsu	樭
 xhtq	歀
 xhtt	棍
 xhvi	李
 xhvi	杍
+xhwi	椹
 xhwn	槜
 xhxu	棵
 xhxx	榻
 xhya	枒
+xhyi	櫀
 xhyu	杼
 xi	习
 xja	甲
@@ -20776,9 +20778,9 @@ xnfu	楆
 xnfv	榆
 xnfx	梌
 xnge	根
-xngq	檱
 xnhg	檎
 xnhj	椱
+xnhq	檱
 xnhs	標
 xnhv	檦
 xni	栖
@@ -21471,12 +21473,9 @@ ygnc	琾
 ygo	紅
 ygo	玒
 ygpe	玧
-ygqi	琪
-ygqi	綨
 ygse	紳
 ygse	珅
 ygsi	丟
-ygsu	璂
 ygta	細
 ygxu	緤
 ygyi	縲
@@ -21508,12 +21507,15 @@ yhkx	瑈
 yhnn	縨
 yhpk	緆
 yhqa	紎
+yhqi	琪
+yhqi	綨
 yhql	纊
 yhql	縪
 yhrm	瑥
 yhrm	緼
 yhrq	縵
 yhsu	纆
+yhsu	璂
 yhtt	琨
 yhtt	緄
 yhwe	紋
@@ -22433,8 +22435,8 @@ bfcx	𦤞
 bfcy	𠝰
 bfcy	𭺠
 bfdb	𫊳
-bfdg	𠔸
 bfdg	𧓞
+bfdh	𠔸
 bfdj	𧍹
 bfdj	𧏡
 bfdj	𮔨
@@ -22551,7 +22553,6 @@ bfxs	𧔹
 bfyd	𠕹
 bfyd	𧉂
 bfyd	𧌀
-bgbo	𫋣
 bgcb	𬠈
 bgcn	𧑈
 bgco	𧉸
@@ -22570,7 +22571,6 @@ bghc	𧐊
 bghg	𰻹
 bghn	𰷐
 bghr	𭦌
-bghy	𲀉
 bgi	𮓽
 bgjd	𧐋
 bgjd	𧐣
@@ -22605,7 +22605,6 @@ bgpl	𫿶
 bgpo	𮫬
 bgpt	𲾠
 bgqa	𧉤
-bgqi	𦣫
 bgql	𧑌
 bgql	𨾂
 bgrk	𧊌
@@ -22613,14 +22612,12 @@ bgrl	𲎮
 bgrm	𭂅
 bgse	𧊋
 bgsi	𧈥
-bgsu	𲿙
 bgta	𨽶
 bgta	𮓿
 bgtt	𮔢
 bgu	䢻
 bgvd	𠜪
 bgvd	𠟷
-bgwi	𲾼
 bgwo	𰳌
 bgyo	𰃰
 bhbi	䗧
@@ -22628,6 +22625,7 @@ bhbl	䗑
 bhbl	䗤
 bhbn	𧍁
 bhbo	𧏎
+bhbo	𫋣
 bhbr	𧕻
 bhca	䗅
 bhcn	𧑊
@@ -22652,6 +22650,7 @@ bhhq	𲮮
 bhhr	䗉
 bhht	𧕺
 bhhw	𧔷
+bhhy	𲀉
 bhjb	𧔲
 bhjc	𭁺
 bhje	䗌
@@ -22693,6 +22692,7 @@ bhpb	𦣳
 bhpo	𧌚
 bhpp	𤉢
 bhpp	𬊟
+bhqi	𦣫
 bhql	𧏻
 bhql	𫋧
 bhqp	𧐚
@@ -22711,6 +22711,7 @@ bhsj	𲿌
 bhsn	𫛏
 bhsu	䘃
 bhsu	𧋧
+bhsu	𲿙
 bhtb	𣬔
 bhti	𠖆
 bhtl	𬯳
@@ -22725,6 +22726,7 @@ bhvo	𧋨
 bhwe	𲣴
 bhwi	𧉔
 bhwi	𲾞
+bhwi	𲾼
 bhwo	䗯
 bhwt	𧍉
 bhww	𧉄
@@ -23514,7 +23516,6 @@ blgl	𥪹
 blgl	𬔤
 blgl	𬺚
 blgn	𥪞
-blgq	𥪓
 blgq	𫊿
 blgr	𥪁
 blgs	𠕺
@@ -23523,7 +23524,6 @@ blgt	𠖋
 blgt	𬺙
 blgu	𨚪
 blgu	𱒍
-blgw	𥪘
 blgx	𱻢
 blgx	𳑸
 blgy	𥪲
@@ -23634,6 +23634,7 @@ blhp	𲬵
 blhq	𢍔
 blhq	𢻕
 blhq	𢾑
+blhq	𥪓
 blhq	𥪳
 blhq	𦊅
 blhq	𩐦
@@ -23657,6 +23658,7 @@ blhv	𫦊
 blhw	䪩
 blhw	𥩛
 blhw	𥩬
+blhw	𥪘
 blhw	𩐹
 blhw	𩑁
 blhw	𬰻
@@ -25145,10 +25147,8 @@ bvgk	𦩈
 bvgl	𦩝
 bvgm	𦩭
 bvgn	𦩼
-bvgq	䑴
 bvgq	𦩇
 bvgr	𦩸
-bvgs	𦪆
 bvgt	𦪜
 bvgx	𦩺
 bvgy	𦩣
@@ -25163,6 +25163,7 @@ bvhl	𦩅
 bvhn	𱼽
 bvhp	𦩐
 bvhp	𲻥
+bvhq	䑴
 bvhq	䑾
 bvhq	𦨚
 bvhq	𫇞
@@ -25172,6 +25173,7 @@ bvhr	𧌏
 bvhr	𬐫
 bvhr	𮎗
 bvhs	𦪅
+bvhs	𦪆
 bvhs	𦪷
 bvht	𦪬
 bvhw	𦩥
@@ -25301,8 +25303,8 @@ bvne	𦨈
 bvnf	𰰑
 bvng	𦪪
 bvng	𦪮
-bvng	𦪵
 bvnh	䑪
+bvnh	𦪵
 bvnh	𬜓
 bvnj	䒀
 bvnj	𦩟
@@ -26040,7 +26042,6 @@ cffj	𨬜
 cffj	𫄚
 cffl	㲤
 cffy	𮨖
-cfgd	𨮭
 cfgh	𨫌
 cfgj	𰬠
 cfgm	𨫍
@@ -26048,6 +26049,7 @@ cfgq	𢍖
 cfha	䤤
 cfha	𰬓
 cfhb	𫒝
+cfhd	𨮭
 cfhf	𫄠
 cfhf	𰼧
 cfhh	𨩿
@@ -26311,7 +26313,6 @@ cgss	𩫕
 cgst	𠅸
 cgst	𦓄
 cgsu	㙜
-cgsu	䥓
 cgsy	𭕓
 cgsy	𳍖
 cgta	𬎿
@@ -26323,7 +26324,6 @@ cgvp	𨫛
 cgvt	䤿
 cgvy	䥛
 cgwi	𲏴
-cgwl	𨮊
 cgwl	𮡿
 cgwn	𩍯
 cgwo	𰻊
@@ -26506,6 +26506,7 @@ chsr	𨬵
 chss	𮙞
 chst	𬫝
 chsu	𬙊
+chsu	䥓
 chsy	𬼭
 chti	𨦆
 chtr	𬫬
@@ -26518,6 +26519,7 @@ chvi	𨥂
 chvn	𡥹
 chwf	𬫩
 chwi	𨦂
+chwl	𨮊
 chwr	𥃅
 chww	𬘔
 chxd	𡦚
@@ -26573,7 +26575,6 @@ cjgl	𫄴
 cjgm	𨩏
 cjgm	𫒻
 cjgp	𱍮
-cjgq	㠱
 cjgs	𮡫
 cjgu	𨙬
 cjgv	𬫪
@@ -26582,6 +26583,7 @@ cjgy	𰬈
 cjgy	𱮲
 cjhf	𨧝
 cjhk	𨫖
+cjhq	㠱
 cjhq	𨦛
 cjhq	𫄢
 cjhx	𦒂
@@ -26731,7 +26733,6 @@ ckgm	𨬃
 ckgm	𨯶
 ckgm	𩢁
 ckgo	𨨀
-ckgq	𮢺
 ckgu	𦈔
 ckgu	𨙵
 ckgu	𨪷
@@ -26740,6 +26741,7 @@ ckhi	𱁈
 ckhl	𰽋
 ckhn	𩞠
 ckhq	𨨷
+ckhq	𮢺
 ckhr	𮢡
 ckhv	𫒛
 ckhy	𨩴
@@ -26969,7 +26971,6 @@ clgn	𪋈
 clgp	𨦣
 clgq	𱊿
 clgq	𳐤
-clgq	𳐳
 clgw	𨖥
 clgy	𬫱
 clhc	𬸾
@@ -26986,6 +26987,7 @@ clhp	𬬊
 clhq	𨩑
 clhq	𪊏
 clhq	𫄫
+clhq	𳐳
 clhr	𳐟
 clhs	𮉯
 clhs	𮠕
@@ -27402,7 +27404,6 @@ cmgo	𳅴
 cmgo	𳇷
 cmgq	𨵿
 cmgq	𨶚
-cmgq	𫔥
 cmgq	𮤑
 cmgs	𨴁
 cmgs	𨶾
@@ -27413,7 +27414,6 @@ cmgt	𮤐
 cmgu	𨚜
 cmgv	𨴒
 cmgw	䥦
-cmgw	𮤘
 cmgx	𨵳
 cmgy	䦬
 cmgy	𨶥
@@ -27446,6 +27446,7 @@ cmhm	𢡻
 cmhp	𨶲
 cmhp	𩴦
 cmhq	𨵒
+cmhq	𫔥
 cmhq	𬮇
 cmhq	𮤜
 cmhr	𨵲
@@ -27461,6 +27462,7 @@ cmhs	𲈫
 cmhv	𨳕
 cmhw	䦪
 cmhw	𨨜
+cmhw	𮤘
 cmhw	𳄰
 cmhx	𨵚
 cmhx	𮤣
@@ -28003,16 +28005,15 @@ cnfv	𳋶
 cnfx	𫒟
 cnfy	䭭
 cnfy	𩔕
-cngd	𮣬
 cnge	𱍭
 cngk	𮡰
 cngm	𨯹
-cngq	𳇑
 cngs	𳋹
 cngu	𨜟
 cngu	𰻯
 cngy	𬙀
 cngy	𳆱
+cnhd	𮣬
 cnhf	𨰥
 cnhg	𨯽
 cnhg	𬳙
@@ -28024,6 +28025,7 @@ cnhj	𮩥
 cnhl	𫗻
 cnhm	𭟂
 cnhq	𲇙
+cnhq	𳇑
 cnhv	𨭚
 cni	𫒖
 cni	𬘟
@@ -28922,7 +28924,6 @@ csgk	𫄦
 csgk	𫶅
 csgk	𰎓
 csgk	𱛐
-csgk	𲝶
 csgk	𲞃
 csgl	𡿖
 csgl	𲝸
@@ -28939,14 +28940,11 @@ csgn	𲞖
 csgo	㞬
 csgp	㠕
 csgp	𰎍
-csgq	𡸷
 csgs	㠥
 csgs	𡹷
-csgs	𡻸
 csgs	𪃨
 csgs	𫒨
 csgs	𬘛
-csgt	㠌
 csgt	𡶚
 csgt	𡼶
 csgt	𨧶
@@ -29011,6 +29009,7 @@ cshk	𡽟
 cshk	𡽦
 cshk	𫶁
 cshk	𲝦
+cshk	𲝶
 cshl	㟾
 cshl	𡷛
 cshl	𡹌
@@ -29034,6 +29033,7 @@ cshn	𲝏
 cshp	𡹕
 cshp	𡻠
 cshp	𡽽
+cshq	𡸷
 cshq	𡹨
 cshq	𡻩
 cshq	𡾼
@@ -29041,8 +29041,10 @@ cshq	𭖬
 cshq	𲝹
 cshr	㞱
 cshs	䳽
+cshs	𡻸
 cshs	𪈥
 cshs	𭖁
+csht	㠌
 csht	䥗
 csht	𡽙
 csht	𣣗
@@ -30102,8 +30104,8 @@ cvdo	𬫠
 cvdp	𨨏
 cvdy	𰜾
 cvgg	𲇓
-cvgw	𳇆
 cvhw	𳆀
+cvhw	𳇆
 cvi	𫒎
 cvjd	𮢤
 cvji	𮡥
@@ -31222,7 +31224,6 @@ dgla	𠱤
 dgld	𠾟
 dgle	𠱝
 dgle	𠱮
-dgle	𭊫
 dgll	𪡱
 dglt	𠹌
 dglx	𡂮
@@ -31245,7 +31246,6 @@ dgnx	𪡷
 dgnx	𲘀
 dgph	𮮣
 dgqa	𭚜
-dgqi	𠴩
 dgql	𭊈
 dgrh	𲗼
 dgrj	𠳜
@@ -31256,10 +31256,8 @@ dgsj	𠻱
 dgsk	𪡂
 dgss	𲖘
 dgsu	𠱣
-dgsu	𠼻
 dgta	𰇐
 dgtq	𠲭
-dgtq	𠿁
 dgts	𠹯
 dgu	𨙫
 dgu	𨚰
@@ -31267,7 +31265,6 @@ dgvi	𠳃
 dgvt	𠹙
 dgwd	𡆌
 dgwi	𠯻
-dgwl	𡀃
 dgxh	𠼂
 dgyd	𫬷
 dgyh	𭈧
@@ -31369,6 +31366,7 @@ dhlc	𡅏
 dhld	𡂗
 dhle	𠮩
 dhle	𭈭
+dhle	𭊫
 dhle	𲕄
 dhlj	𠿘
 dhll	𱕜
@@ -31392,6 +31390,7 @@ dhpo	𰈭
 dhpt	𠿒
 dhpt	𱐽
 dhpu	𡁫
+dhqi	𠴩
 dhqo	𫫊
 dhqr	𡄗
 dhqv	𠻊
@@ -31416,6 +31415,8 @@ dhsn	𲗗
 dhsu	㖏
 dhsu	𠲕
 dhsu	𠶈
+dhsu	𠼻
+dhtq	𠿁
 dhtq	𫪽
 dhtt	𠳓
 dhtt	𪡓
@@ -31431,6 +31432,7 @@ dhvu	𱔇
 dhwi	𠲥
 dhwi	𫩵
 dhwk	𠵫
+dhwl	𡀃
 dhwm	𭈾
 dhwm	𭉌
 dhwn	𭉨
@@ -31642,7 +31644,6 @@ djgt	𭈈
 djgt	𭈜
 djgt	𱤷
 djgv	𦕷
-djgw	𫑇
 djgw	𰈨
 djgx	𮋶
 djgy	𦔷
@@ -31658,6 +31659,7 @@ djhp	𦗠
 djhq	𰇛
 djhs	𦕝
 djht	𣣒
+djhw	𫑇
 djhw	𰭵
 djhx	𦖍
 djhx	𱓹
@@ -32866,7 +32868,6 @@ dmgr	䀻
 dmgr	𥉧
 dmgw	𥄠
 dmgw	𥄩
-dmgw	𭿄
 dmgx	䁋
 dmgy	𥉹
 dmgy	𥊯
@@ -32923,6 +32924,7 @@ dmhw	𥄐
 dmhw	𥈎
 dmhw	𥈚
 dmhw	𪾷
+dmhw	𭿄
 dmhx	𥇬
 dmhx	𭾻
 dmhx	𭿝
@@ -33757,8 +33759,6 @@ dngj	𱉿
 dngk	𭊗
 dngl	𲘅
 dngm	𡄍
-dngq	𬸒
-dngq	𱕍
 dnhb	𲘒
 dnhc	𫬖
 dnhd	𱉕
@@ -33772,6 +33772,8 @@ dnhm	𲗭
 dnhp	𱕘
 dnhp	𲘍
 dnhq	𠺑
+dnhq	𬸒
+dnhq	𱕍
 dnhr	𡄼
 dnja	𠶑
 dnjc	𠷻
@@ -34608,7 +34610,6 @@ dtfy	𠼴
 dtfy	𩒁
 dtgk	𫫃
 dtgo	𠲞
-dtgq	𲖄
 dtha	𠯴
 dthb	𭋺
 dthd	𫫓
@@ -34620,6 +34621,7 @@ dthj	𫩿
 dthl	𠽮
 dthn	𭋹
 dthq	𪢚
+dthq	𲖄
 dthr	𭇣
 dthr	𲖃
 dthw	𭊪
@@ -34735,7 +34737,6 @@ dvgg	𭉎
 dvgl	𲕯
 dvgo	𭇮
 dvgr	𡀡
-dvgw	𠾻
 dvgy	𠶢
 dvhd	𱒓
 dvhg	𭉴
@@ -34744,6 +34745,7 @@ dvhr	𠴲
 dvhr	𠾾
 dvhr	𡀦
 dvht	𠽞
+dvhw	𠾻
 dvi	𭯶
 dvjc	㗘
 dvjd	𠸪
@@ -35225,7 +35227,6 @@ dygb	䨮
 dygb	𧒜
 dygc	𩂕
 dygc	𩇁
-dygd	𩅰
 dygd	𱁤
 dygf	𩂬
 dygg	䨎
@@ -35282,7 +35283,6 @@ dygv	𩅎
 dygv	𱁓
 dygv	𲒶
 dygw	䢮
-dygw	䨢
 dygw	䨤
 dygw	䨶
 dygw	𨙝
@@ -35301,6 +35301,7 @@ dyhd	𩃟
 dyhd	𩄯
 dyhd	𩅗
 dyhd	𩅬
+dyhd	𩅰
 dyhd	𬸰
 dyhd	𱒘
 dyhf	𩄕
@@ -35335,6 +35336,7 @@ dyht	㱋
 dyhv	𠠛
 dyhv	𠠰
 dyhw	䨠
+dyhw	䨢
 dyhw	𨘾
 dyhw	𩃛
 dyhw	𩅆
@@ -36144,12 +36146,12 @@ fdcf	𧯱
 fdcf	𧰃
 fdcg	䝀
 fdcg	𧯬
-fdcg	𧯯
 fdcg	𮙔
 fdcg	𰶠
 fdcg	𰶡
 fdch	䜺
 fdch	䜾
+fdch	𧯯
 fdch	𧰗
 fdch	𫎄
 fdci	𠪒
@@ -36510,7 +36512,6 @@ fgci	𡞑
 fgco	𡛯
 fgcs	𡡦
 fgdb	𡠤
-fgdj	𡡒
 fgdj	𤯯
 fgdj	𫨍
 fgdn	𡤓
@@ -36651,6 +36652,7 @@ fhdi	𬼽
 fhdi	𰙛
 fhdj	㪽
 fhdj	𡞿
+fhdj	𡡒
 fhdl	𠪀
 fhdm	𭞦
 fhdp	𡠮
@@ -37363,7 +37365,6 @@ flfu	𡜘
 flfv	𠠫
 flfv	𣧿
 flfx	𭪴
-flgd	𣩠
 flgd	𰌎
 flgf	㱬
 flgg	𭮄
@@ -37378,6 +37379,7 @@ flgu	𡜙
 flgu	𨚌
 flgx	𡟸
 flhd	𣧤
+flhd	𣩠
 flhh	𣧓
 flhh	𫲊
 flhh	𭮢
@@ -38895,7 +38897,6 @@ fvgl	𨀤
 fvgl	𨀮
 fvgl	𨂳
 fvgl	𨅜
-fvgl	𨅤
 fvgm	𮜃
 fvgn	𨀇
 fvgn	𬧄
@@ -38904,7 +38905,6 @@ fvgq	𰸓
 fvgr	䠁
 fvgr	𡣄
 fvgr	𫏨
-fvgs	𨄎
 fvgs	𨅷
 fvgt	䟧
 fvgt	𨃳
@@ -38948,6 +38948,7 @@ fvhl	𧾿
 fvhl	𨀠
 fvhl	𨁄
 fvhl	𨄀
+fvhl	𨅤
 fvhl	𨇁
 fvhl	𫏤
 fvhl	𮜑
@@ -38968,6 +38969,7 @@ fvhr	𨂋
 fvhr	𨃼
 fvhr	𮛴
 fvhs	𨀵
+fvhs	𨄎
 fvht	𨇬
 fvht	𬦸
 fvht	𲃶
@@ -40126,7 +40128,6 @@ fyga	㛪
 fyga	𭒎
 fygb	𧚴
 fygc	𧙂
-fygd	𧝤
 fyge	𬡈
 fygf	𧛚
 fygf	𧟂
@@ -40152,7 +40153,6 @@ fygp	𮕯
 fygq	𧟁
 fygr	𧚗
 fygs	𫋵
-fygs	𫌊
 fygt	𤰳
 fygt	𫱫
 fygt	𮖘
@@ -40163,6 +40163,7 @@ fyha	𬻊
 fyhc	𧛇
 fyhd	𡗣
 fyhd	𧝃
+fyhd	𧝤
 fyhd	𮖩
 fyhd	𲀤
 fyhf	䙨
@@ -40188,6 +40189,7 @@ fyhp	𬡰
 fyhq	𧜞
 fyhq	𮖤
 fyhs	𡞏
+fyhs	𫌊
 fyhs	𬡶
 fyht	𧝽
 fyht	𫯬
@@ -41251,7 +41253,6 @@ ggqb	𢐶
 ggqf	𢑁
 ggqg	𮫛
 ggqh	𢑆
-ggqi	𨺌
 ggqk	𱆕
 ggqo	𢎤
 ggqp	𢑇
@@ -41308,7 +41309,6 @@ ggsp	𰟆
 ggss	𧱶
 ggss	𪫅
 ggsu	𢎳
-ggsu	𨼂
 ggsw	𨕿
 ggsy	𢐗
 ggta	䧃
@@ -41341,7 +41341,6 @@ ggwf	𢏮
 ggwg	𫸶
 ggwh	𥞱
 ggwi	𢎞
-ggwi	𬯋
 ggwo	𰺳
 ggwt	𢎽
 ggxb	𫸩
@@ -41428,16 +41427,19 @@ ghls	𲉠
 ghnn	𨻙
 ghpk	𬯆
 ghpw	𫕈
+ghqi	𨺌
 ghql	𨽏
 ghql	𬯕
 ghrm	𮥧
 ghrq	𮥝
 ghry	𫠃
 ghsa	𢀚
+ghsu	𨼂
 ghti	𨹎
 ghtt	𮥍
 ghvi	䦻
 ghwe	𫔻
+ghwi	𬯋
 ghwm	𨺸
 ghxu	𨺁
 ghxu	𮥢
@@ -41654,7 +41656,6 @@ glga	𨸗
 glgj	𦔎
 glgl	𦔜
 glgn	𫅿
-glgq	𦓿
 glgs	𫶫
 glgs	𱀄
 glgt	𫅹
@@ -41668,6 +41669,7 @@ glhk	𦓻
 glhk	𦔈
 glhl	𦔂
 glhl	𲐁
+glhq	𦓿
 glhq	𦔔
 glhq	𨺎
 glht	𦓼
@@ -41922,7 +41924,6 @@ gmgc	𭗱
 gmgc	𮩽
 gmgc	𳇇
 gmgd	𩦑
-gmgd	𲌁
 gmge	𰏈
 gmgf	𡡙
 gmgg	𩤫
@@ -41980,6 +41981,7 @@ gmhd	𩣖
 gmhd	𩤎
 gmhd	𩥁
 gmhd	𱄹
+gmhd	𲌁
 gmhg	𩣴
 gmhg	𩥬
 gmhh	䮖
@@ -42514,126 +42516,40 @@ gpsd	𨺃
 gptu	𭘅
 gpvn	𡘱
 gpya	𨹋
-gqbd	𫤴
-gqbp	𦫡
-gqbp	𱏪
 gqbs	𨹡
 gqbs	𨼿
-gqcs	𢁂
-gqcy	𬱦
 gqdh	𨽧
-gqdn	𫛰
-gqdp	𤿺
-gqdp	𰧣
-gqdr	𧬊
-gqds	𪆁
-gqds	𪆗
-gqdt	𣤘
-gqdt	𰈑
-gqdx	𣚄
 gqdx	𨽣
-gqdy	㽄
-gqdy	𤮓
 gqfp	𨽞
 gqfs	𨻜
-gqfy	䫏
-gqgl	𲹦
-gqgm	𢤵
 gqgt	𬏆
-gqgu	𨛺
 gqgu	𲆑
-gqhf	𲊸
-gqhi	𨿣
 gqhq	𱀻
-gqhr	㫷
 gqhr	𱀗
-gqhs	𱉅
 gqje	𪽂
 gqjj	𨼜
-gqkl	𫦮
-gqkl	𭄭
-gqkv	𦥄
 gqla	䧆
 gqlc	𭘎
 gqlh	𬯡
-gqll	𠔶
-gqll	𫯔
-gqll	𫯘
 gqls	𱀪
-gqlv	𠔡
-gqlx	𦒙
-gqml	𠔴
 gqmx	𨼙
 gqnh	𨻇
 gqnh	𨼲
-gqnq	𲒀
-gqnr	𠔫
 gqnx	𮥗
 gqo	𨸕
-gqpg	𮫡
 gqpk	𨼞
-gqpt	𭅌
 gqqd	𫕓
 gqqq	𨺝
-gqqw	𭁞
 gqqx	𨻗
 gqrd	𫕕
 gqrg	𫶮
-gqri	𰢪
-gqrl	㪸
 gqrl	𨼣
-gqrn	𤻓
 gqrw	𨹯
-gqsn	䳢
 gqsr	𨽈
-gqss	𫮱
-gqst	𬚌
 gqsu	𫔽
-gqtd	𬸨
 gqtk	𨺳
-gqts	𢮜
-gqts	𪅾
-gqvi	𭰭
-gqvj	𢃛
-gqwb	𲰥
-gqwc	𲊾
-gqwd	𰤯
-gqwf	䫖
-gqwf	𡠧
-gqwf	𡢁
-gqwf	𧡪
-gqwf	𬎲
-gqwi	㐞
-gqwj	𢾤
-gqwj	𭔶
-gqwk	𤯉
-gqwl	𦡾
-gqwl	𫯑
-gqwl	𲚸
-gqwm	𢝖
-gqwm	𢦊
-gqwp	㽎
-gqwq	㪛
-gqwq	𭅧
-gqwr	𬐾
-gqwr	𬢏
-gqws	𫤱
-gqws	𮌅
-gqwt	𫧈
-gqwt	𰅽
-gqwv	𠝻
-gqww	𤯑
-gqww	𮟑
-gqww	𲆎
-gqww	𳄷
 gqxg	𬯥
-gqxm	𲡇
-gqxx	𱻛
-gqya	𤦢
-gqyd	𠔵
 gqyg	𬯐
-gqyw	𤭣
-gqyw	𤭦
 gra	𫌷
 gra	𬯂
 grbd	𳈳
@@ -43635,7 +43551,6 @@ gygc	𫚒
 gygd	㫁
 gygd	𣂾
 gygd	𣃔
-gygd	𱈒
 gyge	𬶆
 gygf	𢇍
 gygf	𢨂
@@ -43699,6 +43614,7 @@ gyhc	𬏌
 gyhc	𳈩
 gyhd	𫚪
 gyhd	𭙊
+gyhd	𱈒
 gyhd	𳎑
 gyhe	𳎘
 gyhf	𬶩
@@ -44959,7 +44875,6 @@ hgdd	𢈚
 hgdd	𪪚
 hgdf	𢇹
 hgdh	𢌄
-hgdj	𰾴
 hgdk	𢈢
 hgdl	㡶
 hgdl	𢈮
@@ -45035,7 +44950,6 @@ hggt	𢇶
 hggt	𢊏
 hggt	𢊩
 hggu	䦁
-hggw	𢉮
 hggw	𢋈
 hggy	𢇝
 hgha	𢇗
@@ -45077,6 +44991,7 @@ hghv	𠜢
 hghv	𢈩
 hghv	𭙒
 hghw	𢉥
+hghw	𢉮
 hghw	𪪍
 hghw	𫐤
 hghw	𫸉
@@ -45264,11 +45179,11 @@ hgnf	𫷹
 hgnf	𭙝
 hgng	㡾
 hgng	𰏶
-hgng	𱝌
 hgnh	𢈈
 hgnh	𢊓
 hgnh	𢊣
 hgnh	𢊬
+hgnh	𱝌
 hgni	𱝃
 hgnj	𢊿
 hgnj	𢋌
@@ -45349,8 +45264,6 @@ hgqf	𲟁
 hgqg	𢉱
 hgqg	𢋭
 hgqh	𢌎
-hgqi	𫓹
-hgqi	𳃺
 hgqj	𢊋
 hgqj	𢊰
 hgqj	𢾅
@@ -45462,7 +45375,6 @@ hgsr	𰐃
 hgss	𪁈
 hgss	𫸃
 hgst	𫷼
-hgsu	𮸞
 hgsv	𭙤
 hgsw	㢝
 hgsy	𢇚
@@ -45496,7 +45408,6 @@ hgwf	𢋉
 hgwg	䣌
 hgwh	𢇲
 hgwh	𲟇
-hgwi	𰾘
 hgwj	𤯿
 hgwj	𪽅
 hgwk	㢙
@@ -45619,6 +45530,7 @@ hhcw	𪐹
 hhdf	𪐪
 hhdg	𪒝
 hhdg	𫜙
+hhdj	𰾴
 hhdo	𲗳
 hhdw	𪑑
 hhdx	䵲
@@ -45770,6 +45682,8 @@ hhqb	𪓅
 hhqd	𪒯
 hhqh	𪒼
 hhqh	𪓈
+hhqi	𫓹
+hhqi	𳃺
 hhqo	𫩇
 hhqt	𬹛
 hhqx	𪑞
@@ -45803,6 +45717,7 @@ hhsk	𪒴
 hhsn	𪆤
 hhsn	𪇣
 hhsn	𪒑
+hhsu	𮸞
 hhsy	𪐤
 hhtj	𪑾
 hhtq	㱄
@@ -45822,6 +45737,7 @@ hhwh	𪑕
 hhwi	䵝
 hhwi	𪐘
 hhwi	𫓳
+hhwi	𰾘
 hhwj	𪒠
 hhwn	𩀟
 hhxh	𪑨
@@ -46113,10 +46029,10 @@ hnfv	䠼
 hnfv	𨱎
 hnfx	𮸋
 hngo	𰽪
-hngq	𲄰
 hngy	𳇱
 hnhf	𫔕
 hnhj	𰾟
+hnhq	𲄰
 hnhs	𬧯
 hnhv	𬭺
 hni	𬭄
@@ -46206,62 +46122,148 @@ hptq	𣤚
 hptq	𫓿
 hpvo	𪕪
 hpwo	𨖵
+hqbd	𫤴
 hqbk	𤟴
 hqbk	𬧤
 hqbk	𬭒
+hqbp	𦫡
+hqbp	𱏪
 hqbt	𮸝
 hqbx	𳇯
+hqcs	𢁂
+hqcy	𬱦
 hqdh	𮜾
 hqdh	𲈡
 hqdj	𨉴
+hqdn	𫛰
 hqdn	𲎂
+hqdp	𤿺
+hqdp	𰧣
+hqdr	𧬊
+hqds	𪆁
+hqds	𪆗
+hqdt	𣤘
+hqdt	𰈑
+hqdx	𣚄
+hqdy	㽄
+hqdy	𤮓
 hqfn	𬭮
+hqfy	䫏
 hqgl	𨱑
 hqgl	𨊇
+hqgl	𲹦
 hqgm	𩡷
+hqgu	𨛺
+hqhf	𲊸
 hqhh	𮳿
+hqhi	𨿣
+hqhm	𢤵
 hqhq	㹜
 hqhq	䨇
 hqhq	𳇰
+hqhr	㫷
+hqhs	𱉅
 hqht	𣤛
 hqhv	𫲫
 hqhw	𬯰
 hqhw	𰾿
 hqjt	𬧧
 hqjv	𰕄
+hqkl	𫦮
+hqkl	𭄭
+hqkv	𦥄
 hqla	𫟹
 hqla	𮜲
 hqlj	𫔌
+hqll	𠔶
+hqll	𫯔
+hqll	𫯘
 hqls	𰾨
+hqlv	𠔡
+hqlx	𦒙
 hqmb	𨊙
 hqmb	𳄂
 hqmd	𰹃
 hqmf	𮸐
+hqml	𠔴
 hqnh	𨱏
 hqnk	𲉫
+hqnq	𲒀
+hqnr	𠔫
 hqnx	𲈓
 hqpb	𱪬
 hqpd	𰹂
+hqpg	𮫡
 hqpn	𬧰
+hqpt	𭅌
 hqqa	𬌪
 hqqo	𲇵
 hqqo	𲉩
 hqqq	𮣵
+hqqw	𭁞
 hqrf	𬌰
+hqri	𰢪
+hqrl	㪸
 hqrm	𱲋
+hqrn	𤻓
 hqrt	𰿃
 hqsh	䦃
+hqsn	䳢
 hqsn	𩿛
 hqsn	𬷩
 hqsr	𫠁
+hqss	𫮱
+hqst	𬚌
+hqtd	𬸨
 hqtk	𲈑
 hqtq	𤜹
+hqts	𢮜
+hqts	𪅾
 hqvd	𬭡
 hqve	𰡈
+hqvi	𭰭
+hqvj	𢃛
 hqvj	𬮁
+hqwb	𲰥
+hqwc	𲊾
 hqwd	𭷿
+hqwd	𰤯
+hqwf	䫖
+hqwf	𡠧
+hqwf	𡢁
+hqwf	𧡪
+hqwf	𬎲
 hqwf	𰹇
+hqwi	㐞
 hqwi	𮷾
+hqwj	𢾤
+hqwj	𭔶
+hqwk	𤯉
+hqwl	𦡾
+hqwl	𫯑
+hqwl	𲚸
+hqwm	𢝖
+hqwm	𢦊
+hqwp	㽎
+hqwq	㪛
+hqwq	𭅧
+hqwr	𬐾
+hqwr	𬢏
+hqws	𫤱
+hqws	𮌅
+hqwt	𫧈
+hqwt	𰅽
+hqwv	𠝻
+hqww	𤯑
+hqww	𮟑
+hqww	𲆎
+hqww	𳄷
+hqxm	𲡇
+hqxx	𱻛
+hqya	𤦢
+hqyd	𠔵
+hqyw	𤭣
+hqyw	𤭦
 hrbc	𣆡
 hrbc	𬁘
 hrbc	𮸶
@@ -46646,8 +46648,6 @@ hrgp	㬃
 hrgp	𭥠
 hrgq	𢻣
 hrgq	𣇚
-hrgq	𣇳
-hrgq	𣈒
 hrgq	𣈠
 hrgr	𲈟
 hrgs	𨾜
@@ -46724,6 +46724,8 @@ hrhp	𭧭
 hrhp	𲬉
 hrhq	𠭒
 hrhq	𣅤
+hrhq	𣇳
+hrhq	𣈒
 hrhq	𣉲
 hrhq	𣋁
 hrhq	𭦠
@@ -47838,7 +47840,6 @@ hsgr	𱵏
 hsgs	𥛿
 hsgs	𬷫
 hsgt	𫀍
-hsgw	𥚮
 hsgw	𨕫
 hsgy	䄂
 hsgy	𥛧
@@ -47883,6 +47884,7 @@ hsht	𫔋
 hshv	𥜩
 hshv	𮂡
 hshv	𱵎
+hshw	𥚮
 hsi	𱍐
 hsjc	𥘑
 hsje	𮁢
@@ -48052,12 +48054,12 @@ hsnd	𠴅
 hsnd	𥙚
 hsnd	𫀞
 hsnf	𥜫
-hsng	𥛏
-hsng	𫀣
 hsng	𮂊
 hsng	𰧻
+hsnh	𥛏
 hsnh	𥛦
 hsnh	𥛾
+hsnh	𫀣
 hsni	𥙘
 hsnj	𥙡
 hsnk	𥘤
@@ -48499,7 +48501,6 @@ hvgm	𭓑
 hvgm	𳂾
 hvgn	䟇
 hvgq	𧽁
-hvgq	𰌪
 hvgs	𡏸
 hvgs	𭒸
 hvgs	𳂸
@@ -48551,6 +48552,7 @@ hvhl	𮛀
 hvhp	𧽱
 hvhp	𧾈
 hvhq	䟂
+hvhq	𰌪
 hvhq	𰠽
 hvhr	𡥌
 hvhr	𧺝
@@ -49207,13 +49209,13 @@ hyfy	𬭟
 hyga	𨉚
 hygf	𡜹
 hygm	𭜺
-hygq	𪜝
 hygs	𡌯
 hygx	𣖦
 hyha	𰠠
 hyhd	𲭔
 hyhh	𨅪
 hyhp	𱭨
+hyhq	𪜝
 hyhq	𱭧
 hyhr	𨉩
 hyhr	𮸔
@@ -50568,14 +50570,12 @@ jgcr	𰃈
 jgcs	𡌅
 jgcs	𩎵
 jgdb	𠎦
-jgdj	㒋
 jgdm	𫡼
 jgdx	𠋸
 jgdy	𠎇
 jgfg	𲑐
 jgfi	𫢏
 jgfo	𧙏
-jgfy	𠐾
 jgfy	𩑹
 jgfy	𬿦
 jggd	𠍻
@@ -50615,7 +50615,6 @@ jgkx	𠋕
 jgkx	𠌖
 jgla	㑍
 jgle	𠅥
-jgle	𠎞
 jgle	𲐪
 jgle	𲐸
 jglf	𧙰
@@ -50697,7 +50696,6 @@ jgse	𲰨
 jgsn	䲻
 jgsn	𬷉
 jgsn	𭀈
-jgsu	𲑇
 jgtq	𣢿
 jgtq	𲯚
 jgu	𨚥
@@ -50722,6 +50720,7 @@ jhdf	𧙃
 jhdf	𰂟
 jhdh	𣍔
 jhdi	𲐕
+jhdj	㒋
 jhdl	𠆛
 jhdm	𢚨
 jhdm	𲑎
@@ -50743,6 +50742,7 @@ jhfs	𭕐
 jhfu	𡠓
 jhfu	𪜿
 jhfv	𠜬
+jhfy	𠐾
 jhfy	𮯽
 jhga	𠆲
 jhgf	𲀯
@@ -50779,6 +50779,7 @@ jhky	𬽔
 jhlb	𤕚
 jhle	𠆨
 jhle	𠉸
+jhle	𠎞
 jhlg	𲐥
 jhlh	𩡑
 jhlr	𱎵
@@ -50813,6 +50814,7 @@ jhsi	𠇣
 jhsn	𪀢
 jhsu	𱎰
 jhsu	𲐭
+jhsu	𲑇
 jhtj	𠊒
 jhtt	𠉆
 jhtw	𨕉
@@ -53218,7 +53220,6 @@ kcfy	𩑧
 kcfy	𩒷
 kcga	𬧳
 kcgc	𨋥
-kcgd	䡳
 kcgd	𨎟
 kcgd	𫏾
 kcgg	䡏
@@ -53244,10 +53245,10 @@ kcgt	䡒
 kcgu	𨙺
 kcgu	𨛩
 kcgv	𨐁
-kcgw	𨍜
 kcgx	𨍕
 kchb	𨎍
 kchc	𮝙
+kchd	䡳
 kchd	𨊡
 kchd	𨍴
 kche	𨌈
@@ -53270,6 +53271,7 @@ kchq	𲄳
 kchr	𬧷
 kcht	𨌮
 kchv	𡥆
+kchw	𨍜
 kchw	𨘳
 kchw	𰹠
 kchx	𨌟
@@ -53770,9 +53772,9 @@ kdfx	𫅭
 kdgb	𫴤
 kdgm	𮫕
 kdgp	䦾
-kdgq	𲟬
 kdgw	𫑓
 kdhp	𤓑
+kdhq	𲟬
 kdi	𠂤
 kdjb	𱚍
 kdjc	𫒺
@@ -54320,7 +54322,6 @@ kggm	𢥛
 kggn	𡫮
 kggq	𡫙
 kggq	𡫳
-kggq	𱅱
 kggr	𩩍
 kggs	𡔂
 kggs	𡫼
@@ -54341,6 +54342,7 @@ kghl	𩪖
 kghl	𩪬
 kghp	䯥
 kghq	𩩮
+kghq	𱅱
 kghr	䯠
 kghw	𩩲
 kghy	𩨠
@@ -54515,7 +54517,6 @@ kgsj	𩪕
 kgsn	𩾮
 kgss	䯓
 kgss	𩩒
-kgsu	𡪈
 kgta	𪧈
 kgtk	𩩰
 kgtn	䯖
@@ -54665,6 +54666,7 @@ khsh	𡪄
 khsj	𢔽
 khsk	𭮳
 khsn	𬷌
+khsu	𡪈
 khtc	𫳳
 khti	𡧮
 khva	𭄂
@@ -56148,7 +56150,6 @@ kqfy	𤣔
 kqfy	𲮖
 kqgb	𪻈
 kqgb	𱮇
-kqgd	𭸨
 kqgg	𤢹
 kqgh	𤡙
 kqgj	𤟸
@@ -56198,6 +56199,7 @@ kqhd	𤞼
 kqhd	𤠙
 kqhd	𤠯
 kqhd	𭷸
+kqhd	𭸨
 kqhd	𲭳
 kqhd	𲮙
 kqhf	𱮱
@@ -56913,7 +56915,6 @@ krgr	𢖊
 krgs	𲟡
 krgu	䘏
 krgu	𮠊
-krgw	𧗀
 krhd	𧖧
 krhl	𧗔
 krhq	𧖿
@@ -56921,6 +56922,7 @@ krhr	𧖮
 krhs	𱵋
 krhu	𫳔
 krhu	𬟬
+krhw	𧗀
 kri	㝎
 krjb	𧑬
 krjb	𧑸
@@ -57154,7 +57156,6 @@ ksfy	𩔧
 ksfy	𮨏
 ksfy	𰦡
 ksgb	𧒾
-ksgd	𥐀
 ksgd	𮀄
 ksgj	𢕿
 ksgk	𢖋
@@ -57167,7 +57168,6 @@ ksgm	㼕
 ksgm	𥏩
 ksgm	𲠱
 ksgp	𲬕
-ksgq	𪿋
 ksgs	𪇁
 ksgs	𭛟
 ksgt	𡩐
@@ -57177,6 +57177,7 @@ ksgw	𬩖
 ksgx	𥏭
 ksgy	㽆
 kshd	𥎵
+kshd	𥐀
 kshd	𭿽
 kshd	𱍙
 kshd	𱳣
@@ -57191,6 +57192,7 @@ kshk	𥏫
 kshk	𫡍
 kshq	𢿦
 kshq	𥏓
+kshq	𪿋
 kshq	𭣝
 kshr	𢔪
 kshr	𥎭
@@ -59168,7 +59170,6 @@ lcgg	𮌏
 lcgj	𪘑
 lcgk	䏲
 lcgn	𪙧
-lcgq	䶞
 lcgq	𱌞
 lcgu	𮟰
 lchd	䶗
@@ -59185,6 +59186,7 @@ lchj	𫜶
 lchj	𫠛
 lchl	𦢥
 lchl	𬂅
+lchq	䶞
 lchq	𪙦
 lchq	𮯍
 lchq	𱌚
@@ -59732,7 +59734,6 @@ lgcw	𳄛
 lgcy	㼞
 lgdg	𲆕
 lgdj	𦞀
-lgdj	𦠭
 lgdk	𬛝
 lgdl	𠧈
 lgdl	𠧉
@@ -59864,7 +59865,6 @@ lgqa	𪪳
 lgqb	𲾥
 lgqd	𦹯
 lgqf	𲊜
-lgqi	𦝁
 lgqo	㕝
 lgqr	𤮻
 lgrb	𭁅
@@ -59895,7 +59895,6 @@ lgvu	𭁓
 lgvy	䐼
 lgvy	𦝜
 lgwg	𲕞
-lgwi	𦝧
 lgwi	𲏔
 lgwn	𤱑
 lgwo	𨑪
@@ -59945,6 +59944,7 @@ lhdh	𭨠
 lhdh	𮮝
 lhdi	𦘭
 lhdj	𢩇
+lhdj	𦠭
 lhdj	𰯀
 lhdj	𰯉
 lhdl	𢩝
@@ -60124,6 +60124,7 @@ lhpw	𣎅
 lhpw	𦝲
 lhqd	𭇪
 lhqf	𣎦
+lhqi	𦝁
 lhql	𢩉
 lhql	𦢎
 lhql	𫼌
@@ -60174,6 +60175,7 @@ lhwf	𣍭
 lhwf	𧠞
 lhwi	𠃫
 lhwi	𦙥
+lhwi	𦝧
 lhwj	𢼚
 lhwj	𫾮
 lhwl	𣭺
@@ -60220,7 +60222,6 @@ ljbf	𫅆
 ljbg	𦊣
 ljbg	𦋙
 ljbg	𦋻
-ljbg	𬙡
 ljbg	𱻈
 ljbh	𦋄
 ljbh	𦋜
@@ -60230,6 +60231,7 @@ ljbh	𦋵
 ljbh	𦌐
 ljbh	𦌝
 ljbh	𦌴
+ljbh	𬙡
 ljbh	𮊔
 ljbh	𲒆
 ljbj	𦟣
@@ -61468,13 +61470,13 @@ lnfw	𦙐
 lngc	䑄
 lnge	𦚣
 lngn	㭀
-lngq	𲥡
 lngs	𠫥
 lngt	𠔪
 lnhc	𦝴
 lnhe	䏩
 lnhg	𦡬
 lnhj	𦣕
+lnhq	𲥡
 lnhr	𱼈
 lnhs	𪱡
 lni	𦚵
@@ -62117,7 +62119,6 @@ lsgm	𬜉
 lsgp	𦧊
 lsgr	䐦
 lsgu	𮟵
-lsgw	𮍺
 lsgx	䑜
 lsgy	𦧲
 lshd	𫇖
@@ -62132,6 +62133,7 @@ lshp	𣎧
 lshr	䐗
 lshr	𦟢
 lshr	𦢞
+lshw	𮍺
 lshx	𦧭
 lsi	𢌗
 lsi	𬚯
@@ -63006,10 +63008,10 @@ lxlf	𫯚
 lxlf	𰋓
 lxlg	𡖜
 lxlg	𡖠
-lxlg	𡖾
 lxlg	𡗈
 lxlg	𨛅
 lxlg	𪠞
+lxlh	𡖾
 lxlh	𡗌
 lxlh	𡗎
 lxlh	𡦄
@@ -63686,7 +63688,6 @@ mfgk	𫞀
 mfgl	𣄗
 mfgm	𲋵
 mfgn	𪰂
-mfgq	𣄃
 mfgs	𭤩
 mfgy	𭑑
 mfgy	𰟼
@@ -63698,6 +63699,7 @@ mfhh	𰑱
 mfhi	𨾔
 mfhl	𣄍
 mfhm	𢟟
+mfhq	𣄃
 mfhr	𢘆
 mfhr	𪫮
 mfhr	𪯼
@@ -64038,7 +64040,6 @@ mgdf	𰒲
 mgdg	𬪇
 mgdh	𢧋
 mgdj	㥝
-mgdj	𢠹
 mgdk	𢒖
 mgdl	𠧎
 mgdm	𢞿
@@ -64229,7 +64230,6 @@ mgqa	𢌵
 mgqa	𤼪
 mgqa	𭜢
 mgqh	𤬠
-mgqi	㥍
 mgqo	𭆧
 mgqr	𧇑
 mgqr	𬋸
@@ -64322,6 +64322,7 @@ mhdf	㥛
 mhdh	𩀓
 mhdi	𱱴
 mhdj	𢞊
+mhdj	𢠹
 mhdn	𱉺
 mhdo	𤔄
 mhdo	𪫧
@@ -64384,6 +64385,7 @@ mhpb	𭵼
 mhpk	𭶱
 mhpt	𢢚
 mhqa	𢗗
+mhqi	㥍
 mhqo	㸕
 mhqp	𢠫
 mhqq	𢜬
@@ -67037,7 +67039,6 @@ nbgs	𥱆
 nbgt	𰶼
 nbgv	𠠑
 nbgv	𥰐
-nbgw	𧶿
 nbgw	𨙌
 nbgx	𬖅
 nbgy	𧷳
@@ -67073,6 +67074,7 @@ nbht	𥵗
 nbht	𧸻
 nbhv	𧴯
 nbhv	𭓚
+nbhw	𧶿
 nbhw	𫂃
 nbhw	𮙴
 nbhw	𰶹
@@ -67935,12 +67937,10 @@ nggn	𥳏
 nggo	𢎦
 nggo	𥫤
 nggp	𥶬
-nggs	𥱕
 nggs	𱸕
 nggt	𥳋
 nggt	𭻓
 nggu	𥮇
-nggx	𥷕
 nggy	𥳮
 nggy	𥸕
 nghb	𥳲
@@ -67953,10 +67953,8 @@ ngjj	𥳌
 ngjj	𱸌
 ngjp	𱬆
 ngjx	𥱥
-ngka	𥲲
 ngkb	𥳎
 ngkc	𥐉
-ngkd	𱝻
 ngke	䇩
 ngkg	𬴓
 ngkj	𥬑
@@ -67972,12 +67970,10 @@ ngku	䇙
 ngkv	𫦒
 ngky	𲰢
 nglc	𮅰
-ngle	𫂣
 nglh	𥷸
 nglj	𥭟
 nglj	𲶨
 nglk	𥶤
-ngll	𥶂
 nglm	𥴳
 nglp	𲶉
 ngls	𥱎
@@ -67995,7 +67991,6 @@ ngmw	𫂔
 ngmw	𲅯
 ngmx	𢤷
 ngmx	𥯨
-ngmx	𥶺
 ngng	䈨
 ngnp	𥵼
 ngnq	𥰰
@@ -68006,7 +68001,6 @@ ngpq	𣀖
 ngpq	𫢿
 ngqg	𫑬
 ngql	𲶐
-ngrc	𫂮
 ngrk	𥬤
 ngrk	𥭢
 ngrm	𭾁
@@ -68020,28 +68014,21 @@ ngsy	𠇜
 ngta	𤰗
 ngta	𭻌
 ngtk	𲶁
-ngtq	𥳽
-ngtq	𲧮
 ngtt	𥯡
 ngtt	𫞾
 ngu	𨚹
 ngva	𥬣
 ngvd	𠛵
-ngvd	𪟕
 ngvm	𢤉
 ngvy	𮅳
 ngwh	𦤮
-ngwi	𥯓
 ngwi	𲏡
-ngwk	𲶍
-ngwv	䉇
 ngwx	𥲒
 ngxu	䈎
 ngxu	𣐻
 ngyd	𮫮
 ngyg	𱸛
 ngyi	䉂
-ngyi	𲶣
 ngyk	䉊
 ngyk	𥮾
 nha	𥫫
@@ -68096,9 +68083,11 @@ nhgf	𩛖
 nhgg	𫣘
 nhgm	𮪁
 nhgr	𥂜
+nhgs	𥱕
 nhgt	𤱭
 nhgu	𥭕
 nhgu	𨝓
+nhgx	𥷕
 nhhb	𥯯
 nhhc	𥷍
 nhhe	𥳬
@@ -68136,6 +68125,8 @@ nhjv	𲁍
 nhjv	𲶡
 nhjw	𰻇
 nhjw	𲅼
+nhka	𥲲
+nhkd	𱝻
 nhkh	𫂦
 nhkj	𠏸
 nhkj	𪠁
@@ -68153,6 +68144,7 @@ nhld	𪛊
 nhld	𱊵
 nhle	𥯋
 nhle	𦚶
+nhle	𫂣
 nhle	𮵫
 nhlf	𧢢
 nhlg	𱍉
@@ -68166,6 +68158,7 @@ nhli	𫟛
 nhlk	䶳
 nhlk	𠎏
 nhlk	𠎘
+nhll	𥶂
 nhlm	𢨍
 nhlm	𭯘
 nhlm	𰚯
@@ -68193,6 +68186,7 @@ nhmw	𠎈
 nhmw	𰻉
 nhmx	𢙅
 nhmx	𢚒
+nhmx	𥶺
 nhne	㑒
 nhne	𠈏
 nhnj	㪘
@@ -68233,6 +68227,7 @@ nhqv	𱸩
 nhqw	𥮞
 nhqy	𮆷
 nhrb	𫝇
+nhrc	𫂮
 nhrd	𥯎
 nhrf	𥃋
 nhrf	𬓘
@@ -68260,11 +68255,14 @@ nhss	𮙝
 nhsu	𡋛
 nhsu	𥭧
 nhtl	𰔾
+nhtq	𥳽
 nhtq	𰙓
+nhtq	𲧮
 nhts	㧱
 nhtv	𫦏
 nhva	𭃟
 nhvd	㓣
+nhvd	𪟕
 nhve	𱸓
 nhvh	𬓜
 nhvi	𡥟
@@ -68275,10 +68273,13 @@ nhwd	𫣹
 nhwe	𣁁
 nhwe	𥫾
 nhwh	𮰂
+nhwi	𥯓
 nhwi	𮅍
+nhwk	𲶍
 nhwo	䢔
 nhwo	𥳟
 nhwo	𨒣
+nhwv	䉇
 nhxd	𮙑
 nhxg	𨝫
 nhxj	𢿴
@@ -68299,6 +68300,7 @@ nhyd	𥰻
 nhyd	𫂁
 nhyf	𫕽
 nhyh	𮅾
+nhyi	𲶣
 nhyr	𮆣
 nhyt	𤥓
 nhyt	𥲸
@@ -68607,7 +68609,6 @@ nlfy	𩓱
 nlga	𫢉
 nlgm	𥮨
 nlgm	𥵖
-nlgq	𥸞
 nlgs	䇗
 nlgu	䇢
 nlgu	𨛭
@@ -68617,6 +68618,7 @@ nlhi	䧾
 nlhi	𨾟
 nlhp	𥳚
 nlhq	䈆
+nlhq	𥸞
 nlhs	𪅰
 nljb	𥰹
 nljf	𥲪
@@ -68916,7 +68918,6 @@ nmfy	𥯫
 nmfy	𰢦
 nmfy	𱾪
 nmgd	𥹋
-nmgd	𥼤
 nmge	䇝
 nmge	𢨔
 nmge	𫂶
@@ -68966,6 +68967,7 @@ nmhc	𱹁
 nmhd	𥸧
 nmhd	𥺦
 nmhd	𥻽
+nmhd	𥼤
 nmhd	𰪲
 nmhf	𥜛
 nmhf	𩔬
@@ -70269,7 +70271,6 @@ nsfx	𮩖
 nsfy	𥷆
 nsfy	𩝗
 nsgb	𩝽
-nsgd	𬲛
 nsgg	𱸁
 nsgj	𩝘
 nsgk	𩜆
@@ -70279,18 +70280,17 @@ nsgl	𩞢
 nsgl	𩞫
 nsgo	𮨷
 nsgq	𩚳
-nsgq	𱃪
 nsgr	𬾾
 nsgs	𥬔
 nsgt	𩞼
 nsgu	𨚶
 nsgv	𲋞
-nsgw	𩜱
 nsgx	䭎
 nsha	𱃣
 nshb	𥶾
 nshd	𣃑
 nshd	𬲔
+nshd	𬲛
 nshd	𱃬
 nshf	𩟻
 nshf	𱸰
@@ -70311,12 +70311,14 @@ nshn	䭘
 nshn	𩞗
 nshp	䭖
 nshp	𮆈
+nshq	𱃪
 nshq	𱝂
 nshr	𥶇
 nshr	𩚣
 nshr	𳋜
 nshs	𩚪
 nshv	𲵺
+nshw	𩜱
 nshw	𮸾
 nshx	𩜷
 nshx	𩝣
@@ -71301,7 +71303,6 @@ nwgl	𭍭
 nwgm	𡈊
 nwgo	𡆬
 nwgp	𡇺
-nwgq	𲘦
 nwgt	𡇍
 nwgt	𥰣
 nwgt	𭕎
@@ -71321,6 +71322,7 @@ nwhi	𥴢
 nwhk	𫭍
 nwhk	𭕏
 nwhl	𥳼
+nwhq	𲘦
 nwhr	𣅍
 nwht	𪢬
 nwhw	𡆸
@@ -71698,7 +71700,6 @@ nxgd	𡮚
 nxgk	𥶠
 nxgq	𡮁
 nxgs	𮅧
-nxgt	𡮪
 nxgu	𨜼
 nxhb	𥷗
 nxhb	𧓷
@@ -71721,6 +71722,7 @@ nxhs	𪅓
 nxhs	𪇲
 nxhs	𮭕
 nxhs	𮭜
+nxht	𡮪
 nxht	𫴾
 nxhv	𮱡
 nxhw	𣁂
@@ -71750,11 +71752,11 @@ nxkd	𫵆
 nxkd	𫵊
 nxkf	䚇
 nxkf	𪨆
-nxkg	𡮴
 nxkg	𨙹
 nxkg	𨜜
 nxkg	𭻂
 nxkh	䉘
+nxkh	𡮴
 nxkh	𪨅
 nxkh	𱚪
 nxkh	𱚫
@@ -71859,7 +71861,6 @@ nxng	𰃑
 nxng	𰃕
 nxng	𱏰
 nxng	𲋓
-nxng	𲑳
 nxnh	𠒽
 nxnh	𠓃
 nxnh	𠓑
@@ -71869,6 +71870,7 @@ nxnh	𫤥
 nxnh	𬯬
 nxnh	𰏵
 nxnh	𲑲
+nxnh	𲑳
 nxnh	𲑷
 nxni	𥱛
 nxnj	𠒦
@@ -72161,15 +72163,12 @@ nygo	𬕡
 nygp	𮠠
 nygq	䣲
 nygq	𨡟
-nygq	𨡨
 nygq	𰼉
 nygq	𰼎
-nygs	𲆺
 nygt	𨣔
 nygt	𮵵
 nygu	𨛈
 nygu	𨟰
-nygw	䤁
 nygw	𨡦
 nygx	𲆲
 nyhc	𥱫
@@ -72185,10 +72184,13 @@ nyhl	𨢡
 nyhp	𬋕
 nyhp	𬪸
 nyhq	䣭
+nyhq	𨡨
 nyhq	𨢥
 nyhq	𨣅
 nyhr	𮠴
+nyhs	𲆺
 nyhv	䤖
+nyhw	䤁
 nyhw	𨟺
 nyjb	𨠦
 nyjc	䈙
@@ -73308,7 +73310,6 @@ pgpt	𩲃
 pgqa	𫸟
 pgqg	𩳸
 pgqh	𩵄
-pgqi	𤊄
 pgqj	𩵉
 pgqj	𩵊
 pgql	𤒹
@@ -73381,7 +73382,6 @@ pgxl	𩳯
 pgxm	𩳾
 pgxu	𠣛
 pgxu	𩲙
-pgxu	𰟙
 pgya	𠣎
 pgyd	𩳣
 pgyd	𮹒
@@ -73472,6 +73472,7 @@ phpt	𬋏
 phpw	㷎
 phqf	𤑻
 phqf	𪹷
+phqi	𤊄
 phql	㷸
 phql	𤌱
 phql	𤒃
@@ -73510,6 +73511,7 @@ phxs	𤒲
 phxu	㷄
 phxu	𤉜
 phxu	𪹯
+phxu	𰟙
 phxu	𰯹
 phxx	𤌙
 phxx	𦑹
@@ -74904,7 +74906,6 @@ psgb	䃨
 psgc	䂵
 psgc	𥔅
 psgc	𲳶
-psgd	𥕶
 psgd	𪿘
 psgd	𮀫
 psge	䂜
@@ -74921,19 +74922,16 @@ psgk	𭴦
 psgl	𥑶
 psgl	𥓓
 psgl	𱴚
-psgm	𥖘
 psgm	𮁉
 psgn	𲴊
 psgp	𥐸
 psgp	𥔪
 psgp	𥕃
 psgp	𪿔
-psgq	䃆
 psgq	𮁘
 psgr	㔩
 psgr	𥓗
 psgs	𠣗
-psgs	𥕛
 psgs	𥖐
 psgs	𥗬
 psgs	𪸘
@@ -74951,6 +74949,7 @@ pshb	𥒏
 pshb	𥕎
 pshc	䂻
 pshd	𥕁
+pshd	𥕶
 pshd	𰧄
 pshd	𱴗
 pshe	𮀝
@@ -74977,6 +74976,7 @@ pshl	𠄗
 pshl	𥖝
 pshl	𱳽
 pshl	𲴀
+pshm	𥖘
 pshm	𥗡
 pshn	𥑷
 pshn	𥓷
@@ -74987,6 +74987,7 @@ pshp	𭵽
 pshp	𭶗
 pshp	𱴰
 pshp	𲴏
+pshq	䃆
 pshq	𥕸
 pshq	𬒨
 pshq	𮀺
@@ -74999,6 +75000,7 @@ pshr	𤑟
 pshr	𥔋
 pshr	𥗟
 pshs	䂯
+pshs	𥕛
 pshs	𮀔
 psht	䃂
 psht	𥒹
@@ -75822,12 +75824,12 @@ pvfn	𪕀
 pvfq	𪔾
 pvfv	𪕝
 pvfy	𪕯
-pvgd	𪖉
 pvgj	𪕞
 pvgl	䶇
 pvgm	𪕳
 pvgt	𰞬
 pvhd	𪕹
+pvhd	𪖉
 pvhf	𪕤
 pvhg	𪖂
 pvhi	䶆
@@ -76297,7 +76299,6 @@ qcgg	𬝘
 qcgk	𦯔
 qcgl	𦾲
 qcgm	𬞧
-qcgq	𦸆
 qcgr	𧄭
 qchd	𦼢
 qchd	𦽅
@@ -76308,6 +76309,7 @@ qchh	𱾶
 qchi	𦸏
 qchi	𮶳
 qchj	䔻
+qchq	𦸆
 qchq	𮓈
 qchr	𦴒
 qchr	𰲏
@@ -76732,7 +76734,6 @@ qfgj	𦲘
 qfgp	𫊌
 qfgs	𲼘
 qfgt	𦲣
-qfgt	𮑡
 qfgx	𦰧
 qfgx	𧀢
 qfgy	𦬜
@@ -76747,6 +76748,7 @@ qfhq	𦰨
 qfhq	𬞽
 qfhq	𲽐
 qfhr	𮎩
+qfht	𮑡
 qfhv	䒵
 qfhv	𰲔
 qfhw	䕣
@@ -76969,13 +76971,11 @@ qgcw	𧁂
 qgcy	𰱝
 qgdc	𬞘
 qgdh	𠫅
-qgdj	䔮
 qgdm	𰱥
 qgdn	𧄈
 qgdn	𱉠
 qgdp	𦶁
 qgdp	𫉳
-qgdp	𮑣
 qgdr	𧀟
 qgdv	𭃵
 qgdv	𲞤
@@ -77164,10 +77164,8 @@ qgsi	𠬟
 qgsj	䔖
 qgsj	𦸎
 qgss	𦸐
-qgsu	𦸀
 qgsy	𤱡
 qgta	𤰻
-qgtq	𮑁
 qgtt	𣬍
 qgtt	𦳈
 qgve	𦯓
@@ -77176,14 +77174,12 @@ qgvv	𦼡
 qgvv	𦾅
 qgwf	𫉛
 qgwi	䒛
-qgwl	𧃠
 qgwo	𨓥
 qgws	𦯋
 qgww	𧆕
 qgxd	𲲍
 qgxh	𮓎
 qgxh	𱢯
-qgxu	𦻆
 qgxw	𨗸
 qgxw	𫊍
 qgxx	𧄠
@@ -77212,11 +77208,13 @@ qhdd	䔅
 qhdf	䓧
 qhdf	𲼾
 qhdg	𦻚
+qhdj	䔮
 qhdj	𦴻
 qhdm	𲔼
 qhdo	𬜵
 qhdo	𱾖
 qhdp	𮐹
+qhdp	𮑣
 qhdp	𱾋
 qhds	𦹆
 qhdt	𫉸
@@ -77383,6 +77381,7 @@ qhsl	𧹨
 qhsn	𦿬
 qhsn	𧁢
 qhsu	𦯖
+qhsu	𦸀
 qhsu	𫇺
 qhsu	𬞄
 qhsy	𬞓
@@ -77395,6 +77394,7 @@ qhto	𭺺
 qhtq	𪴮
 qhtq	𭭕
 qhtq	𮐁
+qhtq	𮑁
 qhtt	𫈋
 qhtu	𠀪
 qhva	𠝖
@@ -77405,6 +77405,7 @@ qhvu	𮑑
 qhwi	𦮲
 qhwi	𮎣
 qhwk	𦭢
+qhwl	𧃠
 qhwo	𦻗
 qhww	𦬛
 qhww	𦽍
@@ -77415,6 +77416,7 @@ qhxd	𫉻
 qhxj	𦳱
 qhxk	𭛙
 qhxu	𦺴
+qhxu	𦻆
 qhxu	𮶢
 qhxx	𦶑
 qhyc	𦷤
@@ -78304,11 +78306,11 @@ qmge	𦬗
 qmgh	𧄰
 qmgm	𦾻
 qmgn	𮏾
-qmgq	𦻬
 qmgt	𱽻
 qmhh	𧀂
 qmhi	𲼯
 qmhq	𦵥
+qmhq	𦻬
 qmht	𬞢
 qmhw	𱿀
 qmi	𮶛
@@ -78360,8 +78362,8 @@ qmmw	𮒦
 qmmx	𫈝
 qmmy	𧄜
 qmnf	𱾊
-qmng	𲽛
 qmnh	𦳧
+qmnh	𲽛
 qmnl	𦵱
 qmnm	𦹭
 qmnu	䒜
@@ -79792,9 +79794,7 @@ qxfy	𦺀
 qxfy	𧄴
 qxfy	𱿂
 qxgl	𫊅
-qxgq	𦻊
 qxgu	𮠆
-qxgw	𦾢
 qxgw	𨙗
 qxhd	𫈥
 qxhd	𮒬
@@ -79805,10 +79805,12 @@ qxhi	𱾝
 qxhk	𦼴
 qxhl	𦻽
 qxhl	𧃺
+qxhq	𦻊
 qxhq	𰲌
 qxhs	𦳐
 qxhv	𦰁
 qxhw	𦼰
+qxhw	𦾢
 qxhx	𦼪
 qxhx	𦽩
 qxhy	𦰳
@@ -80440,7 +80442,7 @@ rcma	𧫼
 rcmh	𮘥
 rcmi	䛉
 rcmx	𲠚
-rcng	𫍕
+rcnh	𫍕
 rcnl	𧫶
 rcns	𧫾
 rcpb	𭵮
@@ -80580,7 +80582,6 @@ rga	𮘁
 rgbx	𬢹
 rgci	𧨬
 rgco	䛍
-rgdj	𧬜
 rge	𧥹
 rgfi	𧦒
 rgfo	𧪏
@@ -80603,14 +80604,12 @@ rgml	䜏
 rgnc	䛺
 rgqa	𬢢
 rgrk	䛣
-rgsu	𧫠
 rgta	𧦵
 rgtk	𠙙
 rgtu	𧦮
 rgu	𫑟
 rgvy	𧩶
 rgxu	䛶
-rgxu	𧬗
 rgyi	𧫖
 rgyk	𬢳
 rgyo	䛆
@@ -80637,6 +80636,7 @@ rhdc	𧆲
 rhdd	𱊫
 rhdf	𧩦
 rhdh	𤟜
+rhdj	𧬜
 rhdj	𲁶
 rhdl	𧇀
 rhdm	𭟔
@@ -80713,7 +80713,6 @@ rhgp	䜙
 rhgq	㪭
 rhgq	𢿊
 rhgq	𣀞
-rhgq	𧇫
 rhgq	𰕘
 rhgs	𪇸
 rhgs	𳏳
@@ -80732,6 +80731,7 @@ rhhg	𨜻
 rhhh	𬟱
 rhhk	𠢍
 rhhm	𢨘
+rhhq	𧇫
 rhhr	䖑
 rhhr	𧇾
 rhhr	𫊢
@@ -80910,6 +80910,7 @@ rhsq	𭤐
 rhss	𪆺
 rhsu	䜃
 rhsu	𧨚
+rhsu	𧫠
 rhsu	𭎭
 rhsu	𮓗
 rhsu	𮓛
@@ -80966,6 +80967,7 @@ rhxj	䖖
 rhxj	𧆥
 rhxk	𧈇
 rhxq	𧇆
+rhxu	𧬗
 rhxx	𧇃
 rhxx	𧇥
 rhxx	𧇨
@@ -81171,7 +81173,6 @@ rjgt	𬽁
 rjgt	𮙢
 rjgv	㵗
 rjgv	𰄠
-rjgw	𠗮
 rjgw	𪜞
 rjgw	𫡶
 rjgx	𠗨
@@ -81200,6 +81201,7 @@ rjhp	𲳽
 rjhq	㕠
 rjhq	𭂙
 rjhr	𠗠
+rjhw	𠗮
 rjhw	𠘡
 rjhw	𪞙
 rjhx	𪳙
@@ -81744,7 +81746,6 @@ rlgm	𧩟
 rlgp	𪝗
 rlgt	𤲝
 rlgu	𭷃
-rlgw	𪉯
 rlhd	𪊀
 rlhg	𨟣
 rlhg	𨟬
@@ -81762,6 +81763,7 @@ rlhs	㙬
 rlhs	𧫕
 rlhs	𩻜
 rlhv	𰌩
+rlhw	𪉯
 rlhw	𪉷
 rli	𣂑
 rljb	𪍹
@@ -81797,13 +81799,13 @@ rljg	䴾
 rljg	𪊈
 rljg	𪌥
 rljg	𪌾
-rljg	𪍀
 rljg	𪍂
 rljg	𪍞
 rljg	𪎀
 rljh	䴸
 rljh	𪌀
 rljh	𪌰
+rljh	𪍀
 rljh	𪍇
 rljh	𪍲
 rljh	𪎆
@@ -82527,7 +82529,6 @@ rnfy	𬣎
 rngc	𤸋
 rngc	𪽴
 rngd	㾂
-rngd	𤺊
 rngd	𤺜
 rngf	㾯
 rngf	𤼞
@@ -82555,7 +82556,6 @@ rngn	𤼛
 rngp	𤵔
 rngp	𤹎
 rngp	𤻩
-rngq	𤷍
 rngq	𤸞
 rngq	𤺶
 rngs	𲱔
@@ -82580,6 +82580,7 @@ rnhc	𰣬
 rnhd	𤴫
 rnhd	𤶂
 rnhd	𤶾
+rnhd	𤺊
 rnhd	𰣻
 rnhe	𤶴
 rnhf	𤷉
@@ -82604,6 +82605,7 @@ rnhp	𤹙
 rnhp	𤻗
 rnhp	𰤃
 rnhq	𤴻
+rnhq	𤷍
 rnhq	𤹆
 rnhq	𤹱
 rnhq	𭼡
@@ -83479,8 +83481,8 @@ rtld	𮌽
 rtle	𧩝
 rtlf	𲺿
 rtlg	𬛉
-rtlg	𬛛
 rtlg	𲺥
+rtlh	𬛛
 rtlj	𦡟
 rtlj	𬛏
 rtll	𮌱
@@ -83597,7 +83599,6 @@ rwgk	𦌭
 rwgl	𫅈
 rwgm	𫻕
 rwgp	𤐍
-rwgq	𦋊
 rwgr	𮊒
 rwgt	𠤩
 rwgt	𢸇
@@ -83621,6 +83622,7 @@ rwhl	𦋁
 rwhl	𦋨
 rwhm	𢝮
 rwhm	𦋆
+rwhq	𦋊
 rwhq	𮉿
 rwhr	𧨥
 rwhr	𧪑
@@ -85073,7 +85075,6 @@ sgps	𥔏
 sgqa	𡊯
 sgqa	𡌹
 sgqh	𥨜
-sgqi	㙋
 sgql	𡐢
 sgqs	𡍊
 sgqw	𮞗
@@ -85096,7 +85097,6 @@ sgsl	𩇘
 sgsn	𩿟
 sgsn	𩿹
 sgsr	𥂊
-sgsu	𪤏
 sgsv	𠞗
 sgta	𡊰
 sgtq	㰦
@@ -85188,6 +85188,7 @@ shpb	𤍫
 shpd	𡒧
 shqa	𡉩
 shqb	𧎹
+shqi	㙋
 shql	𭏬
 shqq	𡍨
 shqv	𭏖
@@ -85209,6 +85210,7 @@ shsn	𪅧
 shss	𮰬
 shsu	㘿
 shsu	𪣐
+shsu	𪤏
 shtg	𭏱
 shti	㞁
 shvd	𡎣
@@ -85261,13 +85263,13 @@ sjgj	𱘀
 sjgm	𮮇
 sjgp	𡊿
 sjgp	𲙌
-sjgq	𬹊
 sjgt	𡍉
 sjgy	𡊨
 sjhg	𱋈
 sjhi	𱋜
 sjhj	𱋤
 sjhn	𫮎
+sjhq	𬹊
 sjhr	𪰛
 sjht	𬹋
 sjhw	𮮄
@@ -86152,7 +86154,6 @@ sngm	𡓞
 sngn	𪅹
 sngo	𩾬
 sngq	𡏰
-sngq	𡒬
 sngr	𩿴
 sngr	𳎬
 sngt	𪂊
@@ -86173,6 +86174,7 @@ snhn	𪈫
 snhp	𪆄
 snhp	𳏩
 snhq	𡏣
+snhq	𡒬
 snhq	𩿁
 snhs	𪈨
 snht	𪂰
@@ -86280,8 +86282,8 @@ snmf	䲱
 snmf	𪤑
 snmg	𩿙
 snmg	𪀸
-snmg	𪇥
 snmg	𬷊
+snmh	𪇥
 snmh	𮬻
 snmi	𥸮
 snmi	𩾙
@@ -87562,7 +87564,6 @@ syfy	𳍅
 syfy	𳍟
 syga	㞄
 sygb	𮬚
-sygd	䲉
 syge	䰷
 sygg	𱇄
 sygj	𩷺
@@ -87598,6 +87599,7 @@ syhc	𩸕
 syhc	𱗛
 syhd	㞆
 syhd	䰳
+syhd	䲉
 syhd	𩹶
 syhf	䱇
 syhf	𩷑
@@ -88723,7 +88725,6 @@ tfdv	㨽
 tfe	𪭤
 tffj	𢪔
 tffp	𲡡
-tfgd	𱠾
 tfgf	㩖
 tfgj	𫽇
 tfgl	𪮵
@@ -88731,6 +88732,7 @@ tfgr	𭡌
 tfgs	𫽪
 tfgy	𰓀
 tfha	㧡
+tfhd	𱠾
 tfhf	𢬎
 tfhg	𢰁
 tfhj	𱠖
@@ -88857,7 +88859,6 @@ tgku	𢪉
 tgku	𫼛
 tgla	𢬗
 tgle	𢯮
-tgle	𭢘
 tglf	𮨍
 tglj	𢱩
 tglt	㨢
@@ -88970,6 +88971,7 @@ thlc	𢹿
 thld	㩦
 thle	𢩪
 thle	𬻺
+thle	𭢘
 thlh	㩎
 thli	㔼
 thli	𢲜
@@ -89686,7 +89688,6 @@ tngl	𢹔
 tngl	𢹢
 tngm	𰔺
 tngn	𢶅
-tngq	𫾑
 tngt	𰔧
 tngu	𨜭
 tngx	𭣊
@@ -89695,6 +89696,7 @@ tnhj	𢷋
 tnhj	𭡪
 tnhk	𢶁
 tnhm	𢷿
+tnhq	𫾑
 tnhr	𫽰
 tnhr	𱠀
 tnhv	𢶏
@@ -90232,7 +90234,6 @@ tsfx	𫅫
 tsga	𰓒
 tsgb	𫗳
 tsgc	𰓖
-tsgd	𫗲
 tsgf	𫗭
 tsgf	𭡟
 tsgf	𲣟
@@ -90245,13 +90246,13 @@ tsgk	𢭙
 tsgk	𭠞
 tsgm	𪮏
 tsgn	𪮀
-tsgq	𬲽
 tsgs	𢵩
 tsgt	𫽅
 tsgx	𰔊
 tsha	𭠏
 tshb	𢸀
 tshc	𬲶
+tshd	𫗲
 tshd	𬳍
 tshd	𰓎
 tshd	𳋫
@@ -90263,6 +90264,7 @@ tshg	𳋰
 tshl	𰒻
 tshn	𬳑
 tshq	𫽺
+tshq	𬲽
 tshr	㨋
 tshs	𭣀
 tsht	𢴪
@@ -90624,9 +90626,9 @@ tvfx	𣕓
 tvfy	𬱁
 tvgo	𢬥
 tvgt	𭻑
-tvgw	𢵺
 tvhl	𢶥
 tvhr	㧺
+tvhw	𢵺
 tvjd	𪮔
 tvji	㧆
 tvka	𢒋
@@ -91695,7 +91697,6 @@ vgsi	𠚦
 vgsi	𣶻
 vgsj	𣻞
 vgsj	𪸈
-vgsu	𣻺
 vgta	𲰸
 vgtk	𣾂
 vgu	䢸
@@ -91705,7 +91706,6 @@ vgvq	𱧍
 vgvt	𱧯
 vgvy	𣸲
 vgwi	𬇚
-vgwm	𪭕
 vgwn	𰝄
 vgxh	𣼼
 vgxx	𣸝
@@ -91766,7 +91766,6 @@ vhga	㲿
 vhgg	𣺝
 vhgk	𳀣
 vhgo	𣵀
-vhgs	𪷲
 vhgt	𪶖
 vhgt	𱩥
 vhhf	𤃑
@@ -91780,6 +91779,7 @@ vhhj	𣵊
 vhhn	𱨆
 vhhp	𤄥
 vhhq	𲪼
+vhhs	𪷲
 vhht	𪟓
 vhht	𱪔
 vhi	𨿌
@@ -91860,6 +91860,7 @@ vhsk	𣻾
 vhsn	𪂌
 vhsn	𬷯
 vhsr	𱨲
+vhsu	𣻺
 vhsy	𬵋
 vhtc	𮳐
 vhtd	𣼬
@@ -91876,6 +91877,7 @@ vhvj	𱪉
 vhwe	𭃉
 vhwe	𲨽
 vhwk	𣳋
+vhwm	𪭕
 vhwo	𨓎
 vhwo	𨓬
 vhwt	𣷳
@@ -93494,12 +93496,12 @@ vqfy	𤂀
 vqgd	𣹓
 vqgg	𪷵
 vqgn	𭲁
-vqgq	𣾁
 vqgx	㵩
 vqhf	𣾛
 vqhg	𤅠
 vqhh	𫞞
 vqhk	𣿴
+vqhq	𣾁
 vqhr	㳻
 vqht	𭳲
 vqhv	𰝭
@@ -94339,13 +94341,13 @@ vygd	𪶝
 vygd	𲟙
 vygn	𰐡
 vygo	𲩫
-vygq	𬈲
 vygs	㳒
 vygs	𳏕
 vygt	𪷉
 vyhb	𤅧
 vyhc	𣺮
 vyhd	𮳌
+vyhq	𬈲
 vyhr	𣾝
 vyhr	𬁢
 vyhs	㴎
@@ -94850,8 +94852,8 @@ wgnd	𫖊
 wgnf	𩊱
 wgnf	𱁺
 wgng	𩌼
-wgng	𩍮
 wgnh	𩌞
+wgnh	𩍮
 wgnj	𩋟
 wgnk	䩖
 wgnk	𩉳
@@ -94909,7 +94911,6 @@ wgqd	𱁸
 wgqf	𱁻
 wgqg	𩎐
 wgqh	𩊿
-wgqi	𰵲
 wgqj	䪇
 wgqj	𩍿
 wgqk	𩋐
@@ -95279,7 +95280,6 @@ whgq	𱶖
 whgs	𥞁
 whgs	𥣊
 whgs	𥤐
-whgs	𮃤
 whgt	𤱜
 whgt	𥠩
 whgt	𥠰
@@ -95287,7 +95287,6 @@ whgt	𫀪
 whgu	𮂰
 whgw	𥟄
 whgw	𥣲
-whgw	𮵤
 whgx	𥠓
 whgy	𥡜
 whgy	𥢪
@@ -95409,6 +95408,7 @@ whhs	𥞆
 whhs	𫀴
 whhs	𫗼
 whhs	𬳥
+whhs	𮃤
 whhs	𮩨
 whhs	𱶙
 whht	䅙
@@ -95429,6 +95429,7 @@ whhw	𬔀
 whhw	𮂹
 whhw	𮩮
 whhw	𱄐
+whhw	𮵤
 whhx	𥠊
 whhx	𩠽
 whhx	𩡓
@@ -95921,6 +95922,7 @@ whqf	𩐖
 whqg	䅦
 whqg	𨞒
 whqh	𥤊
+whqi	𰵲
 whqj	𥡹
 whqk	䅒
 whqk	𬔁
@@ -96953,10 +96955,10 @@ wvxu	𬤗
 wwbj	𤖉
 wwco	𫍤
 wwdj	𰶆
-wwgq	𬌋
 wwgy	𲏒
 wwhe	𰵝
 wwhl	𫤵
+wwhq	𬌋
 wwi	𠃏
 wwi	𠃐
 wwi	𠄍
@@ -97571,8 +97573,6 @@ xffy	𫖟
 xfgd	𠥍
 xfgl	㔴
 xfgn	𠥘
-xfgq	𠥊
-xfgq	𠥩
 xfgs	𣏇
 xfgs	𣖭
 xfgt	𭅗
@@ -97589,6 +97589,8 @@ xfhh	𣖔
 xfhh	𣝓
 xfhh	𩀀
 xfhp	𣚐
+xfhq	𠥊
+xfhq	𠥩
 xfhr	𫧍
 xfht	㰽
 xfht	𠥜
@@ -97896,7 +97898,6 @@ xgcr	𣙶
 xgcs	𪳹
 xgcy	𬃛
 xgdb	𣚦
-xgdj	㯕
 xgdx	𣕘
 xge	㭋
 xgfb	𲧡
@@ -97916,7 +97917,6 @@ xggy	𣚎
 xghc	㯑
 xghd	𱣲
 xghk	𰘲
-xghr	𬄛
 xgjc	𣑓
 xgjd	𰘜
 xgjf	𣚝
@@ -97931,7 +97931,6 @@ xgku	𭩡
 xgkx	㮪
 xgla	𣑳
 xgle	𣖜
-xgle	𬄙
 xglj	㮨
 xglj	𣟪
 xglt	𪳡
@@ -97942,10 +97941,8 @@ xgnk	𬄴
 xgnn	𬂳
 xgpa	𭩾
 xgpe	㭇
-xgps	𬄯
 xgqa	㭓
 xgql	𣚣
-xgrj	𣗠
 xgrk	𭩣
 xgta	𣐬
 xgta	𣐭
@@ -97955,7 +97952,6 @@ xgvy	𣚃
 xgwh	𰘶
 xgwo	𣔴
 xgxp	𮠏
-xgxu	㯦
 xgxu	𣕎
 xgya	㭃
 xgyd	𣔊
@@ -97979,6 +97975,7 @@ xhdb	𮔼
 xhdd	𣘁
 xhdf	𱣵
 xhdg	𪴘
+xhdj	㯕
 xhdk	𲧥
 xhdl	𣙛
 xhdm	𣡹
@@ -98011,6 +98008,7 @@ xhhi	𣚳
 xhhi	𨿢
 xhhq	𣔑
 xhhq	𪴏
+xhhr	𬄛
 xhhr	𭩵
 xhhw	𨗐
 xhhw	𭪟
@@ -98044,6 +98042,7 @@ xhlc	𣠲
 xhld	𭬥
 xhle	𣎸
 xhle	𣔂
+xhle	𬄙
 xhlg	𣐼
 xhlh	𣚕
 xhlm	㲡
@@ -98066,6 +98065,7 @@ xhpo	𣛑
 xhpo	𤉲
 xhpp	𭬘
 xhpr	𪳒
+xhps	𬄯
 xhpw	𣜶
 xhqd	𣛒
 xhqd	𥊨
@@ -98080,6 +98080,7 @@ xhqt	𣘋
 xhqv	𣞺
 xhrf	𣒝
 xhri	𣏬
+xhrj	𣗠
 xhrm	𣓶
 xhrw	𠄃
 xhry	𰘔
@@ -98116,6 +98117,7 @@ xhxp	𤒖
 xhxq	𣁩
 xhxs	𡐨
 xhxu	㮊
+xhxu	㯦
 xhxu	𣛜
 xhxu	𪲝
 xhxu	𲦆
@@ -98498,7 +98500,6 @@ xlgs	𰉹
 xlgt	𣕨
 xlgu	𨛋
 xlgv	𢃪
-xlgw	𳅪
 xlgx	㮬
 xlgx	𣙚
 xlhb	𧐓
@@ -98512,6 +98513,7 @@ xlhp	𤍓
 xlhs	𣘤
 xlhs	𬫀
 xlhw	𰁍
+xlhw	𳅪
 xli	𲥮
 xljc	𣑣
 xlje	𰢮
@@ -98941,7 +98943,6 @@ xngk	𣟹
 xngk	𬄏
 xngl	𣠂
 xngo	𭩫
-xngq	𣗍
 xngt	𰗶
 xngt	𱤍
 xngx	𣞫
@@ -98952,6 +98953,7 @@ xnhe	㭘
 xnhh	𣛉
 xnhj	㯹
 xnhn	𪴡
+xnhq	𣗍
 xnhq	𣗬
 xnhv	𪱿
 xnhw	𨔼
@@ -99204,7 +99206,6 @@ xqgg	𣐢
 xqgk	𭪺
 xqgl	𱤀
 xqgo	𣐕
-xqgq	𬄤
 xqgt	𬃝
 xqgu	𱣋
 xqgx	𣜿
@@ -99218,6 +99219,7 @@ xqhi	𭬈
 xqhk	𲦽
 xqhp	𣞢
 xqhq	𣙷
+xqhq	𬄤
 xqhv	𣝸
 xqhv	𰘖
 xqhw	𱤟
@@ -101216,7 +101218,6 @@ ygco	𤤖
 ygcs	𦅭
 ygdb	𮴵
 ygdf	𰫨
-ygdj	𤩐
 ygdp	𦃯
 ygdx	𦂅
 yge	𥾫
@@ -101269,7 +101270,6 @@ ygla	𰡺
 ygle	㻆
 ygle	𦂈
 ygle	𱯋
-ygle	𮴲
 yglj	㻐
 yglj	𦀷
 yglj	𦃩
@@ -101293,22 +101293,17 @@ ygrk	𥿣
 ygrk	𦀔
 ygry	𬘅
 ygsi	㺨
-ygsu	𲸏
 ygta	𤤦
 ygu	𮈂
 ygvh	𦄜
 ygvy	𤧃
 ygvy	𤩦
 ygvy	𮉄
-ygwi	㻣
-ygwi	𦂼
 ygxj	𬗽
 ygxu	㻡
-ygxu	𤩒
 ygxu	𪲑
 ygyh	𫃰
 ygyi	𤨴
-ygyi	𤪌
 ygyk	𱯆
 ygyo	𤤧
 yhbb	𱰀
@@ -101334,6 +101329,7 @@ yhcn	𦅡
 yhco	𫞦
 yhdd	𱯍
 yhdf	𬍪
+yhdj	𤩐
 yhdo	䋍
 yhdq	𤩛
 yhfe	𮈞
@@ -101372,6 +101368,7 @@ yhle	𥾇
 yhle	𦁠
 yhle	𪻪
 yhle	𱹫
+yhle	𮴲
 yhlg	𤥚
 yhlj	㻽
 yhlj	𦆈
@@ -101418,6 +101415,7 @@ yhss	𮴯
 yhst	𤥦
 yhsu	𤪯
 yhsu	𦀐
+yhsu	𲸏
 yhtc	𮴭
 yhts	𤨱
 yhvd	𦀑
@@ -101426,6 +101424,8 @@ yhvi	㺭
 yhvi	𥾌
 yhvi	𰫙
 yhvo	𮴙
+yhwi	㻣
+yhwi	𦂼
 yhwi	𬗆
 yhwn	㻪
 yhwt	𲸄
@@ -101435,12 +101435,14 @@ yhxj	𤧿
 yhxk	𦆲
 yhxs	𤪮
 yhxu	䌖
+yhxu	𤩒
 yhxu	𦀾
 yhxu	𪼛
 yhxu	𬍯
 yhxx	䌈
 yhya	𦁽
 yhyd	𮴕
+yhyi	𤪌
 yhys	𬷱
 yhys	𳏥
 yhyu	𤤂
@@ -102700,9 +102702,9 @@ yvdp	𭹢
 yvfu	𫃤
 yvgd	𤦮
 yvgo	𲷶
-yvgw	𤩌
 yvhr	𤦊
 yvhs	𦄇
+yvhw	𤩌
 yvhw	𭹓
 yvi	𬍖
 yvjc	𤧵
@@ -110763,7 +110765,6 @@ go	ェ
 go	エ
 go	𘠫
 gqbr	㌇
-gqle	𛀻
 gqwc	𗘴
 grlt	𗍥
 gscs	﨩
@@ -110902,6 +110903,7 @@ hlla	ふ
 hlld	ぷ
 hllr	ぶ
 hqa	⽝
+hqle	𛀻
 hrbi	
 hrbk	暈
 hrdq	最
@@ -124429,7 +124431,7 @@ hdgs	可能
 hwxr	这样
 dknw	中国
 ktkb	我的
-gqkr	其实
+hqkr	其实
 ngfi	第一
 hrbm	时间
 llmv	朋友
@@ -124467,7 +124469,7 @@ hwlv	这些
 yfks	非常
 jbjb	你们
 xjve	而且
-gqxf	基本
+hqxf	基本
 lgwf	公司
 bllv	部分
 mvne	有人
@@ -124486,7 +124488,7 @@ tkhl	为了
 dkne	别人
 nxlh	当然
 ttfd	比如
-gqjs	其他
+hqjs	其他
 dblh	虽然
 qjfj	对于
 hrrf	最后
@@ -124535,7 +124537,7 @@ fdjh	如何
 cshr	结果
 bmkw	希望
 wslv	那些
-gqkv	甚至
+hqkv	甚至
 xlxm	里面
 lbkv	不到
 mvlv	有些
@@ -124628,7 +124630,7 @@ nmtm	数据
 hdhr	可是
 nvlh	自然
 chcq	曾经
-gqps	基础
+hqps	基础
 wnwd	认识
 ydlx	太多
 slrh	考虑
@@ -124690,7 +124692,7 @@ fskb	她的
 fhlx	更多
 rjrj	运动
 tmkv	找到
-gqdk	其中
+hqdk	其中
 blwn	音乐
 xdkv	想到
 mwgk	成功
@@ -124760,7 +124762,7 @@ jnsl	作者
 synr	也会
 lxns	多年
 gcdm	项目
-sygq	尤其
+syhq	尤其
 fnnv	来自
 cngs	就能
 vymw	变成
@@ -125006,7 +125008,7 @@ ljlj	刚刚
 qsfn	带来
 nxhv	小孩
 xdhg	速度
-hrgq	时期
+hrhq	时期
 nwlx	国外
 lqrb	重点
 hryf	是非
@@ -125093,7 +125095,7 @@ srhs	幸福
 qhcn	难道
 qsry	带着
 dply	皮肤
-gqrj	其次
+hqrj	其次
 mfjg	放弃
 hwfq	离开
 jstb	优势
@@ -125142,13 +125144,13 @@ klhr	力量
 hnhd	销售
 nxns	少年
 bllh	竟然
-gqbm	期间
+hqbm	期间
 jbhg	健康
 ffkg	厉害
 nwsy	因素
 csns	半年
 whto	利用
-kcgq	长期
+kchq	长期
 jljc	做出
 qlhw	英文
 mvjl	有效
@@ -125556,7 +125558,7 @@ jvfj	处于
 csvk	导演
 bfxj	农村
 nwmw	回忆
-nbgq	学期
+nbhq	学期
 mcxl	轻松
 rjlp	减肥
 ydgh	太阳
@@ -125578,7 +125580,7 @@ ncmn	创造
 gjdj	附近
 mvxd	快速
 vtgg	浪费
-gqks	期待
+hqks	期待
 fkcb	原则
 gnyf	除非
 msmw	情感
@@ -125663,14 +125665,14 @@ vkto	没用
 kfkr	缺乏
 dkjt	中华
 chhe	单身
-gqfj	基于
+hqfj	基于
 hhhh	默默
 rnne	病人
 nmkh	数字
-gqnw	基因
+hqnw	基因
 wnlj	认同
 jlqt	交通
-rfgq	后期
+rfhq	后期
 qjts	对手
 tkcn	报道
 hwgg	这张
@@ -125738,7 +125740,7 @@ ydcf	大师
 ydrj	大二
 ydne	大人
 rjnx	减少
-gqkt	其它
+hqkt	其它
 lcww	腾讯
 wkkf	设定
 qkdj	苏联
@@ -125896,7 +125898,7 @@ mccl	连续
 wnsr	论坛
 tkmn	报告
 mxto	采用
-gqci	基金
+hqci	基金
 jxjb	偶像
 bfgn	危险
 vlry	活着
@@ -126038,8 +126040,8 @@ jqtb	发挥
 gyxd	幻想
 wcsl	记者
 pcnt	包含
-xwgq	极其
-gqkn	基督
+xwhq	极其
+hqkn	基督
 jclx	过多
 nnxj	从而
 lvxd	真相
@@ -126138,7 +126140,7 @@ dnjb	咱们
 bmgn	军队
 flrb	两点
 xyrj	遇见
-rkgq	与其
+rkhq	与其
 hrlh	果然
 sfkb	表白
 lbkh	还得
@@ -126193,7 +126195,7 @@ vqwf	汉语
 cnfv	道路
 rjnq	运气
 nltk	举报
-gqbc	欺负
+hqbc	欺负
 jgsl	佛教
 yfdc	球员
 djnh	联合
@@ -126339,7 +126341,7 @@ csmj	异性
 nhmn	复制
 slkk	教室
 nwli	四十
-wngq	及其
+wnhq	及其
 blfh	立刻
 fvwt	足以
 blts	新手
@@ -126393,7 +126395,7 @@ djkh	取得
 xxlv	禁止
 nmql	精英
 mbnw	爱国
-clgq	前期
+clhq	前期
 rbhv	桌子
 pklh	忽然
 ttcs	批判
@@ -126635,7 +126637,7 @@ krjx	实体
 ydrb	大战
 ydcs	大半
 tdlc	折腾
-psgq	周期
+pshq	周期
 rysl	业者
 gyjm	邮件
 rqhr	反映
@@ -126746,7 +126748,7 @@ nvtk	自拍
 nwhg	回应
 whmf	种族
 knjw	很低
-gqkw	期望
+hqkw	期望
 nnhg	答应
 rmwf	验证
 mctb	连接
@@ -127017,7 +127019,7 @@ ydlg	太平
 ylqk	环节
 fqnb	开学
 kvyd	到达
-ksgq	短期
+kshq	短期
 yfjm	替代
 hlhv	锤子
 csks	异常
@@ -127103,7 +127105,7 @@ nnvk	从没
 jqfq	发型
 vtmb	忍受
 rmhv	骗子
-fygq	初期
+fyhq	初期
 vsvs	清洁
 tsvs	手法
 mnkf	制定
@@ -127211,7 +127213,7 @@ lgcs	公民
 lgxm	平面
 hrxj	题材
 whfj	利于
-gqms	基层
+hqms	基层
 hrhr	最最
 qtwd	勇敢
 hghv	店铺
@@ -127260,7 +127262,7 @@ csbm	民间
 mchj	辐射
 csms	结尾
 lvnm	此类
-hygq	预期
+hyhq	预期
 dlwh	只剩
 vjvi	流水
 hdmn	可靠
@@ -127300,7 +127302,7 @@ jcnf	过敏
 lbbc	不负
 tdjb	摄像
 xqmw	权威
-kfgq	定期
+kfhq	定期
 ljyx	同理
 hrhs	暗示
 slrj	老头
@@ -127329,12 +127331,12 @@ lxgt	外界
 vlfv	活跃
 dkmf	贵族
 lhdo	户口
-lbsg	不堪
+lbsh	不堪
 wnhv	乐趣
 jklk	佩服
 yccw	班级
 xwhg	极度
-jmgq	假期
+jmhq	假期
 hsnw	社团
 qwne	艺人
 lxcs	多半
@@ -127544,7 +127546,7 @@ fvjc	跳出
 xmlq	面膜
 vnjt	消化
 slsl	静静
-gqnf	其余
+hqnf	其余
 mscs	居民
 hshs	祝福
 mxjv	必备
@@ -127693,7 +127695,7 @@ qska	带上
 tqmf	措施
 sldn	青岛
 tyxk	主机
-gqss	基地
+hqss	基地
 ljjx	内向
 tkje	为生
 tbtw	挣扎
@@ -127704,7 +127706,7 @@ nsqb	年薪
 wwhg	书店
 hhkb	黑白
 ktka	往上
-gqlm	期末
+hqlm	期末
 jcne	过人
 wckf	说完
 wwwc	书记
@@ -127897,7 +127899,7 @@ lknr	协会
 tbrj	搬运
 qlch	共享
 nfhr	命题
-chgq	维基
+chhq	维基
 nwmg	困惑
 thkh	打字
 dmgt	眼界
@@ -127914,7 +127916,7 @@ dwsf	吸毒
 rjbt	见解
 nxhv	栗子
 whks	课堂
-gqrm	欺骗
+hqrm	欺骗
 lxbl	外部
 nqjt	氧化
 qtwn	欢乐
@@ -128079,7 +128081,7 @@ whvi	香水
 lgcs	平民
 wpwn	谈论
 cncy	首页
-gqfi	其一
+hqfi	其一
 jwbl	低端
 jjhr	夜晚
 jcmc	停车
@@ -128110,7 +128112,7 @@ lhlj	肩膀
 rbmv	占有
 msbx	屠杀
 lgmf	平方
-djgq	近期
+djhq	近期
 mngc	选项
 cccg	丝毫
 pvxh	鼠标
@@ -128409,7 +128411,7 @@ jsjc	他們
 lhkg	然後
 rwxr	這樣
 dknw	中國
-gqkf	其實
+hqkf	其實
 hrcm	時間
 nrcm	怎麽
 nrcm	怎麼
@@ -128527,7 +128529,7 @@ yfks	經常
 ksrb	知識
 dltr	數據
 chyf	曾經
-gqps	基礎
+hqps	基礎
 rvrb	認識
 slrh	考慮
 yfgm	經驗
@@ -128755,7 +128757,7 @@ lbry	不對
 rqhg	反應
 ljlj	剛剛
 qfrl	帶來
-hrgq	時期
+hrhq	時期
 nwlx	國外
 lqhh	重點
 hvkw	超過
@@ -128847,9 +128849,9 @@ hvyw	超級
 csgy	判斷
 ygnb	細節
 cnhd	銷售
-gqcm	期間
+hqcm	期間
 fqkg	厲害
-hcgq	長期
+hchq	長期
 dyhv	電子
 cgnq	毫無
 dmpb	睡覺
@@ -129092,7 +129094,7 @@ rhmf	處於
 cnvk	導演
 lqxj	農村
 nwmb	回憶
-pbgq	學期
+pbhq	學期
 kchb	輕鬆
 vmlp	減肥
 ydgh	太陽
@@ -129158,10 +129160,10 @@ twxk	抑鬱
 vpto	沒用
 dkqq	中華
 ddhe	單身
-gqmf	基於
+hqmf	基於
 dlkh	數字
 rvlj	認同
-kggq	後期
+kghq	後期
 ryts	對手
 srcn	報道
 rwgg	這張
@@ -129396,7 +129398,7 @@ mjdp	性別
 nvpb	自學
 mgtb	發揮
 rcsl	記者
-xhgq	極其
+xhhq	極其
 kwlx	過多
 knxj	從而
 lnka	臉上
@@ -129465,7 +129467,7 @@ dnjc	咱們
 bkgc	軍隊
 fvhh	兩點
 xyfj	遇見
-prgq	與其
+prhq	與其
 rwkh	還得
 hvsl	趨勢
 xgsh	機場
@@ -129493,7 +129495,7 @@ bkkk	運行
 vqrf	漢語
 bknq	運氣
 prsr	舉報
-gqbn	欺負
+hqbn	欺負
 yfdn	球員
 djnh	聯合
 lqcl	重慶
@@ -129752,7 +129754,7 @@ nqsd	舞臺
 kfkg	實體
 yddd	大戰
 tdlc	折騰
-psgq	週期
+pshq	週期
 rysl	業者
 lqjm	郵件
 rylx	對外
@@ -130090,7 +130092,7 @@ dpxd	別想
 kklj	室內
 hrxj	題材
 whmf	利於
-gqms	基層
+hqms	基層
 hgcv	店鋪
 vjlq	流動
 yldp	網吧
@@ -130125,7 +130127,7 @@ cscm	民間
 kchj	輻射
 ysms	結尾
 lvnm	此類
-hygq	預期
+hyhq	預期
 gyqx	幾萬
 rqns	反饋
 ydnq	大氣
@@ -130298,7 +130300,7 @@ jcsh	商場
 fvks	兩家
 jkqq	才華
 slsl	靜靜
-gqns	其餘
+hqns	其餘
 mxjq	必備
 fhsj	好壞
 ldvl	幹活
@@ -130514,7 +130516,7 @@ lxdd	名單
 lknf	協會
 tbbk	搬運
 nfhr	命題
-yhgq	維基
+yhhq	維基
 lpvn	腦海
 mghj	發射
 fvhr	跑題
@@ -130525,7 +130527,7 @@ cjhw	改進
 hrns	晚飯
 fjbt	見解
 rhks	課堂
-gqgm	欺騙
+hqgm	欺騙
 qdkb	歡樂
 mfbv	旗艦
 bxyx	辦理
