@@ -33,8 +33,20 @@ const props = defineProps<{
 // 字根字體類名，默認為 'zigen-font'
 const zigenFontClass = computed(() => props.zigenFontClass || 'zigen-font')
 
-// 為始終顯示的字根列表設定默認值
-const alwaysVisibleZigens = computed(() => props.alwaysVisibleZigens || '冫')
+// 根據方案決定始終顯示的字根
+const alwaysVisibleZigens = computed(() => {
+    // 如果外部有传入，优先使用外部传入的值
+    if (props.alwaysVisibleZigens) {
+        return props.alwaysVisibleZigens
+    }
+    // 否则根据方案自动判断
+    switch (activeScheme.value) {
+        case 'ling':
+            return 'Q廾スマ　W乚　R冫虍　乀龵用　P巴　F　G　H丅　J　K丄　L　C䒑　V氵　⺈肀　⺌⺮　'
+        default:
+            return '冫'
+    }
+})
 
 const columnMinWidth = toRef(props, 'columnMinWidth')
 
@@ -670,7 +682,7 @@ onMounted(() => {
                             @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code
-                                }}</span>
+                            }}</span>
                         </span>
                         <!-- 如果有隱藏的字根，顯示省略號 -->
                         <span v-if="zigenByKey[key].hidden.length > 0" class="more-indicator">⋯</span>
@@ -733,7 +745,7 @@ onMounted(() => {
                             }" @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code
-                                }}</span>
+                            }}</span>
                         </span>
                     </div>
                 </div>

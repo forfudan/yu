@@ -37,7 +37,7 @@ import UnifiedSchemeInterface from '@/unified/UnifiedSchemeInterface.vue'
 </script>
 
 <div class="zigen-font">
-<UnifiedSchemeInterface defaultScheme="star" />
+<UnifiedSchemeInterface defaultScheme="ling" />
 </div>
 
 ::: tip 致有緣人
