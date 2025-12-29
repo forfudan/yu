@@ -497,6 +497,7 @@ flv	䴕
 frm	惡
 frs	垩
 fsd	姞
+fsj	饻
 fvc	踯
 fvd	䴓
 fvf	𧿹
@@ -736,10 +737,6 @@ tfs	掾
 tjc	為什麼
 tkn	搾
 tkw	撾
-tsd	撷
-tsj	𫗴
-tsr	馐
-tss	馌
 txh	揸
 vbf	濜
 vbk	滻
@@ -5455,34 +5452,86 @@ frye	亚
 fryt	琧
 fsa	无
 fsbc	嬄
+fsbo	蚀
+fsbp	馅
+fsbr	馋
+fscl	馔
+fscq	饼
+fsdc	馈
 fsdf	媴
+fsdj	饵
 fsdk	嬯
 fsdo	嬉
 fsdo	姞
+fsfc	饾
+fsfm	饯
 fsfo	婊
+fsgd	饴
+fsgj	馂
+fshd	饤
+fshq	馒
 fshr	媎
+fsht	馄
+fshx	馃
+fsi	饣
+fsjb	饺
+fsjd	饹
 fsjf	嬝
+fsjf	饻
+fsjj	饳
+fsjx	饷
 fska	厖
 fska	娏
 fske	厐
+fskg	馉
+fskj	饥
+fskm	饿
+fskm	饦
+fskv	馆
 fsle	婧
 fsle	靕
+fslf	馕
+fslh	饽
 fslj	婈
+fslr	饪
+fsmf	馁
+fsmj	饨
+fsmn	饶
 fsmx	娡
 fsna	鳫
 fsna	鴊
 fsnb	嫧
 fsnd	嬙
+fsnh	饸
+fsnk	饬
+fsnq	饩
+fsnv	饰
+fsnx	馀
+fspc	饱
 fspj	厫
+fspq	馊
+fsqj	馓
+fsqy	馍
+fsrk	馐
 fsrn	嬻
 fsro	婞
+fsrq	饭
 fssn	嬈
+fssr	馌
 fssu	娃
 fssu	厓
 fsti	姥
+fstq	饮
 fstu	压
 fsu	圧
+fsvj	馎
+fswd	饲
+fswg	馏
 fswj	嬦
+fswk	饧
+fswr	馑
+fswy	饫
+fsxf	馇
 fsye	她
 fsyi	嫊
 ftbg	嫏
@@ -17958,89 +18007,37 @@ trve	摣
 trwt	抟
 tryh	攞
 tsbc	撎
-tsbo	蚀
-tsbp	馅
-tsbr	馋
-tscl	馔
 tscl	捇
-tscq	饼
 tscs	搗
-tsdc	馈
 tsdc	撷
 tsdf	擷
-tsdj	饵
 tsdk	擡
 tsdm	看
 tsdo	拮
-tsfc	饾
 tsfg	拜
-tsfm	饯
-tsgd	饴
-tsgj	馂
 tsgr	搕
 tsgs	抾
-tshd	饤
-tshq	馒
 tshr	擼
-tsht	馄
-tshx	馃
-tsi	饣
-tsjb	饺
 tsjc	持
-tsjd	饹
-tsjf	饻
-tsjj	饳
-tsjx	饷
 tske	拢
-tskg	馉
-tskj	饥
 tskl	拋
 tskl	劧
-tskm	饿
-tskm	饦
-tskv	馆
 tsle	掅
-tslf	馕
-tslh	饽
 tslj	掕
-tslr	饪
 tslt	掰
-tsmf	馁
-tsmj	饨
-tsmn	饶
-tsnh	饸
-tsnk	饬
-tsnq	饩
 tsnt	搿
-tsnv	饰
-tsnx	馀
 tso	手
 tso	龵
-tspc	饱
-tspq	馊
-tsqj	馓
-tsqy	馍
 tsrk	拷
-tsrk	馐
-tsrq	饭
 tsrw	撻
 tssn	撓
 tssr	掛
-tssr	馌
 tssu	挂
 tsth	搘
-tstq	饮
 tstt	掱
 tsu	扗
-tsvj	馎
-tswd	饲
-tswg	馏
 tswj	擣
-tswk	饧
-tswr	馑
 tswu	摀
-tswy	饫
-tsxf	馇
 tsye	扡
 tsyo	扰
 ttce	振
@@ -38536,58 +38533,179 @@ fryh	𡤢
 frym	㜻
 frys	𡤻
 fryy	𡤣
+fsbd	𱃾
+fsbf	𲋥
+fsbl	𬳁
 fsbm	𡤵
+fsbm	𫗥
 fsbo	𱿛
+fsbs	𱄃
+fsbs	𱄇
 fscb	𰌇
+fscc	𩠉
+fscc	𱃹
+fscd	𬲴
+fscf	𫗵
+fscg	𬳔
+fsch	𬳐
 fscj	𡠬
+fsck	𬲻
 fscl	𪠇
+fscl	𫗱
 fscl	𫰭
+fscl	𲋬
+fscp	𬲿
 fscq	𡞽
+fscr	𲋫
+fscs	𱃷
+fsct	𱃻
+fscw	𩠌
+fscx	𩠊
 fsdf	𡟌
+fsdh	𩠎
+fsdl	𬲬
 fsdo	𪠅
 fsdp	𲛷
+fsdv	𬳈
+fsdw	𳋲
+fsfc	𬲩
+fsfg	𬳃
 fsfj	𡠯
 fsfj	𡡵
+fsfj	𬲨
+fsfm	𬳎
+fsfn	𩠄
+fsfn	𫗟
+fsfr	𬲧
+fsfs	𱄄
 fsfw	𨗶
 fsfx	𣓢
+fsgb	𫗳
+fsgf	𫗭
+fsgg	𳋳
 fsgr	㕎
 fsgs	𠩂
 fsgs	𡛠
 fsgu	𰻡
+fshc	𬲶
+fshd	𫗲
+fshd	𬳍
+fshd	𳋫
+fshg	𳋰
 fshl	𫨠
 fshl	𬂈
+fshn	𬳑
+fshq	𬲽
 fshv	𫰪
+fshw	𮩝
+fshw	𲋢
+fshx	䭪
+fshx	𬳉
 fsi	𢌛
 fsi	𭚓
 fsjc	㕑
+fsjf	𫗴
 fsjf	𧞡
+fsjh	𬳓
+fsjk	𫗯
+fsjk	𱄅
 fsjr	𭠠
 fsjv	𡕠
+fsjw	𬲸
 fska	𠨭
 fska	𭑮
+fskc	𫗠
 fskd	𡣗
+fskf	𬳇
+fskh	𬲲
+fskk	𬳆
+fskl	𩠆
+fskl	𳋯
+fskq	𱄂
+fskr	𲋪
+fsks	𲋧
+fskt	𩠏
+fskt	𬲱
+fsku	𳋨
+fskv	𱃸
+fskw	𫗰
+fskx	𳋬
+fsky	𫗮
+fslb	𱃳
+fslc	𱄀
+fslg	𫗞
+fslg	𫗡
+fsll	𫗫
+fsln	𩟿
 fslq	𫱺
+fslr	𬳄
 fsls	㛬
 fsls	𣄳
+fsls	𱃺
 fslt	𠪑
 fslw	𮱙
+fsly	𱃵
+fsmc	𬳒
+fsmc	𱄊
 fsme	𭑫
 fsmf	𠩝
+fsmh	𬲺
+fsmk	𫗣
+fsml	𩠍
+fsml	𬳅
+fsmm	𱄉
+fsmp	𬳊
 fsmx	𲠀
 fsna	𡡅
 fsna	𩾏
 fsna	𩿳
 fsnb	𧶷
+fsne	𬲦
+fsnf	𱃽
+fsng	𬲷
+fsnh	𬳌
+fsnk	𬲰
+fsnl	𬲾
+fsnl	𳋪
+fsnm	𩠈
+fsnm	𬳋
 fsnn	𠩟
+fsnn	𬲪
+fsnn	𱃶
+fsnr	𫗢
+fsns	𩠂
+fsnv	𱄁
+fsnw	𱃱
+fspa	𩠀
 fspb	𪸓
+fspd	𬲯
+fspd	𬳀
 fspf	𰁘
+fspg	𳋮
 fspj	㜜
 fspj	𪤶
+fspk	𬲵
+fspp	𱃿
+fsqb	𮩜
+fsqk	𬲹
+fsqk	𲋦
+fsqn	𬳏
+fsqn	𳋭
 fsqo	𪠦
+fsqq	𬳂
+fsqr	𩠁
+fsqs	𬲳
+fsqs	𱄈
+fsrb	𬲥
+fsrd	𬲫
+fsrd	𳋱
 fsrk	㛈
+fsrl	𫗩
 fsrn	𠪼
 fsrw	𪦘
 fsrx	𠫃
+fssc	𮩞
+fssd	𱄆
 fssf	𧡋
 fssi	𡝍
 fssj	𠪆
@@ -38599,26 +38717,50 @@ fssn	𣦥
 fssn	𮬫
 fssq	𫨾
 fssq	𰆣
+fsss	𮸿
 fsss	𳏁
 fsst	𰆡
 fssx	𣕁
 fssy	𡜤
+fssy	𲋩
+fsth	𱃴
 fstj	𰆛
+fstk	𲋨
+fstl	𮩛
+fstn	𫗨
 fstn	𰆠
 fstn	𲨚
 fstr	𰆫
 fsu	𡚳
+fsvd	𲋤
+fsve	𬲭
+fsvn	𳋩
 fsvu	㛸
+fsvu	𫗦
+fswf	𫗪
+fswh	𲋣
 fswi	𠨼
 fswi	𫰍
+fswl	𩠋
+fswm	𩟾
 fswo	𮷞
+fswt	𬲮
 fswu	𡠄
+fsww	𩠇
+fsxb	𱃲
+fsxd	𫗧
 fsxu	𡠿
+fsxy	𫗬
+fsyc	𩠃
 fsye	𠨱
 fsyf	𩇳
+fsyf	𫗤
+fsyg	𬲼
 fsyo	㚭
 fsyo	𡯊
+fsyq	𱃼
 fsyu	𡠵
+fsyw	𩠅
 fsyw	𰢢
 ftbi	𰆕
 ftbi	𮰸
@@ -90139,60 +90281,37 @@ tryq	𢺥
 tryx	𱡖
 tryy	𢺈
 tsbd	𢮏
-tsbd	𱃾
 tsbd	𱠩
-tsbf	𲋥
 tsbh	𱠞
 tsbk	𢭜
 tsbk	𰔙
-tsbl	𬳁
-tsbm	𫗥
 tsbp	𭡰
 tsbq	𢱷
 tsbs	𰓪
 tsbs	𰔑
-tsbs	𱄃
-tsbs	𱄇
 tsbt	𱟴
 tsbx	𢷌
-tscc	𩠉
-tscc	𱃹
 tscc	𱠔
-tscd	𬲴
-tscf	𫗵
 tscg	𢲤
-tscg	𬳔
 tscg	𭠲
-tsch	𬳐
 tscj	𢲳
 tscj	𫼿
-tsck	𬲻
 tscl	𢵬
 tscl	𢷓
-tscl	𫗱
-tscl	𲋬
 tscp	𢶟
-tscp	𬲿
-tscr	𲋫
-tscs	𱃷
-tsct	𱃻
-tscw	𩠌
 tscw	𱠥
-tscx	𩠊
 tsdb	𭾭
 tsdb	𰥶
 tsdd	𭿋
 tsdd	𭿡
 tsdf	㨬
 tsdg	𰥰
-tsdh	𩠎
 tsdh	𱳈
 tsdj	𪿃
 tsdj	𫼴
 tsdk	𢮌
 tsdk	𣪦
 tsdk	𭿧
-tsdl	𬲬
 tsdl	𰦈
 tsdn	𪮽
 tsdn	𫽭
@@ -90202,41 +90321,28 @@ tsdp	𭿠
 tsdt	𢰿
 tsdt	𲡳
 tsdv	𢬚
-tsdv	𬳈
 tsdv	𭠻
-tsdw	𳋲
 tsdy	𭿊
-tsfc	𬲩
 tsfc	𰎬
-tsfg	𬳃
 tsfh	𭡍
-tsfj	𬲨
 tsfj	𭠺
 tsfk	𫹊
 tsfm	𢮇
-tsfm	𬳎
 tsfm	𭡡
-tsfn	𩠄
-tsfn	𫗟
 tsfn	𫾖
 tsfo	㧼
 tsfr	𢳩
-tsfr	𬲧
 tsfs	𢪙
-tsfs	𱄄
 tsfv	𱟻
 tsfw	𮟖
 tsfw	𲅩
 tsfx	𫅫
 tsga	𰓒
-tsgb	𫗳
 tsgc	𰓖
-tsgf	𫗭
 tsgf	𭡟
 tsgf	𲣟
 tsgg	𨞲
 tsgg	𭡊
-tsgg	𳋳
 tsgj	𭠸
 tsgk	𢬱
 tsgk	𢭙
@@ -90248,20 +90354,13 @@ tsgt	𫽅
 tsgx	𰔊
 tsha	𭠏
 tshb	𢸀
-tshc	𬲶
-tshd	𫗲
-tshd	𬳍
 tshd	𰓎
-tshd	𳋫
 tshf	𢯟
 tshf	𰔅
 tshf	𲣛
 tshg	𢵋
-tshg	𳋰
 tshl	𰒻
-tshn	𬳑
 tshq	𫽺
-tshq	𬲽
 tshr	㨋
 tshs	𭣀
 tsht	𢴪
@@ -90269,88 +90368,46 @@ tsht	𭡎
 tshv	𢭦
 tshw	𢪖
 tshw	𢭷
-tshw	𮩝
-tshw	𲋢
-tshx	䭪
-tshx	𬳉
 tsi	𢩿
-tsjf	𫗴
 tsjf	𢶑
 tsjf	𢷆
 tsjg	𰓵
-tsjh	𬳓
 tsjj	𭠰
-tsjk	𫗯
-tsjk	𱄅
 tsjm	𪭩
 tsjv	𱟹
-tsjw	𬲸
 tsjw	𭢊
 tska	𢵓
 tskb	𢫗
-tskc	𫗠
 tskc	𭠖
-tskf	𬳇
 tskf	𭡉
 tskg	𱡉
 tskg	𲢌
-tskh	𬲲
-tskk	𬳆
-tskl	𩠆
-tskl	𳋯
 tskm	𢩷
-tskq	𱄂
-tskr	𲋪
-tsks	𲋧
-tskt	𩠏
-tskt	𬲱
-tsku	𳋨
-tskv	𱃸
 tskw	𢭥
-tskw	𫗰
 tskw	𰓦
 tskx	𰔰
-tskx	𳋬
-tsky	𫗮
-tslb	𱃳
-tslc	𱄀
 tsle	𦙚
-tslg	𫗞
-tslg	𫗡
 tslg	𫾓
 tslh	𰓈
-tsll	𫗫
 tsll	𭡙
-tsln	𩟿
 tsln	𱠱
 tslp	𢸱
 tslp	𭠳
 tslr	𫽡
-tslr	𬳄
 tslr	𱠡
 tsls	𢯅
-tsls	𱃺
 tslt	𢳊
 tslv	𭠓
 tslw	𭢇
 tslw	𰻄
 tslx	𢲒
 tslx	𣓞
-tsly	𱃵
-tsmc	𬳒
-tsmc	𱄊
 tsmd	𰓏
 tsme	𰒹
 tsmg	𢀠
 tsmg	𰓂
-tsmh	𬲺
 tsmh	𰓚
-tsmk	𫗣
 tsml	𢭶
-tsml	𩠍
-tsml	𬳅
-tsmm	𱄉
-tsmp	𬳊
 tsmq	𰓃
 tsms	𲡯
 tsmv	𲡺
@@ -90361,71 +90418,37 @@ tsna	𩿾
 tsnb	𲢕
 tsnc	𭢷
 tsnd	𭢲
-tsne	𬲦
-tsnf	𱃽
 tsng	𪭳
-tsng	𬲷
-tsnh	𬳌
 tsnh	𭠫
 tsni	𢬣
-tsnk	𬲰
 tsnl	𢷇
-tsnl	𬲾
 tsnl	𭠕
-tsnl	𳋪
-tsnm	𩠈
-tsnm	𬳋
 tsnm	𱠑
-tsnn	𬲪
-tsnn	𱃶
 tsnp	𲢲
-tsnr	𫗢
-tsns	𩠂
 tsnt	𢬛
 tsnv	𪮩
 tsnv	𭡤
-tsnv	𱄁
 tsnw	𭠔
 tsnw	𭡻
-tsnw	𱃱
 tsnw	𱟲
-tspa	𩠀
-tspd	𬲯
-tspd	𬳀
-tspg	𳋮
 tspj	𢳆
 tspk	𢪥
-tspk	𬲵
-tspp	𱃿
 tspt	𱟶
-tsqb	𮩜
 tsqd	𰔌
 tsqh	𰓽
 tsqh	𰔽
 tsqj	𢱞
-tsqk	𬲹
-tsqk	𲋦
 tsqn	𢴝
-tsqn	𬳏
-tsqn	𳋭
-tsqq	𬳂
-tsqr	𩠁
 tsqr	𰓍
 tsqs	𢲱
-tsqs	𬲳
-tsqs	𱄈
 tsqt	𰔀
 tsqx	𪮍
 tsra	𱠅
-tsrb	𬲥
 tsrd	𫼜
-tsrd	𬲫
 tsrd	𭢑
-tsrd	𳋱
 tsrg	𲢋
 tsrh	𰔿
 tsri	𰓇
-tsrl	𫗩
 tsrl	𱠌
 tsrm	𰔉
 tsrm	𱡆
@@ -90435,22 +90458,14 @@ tsrn	𲡭
 tsrt	𢴇
 tsrw	𢹗
 tsry	𢹛
-tssc	𮩞
-tssd	𱄆
 tssi	𢌜
 tssj	𭡞
 tssn	𢴽
-tsss	𮸿
 tsst	𰔟
-tssy	𲋩
 tssy	𲡩
 tstd	𪮒
 tsth	𢫶
-tsth	𱃴
 tsti	㧯
-tstk	𲋨
-tstl	𮩛
-tstn	𫗨
 tsts	𢪒
 tsts	𱗄
 tstt	𰓁
@@ -90462,47 +90477,29 @@ tsu	𡉈
 tsva	𫼔
 tsvd	𠛃
 tsvd	𢩬
-tsvd	𲋤
-tsve	𬲭
 tsvg	𰔃
 tsvg	𲡮
-tsvn	𳋩
-tsvu	𫗦
 tsvv	𢯣
-tswf	𫗪
 tswg	𭡇
 tswg	𭡼
 tswh	𢸫
-tswh	𲋣
 tswi	𢩥
 tswi	𪭝
-tswl	𩠋
-tswm	𩟾
 tswm	𫼙
 tswo	𢴊
 tswo	𨑲
 tsws	𢬹
 tswt	𢪳
-tswt	𬲮
-tsww	𩠇
-tsxb	𱃲
-tsxd	𫗧
 tsxd	𰓯
 tsxj	𰓑
 tsxl	𢲪
 tsxu	𢳚
-tsxy	𫗬
-tsyc	𩠃
-tsyf	𫗤
-tsyg	𬲼
 tsyi	㨞
 tsyn	𰓰
 tsyq	𭠴
-tsyq	𱃼
 tsyr	𲡨
 tsys	𢺒
 tsyu	𢳶
-tsyw	𩠅
 ttbb	𧔯
 ttbb	𧔻
 ttbg	𢲲
@@ -110504,6 +110501,7 @@ fsa	⽆
 fsa	𛄝
 fsa	𛄞
 fse	𘬮
+fsi	⻠
 fska	𘡠
 fssn	嬈
 fsu	𘬱
@@ -118340,7 +118338,6 @@ trqo	㌺
 trrm	㩬
 trti	㌸
 trwi	扝
-tsi	⻠
 tso	⼿
 tso	🈐
 tthr	🈯
@@ -124848,7 +124845,7 @@ blwd	意识
 gssl	参考
 tkrj	投资
 tbbt	接触
-dnts	吃饭
+dnfs	吃饭
 gtsl	思考
 rqfe	反正
 ljxr	同样
@@ -125956,7 +125953,7 @@ bjhd	即可
 rqnh	反复
 jrdr	信号
 krto	实用
-tsns	饮食
+fsns	饮食
 krkk	寝室
 nxnx	小小
 xfry	欧美
@@ -126425,7 +126422,7 @@ vmvd	洗澡
 cgvl	高潮
 swnh	场合
 clsl	前者
-jlts	做饭
+jlfs	做饭
 cglb	毫不
 whhr	透明
 fhmw	好感
@@ -127252,7 +127249,7 @@ rlbm	将军
 ydjx	大体
 lvlx	此外
 mnmj	特性
-tsnm	饮料
+fsnm	饮料
 dlxl	嘴里
 nxsm	小城
 csbm	民间
@@ -127264,7 +127261,7 @@ dlwh	只剩
 vjvi	流水
 hdmn	可靠
 kjfp	几万
-rqts	反馈
+rqfs	反馈
 ydnq	大气
 clhr	前景
 csle	岁月
@@ -127908,7 +127905,7 @@ jrcg	传递
 brkh	写字
 dhvi	喝水
 cjrj	改进
-hrts	晚饭
+hrfs	晚饭
 dwsf	吸毒
 rjbt	见解
 nxhv	栗子
@@ -127961,7 +127958,7 @@ jwrj	低头
 wsjb	诸位
 ydkl	大力
 whjg	利率
-rsts	装饰
+rsfs	装饰
 mvkl	左边
 wmra	留言
 nhhv	拿起
@@ -128003,7 +128000,7 @@ ksbm	家门
 mcnx	较小
 flnl	列举
 vqlv	满分
-tshg	饭店
+fshg	饭店
 flkl	两边
 jtgk	住院
 ydlh	套房
@@ -128163,7 +128160,7 @@ ssty	地主
 btwc	解说
 cnwl	就读
 lxmv	外在
-nmts	米饭
+nmfs	米饭
 bxxk	辣椒
 jlmj	任性
 ksnx	家小
