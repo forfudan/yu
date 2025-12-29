@@ -42,7 +42,7 @@ const alwaysVisibleZigens = computed(() => {
     // 否则根据方案自动判断
     switch (activeScheme.value) {
         case 'ling':
-            return '廾スマ　乚　冫虍　乀龵用　巴　　　丅镸　　䒑　氵　⺈肀　⺌⺮　'
+            return '廾スマ　乚　冫虍　乀龵用　巴　　　H　J　L　䒑　氵　⺈肀　⺌⺮　'
         default:
             return '冫'
     }
@@ -682,7 +682,7 @@ onMounted(() => {
                             @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code
-                            }}</span>
+                                }}</span>
                         </span>
                         <!-- 如果有隱藏的字根，顯示省略號 -->
                         <span v-if="zigenByKey[key].hidden.length > 0" class="more-indicator">⋯</span>
@@ -745,7 +745,7 @@ onMounted(() => {
                             }" @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code
-                            }}</span>
+                                }}</span>
                         </span>
                     </div>
                 </div>
