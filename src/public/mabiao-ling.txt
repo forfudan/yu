@@ -3745,7 +3745,7 @@ dfro	啞
 dfro	唖
 dfrp	嘕
 dfry	哑
-dfsa	呒
+dfso	呒
 dfss	喙
 dfss	啀
 dfvj	啢
@@ -4918,7 +4918,7 @@ ffqa	妍
 ffro	婭
 ffrp	嫣
 ffry	娅
-ffsa	妩
+ffso	妩
 ffss	娾
 ffu	奻
 ffvj	姉
@@ -5453,7 +5453,6 @@ frwo	迃
 fryd	媄
 frye	亚
 fryt	琧
-fsa	无
 fsbc	嬄
 fsbo	蚀
 fsbp	馅
@@ -5510,6 +5509,7 @@ fsnk	饬
 fsnq	饩
 fsnv	饰
 fsnx	馀
+fso	无
 fspc	饱
 fspj	厫
 fspq	馊
@@ -11241,9 +11241,9 @@ mfnw	忨
 mfnw	乻
 mfny	旊
 mfqo	怓
-mfsa	怃
 mfsn	鴋
 mfsn	鵎
+mfso	怃
 mfu	妥
 mfyd	癸
 mfyd	旑
@@ -14319,7 +14319,7 @@ qfqv	荊
 qfrj	薅
 qfrk	芌
 qfrp	蔫
-qfsa	芜
+qfso	芜
 qfss	蒃
 qftu	萈
 qfvf	顢
@@ -16353,7 +16353,6 @@ ryyt	攣
 ryyv	灓
 ryyx	欒
 ryyy	奱
-sa	尢
 sbbq	埐
 sbbv	埽
 sbbw	埩
@@ -16827,6 +16826,7 @@ snwi	鳦
 snxg	鄡
 snxu	梟
 snxu	塛
+so	尢
 spca	圳
 spcs	垉
 spdo	坸
@@ -17545,8 +17545,8 @@ tfrh	搢
 tfrk	扝
 tfro	掗
 tfry	挜
-tfsa	抚
 tfsb	攭
+tfso	抚
 tfss	捱
 tfss	掾
 tfvj	掚
@@ -22529,8 +22529,8 @@ bfrk	𮓺
 bfrm	𧑕
 bfro	𲾫
 bfrp	䗡
-bfsa	𰲫
 bfsk	𧎞
+bfso	𰲫
 bfss	𧍊
 bftn	𰳕
 bfu	𠕷
@@ -26090,8 +26090,8 @@ cfqh	䥄
 cfqk	䤯
 cfqx	𨯅
 cfry	𱍰
-cfsa	𰕰
 cfsk	𠂦
+cfso	𰕰
 cfss	䤸
 cftn	𳆦
 cfu	𫒈
@@ -29791,7 +29791,6 @@ csry	㠑
 csry	𡿕
 csry	𭗘
 csry	𰎑
-cssa	𡵈
 cssb	㞿
 cssc	𡻅
 cssc	𭗃
@@ -29832,6 +29831,7 @@ cssl	𱘫
 cssl	𲝛
 cssn	𡼀
 cssn	𲞇
+csso	𡵈
 cssp	𨰖
 cssq	𡽂
 cssr	𡻊
@@ -34476,7 +34476,6 @@ dryn	𡆝
 dryr	𡀵
 dryw	𡆗
 dryw	𮟩
-dsa	𫝘
 dsbk	𠳗
 dsbl	𡁲
 dsbl	𭋄
@@ -34541,6 +34540,7 @@ dsms	𠴢
 dsmx	𠴤
 dsnd	𡀁
 dsng	𭈷
+dso	𫝘
 dspc	𪢕
 dspp	𭋣
 dsrg	𬪒
@@ -44991,7 +44991,7 @@ hfrk	𬬨
 hfrm	𨉼
 hfrm	𰾪
 hfry	𳃵
-hfsa	䥻
+hfso	䥻
 hfss	𰾦
 hfvt	𨱇
 hfvu	𨉌
@@ -57136,7 +57136,6 @@ krxg	𨛙
 krya	𫳅
 kryy	𫴥
 ksa	𫩠
-ksa	𮱞
 ksbc	𥎾
 ksbe	𮀁
 ksbf	𥏡
@@ -57432,6 +57431,7 @@ ksnp	𱳥
 ksns	𡮝
 ksnv	𥏆
 ksny	𨡔
+kso	𮱞
 kspd	𥏨
 kspg	𩲶
 kspj	𢕟
@@ -59815,8 +59815,8 @@ lfrm	𱲏
 lfro	𦜖
 lfrt	𮍇
 lfry	𬁺
-lfsa	𰮇
 lfsn	𫛊
+lfso	𰮇
 lftc	𫇃
 lfu	𢨭
 lfu	𭑨
@@ -67971,11 +67971,11 @@ nfrn	𫂥
 nfro	𥮳
 nfrp	𱪷
 nfrr	𣬁
-nfsa	𫁲
 nfsg	𬡺
 nfsn	䳩
 nfsn	𠎃
 nfsn	𮆶
+nfso	𫁲
 nfss	𥯅
 nfto	𤰊
 nfto	𮗟
@@ -73217,7 +73217,7 @@ pfrm	𪹪
 pfrm	𱫯
 pfro	𤉁
 pfrp	𤎄
-pfsa	𭴊
+pfso	𭴊
 pfss	𤊺
 pfu	𮱅
 pfvi	𤊒
@@ -79291,7 +79291,6 @@ qryn	䕛
 qryt	䖂
 qryw	㽍
 qryy	𧄶
-qsa	𦬍
 qsbd	𦹷
 qsbf	𰸛
 qsbg	𦲃
@@ -79382,6 +79381,7 @@ qsmh	𧅥
 qsmx	䓌
 qsnb	𦹘
 qsnl	𧃻
+qso	𦬍
 qspc	𧂫
 qspd	𦰶
 qspd	𦴆
@@ -83595,7 +83595,6 @@ rryd	𳁵
 rryg	𬣗
 rryr	𧬳
 rryx	𬣘
-rsa	𧥩
 rsbc	𧬇
 rscl	𧨃
 rsdf	𧫁
@@ -83608,6 +83607,7 @@ rshr	𧭷
 rsi	𧥡
 rsld	𳂀
 rsmc	𮷚
+rso	𧥩
 rsps	𬼍
 rsrk	𬢦
 rsro	䛭
@@ -85122,11 +85122,11 @@ sfrj	𪍠
 sfrk	𫭲
 sfrt	𣤼
 sfry	𦎯
-sfsa	𪢸
 sfsd	𲙳
 sfsj	𫜕
 sfsl	𧹲
 sfsn	𱈭
+sfso	𪢸
 sfst	𣫔
 sfsy	𳍪
 sftq	𣪳
@@ -91565,7 +91565,7 @@ vfro	𣵾
 vfrr	𥁡
 vfrt	𤂢
 vfry	𮳅
-vfsa	𣲘
+vfso	𣲘
 vfst	𣺵
 vfsy	𳍮
 vfvd	𪷀
@@ -97789,11 +97789,11 @@ xfrv	𠥃
 xfrw	𨒎
 xfrw	𬨭
 xfry	𠥞
-xfsa	𬂠
 xfsb	𭬧
 xfsg	𠥚
 xfsj	𫧙
 xfsj	𱤡
+xfso	𬂠
 xfsr	𠥕
 xfss	𣔦
 xfss	𭏷
@@ -110498,12 +110498,12 @@ frwl	𗀤
 frwl	𘈣
 frwr	𘥢
 frwt	𗀄
-fsa	⽆
-fsa	𛄝
-fsa	𛄞
 fse	𘬮
 fsi	⻠
 fska	𘡠
+fso	⽆
+fso	𛄝
+fso	𛄞
 fssn	嬈
 fsu	𘬱
 fti	𘠴
@@ -118134,10 +118134,6 @@ ryyj	變
 ryyj	變
 ryym	戀
 ryys	鸞
-sa	⼪
-sa	⺐
-sa	ㄤ
-sa	𘭴
 sbdt	堍
 sbfr	壷
 sbkj	売
@@ -118218,6 +118214,10 @@ sna	⿃
 sna	𘭘
 sna	
 snne	𘭅
+so	⼪
+so	⺐
+so	ㄤ
+so	𘭴
 so	
 spa	𘭛
 spba	𘭙

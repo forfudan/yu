@@ -42,7 +42,7 @@ const alwaysVisibleZigens = computed(() => {
     // 否则根据方案自动判断
     switch (activeScheme.value) {
         case 'ling':
-            return '廾スマ　乚　R冫虍　乀龵用　巴　F　　H丅　J　K丄　L　C䒑　V氵　⺈肀　⺌⺮　'
+            return 'Q廾スマ　W乚　R冫虍　乀龵用　P巴　F　G　H丅　J　K丄　L　C䒑　V氵　⺈肀　⺌⺮　'
         default:
             return '冫'
     }
