@@ -163,7 +163,6 @@ font,ma,pinyin
 叀,kce,
 ,kce,
 长,kca,Ĉáŋ -> Ca
-鬥,kdo,Dòu -> Do
 矢,ksi,Ŝǐ -> Si
 缶,kfo,Fǒu -> Fo
 不,lbu,Bù
@@ -174,6 +173,7 @@ font,ma,pinyin
 冊,lce,Cè
 ,lce,
 曲,lqu,Qǔ
+鬥,ldo,Dòu -> Do
 十,li,Ŝi -> Si 🈤不取聲母
 干,lga,Gān -> Ga
 千,lqa,Qiān -> Qa

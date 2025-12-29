@@ -9223,31 +9223,21 @@ kdcs	峊
 kddh	忂
 kddk	衢
 kddo	宫
-kdfj	鬪
 kdfl	宾
 kdfp	宺
 kdfv	師
 kdfy	頧
 kdjo	宮
-kdjv	鬧
-kdkb	鬮
 kdlf	寠
 kdlf	顊
 kdlg	鄅
 kdli	阜
 kdlk	禹
 kdlv	歸
-kdo	鬥
 kdpi	彼
-kdpp	鬩
 kdpt	兎
-kdql	鬨
-kdrd	鬭
-kdrl	鬦
 kdsn	鴭
 kdvj	帥
-kdwd	鬬
-kdwj	鬫
 kdwo	追
 kdxu	宲
 kdya	徎
@@ -10305,10 +10295,13 @@ lddh	臞
 lddn	賷
 lddr	腭
 lddx	臊
+ldfj	鬪
 ldfy	脵
 ldhi	臛
 ldji	所
 ldji	肵
+ldjv	鬧
+ldkb	鬮
 ldkn	膭
 ldks	韓
 ldku	肿
@@ -10327,12 +10320,19 @@ ldns	鶾
 ldnw	乾
 ldnx	翰
 ldnx	榦
+ldo	鬥
 ldpe	兌
 ldpj	敓
+ldpp	鬩
+ldql	鬨
 ldqo	叓
+ldrd	鬭
+ldrl	鬦
 ldsw	韩
+ldwd	鬬
 ldwi	乹
 ldwi	乺
+ldwj	鬫
 ldwm	悳
 ldxj	臑
 ldya	脭
@@ -32103,7 +32103,6 @@ dkdm	𰇸
 dkdn	𲖬
 dkdn	𳐄
 dkdo	𫪦
-dkdo	𫫅
 dkdo	𲔝
 dkdp	𠶎
 dkdp	𤿮
@@ -32279,7 +32278,6 @@ dkqt	𡂷
 dkra	𠾘
 dkrb	𪚩
 dkrb	𲗵
-dkrd	𡆞
 dkrg	𫝚
 dkrg	𰈇
 dkrh	𱓡
@@ -32400,6 +32398,7 @@ dldn	𡄙
 dldn	𡢺
 dldo	𠱷
 dldo	𠳝
+dldo	𫫅
 dldp	𲣱
 dldq	𢿘
 dlds	𡰍
@@ -32505,6 +32504,7 @@ dlqu	㖆
 dlqw	𭌫
 dlqx	𠺏
 dlrb	𠰻
+dlrd	𡆞
 dlre	𠰃
 dlrj	𠯍
 dlrk	𠯋
@@ -53859,15 +53859,11 @@ kcyw	𨋐
 kcyw	𮝎
 kcyw	𲰟
 kdbb	𧒂
-kdbg	䰗
-kdbg	𩰘
 kdbh	𫲲
 kdbv	𪷣
 kdbw	𫡞
 kdbx	𳄔
-kdcc	𮫔
 kdcf	𡪭
-kdci	𩰔
 kdcp	𱬱
 kdcs	𢀹
 kddc	𨭧
@@ -53891,25 +53887,18 @@ kddr	𡪑
 kdfb	𧋰
 kdfb	𧏍
 kdfb	𧒙
-kdfb	𩰞
-kdfc	𩰒
 kdfc	𱂸
-kdfd	𩰖
-kdfd	𩰚
 kdff	𡠋
 kdff	𡫤
 kdfi	𫠨
 kdfj	𫡚
 kdfl	𬇄
-kdfn	𩰗
-kdfp	𩰜
 kdfs	𡒰
 kdfs	𪄜
 kdfv	𰏙
 kdfx	𪪀
 kdfx	𫅭
 kdgb	𫴤
-kdgm	𮫕
 kdgp	䦾
 kdgw	𫑓
 kdhp	𤓑
@@ -53929,8 +53918,6 @@ kdkl	𠡒
 kdkl	𳈚
 kdkn	𠃆
 kdkn	𡪲
-kdkn	𩰝
-kdkn	𱆉
 kdkt	𲏀
 kdku	𫲹
 kdku	𭮫
@@ -53942,7 +53929,6 @@ kdlb	𠂾
 kdlb	𧌛
 kdlc	𧰥
 kdlc	𬱪
-kdlc	𬴰
 kdlc	𰎧
 kdlc	𲵃
 kdld	𥍁
@@ -53980,38 +53966,27 @@ kdls	𨻑
 kdls	𳈣
 kdls	𳏐
 kdlv	𨺔
-kdlv	𩰏
 kdlw	𨕘
 kdlw	𨺀
 kdly	𤭟
-kdmg	𩰎
-kdml	𩰑
 kdmu	𡧟
 kdmx	𢜇
 kdnb	𫳧
-kdnn	𩰐
 kdns	𡏩
 kdns	𩜔
-kdnw	𩰌
-kdnx	𩰙
 kdo	𠮳
 kdqa	𭚖
-kdqc	𩰓
 kdqf	𧡦
 kdqg	𡪅
 kdqg	𨝢
 kdqo	㝡
 kdqo	𭛠
 kdqo	𱑴
-kdqt	𬴱
 kdrq	𠭔
 kdrs	𨼽
-kdsp	𩰟
-kdsq	𩰛
 kdss	𡑸
 kdsw	𬩱
 kdsw	𮸯
-kdth	𩰍
 kdti	𢓼
 kdvb	𧍓
 kdvf	𲪣
@@ -54025,7 +54000,6 @@ kdwp	𡩇
 kdwu	𫲻
 kdwv	𲉙
 kdxj	𱍩
-kdxk	䰘
 kdxl	𰀮
 kdxu	𡩈
 kdxu	𬂫
@@ -59584,6 +59558,8 @@ ldbd	𣗞
 ldbf	𧚐
 ldbf	𧞢
 ldbf	𲁃
+ldbg	䰗
+ldbg	𩰘
 ldbh	𮁸
 ldbi	𭨮
 ldbl	𭧢
@@ -59609,6 +59585,8 @@ ldbx	𣡪
 ldbx	𱤦
 ldby	𡚀
 ldcb	𬁽
+ldcc	𮫔
+ldci	𩰔
 ldcn	𨢈
 ldcs	𦚽
 ldcs	𰯍
@@ -59642,11 +59620,18 @@ lddx	𦡃
 lddx	𫧭
 lddy	𦃦
 lddy	𬂒
+ldfb	𩰞
+ldfc	𩰒
+ldfd	𩰖
+ldfd	𩰚
 ldfi	𥄂
 ldfl	𦛼
+ldfn	𩰗
 ldfp	𤈂
+ldfp	𩰜
 ldga	𦡏
 ldga	𰮭
+ldgm	𮫕
 ldgt	𭠇
 ldgu	𮟲
 ldhi	𨿨
@@ -59664,6 +59649,8 @@ ldka	𰥑
 ldkc	𱼏
 ldkl	𰮺
 ldkm	𦜦
+ldkn	𩰝
+ldkn	𱆉
 ldks	𫞆
 ldks	𰮹
 ldkt	𪟵
@@ -59671,14 +59658,18 @@ ldku	𠔈
 ldkv	𦛺
 ldkw	䑊
 ldlc	𪘷
+ldlc	𬴰
 ldld	𫤲
 ldlg	𪪂
 ldll	𣎠
 ldlm	𦘏
 ldls	𪆘
+ldlv	𩰏
 ldlv	𭃿
 ldlw	𨗛
 ldlw	𫡯
+ldmg	𩰎
+ldml	𩰑
 ldmu	𥃭
 ldna	𱉒
 ldnb	䐣
@@ -59700,6 +59691,7 @@ ldnl	𧹳
 ldnl	𩙶
 ldnl	𮍿
 ldnm	𢧢
+ldnn	𩰐
 ldnn	𫠾
 ldnp	𤌹
 ldnp	𨝝
@@ -59710,11 +59702,13 @@ ldns	𩹼
 ldns	𳏯
 ldnv	𪟺
 ldnw	𦛽
+ldnw	𩰌
 ldnx	𠏉
 ldnx	𣞈
 ldnx	𣡏
 ldnx	𣡦
 ldnx	𦒋
+ldnx	𩰙
 ldnx	𮋖
 ldo	㕣
 ldo	𰀉
@@ -59726,8 +59720,10 @@ ldpe	𦙿
 ldpi	䏢
 ldpt	𭭌
 ldpy	𱺄
+ldqc	𩰓
 ldql	𧂽
 ldqo	𦝒
+ldqt	𬴱
 ldrb	𲓭
 ldrc	𭩒
 ldrg	𮌻
@@ -59735,6 +59731,9 @@ ldrk	𦚊
 ldrn	𭩗
 ldry	𮊪
 ldsn	𪂂
+ldsp	𩰟
+ldsq	𩰛
+ldth	𩰍
 ldti	𭅓
 ldtq	𠦰
 ldtq	𦜓
@@ -59747,6 +59746,7 @@ ldwo	𨒄
 ldwo	𰮰
 ldwv	𬑚
 ldxd	𣙈
+ldxk	䰘
 ldxx	䎐
 ldyd	𭑉
 ldyr	𭅪
@@ -60917,7 +60917,6 @@ lkpe	𣍥
 lkpe	𦛮
 lkpk	𦛦
 lkpo	𦛡
-lkpp	𩰕
 lkpq	𰮾
 lkpt	𦝂
 lkqb	𧌘
@@ -61037,6 +61036,7 @@ llpb	𦜛
 llpo	𤊏
 llpo	𦛧
 llpo	𦜡
+llpp	𩰕
 llpu	𦝥
 llqc	𪱥
 llqo	𦚂
@@ -92508,7 +92508,6 @@ vkjl	𪷔
 vkjq	𣽧
 vkjv	㴛
 vkjv	𢄂
-vkjv	𤂗
 vkjv	𱨬
 vkka	𱥿
 vkkc	𭱤
@@ -92589,7 +92588,6 @@ vkpe	𣺼
 vkpo	𪶆
 vkpo	𮳇
 vkpp	𤂚
-vkpp	𤄎
 vkpp	𪷅
 vkpp	𱦎
 vkpq	𣸈
@@ -92772,6 +92770,7 @@ vlhs	𣸔
 vli	𣁬
 vljd	𰜶
 vljv	𡕡
+vljv	𤂗
 vljy	𭳆
 vlkc	䡞
 vlkj	𱦖
@@ -92815,6 +92814,7 @@ vlpe	㳳
 vlpl	𪷗
 vlpo	𣶋
 vlpo	𱦾
+vlpp	𤄎
 vlpp	𲪝
 vlpq	㵻
 vlpu	㴙
@@ -112420,7 +112420,6 @@ kdi	
 kdli	⾩
 kdli	ㆁ
 kdne	ㆂ
-kdo	⾾
 kdvj	🩠
 kdvo	⻕
 ke	⼃
@@ -113234,6 +113233,7 @@ ldji	𛁘
 ldka	直󠄃
 ldli	パ
 ldnw	☰
+ldo	⾾
 ldwi	直󠄁
 ldwi	直󠄂
 ldwl	真
@@ -129108,7 +129108,7 @@ fknb	原則
 jgvq	充滿
 nxdl	少數
 cbfd	鏡頭
-ddkd	戰鬥
+ddld	戰鬥
 yfxq	規模
 xqwh	權利
 nhqs	拿著
@@ -129633,7 +129633,7 @@ hspb	視覺
 nxxf	小區
 kqdj	獲取
 csts	選手
-ydkd	奮鬥
+ydld	奮鬥
 jckc	出軌
 xnhr	標題
 ryhh	差點
@@ -129789,7 +129789,7 @@ nwkd	迴歸
 hgjc	廠商
 ksrb	常識
 bnxm	負面
-slkd	熱鬧
+slld	熱鬧
 nljc	舒適
 kcvt	專注
 gylv	幾分
@@ -130109,7 +130109,7 @@ blnv	親自
 hvgg	子彈
 ylyl	紛紛
 mxlq	心臟
-kdmb	鬥爭
+ldmb	鬥爭
 rkje	誕生
 ydsm	大聲
 wlbk	將軍
