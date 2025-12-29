@@ -14,7 +14,7 @@ font,ma,pinyin
 臣,be,Ĉén -> Ce 🈤不取聲母
 ,byi,Yí ㊟熙左上
 ,byi,
-舟,bvo,Ẑōu -> Vo 🈤Z和Ẑ取V
+舟,bvo,Ẑōu -> Vo 🈤Z和Ẑ作V
 虫,bo,Ĉóŋ -> Co 🈤不取聲母 🈕Huǐ
 门,bme,Mén -> Me
 丷,ca,Bā 🈤不取聲母
@@ -42,7 +42,7 @@ font,ma,pinyin
 ,co,
 〇,dli,Líŋ -> Li
 口,do,Kǒu -> Ko 🈤不取聲母
-早,da,Zǎo -> Va 🈤Z和Ẑ取V
+早,da,Zǎo -> Va 🈤Z和Ẑ作V
 皮,dpi,Pí
 目,dmu,Mù
 耳,dje,ěr -> Je 🈤零聲母小碼取J
@@ -55,8 +55,9 @@ font,ma,pinyin
 一,fi,Yī 🈤基本筆畫不取聲母 ㊟俗稱横
 厂,fa,Ĉǎŋ -> Ca 🈤不取聲母 🈕Hǎn Yán ān
 丆,fa,Hǎn -> Ha 🈤不取聲母
-正,fe,Ẑèŋ -> Ve 🈤Z和Ẑ取V
+正,fe,Ẑèŋ -> Ve 🈤Z和Ẑ作V但不取聲母
 亥,fha,Hài -> Ha
+饣,fsi,Ŝi -> Si
 女,fu,Nǚ 🈤不取聲母
 母,fmu,Mǔ
 ,fo,🈤無讀音取o
@@ -66,12 +67,12 @@ font,ma,pinyin
 ,fo,🈤無讀音取o
 ,fo,
 ,fo,🈤無讀音取o
+牙,fya,Yá
 見,fja,Jiàn -> Ja
 頁,fye,Yè
-足,fvu,Zú -> Vu 🈤Z和Ẑ取V
+足,fvu,Zú -> Vu 🈤Z和Ẑ作V
 世,gi,Ŝì -> Si
 丰,ge,Fēŋ -> Fe 🈤不取聲母
-其,gqi,Qí 🈕Jī Jì
 厶,gsi,Sī 🈕Mǒu 🈑私本字
 ,gsi,
 幺,gya,Yāo -> Ya 🈕Mì
@@ -82,7 +83,6 @@ font,ma,pinyin
 申,gse,Ŝēn -> Se
 电,ga,Diàn -> Da
 鱼,gyu,Yú
-车,gce,Ĉē
 阝,gu,Fǔ 🈤不取聲母 ㊟俗稱掛耳旁 🈑在左同阜在右同邑
 馬,gma,Mǎ
 ,gma,
@@ -90,26 +90,25 @@ font,ma,pinyin
 丅,hdi,㊟同丁歸併 🈑下本字
 下,ha,Xià -> x
 了,hle,Le
-子,hvi,Zǐ -> Vi 🈤Z和Ẑ取V
+子,hvi,Zǐ -> Vi 🈤Z和Ẑ作V
 予,hyu,Yǔ
+其,hqi,Qí 🈕Jī Jì
 广,hga,Guǎŋ -> Ga 🈕Yǎn ān
 文,hwe,Wén -> We
-三,hsa,Sān -> Sa
 日,hri,Rì
 ,hri,㊟同日歸併
 ,hri,㊟同日歸併
 曰,hye,Yuē -> Ye
 黑,hhe,Hēi -> He
 犬,hqa,Quǎn -> Qa
-牙,hya,Yá
 示,hsi,Ŝì -> Si
-走,hvo,Zǒu -> Zo 🈤Z和Ẑ取V
+走,hvo,Zǒu -> Zo 🈤Z和Ẑ作V
 身,he,Ŝēn -> Se 🈤不取聲母
 钅,hi,Jīn -> Ji 🈤不取聲母 ㊟俗稱金字旁
 長,hca,Ĉáŋ -> Ca
 镸,hca,Ĉáŋ -> Ca
 髟,hba,Biāo -> Ba
-隹,hi,Cuī -> Ci 🈤不取聲母 🈕Ẑuī Wéi
+隹,hi,Ẑuī -> Vi 🈤Z和Ẑ作V但不取聲母 🈕Cuī Wéi
 亠,jo,Tóu -> To 🈤不取聲母 ㊟俗稱京字頭
 亻,je,Rén -> Re ㊟俗稱單人旁
 入,jru,Rù
@@ -122,25 +121,26 @@ font,ma,pinyin
 向,jxa,Xiàŋ -> Xa
 ,jo,🈤無讀音取o
 ,jo,🈤無讀音取o
-夊,jvi,Ẑì -> Vi 🈤Z和Ẑ取V 🈕Pū
+夊,jvi,Ẑì -> Vi 🈤Z和Ẑ作V 🈕Pū
 寸,jcu,Cùn -> Cu
 ,jo,🈤無讀音取o
+三,jsa,Sān -> Sa
 生,je,Ŝēŋ -> Se
 上,ka,Ŝàŋ -> Sa
 丄,ka,🈑上本字
 ,ka,
 ,kwu,Wǔ
 丑,kco,Ĉǒu -> Co
-丨,ku,Gǔn -> Gu 🈤基本筆畫不取聲母 ㊟俗稱豎
-〢,ku,
-〣,ku,
+丨,ki,Yī 🈤基本筆畫不取聲母 ㊟俗稱豎 🈕Ŝù Gǔn Tuì
+〢,ki,
+〣,ki,
 丿,ke,Piě -> Pe 🈤基本筆畫不取聲母 ㊟俗稱點 🈕Yí
 彳,ki,Ĉì 🈤不取聲母 ㊟俗稱雙人旁
 彡,ka,Ŝān -> Sa
 ,ka,
 ,ko,🈤無讀音取o
 犭,kqa,Quǎn -> Qa ㊟俗稱反犬旁
-豸,kvi,Ẑì -> Vi 🈤Z和Ẑ取V
+豸,kvi,Ẑì -> Vi 🈤Z和Ẑ作V
 亍,kcu,Ĉù
 亡,kwa,Wáŋ -> Wa
 ,klo,Luó -> Lo
@@ -158,12 +158,11 @@ font,ma,pinyin
 ,ksa,㊟同尚歸併
 白,kba,Bái -> Ba
 ,kdi,Duī -> Di
-至,kvi,Ẑì -> Vi 🈤Z和Ẑ取V
+至,kvi,Ẑì -> Vi 🈤Z和Ẑ作V
 車,kce,Ĉē
 叀,kce,
 ,kce,
 长,kca,Ĉáŋ -> Ca
-鬥,kdo,Dòu -> Do
 矢,ksi,Ŝǐ -> Si
 缶,kfo,Fǒu -> Fo
 不,lbu,Bù
@@ -174,6 +173,7 @@ font,ma,pinyin
 冊,lce,Cè
 ,lce,
 曲,lqu,Qǔ
+鬥,ldo,Dòu -> Do
 十,li,Ŝi -> Si 🈤不取聲母
 干,lga,Gān -> Ga
 千,lqa,Qiān -> Qa
@@ -190,11 +190,14 @@ font,ma,pinyin
 夕,lxi,Xī
 未,lwe,Wèi -> We
 末,lmo,Mò
-止,lvi,Ẑǐ -> Vi 🈤Z和Ẑ取V
+止,lvi,Ẑǐ -> Vi 🈤Z和Ẑ作V
 龰,lvi,㊟同止歸併
 齒,lci,Ĉǐ
 飛,lfe,Fēi -> Fe
-,mvo,Zuǒ -> Zo 🈤Z和Ẑ取V 🈑左本字
+,mvo,Zuǒ -> Zo 🈤Z和Ẑ作V 🈑左本字
+车,mce,Ĉē
+牛,mnu,Niú -> Nu
+⺧,mnu,㊟同牛歸併
 尸,msi,Ŝī -> Si
 ,msi,
 七,mi,Qī -> qi 🈤不取聲母
@@ -204,10 +207,8 @@ font,ma,pinyin
 心,mxi,Xīn -> Xi
 忄,mi,Xīn -> Xi 🈤不取聲母 ㊟俗稱豎心旁
 方,mfa,Fāŋ -> Fa
-爪,ma,Ẑuǎ -> Va 🈤Z和Ẑ取V
+爪,ma,Ẑuǎ -> Va 🈤Z和Ẑ作V
 瓜,mga,Guā -> Ga
-牛,mnu,Niú -> Nu
-⺧,mnu,㊟同牛歸併
 癶,mo,Bō 🈤不取聲母
 人,ne,rén -> Re 🈤不取聲母
 合,nhe,Hé
@@ -224,9 +225,9 @@ font,ma,pinyin
 ⺍,na,Xiǎo -> Xa 🈤不取聲母
 ,na,
 米,nmi,Mǐ
-自,nvi,Zì -> Vi 🈤Z和Ẑ取V
+自,nvi,Zì -> Vi 🈤Z和Ẑ作V
 貝,nbe,Bèi -> Be
-竹,nu,Ẑú -> Vu 🈤不取聲母 🈤Z和Ẑ取V
+竹,nu,Ẑú -> Vu 🈤不取聲母 🈤Z和Ẑ作V
 ⺮,nu,
 ,no,🈤無讀音取o
 ,no,
@@ -267,7 +268,7 @@ font,ma,pinyin
 ,ro,
 ,ro,
 ,rdo,Dòu -> Do
-之,ri,Ẑī -> Vi 🈤不取聲母 🈤Z和Ẑ取V
+之,ri,Ẑī -> Vi 🈤不取聲母 🈤Z和Ẑ作V
 二,rje,èr -> Je 🈤零聲母小碼取J
 ⺀,rje,㊟同二歸併
 ,rje,㊟同二歸併
@@ -292,6 +293,7 @@ font,ma,pinyin
 ,ro,🈤無讀音取o
 见,rja,Jiàn -> j
 言,ra,Yán -> Ya 🈤不取聲母
+辰,rce,Ĉén -> Ce
 马,rma,Mǎ
 也,sye,Yě
 乜,sme,Miē -> Me
@@ -301,10 +303,10 @@ font,ma,pinyin
 土,su,Tǔ -> Tu 🈤不取聲母
 龶,se,Ŝēŋ -> Se 🈤不取聲母
 耂,sla,Lǎo -> La
-壴,svu,Ẑú -> Vu 🈤Z和Ẑ取V
+壴,svu,Ẑú -> Vu 🈤Z和Ẑ作V
 ,so,🈤無讀音取o
 尤,syo,Yóu -> Yo
-尢,sa,Wǎŋ -> Wa 🈤不取聲母
+尢,so,Yóu -> Yo 🈤不取聲母 🈑尤本字 🈕Wāŋ
 廴,si,Yín -> Yi 🈤不取聲母
 豕,ssi,Ŝǐ
 ,ssi,
@@ -316,13 +318,11 @@ font,ma,pinyin
 丶,tu,Ẑǔ 🈤基本筆畫不取聲母 ㊟俗稱點
 乀,tu,Fú 🈤基本筆畫不取聲母 ㊟俗稱捺
 欠,tqa,Qiān -> Qa
-饣,tsi,Ŝi -> Si
 匕,ti,Bi 🈤不取聲母
 手,tso,Ŝǒu -> So
 龵,tso,
 扌,to,Ŝǒu -> So 🈤不取聲母 ㊟俗稱提手旁
 用,to,Yòŋ -> Yo 🈤不取聲母
-辰,tce,Ĉén -> Ce
 ,vo,🈤無讀音取o
 ,vo,
 亦,vyi,Yì
