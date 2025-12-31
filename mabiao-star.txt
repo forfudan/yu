@@ -59067,7 +59067,9 @@ kdd	乁
 kdd	㋬
 kdd	へ
 kdd	ヘ
+kdd	・
 kdd	ㆍ
+kdd	·
 kddc	𫏽
 kddj	𡦫
 kddj	𨐿
