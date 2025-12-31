@@ -308,29 +308,40 @@ html.dark *::-webkit-scrollbar-thumb:hover {
   text-orientation: upright !important;
 }
 
-/* 為每個按鈕設置不同的扁平純色 - 增加透明度減少刺眼感 */
+/* 為每個按鈕設置彩虹七色 - 紅橙黃綠藍靛紫 */
 .VPHero .action:nth-child(1) .VPButton {
-  background: rgba(33, 150, 243, 0.8) !important;
+  background: rgba(239, 68, 68, 0.85) !important;
+  /* 紅色 */
 }
 
 .VPHero .action:nth-child(2) .VPButton {
-  background: rgba(156, 39, 176, 0.8) !important;
+  background: rgba(249, 115, 22, 0.85) !important;
+  /* 橙色 */
 }
 
 .VPHero .action:nth-child(3) .VPButton {
-  background: rgba(76, 175, 80, 0.8) !important;
+  background: rgba(234, 179, 8, 0.85) !important;
+  /* 黃色 */
 }
 
 .VPHero .action:nth-child(4) .VPButton {
-  background: rgba(251, 140, 0, 0.8) !important;
+  background: rgba(34, 197, 94, 0.85) !important;
+  /* 綠色 */
 }
 
 .VPHero .action:nth-child(5) .VPButton {
-  background: rgba(233, 30, 99, 0.8) !important;
+  background: rgba(59, 130, 246, 0.85) !important;
+  /* 藍色 */
 }
 
 .VPHero .action:nth-child(6) .VPButton {
-  background: rgba(0, 188, 212, 0.8) !important;
+  background: rgba(99, 102, 241, 0.85) !important;
+  /* 靛色 */
+}
+
+.VPHero .action:nth-child(7) .VPButton {
+  background: rgba(168, 85, 247, 0.85) !important;
+  /* 紫色 */
 }
 
 /* 扁平化懸停效果 - 懸停時稍微提高不透明度 */
@@ -339,64 +350,88 @@ html.dark *::-webkit-scrollbar-thumb:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15) !important;
 }
 
-/* 每個按鈕的懸停效果 - 稍微加深顏色且提高不透明度 */
+/* 每個按鈕的懸停效果 - 彩虹七色加深 */
 .VPHero .action:nth-child(1) .VPButton:hover {
-  background: rgba(25, 118, 210, 0.9) !important;
+  background: rgba(220, 38, 38, 0.95) !important;
+  /* 紅色加深 */
 }
 
 .VPHero .action:nth-child(2) .VPButton:hover {
-  background: rgba(123, 31, 162, 0.9) !important;
+  background: rgba(234, 88, 12, 0.95) !important;
+  /* 橙色加深 */
 }
 
 .VPHero .action:nth-child(3) .VPButton:hover {
-  background: rgba(56, 142, 60, 0.9) !important;
+  background: rgba(202, 138, 4, 0.95) !important;
+  /* 黃色加深 */
 }
 
 .VPHero .action:nth-child(4) .VPButton:hover {
-  background: rgba(230, 81, 0, 0.9) !important;
+  background: rgba(22, 163, 74, 0.95) !important;
+  /* 綠色加深 */
 }
 
 .VPHero .action:nth-child(5) .VPButton:hover {
-  background: rgba(194, 24, 91, 0.9) !important;
+  background: rgba(37, 99, 235, 0.95) !important;
+  /* 藍色加深 */
 }
 
 .VPHero .action:nth-child(6) .VPButton:hover {
-  background: rgba(0, 151, 167, 0.9) !important;
+  background: rgba(79, 70, 229, 0.95) !important;
+  /* 靛色加深 */
 }
 
-/* 暗色模式下保持相同的扁平化樣式 - 增加透明度 */
+.VPHero .action:nth-child(7) .VPButton:hover {
+  background: rgba(147, 51, 234, 0.95) !important;
+  /* 紫色加深 */
+}
+
+/* 暗色模式下的彩虹七色 */
 .dark .VPHero .action:nth-child(1) .VPButton {
-  background: rgba(25, 118, 210, 0.5) !important;
+  background: rgba(239, 68, 68, 0.6) !important;
+  /* 紅色 */
   color: #ffffff !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
 .dark .VPHero .action:nth-child(2) .VPButton {
-  background: rgba(123, 31, 162, 0.5) !important;
+  background: rgba(249, 115, 22, 0.6) !important;
+  /* 橙色 */
   color: #ffffff !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
 .dark .VPHero .action:nth-child(3) .VPButton {
-  background: rgba(56, 142, 60, 0.5) !important;
+  background: rgba(234, 179, 8, 0.6) !important;
+  /* 黃色 */
   color: #ffffff !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
 .dark .VPHero .action:nth-child(4) .VPButton {
-  background: rgba(230, 81, 0, 0.5) !important;
+  background: rgba(34, 197, 94, 0.6) !important;
+  /* 綠色 */
   color: #ffffff !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
 .dark .VPHero .action:nth-child(5) .VPButton {
-  background: rgba(194, 24, 91, 0.5) !important;
+  background: rgba(59, 130, 246, 0.6) !important;
+  /* 藍色 */
   color: #ffffff !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
 .dark .VPHero .action:nth-child(6) .VPButton {
-  background: rgba(0, 151, 167, 0.5) !important;
+  background: rgba(99, 102, 241, 0.6) !important;
+  /* 靛色 */
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark .VPHero .action:nth-child(7) .VPButton {
+  background: rgba(168, 85, 247, 0.6) !important;
+  /* 紫色 */
   color: #ffffff !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }

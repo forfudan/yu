@@ -22,7 +22,10 @@ hero:
       link: /zht/practice/root
     - theme: alt
       text: 安裝
-      link: /zht/install
+      link: /zht/docs/install
+    - theme: alt
+      text: 體驗
+      link: /zht/ime/ling
     - theme: alt
       text: 跟打
       link: https://genda.shurufa.app

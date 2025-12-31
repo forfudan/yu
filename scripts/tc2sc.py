@@ -8,7 +8,6 @@ t2s = opencc.OpenCC("t2s")
 
 paths_of_docs = [
     "/index.md",
-    "/install.md",
     "/docs/index.md",
     "/docs/changelog.md",
     "/docs/developing.md",
@@ -75,6 +74,11 @@ paths_of_docs = [
     "/practice/char_ling_zhu.md",
     "/practice/root_wafel.md",
     "/practice/tupa.md",
+    # 安裝
+    "/docs/install.md",
+    # IME
+    "/ime/ling.md",
+    "/ime/ming.md",
     # 拆分
     "/chaifen/index.md",
     "/chaifen/light.md",
@@ -92,9 +96,12 @@ paths_of_docs = [
 for path_of_doc in paths_of_docs:
     with open("src/zht" + path_of_doc, mode="r", encoding="utf8") as temp:
         doc = temp.read()
-    if not doc.startswith("<!-- do not translate -->"):
+    if not (
+        doc.startswith("<!-- do not translate -->")
+        or doc.startswith("<!-- verbatim -->")
+    ):
         pat = re.compile(
-            r"((?:<!-- do not translate -->[\S\s]+?<!-- do not translate -->)|(?:`.+?`)|(?:<.+?>)|(?:[^`<>]+)|(?:[\r\n]+)|(?:[<>]))+?"
+            r"((?:<!-- do not translate -->[\S\s]+?<!-- do not translate -->)|(?:<!-- verbatim -->[\S\s]+?<!-- verbatim -->)|(?:`.+?`)|(?:<.+?>)|(?:[^`<>]+)|(?:[\r\n]+)|(?:[<>]))+?"
         )
         res = re.findall(pat, doc)
         res_zht = []

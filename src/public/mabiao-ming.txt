@@ -57824,7 +57824,6 @@ jxvgg	𭟐
 jxvgk	𢤋
 jxvgl	𲠆
 jxvgw	𰒔
-jxvhj	𫻛
 jxvht	𢟷
 jxvje	𮲁
 jxvjg	𢢯
@@ -57857,6 +57856,7 @@ jxvnd	𢘛
 jxvng	㥺
 jxvnj	𢝍
 jxvnn	㥘
+jxvnn	𫻛
 jxvnr	𪫸
 jxvnw	㤼
 jxvpv	𢣨
@@ -94233,8 +94233,6 @@ vkhhw	𡽢
 vkhhx	𦏿
 vkhjf	𡻇
 vkhjf	𲞃
-vkhjj	𪬿
-vkhjj	𫕻
 vkhjq	𣪗
 vkhjr	𰚞
 vkhjs	𡶄
@@ -94913,6 +94911,8 @@ vkntd	𡽘
 vkntf	𩇢
 vknvf	𬰘
 vknvg	𩇠
+vknvj	𪬿
+vknvn	𫕻
 vknwc	𨿬
 vknwk	𲝎
 vknwt	𮸭
@@ -95364,7 +95364,6 @@ vkvfw	𨿻
 vkvfx	𲞆
 vkvgl	𫶂
 vkvhh	𦑓
-vkvhj	𫶠
 vkvhr	𡻌
 vkvhs	𭖠
 vkvht	㟼
@@ -95401,6 +95400,7 @@ vkvmt	㟓
 vkvnd	𡶜
 vkvne	𡸺
 vkvng	𡻊
+vkvnn	𫶠
 vkvnn	𰎱
 vkvns	𱛔
 vkvrk	𱛳
@@ -104779,14 +104779,14 @@ bbcsv	𗺃
 bbcu	⽁
 bbcxn	𗎴
 bbdbb	🉄
-bbfsf	㌧
 bbi	⺣
 bbjxi	⺞
 bbkvi	⻧
 bblgi	ᅢ
 bblgi	ㅐ
 bbmo	
-bbsgf	㌦
+bbsgo	㌦
+bbso	㌧
 bbso	ド
 bbu	⼘
 bbu	⺊
@@ -106854,7 +106854,6 @@ cfmqj	𗃧
 cfmso	𗉰
 cfmvi	𗉭
 cfmvi	𗉷
-cfnf	㍕
 cfo	⾶
 cfo	𛂮
 cfo	𛂯
@@ -108618,6 +108617,7 @@ cnnvi	𘨿
 cnnvi	𘪗
 cnsdg	嬾
 cnsdg	嬾
+cnsi	㍕
 cnsmt	婦
 cnsmt	𛂱
 cnvvl	嬈
@@ -111995,6 +111995,7 @@ fdkdo	뷃
 fdkdo	뷉
 fdkdo	뷟
 fdkdo	뷥
+fdke	㌔
 fdkff	붇
 fdkff	붣
 fdkff	붿
@@ -112321,7 +112322,6 @@ ffbwo	닷
 ffbwo	댯
 ffbww	닸
 ffbww	댰
-ffdf	㌔
 ffe	⼕
 ffe	⼖
 ffe	ㄈ
@@ -113338,7 +113338,6 @@ fflww	딨
 ffmlb	𗀨
 ffmmd	匿
 ffmvi	𗀭
-ffmwe	🀇
 ffo	𘡠
 ffo	
 ffrcc	듂
@@ -113659,6 +113658,7 @@ fi	㆒
 fi	㈠
 fi	㊀
 fi	🈩
+fi	🀇
 fi	ㄧ
 fi	ㆪ
 fi	ー
@@ -114029,6 +114029,7 @@ fmsvi	𗵖
 fmtjo	𗴰
 fmu	㈤
 fmu	㊄
+fmu	🀋
 fmwco	雃
 fmxfi	㌒
 fmxfp	𗴼
@@ -115378,10 +115379,9 @@ gho	𘬜
 gje	⾒
 gje	見
 gje	𛃎
-gjfmw	🀏
 gjfpe	𘯾
 gjge	頋
-gjgmc	🀪
+gji	🀪
 gjjke	𘰀
 gjjsm	罺
 gjndi	丸
@@ -115389,6 +115389,7 @@ gjndi	𘯽
 gjndi	
 gju	㈨
 gju	㊈
+gju	🀏
 gju	𛀭
 gju	𘯼
 gjwco	罹
@@ -116019,6 +116020,7 @@ kba	⼋
 kba	㈧
 kba	㊇
 kba	㋩
+kba	🀎
 kba	ㆿ
 kba	ハ
 kba	𛂞
@@ -116032,7 +116034,6 @@ kbfcb	㌫
 kbfcg	㌭
 kbfcv	堲
 kbflx	㌬
-kbfmw	🀎
 kbfo	𘰵
 kbgo	⺏
 kbjo	𘰬
@@ -116096,10 +116097,10 @@ kge	
 kgfi	𛁵
 kgi	⼸
 kgmff	
-kgmwe	🀊
 kgo	㆕
 kgo	㈣
 kgo	㊃
+kgo	🀊
 kgo	𛁇
 kgspa	
 kgtpe	𛀹
@@ -116960,7 +116961,7 @@ kqlbi	🀃
 kqlhk	冀
 kqo	⺦
 kqo	
-kqscf	㌥
+kqsck	㌥
 kqso	ヂ
 kqvdu	壮
 kqxci	𘯓
@@ -117059,19 +117060,19 @@ ksa	㊂
 ksa	㋯
 ksa	🈪
 ksa	🉁
+ksa	🀉
 ksa	ミ
 ksa	𛃉
-ksfmw	🀉
 ksfnj	響
 ksfnq	蠁
 ksfsj	響
-ksfxf	㍉
 ksi	⺰
 ksi	𛁄
 ksi	𛁅
 ksi	
 ksjke	
 ksmds	㍈
+ksxci	㍉
 ksxkg	㍊
 kvke	𘮶
 kwnvo	囹
@@ -117631,9 +117632,9 @@ ltjff	𗇎
 ltkba	六
 ltkba	㈥
 ltkba	㊅
+ltkba	🀌
 ltkdi	𘢘
 ltklv	𗇔
-ltkmw	🀌
 ltko	直󠄆
 ltkto	裏
 ltkvc	𗇐
@@ -117853,8 +117854,6 @@ lxfxf	𗯝
 lxfxh	𗯚
 lxfxl	𗯛
 lxfxv	𗯙
-lxfyk	⚎
-lxfyn	⚍
 lxghn	𘮬
 lxhff	𘌣
 lxhfi	𘦠
@@ -118379,7 +118378,6 @@ mflnd	𘦺
 mflso	𘗨
 mflvi	𗕢
 mflvi	𗕲
-mfmf	🈁
 mfmfo	𘪇
 mfmnd	𗕧
 mfmsa	𗕋
@@ -118630,6 +118628,7 @@ mmkso	𗰏
 mmkvi	𗈥
 mmkvi	𘪅
 mmndi	𘲃
+mmo	🈁
 mmo	𘢴
 mmqi	𘲂
 mmsa	𘦶
@@ -118662,10 +118661,10 @@ mo	
 mpda	𘱿
 mqfci	𗗏
 mqfi	𘤸
-mqfmw	🀍
 mqfpe	𘤺
 mqi	㈦
 mqi	㊆
+mqi	🀍
 mqi	
 mqi	
 mqi	
@@ -119165,7 +119164,7 @@ mzci	𘭳
 mzcnd	𘭯
 mzdke	㊨
 mzdke	🈮
-mzfff	㌨
+mzfpe	㌨
 mzgci	直󠄇
 mzjgi	㊧
 mzjgi	🈬
@@ -119311,7 +119310,6 @@ pddke	𘭾
 pddo	𘭿
 pddwo	靈
 pdfdi	奄
-pdflf	㍽
 pdfo	𛂽
 pdgbo	霣
 pdho	𘭁
@@ -119320,11 +119318,10 @@ pdji	🀦
 pdji	𛁎
 pdji	𛁏
 pdjke	𘭻
+pdlse	㍽
+pdndi	☯
 pdndi	𘭷
-pdnsf	☯
 pdnsi	𘭽
-pdnyk	⚌
-pdnyn	⚏
 pdtmc	奔
 pdvji	奢
 pdwli	𘭺
@@ -120809,7 +120806,6 @@ sfflb	𘈗
 sffvi	𘈕
 sffvi	𘈖
 sfhfp	𗄈
-sfmwe	🀈
 sfpe	⻰
 sfvci	𗄆
 sfvci	𗄍
@@ -121588,7 +121584,6 @@ smfi	𛃀
 smfi	𘭇
 smflb	𗄛
 smfmc	枅
-smfsf	㌿
 smfso	㍂
 smgbb	㌾
 smgkb	㈱
@@ -121622,6 +121617,7 @@ smsjf	楂
 smsji	𣏃
 smsme	林
 smsng	槪
+smso	㌿
 smso	ボ
 smso	𘭈
 smtgn	𣏕
@@ -121644,6 +121640,7 @@ so	㊁
 so	㋥
 so	🈔
 so	🉂
+so	🀈
 so	ㄤ
 so	こ
 so	゛
@@ -122158,7 +122155,6 @@ vfvlo	𘀄
 vfvlo	𘀅
 vfvo	즞
 vfwo	즛
-vfwso	㍋
 vfwwo	즜
 vgmo	㍆
 vhu	⼾
@@ -123246,6 +123242,7 @@ vwbso	㍌
 vwgo	㍄
 vwmdk	㍃
 vwo	𘱐
+vwso	㍋
 vxtkb	⿋
 vxtkb	黹
 wbbu	사
@@ -123486,7 +123483,6 @@ wflwo	싌
 wflwo	싒
 wflwo	싓
 wflwo	싔
-wfmwe	🀋
 wfmyd	侀
 wfne	𘰢
 wfnjx	愈
@@ -125127,6 +125123,7 @@ xccxv	𗔯
 xcdgo	☱
 xcfbl	𗓗
 xcfbn	𗑷
+xcfci	㍒
 xcfcl	𗑃
 xcfcl	𗑄
 xcfcl	𗔤
@@ -125134,7 +125131,6 @@ xcfcv	𗑕
 xcfcv	𗑴
 xcfcv	𗓕
 xcfcv	𗔶
-xcffc	㍒
 xcfff	𗒤
 xcffl	𗒥
 xcffl	𗔒
@@ -126021,6 +126017,8 @@ yfflu	阮
 yffvo	㌜
 yfhsi	
 yfjfk	⚊
+yfjfk	⚌
+yfjfk	⚎
 yfkdk	𛀄
 yfo	年
 yfo	𛂒
@@ -126041,6 +126039,8 @@ yfvji	陼
 yfvkt	陵
 yfvkv	陸
 yfwnn	⚋
+yfwnn	⚍
+yfwnn	⚏
 ygju	𘰋
 yho	𘰇
 yhwo	𘰎
@@ -146601,6 +146601,7 @@ lxmct	光華
 /jb	‡
 /jh	․
 /mh	‥
+/sl	…
 /dd	…
 /qf	‰
 /wf	‱

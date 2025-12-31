@@ -46,8 +46,10 @@ export default defineConfig({
       { text: "介绍", link: "/docs/" },
       { text: "学习", link: "/learn/" },
       { text: "练习", link: "/practice/root" },
-      { text: "安装", link: "/install" },
-      { text: "体验", link: "/ling" },
+      { text: "安装", link: "/docs/install" },
+      { text: "体验", link: "/ime/ling" },
+      { text: "跟打", link: "https://genda.shurufa.app" },
+      { text: "测评", link: "https://ceping.shurufa.app" },
     ],
     sidebar: {
       "/docs": [
@@ -500,8 +502,10 @@ export default defineConfig({
           { text: "介紹", link: "/zht/docs/" },
           { text: "學習", link: "/zht/learn/" },
           { text: "練習", link: "/zht/practice/root" },
-          { text: "安裝", link: "/zht/install" },
-          { text: "體驗", link: "/ling" },
+          { text: "安裝", link: "/zht/docs/install" },
+          { text: "體驗", link: "/zht/ime/ling" },
+          { text: "跟打", link: "https://genda.shurufa.app" },
+          { text: "測評", link: "https://ceping.shurufa.app" },
         ],
         sidebar: {
           "/zht/docs": [

@@ -79635,8 +79635,6 @@ hjxi	𪜕
 hkfl	𫀈
 hkfu	𪤡
 hkki	𫖴
-hkkk	𫕻
-hkky	𪬿
 hkoa	𫘼
 hkqo	𫀍
 hkte	𫀃
@@ -79763,6 +79761,8 @@ hvwr	𪣾
 hvxi	𪣂
 hwck	𫀆
 hwhl	𫐏
+hwhw	𫕻
+hwhy	𪬿
 hwiq	𫕼
 hwkg	𪥟
 hwmc	𫐍
@@ -84837,8 +84837,8 @@ jhdv	𬁃
 jhei	𬁄
 jhhh	𬁕
 jhke	𬀾
-jhkk	𫶠
 jhqh	𬀻
+jhww	𫶠
 jiff	𫶒
 jikd	𬏑
 jjan	𬏈
@@ -88254,7 +88254,7 @@ ygus	𬲋
 yhhp	𬩱
 yhhr	𬲢
 yhki	𬱢
-yhkk	𫻛
+yhww	𫻛
 yicn	𫺈
 yidq	𫻗
 yijk	𫤽
@@ -107003,9 +107003,9 @@ aibn	𲢐
 aief	𲢡
 aiii	㈦
 aiii	㊆
+aiii	🀍
 aips	𲢵
 airi	𲣁
-aisk	🀍
 ajdx	𲢊
 ajfk	𲿩
 ajjj	ᅲ
@@ -107039,6 +107039,7 @@ altj	𲣝
 alvn	🉑
 alvn	𛀙
 alvn	𛀚
+alvo	㌔
 alvu	𘭎
 alwq	㌖
 alxl	𛁆
@@ -107065,7 +107066,6 @@ anvn	𲢸
 aoav	𲢣
 aods	𲢏
 aody	𲺃
-aolv	㌔
 aomb	𲣎
 aooo	㋖
 aooo	㋼
@@ -108103,6 +108103,7 @@ bbsx	쪱
 bbsx	쪹
 bbte	𮰓
 bbtf	𗰮
+bbuu	🈁
 bbuu	🈒
 bbuu	ᄍ
 bbuu	ㅉ
@@ -109495,7 +109496,6 @@ btww	𗇤
 btww	𗇵
 btww	𗇶
 btww	𗈙
-bubu	🈁
 bufs	𘗸
 bugu	𘨭
 bukr	𗈐
@@ -109802,6 +109802,8 @@ cita	𲛡
 cjde	𲛯
 cjdu	𳈷
 cjft	⚊
+cjft	⚌
+cjft	⚎
 cjoh	𳈫
 cjqh	𲚀
 cjqh	𳈪
@@ -109872,6 +109874,8 @@ cten	𘮑
 ctin	𘮒
 ctma	𮰽
 ctov	⚋
+ctov	⚍
+ctov	⚏
 cttu	𲡦
 ctww	𗗐
 ctxj	𮰺
@@ -110021,7 +110025,6 @@ diur	𳊉
 diuu	𳉬
 dixb	𳉣
 djan	𳉐
-djas	🀪
 djbu	𲴏
 djdh	𮵓
 djjj	𲴄
@@ -110030,6 +110033,7 @@ djmb	𲳿
 djmd	𲒶
 djmo	𲓭
 djqv	☰
+djrh	🀪
 djry	𳉃
 djsd	𲴀
 djtr	𳏯
@@ -110361,7 +110365,6 @@ efla	𲜤
 efqp	𮷤
 efrh	𲙛
 efsk	𮯺
-efsk	🀋
 efti	🩦
 efuo	𮯼
 efve	㉁
@@ -110543,6 +110546,7 @@ faaa	㊂
 faaa	㋯
 faaa	🈪
 faaa	🉁
+faaa	🀉
 faaa	ミ
 faaa	𛃉
 fabk	𗙢
@@ -110580,7 +110584,6 @@ faqb	𗙌
 faqk	𗙊
 faqp	𘬦
 faqq	𗘶
-fask	🀉
 fass	𗙠
 fasv	𗙀
 fasw	𗙒
@@ -110588,7 +110591,6 @@ fatk	𗙟
 fato	𗙩
 fatq	𗙕
 fatv	𗙋
-faue	㍉
 fauf	𗙅
 fauf	𗙏
 faui	𛄢
@@ -111248,6 +111250,7 @@ fccj	𲥼
 fcie	𲐋
 fcii	㈤
 fcii	㊄
+fcii	🀋
 fcla	𲔡
 fcla	𲕗
 fcqu	𲬏
@@ -111353,6 +111356,7 @@ fiii	㆒
 fiii	㈠
 fiii	㊀
 fiii	🈩
+fiii	🀇
 fiii	ㆪ
 fiii	ー
 fiii	ᅳ
@@ -111362,7 +111366,6 @@ fiii	𘬁
 fijt	𲦺
 fiov	𲦠
 fiqh	𲦄
-fisk	🀇
 fjfk	𲟚
 fjfm	𲒺
 fjla	𲕰
@@ -111921,6 +111924,7 @@ fsfw	𘪚
 fshh	𗵂
 fshr	𗵃
 fsii	𲧌
+fsiv	㌿
 fsiv	ボ
 fsiv	𘭈
 fsji	𘡣
@@ -112054,6 +112058,7 @@ fudf	𗀐
 fudf	𗀞
 fudo	𗀗
 fudu	𲬎
+fuea	㍉
 fuff	𲦡
 fugd	𮲲
 fugd	𘬐
@@ -112154,7 +112159,6 @@ fvqw	𘣬
 fvre	𲦢
 fvro	𘣭
 fvsf	𗀯
-fvsi	㌿
 fvsi	ず
 fvsr	𗀘
 fvsr	𗀮
@@ -113630,7 +113634,6 @@ gccc	🩤
 gccc	🩫
 gcyn	𮴃
 gddd	𘭶
-gdfk	㍽
 gdfv	𮴳
 gdjv	𲯲
 gdjw	𲯸
@@ -113680,6 +113683,7 @@ gfgf	듣
 gfgn	𳄈
 gfif	드
 gfjr	𲚾
+gfkd	㍽
 gfkg	𮴏
 gfkk	𮴠
 gfko	⚽
@@ -114752,11 +114756,9 @@ gnxl	딚
 gnxl	딭
 gnxt	딙
 gocn	𳅔
-goct	⚌
-gocv	⚏
+godd	☯
 godd	𘭷
 goej	𲯴
-goff	☯
 goll	𲯯
 gome	𲰔
 gomv	𮴋
@@ -117834,7 +117836,6 @@ mooo	ㅏ
 mooo	ㅑ
 mooo	𘠵
 mooo	𳑳
-mosi	㌧
 moti	𳂓
 mous	𲾈
 mowl	𮵅
@@ -117842,8 +117843,6 @@ mpfo	𲲪
 mpuo	𲬭
 mpww	𮲖
 mqax	𲜭
-mqct	⚎
-mqcv	⚍
 mqdl	𲲸
 mqfa	𘩵
 mqfi	𘌢
@@ -117870,6 +117869,7 @@ mrou	𲾅
 msbu	𲸽
 msfr	𗎸
 msfw	𲲟
+msio	㌧
 msio	ド
 msqm	𲲽
 msqr	㌦
@@ -118196,8 +118196,8 @@ nqqw	𗁫
 nqrw	㆕
 nqrw	㈣
 nqrw	㊃
+nqrw	🀊
 nqrw	𛁇
-nqsk	🀊
 nqww	𗀶
 nqww	𗁘
 nqww	𗂖
@@ -118685,6 +118685,7 @@ otgd	𘱼
 otht	𲘶
 otib	㈥
 otib	㊅
+otib	🀌
 otlv	𲔔
 otma	𮷇
 otob	𲜊
@@ -118695,7 +118696,6 @@ otrt	𲡬
 otry	𲟿
 otsi	𛀔
 otsi	𛀕
-otsk	🀌
 ottd	🩭
 ottd	𲑅
 ottp	𳄾
@@ -120384,6 +120384,7 @@ siii	㊁
 siii	㋥
 siii	🈔
 siii	🉂
+siii	🀈
 siii	こ
 siii	゛
 siii	ニ
@@ -120399,7 +120400,6 @@ siof	𮶵
 siov	𮶱
 sipu	𮶹
 sipw	𲽘
-sisk	🀈
 sism	𲽍
 sist	𮶷
 sisv	𮶤
@@ -121183,7 +121183,6 @@ sooo	㋤
 sooo	ナ
 sopd	𳄢
 soqd	𲽛
-soqp	㌨
 soqq	𗞏
 soqw	𗚋
 sosm	𲽶
@@ -121218,6 +121217,7 @@ sqmn	㊬
 sqmo	𗄊
 sqmw	𗄉
 sqpk	𘭵
+sqpo	㌨
 sqqo	𗞴
 sqqq	𗛴
 sqqq	𗜧
@@ -122161,13 +122161,13 @@ tifo	𲡮
 tiii	㈧
 tiii	㊇
 tiii	㋩
+tiii	🀎
 tiii	ㆿ
 tiii	ハ
 tiii	𛂞
 tiii	𘠐
 tiii	𘰨
 timu	𳎍
-tisk	🀎
 tiwi	𳍸
 tixb	𲭏
 tjap	𳑦
@@ -124369,7 +124369,6 @@ ueee	𘠚
 ueee	𘡊
 ueee	𘫳
 uefi	𲫖
-uefv	㍒
 uekv	𮳲
 uelr	𲬪
 uelv	𳁮
@@ -124438,6 +124437,7 @@ ufri	𘦕
 ufsw	𗓏
 ufuo	𮳮
 ufuw	𗔵
+ufvi	㍒
 ufvn	𗑄
 ufvr	𗑃
 ufvr	𗔤
@@ -128857,7 +128857,6 @@ wlmb	𳆝
 wlqr	𳅶
 wlrf	𳋂
 wlvi	𲏙
-wlxs	㍋
 wmbu	𳌲
 wmhf	𳇥
 wmho	𲥨
@@ -129051,6 +129050,7 @@ wxms	㍌
 wxny	𲟓
 wxqg	𲒡
 wxqw	𲭨
+wxsi	㍋
 wxsi	𘯙
 wxso	𘯚
 wylq	𲥜
@@ -129624,7 +129624,6 @@ xiii	𘠉
 xiii	𘯧
 xiii	𘳀
 xiii	𘳋
-xivv	㍕
 xjjj	𮹐
 xjjj	ㆡ
 xjmb	𮹎
@@ -130680,6 +130679,7 @@ xvvf	𗋫
 xvvf	𗋬
 xvvf	𗋯
 xvvh	𗋾
+xvvi	㍕
 xvvk	𗊺
 xvvk	𗌀
 xvvq	𗌂
@@ -130823,11 +130823,11 @@ yevk	𲟷
 yeym	𲠄
 yfff	㈨
 yfff	㊈
+yfff	🀏
 yfff	𛀭
 yfff	𘯼
 yfha	𲜥
 yfle	𲠜
-yfsk	🀏
 yfvm	𘲁
 yfvs	㌙
 yfvv	㌘
@@ -135080,7 +135080,6 @@ tfvn	𪫶
 yslr	𪬠
 yale	𪬮
 ynrh	𪬰
-hwhy	𪬿
 ikrl	𪭙
 ayjd	𪮱
 otfy	𪯺
@@ -135157,7 +135156,6 @@ lknp	𫑍
 wbkr	𫒾
 ttfy	𫓻
 taow	𫓾
-hwhw	𫕻
 ijsa	𫖛
 hyfd	𫖡
 wwfk	𫖺
@@ -135251,7 +135249,6 @@ bkft	𫵪
 bwst	𫵬
 aaej	𫶔
 jsae	𫶝
-jhww	𫶠
 ubsj	𫷩
 ufsb	𫷰
 ussq	𫸊
@@ -135269,7 +135266,6 @@ tfvy	𫺐
 gtfy	𫺡
 yejb	𫻅
 nloy	𫻒
-yhww	𫻛
 atfl	𫼹
 avqb	𫼾
 aslf	𫽄
@@ -136302,6 +136298,8 @@ msbu	🈣
 isfr	🈵
 ohlm	🈹
 ctfv	⚋
+ctfv	⚍
+ctfv	⚏
 sqre	𛀝
 dckk	𛀪
 lknp	𛀷
@@ -136600,24 +136598,25 @@ kehb	🉈
 hxkv	🉡
 dacn	🉢
 kaqp	🉥
-fiii	🀇
-siii	🀈
-faaa	🀉
-nqrw	🀊
-efci	🀋
-otib	🀌
-aiii	🀍
-tiii	🀎
-yfff	🀏
-djrh	🀪
+fsky	🀇
+ssky	🀈
+fsky	🀉
+nqsk	🀊
+fcsk	🀋
+otsk	🀌
+asky	🀍
+tsky	🀎
+ysky	🀏
+djay	🀪
+goff	☯
 tlqr	☱
 pxkv	☲
 cjrj	⚊
 cwyj	⚋
-gocj	⚌
-mqcw	⚍
-mqcj	⚎
-gocw	⚏
+goct	⚌
+mqcv	⚍
+mqct	⚎
+gocv	⚏
 oeeo	𛃢
 llvv	𛄂
 llvv	𛄃

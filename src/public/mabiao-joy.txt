@@ -61,6 +61,7 @@ aadm	𣝂
 aadm	𭆟
 aadu	𪽠
 aae	亖
+aae	㌿
 aae	ご
 aae	ギ
 aae	ボ
@@ -903,6 +904,7 @@ ae	㊁
 ae	㋥
 ae	🈔
 ae	🉂
+ae	🀈
 ae	こ
 ae	゛
 ae	ニ
@@ -945,7 +947,6 @@ aeck	𣒍
 aecm	𪞰
 aedb	𬂺
 aedi	𣏘
-aedv	🀈
 aee	𘬰
 aeec	𣔖
 aeee	橻
@@ -2482,7 +2483,6 @@ akkt	𠘥
 akkt	𡂤
 akkv	梠
 akkv	𠳆
-akkv	㌔
 akkw	樛
 akkw	𠗽
 akkw	𬄘
@@ -2945,6 +2945,7 @@ akv	束
 akv	杏
 akv	𪱳
 akv	𱏿
+akv	㌔
 akv	𘭌
 akvj	𭫻
 akvu	𨘱
@@ -3257,7 +3258,6 @@ am	ホ
 am	𛀧
 am	𘭆
 ama	棒
-amae	㌿
 amah	檨
 amah	檨
 amak	棒
@@ -5832,12 +5832,12 @@ bec	忸
 bec	𡆴
 beda	𲠪
 bedm	𭍛
-bedv	🀊
 bee	四
 bee	𪛘
 bee	㆕
 bee	㈣
 bee	㊃
+bee	🀊
 bee	𛁇
 beei	𭝔
 beem	𢜵
@@ -9556,7 +9556,6 @@ cirt	𥘘
 cis	神
 cis	神
 cis	𳁼
-cisa	㍋
 cisi	𰵑
 cisj	𱄗
 cisk	𫀕
@@ -10636,6 +10635,7 @@ cs	㋧
 cs	ネ
 cs	
 cs	
+csae	㍋
 csak	𠁈
 csam	𥙨
 csas	驦
@@ -20394,6 +20394,7 @@ eejf	𨵀
 eeji	𠑆
 eejo	㒧
 eejr	僴
+eek	🈁
 eek	𘢴
 eek	𘭍
 eekg	閥
@@ -20516,7 +20517,6 @@ efdn	開
 efdo	侀
 efdo	侀
 efds	𗕋
-efdv	🀋
 efdw	𨴸
 efea	𘪇
 efec	𘜀
@@ -21570,7 +21570,6 @@ eke	𨴎
 ekee	侃
 ekee	㑆
 ekeh	𱗁
-ekek	🈁
 eken	𣶚
 eken	𫺛
 eken	𰜅
@@ -25992,6 +25991,7 @@ fi	㆒
 fi	㈠
 fi	㊀
 fi	🈩
+fi	🀇
 fi	ㄧ
 fi	ㆪ
 fi	ー
@@ -26051,7 +26051,6 @@ fidn	𢱲
 fido	𢶊
 fids	攐
 fids	𥅐
-fidv	🀇
 fidx	攓
 fiee	掜
 fiee	𠑺
@@ -26257,6 +26256,7 @@ fj	九
 fj	九月
 fj	㈨
 fj	㊈
+fj	🀏
 fj	𛀭
 fj	𘯼
 fja	巢
@@ -26492,7 +26492,6 @@ fjdn	㩧
 fjdr	𢳂
 fjdr	𱜹
 fjds	𱠻
-fjdv	🀏
 fje	抑
 fjed	𲣆
 fjei	𰓩
@@ -28139,6 +28138,7 @@ fkw	五
 fkw	㧔
 fkw	㈤
 fkw	㊄
+fkw	🀋
 fkwn	𱠕
 fkww	𢵲
 fkx	贼
@@ -34641,6 +34641,7 @@ gq	七月
 gq	𫠠
 gq	㈦
 gq	㊆
+gq	🀍
 gq	
 gq	
 gq	
@@ -34660,7 +34661,6 @@ gqdk	𥶚
 gqdm	𥮏
 gqdm	𧡝
 gqdn	𥮎
-gqdv	🀍
 gqdy	𥳫
 gqel	𮡚
 gqem	𲶛
@@ -39310,8 +39310,6 @@ hqn	𪋞
 hqn	𬷢
 hqns	𲎌
 hqog	𰚞
-hqon	𪬿
-hqoo	𫕻
 hqos	靑
 hqos	𣪗
 hqos	⾭
@@ -40647,9 +40645,11 @@ hygj	靚
 hygk	𩇢
 hygo	𲊕
 hygr	𲊗
+hyhn	𪬿
 hyhs	𱗦
 hyhx	𩇠
 hyhx	𩓨
+hyhy	𫕻
 hyi	𪊳
 hyid	䞝
 hyid	𡊩
@@ -45449,14 +45449,12 @@ iwp	少
 iwp	氕
 iwp	𘢩
 iwp	
-iwpd	⚍
 iwpf	䢿
 iwpf	𨙹
 iwpg	鞌
 iwpk	𫳩
 iwps	𰢫
 iwpu	𡮯
-iwpw	⚎
 iwqk	𡭸
 iwqn	鴳
 iwqn	䲵
@@ -47460,7 +47458,6 @@ jhq	𣢮
 jhqm	𡴛
 jhqm	𡹆
 jhqm	𭖪
-jhqo	𫶠
 jhqq	𱜕
 jhrj	峤
 jhrj	𮱵
@@ -47503,6 +47500,7 @@ jhyv	崝
 jhyv	𡸺
 jhyv	晴
 jhyv	晴
+jhyy	𫶠
 ji	乐
 ji	幺
 ji	𦣝
@@ -58034,7 +58032,6 @@ lbdi	𰼇
 lbdi	𳅐
 lbdn	𲹸
 lbee	𤵯
-lbfo	㍒
 lbgh	𧶞
 lbgu	醡
 lbgx	𨣮
@@ -59026,6 +59023,7 @@ lfoc	𗑴
 lfoc	𗓕
 lfoc	𗔶
 lfoh	𤻆
+lfoi	㍒
 lfol	𗑄
 lfom	𭁇
 lfor	𗁩
@@ -63878,6 +63876,7 @@ mb	⾽
 mb	㈧
 mb	㊇
 mb	㋩
+mb	🀎
 mb	ㆿ
 mb	ハ
 mb	𛂞
@@ -63898,7 +63897,6 @@ mbbr	𤇹
 mbci	𠔋
 mbci	𭀸
 mbcl	鬛
-mbdv	🀎
 mbee	䦉
 mbek	𤇆
 mbew	𰞏
@@ -64347,7 +64345,6 @@ mdmt	羧
 mdmw	𩭹
 mdmw	𰞷
 mdmx	颂
-mdmz	㍽
 mdn	瓮
 mdn	灷
 mdn	㚏
@@ -65099,7 +65096,6 @@ mi	⺷
 mi	⽺
 mi	
 miae	𤆥
-miaf	☯
 miaj	𣈌
 miam	𬴪
 mibb	炨
@@ -65123,6 +65119,7 @@ mics	𤉳
 mics	𨲇
 micx	炞
 mid	太
+mid	☯
 mid	𘭷
 mid	𘱫
 mide	𩭕
@@ -65261,9 +65258,7 @@ mios	🩥
 miot	𦍛
 miow	𤈛
 miow	𩭂
-mipd	⚏
 mipn	𤉍
-mipw	⚌
 miq	𪸕
 miqk	𦎱
 miqk	𩮝
@@ -66698,6 +66693,7 @@ mmz	𫅏
 mmz	𰋞
 mmz	𰙤
 mmz	𱥂
+mmz	㍽
 mn	差
 mn	差距
 mnb	髭
@@ -70055,7 +70051,6 @@ nhqm	𣥽
 nhqn	𪁕
 nhqn	𪆸
 nhqo	淸
-nhqo	𫻛
 nhqo	𭭦
 nhqs	𣶥
 nhqt	𭲕
@@ -70144,6 +70139,7 @@ nhyt	𪸃
 nhyv	清
 nhyv	𣵒
 nhyx	𲎄
+nhyy	𫻛
 nhz	𬦇
 ni	注
 ni	注意
@@ -82453,6 +82449,8 @@ pjfw	陽
 pjfw	𩋬
 pjfw	𬌤
 pjfw	⚊
+pjfw	⚌
+pjfw	⚎
 pjg	䩑
 pjgi	牴
 pjgi	阺
@@ -83572,6 +83570,8 @@ puid	阾
 puid	㸳
 puid	𩊂
 puid	⚋
+puid	⚍
+puid	⚏
 puik	𤚬
 puik	𧳘
 puik	𲉝
@@ -90163,6 +90163,7 @@ rmb	𧫄
 rmb	六
 rmb	㈥
 rmb	㊅
+rmb	🀌
 rmb	𘯎
 rmb	
 rmb	𲓝
@@ -90221,7 +90222,6 @@ rmdo	𠞬
 rmdp	𮠍
 rmds	衮
 rmds	㐮
-rmdv	🀌
 rmf	㠸
 rmf	𧥱
 rmfb	𗅠
@@ -97397,6 +97397,7 @@ tdlz	錞
 tdlz	𳎜
 tdm	臀
 tdm	𬖎
+tdm	㍕
 tdma	𲧅
 tdmb	粪
 tdmb	鉷
@@ -98876,7 +98877,6 @@ tidc	𨰬
 tidi	鑧
 tidm	鈎
 tidm	𤖮
-tidm	㍕
 tido	𨭙
 tidr	𮣫
 tidx	鑳
@@ -104162,6 +104162,7 @@ uadp	郐
 uadw	𠊉
 uadx	𥁧
 uae	仒
+uae	㌧
 uae	ド
 uae	𘱃
 uaee	㌦
@@ -104308,7 +104309,6 @@ ub	ト
 ub	ᅡ
 ub	ㅏ
 ub	
-ubae	㌧
 ubaf	舖
 ubam	綑
 ubam	𢈛
@@ -111200,7 +111200,6 @@ vjdu	𨖦
 vjed	𣆸
 vjej	𲇳
 vjel	锺
-vjfd	🀪
 vjfe	𩞯
 vjfg	𫀳
 vjfh	锝
@@ -111346,6 +111345,7 @@ vjr	㸓
 vjr	𩚣
 vjr	𪎗
 vjr	𰽡
+vjr	🀪
 vjrd	𭆴
 vjrf	镄
 vjrj	𤫰
@@ -122702,6 +122702,7 @@ xwnn	蹝
 xwnx	跽
 xwoc	䟰
 xwod	𲸿
+xwp	㌨
 xwps	𱻃
 xwqd	𨋦
 xwqu	𰹎
@@ -122893,7 +122894,6 @@ xz	⾜
 xz	㋤
 xz	ナ
 xz	𲧱
-xzwp	㌨
 y	多
 y	多少
 ya	琳
@@ -124626,6 +124626,7 @@ ylao	𫆠
 ylb	珼
 ylb	𰡮
 ylb	𱼉
+ylb	㍉
 ylbp	𪼫
 ylc	脤
 ylci	𭨰
@@ -125570,6 +125571,7 @@ ys	㊂
 ys	㋯
 ys	🈪
 ys	🉁
+ys	🀉
 ys	ミ
 ys	𛃉
 ysaa	䏮
@@ -125583,7 +125585,6 @@ ysbb	𤥛
 ysci	𮴆
 ysdi	𮴇
 ysdn	𦝡
-ysdv	🀉
 yset	𫆪
 ysew	𪼗
 ysf	𤧑
@@ -125619,7 +125620,6 @@ ysl	肋
 ysl	玏
 ysl	肋
 ysla	𦟭
-yslb	㍉
 yslc	𭩒
 yslr	𦜉
 yslv	腲

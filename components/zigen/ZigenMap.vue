@@ -12,10 +12,12 @@
   - 2025-08-21 by 朱複丹: 允許字根列表模式下按鍵按照字母表順序排列
   - 2025-09-08 by 朱複丹: 添加編碼位置切換功能
   - 2025-09-10 by 朱複丹: 移除編碼位置切換功能，統一使用編碼在下方的佈局
+  - 2025-12-30 by 朱複丹: 允許依照編碼長度對字根進行排序，將短碼字根優先顯示
+                          允許在字根圖模式下點擊按鈕顯示所有字根
 -->
 
 <script setup lang="ts">
-// 统一例字数量限制
+// 統一例字數量限制
 const MAX_EXAMPLES = 8;
 import { ref, computed, onMounted, onUnmounted, watch, toRef } from 'vue'
 import { fetchZigen } from "../search/share";
@@ -35,14 +37,14 @@ const zigenFontClass = computed(() => props.zigenFontClass || 'zigen-font')
 
 // 根據方案決定始終顯示的字根
 const alwaysVisibleZigens = computed(() => {
-    // 如果外部有传入，优先使用外部传入的值
+    // 如果外部有傳入，優先使用外部傳入的值
     if (props.alwaysVisibleZigens) {
         return props.alwaysVisibleZigens
     }
-    // 否则根据方案自动判断
+    // 否則根據方案自動判斷
     switch (activeScheme.value) {
         case 'ling':
-            return 'Q廾スマ　W乚　R冫虍　乀龵用　P巴　F　G　H丅　J　K丄　L　C䒑　V氵　⺈肀　⺌⺮　'
+            return 'Q廾スマ　W乚　R冫虍　乀龵用　P巴　F　G　H　J攵　K丄　L　C䒑　V　⺈肀　⺌⺮　'
         default:
             return '冫'
     }
@@ -75,10 +77,16 @@ const isListView = ref(false);
 // 列表視圖中按鍵排序模式切換（鍵盤順序 vs 字母順序）
 const sortKeysByAlphabet = ref(false);
 
+// 字根編碼長度排序模式切換（將短編碼排在前面）
+const sortByCodeLength = ref(false);
+
+// 是否顯示所有字根（包括隱藏的重碼字根）
+const showAllZigens = ref(false);
+
 // 檢測屏幕尺寸
 // 小於此寬度則為移動端顯示模式
 const checkMobileView = () => {
-    isMobileView.value = window.innerWidth < 1280;
+    isMobileView.value = window.innerWidth < 720;
 };
 
 // 切換桌面端佈局模式
@@ -89,6 +97,16 @@ const toggleDesktopLayout = () => {
 // 切換按鍵排序模式
 const toggleKeyOrder = () => {
     sortKeysByAlphabet.value = !sortKeysByAlphabet.value;
+};
+
+// 切換編碼長度排序模式
+const toggleCodeLengthSort = () => {
+    sortByCodeLength.value = !sortByCodeLength.value;
+};
+
+// 切換顯示所有字根
+const toggleShowAllZigens = () => {
+    showAllZigens.value = !showAllZigens.value;
 };
 
 onMounted(() => {
@@ -146,7 +164,7 @@ const chaifenLoader = ref<ChaiDataLoader>();
 const isLoading = ref(false);
 // 例字緩存，key 為 normalizedZigen，value 為 examples Set
 const cachedExampleChars = ref<Map<string, Set<string>>>(new Map());
-// 已經检查的字符数量
+// 已經檢查的字符數量
 const cachedCheckedCount = ref<number>(0);
 // 固定彈窗狀態
 const pinnedZigen = ref<string | null>(null);
@@ -177,7 +195,11 @@ const zigenByKey = computed(() => {
 
     console.log('ZigenMap has data, size:', zigenMap.value.size);
 
-    const result: Record<string, { visible: Array<{ font: string, code: string }>, hidden: Array<{ font: string, code: string }> }> = {};
+    const result: Record<string, {
+        visible: Array<{ font: string, code: string }>,
+        hidden: Array<{ font: string, code: string }>,
+        all: Array<{ font: string, code: string, isHidden: boolean }>
+    }> = {};
 
     // 先收集所有有效的字根數據
     const validZigens: Array<{ font: string, ma: string, firstLetter: string, code: string }> = [];
@@ -199,36 +221,44 @@ const zigenByKey = computed(() => {
     console.log(`Found ${validZigens.length} valid zigens`);
 
     // 按按鍵分組並處理連續相同編碼的字根
+    // 注意：不在這裡排序，以保持 visible/hidden 判斷的正確性
     for (let i = 0; i < validZigens.length; i++) {
         const zigen = validZigens[i];
         const { font, ma, firstLetter, code } = zigen;
 
         if (!result[firstLetter]) {
-            result[firstLetter] = { visible: [], hidden: [] };
+            result[firstLetter] = { visible: [], hidden: [], all: [] };
         }
 
-        // 检查前一个字根是否有相同的编码和按键
+        // 檢查前一個字根是否有相同的編碼和按鍵
         const prevZigen = i > 0 ? validZigens[i - 1] : null;
         const isPrevSameCodeAndKey = prevZigen &&
             prevZigen.code === code &&
             prevZigen.firstLetter === firstLetter;
 
-        // 检查是否已经有相同编码的字根在visible中
+        // 檢查是否已經有相同編碼的字根在visible中
         const existingWithSameCode = result[firstLetter].visible.find(item => item.code === code);
 
         // 检查当前字根是否在始終顯示列表中
         const shouldAlwaysShow = alwaysVisibleZigens.value.includes(font);
 
+        let isHidden = false;
         if (!existingWithSameCode) {
-            // 第一个具有此编码的字根，放在visible中
+            // 第一個具有此編碼的字根，放在visible中
             result[firstLetter].visible.push({ font, code });
+            isHidden = false;
         } else if (isPrevSameCodeAndKey && !shouldAlwaysShow) {
-            // 只有当前字根与前一个字根编码相同且连续时，且不在始終顯示列表中，才放在hidden中
+            // 只有當前字根與前一個字根編碼相同且連續時，且不在始終顯示列表中，才放在hidden中
             result[firstLetter].hidden.push({ font, code });
+            isHidden = true;
         } else {
-            // 编码相同但不连续，或在始終顯示列表中，作为新的visible字根显示
+            // 編碼相同但不連續，或在始終顯示列表中，作為新的visible字根顯示
             result[firstLetter].visible.push({ font, code });
+            isHidden = false;
         }
+
+        // 將所有字根加入 all 數組，保持原始順序
+        result[firstLetter].all.push({ font, code, isHidden });
     }
 
     console.log('Final result:', result);
@@ -260,6 +290,22 @@ const sortedZigenByKey = computed(() => {
         const code = ma.slice(1);
 
         validZigens.push({ font, ma, firstLetter, code });
+    }
+
+    // 如果啟用了按編碼長度排序，先對validZigens進行排序
+    if (sortByCodeLength.value) {
+        validZigens.sort((a, b) => {
+            // 首先按首字母排序（保持按鍵分組）
+            if (a.firstLetter !== b.firstLetter) {
+                return 0; // 不改變不同按鍵的順序
+            }
+            // 在同一個按鍵下，先按編碼長度排序（2碼在前，3碼在後）
+            if (a.code.length !== b.code.length) {
+                return a.code.length - b.code.length;
+            }
+            // 編碼長度相同時，保持原有順序（穩定排序）
+            return 0;
+        });
     }
 
     // 按按鍵分組並處理連續相同編碼的字根
@@ -381,7 +427,7 @@ const getExampleChars = async (zigen: string): Promise<string[]> => {
 
         return Array.from(examples);
     } catch (error) {
-        console.error('获取例字失败:', error);
+        console.error('獲取例字失敗:', error);
         if (error instanceof Error && error.message === '數據加載超時') {
             console.error('數據加載超時，請檢查網絡連接');
         }
@@ -409,7 +455,7 @@ async function loadData() {
     }
 }
 
-// 获取键位标注文本
+// 獲取鍵位標註文本
 function getKeyLabel(key: string): string {
     switch (key) {
         case ';': return '次選';
@@ -620,12 +666,14 @@ onMounted(() => {
                     </span>
                 </div>
 
+                <!-- 編碼長度排序切換按鈕（網格和列表視圖都可用） -->
                 <div class="flex items-center space-x-2">
-                    <span class="text-xs text-gray-400">切換圖表形態</span>
-                    <button @click="toggleDesktopLayout" class="layout-toggle-btn"
-                        :class="{ 'layout-toggle-active': isListView }" :title="isListView ? '切換為網格布局' : '切換為列表布局'">
-                        <span v-if="!isListView">☰</span>
-                        <span v-else>⊞</span>
+                    <span class="text-xs text-gray-400">編碼長度</span>
+                    <button @click="toggleCodeLengthSort" class="layout-toggle-btn"
+                        :class="{ 'layout-toggle-active': sortByCodeLength }"
+                        :title="sortByCodeLength ? '恢復原始順序' : '短編碼優先（2碼→3碼）'">
+                        <span v-if="!sortByCodeLength">🔢</span>
+                        <span v-else>📏</span>
                     </button>
                 </div>
                 <!-- 桌面端列表視圖按鍵排序切換按鈕 -->
@@ -636,6 +684,24 @@ onMounted(() => {
                         :title="sortKeysByAlphabet ? '切換為鍵盤順序' : '切換為字母順序'">
                         <span v-if="!sortKeysByAlphabet">🔤</span>
                         <span v-else>⌨️</span>
+                    </button>
+                </div>
+                <!-- 網格視圖下的「全部顯示」按鈕 -->
+                <div v-if="!isListView" class="flex items-center space-x-2">
+                    <span class="text-xs text-gray-400">顯示模式</span>
+                    <button @click="toggleShowAllZigens" class="layout-toggle-btn"
+                        :class="{ 'layout-toggle-active': showAllZigens }" :title="showAllZigens ? '隱藏重碼字根' : '顯示所有字根'">
+                        <span v-if="!showAllZigens">👁️</span>
+                        <span v-else>👁️‍🗨️</span>
+                    </button>
+                </div>
+                <!-- 切換圖表形態按鈕（永遠在最右邊） -->
+                <div class="flex items-center space-x-2">
+                    <span class="text-xs text-gray-400">切換圖表形態</span>
+                    <button @click="toggleDesktopLayout" class="layout-toggle-btn"
+                        :class="{ 'layout-toggle-active': isListView }" :title="isListView ? '切換為網格布局' : '切換為列表布局'">
+                        <span v-if="!isListView">☰</span>
+                        <span v-else>⊞</span>
                     </button>
                 </div>
             </div>
@@ -657,6 +723,14 @@ onMounted(() => {
                     <span v-if="!sortKeysByAlphabet">🔤</span>
                     <span v-else>⌨️</span>
                 </button>
+
+                <span class="text-xs text-gray-400">編碼長度</span>
+                <button @click="toggleCodeLengthSort" class="layout-toggle-btn"
+                    :class="{ 'layout-toggle-active': sortByCodeLength }"
+                    :title="sortByCodeLength ? '恢復原始順序' : '短編碼優先（2碼→3碼）'">
+                    <span v-if="!sortByCodeLength">🔢</span>
+                    <span v-else>📏</span>
+                </button>
             </div>
 
             <!-- 移動端導出消息 -->
@@ -675,17 +749,18 @@ onMounted(() => {
                     <!-- 鍵位標籤 -->
                     <div class="key-label">{{ key.toUpperCase() }}</div>
 
-                    <!-- 字根顯示 - 只顯示可見的字根 -->
+                    <!-- 字根顯示 - 根據 showAllZigens 決定顯示哪些字根 -->
                     <div v-if="!emptyKeys.includes(key) && zigenByKey[key]?.visible.length > 0"
                         class="zigen-list text-indigo-800 dark:text-indigo-300" :style="{ gridTemplateColumns }">
-                        <span v-for="(zigen, index) in zigenByKey[key].visible" :key="index" class="zigen-item"
-                            @click="handleZigenClick($event, zigen)">
+                        <span v-for="(zigen, index) in (sortByCodeLength ?
+                            [...(showAllZigens ? zigenByKey[key].all : zigenByKey[key].all.filter(z => !z.isHidden))].sort((a, b) => a.code.length - b.code.length) :
+                            (showAllZigens ? zigenByKey[key].all : zigenByKey[key].all.filter(z => !z.isHidden)))"
+                            :key="index" class="zigen-item" @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
-                            <span class="zigen-code">{{ zigen.code
-                            }}</span>
+                            <span class="zigen-code">{{ zigen.code }}</span>
                         </span>
-                        <!-- 如果有隱藏的字根，顯示省略號 -->
-                        <span v-if="zigenByKey[key].hidden.length > 0" class="more-indicator">⋯</span>
+                        <!-- 如果有隱藏的字根且未顯示全部，顯示省略號 -->
+                        <span v-if="!showAllZigens && zigenByKey[key].hidden.length > 0" class="more-indicator">⋯</span>
                     </div>
 
                     <!-- 無字根提示 -->
@@ -949,6 +1024,13 @@ onMounted(() => {
     font-size: 0.4rem;
     color: var(--fallback-nc, oklch(var(--nc)/0.5));
     margin-left: 0.1rem;
+}
+
+/* 编码长度换行样式 */
+.code-length-break {
+    width: 100%;
+    height: 0;
+    flex-basis: 100%;
 }
 
 /* 无字根文字竖排样式 */
