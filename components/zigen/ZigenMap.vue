@@ -14,11 +14,12 @@
   - 2025-09-10 by 朱複丹: 移除編碼位置切換功能，統一使用編碼在下方的佈局
   - 2025-12-30 by 朱複丹: 允許依照編碼長度對字根進行排序，將短碼字根優先顯示
                           允許在字根圖模式下點擊按鈕顯示所有字根
+  - 2025-12-31 by 朱複丹: 允許用戶在字根圖中點擊按鈕展開查看更多例字
 -->
 
 <script setup lang="ts">
-// 統一例字數量限制
-const MAX_EXAMPLES = 8;
+// 統一例字數量限制（不含展開按钮）
+const MAX_EXAMPLES = 7;
 import { ref, computed, onMounted, onUnmounted, watch, toRef } from 'vue'
 import { fetchZigen } from "../search/share";
 import ChaiDataLoader from "../search/ChaiDataLoader";
@@ -44,7 +45,7 @@ const alwaysVisibleZigens = computed(() => {
     // 否則根據方案自動判斷
     switch (activeScheme.value) {
         case 'ling':
-            return 'Q廾スマ　W乚　R冫虍　乀龵用　P巴　F　G　H　J攵　K丄　L　C䒑　V　⺈肀　⺌⺮　'
+            return 'Q廾スマ　W乚　R冫虍　乀龵用　P巴　F　G　H　J攵　K丄　L　C䒑　V　⺈肀　⺌⺮　'
         default:
             return '冫'
     }
@@ -75,7 +76,7 @@ const isMobileView = ref(false);
 const isListView = ref(false);
 
 // 列表視圖中按鍵排序模式切換（鍵盤順序 vs 字母順序）
-const sortKeysByAlphabet = ref(false);
+const sortKeysByAlphabet = ref(true);
 
 // 字根編碼長度排序模式切換（將短編碼排在前面）
 const sortByCodeLength = ref(false);
@@ -171,6 +172,8 @@ const pinnedZigen = ref<string | null>(null);
 const pinnedZigenInfo = ref<{ visible: Array<{ font: string, code: string, pinyin?: string }>, hidden: Array<{ font: string, code: string, pinyin?: string }> } | null>(null);
 const pinnedZigenExampleChars = ref<{ [zigenFont: string]: string[] }>({});
 const isPinned = ref(false);
+// 跟踪哪些字根的例字已展开显示所有
+const expandedZigens = ref<Set<string>>(new Set());
 
 // 導出功能相關狀態
 const isExporting = ref(false);
@@ -354,9 +357,8 @@ const getExampleChars = async (zigen: string): Promise<string[]> => {
     if (cachedExampleChars.value.has(normalizedZigen)) {
         examples = cachedExampleChars.value.get(normalizedZigen)!;
         console.log(`✅ 從緩存中獲取字根 "${normalizedZigen}" 的例字 ${examples.size} 個`);
-        if (examples.size >= MAX_EXAMPLES) {
-            return Array.from(examples);
-        }
+        // 只返回前 MAX_EXAMPLES 个
+        return Array.from(examples).slice(0, MAX_EXAMPLES);
     }
 
     if (!chaifenLoader.value) {
@@ -400,7 +402,8 @@ const getExampleChars = async (zigen: string): Promise<string[]> => {
                         cachedExampleChars.value.set(zigenItem, new Set());
                     }
                     const set = cachedExampleChars.value.get(zigenItem)!;
-                    if (set.size < MAX_EXAMPLES) {
+                    // 每個字根最多緩存20個例字
+                    if (set.size < 20) {
                         set.add(char);
                     }
 
@@ -410,7 +413,8 @@ const getExampleChars = async (zigen: string): Promise<string[]> => {
                     }
                 }
 
-                if (examples.size >= MAX_EXAMPLES) {
+                // 當前字根已經找到足夠多的例字時中斷
+                if (examples.size >= 20) {
                     break;
                 }
             }
@@ -431,7 +435,47 @@ const getExampleChars = async (zigen: string): Promise<string[]> => {
         if (error instanceof Error && error.message === '數據加載超時') {
             console.error('數據加載超時，請檢查網絡連接');
         }
+        return Array.from(examples);
+    }
+}
+
+// 獲取包含指定字根的所有例字（不限制數量）
+const getAllExampleChars = async (zigen: string): Promise<string[]> => {
+    const normalizedZigen = zigen.normalize('NFC');
+    let examples: Set<string> = new Set();
+
+    if (!chaifenLoader.value) {
+        console.log('chaifenLoader 未初始化');
         return [];
+    }
+
+    try {
+        console.log(`開始為字根 "${zigen}" 搜索所有例字...`);
+
+        const timeoutPromise = new Promise<never>((_, reject) => {
+            setTimeout(() => reject(new Error('數據加載超時')), 30000); // 30秒超時
+        });
+
+        const optimizedData = await Promise.race([
+            chaifenLoader.value.loadData(),
+            timeoutPromise
+        ]);
+
+        // 遍歷所有字符，不限制數量
+        for (const [char, data] of Object.entries(optimizedData)) {
+            const charData = data as { d?: string, dt?: string, r?: string };
+
+            if (charData.d && charData.d.includes(normalizedZigen)) {
+                examples.add(char);
+            }
+        }
+
+        console.log(`字根 "${normalizedZigen}" 找到所有例字: ${examples.size} 個`);
+        return Array.from(examples);
+
+    } catch (error) {
+        console.error('獲取所有例字失敗:', error);
+        return Array.from(examples);
     }
 };
 
@@ -510,7 +554,7 @@ async function handleZigenClick(event: MouseEvent, zigen: { font: string, code: 
         console.log(`正在獲取字根 "${z.font}" 的例字...`);
         const examples = await getExampleChars(z.font);
         console.log(`字根 "${z.font}" 找到例字:`, examples.length, '個');
-        newPinnedZigenExampleChars[z.font] = examples.slice(0, 10); // 固定彈窗每個字根最多10個例字
+        newPinnedZigenExampleChars[z.font] = examples; // 保存所有例字，不限制數量
     }
 
     pinnedZigenExampleChars.value = newPinnedZigenExampleChars;
@@ -523,6 +567,26 @@ function closePinnedPopup() {
     pinnedZigen.value = null;
     pinnedZigenInfo.value = null;
     pinnedZigenExampleChars.value = {};
+    expandedZigens.value.clear();
+}
+
+// 切換例字展開/收起
+async function toggleExpandExamples(zigenFont: string) {
+    if (expandedZigens.value.has(zigenFont)) {
+        // 收起
+        expandedZigens.value.delete(zigenFont);
+    } else {
+        // 展開 - 加載所有例字
+        expandedZigens.value.add(zigenFont);
+
+        // 如果當前只有 7 個例字，則加載所有例字
+        if (pinnedZigenExampleChars.value[zigenFont]?.length <= MAX_EXAMPLES) {
+            console.log(`正在加載字根 "${zigenFont}" 的所有例字...`);
+            const allExamples = await getAllExampleChars(zigenFont);
+            pinnedZigenExampleChars.value[zigenFont] = allExamples;
+            console.log(`已加載字根 "${zigenFont}" 的 ${allExamples.length} 個例字`);
+        }
+    }
 }
 
 // 導出字根圖功能
@@ -682,7 +746,7 @@ onMounted(() => {
                     <button @click="toggleKeyOrder" class="layout-toggle-btn"
                         :class="{ 'layout-toggle-active': sortKeysByAlphabet }"
                         :title="sortKeysByAlphabet ? '切換為鍵盤順序' : '切換為字母順序'">
-                        <span v-if="!sortKeysByAlphabet">🔤</span>
+                        <span v-if="sortKeysByAlphabet">🔤</span>
                         <span v-else>⌨️</span>
                     </button>
                 </div>
@@ -720,7 +784,7 @@ onMounted(() => {
                 <button @click="toggleKeyOrder" class="layout-toggle-btn"
                     :class="{ 'layout-toggle-active': sortKeysByAlphabet }"
                     :title="sortKeysByAlphabet ? '切換為鍵盤順序' : '切換為字母順序'">
-                    <span v-if="!sortKeysByAlphabet">🔤</span>
+                    <span v-if="sortKeysByAlphabet">🔤</span>
                     <span v-else>⌨️</span>
                 </button>
 
@@ -820,7 +884,7 @@ onMounted(() => {
                             }" @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code
-                            }}</span>
+                                }}</span>
                         </span>
                     </div>
                 </div>
@@ -860,8 +924,15 @@ onMounted(() => {
                                 <!-- 該字根的例字 - 直接跟在字根後面 -->
                                 <div v-if="pinnedZigenExampleChars[zigen.font]?.length > 0"
                                     class="example-chars-same-line">
-                                    <span v-for="char in pinnedZigenExampleChars[zigen.font].slice(0, MAX_EXAMPLES)"
+                                    <span
+                                        v-for="char in (expandedZigens.has(zigen.font) ? pinnedZigenExampleChars[zigen.font] : pinnedZigenExampleChars[zigen.font].slice(0, MAX_EXAMPLES))"
                                         :key="char" class="example-char zigen-font">{{ char }}</span>
+                                    <!-- 總是顯示展開/收起按鈕 -->
+                                    <button @click.stop="toggleExpandExamples(zigen.font)"
+                                        class="example-char expand-btn" type="button"
+                                        :title="expandedZigens.has(zigen.font) ? '收起' : '展開顯示所有例字'">
+                                        {{ expandedZigens.has(zigen.font) ? '▲' : '▼' }}
+                                    </button>
                                 </div>
                                 <div v-else class="example-chars-same-line">
                                     <span class="loading-text">正在加載...</span>
@@ -883,8 +954,15 @@ onMounted(() => {
                                 <!-- 該字根的例字 - 直接跟在字根後面 -->
                                 <div v-if="pinnedZigenExampleChars[zigen.font]?.length > 0"
                                     class="example-chars-same-line">
-                                    <span v-for="char in pinnedZigenExampleChars[zigen.font].slice(0, 8)" :key="char"
-                                        class="example-char zigen-font">{{ char }}</span>
+                                    <span
+                                        v-for="char in (expandedZigens.has(zigen.font) ? pinnedZigenExampleChars[zigen.font] : pinnedZigenExampleChars[zigen.font].slice(0, MAX_EXAMPLES))"
+                                        :key="char" class="example-char zigen-font">{{ char }}</span>
+                                    <!-- 總是顯示展開/收起按鈕 -->
+                                    <button @click.stop="toggleExpandExamples(zigen.font)"
+                                        class="example-char expand-btn" type="button"
+                                        :title="expandedZigens.has(zigen.font) ? '收起' : '展開顯示所有例字'">
+                                        {{ expandedZigens.has(zigen.font) ? '▲' : '▼' }}
+                                    </button>
                                 </div>
                                 <div v-else class="example-chars-same-line">
                                     <span class="loading-text">正在加載...</span>
@@ -1405,6 +1483,29 @@ onMounted(() => {
     font-size: 0.75rem;
     color: var(--fallback-success, oklch(var(--su)/1));
     border: 1px solid var(--fallback-success, oklch(var(--su)/0.3));
+}
+
+.example-chars-same-line .expand-btn {
+    cursor: pointer;
+    background: var(--fallback-info, oklch(var(--in)/0.15));
+    color: var(--fallback-info, oklch(var(--in)/1));
+    border: 1px solid var(--fallback-info, oklch(var(--in)/0.4));
+    font-weight: bold;
+    transition: all 0.2s ease;
+    user-select: none;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1;
+    min-width: 1.5rem;
+}
+
+.example-chars-same-line .expand-btn:hover {
+    background: var(--fallback-info, oklch(var(--in)/0.25));
+    transform: scale(1.1);
+}
+
+.example-chars-same-line .expand-btn:active {
+    transform: scale(0.95);
 }
 
 .loading-text {

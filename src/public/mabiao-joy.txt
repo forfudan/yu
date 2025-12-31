@@ -41106,7 +41106,9 @@ id	㋬
 id	ㄟ
 id	へ
 id	ヘ
+id	・
 id	ㆍ
+id	·
 ida	蛹
 idaa	䗋
 idaa	𰍇

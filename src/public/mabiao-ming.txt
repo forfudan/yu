@@ -119216,7 +119216,9 @@ ndi	㋬
 ndi	ㄟ
 ndi	へ
 ndi	ヘ
+ndi	・
 ndi	ㆍ
+ndi	·
 ndlgi	ㆎ
 ndmge	良
 ndmge	𛃮

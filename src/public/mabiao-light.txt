@@ -118410,7 +118410,9 @@ ocnb	𛀂
 oddd	㋬
 oddd	へ
 oddd	ヘ
+oddd	・
 oddd	ㆍ
+oddd	·
 odfl	𲜐
 odkc	𲾸
 odlh	𲚢
