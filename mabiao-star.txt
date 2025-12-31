@@ -1921,6 +1921,7 @@ airj	𪴣
 airk	ギ
 airk	ヸ
 airl	榕
+airm	㌿
 airm	ボ
 airm	𘭈
 airq	櫁
@@ -2313,6 +2314,7 @@ akat	𨬮
 akat	六
 akat	㈥
 akat	㊅
+akat	🀌
 akb	榔
 akbb	𩎮
 akbj	𠆄
@@ -2517,7 +2519,6 @@ aklr	𣟥
 aklv	棓
 aklv	柗
 aklv	𠳆
-aklv	㌔
 aklv	𲔔
 aklw	兗
 aklw	梲
@@ -2637,7 +2638,6 @@ akss	効
 akss	𪛀
 akst	效
 aksu	虠
-aksv	🀌
 aksx	𬇍
 aksx	𭭉
 aksy	郊
@@ -2950,6 +2950,7 @@ alus	𣐄
 aluu	𪳱
 aluu	㌗
 alv	束
+alvk	㌔
 alvm	束
 alvm	杏
 alvm	𪱳
@@ -3046,7 +3047,6 @@ amhm	柇
 amht	桩
 amih	楸
 amir	𣜷
-amir	㌿
 amji	槉
 amjj	𧡽
 amjr	楿
@@ -6214,6 +6214,7 @@ bbom	驭
 bboo	双
 bboo	㕛
 bboo	𤼦
+bboo	🈁
 bboo	🈒
 bboo	ᄍ
 bboo	ㅉ
@@ -10087,7 +10088,6 @@ bobg	弝
 bobg	𡱐
 bobg	𢐁
 bobh	𫸹
-bobo	🈁
 bobp	㿬
 bobs	㞎
 boc	逮
@@ -22973,7 +22973,6 @@ efsm	侀
 efsm	侀
 efso	𠆻
 efsr	㐿
-efsv	🀋
 efu	倆
 efub	넕
 efub	넞
@@ -23249,6 +23248,7 @@ egpi	𲏆
 egpj	𘠾
 egpj	𘯨
 egps	𲐦
+egpz	㌨
 egqc	𩗝
 egqc	𬾓
 egqk	𠇼
@@ -23660,7 +23660,6 @@ eina	伝
 eina	凨
 eina	𨾜
 eina	𨿈
-eina	㍕
 einb	佗
 einb	䬁
 eine	𫗀
@@ -24762,6 +24761,7 @@ emzr	𠉠
 en	化
 en	化解
 en	化工
+enai	㍕
 enaj	𠘯
 enaj	𠫗
 enaj	𠍀
@@ -26621,7 +26621,6 @@ eyys	𗌛
 eyys	𗌥
 eyyy	𗌏
 ez	𠂇
-ezgp	㌨
 ezz	𠂇
 ezz	㋤
 ezz	ナ
@@ -27605,6 +27604,7 @@ fbw	掘
 fbwi	五
 fbwi	㈤
 fbwi	㊄
+fbwi	🀋
 fbwk	𢰕
 fbwl	𢸛
 fbww	掘
@@ -29066,6 +29066,7 @@ fii	㆒
 fii	㈠
 fii	㊀
 fii	🈩
+fii	🀇
 fii	ㆪ
 fii	ー
 fii	ᅳ
@@ -29148,7 +29149,6 @@ fiso	𢶊
 fisp	攓
 fiss	𢮐
 fiss	𢱇
-fisv	🀇
 fisw	㩷
 fitj	𢹷
 fitl	揢
@@ -39376,12 +39376,10 @@ hcin	墵
 hcir	𡉱
 hcje	𣪗
 hcjj	𧡤
-hcjj	𫕻
 hcjk	𡐙
 hcjm	𰚞
 hcjr	𡐋
 hcjr	𤡐
-hcjr	𪬿
 hcjs	𥛱
 hcjt	𰉚
 hcjv	靑
@@ -45344,6 +45342,7 @@ hwhn	𧖛
 hwhq	蠶
 hwhq	𧌩
 hwhq	𧕽
+hwhr	𪬿
 hwht	𡉙
 hwht	𪤀
 hwht	𪯘
@@ -45354,6 +45353,7 @@ hwhw	𠒶
 hwhw	𠚛
 hwhw	𡋰
 hwhw	𩇗
+hwhw	𫕻
 hwhy	䣟
 hwi	均
 hwib	炁
@@ -47638,7 +47638,6 @@ igxr	𤍡
 igxs	𤊹
 igxt	𤍗
 igy	窦
-igyc	⚎
 igyf	䣣
 igyf	𨙹
 igyh	𤆟
@@ -47647,7 +47646,6 @@ igyi	㪲
 igyi	𠖯
 igyi	𪸏
 igyi	𲏍
-igyn	⚍
 igyo	窦
 igyo	𰃿
 igys	𫵅
@@ -50564,6 +50562,7 @@ irr	㊁
 irr	㋥
 irr	🈔
 irr	🉂
+irr	🀈
 irr	こ
 irr	゛
 irr	ニ
@@ -50595,7 +50594,6 @@ irsj	𡬆
 irsj	𥧶
 irsj	𩕋
 irsm	𡫍
-irsv	🀈
 irsy	甯
 irtn	𠘅
 irtu	𤒦
@@ -58651,6 +58649,7 @@ kaa	⼋
 kaa	㈧
 kaa	㊇
 kaa	㋩
+kaa	🀎
 kaa	ㆿ
 kaa	ハ
 kaa	𛂞
@@ -58772,7 +58771,6 @@ kasg	𬙋
 kasg	饟
 kasj	𲵲
 kaso	𮄾
-kasv	🀎
 kate	𣫚
 kats	𱺮
 katu	𢾉
@@ -62664,6 +62662,7 @@ laa	㊂
 laa	㋯
 laa	🈪
 laa	🉁
+laa	🀉
 laa	ミ
 laa	𛃉
 laaa	𠾣
@@ -62816,7 +62815,6 @@ laqj	𡄡
 laqj	𡄶
 laqj	𦗑
 laqj	𱕝
-laqk	㍉
 laql	𠼬
 laql	𠽜
 laqn	𱕇
@@ -62844,7 +62842,6 @@ lask	𱕟
 laso	𡃎
 laso	𡃗
 last	𪢃
-lasv	🀉
 lat	嚎
 latd	𲖂
 lath	𱓯
@@ -67787,6 +67784,7 @@ lqjg	𰰆
 lqjj	噌
 lqjk	𱔩
 lqjw	𠹡
+lqka	㍉
 lqkd	𠯁
 lqku	嗌
 lqku	𫆌
@@ -80421,7 +80419,6 @@ odlj	𦂢
 odlo	𨜀
 odlo	𬘍
 odlv	𦄞
-odlz	㍽
 odmc	繷
 odmd	剦
 odmd	𦦱
@@ -81812,7 +81809,6 @@ okab	𰃟
 okad	夰
 okad	𡗕
 okaf	𘭊
-okaf	☯
 okaj	𣈌
 okaj	𫓥
 okaj	𲇳
@@ -81829,6 +81825,7 @@ okcn	𦁉
 okcs	导
 okcs	紂
 okdd	太
+okdd	☯
 okdd	𘭷
 oke	絨
 okei	钺
@@ -81979,11 +81976,9 @@ okxs	𦀓
 okxu	𦀦
 okxu	𫷏
 okxw	𫘖
-okyc	⚌
 okyh	𰾔
 okyi	铖
 okyi	絾
-okyn	⚏
 okzj	𫓦
 okzs	𥾌
 okzs	𰫙
@@ -82147,6 +82142,7 @@ olyi	륙
 olyr	륛
 olyy	륚
 olzd	𰋞
+olzd	㍽
 olzj	钲
 olzs	䋊
 om	秦
@@ -88983,6 +88979,7 @@ qfxn	臰
 qfxn	𦎄
 qfxq	𥼒
 qfxr	𲀊
+qfyi	㍒
 qfyn	𗑃
 qfyn	𗔤
 qfys	𗑕
@@ -89946,7 +89943,6 @@ qkfr	𥽇
 qkfu	𗭿
 qkfx	𨉙
 qkfx	𨉧
-qkfy	㍒
 qkfy	𗮋
 qkg	粮
 qkga	糅
@@ -94403,7 +94399,6 @@ rhbo	怇
 rhce	惼
 rhce	𠋅
 rhce	𩩯
-rhcj	𫻛
 rhcp	憉
 rhdg	𤮟
 rhdl	𢞄
@@ -94513,6 +94508,7 @@ rhwr	𢢸
 rhwt	慠
 rhwt	𩪕
 rhwt	慠
+rhww	𫻛
 rhwy	情
 rhwy	𭟝
 rhxk	𪫨
@@ -94859,6 +94855,7 @@ rjix	𭜟
 rjj	九
 rjj	㈨
 rjj	㊈
+rjj	🀏
 rjj	𛀭
 rjj	𘯼
 rjjb	戄
@@ -94966,7 +94963,6 @@ rjsn	懪
 rjsn	𱵺
 rjso	𢙱
 rjso	𩩖
-rjsv	🀏
 rjte	㥗
 rju	慢
 rjub	慢
@@ -100324,7 +100320,6 @@ sish	𭏶
 sisi	𤐂
 sisi	𦺦
 sisi	𩍎
-sisi	㍋
 sisj	𬞸
 sisj	𲽶
 sisl	勤
@@ -102963,6 +102958,7 @@ ssio	𦭓
 ssir	苷
 ssir	蓳
 ssir	蓳
+ssir	㍋
 ssit	𤉧
 ssiw	𮋢
 ssix	𰱡
@@ -108166,7 +108162,6 @@ ubib	𫇝
 ubih	𱛰
 ubii	嵶
 ubii	𦩸
-ubir	㌧
 ubiw	𰎰
 ubj	虐
 ubjb	䝨
@@ -109610,7 +109605,6 @@ uhce	𤬊
 uhce	𨲜
 uhce	𪉱
 uhce	𱜯
-uhcj	𫶠
 uhcl	𡹫
 uhcp	𦪟
 uhcs	𦣟
@@ -109821,6 +109815,7 @@ uhwt	㠂
 uhwt	䦋
 uhwt	𩮯
 uhwt	𫿑
+uhww	𫶠
 uhww	𳌭
 uhwy	崝
 uhwy	䑶
@@ -110036,6 +110031,7 @@ uipn	㟉
 uipw	𫷉
 uiqb	𡾈
 uirb	𪨺
+uirb	㌧
 uirb	ド
 uirj	鬡
 uirj	𨲸
@@ -115410,7 +115406,6 @@ vjfp	碮
 vjfp	𱍤
 vjfs	鿩
 vjfs	𥒋
-vjfs	🀪
 vjfv	𱇁
 vjgb	𭆴
 vjgh	㕆
@@ -115532,6 +115527,7 @@ vjr	魯
 vjre	𥑷
 vjrh	百
 vjrh	𠷡
+vjrh	🀪
 vjri	𢙯
 vjri	𢚧
 vjrm	𤾋
@@ -121602,6 +121598,7 @@ wwrw	𤬼
 wwrw	㆕
 wwrw	㈣
 wwrw	㊃
+wwrw	🀊
 wwrw	𛁇
 wws	胸
 wwsa	𭂽
@@ -121615,7 +121612,6 @@ wwsm	𮧋
 wwsn	𥝄
 wwso	𦬧
 wwso	𪞷
-wwsv	🀊
 wwsw	胸
 wwsw	𦱹
 wwtb	𢾍
@@ -122848,6 +122844,7 @@ xii	七
 xii	𫠠
 xii	㈦
 xii	㊆
+xii	🀍
 xii	
 xii	
 xii	
@@ -122895,7 +122892,6 @@ xisa	𧝱
 xisg	𧞼
 xisp	䙭
 xiss	𲋧
-xisv	🀍
 xisw	𧟑
 xitj	𮷯
 xiuj	𮖫
@@ -126560,6 +126556,8 @@ yjfb	궻
 yjfb	궽
 yjfc	陽
 yjfc	⚊
+yjfc	⚌
+yjfc	⚎
 yjfe	권
 yjfe	궨
 yjff	궖
@@ -127435,6 +127433,8 @@ yrkj	𮥞
 yrkl	𲉝
 yrkn	陰
 yrkn	⚋
+yrkn	⚍
+yrkn	⚏
 yrkp	𬯖
 yrkr	䧔
 yrls	𱀛
