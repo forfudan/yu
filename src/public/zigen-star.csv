@@ -110,6 +110,7 @@ font,ma,pinyin
 十,Gi,SHi -> i ㊟取韻i
 黑,Gh,Hēi -> h
 艮,Gg,Gěn -> g
+,Gg,Gěn -> g
 户,Hh,Hù -> h
 戸,Hh,
 匚,Hf,Fāng -> f
@@ -224,7 +225,6 @@ font,ma,pinyin
 干,Ng,Gān -> g
 甫,Nf,Fǔ -> f
 厶,Na,a ㊟同幺歸併故取a
-,Na,
 幺,Na,yāo -> a ㊟取韻a
 匕,Nb,Bi -> b
 长,Nc,CHáng -> c

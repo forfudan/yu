@@ -90,6 +90,8 @@ font,ma,pinyin
 夭,gi,yāo = iāo -> i
 扌,gke,SHǒu -> Ke
 革,gge,Gé
+艮,hge,Gěn -> Ge
+,hge,Gěn -> Ge
 冂,ho,Ø -> o ㊟無讀音或生僻部首
 ,ho,
 ,ho,
@@ -235,7 +237,6 @@ font,ma,pinyin
 ,mo,
 丑,mre,CHǒu -> Re
 ,mu,u
-艮,mge,Gěn -> Ge
 ,mdo,Duī = Duēi -> Do
 丶,ndi,Diǎn -> Di
 乀,ndi,
@@ -247,7 +248,6 @@ font,ma,pinyin
 壬,no,rén -> o ㊟ren視為零聲母
 足,nzu,Zú
 厶,nsi,Sī
-,nsi,
 大,pda,Dà
 夫,pfu,Fū
 ,pdi,Dí
