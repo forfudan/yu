@@ -39976,6 +39976,7 @@ fbve	𬶬
 fcbdk	𬰳
 fcbo	𱂄
 fccfo	𩏽
+fcci	𠀀
 fccka	𠦴
 fccsm	𱂊
 fccsm	𱈎
@@ -39997,7 +39998,6 @@ fchge	𱽇
 fchne	𩾊
 fchsi	𤴕
 fchwo	𩏼
-fci	𠀀
 fci	𠀁
 fci	𠀂
 fci	𰀀
@@ -107171,6 +107171,7 @@ ci	𘯧
 ci	𘲶
 ci	𘳀
 ci	𘳋
+ci	
 ci	
 ci	
 ci	
@@ -109699,7 +109700,6 @@ dke	ᄆ
 dke	ᆷ
 dke	ㅁ
 dke	𘯏
-dke	□
 dkfcc	믂
 dkfcd	믆
 dkfcf	믘
@@ -117101,6 +117101,7 @@ lbi	㋪
 lbi	ヒ
 lbi	𘠢
 lbi	
+lbi	
 lbjqn	𩬰
 lblbi	⽐
 lblbi	𛂫
@@ -119236,7 +119237,6 @@ ndi	へ
 ndi	ヘ
 ndi	・
 ndi	ㆍ
-ndi	·
 ndlgi	ㆎ
 ndmtg	㌶
 ndqji	𘱚
@@ -122174,7 +122174,6 @@ vi	𘠘
 vi	𘱌
 vi	
 vi	
-vi	×
 vjbbi	煮
 vjbbi	煮
 vjbbu	좌

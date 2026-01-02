@@ -5368,6 +5368,7 @@ bb	㋪
 bb	ヒ
 bb	𘠢
 bb	
+bb	
 bbag	𣬂
 bbam	悃
 bbam	枈
@@ -9437,7 +9438,6 @@ ci	メ
 ci	𘠘
 ci	𘱌
 ci	
-ci	×
 ciae	𥘩
 ciae	𬣝
 ciae	𮹁
@@ -29125,7 +29125,6 @@ fohy	𩇖
 foi	掐
 foi	㐇
 foi	㐟
-foi	𠀀
 foi	𠀂
 foi	𢩧
 foi	𮷌
@@ -29322,6 +29321,7 @@ fotc	𗙫
 fotd	𗙜
 foth	𢲖
 foth	𭀪
+foti	𠀀
 fotm	擙
 fotn	摠
 foto	𗘸
@@ -41107,7 +41107,6 @@ id	へ
 id	ヘ
 id	・
 id	ㆍ
-id	·
 ida	蛹
 idaa	䗋
 idaa	𰍇
@@ -57336,7 +57335,6 @@ kv	ᄆ
 kv	ᆷ
 kv	ㅁ
 kv	𘯏
-kv	□
 kvad	喛
 kvag	𠰑
 kvag	𠸻
@@ -77366,6 +77364,7 @@ oi	𘠃
 oi	𘠄
 oi	𘠅
 oi	𘲶
+oi	
 oi	
 oi	
 oi	

@@ -34083,6 +34083,7 @@ fyay	挪
 fyay	𭡇
 fyck	ㆱ
 fycp	扬
+fyei	𠀀
 fyew	撱
 fyfi	𰒺
 fyfl	𢭫
@@ -34120,7 +34121,6 @@ fygs	𘣬
 fyi	ㄛ
 fyii	ㄛ
 fyii	ㄜ
-fyii	𠀀
 fyii	𠀂
 fyii	㋶
 fyii	ㆦ
@@ -59037,7 +59037,6 @@ kdd	へ
 kdd	ヘ
 kdd	・
 kdd	ㆍ
-kdd	·
 kddc	𫏽
 kddj	𡦫
 kddj	𨐿
@@ -69120,7 +69119,6 @@ lvv	ᄆ
 lvv	ᆷ
 lvv	ㅁ
 lvv	𘯏
-lvv	□
 lvvc	嘐
 lvvc	𥜿
 lvvc	𡁕
@@ -74856,6 +74854,7 @@ nbb	㋪
 nbb	ヒ
 nbb	𘠢
 nbb	
+nbb	
 nbba	𪶽
 nbbb	涰
 nbbb	𣴫
@@ -100189,7 +100188,6 @@ sii	𛁔
 sii	𘠘
 sii	𘱌
 sii	
-sii	×
 siia	𦾵
 siib	䩳
 siie	𦺺
@@ -126409,6 +126407,7 @@ yii	𘠃
 yii	𘠄
 yii	𘠅
 yii	𘲶
+yii	
 yii	
 yii	
 yii	

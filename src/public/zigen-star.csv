@@ -1,5 +1,6 @@
 font,ma,pinyin
 高,Ag,Gāo -> g
+,Ag,
 ,Ag,
 ,Ag,
 ,Ag,
@@ -16,14 +17,15 @@ font,ma,pinyin
 马,Bm,Mǎ -> m
 尸,Bs,SHī -> s
 ,Bs,
+,Bs,
 弓,Bg,Gōng -> g
 ,Bw,wǔ -> w
 皮,Bp,Pí -> p
 又,Bo,yòu -> o ㊟取韻o
 癶,Bo,
 ,Bo,
-マ,Bo,
-ス,Bo,
+,Bo,
+,Bo,
 ,Bo,
 彐,Bj,Jì -> j
 ,Bj,
@@ -78,6 +80,8 @@ font,ma,pinyin
 門,Dm,Mén -> m
 鬥,Du,Dòu -> d
 乚,Ei,yí = i
+,Ei,
+,Ei,
 隹,Eh,ZHuī -> h ㊟取第二字母h
 亻,Er,rén -> r
 ,Ez,Zuǒ -> z
@@ -114,7 +118,9 @@ font,ma,pinyin
 户,Hh,Hù -> h
 戸,Hh,
 匚,Hf,Fāng -> f
+,Hf,
 丂,Hk,Kào -> k
+,Hk,
 牙,Ha,yá -> a ㊟取韻a
 犬,Hq,Quǎn -> q
 犭,Hq,
@@ -125,7 +131,7 @@ font,ma,pinyin
 耂,Ht,
 士,Hs,SHēng -> s
 ,Hs,
-龶,Hs,SHēng -> s
+,Hs,SHēng -> s
 走,Hz,Zǒu -> z
 壴,Hz,ZHú -> z
 亍,Ic,CHù -> c
@@ -144,6 +150,7 @@ font,ma,pinyin
 灬,Ib,Biāo -> b
 丁,Jd,Dīng -> d
 示,Js,SHì -> s
+礻,Js,
 上,Jv,SHàng -> v ㊟特例
 ,Jv,
 丄,Jv,
@@ -166,6 +173,7 @@ font,ma,pinyin
 缶,Jf,Fǒu -> f
 矢,Ji,SHǐ -> i ㊟聲s被示佔用故取韻i
 卯,Km,Mǎo -> m
+,Km,Mǎo -> m
 ,Km,
 ,Km,
 ,Km,
@@ -177,12 +185,13 @@ font,ma,pinyin
 予,Kv,yǔ = ǚ -> v
 寸,Kc,Cùn -> c
 ,Kc,
+丶,Kd,Diǎn -> d
 乀,Kd,
-丶,Kd,
 八,Ka,Bā -> a ㊟取韻a
 ,Ka,
 入,Kr,rù -> r
 食,Ks,SHí -> s
+飠,Ks,
 ,Ka,yà -> a ㊟取亞韻a
 ,Ka,
 ,Ka,
@@ -213,6 +222,7 @@ font,ma,pinyin
 禾,Mh,Hé -> h
 毛,Mm,Máo -> m
 千,Mq,Qiān -> q
+,Mq,
 壬,Mr,rén -> r
 夭,My,yāo -> y
 麻,Ma,Má -> a
@@ -227,12 +237,15 @@ font,ma,pinyin
 厶,Na,a ㊟同幺歸併故取a
 幺,Na,yāo -> a ㊟取韻a
 匕,Nb,Bi -> b
+,Nb,
 长,Nc,CHáng -> c
 水,Ns,SHuǐ -> s
+氺,Ns,
 氵,Ns,SHuǐ -> s
 ,Ns,
 ⺍,Ns,
 糸,Os,Sī -> s
+糹,Os,
 辶,Oc,CHuò -> c
 ⻍,Oc,
 之,Oz,ZHī -> z
@@ -255,6 +268,7 @@ font,ma,pinyin
 止,Pi,ZHǐ -> i ㊟聲z被足佔用故取韻i
 龰,Pi,
 足,Pz,Zú -> z
+𧾷,Pz,
 生,Ps,SHēng -> s
 西,Px,Xī -> x
 虫,Qc,Chóng -> c
@@ -266,6 +280,7 @@ font,ma,pinyin
 羊,Qy,yáng -> y
 ,Qy,
 ⺷,Qy,
+⺶,Qy,
 自,Qi,Zì -> z
 身,Qs,SHēn -> s
 心,Ri,Xīn -> x
@@ -277,7 +292,7 @@ font,ma,pinyin
 僉,Rq,Qiān -> q
 骨,Rg,Gǔ -> g
 咼,Rk,Kuǎi -> k ㊟古音
-冎,Rk,
+,Rk,
 九,Rj,Jiǔ -> j
 瓦,Rw,wǎ -> wa
 乂,Si,yì = i
@@ -300,10 +315,12 @@ font,ma,pinyin
 方,Tf,Fāng -> f
 亥,Th,Hài -> h
 亦,Ti,yì = i
+,Ti,
 门,Tm,Mén -> m
 豕,Ts,SHǐ -> s
 ,Ts,
 夊,Tu,Pū -> u ㊟取韻e
+攵,Tu,
 亡,Tw,wáng -> w
 ,Tw,
 金,Tj,Jīn -> j
@@ -343,24 +360,27 @@ font,ma,pinyin
 魚,Vv,yú = ü -> v
 儿,Wr,ér -> r ㊟取第二字母r
 ,Wr,
+,Wr,
 屮,Wc,Cǎo -> c
 丩,Wj,Jiū -> j
 ,Wj,
 丱,Wj,
-ㄩ,Wk,Kǎn -> k
+凵,Wk,Kǎn -> k
 勹,Wb,Bāo -> b
+,Wb,
 ,Wb,
 囗,Ww,wéi = w
 月,Wy,yuè = y
 ,Wy,
 ,Wy,
+⺝,Wy,
 馬,Wm,Mǎ -> m
 ,Wm,
 七,Xi,Qī -> q
-𫠠,Xi,
+,Xi,
 车,Xj,Jū -> j ㊟古音
 冖,Xm,Miǎn -> m
-⺈,Xm,
+,Xm,
 欠,Xq,Qiān -> q
 饣,Xs,SHi -> s
 鱼,Xv,yú = ǘ -> v
@@ -369,5 +389,9 @@ font,ma,pinyin
 衤,Xy,yī = i
 飛,Yf,Fēi -> f
 乙,Yi,yǐ = i
+,Yi,
+,Yi,
 亅,Yi,
+,Yi,
+乛,Yi,
 阝,Yf,Fǔ -> f
