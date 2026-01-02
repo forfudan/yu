@@ -903,6 +903,7 @@ cla	鐵
 cmi	麽
 cna	京
 cno	道
+cpu	釣
 cqo	经
 cso	選
 dce	呗

@@ -81,14 +81,14 @@ font,ma,pinyin
 田,gta,Tián -> Ta
 由,gyo,Yóu = Yo
 申,gse,Ŝēn -> Se
-电,ga,Diàn -> Da
+电,ga,Diàn -> Da 🈤不取聲母
 鱼,gyu,Yú
 阝,gu,Fǔ 🈤不取聲母 ㊟俗稱掛耳旁 🈑在左同阜在右同邑
 馬,gma,Mǎ
 ,gma,
 丁,hdi,Dīŋ -> d
 丅,hdi,㊟同丁歸併 🈑下本字
-下,ha,Xià -> x
+下,ha,Xià -> x 🈤不取聲母
 了,hle,Le
 子,hvi,Zǐ -> Vi 🈤Z和Ẑ作V
 予,hyu,Yǔ
@@ -110,12 +110,12 @@ font,ma,pinyin
 髟,hba,Biāo -> Ba
 隹,hi,Ẑuī -> Vi 🈤Z和Ẑ作V但不取聲母 🈕Cuī Wéi
 亠,jo,Tóu -> To 🈤不取聲母 ㊟俗稱京字頭
-亻,je,Rén -> Re ㊟俗稱單人旁
+亻,je,Rén -> Re 🈤不取聲母 ㊟俗稱單人旁
 入,jru,Rù
 饣,jsi,Ŝi -> Si
 風,jfe,Fēŋ -> Fe
 ㄩ,ja,Kǎn -> Ka 🈤不取聲母
-丩,ju,Jiū -> Ju
+丩,ju,Jiū -> Ju 🈤不取聲母
 ,ju,
 屮,jca,Cǎo -> Ca
 丱,jga,Guān -> Ga
@@ -126,8 +126,8 @@ font,ma,pinyin
 寸,jcu,Cùn -> Cu
 ,jo,🈤無讀音取o
 三,jsa,Sān -> Sa
-生,je,Ŝēŋ -> Se
-上,ka,Ŝàŋ -> Sa
+生,je,Ŝēŋ -> Se 🈤不取聲母
+上,ka,Ŝàŋ -> Sa 🈤不取聲母
 丄,ka,🈑上本字
 ,ka,
 ,kwu,Wǔ
@@ -137,7 +137,7 @@ font,ma,pinyin
 〣,ki,
 丿,ke,Piě -> Pe 🈤基本筆畫不取聲母 ㊟俗稱點 🈕Yí
 彳,ki,Ĉì 🈤不取聲母 ㊟俗稱雙人旁
-彡,ka,Ŝān -> Sa
+彡,ka,Ŝān -> Sa 🈤不取聲母
 ,ka,
 ,ko,🈤無讀音取o
 犭,kqa,Quǎn -> Qa ㊟俗稱反犬旁
@@ -238,20 +238,20 @@ font,ma,pinyin
 酉,nyo,Yǒu -> Yo
 石,psi,Ŝí
 儿,pe,ér -> Je 🈤零聲母小碼取J但此處跳過
-,pe,🈤無讀音取o
+,pe,㊟同儿歸併
 川,pca,Ĉuān -> Ca
 巛,pca,㊟同川歸併
 巜,pca,
 勹,pa,Bāo -> Ba 🈤不取聲母
 ,pa,㊟同勹歸併
 巴,pa,Bā
-火,po,Huǒ -> Ho
+火,po,Huǒ -> Ho 🈤不取聲母
 灬,pba,Biāo -> Ba 🈕Hǔo
 臼,pu,Jìù -> Ju 🈤不取聲母
 ⺽,pu,Jǔ 🈤不取聲母
 鬼,pgi,Guǐ -> Gi
 ,pgi,
-甶,pu,Fǔ -> Fu
+甶,pu,Fǔ -> Fu 🈤不取聲母
 ,pu,
 又,qo,Yòu -> Yo 🈤不取聲母
 ス,qo,🈤無讀音取o
