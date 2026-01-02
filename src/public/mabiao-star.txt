@@ -34083,6 +34083,7 @@ fyay	挪
 fyay	𭡇
 fyck	ㆱ
 fycp	扬
+fyei	𠀀
 fyew	撱
 fyfi	𰒺
 fyfl	𢭫
@@ -34120,7 +34121,6 @@ fygs	𘣬
 fyi	ㄛ
 fyii	ㄛ
 fyii	ㄜ
-fyii	𠀀
 fyii	𠀂
 fyii	㋶
 fyii	ㆦ
@@ -74856,6 +74856,7 @@ nbb	㋪
 nbb	ヒ
 nbb	𘠢
 nbb	
+nbb	
 nbba	𪶽
 nbbb	涰
 nbbb	𣴫
@@ -126409,6 +126410,7 @@ yii	𘠃
 yii	𘠄
 yii	𘠅
 yii	𘲶
+yii	
 yii	
 yii	
 yii	

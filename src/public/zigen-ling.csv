@@ -12,8 +12,8 @@ font,ma,pinyin
 立,bli,Lì
 辛,bxi,Xīn -> Xi
 臣,be,Ĉén -> Ce 🈤不取聲母
-,byi,Yí ㊟熙左上
-,byi,
+,bi,Yí 🈤不取聲母 ㊟熙左上
+,bi,Yí 🈤不取聲母
 舟,bvo,Ẑōu -> Vo 🈤Z和Ẑ作V
 虫,bo,Ĉóŋ -> Co 🈤不取聲母 🈕Huǐ
 门,bme,Mén -> Me
@@ -39,6 +39,7 @@ font,ma,pinyin
 門,cme,Mén -> Me
 高,cga,Gāo -> Ga
 ,cga,㊟同高歸併
+,cga,㊟同高歸併
 ,co,🈤無讀音取o
 ,co,
 口,do,Kǒu -> Ko 🈤不取聲母
@@ -57,6 +58,7 @@ font,ma,pinyin
 厂,fa,Ĉǎŋ -> Ca 🈤不取聲母 🈕Hǎn Yán ān
 丆,fa,Hǎn -> Ha 🈤不取聲母
 正,fe,Ẑèŋ -> Ve 🈤Z和Ẑ作V但不取聲母
+世,fsi,Ŝì -> Si
 亥,fha,Hài -> Ha
 女,fu,Nǚ 🈤不取聲母
 母,fmu,Mǔ
@@ -71,11 +73,11 @@ font,ma,pinyin
 見,fja,Jiàn -> Ja
 頁,fye,Yè
 足,fvu,Zú -> Vu 🈤Z和Ẑ作V
-世,gi,Ŝì -> Si 🈤不取聲母
+𧾷,fvu,Zú ㊟俗稱足字旁
 丰,ge,Fēŋ -> Fe 🈤不取聲母
 艮,gge,Gěn -> Ge
 ,gge,㊟同艮歸併
-厶,gsi,Sī 🈕Mǒu 🈑私本字
+厶,gi,Sī 🈤不取聲母 🈑私本字 🈕Mǒu
 幺,gya,Yāo -> Ya 🈕Mì
 工,go,Gōŋ -> Go 🈤不取聲母
 弓,ggo,Gōŋ -> Go
@@ -92,7 +94,7 @@ font,ma,pinyin
 下,ha,Xià -> x 🈤不取聲母
 了,hle,Le
 子,hvi,Zǐ -> Vi 🈤Z和Ẑ作V
-予,hyu,Yǔ
+予,hu,Yǔ 🈤不取聲母
 其,hqi,Qí 🈕Jī Jì
 广,hga,Guǎŋ -> Ga 🈕Yǎn ān
 文,hwe,Wén -> We
@@ -103,6 +105,7 @@ font,ma,pinyin
 黑,hhe,Hēi -> He
 犬,hqa,Quǎn -> Qa
 示,hsi,Ŝì -> Si
+礻,hsi,Ŝì -> Si ㊟俗稱示字旁
 走,hvo,Zǒu -> Zo 🈤Z和Ẑ作V
 身,hse,Ŝēn -> Se
 钅,hi,Jīn -> Ji 🈤不取聲母 ㊟俗稱金字旁
@@ -115,7 +118,7 @@ font,ma,pinyin
 入,jru,Rù
 饣,jsi,Ŝi -> Si
 風,jfe,Fēŋ -> Fe
-ㄩ,ja,Kǎn -> Ka 🈤不取聲母
+凵,ja,Kǎn -> Ka 🈤不取聲母
 丩,ju,Jiū -> Ju 🈤不取聲母
 ,ju,
 屮,jca,Cǎo -> Ca
@@ -152,7 +155,7 @@ font,ma,pinyin
 卩,kje,Jié -> Je
 ,kje,
 咼,ka,Guǎ -> Ga 🈤不取聲母
-冎,ka,㊟同咼歸併
+冎,ka,Guǎ ㊟同咼歸併
 骨,kgu,Gǔ
 宀,ka,Miǎn -> Ma 🈤不取聲母 ㊟俗稱寶蓋頭
 穴,kxe,Xuè -> Xe
@@ -179,6 +182,7 @@ font,ma,pinyin
 十,li,Ŝi -> Si 🈤不取聲母
 干,lga,Gān -> Ga
 千,lqa,Qiān -> Qa
+,lqa,
 壬,lre,Rén -> Re
 毛,lma,Máo -> Ma
 古,lgu,Gǔ
@@ -187,6 +191,7 @@ font,ma,pinyin
 戸,lhu,
 戶,lu,Hù -> Hu 🈤不取聲母
 月,le,Yuè = Ye 🈤不取聲母
+⺝,le,
 ,le,
 ,le,
 夕,lxi,Xī
@@ -201,9 +206,10 @@ font,ma,pinyin
 牛,mnu,Niú -> Nu
 ⺧,mnu,㊟同牛歸併
 尸,msi,Ŝī -> Si
-,msi,
+,msi,㊟同尸歸併
+,msi,㊟同尸歸併
 七,mi,Qī -> qi 🈤不取聲母
-𫠠,mi,㊟同七歸併
+,mi,㊟同七歸併
 弋,myi,Yì -> yi
 戈,mge,Gē
 戊,mwu,Wù
@@ -219,6 +225,7 @@ font,ma,pinyin
 ,nhe,
 僉,na,Qiān -> Qa 🈤不取聲母
 食,nsi,Ŝí
+飠,nsi,
 兀,nwu,Wù
 囗,nwe,Wéi 🈑圍本字 ㊟不是口
 小,nxa,Xiǎo -> Xa
@@ -243,19 +250,20 @@ font,ma,pinyin
 巛,pca,㊟同川歸併
 巜,pca,
 勹,pa,Bāo -> Ba 🈤不取聲母
+,pa,
 ,pa,㊟同勹歸併
 巴,pa,Bā
 火,po,Huǒ -> Ho 🈤不取聲母
 灬,pba,Biāo -> Ba 🈕Hǔo
 臼,pu,Jìù -> Ju 🈤不取聲母
 ⺽,pu,Jǔ 🈤不取聲母
-鬼,pgi,Guǐ -> Gi
-,pgi,
+鬼,pi,Guǐ -> Gi 🈤不取聲母
+,pi,
 甶,pu,Fǔ -> Fu 🈤不取聲母
 ,pu,
 又,qo,Yòu -> Yo 🈤不取聲母
-ス,qo,🈤無讀音取o
-マ,qo,
+,qo,🈤無讀音取o
+,qo,
 艹,qa,Cǎo -> Ca 🈤不取聲母
 卄,qa,
 廾,qa,㊟同艹歸併
@@ -265,6 +273,7 @@ font,ma,pinyin
 卅,qsa,Sà
 卌,qi,Xì 🈤不取聲母
 丂,rka,Kào -> Ka
+,rka,
 业,rye,Yè
 ,ro,🈤無讀音取o
 ,ro,
@@ -291,6 +300,7 @@ font,ma,pinyin
 皿,rmi,Mǐn -> Mi
 ,ro,🈤無讀音取o
 羊,rya,Yáŋ -> Ya
+⺶,rya,
 ⺷,rya,
 ,ro,🈤無讀音取o
 见,rja,Jiàn -> j
@@ -321,6 +331,7 @@ font,ma,pinyin
 乀,tu,Fú 🈤基本筆畫不取聲母 ㊟俗稱捺
 欠,tqa,Qiān -> Qa
 匕,ti,Bi 🈤不取聲母
+,ti,㊟同匕歸併 🈑化本字 🈕Huà
 手,tso,Ŝǒu -> So
 龵,tso,
 扌,to,Ŝǒu -> So 🈤不取聲母 ㊟俗稱提手旁
@@ -328,20 +339,29 @@ font,ma,pinyin
 ,vo,🈤無讀音取o
 ,vo,
 亦,vyi,Yì
+,vyi,
 刀,va,Dāo -> Da 🈤不取聲母
 刂,vda,Dāo -> Da ㊟俗稱立刀旁
 巾,vji,Jīn -> Ji
 且,ve,Qiě -> Qe 🈤不取聲母
 ,vo,🈤無讀音取o
 水,vi,Ŝuǐ -> Si 🈤不取聲母
+氺,vi,
 氵,vi,Ŝuǐ -> Si 🈤不取聲母 ㊟俗稱三點水
 ,vo,🈤無讀音取o
 甫,vu,Fǔ -> Fu 🈤不取聲母
 乃,wna,Nǎi -> Na
 乙,wi,Yǐ 🈤基本筆畫不取聲母 ㊟一切折筆皆同碼
 乚,wi,Yí 🈤基本筆畫不取聲母 ㊟一切折筆皆同碼
+乛,wi,
 亅,wi,
+,wi,
+,wi,
+,wi,
+,wi,
+,wi,
 卯,wma,Mǎo -> Ma
+,wma,Mǎo -> Ma
 ,wo,🈤無讀音取o
 ,wo,
 ,wo,
@@ -370,4 +390,5 @@ font,ma,pinyin
 王,ya,Wáŋ -> Wa 🈤不取聲母
 瓦,ywa,Wǎ
 糸,yi,Sī 🈤不取聲母 🈕Mì
+糹,yi,
 非,yfe,Fēi -> Fe
