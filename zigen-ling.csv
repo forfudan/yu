@@ -57,6 +57,7 @@ font,ma,pinyin
 厂,fa,Ĉǎŋ -> Ca 🈤不取聲母 🈕Hǎn Yán ān
 丆,fa,Hǎn -> Ha 🈤不取聲母
 正,fe,Ẑèŋ -> Ve 🈤Z和Ẑ作V但不取聲母
+世,fsi,Ŝì -> Si
 亥,fha,Hài -> Ha
 女,fu,Nǚ 🈤不取聲母
 母,fmu,Mǔ
@@ -71,11 +72,10 @@ font,ma,pinyin
 見,fja,Jiàn -> Ja
 頁,fye,Yè
 足,fvu,Zú -> Vu 🈤Z和Ẑ作V
-世,gi,Ŝì -> Si 🈤不取聲母
 丰,ge,Fēŋ -> Fe 🈤不取聲母
 艮,gge,Gěn -> Ge
 ,gge,㊟同艮歸併
-厶,gsi,Sī 🈕Mǒu 🈑私本字
+厶,gi,Sī 🈤不取聲母 🈑私本字 🈕Mǒu
 幺,gya,Yāo -> Ya 🈕Mì
 工,go,Gōŋ -> Go 🈤不取聲母
 弓,ggo,Gōŋ -> Go
@@ -115,7 +115,7 @@ font,ma,pinyin
 入,jru,Rù
 饣,jsi,Ŝi -> Si
 風,jfe,Fēŋ -> Fe
-ㄩ,ja,Kǎn -> Ka 🈤不取聲母
+凵,ja,Kǎn -> Ka 🈤不取聲母
 丩,ju,Jiū -> Ju 🈤不取聲母
 ,ju,
 屮,jca,Cǎo -> Ca
@@ -201,7 +201,8 @@ font,ma,pinyin
 牛,mnu,Niú -> Nu
 ⺧,mnu,㊟同牛歸併
 尸,msi,Ŝī -> Si
-,msi,
+,msi,㊟同尸歸併
+,msi,㊟同尸歸併
 七,mi,Qī -> qi 🈤不取聲母
 𫠠,mi,㊟同七歸併
 弋,myi,Yì -> yi
@@ -249,13 +250,13 @@ font,ma,pinyin
 灬,pba,Biāo -> Ba 🈕Hǔo
 臼,pu,Jìù -> Ju 🈤不取聲母
 ⺽,pu,Jǔ 🈤不取聲母
-鬼,pgi,Guǐ -> Gi
-,pgi,
+鬼,pi,Guǐ -> Gi 🈤不取聲母
+,pi,
 甶,pu,Fǔ -> Fu 🈤不取聲母
 ,pu,
 又,qo,Yòu -> Yo 🈤不取聲母
-ス,qo,🈤無讀音取o
-マ,qo,
+,qo,🈤無讀音取o
+,qo,
 艹,qa,Cǎo -> Ca 🈤不取聲母
 卄,qa,
 廾,qa,㊟同艹歸併
@@ -340,7 +341,13 @@ font,ma,pinyin
 乃,wna,Nǎi -> Na
 乙,wi,Yǐ 🈤基本筆畫不取聲母 ㊟一切折筆皆同碼
 乚,wi,Yí 🈤基本筆畫不取聲母 ㊟一切折筆皆同碼
+乛,wi,
 亅,wi,
+,wi,
+,wi,
+,wi,
+,wi,
+,wi,
 卯,wma,Mǎo -> Ma
 ,wo,🈤無讀音取o
 ,wo,
@@ -356,6 +363,7 @@ font,ma,pinyin
 革,wge,Gé
 ,wo,🈤無讀音取o
 习,xi,Xí -> x
+,xi,
 匚,xfa,Fāŋ -> Fa
 木,xu,Mù 🈤不取聲母
 朩,xu,

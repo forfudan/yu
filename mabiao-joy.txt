@@ -29125,7 +29125,6 @@ fohy	𩇖
 foi	掐
 foi	㐇
 foi	㐟
-foi	𠀀
 foi	𠀂
 foi	𢩧
 foi	𮷌
@@ -29322,6 +29321,7 @@ fotc	𗙫
 fotd	𗙜
 foth	𢲖
 foth	𭀪
+foti	𠀀
 fotm	擙
 fotn	摠
 foto	𗘸
@@ -77366,6 +77366,7 @@ oi	𘠃
 oi	𘠄
 oi	𘠅
 oi	𘲶
+oi	
 oi	
 oi	
 oi	

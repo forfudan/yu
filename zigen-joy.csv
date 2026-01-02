@@ -42,8 +42,8 @@ font,ma,pinyin
 ,Dg,
 ,Dg,
 又,Di,yòu = iòu -> i
-マ,Di,
-ス,Di,
+,Di,
+,Di,
 见,Dj,Jiàn -> j
 ,Dl,Luó -> l
 厶,Dm,Mǒu -> m
@@ -146,7 +146,7 @@ font,ma,pinyin
 ,Jr,
 ,Jr,
 山,Js,SHān -> s
-ㄩ,Jv,Ø -> v ㊟無讀音或生僻部首
+凵,Jv,Ø -> v ㊟無讀音或生僻部首
 曰,Jv,yuē = ǖe -> v
 ,Jv,Ø -> v ㊟無讀音或生僻部首
 ,Jv,Ø -> v ㊟無讀音或生僻部首
@@ -169,6 +169,7 @@ font,ma,pinyin
 戊,Kw,wù -> w
 ,Kw,wǔ -> w
 习,Kx,Xí -> x
+,Kx,
 之,Kz,ZHī -> z
 丷,Lb,Bā -> b
 ,Lb,
@@ -227,7 +228,11 @@ font,ma,pinyin
 飛,Of,Fēi -> f
 古,Og,Gǔ -> g
 乙,Oi,yǐ = ǐ
+,Oi,
+,Oi,
 亅,Oi,
+,Oi,
+乛,Oi,
 丌,Oj,Jì -> j
 冖,Om,Miǎn -> m
 ⺈,Om,
@@ -302,6 +307,8 @@ font,ma,pinyin
 ,Th,
 虍,Th,
 乚,Ti,yí = i
+,Ti,
+,Ti,
 金,Tj,Jīn -> j
 鹵,Tl,Lǔ -> l
 米,Tm,Mǐ -> m
@@ -310,6 +317,7 @@ font,ma,pinyin
 片,Tp,Piàn -> p
 尸,Ts,SHī -> s
 ,Ts,
+,Ts,
 鱼,Tv,yú = ǘ -> v
 卜,Ub,Bǔ -> b
 ⺊,Ub,

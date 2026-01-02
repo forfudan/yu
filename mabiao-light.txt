@@ -45317,7 +45317,6 @@ fvfv	𣏏
 fvfw	𨿋
 fvgl	𣔊
 fvhf	𦤳
-fvii	𠀀
 fvii	𠀂
 fvio	𢀕
 fviv	𣎷
@@ -45363,6 +45362,7 @@ fvvo	𣚈
 fvvu	𤐦
 fvvv	𣎳
 fvvv	𣐜
+fvxi	𠀀
 fvxi	𠀟
 fvxi	𠃞
 fvxi	𢀗
@@ -132290,6 +132290,7 @@ hrgg	䳒
 hwgr	䳣
 hngg	䵧
 mhwg	䶪
+fvii	𠀀
 aqvb	𠀨
 hsan	𠀩
 fkfn	𠁖
@@ -139328,6 +139329,7 @@ vxii	
 vbgf	
 kvvv	
 vvgg	
+viii	
 viii	
 viii	
 viii	

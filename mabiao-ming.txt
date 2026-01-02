@@ -39976,6 +39976,7 @@ fbve	𬶬
 fcbdk	𬰳
 fcbo	𱂄
 fccfo	𩏽
+fcci	𠀀
 fccka	𠦴
 fccsm	𱂊
 fccsm	𱈎
@@ -39997,7 +39998,6 @@ fchge	𱽇
 fchne	𩾊
 fchsi	𤴕
 fchwo	𩏼
-fci	𠀀
 fci	𠀁
 fci	𠀂
 fci	𰀀
@@ -107171,6 +107171,7 @@ ci	𘯧
 ci	𘲶
 ci	𘳀
 ci	𘳋
+ci	
 ci	
 ci	
 ci	
