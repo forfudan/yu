@@ -47,7 +47,6 @@ font,ma,pinyin
 见,Dj,Jiàn -> j
 ,Dl,Luó -> l
 厶,Dm,Mǒu -> m
-,Dm,
 廾,Dn,Niàn -> n ㊟生僻音
 卅,Ds,Sà -> s
 卌,Ds,
@@ -118,6 +117,7 @@ font,ma,pinyin
 丶,Id,
 方,If,Fāng -> f
 艮,Ig,Gěn -> g
+,Ig,
 臼,Ij,Jìù -> j
 ⺽,Ij,
 宀,Im,Miǎn -> m
@@ -236,7 +236,7 @@ font,ma,pinyin
 ,Os,
 丄,Os,
 巳,Os,Sì -> s
-,Os,Sì -> s
+,Os,
 纟,Os,Sī -> s
 ,Os,
 魚,Ov,yú = ü -> v
