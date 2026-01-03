@@ -1,4 +1,5 @@
 font,ma,pinyin
+,bi,
 卜,bbu,Bǔ
 ⺊,bbu,Bǔ
 ,bo,Ø -> o ㊟無讀音或生僻部首
@@ -17,6 +18,7 @@ font,ma,pinyin
 未,bo,wèi = uèi -> o
 末,bmo,Mò
 示,bka,SHì -> Ka
+礻,bka,
 乙,ci,yǐ = i
 乛,ci,
 亅,ci,
@@ -53,6 +55,7 @@ font,ma,pinyin
 宀,dme,Miǎn -> Me ㊟聲母在右手時韻碼取e
 廴,do,yín = ín -> o
 皮,dpi,Pí
+,fki,
 一,fi,yī = ī
 匚,ffe,Fāng -> Fe
 丂,fki,Kào -> Ki
@@ -96,13 +99,13 @@ font,ma,pinyin
 夭,gi,yāo = iāo -> i
 扌,gke,SHǒu -> Ke
 革,gge,Gé
-,hxi,
 艮,hge,Gěn -> Ge
 ,hge,Gěn -> Ge
 冂,ho,Ø -> o ㊟無讀音或生僻部首
 ,ho,
 ,ho,
 勹,ho,Ø -> o ㊟無讀音或生僻部首
+,ho,
 ,ho,
 习,hxi,Xí
 贝,hbo,Bèi -> Bo
@@ -155,6 +158,7 @@ font,ma,pinyin
 咼,jga,Guǎ -> Ga
 冎,jga,
 骨,jgu,Gǔ
+,kqi,
 三,ksa,Sān -> Sa
 彡,kka,SHān -> Ka
 ,kka,
@@ -184,6 +188,8 @@ font,ma,pinyin
 里,kli,Lǐ
 甫,kfu,Fǔ
 辛,kxo,Xīn -> Xo
+糹,lsi,
+,lbi,
 丨,lgi,Gǔn = Guěn -> Gi
 〢,lo,Ø -> o ㊟無讀音或生僻部首
 〣,lo,Ø -> o ㊟無讀音或生僻部首
@@ -201,6 +207,7 @@ font,ma,pinyin
 ,lo,
 ,lo,
 高,lgi,Gāo -> Gi
+,lgi,
 方,lfe,Fāng -> Fe
 了,lle,Le
 子,lzi,Zǐ
@@ -245,9 +252,11 @@ font,ma,pinyin
 丑,mre,CHǒu -> Re
 ,mu,u
 ,mdo,Duī = Duēi -> Do
+𧾷,nzu,
 丶,ndi,Diǎn -> Di
 乀,ndi,
 月,ne,yuè = üè -> e
+⺝,ne,
 ,ne,
 ,no,Ø -> o ㊟無讀音或生僻部首
 亍,nru,CHù -> Ru
@@ -267,6 +276,7 @@ font,ma,pinyin
 風,qfe,Fēng -> Fe
 虫,qho,Huǐ = Huěi -> Ho ㊟古音同虺
 卯,qmi,Mǎo -> Mi
+,qmi,Mǎo -> Mi
 ,qo,Ø -> o ㊟無讀音或生僻部首
 ,qo,
 ,qo,
@@ -348,6 +358,8 @@ font,ma,pinyin
 业,ve,yè = ie -> e
 讠,ve,yán = ián -> e
 车,vre,CHē -> Re
+氺,wko,
+飠,wka,
 人,wo,rén -> o ㊟ren視為零聲母
 合,whe,Hé
 ,wo,Ø -> o ㊟無讀音或生僻部首
@@ -364,6 +376,7 @@ font,ma,pinyin
 丷,xci,Cǎo -> Ci
 ,xci,
 羊,xo,yáng = iáng -> o
+⺶,xo,
 ⺷,xo,
 ,xo,
 乌,xu,wū = ū
