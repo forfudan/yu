@@ -12,7 +12,6 @@ font,ma,pinyin
 木,Am,Mù -> m
 朩,Am,
 匕,Bb,Bi -> b
-,Bb,
 马,Bm,Mǎ -> m
 舌,Bs,SHé -> s
 囗,Bw,wéi = w
@@ -28,7 +27,6 @@ font,ma,pinyin
 馬,Cm,Mǎ -> m
 ,Cm,
 示,Cs,SHì -> s
-礻,Cs,
 下,Cx,Xià -> x
 丅,Cx,
 自,Cz,Zì -> z
@@ -41,7 +39,6 @@ font,ma,pinyin
 卄,Dc,
 高,Dg,Gāo -> g
 ,Dg,
-,Dg,
 ,Dg,
 ,Dg,
 又,Di,yòu = iòu -> i
@@ -114,7 +111,6 @@ font,ma,pinyin
 頁,Hx,xiè -> x ㊟取古音
 走,Hz,Zǒu -> z
 勹,Ib,Bāo -> b
-,Ib,
 ,Ib,
 虫,Ic,Chóng -> c
 乀,Id,
@@ -145,9 +141,7 @@ font,ma,pinyin
 丩,Jj,Jiū -> j
 ,Jj,
 卯,Jm,Mǎo -> m
-,Jm,Mǎo -> m
 千,Jq,Qiān -> q
-,Jq,
 日,Jr,rì -> r
 ,Jr,
 ,Jr,
@@ -175,6 +169,7 @@ font,ma,pinyin
 戊,Kw,wù -> w
 ,Kw,wǔ -> w
 习,Kx,Xí -> x
+,Kx,
 之,Kz,ZHī -> z
 丷,Lb,Bā -> b
 ,Lb,
@@ -210,7 +205,6 @@ font,ma,pinyin
 火,Mh,Huǒ -> h
 羊,Mi,yáng = iáng -> i
 ⺷,Mi,
-⺶,Mi,
 ,Mr,rén -> r
 矢,Ms,SHǐ -> s
 尢,Mw,wǎng -> w
@@ -222,7 +216,6 @@ font,ma,pinyin
 曲,Nq,Qǔ -> q
 壬,Nr,rén -> r
 水,Ns,SHuǐ -> s
-氺,Ns,
 氵,Ns,SHuǐ -> s
 瓦,Nw,wǎ -> w
 心,Nx,Xīn -> x
@@ -302,7 +295,6 @@ font,ma,pinyin
 ,Si,
 几,Sj,Jǐ -> j
 丂,Sk,Kào -> k
-,Sk,
 力,Sl,Lì -> l
 目,Sm,Mù -> m
 僉,Sq,Qiān -> q
@@ -335,7 +327,6 @@ font,ma,pinyin
 由,Ui,yóu = ióu -> i
 人,Ur,rén -> r
 糸,Us,Sī -> s
-糹,Us,
 身,Us,SHēn -> s
 饣,Us,SHi -> s
 ,Uv,Ø -> v ㊟無讀音或生僻部首
@@ -352,7 +343,6 @@ font,ma,pinyin
 钅,Vj,Jīn -> J
 麻,Vm,Má -> m
 食,Vs,SHí -> s
-飠,Vs,
 禺,Vv,yǔ = ǚ -> v
 壴,Vz,ZHú -> z
 爪,Vz,ZHuǎ -> z
@@ -381,14 +371,11 @@ font,ma,pinyin
 ,Xn,
 乌,Xw,wū -> w
 足,Xz,Zú -> z
-𧾷,Xz,
 ,Xz,Zuǒ -> z
 亦,Yi,yì = ì
-,Yi,
 三,Ys,Sān -> s
 月,Yv,yuè = y
 ,Yv,
 ,Yv,
-⺝,Yv,
 王,Yw,wáng -> w
 夕,Yx,Xī -> x
