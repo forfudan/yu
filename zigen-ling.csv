@@ -59,6 +59,10 @@ font,ma,pinyin
 丆,fa,Hǎn -> Ha 🈤不取聲母
 正,fe,Ẑèŋ -> Ve 🈤Z和Ẑ作V但不取聲母
 世,fsi,Ŝì -> Si
+,fo,🈤無讀音取o
+,fo,
+,fo,
+,fdo,Dòu -> Do
 亥,fha,Hài -> Ha
 女,fu,Nǚ 🈤不取聲母
 母,fmu,Mǔ
@@ -275,10 +279,6 @@ font,ma,pinyin
 丂,rka,Kào -> Ka
 ,rka,
 业,rye,Yè
-,ro,🈤無讀音取o
-,ro,
-,ro,
-,rdo,Dòu -> Do
 之,ri,Ẑī -> Vi 🈤不取聲母 🈤Z和Ẑ作V
 二,rje,èr -> Je 🈤零聲母小碼取J
 ⺀,rje,㊟同二歸併
