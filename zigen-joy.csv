@@ -58,6 +58,7 @@ font,ma,pinyin
 ,Ed,Dòu -> d
 儿,Ee,ér -> e
 ,Ee,
+,Ee,
 也,Ei,yě = iě -> i
 ,Ei,yà = ià -> i ㊟取亞聲
 ,Ei,
@@ -311,6 +312,7 @@ font,ma,pinyin
 雨,Sv,yǔ = ǚ -> v
 ,Sv,Ø -> v ㊟無讀音或生僻部首
 匚,Tf,Fāng -> f
+,Tf,
 虎,Th,Hǔ -> h
 ,Th,
 虍,Th,

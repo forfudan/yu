@@ -118,6 +118,7 @@ font,ma,pinyin
 户,Hh,Hù -> h
 戸,Hh,
 匚,Hf,Fāng -> f
+,Hf,
 丂,Hk,Kào -> k
 ,Hk,
 牙,Ha,yá -> a ㊟取韻a
@@ -358,6 +359,7 @@ font,ma,pinyin
 魚,Vv,yú = ü -> v
 儿,Wr,ér -> r ㊟取第二字母r
 ,Wr,
+,Wr,
 屮,Wc,Cǎo -> c
 丩,Wj,Jiū -> j
 ,Wj,

@@ -6,8 +6,8 @@ font,ma,pinyin
 ⺈,bi,㊟同冖歸併
 ,bo,㊟同冖歸併
 彐,bji,Jì
-肀,bji,㊟同彐歸併
 ,bji,
+肀,bji,㊟同彐歸併
 隶,bi,Lì 🈤不取聲母 🈑逮本字 🈕Dài Yì Dì
 立,bli,Lì
 辛,bxi,Xīn -> Xi
@@ -18,8 +18,8 @@ font,ma,pinyin
 虫,bo,Ĉóŋ -> Co 🈤不取聲母 🈕Huǐ
 门,bme,Mén -> Me
 丷,ca,Bā 🈤不取聲母
-,ca,
 䒑,ca,Cǎo -> Ca 🈤不取聲母
+,ca,🈤無讀音取o
 ,co,🈤無讀音取o
 丌,ci,Jì 🈤不取聲母 🈕Qí
 山,csa,Ŝān -> Sa
@@ -38,8 +38,8 @@ font,ma,pinyin
 金,ci,Jīn -> Ji 🈤不取聲母
 門,cme,Mén -> Me
 高,cga,Gāo -> Ga
-,cga,㊟同高歸併
 ,cga,㊟同高歸併
+,cga,㊟同高歸併
 ,co,🈤無讀音取o
 ,co,
 口,do,Kǒu -> Ko 🈤不取聲母
@@ -249,6 +249,7 @@ font,ma,pinyin
 酉,nyo,Yǒu -> Yo
 石,psi,Ŝí
 儿,pe,ér -> Je 🈤零聲母小碼取J但此處跳過
+,pe,㊟同儿歸併
 ,pe,㊟同儿歸併
 川,pca,Ĉuān -> Ca
 巛,pca,㊟同川歸併
@@ -321,7 +322,7 @@ font,ma,pinyin
 尢,so,Yóu -> Yo 🈤不取聲母 🈑尤本字 🈕Wāŋ
 廴,si,Yín -> Yi 🈤不取聲母
 豕,ssi,Ŝǐ
-,ssi,
+,ssi,㊟同豕歸併 🈕Gēng
 魚,syu,Yú
 鳥,sna,Niǎo -> Na
 ,sna,
@@ -377,6 +378,7 @@ font,ma,pinyin
 ,wo,🈤無讀音取o
 习,xi,Xí -> x
 匚,xfa,Fāŋ -> Fa
+,xfa,
 木,xu,Mù 🈤不取聲母
 朩,xu,
 甲,xja,Jiā -> Ja 🈤不取聲母
