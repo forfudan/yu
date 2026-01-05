@@ -151,47 +151,84 @@ function layoutHorizontally(
     // 可用寬度
     const availableWidth = canvasWidth - leftMargin - rightMargin
 
+    // 計算每個輸入法的哈希值，用於確定其橫向偏移
+    const getStableOffset = (schema: SchemaData, totalWidth: number): number => {
+        // 使用輸入法名稱和作者生成穩定的哈希值
+        const str = schema.name + schema.authors.join('')
+        let hash = 0
+        for (let i = 0; i < str.length; i++) {
+            hash = ((hash << 5) - hash) + str.charCodeAt(i)
+            hash = hash & hash // 轉換為32位整數
+        }
+        // 將哈希值映射到 [0, totalWidth] 範圍
+        return Math.abs(hash) % totalWidth
+    }
+
     if (schemas.length === 1) {
-        // 只有一個節點，居中放置
+        // 只有一個節點，添加基於名稱的偏移而不是完全居中
+        const maxOffset = availableWidth - nodeWidth
+        const offset = getStableOffset(schemas[0], Math.floor(maxOffset * 0.8)) + maxOffset * 0.1
         nodes.push({
             schema: schemas[0],
-            x: leftMargin + (availableWidth - nodeWidth) / 2,
+            x: leftMargin + offset,
             y: baseY + 50, // 預留頂部空間
             width: nodeWidth,
             height: nodeHeight
         })
     } else if (schemas.length === 2) {
-        // 兩個節點，左右分佈
-        const spacing = (availableWidth - 2 * nodeWidth) / 3
+        // 兩個節點，使用1/3和2/3位置並添加偏移
+        const section = availableWidth / 3
+        const maxOffset = section * 0.6
+
+        const offset1 = getStableOffset(schemas[0], Math.floor(maxOffset))
+        const offset2 = getStableOffset(schemas[1], Math.floor(maxOffset))
+
         nodes.push({
             schema: schemas[0],
-            x: leftMargin + spacing,
+            x: leftMargin + section * 0.5 + offset1,
             y: baseY + 50,
             width: nodeWidth,
             height: nodeHeight
         })
         nodes.push({
             schema: schemas[1],
-            x: leftMargin + spacing * 2 + nodeWidth,
+            x: leftMargin + section * 1.8 + offset2,
             y: baseY + 50,
             width: nodeWidth,
             height: nodeHeight
         })
+    } else if (schemas.length === 3) {
+        // 三個節點，分別放在左、中、右並添加偏移
+        const section = availableWidth / 4
+        const maxOffset = section * 0.5
+
+        schemas.forEach((schema, index) => {
+            const offset = getStableOffset(schema, Math.floor(maxOffset))
+            nodes.push({
+                schema,
+                x: leftMargin + section * (index + 0.5) + offset,
+                y: baseY + 50,
+                width: nodeWidth,
+                height: nodeHeight
+            })
+        })
     } else {
-        // 多個節點，均勻分佈
+        // 多個節點，均勻分佈但添加小幅偏移
         const totalNodeWidth = schemas.length * nodeWidth
         const totalSpacing = (schemas.length - 1) * nodeSpacing
         const totalWidth = totalNodeWidth + totalSpacing
 
         let startX: number
         if (totalWidth <= availableWidth) {
-            // 可以在一行內放下，居中放置
+            // 可以在一行內放下，居中放置並添加偏移
             startX = leftMargin + (availableWidth - totalWidth) / 2
+            const maxOffset = nodeSpacing * 0.3
 
             schemas.forEach((schema, index) => {
+                const offset = getStableOffset(schema, Math.floor(maxOffset)) - maxOffset / 2
                 nodes.push({
                     schema,
-                    x: startX + index * (nodeWidth + nodeSpacing),
+                    x: startX + index * (nodeWidth + nodeSpacing) + offset,
                     y: baseY + 50,
                     width: nodeWidth,
                     height: nodeHeight

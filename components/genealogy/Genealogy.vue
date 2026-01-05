@@ -702,6 +702,8 @@ watch(() => props.config, () => {
 .connection-line {
     transition: all 0.3s ease;
     cursor: pointer;
+    opacity: 0.15;
+    /* 默认非常淡 */
 }
 
 .connection-feature {
@@ -714,16 +716,18 @@ watch(() => props.config, () => {
 
 .connection-focused {
     stroke-width: 3 !important;
-    opacity: 1 !important;
+    opacity: 0.9 !important;
+    /* focus时明显 */
     filter: drop-shadow(0 0 4px currentColor);
 }
 
 .connection-dimmed {
-    opacity: 0.2;
+    opacity: 0.05;
+    /* 其他线更淡 */
 }
 
 .connection-line:hover {
-    opacity: 1;
+    opacity: 0.8;
     stroke-width: 3;
     filter: drop-shadow(0 0 4px currentColor);
 }
