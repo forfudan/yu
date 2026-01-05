@@ -22,6 +22,61 @@ interface TimeGroup {
 }
 
 /**
+ * 計算文本寬度（考慮中英文混合）
+ * @param text 文本內容
+ * @returns 寬度（像素）
+ */
+function getTextWidth(text: string): number {
+    let width = 0
+    for (let i = 0; i < text.length; i++) {
+        const char = text.charCodeAt(i)
+        // 檢測是否為中文字符或全角字符
+        if ((char >= 0x4E00 && char <= 0x9FFF) ||
+            (char >= 0x3400 && char <= 0x4DBF) ||
+            (char >= 0x20000 && char <= 0x2A6DF)) {
+            width += 12  // 中文字符寬度
+        } else {
+            width += 6.5  // 英文字符寬度
+        }
+    }
+    return width
+}
+
+/**
+ * 計算卡片所需的寬度（基於內容）
+ * @param schema 輸入法數據
+ * @returns 卡片寬度（像素）
+ */
+function calculateCardWidth(schema: SchemaData): number {
+    // 計算各部分文本寬度
+    const nameWidth = getTextWidth(schema.name)
+    const authorWidth = getTextWidth(schema.authors.join(' '))
+    const dateWidth = getTextWidth(formatYear(schema.date))  // "1994" 或 "2024-01"
+
+    // 總寬度 = 文本寬度 + 間距 + 左右內邊距
+    // 格式: [10px內邊距] 名稱 [8px] 作者 [6px] | [6px] 日期 [10px內邊距]
+    const totalTextWidth = nameWidth + 8 + authorWidth + 6 + dateWidth
+    const padding = 20  // 左右各10px
+    const minWidth = 120  // 最小寬度
+    const maxWidth = 350  // 最大寬度
+
+    return Math.max(minWidth, Math.min(maxWidth, totalTextWidth + padding))
+}
+
+/**
+ * 格式化年份顯示
+ */
+function formatYear(date: string): string {
+    if (date.length === 4) {
+        return date  // 只有年份
+    } else if (date.length === 7) {
+        return date  // 年-月
+    } else {
+        return date.slice(0, 7)  // 年-月-日 -> 年-月
+    }
+}
+
+/**
  * 計算完整的佈局
  * @param schemas 輸入法數據數組
  * @param config 配置項
@@ -42,14 +97,14 @@ export function calculateLayout(
     const nodeSpacing = config.nodeSpacing || 20
     const canvasWidth = config.width || 1200
 
-    // 節點尺寸（緊湊單行版本）
-    const nodeWidth = 200
-    const nodeHeight = 40  // 從 80 減少到 40
+    // 節點高度保持固定
+    const nodeHeight = 40
 
-    // 計算每個輸入法的Y坐標
+    // 計算每個輸入法的Y坐標和寬度
     const schemasWithY = schemas.map(schema => ({
         schema,
-        y: calculateYPosition(schema, minYear, yearSpacingMap, baseSpacing, schemaSpacing)
+        y: calculateYPosition(schema, minYear, yearSpacingMap, baseSpacing, schemaSpacing),
+        width: calculateCardWidth(schema)  // 根據內容計算寬度
     }))
 
     // 按Y坐標排序
@@ -58,14 +113,12 @@ export function calculateLayout(
     // 分組：將Y坐標相近的輸入法分到同一組
     const groups = groupByProximity(schemasWithY, nodeHeight + nodeSpacing)
 
-    // 為每組計算橫向佈局
+    // 為每組計算橫向佈局（保留各自的Y坐標和寬度）
     const layoutNodes: LayoutNode[] = []
 
     groups.forEach(group => {
-        const nodesInGroup = layoutHorizontally(
-            group.schemas,
-            group.y,
-            nodeWidth,
+        const nodesInGroup = layoutHorizontallyWithY(
+            schemasWithY.filter(item => group.schemas.includes(item.schema)),
             nodeHeight,
             nodeSpacing,
             canvasWidth
@@ -83,7 +136,7 @@ export function calculateLayout(
  * @returns 分組結果
  */
 function groupByProximity(
-    schemasWithY: Array<{ schema: SchemaData; y: number }>,
+    schemasWithY: Array<{ schema: SchemaData; y: number; width: number }>,
     threshold: number
 ): TimeGroup[] {
     if (schemasWithY.length === 0) return []
@@ -124,7 +177,109 @@ function groupByProximity(
 }
 
 /**
- * 橫向佈局：為同一時間段的輸入法分配X坐標
+ * 橫向佈局：為同一時間段的輸入法分配X坐標（保留各自的Y坐標和寬度）
+ * @param schemasWithY 帶Y坐標和寬度的輸入法數組
+ * @param nodeHeight 節點高度
+ * @param nodeSpacing 節點間距
+ * @param canvasWidth 畫布寬度
+ * @returns 佈局節點數組
+ */
+function layoutHorizontallyWithY(
+    schemasWithY: Array<{ schema: SchemaData; y: number; width: number }>,
+    nodeHeight: number,
+    nodeSpacing: number,
+    canvasWidth: number = 1200
+): LayoutNode[] {
+    const nodes: LayoutNode[] = []
+
+    if (schemasWithY.length === 0) return nodes
+
+    // 畫布左側預留空間（用於時間軸）
+    const leftMargin = 80
+    // 畫布右側預留空間
+    const rightMargin = 50
+    // 可用寬度
+    const availableWidth = canvasWidth - leftMargin - rightMargin
+
+    // 計算每個輸入法的哈希值，用於確定其橫向偏移
+    const getStableOffset = (schema: SchemaData, totalWidth: number): number => {
+        // 使用輸入法名稱和作者生成穩定的哈希值
+        const str = schema.name + schema.authors.join('')
+        let hash = 0
+        for (let i = 0; i < str.length; i++) {
+            hash = ((hash << 5) - hash) + str.charCodeAt(i)
+            hash = hash & hash // 轉換為32位整數
+        }
+        // 將哈希值映射到 [0, totalWidth] 範圍
+        return Math.abs(hash) % totalWidth
+    }
+
+    if (schemasWithY.length === 1) {
+        // 只有一個節點，添加基於名稱的偏移而不是完全居中
+        const item = schemasWithY[0]
+        const maxOffset = availableWidth - item.width
+        const offset = getStableOffset(item.schema, Math.floor(maxOffset * 0.8)) + maxOffset * 0.1
+        nodes.push({
+            schema: item.schema,
+            x: leftMargin + offset,
+            y: item.y + 50, // 預留頂部空間，使用實際的y坐標
+            width: item.width,
+            height: nodeHeight
+        })
+    } else if (schemasWithY.length === 2) {
+        // 兩個節點，使用1/3和2/3位置並添加偏移
+        const section = availableWidth / 3
+        const maxOffset = section * 0.6
+
+        schemasWithY.forEach((item, i) => {
+            const offset = getStableOffset(item.schema, Math.floor(maxOffset))
+            const baseX = i === 0 ? section * 0.5 : section * 1.8
+            nodes.push({
+                schema: item.schema,
+                x: leftMargin + baseX + offset,
+                y: item.y + 50, // 使用實際的y坐標
+                width: item.width,
+                height: nodeHeight
+            })
+        })
+    } else if (schemasWithY.length === 3) {
+        // 三個節點，均勻分佈
+        const section = availableWidth / 4
+        const maxOffset = section * 0.5
+
+        schemasWithY.forEach((item, i) => {
+            const offset = getStableOffset(item.schema, Math.floor(maxOffset))
+            nodes.push({
+                schema: item.schema,
+                x: leftMargin + section * (i + 0.5) + offset,
+                y: item.y + 50, // 使用實際的y坐標
+                width: item.width,
+                height: nodeHeight
+            })
+        })
+    } else {
+        // 多個節點，分散佈局
+        schemasWithY.forEach((item, i) => {
+            const basePosition = (i / (schemasWithY.length - 1)) * (availableWidth - item.width)
+            // 添加基於哈希的隨機偏移（±30%的節點間距）
+            const hashOffset = getStableOffset(item.schema, nodeSpacing * 2) - nodeSpacing
+            const x = leftMargin + basePosition + hashOffset * 0.3
+
+            nodes.push({
+                schema: item.schema,
+                x: Math.max(leftMargin, Math.min(x, canvasWidth - rightMargin - item.width)),
+                y: item.y + 50, // 使用實際的y坐標
+                width: item.width,
+                height: nodeHeight
+            })
+        })
+    }
+
+    return nodes
+}
+
+/**
+ * 橫向佈局：為同一時間段的輸入法分配X坐標（舊版本，已棄用）
  * @param schemas 輸入法數組
  * @param baseY 基準Y坐標
  * @param nodeWidth 節點寬度
