@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, watch } from 'vue'
-import type { SchemaData, YearLabel, GenealogyConfig, LayoutNode } from './types'
+import type { SchemaData, YearLabel, GenealogyConfig, LayoutNode } from './types.ts'
 import {
     loadSchemas,
     sortSchemasByDate,
@@ -25,6 +25,7 @@ import {
     formatDate,
     parseYear
 } from './dataLoader'
+import { calculateLayout, optimizeLayout, calculateLayoutQuality } from './layoutEngine'
 
 // Props
 const props = withDefaults(defineProps<{
@@ -112,32 +113,33 @@ const sortedSchemas = computed(() => {
     return sortSchemasByDate(filteredSchemas.value, config.value.reverseTimeline)
 })
 
-// 計算屬性：佈局節點（簡化版，後續會實現完整的佈局算法）
+// 佈局優化選項
+const useOptimization = ref(false) // 是否使用力導向優化（可選功能）
+
+// 計算屬性：佈局節點（使用智能佈局算法）
 const layoutNodes = computed<LayoutNode[]>(() => {
-    const nodes: LayoutNode[] = []
-    const yearSpacing = config.value.yearSpacing || 100
+    if (sortedSchemas.value.length === 0 || minYear.value === 0) {
+        return []
+    }
 
-    sortedSchemas.value.forEach((schema, index) => {
-        const y = calculateYPosition(
-            schema,
-            minYear.value,
-            yearSpacing,
-            config.value.reverseTimeline
-        )
+    // 使用佈局引擎計算初始佈局
+    let nodes = calculateLayout(
+        sortedSchemas.value,
+        config.value,
+        minYear.value
+    )
 
-        // 簡單的X坐標分配（後續會改進）
-        const x = 300 + (index % 3) * 250
-
-        nodes.push({
-            schema,
-            x,
-            y: y + 50, // 預留頂部空間
-            width: 200,
-            height: 80
-        })
-    })
+    // 可選：使用力導向算法優化佈局
+    if (useOptimization.value && nodes.length > 0) {
+        nodes = optimizeLayout(nodes, 30)
+    }
 
     return nodes
+})
+
+// 計算屬性：佈局質量分數
+const layoutQuality = computed(() => {
+    return calculateLayoutQuality(layoutNodes.value)
 })
 
 // 加載數據
@@ -250,12 +252,25 @@ watch(() => props.config, () => {
                         共 {{ filteredSchemas.length }} 個輸入法
                         ({{ minYear }}-{{ maxYear }})
                     </span>
+                    <span v-if="layoutNodes.length > 0" class="text-xs px-2 py-1 rounded" :class="{
+                        'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200': layoutQuality >= 90,
+                        'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200': layoutQuality >= 70 && layoutQuality < 90,
+                        'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200': layoutQuality < 70
+                    }" title="佈局質量分數">
+                        佈局: {{ Math.round(layoutQuality) }}分
+                    </span>
                 </div>
 
                 <div class="toolbar-right">
                     <!-- 搜索框 -->
                     <input v-model="searchQuery" type="text" placeholder="搜索輸入法..."
                         class="input input-sm input-bordered" />
+
+                    <!-- 佈局優化開關 -->
+                    <label class="flex items-center gap-2 cursor-pointer text-sm">
+                        <input v-model="useOptimization" type="checkbox" class="checkbox checkbox-sm" />
+                        <span class="text-gray-600 dark:text-gray-400">優化佈局</span>
+                    </label>
 
                     <!-- 反轉時間軸按鈕 -->
                     <button @click="toggleTimeline" class="btn btn-sm btn-outline" title="反轉時間軸">
