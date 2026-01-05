@@ -678,11 +678,16 @@ watch(() => props.config, () => {
                             <!-- 卡片背景 -->
                             <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
 
-                            <!-- 單行顯示：輸入法名 作者名 | 年份 -->
-                            <text :x="10" :y="28" class="node-compact-text" text-anchor="start"
+                            <!-- 兩行顯示：第一行名稱，第二行作者和日期 -->
+                            <!-- 第一行：輸入法名 -->
+                            <text :x="10" :y="16" class="node-name" text-anchor="start" shape-rendering="crispEdges"
+                                text-rendering="geometricPrecision">
+                                {{ node.schema.name }}
+                            </text>
+                            <!-- 第二行：作者 | 日期 -->
+                            <text :x="10" :y="32" class="node-compact-text" text-anchor="start"
                                 shape-rendering="crispEdges" text-rendering="geometricPrecision">
-                                <tspan class="node-name">{{ node.schema.name }}</tspan>
-                                <tspan class="node-author" dx="8">{{ node.schema.authors.join(' ') }}</tspan>
+                                <tspan class="node-author">{{ node.schema.authors.join(' ') }}</tspan>
                                 <tspan class="node-separator" dx="6"> </tspan>
                                 <tspan class="node-date" dx="6">{{ formatDate(node.schema.date) }}</tspan>
                             </text>
@@ -701,11 +706,16 @@ watch(() => props.config, () => {
                             <!-- 卡片背景 -->
                             <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
 
-                            <!-- 單行顯示：輸入法名 作者名 | 年份 -->
-                            <text :x="10" :y="28" class="node-compact-text" text-anchor="start"
+                            <!-- 兩行顯示：第一行名稱，第二行作者和日期 -->
+                            <!-- 第一行：輸入法名 -->
+                            <text :x="10" :y="16" class="node-name" text-anchor="start" shape-rendering="crispEdges"
+                                text-rendering="geometricPrecision">
+                                {{ node.schema.name }}
+                            </text>
+                            <!-- 第二行：作者 | 日期 -->
+                            <text :x="10" :y="32" class="node-compact-text" text-anchor="start"
                                 shape-rendering="crispEdges" text-rendering="geometricPrecision">
-                                <tspan class="node-name">{{ node.schema.name }}</tspan>
-                                <tspan class="node-author" dx="8">{{ node.schema.authors.join(' ') }}</tspan>
+                                <tspan class="node-author">{{ node.schema.authors.join(' ') }}</tspan>
                                 <tspan class="node-separator" dx="6"> </tspan>
                                 <tspan class="node-date" dx="6">{{ formatDate(node.schema.date) }}</tspan>
                             </text>
@@ -723,11 +733,16 @@ watch(() => props.config, () => {
                             <!-- 卡片背景 -->
                             <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
 
-                            <!-- 單行顯示：輸入法名 作者名 | 年份 -->
-                            <text :x="10" :y="28" class="node-compact-text" text-anchor="start"
+                            <!-- 兩行顯示：第一行名稱，第二行作者和日期 -->
+                            <!-- 第一行：輸入法名 -->
+                            <text :x="10" :y="16" class="node-name" text-anchor="start" shape-rendering="crispEdges"
+                                text-rendering="geometricPrecision">
+                                {{ node.schema.name }}
+                            </text>
+                            <!-- 第二行：作者 | 日期 -->
+                            <text :x="10" :y="32" class="node-compact-text" text-anchor="start"
                                 shape-rendering="crispEdges" text-rendering="geometricPrecision">
-                                <tspan class="node-name">{{ node.schema.name }}</tspan>
-                                <tspan class="node-author" dx="8">{{ node.schema.authors.join(' ') }}</tspan>
+                                <tspan class="node-author">{{ node.schema.authors.join(' ') }}</tspan>
                                 <tspan class="node-separator" dx="6"> </tspan>
                                 <tspan class="node-date" dx="6">{{ formatDate(node.schema.date) }}</tspan>
                             </text>

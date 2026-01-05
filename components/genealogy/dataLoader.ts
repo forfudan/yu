@@ -293,6 +293,7 @@ export function generateYearLabels(
  * @param yearSpacingMap 年份間距映射表
  * @param baseSpacing 基礎間距
  * @param schemaSpacing 每個輸入法的間距
+ * @param schemas 所有輸入法數據（用於計算該年的輸入法數量）
  * @returns Y坐標
  */
 export function calculateYPosition(
@@ -300,7 +301,8 @@ export function calculateYPosition(
     minYear: number,
     yearSpacingMap: Map<number, number>,
     baseSpacing: number = 30,
-    schemaSpacing: number = 90
+    schemaSpacing: number = 90,
+    schemas?: SchemaData[]
 ): number {
     const year = parseYear(schema.date)
     const date = parseDate(schema.date)
@@ -315,8 +317,17 @@ export function calculateYPosition(
     const dateOffset = date.getTime() - startOfYear.getTime()
     const yearProgress = dateOffset / yearDuration
 
-    // 年內的高度分配
-    const yearHeight = baseSpacing + schemaSpacing
+    // 計算該年的實際高度分配
+    let yearHeight = baseSpacing + schemaSpacing
+    if (schemas) {
+        // 統計該年有多少個輸入法
+        const countInYear = schemas.filter(s => parseYear(s.date) === year).length
+        if (countInYear > 0) {
+            yearHeight = baseSpacing + countInYear * schemaSpacing
+        }
+    }
+
+    // 年內的Y坐標 = 年起始Y + (年內進度 * 年高度)
     const y = yearY + yearProgress * yearHeight
 
     return y

@@ -103,7 +103,7 @@ export function calculateLayout(
     // 計算每個輸入法的Y坐標和寬度
     const schemasWithY = schemas.map(schema => ({
         schema,
-        y: calculateYPosition(schema, minYear, yearSpacingMap, baseSpacing, schemaSpacing),
+        y: calculateYPosition(schema, minYear, yearSpacingMap, baseSpacing, schemaSpacing, schemas),
         width: calculateCardWidth(schema)  // 根據內容計算寬度
     }))
 
