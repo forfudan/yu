@@ -308,6 +308,45 @@ function handleCardHover(schemaId: string | null) {
     hoveredSchemaId.value = schemaId
 }
 
+// 計算文字寬度（考慮中英文混合）
+function getTextWidth(text: string): number {
+    let width = 0
+    for (let i = 0; i < text.length; i++) {
+        const char = text.charCodeAt(i)
+        // 中文字符（CJK统一汉字）宽度约为英文的2倍
+        if ((char >= 0x4E00 && char <= 0x9FFF) ||
+            (char >= 0x3400 && char <= 0x4DBF) ||
+            (char >= 0x20000 && char <= 0x2A6DF)) {
+            width += 12  // 中文字符宽度
+        } else {
+            width += 6.5  // 英文字符宽度
+        }
+    }
+    return width
+}
+
+// 計算連接線中點位置
+function getConnectionMidpoint(connection: Connection, nodes: Map<string, LayoutNode>): string {
+    const fromNode = nodes.get(connection.from)
+    const toNode = nodes.get(connection.to)
+
+    if (!fromNode || !toNode) {
+        return 'translate(0, 0)'
+    }
+
+    // 計算兩個節點的中心點
+    const fromX = fromNode.x + fromNode.width / 2
+    const fromY = fromNode.y
+    const toX = toNode.x + toNode.width / 2
+    const toY = toNode.y + toNode.height
+
+    // 中點位置
+    const midX = (fromX + toX) / 2
+    const midY = (fromY + toY) / 2
+
+    return `translate(${midX}, ${midY})`
+}
+
 // 反轉時間軸
 function toggleTimeline() {
     if (config.value.reverseTimeline !== undefined) {
@@ -429,19 +468,37 @@ watch(() => props.config, () => {
 
                     <!-- 連接線（在節點下方） -->
                     <g class="connections">
-                        <path v-for="({ connection, path }, index) in visibleConnections"
-                            :key="`${connection.from}-${connection.to}-${connection.type}`" :d="path"
-                            :stroke="getConnectionColor(connection, isDark ? 'dark' : 'light')" :stroke-width="getConnectionStrokeWidth(
-                                connection,
-                                focusedSchemaId === connection.from || focusedSchemaId === connection.to
-                            )" fill="none" :marker-end="`url(#arrow-${connection.type})`" :class="{
-                                'connection-line': true,
-                                [`connection-${connection.type}`]: true,
-                                'connection-focused': focusedSchemaId === connection.from || focusedSchemaId === connection.to,
-                                'connection-dimmed': focusedSchemaId && focusedSchemaId !== connection.from && focusedSchemaId !== connection.to
-                            }">
-                            <title>{{ connection.label }}</title>
-                        </path>
+                        <g v-for="({ connection, path }, index) in visibleConnections"
+                            :key="`${connection.from}-${connection.to}-${connection.type}-${focusedSchemaId || 'none'}`">
+                            <!-- 連接線路徑 -->
+                            <path :d="path" :stroke="getConnectionColor(connection, isDark ? 'dark' : 'light')"
+                                :stroke-width="getConnectionStrokeWidth(
+                                    connection,
+                                    focusedSchemaId === connection.from
+                                )" fill="none" :marker-end="`url(#arrow-${connection.type})`" :class="{
+                                    'connection-line': true,
+                                    [`connection-${connection.type}`]: true,
+                                    'connection-focused': focusedSchemaId === connection.from,
+                                    'connection-dimmed': focusedSchemaId && focusedSchemaId !== connection.from
+                                }">
+                                <title>{{ connection.label }}</title>
+                            </path>
+
+                            <!-- Focus 狀態：在連接線上顯示特徵標籤（水平方框） -->
+                            <g v-if="focusedSchemaId === connection.from">
+                                <!-- 計算連接線中點位置 -->
+                                <g :transform="getConnectionMidpoint(connection, nodesMap)">
+                                    <!-- 背景圆角方框 - 使用計算的文字寬度 -->
+                                    <rect :x="-getTextWidth(connection.label) / 2 - 8" :y="-12"
+                                        :width="getTextWidth(connection.label) + 16" :height="18"
+                                        class="connection-label-bg" rx="4" />
+                                    <!-- 標籤文字 -->
+                                    <text class="connection-label" text-anchor="middle" y="2">
+                                        {{ connection.label }}
+                                    </text>
+                                </g>
+                            </g>
+                        </g>
                     </g>
 
                     <!-- 年份標籤 -->
@@ -462,8 +519,10 @@ watch(() => props.config, () => {
                                 focused: focusedSchemaId === node.schema.id,
                                 hovered: hoveredSchemaId === node.schema.id
                             }">
-                            <!-- 卡片背景 -->
-                            <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
+                            <!-- 卡片背景（focused時會變大） -->
+                            <rect :width="focusedSchemaId === node.schema.id ? node.width * 1.3 : node.width"
+                                :height="focusedSchemaId === node.schema.id ? node.height * 2 : node.height"
+                                class="node-bg" rx="8" />
 
                             <!-- 單行顯示：輸入法名 作者名 | 年份 -->
                             <text :x="10" :y="28" class="node-compact-text" text-anchor="start"
@@ -473,18 +532,20 @@ watch(() => props.config, () => {
                                 <tspan class="node-separator" dx="6"> </tspan>
                                 <tspan class="node-date" dx="6">{{ formatDate(node.schema.date) }}</tspan>
                             </text>
+
+                            <!-- Focused 狀態：顯示特徵標籤 -->
+                            <foreignObject v-if="focusedSchemaId === node.schema.id" :x="5" :y="48"
+                                :width="node.width * 1.3 - 10" :height="node.height * 2 - 55">
+                                <div xmlns="http://www.w3.org/1999/xhtml" class="feature-tags-container">
+                                    <span v-for="feature in node.schema.features" :key="feature"
+                                        class="feature-tag-badge">
+                                        {{ feature }}
+                                    </span>
+                                </div>
+                            </foreignObject>
                         </g>
                     </g>
                 </svg>
-            </div>
-
-            <!-- 側邊信息面板 -->
-            <div v-if="focusedSchemaId" class="info-panel">
-                <div class="info-content">
-                    <h3>詳細信息</h3>
-                    <button @click="focusedSchemaId = null" class="close-btn">✕</button>
-                    <!-- 詳細內容後續添加 -->
-                </div>
             </div>
         </div>
     </div>
@@ -741,46 +802,68 @@ watch(() => props.config, () => {
     stroke: rgba(134, 239, 172, 0.6);
 }
 
-/* 信息面板 */
-.info-panel {
-    position: fixed;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 300px;
-    background: var(--vp-c-bg, #ffffff);
-    border-left: 1px solid var(--vp-c-divider, #e2e8f0);
-    padding: 1rem;
-    overflow-y: auto;
-    z-index: 1000;
+/* 連接線標籤背景框 */
+.connection-label-bg {
+    fill: var(--vp-c-bg, #ffffff);
+    stroke: var(--vp-c-brand, rgb(99, 102, 241));
+    stroke-width: 1.5;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in 0.2s forwards;
 }
 
-:global(.dark) .info-panel {
-    background: var(--vp-c-bg, #1f2937);
-    border-left-color: var(--vp-c-divider, #374151);
+:global(.dark) .connection-label-bg {
+    fill: var(--vp-c-bg-soft, #1e293b);
+    stroke: rgb(165, 180, 252);
 }
 
-.info-content {
-    position: relative;
+/* 連接線標籤文字 */
+.connection-label {
+    fill: var(--vp-c-brand, rgb(99, 102, 241));
+    font-size: 11px;
+    font-weight: 600;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in 0.2s forwards;
 }
 
-.close-btn {
-    position: absolute;
-    right: 0;
-    top: 0;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--vp-c-text-2, #64748b);
+:global(.dark) .connection-label {
+    fill: rgb(165, 180, 252);
 }
 
-.close-btn:hover {
-    color: var(--vp-c-text-1, #1e293b);
+/* 特徵標籤容器 - 橫向排列自動換行 */
+.feature-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 4px;
+    animation: fadeIn 0.3s ease-in forwards;
 }
 
-:global(.dark) .close-btn:hover {
-    color: var(--vp-c-text-1, #f1f5f9);
+.feature-tag-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    background: var(--vp-c-brand-soft, rgba(99, 102, 241, 0.1));
+    color: var(--vp-c-brand, rgb(99, 102, 241));
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+:global(.dark) .feature-tag-badge {
+    background: rgba(165, 180, 252, 0.15);
+    color: rgb(165, 180, 252);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* 表單控件樣式 */
@@ -927,10 +1010,6 @@ watch(() => props.config, () => {
     .toolbar-left,
     .toolbar-right {
         justify-content: space-between;
-    }
-
-    .info-panel {
-        width: 100%;
     }
 }
 </style>
