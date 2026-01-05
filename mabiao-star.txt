@@ -59037,7 +59037,6 @@ kdd	へ
 kdd	ヘ
 kdd	・
 kdd	ㆍ
-kdd	·
 kddc	𫏽
 kddj	𡦫
 kddj	𨐿
@@ -69120,7 +69119,6 @@ lvv	ᄆ
 lvv	ᆷ
 lvv	ㅁ
 lvv	𘯏
-lvv	□
 lvvc	嘐
 lvvc	𥜿
 lvvc	𡁕
@@ -100190,7 +100188,6 @@ sii	𛁔
 sii	𘠘
 sii	𘱌
 sii	
-sii	×
 siia	𦾵
 siib	䩳
 siie	𦺺

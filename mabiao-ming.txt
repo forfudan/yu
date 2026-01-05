@@ -109700,7 +109700,6 @@ dke	ᄆ
 dke	ᆷ
 dke	ㅁ
 dke	𘯏
-dke	□
 dkfcc	믂
 dkfcd	믆
 dkfcf	믘
@@ -119238,7 +119237,6 @@ ndi	へ
 ndi	ヘ
 ndi	・
 ndi	ㆍ
-ndi	·
 ndlgi	ㆎ
 ndmtg	㌶
 ndqji	𘱚
@@ -122176,7 +122174,6 @@ vi	𘠘
 vi	𘱌
 vi	
 vi	
-vi	×
 vjbbi	煮
 vjbbi	煮
 vjbbu	좌

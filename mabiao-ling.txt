@@ -724,7 +724,7 @@ syh	鱅
 syk	鮟
 syl	鱧
 sym	䲁
-syn	鱠
+syn	鰮
 syp	鮈
 syr	鮎
 sys	鱚
@@ -103053,7 +103053,6 @@ bi	𘱌
 bi	
 bi	
 bi	
-bi	×
 bjbj	
 bjcb	튩
 bjcb	튵
@@ -107509,7 +107508,6 @@ do	ㅇ
 do	ㅿ
 do	𘯏
 do	
-do	□
 dpa	⾢
 dpfy	𛂨
 dpi	⽪
@@ -118354,7 +118352,6 @@ tu	へ
 tu	ヘ
 tu	・
 tu	ㆍ
-tu	·
 tvu	🈨
 twi	ぅ
 twi	う

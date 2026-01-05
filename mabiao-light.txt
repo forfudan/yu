@@ -117636,7 +117636,6 @@ lvvv	ᄆ
 lvvv	ᆷ
 lvvv	ㅁ
 lvvv	𘯏
-lvvv	□
 lvwl	𲗂
 lvxm	𲘈
 lwhg	𲔳
@@ -118418,7 +118417,6 @@ oddd	へ
 oddd	ヘ
 oddd	・
 oddd	ㆍ
-oddd	·
 odfl	𲜐
 odkc	𲾸
 odlh	𲚢
@@ -128852,7 +128850,6 @@ wlll	ㆫ
 wlll	メ
 wlll	𘠘
 wlll	𘱌
-wlll	×
 wlll	𲺠
 wlln	𳃹
 wlls	𳌼

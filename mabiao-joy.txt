@@ -9438,7 +9438,6 @@ ci	メ
 ci	𘠘
 ci	𘱌
 ci	
-ci	×
 ciae	𥘩
 ciae	𬣝
 ciae	𮹁
@@ -41108,7 +41107,6 @@ id	へ
 id	ヘ
 id	・
 id	ㆍ
-id	·
 ida	蛹
 idaa	䗋
 idaa	𰍇
@@ -57337,7 +57335,6 @@ kv	ᄆ
 kv	ᆷ
 kv	ㅁ
 kv	𘯏
-kv	□
 kvad	喛
 kvag	𠰑
 kvag	𠸻
