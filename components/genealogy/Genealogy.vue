@@ -231,6 +231,29 @@ const visibleConnections = computed(() => {
     )
 })
 
+// 計算屬性：合併相同連接的標籤
+const groupedConnections = computed(() => {
+    const grouped = new Map<string, { connection: Connection, path: string, labels: string[] }>()
+
+    visibleConnections.value.forEach(({ connection, path }) => {
+        // 使用 from-to-type 作為唯一鍵
+        const key = `${connection.from}-${connection.to}-${connection.type}`
+
+        if (!grouped.has(key)) {
+            grouped.set(key, {
+                connection,
+                path,
+                labels: [connection.label]
+            })
+        } else {
+            // 如果已存在，添加標籤
+            grouped.get(key)!.labels.push(connection.label)
+        }
+    })
+
+    return Array.from(grouped.values())
+})
+
 // 計算屬性：連接統計
 const connectionStats = computed(() => {
     if (connections.value.length === 0) {
@@ -468,7 +491,7 @@ watch(() => props.config, () => {
 
                     <!-- 連接線（在節點下方） -->
                     <g class="connections">
-                        <g v-for="({ connection, path }, index) in visibleConnections"
+                        <g v-for="({ connection, path, labels }, index) in groupedConnections"
                             :key="`${connection.from}-${connection.to}-${connection.type}-${focusedSchemaId || 'none'}`">
                             <!-- 連接線路徑 -->
                             <path :d="path" :stroke="getConnectionColor(connection, isDark ? 'dark' : 'light')"
@@ -481,7 +504,7 @@ watch(() => props.config, () => {
                                     'connection-focused': focusedSchemaId === connection.from,
                                     'connection-dimmed': focusedSchemaId && focusedSchemaId !== connection.from
                                 }">
-                                <title>{{ connection.label }}</title>
+                                <title>{{ labels.join(' ') }}</title>
                             </path>
 
                             <!-- Focus 狀態：在連接線上顯示特徵標籤（水平方框） -->
@@ -489,12 +512,12 @@ watch(() => props.config, () => {
                                 <!-- 計算連接線中點位置 -->
                                 <g :transform="getConnectionMidpoint(connection, nodesMap)">
                                     <!-- 背景圆角方框 - 使用計算的文字寬度 -->
-                                    <rect :x="-getTextWidth(connection.label) / 2 - 8" :y="-12"
-                                        :width="getTextWidth(connection.label) + 16" :height="18"
+                                    <rect :x="-getTextWidth(labels.join(' ')) / 2 - 8" :y="-12"
+                                        :width="getTextWidth(labels.join(' ')) + 16" :height="18"
                                         class="connection-label-bg" rx="4" />
                                     <!-- 標籤文字 -->
                                     <text class="connection-label" text-anchor="middle" y="2">
-                                        {{ connection.label }}
+                                        {{ labels.join(' ') }}
                                     </text>
                                 </g>
                             </g>
