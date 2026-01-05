@@ -85,7 +85,11 @@ const selectedFeatures = ref<string[]>([])
 const selectedAuthors = ref<string[]>([])
 const searchQuery = ref('')
 
-// 连接关系狀態
+// 下拉菜單狀態
+const showFeatureDropdown = ref(false)
+const showAuthorDropdown = ref(false)
+
+// 連接關係狀態
 const connections = ref<Connection[]>([])
 const connectionFilterType = ref<'feature' | 'author' | null>(null)
 
@@ -520,6 +524,26 @@ function toggleTimeline() {
     }
 }
 
+// 切換特徵選擇
+function toggleFeature(feature: string) {
+    const index = selectedFeatures.value.indexOf(feature)
+    if (index > -1) {
+        selectedFeatures.value.splice(index, 1)
+    } else {
+        selectedFeatures.value.push(feature)
+    }
+}
+
+// 切換作者選擇
+function toggleAuthor(author: string) {
+    const index = selectedAuthors.value.indexOf(author)
+    if (index > -1) {
+        selectedAuthors.value.splice(index, 1)
+    } else {
+        selectedAuthors.value.push(author)
+    }
+}
+
 // 組件掛載時加載數據
 onMounted(() => {
     loadData()
@@ -552,59 +576,61 @@ watch(() => props.config, () => {
 
         <!-- 主內容 -->
         <div v-else class="genealogy-content">
-            <!-- 工具欄 -->
-            <div class="toolbar">
-                <div class="toolbar-left">
-                    <h2 class="text-xl font-bold text-indigo-800 dark:text-indigo-300">
-                        輸入法源流圖
-                    </h2>
-                    <span class="text-sm text-gray-500 dark:text-gray-400">
-                        共 {{ filteredSchemas.length }} 個輸入法
-                        ({{ minYear }}-{{ maxYear }})
-                    </span>
-                    <span v-if="layoutNodes.length > 0" class="text-xs px-2 py-1 rounded" :class="{
-                        'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200': layoutQuality >= 90,
-                        'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200': layoutQuality >= 70 && layoutQuality < 90,
-                        'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200': layoutQuality < 70
-                    }" title="佈局質量分數">
-                        佈局: {{ Math.round(layoutQuality) }}分
-                    </span>
-                </div>
+            <!-- 工具欄 - 簡化單行版本 -->
+            <div class="toolbar-compact">
+                <!-- 統計信息 -->
+                <span class="text-sm text-gray-600 dark:text-gray-400">
+                    共 {{ filteredSchemas.length }} 個輸入法 ({{ minYear }}-{{ maxYear }})
+                </span>
 
-                <div class="toolbar-right">
-                    <!-- 搜索框 -->
-                    <input v-model="searchQuery" type="text" placeholder="搜索輸入法..."
-                        class="input input-sm input-bordered" />
-
-                    <!-- 連接類型篩選 -->
-                    <div class="btn-group btn-group-sm">
-                        <button class="btn btn-sm" :class="{ 'btn-active': connectionFilterType === null }"
-                            @click="connectionFilterType = null" title="顯示所有連接">
-                            全部
-                        </button>
-                        <button class="btn btn-sm" :class="{ 'btn-active': connectionFilterType === 'feature' }"
-                            @click="connectionFilterType = connectionFilterType === 'feature' ? null : 'feature'"
-                            title="只顯示特性繼承">
-                            特性
-                        </button>
-                        <button class="btn btn-sm" :class="{ 'btn-active': connectionFilterType === 'author' }"
-                            @click="connectionFilterType = connectionFilterType === 'author' ? null : 'author'"
-                            title="只顯示作者繼承">
-                            作者
-                        </button>
-                    </div>
-
-                    <!-- 佈局優化開關 -->
-                    <label class="flex items-center gap-2 cursor-pointer text-sm">
-                        <input v-model="useOptimization" type="checkbox" class="checkbox checkbox-sm" />
-                        <span class="text-gray-600 dark:text-gray-400">優化佈局</span>
-                    </label>
-
-                    <!-- 反轉時間軸按鈕 -->
-                    <button @click="toggleTimeline" class="btn btn-sm btn-outline" title="反轉時間軸">
-                        ⇅
+                <!-- 特徵篩選下拉菜單 -->
+                <div class="dropdown-wrapper">
+                    <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
+                        特徵
+                        <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length }}</span>
+                        <span class="arrow">▼</span>
                     </button>
+                    <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
+                        <div class="dropdown-header">
+                            <button @click="selectedFeatures = []" class="clear-btn">清除</button>
+                        </div>
+                        <label v-for="feature in allFeatures" :key="feature" class="dropdown-item">
+                            <input type="checkbox" :checked="selectedFeatures.includes(feature)"
+                                @change="toggleFeature(feature)" />
+                            <span>{{ feature }}</span>
+                        </label>
+                    </div>
                 </div>
+
+                <!-- 作者篩選下拉菜單 -->
+                <div class="dropdown-wrapper">
+                    <button @click="showAuthorDropdown = !showAuthorDropdown" class="dropdown-trigger">
+                        作者
+                        <span v-if="selectedAuthors.length > 0" class="badge">{{ selectedAuthors.length }}</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div v-if="showAuthorDropdown" class="dropdown-menu" @click.stop>
+                        <div class="dropdown-header">
+                            <button @click="selectedAuthors = []" class="clear-btn">清除</button>
+                        </div>
+                        <label v-for="author in allAuthors" :key="author" class="dropdown-item">
+                            <input type="checkbox" :checked="selectedAuthors.includes(author)"
+                                @change="toggleAuthor(author)" />
+                            <span>{{ author }}</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 時間倒序按鈕 -->
+                <button @click="toggleTimeline" class="btn-compact" :class="{ 'active': config.reverseTimeline }"
+                    title="時間倒序">
+                    時間倒序
+                </button>
+            </div>
+
+            <!-- 點擊外部關閉下拉菜單 -->
+            <div v-if="showFeatureDropdown || showAuthorDropdown" class="dropdown-backdrop"
+                @click="showFeatureDropdown = false; showAuthorDropdown = false">
             </div>
 
             <!-- 畫布區域 -->
@@ -792,26 +818,234 @@ watch(() => props.config, () => {
     gap: 1rem;
 }
 
-.toolbar {
+/* 簡化工具欄 - 單行緊湊版本 */
+.toolbar-compact {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
     background: var(--vp-c-bg-soft, #f8fafc);
     border-radius: 0.5rem;
-    flex-wrap: wrap;
-    gap: 1rem;
+    position: relative;
 }
 
-:global(.dark) .toolbar {
+:global(.dark) .toolbar-compact {
     background: var(--vp-c-bg-soft, #374151);
 }
 
-.toolbar-left,
-.toolbar-right {
+/* 下拉菜單容器 */
+.dropdown-wrapper {
+    position: relative;
+}
+
+/* 下拉觸發按鈕 */
+.dropdown-trigger {
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--vp-c-divider, #e2e8f0);
+    border-radius: 0.375rem;
+    background: var(--vp-c-bg, #ffffff);
+    color: var(--vp-c-text-1, #1e293b);
+    font-size: 0.875rem;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
+    transition: all 0.2s;
+}
+
+.dropdown-trigger:hover {
+    background: var(--vp-c-bg-soft, #f1f5f9);
+}
+
+:global(.dark) .dropdown-trigger {
+    border-color: var(--vp-c-divider, #374151);
+    background: var(--vp-c-bg, #1f2937);
+    color: var(--vp-c-text-1, #f1f5f9);
+}
+
+:global(.dark) .dropdown-trigger:hover {
+    background: var(--vp-c-bg-soft, #374151);
+}
+
+.dropdown-trigger .arrow {
+    font-size: 0.7rem;
+    opacity: 0.6;
+}
+
+.dropdown-trigger .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    padding: 0 0.375rem;
+    background: rgb(99, 102, 241);
+    color: white;
+    border-radius: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+:global(.dark) .dropdown-trigger .badge {
+    background: rgb(165, 180, 252);
+    color: #1e293b;
+}
+
+/* 下拉菜單面板 */
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.25rem);
+    left: 0;
+    min-width: 180px;
+    max-height: 300px;
+    overflow-y: auto;
+    background: var(--vp-c-bg, #ffffff);
+    border: 1px solid var(--vp-c-divider, #e2e8f0);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    z-index: 1000;
+}
+
+:global(.dark) .dropdown-menu {
+    background: var(--vp-c-bg, #1f2937);
+    border-color: var(--vp-c-divider, #374151);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-header {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--vp-c-divider, #e2e8f0);
+    display: flex;
+    justify-content: flex-end;
+}
+
+:global(.dark) .dropdown-header {
+    border-color: var(--vp-c-divider, #374151);
+}
+
+.clear-btn {
+    padding: 0.25rem 0.5rem;
+    background: transparent;
+    border: none;
+    color: rgb(99, 102, 241);
+    font-size: 0.75rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+.clear-btn:hover {
+    background: rgba(99, 102, 241, 0.1);
+}
+
+:global(.dark) .clear-btn {
+    color: rgb(165, 180, 252);
+}
+
+:global(.dark) .clear-btn:hover {
+    background: rgba(165, 180, 252, 0.1);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+    background: var(--vp-c-bg-soft, #f1f5f9);
+}
+
+:global(.dark) .dropdown-item:hover {
+    background: var(--vp-c-bg-soft, #374151);
+}
+
+.dropdown-item input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.dropdown-item span {
+    font-size: 0.875rem;
+    color: var(--vp-c-text-1, #1e293b);
+}
+
+:global(.dark) .dropdown-item span {
+    color: var(--vp-c-text-1, #f1f5f9);
+}
+
+/* 下拉菜單背景遮罩 */
+.dropdown-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+
+/* 緊湊下拉選擇（已棄用） */
+.select-compact {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--vp-c-divider, #e2e8f0);
+    border-radius: 0.375rem;
+    background: var(--vp-c-bg, #ffffff);
+    color: var(--vp-c-text-1, #1e293b);
+    font-size: 0.875rem;
+    outline: none;
+    cursor: pointer;
+    min-width: 80px;
+    max-width: 150px;
+}
+
+.select-compact:focus {
+    border-color: rgb(99, 102, 241);
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
+:global(.dark) .select-compact {
+    border-color: var(--vp-c-divider, #374151);
+    background: var(--vp-c-bg, #1f2937);
+    color: var(--vp-c-text-1, #f1f5f9);
+}
+
+/* 緊湊按鈕 */
+.btn-compact {
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--vp-c-divider, #e2e8f0);
+    border-radius: 0.375rem;
+    background: var(--vp-c-bg, #ffffff);
+    color: var(--vp-c-text-1, #1e293b);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-compact:hover {
+    background: var(--vp-c-bg-soft, #f1f5f9);
+}
+
+.btn-compact.active {
+    background: rgb(99, 102, 241);
+    color: white;
+    border-color: rgb(99, 102, 241);
+}
+
+:global(.dark) .btn-compact {
+    border-color: var(--vp-c-divider, #374151);
+    background: var(--vp-c-bg, #1f2937);
+    color: var(--vp-c-text-1, #f1f5f9);
+}
+
+:global(.dark) .btn-compact:hover {
+    background: var(--vp-c-bg-soft, #374151);
+}
+
+:global(.dark) .btn-compact.active {
+    background: rgb(165, 180, 252);
+    color: #1e293b;
+    border-color: rgb(165, 180, 252);
 }
 
 .canvas-wrapper {
