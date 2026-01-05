@@ -23,7 +23,7 @@ font,ma,pinyin
 ,Ci,
 讠,Ci,yán = ián -> i
 咼,Ck,Kuǎi -> k ㊟古音
-冎,Ck,
+,Ck,
 來,Cl,Lái -> l
 馬,Cm,Mǎ -> m
 ,Cm,
@@ -109,7 +109,7 @@ font,ma,pinyin
 ,Hl,
 欠,Hq,Qiān -> q
 士,Hs,SHēng -> s
-龶,Hs,SHēng -> s
+,Hs,SHēng -> s
 土,Ht,Tǔ -> t
 ,Hv,Ø -> v ㊟無讀音或生僻部首
 頁,Hx,xiè -> x ㊟取古音
@@ -243,7 +243,7 @@ font,ma,pinyin
 乛,Oi,
 丌,Oj,Jì -> j
 冖,Om,Miǎn -> m
-⺈,Om,
+,Om,
 丬,Oq,Qiáng -> q
 上,Os,SHàng -> s
 ,Os,
