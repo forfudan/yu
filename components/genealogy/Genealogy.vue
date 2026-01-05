@@ -89,6 +89,25 @@ const searchQuery = ref('')
 const connections = ref<Connection[]>([])
 const connectionFilterType = ref<'feature' | 'author' | null>(null)
 
+// 主题检测
+const isDark = ref(false)
+const updateTheme = () => {
+    if (typeof document !== 'undefined') {
+        isDark.value = document.documentElement.classList.contains('dark')
+        console.log('Theme updated:', isDark.value ? 'dark' : 'light', document.documentElement.className)
+    }
+}
+
+onMounted(() => {
+    updateTheme()
+    // 监听主题变化
+    const observer = new MutationObserver(updateTheme)
+    observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['class']
+    })
+})
+
 // 計算屬性：過濾後的輸入法
 const filteredSchemas = computed(() => {
     let result = schemas.value
@@ -398,11 +417,13 @@ watch(() => props.config, () => {
                     <defs>
                         <marker id="arrow-feature" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6"
                             markerHeight="6" orient="auto">
-                            <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(99, 102, 241, 0.6)" />
+                            <path d="M 0 0 L 10 5 L 0 10 z"
+                                :fill="isDark ? 'rgba(165, 180, 252, 0.6)' : 'rgba(99, 102, 241, 0.6)'" />
                         </marker>
                         <marker id="arrow-author" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6"
                             orient="auto">
-                            <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(34, 197, 94, 0.6)" />
+                            <path d="M 0 0 L 10 5 L 0 10 z"
+                                :fill="isDark ? 'rgba(134, 239, 172, 0.6)' : 'rgba(34, 197, 94, 0.6)'" />
                         </marker>
                     </defs>
 
@@ -410,7 +431,7 @@ watch(() => props.config, () => {
                     <g class="connections">
                         <path v-for="({ connection, path }, index) in visibleConnections"
                             :key="`${connection.from}-${connection.to}-${connection.type}`" :d="path"
-                            :stroke="getConnectionColor(connection, 'light')" :stroke-width="getConnectionStrokeWidth(
+                            :stroke="getConnectionColor(connection, isDark ? 'dark' : 'light')" :stroke-width="getConnectionStrokeWidth(
                                 connection,
                                 focusedSchemaId === connection.from || focusedSchemaId === connection.to
                             )" fill="none" :marker-end="`url(#arrow-${connection.type})`" :class="{
@@ -512,10 +533,14 @@ watch(() => props.config, () => {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background: var(--fallback-b2, oklch(var(--b2)));
+    background: var(--vp-c-bg-soft, #f8fafc);
     border-radius: 0.5rem;
     flex-wrap: wrap;
     gap: 1rem;
+}
+
+:global(.dark) .toolbar {
+    background: var(--vp-c-bg-soft, #374151);
 }
 
 .toolbar-left,
@@ -527,9 +552,14 @@ watch(() => props.config, () => {
 
 .canvas-wrapper {
     overflow: auto;
-    border: 1px solid var(--fallback-bc, oklch(var(--bc)/0.2));
+    border: 1px solid var(--vp-c-divider, #e2e8f0);
     border-radius: 0.5rem;
-    background: var(--fallback-b1, oklch(var(--b1)));
+    background: var(--vp-c-bg, #ffffff);
+}
+
+:global(.dark) .canvas-wrapper {
+    border-color: var(--vp-c-divider, #374151);
+    background: var(--vp-c-bg, #1f2937);
 }
 
 .genealogy-svg {
@@ -538,15 +568,23 @@ watch(() => props.config, () => {
 
 /* 時間軸樣式 */
 .timeline-axis {
-    stroke: var(--fallback-bc, oklch(var(--bc)/0.3));
+    stroke: var(--vp-c-divider, #cbd5e1);
     stroke-width: 2;
 }
 
+:global(.dark) .timeline-axis {
+    stroke: var(--vp-c-divider, #4b5563);
+}
+
 .year-label-text {
-    fill: var(--fallback-bc, oklch(var(--bc)/0.6));
+    fill: var(--vp-c-text-2, #64748b);
     font-size: 12px;
     font-weight: 600;
     stroke: none;
+}
+
+:global(.dark) .year-label-text {
+    fill: var(--vp-c-text-2, #9ca3af);
 }
 
 /* 節點樣式 */
@@ -556,24 +594,26 @@ watch(() => props.config, () => {
 }
 
 .node-bg {
-    fill: var(--fallback-b2, oklch(var(--b2)));
+    fill: var(--vp-c-bg-soft, #f1f5f9);
     stroke: rgb(99, 102, 241);
     stroke-width: 2;
     transition: all 0.3s ease;
 }
 
 :global(.dark) .node-bg {
-    /* 使用主題默認色 */
+    fill: var(--vp-c-bg-soft, #1e293b);
+    stroke: rgb(165, 180, 252);
 }
 
 .schema-node.hovered .node-bg {
-    fill: var(--fallback-b3, oklch(var(--b3)));
+    fill: var(--vp-c-bg-elv, #e2e8f0);
     stroke-width: 3;
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
 
 :global(.dark) .schema-node.hovered .node-bg {
-    /* 使用主題默認色 */
+    fill: var(--vp-c-bg-elv, #334155);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
 }
 
 .schema-node.focused .node-bg {
@@ -584,7 +624,8 @@ watch(() => props.config, () => {
 }
 
 :global(.dark) .schema-node.focused .node-bg {
-    /* 使用主題默認色 */
+    fill: rgba(165, 180, 252, 0.1);
+    stroke: rgb(165, 180, 252);
 }
 
 /* 單行緊湊文字樣式 - 與字根圖保持一致 */
@@ -594,35 +635,35 @@ watch(() => props.config, () => {
 }
 
 .node-name {
-    fill: var(--fallback-nc, oklch(var(--nc)));
+    fill: var(--vp-c-text-1, #1e293b);
     font-weight: 600;
     font-size: 13px;
     stroke: none;
 }
 
 :global(.dark) .node-name {
-    fill: var(--fallback-nc, oklch(var(--nc)));
+    fill: var(--vp-c-text-1, #f1f5f9);
 }
 
 .node-author {
-    fill: var(--fallback-nc, oklch(var(--nc)/0.7));
+    fill: var(--vp-c-text-2, #475569);
     font-size: 11px;
     font-weight: 400;
     stroke: none;
 }
 
 :global(.dark) .node-author {
-    fill: var(--fallback-nc, oklch(var(--nc)/0.7));
+    fill: var(--vp-c-text-2, #cbd5e1);
 }
 
 .node-separator {
-    fill: var(--fallback-nc, oklch(var(--nc)/0.5));
+    fill: var(--vp-c-text-3, #94a3b8);
     font-size: 11px;
     stroke: none;
 }
 
 :global(.dark) .node-separator {
-    fill: var(--fallback-nc, oklch(var(--nc)/0.5));
+    fill: var(--vp-c-text-3, #64748b);
 }
 
 .node-date {
@@ -703,11 +744,16 @@ watch(() => props.config, () => {
     top: 0;
     bottom: 0;
     width: 300px;
-    background: var(--fallback-b1, oklch(var(--b1)));
-    border-left: 1px solid var(--fallback-bc, oklch(var(--bc)/0.2));
+    background: var(--vp-c-bg, #ffffff);
+    border-left: 1px solid var(--vp-c-divider, #e2e8f0);
     padding: 1rem;
     overflow-y: auto;
     z-index: 1000;
+}
+
+:global(.dark) .info-panel {
+    background: var(--vp-c-bg, #1f2937);
+    border-left-color: var(--vp-c-divider, #374151);
 }
 
 .info-content {
@@ -722,11 +768,149 @@ watch(() => props.config, () => {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--fallback-bc, oklch(var(--bc)/0.6));
+    color: var(--vp-c-text-2, #64748b);
 }
 
 .close-btn:hover {
-    color: var(--fallback-bc, oklch(var(--bc)));
+    color: var(--vp-c-text-1, #1e293b);
+}
+
+:global(.dark) .close-btn:hover {
+    color: var(--vp-c-text-1, #f1f5f9);
+}
+
+/* 表單控件樣式 */
+.input {
+    padding: 0.375rem 0.75rem;
+    border: 1px solid var(--vp-c-divider, #e2e8f0);
+    border-radius: 0.375rem;
+    background: var(--vp-c-bg, #ffffff);
+    color: var(--vp-c-text-1, #1e293b);
+    font-size: 0.875rem;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.input:focus {
+    border-color: rgb(99, 102, 241);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+:global(.dark) .input {
+    background: var(--vp-c-bg, #1f2937);
+    border-color: var(--vp-c-divider, #374151);
+    color: var(--vp-c-text-1, #f1f5f9);
+}
+
+:global(.dark) .input:focus {
+    border-color: rgb(165, 180, 252);
+    box-shadow: 0 0 0 3px rgba(165, 180, 252, 0.1);
+}
+
+.btn {
+    padding: 0.375rem 1rem;
+    border: 1px solid var(--vp-c-divider, #e2e8f0);
+    border-radius: 0.375rem;
+    background: var(--vp-c-bg, #ffffff);
+    color: var(--vp-c-text-1, #1e293b);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    background: var(--vp-c-bg-soft, #f8fafc);
+    border-color: var(--vp-c-brand, rgb(99, 102, 241));
+}
+
+.btn-active {
+    background: var(--vp-c-brand, rgb(99, 102, 241));
+    color: white;
+    border-color: var(--vp-c-brand, rgb(99, 102, 241));
+}
+
+.btn-outline {
+    border-color: var(--vp-c-brand, rgb(99, 102, 241));
+    color: var(--vp-c-brand, rgb(99, 102, 241));
+}
+
+.btn-outline:hover {
+    background: var(--vp-c-brand, rgb(99, 102, 241));
+    color: white;
+}
+
+:global(.dark) .btn {
+    background: var(--vp-c-bg, #1f2937);
+    border-color: var(--vp-c-divider, #374151);
+    color: var(--vp-c-text-1, #f1f5f9);
+}
+
+:global(.dark) .btn:hover {
+    background: var(--vp-c-bg-soft, #374151);
+    border-color: rgb(165, 180, 252);
+}
+
+:global(.dark) .btn-active {
+    background: rgb(165, 180, 252);
+    color: #1e293b;
+    border-color: rgb(165, 180, 252);
+}
+
+:global(.dark) .btn-outline {
+    border-color: rgb(165, 180, 252);
+    color: rgb(165, 180, 252);
+}
+
+:global(.dark) .btn-outline:hover {
+    background: rgb(165, 180, 252);
+    color: #1e293b;
+}
+
+.btn-group {
+    display: inline-flex;
+    border-radius: 0.375rem;
+    overflow: hidden;
+}
+
+.btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+}
+
+.btn-group .btn:first-child {
+    border-radius: 0.375rem 0 0 0.375rem;
+    margin-left: 0;
+}
+
+.btn-group .btn:last-child {
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.checkbox {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid var(--vp-c-divider, #cbd5e1);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    appearance: none;
+    background: var(--vp-c-bg, #ffffff);
+    transition: all 0.2s;
+}
+
+.checkbox:checked {
+    background: var(--vp-c-brand, rgb(99, 102, 241));
+    border-color: var(--vp-c-brand, rgb(99, 102, 241));
+}
+
+:global(.dark) .checkbox {
+    background: var(--vp-c-bg, #1f2937);
+    border-color: var(--vp-c-divider, #4b5563);
+}
+
+:global(.dark) .checkbox:checked {
+    background: rgb(165, 180, 252);
+    border-color: rgb(165, 180, 252);
 }
 
 /* 響應式 */
