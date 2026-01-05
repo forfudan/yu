@@ -64,31 +64,31 @@ function calculateFeatureConnections(schemas: SchemaData[]): Connection[] {
 
 /**
  * 计算作者继承关系
- * 如果一个作者创作了多个输入法，将它们按时间顺序链接
+ * 如果一个作者创作了多个输入法，将它们连接到该作者的第一个作品
  */
 function calculateAuthorConnections(schemas: SchemaData[]): Connection[] {
     const connections: Connection[] = []
 
-    // 作者最近作品的映射：author -> schemaId
-    const authorLatest = new Map<string, string>()
+    // 作者第一个作品的映射：author -> schemaId
+    const authorFirst = new Map<string, string>()
 
     // 按时间顺序遍历
     for (const schema of schemas) {
         for (const author of schema.authors) {
-            const previous = authorLatest.get(author)
+            const first = authorFirst.get(author)
 
-            if (previous && previous !== schema.id) {
-                // 该作者之前有作品，创建继承连接
+            if (!first) {
+                // 这是该作者的第一个作品，记录下来
+                authorFirst.set(author, schema.id)
+            } else if (first !== schema.id) {
+                // 该作者已有作品，连接到第一个作品
                 connections.push({
                     from: schema.id,
-                    to: previous,
+                    to: first,
                     type: 'author' as ConnectionType,
                     label: author
                 })
             }
-
-            // 更新该作者的最新作品
-            authorLatest.set(author, schema.id)
         }
     }
 
