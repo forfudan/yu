@@ -213,6 +213,44 @@ const nodesMap = computed(() => {
     return map
 })
 
+// 計算屬性：獲取 focused 節點的父節點 ID 集合
+const parentNodeIds = computed(() => {
+    if (!focusedSchemaId.value) return new Set<string>()
+
+    const parents = new Set<string>()
+    connections.value.forEach(conn => {
+        if (conn.from === focusedSchemaId.value) {
+            parents.add(conn.to)
+        }
+    })
+    return parents
+})
+
+// 計算屬性：分組節點 - 背景節點和高亮節點
+const groupedNodes = computed(() => {
+    if (!focusedSchemaId.value) {
+        return {
+            backgroundNodes: layoutNodes.value,
+            highlightNodes: []
+        }
+    }
+
+    const backgroundNodes: LayoutNode[] = []
+    const highlightNodes: LayoutNode[] = []
+
+    layoutNodes.value.forEach(node => {
+        const isHighlight = node.schema.id === focusedSchemaId.value ||
+            parentNodeIds.value.has(node.schema.id)
+        if (isHighlight) {
+            highlightNodes.push(node)
+        } else {
+            backgroundNodes.push(node)
+        }
+    })
+
+    return { backgroundNodes, highlightNodes }
+})
+
 // 計算屬性：連接路徑
 const connectionPaths = computed(() => {
     if (connections.value.length === 0) return []
@@ -533,19 +571,16 @@ watch(() => props.config, () => {
                         </text>
                     </g>
 
-                    <!-- 輸入法卡片 -->
-                    <g class="schema-nodes">
-                        <g v-for="node in layoutNodes" :key="node.schema.id"
+                    <!-- 背景輸入法卡片（淡化） - 只在有 focus 時顯示 -->
+                    <g v-if="focusedSchemaId" class="schema-nodes-background">
+                        <g v-for="node in groupedNodes.backgroundNodes" :key="'bg-' + node.schema.id"
                             :transform="`translate(${node.x}, ${node.y})`" @click="handleCardClick(node.schema.id)"
                             @mouseenter="handleCardHover(node.schema.id)" @mouseleave="handleCardHover(null)"
-                            class="schema-node" :class="{
-                                focused: focusedSchemaId === node.schema.id,
+                            class="schema-node schema-node-dimmed" :class="{
                                 hovered: hoveredSchemaId === node.schema.id
                             }">
-                            <!-- 卡片背景（focused時會變大） -->
-                            <rect :width="focusedSchemaId === node.schema.id ? node.width * 1.3 : node.width"
-                                :height="focusedSchemaId === node.schema.id ? node.height * 2 : node.height"
-                                class="node-bg" rx="8" />
+                            <!-- 卡片背景 -->
+                            <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
 
                             <!-- 單行顯示：輸入法名 作者名 | 年份 -->
                             <text :x="10" :y="28" class="node-compact-text" text-anchor="start"
@@ -555,17 +590,51 @@ watch(() => props.config, () => {
                                 <tspan class="node-separator" dx="6"> </tspan>
                                 <tspan class="node-date" dx="6">{{ formatDate(node.schema.date) }}</tspan>
                             </text>
+                        </g>
+                    </g>
 
-                            <!-- Focused 狀態：顯示特徵標籤 -->
-                            <foreignObject v-if="focusedSchemaId === node.schema.id" :x="5" :y="48"
-                                :width="node.width * 1.3 - 10" :height="node.height * 2 - 55">
-                                <div xmlns="http://www.w3.org/1999/xhtml" class="feature-tags-container">
-                                    <span v-for="feature in node.schema.features" :key="feature"
-                                        class="feature-tag-badge">
-                                        {{ feature }}
-                                    </span>
-                                </div>
-                            </foreignObject>
+                    <!-- 高亮輸入法卡片（在最上層） - 有 focus 時只顯示高亮的 -->
+                    <g v-if="focusedSchemaId" class="schema-nodes-highlight">
+                        <g v-for="node in groupedNodes.highlightNodes" :key="'hl-' + node.schema.id"
+                            :transform="`translate(${node.x}, ${node.y})`" @click="handleCardClick(node.schema.id)"
+                            @mouseenter="handleCardHover(node.schema.id)" @mouseleave="handleCardHover(null)"
+                            class="schema-node" :class="{
+                                focused: focusedSchemaId === node.schema.id,
+                                hovered: hoveredSchemaId === node.schema.id
+                            }">
+                            <!-- 卡片背景 -->
+                            <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
+
+                            <!-- 單行顯示：輸入法名 作者名 | 年份 -->
+                            <text :x="10" :y="28" class="node-compact-text" text-anchor="start"
+                                shape-rendering="crispEdges" text-rendering="geometricPrecision">
+                                <tspan class="node-name">{{ node.schema.name }}</tspan>
+                                <tspan class="node-author" dx="8">{{ node.schema.authors.join(' ') }}</tspan>
+                                <tspan class="node-separator" dx="6"> </tspan>
+                                <tspan class="node-date" dx="6">{{ formatDate(node.schema.date) }}</tspan>
+                            </text>
+                        </g>
+                    </g>
+
+                    <!-- 無 focus 時：顯示所有輸入法卡片 -->
+                    <g v-if="!focusedSchemaId" class="schema-nodes-all">
+                        <g v-for="node in layoutNodes" :key="'all-' + node.schema.id"
+                            :transform="`translate(${node.x}, ${node.y})`" @click="handleCardClick(node.schema.id)"
+                            @mouseenter="handleCardHover(node.schema.id)" @mouseleave="handleCardHover(null)"
+                            class="schema-node" :class="{
+                                hovered: hoveredSchemaId === node.schema.id
+                            }">
+                            <!-- 卡片背景 -->
+                            <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
+
+                            <!-- 單行顯示：輸入法名 作者名 | 年份 -->
+                            <text :x="10" :y="28" class="node-compact-text" text-anchor="start"
+                                shape-rendering="crispEdges" text-rendering="geometricPrecision">
+                                <tspan class="node-name">{{ node.schema.name }}</tspan>
+                                <tspan class="node-author" dx="8">{{ node.schema.authors.join(' ') }}</tspan>
+                                <tspan class="node-separator" dx="6"> </tspan>
+                                <tspan class="node-date" dx="6">{{ formatDate(node.schema.date) }}</tspan>
+                            </text>
                         </g>
                     </g>
                 </svg>
@@ -675,6 +744,16 @@ watch(() => props.config, () => {
 .schema-node {
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+/* 淡化的背景節點 */
+.schema-node-dimmed {
+    opacity: 0.25;
+    transition: opacity 0.3s ease;
+}
+
+.schema-node-dimmed:hover {
+    opacity: 0.5;
 }
 
 .node-bg {
@@ -830,12 +909,10 @@ watch(() => props.config, () => {
     fill: var(--vp-c-bg, #ffffff);
     stroke: var(--vp-c-brand, rgb(99, 102, 241));
     stroke-width: 1.5;
-    opacity: 0;
-    animation: fadeIn 0.3s ease-in 0.2s forwards;
 }
 
 :global(.dark) .connection-label-bg {
-    fill: var(--vp-c-bg-soft, #1e293b);
+    fill: var(--vp-c-bg, #1e293b);
     stroke: rgb(165, 180, 252);
 }
 
@@ -850,31 +927,6 @@ watch(() => props.config, () => {
 
 :global(.dark) .connection-label {
     fill: rgb(165, 180, 252);
-}
-
-/* 特徵標籤容器 - 橫向排列自動換行 */
-.feature-tags-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    padding: 4px;
-    animation: fadeIn 0.3s ease-in forwards;
-}
-
-.feature-tag-badge {
-    display: inline-block;
-    padding: 2px 8px;
-    background: var(--vp-c-brand-soft, rgba(99, 102, 241, 0.1));
-    color: var(--vp-c-brand, rgb(99, 102, 241));
-    border-radius: 4px;
-    font-size: 10px;
-    font-weight: 500;
-    white-space: nowrap;
-}
-
-:global(.dark) .feature-tag-badge {
-    background: rgba(165, 180, 252, 0.15);
-    color: rgb(165, 180, 252);
 }
 
 @keyframes fadeIn {
