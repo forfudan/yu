@@ -269,27 +269,124 @@ const visibleConnections = computed(() => {
     )
 })
 
-// 計算屬性：合併相同連接的標籤
-const groupedConnections = computed(() => {
-    const grouped = new Map<string, { connection: Connection, path: string, labels: string[] }>()
+// 計算屬性：分離每個標籤的連接（用於防碰撞）
+const separatedConnections = computed(() => {
+    const result: Array<{ connection: Connection, path: string, label: string }> = []
 
     visibleConnections.value.forEach(({ connection, path }) => {
-        // 使用 from-to-type 作為唯一鍵
-        const key = `${connection.from}-${connection.to}-${connection.type}`
-
-        if (!grouped.has(key)) {
-            grouped.set(key, {
-                connection,
-                path,
-                labels: [connection.label]
-            })
-        } else {
-            // 如果已存在，添加標籤
-            grouped.get(key)!.labels.push(connection.label)
-        }
+        result.push({
+            connection,
+            path,
+            label: connection.label
+        })
     })
 
-    return Array.from(grouped.values())
+    return result
+})
+
+// 計算屬性：帶防碰撞的標籤位置
+const labeledConnections = computed(() => {
+    if (!focusedSchemaId.value) return []
+
+    // 只處理焦點節點的連接
+    const focusedItems = separatedConnections.value.filter(
+        item => item.connection.from === focusedSchemaId.value
+    )
+
+    // 計算每個標籤的初始位置和尺寸
+    interface LabelBox {
+        connection: Connection
+        label: string
+        x: number  // 中心點 x
+        y: number  // 中心點 y
+        width: number
+        height: number
+        lineStartX: number
+        lineStartY: number
+        lineEndX: number
+        lineEndY: number
+        offset: number  // 沿線的偏移量 (0-1)
+    }
+
+    const labels: LabelBox[] = focusedItems.map(item => {
+        const fromNode = nodesMap.value.get(item.connection.from)
+        const toNode = nodesMap.value.get(item.connection.to)
+
+        if (!fromNode || !toNode) {
+            return null
+        }
+
+        const fromX = fromNode.x + fromNode.width / 2
+        const fromY = fromNode.y
+        const toX = toNode.x + toNode.width / 2
+        const toY = toNode.y + toNode.height
+
+        const textWidth = getTextWidth(item.label)
+        const boxWidth = textWidth + 16
+        const boxHeight = 18
+
+        return {
+            connection: item.connection,
+            label: item.label,
+            x: (fromX + toX) / 2,
+            y: (fromY + toY) / 2,
+            width: boxWidth,
+            height: boxHeight,
+            lineStartX: fromX,
+            lineStartY: fromY,
+            lineEndX: toX,
+            lineEndY: toY,
+            offset: 0.5  // 初始在中點
+        }
+    }).filter(Boolean) as LabelBox[]
+
+    // 檢測碰撞並調整位置
+    const padding = 4  // 標籤之間的最小間距
+    const maxIterations = 20
+
+    for (let iter = 0; iter < maxIterations; iter++) {
+        let hasCollision = false
+
+        for (let i = 0; i < labels.length; i++) {
+            for (let j = i + 1; j < labels.length; j++) {
+                const a = labels[i]
+                const b = labels[j]
+
+                // 檢測矩形碰撞
+                const dx = Math.abs(a.x - b.x)
+                const dy = Math.abs(a.y - b.y)
+                const minDx = (a.width + b.width) / 2 + padding
+                const minDy = (a.height + b.height) / 2 + padding
+
+                if (dx < minDx && dy < minDy) {
+                    hasCollision = true
+
+                    // 沿各自的線移動標籤
+                    // 如果重疊，一個向起點移動，一個向終點移動
+                    const adjustAmount = 0.1
+
+                    if (i % 2 === 0) {
+                        a.offset = Math.max(0.2, a.offset - adjustAmount)
+                        b.offset = Math.min(0.8, b.offset + adjustAmount)
+                    } else {
+                        a.offset = Math.min(0.8, a.offset + adjustAmount)
+                        b.offset = Math.max(0.2, b.offset - adjustAmount)
+                    }
+
+                    // 重新計算位置
+                    a.x = a.lineStartX + (a.lineEndX - a.lineStartX) * a.offset
+                    a.y = a.lineStartY + (a.lineEndY - a.lineStartY) * a.offset
+
+                    b.x = b.lineStartX + (b.lineEndX - b.lineStartX) * b.offset
+                    b.y = b.lineStartY + (b.lineEndY - b.lineStartY) * b.offset
+                }
+            }
+        }
+
+        if (!hasCollision) break
+    }
+
+    return labels
 })
 
 // 計算屬性：連接統計
@@ -529,8 +626,8 @@ watch(() => props.config, () => {
 
                     <!-- 連接線（在節點下方） -->
                     <g class="connections">
-                        <g v-for="({ connection, path, labels }, index) in groupedConnections"
-                            :key="`${connection.from}-${connection.to}-${connection.type}-${focusedSchemaId || 'none'}`">
+                        <g v-for="({ connection, path }, index) in visibleConnections"
+                            :key="`${connection.from}-${connection.to}-${connection.type}-${index}-${focusedSchemaId || 'none'}`">
                             <!-- 連接線路徑 -->
                             <path :d="path" :stroke="getConnectionColor(connection, isDark ? 'dark' : 'light')"
                                 :stroke-width="getConnectionStrokeWidth(
@@ -542,22 +639,21 @@ watch(() => props.config, () => {
                                     'connection-focused': focusedSchemaId === connection.from,
                                     'connection-dimmed': focusedSchemaId && focusedSchemaId !== connection.from
                                 }">
-                                <title>{{ labels.join(' ') }}</title>
+                                <title>{{ connection.label }}</title>
                             </path>
+                        </g>
 
-                            <!-- Focus 狀態：在連接線上顯示特徵標籤（水平方框） -->
-                            <g v-if="focusedSchemaId === connection.from">
-                                <!-- 計算連接線中點位置 -->
-                                <g :transform="getConnectionMidpoint(connection, nodesMap)">
-                                    <!-- 背景圆角方框 - 使用計算的文字寬度 -->
-                                    <rect :x="-getTextWidth(labels.join(' ')) / 2 - 8" :y="-12"
-                                        :width="getTextWidth(labels.join(' ')) + 16" :height="18"
-                                        class="connection-label-bg" rx="4" />
-                                    <!-- 標籤文字 -->
-                                    <text class="connection-label" text-anchor="middle" y="2">
-                                        {{ labels.join(' ') }}
-                                    </text>
-                                </g>
+                        <!-- Focus 狀態：在連接線上顯示特徵標籤（每個標籤獨立，防碰撞） -->
+                        <g v-if="focusedSchemaId" class="connection-labels">
+                            <g v-for="(labelBox, idx) in labeledConnections" :key="`label-${idx}`">
+                                <!-- 背景圆角方框 -->
+                                <rect :x="labelBox.x - labelBox.width / 2" :y="labelBox.y - labelBox.height / 2"
+                                    :width="labelBox.width" :height="labelBox.height" class="connection-label-bg"
+                                    rx="4" />
+                                <!-- 標籤文字 -->
+                                <text :x="labelBox.x" :y="labelBox.y + 4" class="connection-label" text-anchor="middle">
+                                    {{ labelBox.label }}
+                                </text>
                             </g>
                         </g>
                     </g>
