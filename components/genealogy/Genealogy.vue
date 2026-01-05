@@ -148,9 +148,9 @@ const filteredSchemas = computed(() => {
     return result
 })
 
-// 計算屬性：排序後的輸入法
+// 計算屬性：排序後的輸入法（用於佈局，倒序時不影響逻辑顺序）
 const sortedSchemas = computed(() => {
-    return sortSchemasByDate(filteredSchemas.value, config.value.reverseTimeline)
+    return sortSchemasByDate(filteredSchemas.value, false)
 })
 
 // 計算屬性：年份間距映射表（動態間距）
@@ -174,7 +174,7 @@ const layoutNodes = computed<LayoutNode[]>(() => {
         return []
     }
 
-    // 使用佈局引擎計算初始佈局（使用動態間距）
+    // 使用佈局引擎計算初始佈局
     let nodes = calculateLayout(
         sortedSchemas.value,
         config.value,
@@ -438,8 +438,8 @@ async function loadData() {
         allFeatures.value = getAllFeatures(data)
         allAuthors.value = getAllAuthors(data)
 
-        // 計算連接關係
-        const sortedData = sortSchemasByDate(data, config.value.reverseTimeline)
+        // 計算連接關係（連接關係始終基於時間順序，不受倒序影響）
+        const sortedData = sortSchemasByDate(data, false)
         connections.value = calculateConnections(sortedData)
 
         console.log('數據加載完成:', {
@@ -507,21 +507,6 @@ function getConnectionMidpoint(connection: Connection, nodes: Map<string, Layout
     const midY = (fromY + toY) / 2
 
     return `translate(${midX}, ${midY})`
-}
-
-// 反轉時間軸
-function toggleTimeline() {
-    if (config.value.reverseTimeline !== undefined) {
-        config.value.reverseTimeline = !config.value.reverseTimeline
-
-        // 重新生成年份標籤
-        yearLabels.value = generateYearLabels(
-            schemas.value,
-            yearSpacingMap.value,
-            config.value.emptyYearThreshold || 3,
-            config.value.labelInterval || 5
-        )
-    }
 }
 
 // 切換特徵選擇
@@ -620,12 +605,6 @@ watch(() => props.config, () => {
                         </label>
                     </div>
                 </div>
-
-                <!-- 時間倒序按鈕 -->
-                <button @click="toggleTimeline" class="btn-compact" :class="{ 'active': config.reverseTimeline }"
-                    title="時間倒序">
-                    時間倒序
-                </button>
             </div>
 
             <!-- 點擊外部關閉下拉菜單 -->
