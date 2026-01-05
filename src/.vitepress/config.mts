@@ -426,7 +426,7 @@ export default defineConfig({
       copyright: "shurufa.app © 2025 Under CC BY-NC-ND 4.0 license.",
     },
     darkModeSwitchLabel: "黑暗模式",
-    langMenuLabel: "选择语言",
+    langMenuLabel: "繁簡轉換",
     returnToTopLabel: "回到顶部",
     sidebarMenuLabel: "全部頁面列表",
     outline: {

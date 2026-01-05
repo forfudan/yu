@@ -636,3 +636,25 @@ html.dark *::-webkit-scrollbar-thumb:hover {
 .VPNavBar .VPNavBarMenuLink.vp-external-link-icon::after {
   display: none !important;
 }
+
+/* ===== 语言切换按钮样式优化 ===== */
+/* 隐藏语言选择下拉菜单 */
+.VPNavBarTranslations .VPMenu {
+  display: none !important;
+}
+
+/* 让语言按钮在繁体时改变文字颜色 */
+.VPNavBarTranslations button.lang-active {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* 调整按钮文本显示 */
+.VPNavBarTranslations .text {
+  font-family: 'Noto Sans SC', 'Noto Sans TC', sans-serif;
+  font-weight: 500;
+}
+
+/* 隐藏语言按钮的下拉箭头图标 */
+.VPNavBarTranslations .vpi-chevron-down {
+  display: none !important;
+}
