@@ -178,6 +178,22 @@
         "description": ""
     },
     {
+        "id": "yima",
+        "name": "逸碼",
+        "authors": [
+            "小泥巴"
+        ],
+        "date": "20180000",
+        "features": [
+            "不定長碼",
+            "字根單編碼",
+            "大碼純亂",
+            "26鍵",
+            "頂功"
+        ],
+        "description": ""
+    },
+    {
         "id": "sapphire1",
         "name": "藍寶石一代",
         "authors": [
