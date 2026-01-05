@@ -46,11 +46,11 @@ const props = withDefaults(defineProps<{
 const defaultConfig: GenealogyConfig = {
     width: 900,
     height: 1200,
-    nodeSpacing: 15,           // 卡片間距從 20 減少到 15
-    baseSpacing: 20,           // 短空白期從 30 減少到 20
-    schemaSpacing: 50,         // 每個輸入法從 90 減少到 50（卡片更小）
+    nodeSpacing: 10,           // 卡片間距：15 → 10
+    baseSpacing: 15,           // 短空白期：20 → 15
+    schemaSpacing: 35,         // 每個輸入法：50 → 35
     emptyYearThreshold: 3,     // 連續3年以上空白將被壓縮
-    emptySegmentSpacing: 40,   // 空白段總高度從 60 減少到 40
+    emptySegmentSpacing: 30,   // 空白段總高度：40 → 30
     labelInterval: 5,          // 空白段內每5年顯示一次標籤
     yearSpacing: 100,          // 已棄用，保留以兼容舊配置
     reverseTimeline: false,
@@ -200,12 +200,27 @@ const canvasHeight = computed(() => {
     if (minYear.value === 0 || maxYear.value === 0 || yearSpacingMap.value.size === 0) {
         return config.value.height || 1200
     }
-    // 獲取最後一年的累積高度
+
+    // 如果有布局节点，使用实际最大Y坐标
+    if (layoutNodes.value.length > 0) {
+        const maxY = Math.max(...layoutNodes.value.map(n => n.y + n.height))
+        const topPadding = 100
+        const bottomPadding = 150  // 增加底部padding确保不会被截断
+        return maxY + topPadding + bottomPadding
+    }
+
+    // 否则使用年份映射表估算
     const lastYearY = yearSpacingMap.value.get(maxYear.value) || 0
     const baseSpacing = config.value.baseSpacing || 30
+    const schemaSpacing = config.value.schemaSpacing || 90
     const topPadding = 100
-    const bottomPadding = 100
-    return lastYearY + baseSpacing + topPadding + bottomPadding
+    const bottomPadding = 150
+
+    // 计算最后一年有多少个输入法
+    const lastYearCount = schemas.value.filter(s => parseYear(s.date) === maxYear.value).length
+    const lastYearHeight = lastYearCount > 0 ? baseSpacing + lastYearCount * schemaSpacing : baseSpacing
+
+    return lastYearY + lastYearHeight + topPadding + bottomPadding
 })
 
 // 計算屬性：節點映射（用於連接線繪製）
