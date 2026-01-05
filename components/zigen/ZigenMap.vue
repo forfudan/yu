@@ -652,6 +652,16 @@ async function exportZigenMap() {
     }
 }
 
+// 判斷是否為小根（總編碼長度為2的字根），僅對靈明和日月生效
+function isSmallRoot(code: string): boolean {
+    // 只對靈明和日月啟用小根標識
+    if (!['ling', 'ming'].includes(activeScheme.value)) {
+        return false;
+    }
+    // 判斷小碼部分的長度是否為1
+    return code.length === 1;
+}
+
 // 輔助函數：找到所有相同完整編碼的字根
 function findSameCodeZigens(targetFont: string, targetFullCode: string) {
     const visible: Array<{ font: string, code: string, pinyin?: string }> = [];
@@ -819,7 +829,8 @@ onMounted(() => {
                         <span v-for="(zigen, index) in (sortByCodeLength ?
                             [...(showAllZigens ? zigenByKey[key].all : zigenByKey[key].all.filter(z => !z.isHidden))].sort((a, b) => a.code.length - b.code.length) :
                             (showAllZigens ? zigenByKey[key].all : zigenByKey[key].all.filter(z => !z.isHidden)))"
-                            :key="index" class="zigen-item" @click="handleZigenClick($event, zigen)">
+                            :key="index" class="zigen-item" :class="{ 'small-root-zigen': isSmallRoot(zigen.code) }"
+                            @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code }}</span>
                         </span>
@@ -880,11 +891,12 @@ onMounted(() => {
                         <!-- 顯示按編碼排序的所有字根 -->
                         <span v-for="(zigen, index) in sortedZigenByKey[key]" :key="`sorted-${index}`"
                             class="mobile-zigen-item" :class="{
-                                'mobile-hidden-zigen': zigen.isHidden
+                                'mobile-hidden-zigen': zigen.isHidden,
+                                'mobile-small-root-zigen': !zigen.isHidden && isSmallRoot(zigen.code)
                             }" @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code
-                                }}</span>
+                            }}</span>
                         </span>
                     </div>
                 </div>
@@ -1676,6 +1688,48 @@ onMounted(() => {
 .mobile-hidden-zigen:hover {
     opacity: 0.9;
     background: var(--fallback-warning, oklch(var(--wa)/0.2));
+}
+
+/* 小根樣式（編碼長度為2的字根）- 網格布局 */
+.small-root-zigen {
+    background: rgba(147, 197, 253, 0.05);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.dark .small-root-zigen {
+    background: rgba(59, 130, 246, 0.05);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.small-root-zigen:hover {
+    background: rgba(147, 197, 253, 0.15) !important;
+    border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark .small-root-zigen:hover {
+    background: rgba(59, 130, 246, 0.12) !important;
+    border-color: rgba(59, 130, 246, 0.35) !important;
+}
+
+/* 小根樣式（編碼長度為2的字根）- 移動端和列表布局 */
+.mobile-small-root-zigen {
+    background: rgba(147, 197, 253, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.dark .mobile-small-root-zigen {
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.mobile-small-root-zigen:hover {
+    background: rgba(147, 197, 253, 0.15);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.dark .mobile-small-root-zigen:hover {
+    background: rgba(59, 130, 246, 0.12);
+    border-color: rgba(59, 130, 246, 0.35);
 }
 
 .mobile-zigen-item .zigen-font {
