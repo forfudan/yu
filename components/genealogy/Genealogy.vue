@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, watch } from 'vue'
-import type { SchemaData, YearLabel, GenealogyConfig, LayoutNode } from './types.ts'
+import type { SchemaData, YearLabel, GenealogyConfig, LayoutNode, Connection } from './types.ts'
 import {
     loadSchemas,
     sortSchemasByDate,
@@ -26,6 +26,13 @@ import {
     parseYear
 } from './dataLoader'
 import { calculateLayout, optimizeLayout, calculateLayoutQuality } from './layoutEngine'
+import { calculateConnections, getConnectionStats } from './connectionEngine'
+import {
+    generateConnectionPaths,
+    getConnectionColor,
+    getConnectionStrokeWidth,
+    shouldShowConnection
+} from './connectionRenderer'
 
 // Props
 const props = withDefaults(defineProps<{
@@ -71,6 +78,10 @@ const hoveredSchemaId = ref<string | null>(null)
 const selectedFeatures = ref<string[]>([])
 const selectedAuthors = ref<string[]>([])
 const searchQuery = ref('')
+
+// 连接关系狀態
+const connections = ref<Connection[]>([])
+const connectionFilterType = ref<'feature' | 'author' | null>(null)
 
 // 計算屬性：過濾後的輸入法
 const filteredSchemas = computed(() => {
@@ -142,6 +153,47 @@ const layoutQuality = computed(() => {
     return calculateLayoutQuality(layoutNodes.value)
 })
 
+// 計算屬性：節點映射（用於連接線繪製）
+const nodesMap = computed(() => {
+    const map = new Map<string, LayoutNode>()
+    layoutNodes.value.forEach(node => {
+        map.set(node.schema.id, node)
+    })
+    return map
+})
+
+// 計算屬性：連接路徑
+const connectionPaths = computed(() => {
+    if (connections.value.length === 0) return []
+    
+    return generateConnectionPaths(connections.value, nodesMap.value)
+})
+
+// 計算屬性：過濾後的連接
+const visibleConnections = computed(() => {
+    return connectionPaths.value.filter(({ connection }) =>
+        shouldShowConnection(
+            connection,
+            focusedSchemaId.value,
+            connectionFilterType.value
+        )
+    )
+})
+
+// 計算屬性：連接統計
+const connectionStats = computed(() => {
+    if (connections.value.length === 0) {
+        return {
+            total: 0,
+            featureConnections: 0,
+            authorConnections: 0,
+            byFeature: new Map(),
+            byAuthor: new Map()
+        }
+    }
+    return getConnectionStats(connections.value)
+})
+
 // 加載數據
 async function loadData() {
     loading.value = true
@@ -172,11 +224,18 @@ async function loadData() {
         allFeatures.value = getAllFeatures(data)
         allAuthors.value = getAllAuthors(data)
 
+        // 計算連接關係
+        const sortedData = sortSchemasByDate(data, config.value.reverseTimeline)
+        connections.value = calculateConnections(sortedData)
+
         console.log('數據加載完成:', {
             總數: data.length,
             年份範圍: `${minYear.value}-${maxYear.value}`,
             特性數: allFeatures.value.length,
-            作者數: allAuthors.value.length
+            作者數: allAuthors.value.length,
+            連接數: connections.value.length,
+            特性連接: connectionStats.value.featureConnections,
+            作者連接: connectionStats.value.authorConnections
         })
 
     } catch (err) {
@@ -266,6 +325,34 @@ watch(() => props.config, () => {
                     <input v-model="searchQuery" type="text" placeholder="搜索輸入法..."
                         class="input input-sm input-bordered" />
 
+                    <!-- 連接類型篩選 -->
+                    <div class="btn-group btn-group-sm">
+                        <button
+                            class="btn btn-sm"
+                            :class="{ 'btn-active': connectionFilterType === null }"
+                            @click="connectionFilterType = null"
+                            title="顯示所有連接"
+                        >
+                            全部
+                        </button>
+                        <button
+                            class="btn btn-sm"
+                            :class="{ 'btn-active': connectionFilterType === 'feature' }"
+                            @click="connectionFilterType = connectionFilterType === 'feature' ? null : 'feature'"
+                            title="只顯示特性繼承"
+                        >
+                            特性
+                        </button>
+                        <button
+                            class="btn btn-sm"
+                            :class="{ 'btn-active': connectionFilterType === 'author' }"
+                            @click="connectionFilterType = connectionFilterType === 'author' ? null : 'author'"
+                            title="只顯示作者繼承"
+                        >
+                            作者
+                        </button>
+                    </div>
+
                     <!-- 佈局優化開關 -->
                     <label class="flex items-center gap-2 cursor-pointer text-sm">
                         <input v-model="useOptimization" type="checkbox" class="checkbox checkbox-sm" />
@@ -282,6 +369,56 @@ watch(() => props.config, () => {
             <!-- 畫布區域 -->
             <div class="canvas-wrapper">
                 <svg :width="config.width" :height="config.height" class="genealogy-svg">
+                    <!-- 定義箭頭標記 -->
+                    <defs>
+                        <marker
+                            id="arrow-feature"
+                            viewBox="0 0 10 10"
+                            refX="9"
+                            refY="5"
+                            markerWidth="6"
+                            markerHeight="6"
+                            orient="auto"
+                        >
+                            <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(99, 102, 241, 0.6)" />
+                        </marker>
+                        <marker
+                            id="arrow-author"
+                            viewBox="0 0 10 10"
+                            refX="9"
+                            refY="5"
+                            markerWidth="6"
+                            markerHeight="6"
+                            orient="auto"
+                        >
+                            <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(34, 197, 94, 0.6)" />
+                        </marker>
+                    </defs>
+
+                    <!-- 連接線（在節點下方） -->
+                    <g class="connections">
+                        <path
+                            v-for="({ connection, path }, index) in visibleConnections"
+                            :key="`${connection.from}-${connection.to}-${connection.type}`"
+                            :d="path"
+                            :stroke="getConnectionColor(connection, 'light')"
+                            :stroke-width="getConnectionStrokeWidth(
+                                connection,
+                                focusedSchemaId === connection.from || focusedSchemaId === connection.to
+                            )"
+                            fill="none"
+                            :marker-end="`url(#arrow-${connection.type})`"
+                            :class="{
+                                'connection-line': true,
+                                [`connection-${connection.type}`]: true,
+                                'connection-focused': focusedSchemaId === connection.from || focusedSchemaId === connection.to,
+                                'connection-dimmed': focusedSchemaId && focusedSchemaId !== connection.from && focusedSchemaId !== connection.to
+                            }"
+                        >
+                            <title>{{ connection.label }}</title>
+                        </path>
+                    </g>
+
                     <!-- 年份標籤 -->
                     <g class="year-labels">
                         <line :x1="50" :y1="50" :x2="50" :y2="config.height! - 50" class="timeline-axis" />
@@ -457,6 +594,45 @@ watch(() => props.config, () => {
 .node-date {
     fill: var(--fallback-bc, oklch(var(--bc)/0.5));
     font-size: 10px;
+}
+
+/* 連接線樣式 */
+.connection-line {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.connection-feature {
+    stroke-dasharray: none;
+}
+
+.connection-author {
+    stroke-dasharray: 5, 5;
+}
+
+.connection-focused {
+    stroke-width: 3 !important;
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 4px currentColor);
+}
+
+.connection-dimmed {
+    opacity: 0.2;
+}
+
+.connection-line:hover {
+    opacity: 1;
+    stroke-width: 3;
+    filter: drop-shadow(0 0 4px currentColor);
+}
+
+/* 暗色模式下的連接線 */
+:global(.dark) .connection-feature {
+    stroke: rgba(165, 180, 252, 0.6);
+}
+
+:global(.dark) .connection-author {
+    stroke: rgba(134, 239, 172, 0.6);
 }
 
 /* 信息面板 */
