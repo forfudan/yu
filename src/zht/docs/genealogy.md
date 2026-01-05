@@ -4,7 +4,7 @@ aside: false
 ---
 
 <script setup>
-import Genealogy from '../../components/genealogy/Genealogy.vue'
+import Genealogy from '@/genealogy/Genealogy.vue'
 </script>
 
 # 字形輸入法源流圖
