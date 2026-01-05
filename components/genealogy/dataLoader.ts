@@ -91,16 +91,117 @@ export function sortSchemasByDate(schemas: SchemaData[], reverse = false): Schem
 }
 
 /**
- * 生成年份標籤
+ * 計算年份間距映射表（動態間距，支持空白年份段壓縮）
  * @param schemas 輸入法數據數組
- * @param yearSpacing 年份間距（像素）
- * @param reverse 是否反轉時間軸
+ * @param baseSpacing 基礎間距（沒有輸入法的年份）
+ * @param schemaSpacing 每個輸入法佔用的額外間距
+ * @param emptyYearThreshold 空白年份閾值，超過此數量的連續空白年份將被壓縮
+ * @param emptySegmentSpacing 空白段的總間距（無論多少年）
+ * @returns 年份到累積Y坐標的映射表
+ */
+export function calculateYearSpacingMap(
+    schemas: SchemaData[],
+    baseSpacing: number = 30,
+    schemaSpacing: number = 90,
+    emptyYearThreshold: number = 3,
+    emptySegmentSpacing: number = 60
+): Map<number, number> {
+    if (schemas.length === 0) return new Map()
+
+    // 獲取所有年份
+    const years = schemas.map(s => parseYear(s.date))
+    const minYear = Math.min(...years)
+    const maxYear = Math.max(...years)
+
+    // 統計每年的輸入法數量
+    const yearCounts = new Map<number, number>()
+    schemas.forEach(schema => {
+        const year = parseYear(schema.date)
+        yearCounts.set(year, (yearCounts.get(year) || 0) + 1)
+    })
+
+    // 識別連續空白年份段
+    interface EmptySegment {
+        startYear: number
+        endYear: number
+        length: number
+    }
+
+    const emptySegments: EmptySegment[] = []
+    let segmentStart: number | null = null
+
+    for (let year = minYear; year <= maxYear; year++) {
+        const count = yearCounts.get(year) || 0
+
+        if (count === 0) {
+            // 空白年份
+            if (segmentStart === null) {
+                segmentStart = year
+            }
+        } else {
+            // 有輸入法的年份，結束當前空白段
+            if (segmentStart !== null) {
+                const length = year - segmentStart
+                if (length >= emptyYearThreshold) {
+                    emptySegments.push({ startYear: segmentStart, endYear: year - 1, length })
+                }
+                segmentStart = null
+            }
+        }
+    }
+
+    // 處理末尾的空白段
+    if (segmentStart !== null) {
+        const length = maxYear - segmentStart + 1
+        if (length >= emptyYearThreshold) {
+            emptySegments.push({ startYear: segmentStart, endYear: maxYear, length })
+        }
+    }
+
+    // 計算累積高度
+    const yearMap = new Map<number, number>()
+    let cumulativeY = 0
+
+    for (let year = minYear; year <= maxYear; year++) {
+        yearMap.set(year, cumulativeY)
+        const count = yearCounts.get(year) || 0
+
+        // 檢查是否在空白段內
+        const inEmptySegment = emptySegments.find(
+            seg => year >= seg.startYear && year <= seg.endYear
+        )
+
+        if (count > 0) {
+            // 有輸入法的年份
+            cumulativeY += baseSpacing + count * schemaSpacing
+        } else if (inEmptySegment && year === inEmptySegment.startYear) {
+            // 空白段起始年份：為整個段分配固定空間
+            cumulativeY += emptySegmentSpacing
+        } else if (inEmptySegment) {
+            // 空白段內的其他年份：不增加高度（與起始年份保持同一水平）
+            // 不增加 cumulativeY，下一年會與本年份在同一 Y 坐標
+        } else {
+            // 短空白期（未達到壓縮閾值）
+            cumulativeY += baseSpacing
+        }
+    }
+
+    return yearMap
+}
+
+/**
+ * 生成年份標籤（使用動態間距，智能跳過空白段）
+ * @param schemas 輸入法數據數組
+ * @param yearSpacingMap 年份間距映射表
+ * @param emptyYearThreshold 空白年份閾值
+ * @param labelInterval 空白段內年份標籤的顯示間隔（0表示不顯示中間年份）
  * @returns 年份標籤數組
  */
 export function generateYearLabels(
     schemas: SchemaData[],
-    yearSpacing: number = 60,
-    reverse: boolean = false
+    yearSpacingMap: Map<number, number>,
+    emptyYearThreshold: number = 3,
+    labelInterval: number = 5
 ): YearLabel[] {
     if (schemas.length === 0) return []
 
@@ -109,44 +210,103 @@ export function generateYearLabels(
     const minYear = Math.min(...years)
     const maxYear = Math.max(...years)
 
-    // 生成年份標籤
-    const labels: YearLabel[] = []
-    for (let year = minYear; year <= maxYear; year++) {
-        const offset = year - minYear
-        const y = offset * yearSpacing
-        labels.push({ year, y })
+    // 統計每年的輸入法數量
+    const yearCounts = new Map<number, number>()
+    schemas.forEach(schema => {
+        const year = parseYear(schema.date)
+        yearCounts.set(year, (yearCounts.get(year) || 0) + 1)
+    })
+
+    // 識別空白段（與 calculateYearSpacingMap 相同的邏輯）
+    interface EmptySegment {
+        startYear: number
+        endYear: number
+        length: number
     }
 
-    // 如果反轉，調整Y坐標
-    if (reverse) {
-        const totalHeight = (maxYear - minYear) * yearSpacing
-        labels.forEach(label => {
-            label.y = totalHeight - label.y
-        })
+    const emptySegments: EmptySegment[] = []
+    let segmentStart: number | null = null
+
+    for (let year = minYear; year <= maxYear; year++) {
+        const count = yearCounts.get(year) || 0
+
+        if (count === 0) {
+            if (segmentStart === null) {
+                segmentStart = year
+            }
+        } else {
+            if (segmentStart !== null) {
+                const length = year - segmentStart
+                if (length >= emptyYearThreshold) {
+                    emptySegments.push({ startYear: segmentStart, endYear: year - 1, length })
+                }
+                segmentStart = null
+            }
+        }
+    }
+
+    if (segmentStart !== null) {
+        const length = maxYear - segmentStart + 1
+        if (length >= emptyYearThreshold) {
+            emptySegments.push({ startYear: segmentStart, endYear: maxYear, length })
+        }
+    }
+
+    // 生成年份標籤
+    const labels: YearLabel[] = []
+
+    for (let year = minYear; year <= maxYear; year++) {
+        const y = yearSpacingMap.get(year) || 0
+        const count = yearCounts.get(year) || 0
+
+        // 檢查是否在空白段內
+        const inEmptySegment = emptySegments.find(
+            seg => year >= seg.startYear && year <= seg.endYear
+        )
+
+        if (count > 0) {
+            // 有輸入法的年份：總是顯示
+            labels.push({ year, y })
+        } else if (!inEmptySegment) {
+            // 短空白期：顯示所有年份
+            labels.push({ year, y })
+        } else if (year === inEmptySegment.startYear) {
+            // 空白段起始：總是顯示
+            labels.push({ year, y })
+        } else if (year === inEmptySegment.endYear) {
+            // 空白段結束：總是顯示
+            labels.push({ year, y })
+        } else if (labelInterval > 0 && (year - inEmptySegment.startYear) % labelInterval === 0) {
+            // 空白段中間：按間隔顯示
+            labels.push({ year, y })
+        }
+        // 否則跳過該年份標籤
     }
 
     return labels
 }
 
 /**
- * 計算輸入法在時間軸上的Y坐標
+ * 計算輸入法在時間軸上的Y坐標（使用動態間距）
  * @param schema 輸入法數據
  * @param minYear 最小年份
- * @param yearSpacing 年份間距（像素）
- * @param reverse 是否反轉時間軸
+ * @param yearSpacingMap 年份間距映射表
+ * @param baseSpacing 基礎間距
+ * @param schemaSpacing 每個輸入法的間距
  * @returns Y坐標
  */
 export function calculateYPosition(
     schema: SchemaData,
     minYear: number,
-    yearSpacing: number = 60,
-    reverse: boolean = false
+    yearSpacingMap: Map<number, number>,
+    baseSpacing: number = 30,
+    schemaSpacing: number = 90
 ): number {
     const year = parseYear(schema.date)
     const date = parseDate(schema.date)
 
-    // 計算年份偏移
-    const yearOffset = year - minYear
+    // 獲取該年份的起始Y坐標
+    const yearY = yearSpacingMap.get(year) || 0
 
     // 計算年內偏移（基於月和日）
     const startOfYear = new Date(year, 0, 1)
@@ -155,8 +315,9 @@ export function calculateYPosition(
     const dateOffset = date.getTime() - startOfYear.getTime()
     const yearProgress = dateOffset / yearDuration
 
-    // 計算Y坐標
-    let y = (yearOffset + yearProgress) * yearSpacing
+    // 年內的高度分配
+    const yearHeight = baseSpacing + schemaSpacing
+    const y = yearY + yearProgress * yearHeight
 
     return y
 }

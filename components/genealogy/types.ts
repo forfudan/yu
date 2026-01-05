@@ -88,8 +88,18 @@ export interface GenealogyConfig {
     height?: number
     /** 節點最小間距 */
     nodeSpacing?: number
-    /** 時間軸年份間距（像素） */
+    /** 時間軸年份間距（像素）- 已棄用，使用動態間距 */
     yearSpacing?: number
+    /** 基礎年份間距（沒有輸入法的年份） */
+    baseSpacing?: number
+    /** 每個輸入法佔用的額外間距 */
+    schemaSpacing?: number
+    /** 空白年份閾值：連續超過此數量的空白年份將被壓縮 */
+    emptyYearThreshold?: number
+    /** 空白段總間距：長空白段的總高度（無論多少年） */
+    emptySegmentSpacing?: number
+    /** 空白段標籤間隔：空白段內年份標籤的顯示間隔（0表示不顯示中間年份） */
+    labelInterval?: number
     /** 是否反轉時間軸（新的在上） */
     reverseTimeline?: boolean
     /** 是否顯示已停止維護的輸入法 */

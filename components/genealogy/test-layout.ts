@@ -5,6 +5,7 @@
  */
 
 import { calculateLayout, optimizeLayout, calculateLayoutQuality, isOverlapping } from './layoutEngine'
+import { calculateYearSpacingMap } from './dataLoader'
 import type { SchemaData, GenealogyConfig } from './types'
 
 // 測試數據
@@ -50,6 +51,8 @@ const testConfig: GenealogyConfig = {
     width: 1200,
     height: 800,
     nodeSpacing: 20,
+    baseSpacing: 30,
+    schemaSpacing: 90,
     yearSpacing: 100,
     reverseTimeline: false,
     showDeprecated: true
@@ -57,9 +60,16 @@ const testConfig: GenealogyConfig = {
 
 console.log('=== 佈局算法測試 ===')
 
+// 計算年份間距映射表
+const yearSpacingMap = calculateYearSpacingMap(
+    testSchemas,
+    testConfig.baseSpacing || 30,
+    testConfig.schemaSpacing || 90
+)
+
 // 測試1：基礎佈局
 console.log('\n測試1：基礎佈局計算')
-const nodes = calculateLayout(testSchemas, testConfig, 2020)
+const nodes = calculateLayout(testSchemas, testConfig, 2020, yearSpacingMap)
 console.log(`生成了 ${nodes.length} 個節點`)
 nodes.forEach((node, i) => {
     console.log(`  節點${i + 1}: ${node.schema.name}`)
@@ -105,7 +115,7 @@ console.log(`  改進幅度: ${Math.round(optimizedQuality - quality)}分`)
 // 測試5：時間軸反轉
 console.log('\n測試5：時間軸反轉')
 const reversedConfig = { ...testConfig, reverseTimeline: true }
-const reversedNodes = calculateLayout(testSchemas, reversedConfig, 2020)
+const reversedNodes = calculateLayout(testSchemas, reversedConfig, 2020, yearSpacingMap)
 console.log(`  原始Y坐標: ${Math.round(nodes[0].y)}`)
 console.log(`  反轉Y坐標: ${Math.round(reversedNodes[0].y)}`)
 console.log(`  ${nodes[0].y !== reversedNodes[0].y ? '✅ 反轉成功' : '❌ 反轉失敗'}`)

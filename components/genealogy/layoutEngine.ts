@@ -26,27 +26,30 @@ interface TimeGroup {
  * @param schemas 輸入法數據數組
  * @param config 配置項
  * @param minYear 最小年份
+ * @param yearSpacingMap 年份間距映射表
  * @returns 佈局節點數組
  */
 export function calculateLayout(
     schemas: SchemaData[],
     config: GenealogyConfig,
-    minYear: number
+    minYear: number,
+    yearSpacingMap: Map<number, number>
 ): LayoutNode[] {
     if (schemas.length === 0) return []
 
-    const yearSpacing = config.yearSpacing || 100
+    const baseSpacing = config.baseSpacing || 30
+    const schemaSpacing = config.schemaSpacing || 90
     const nodeSpacing = config.nodeSpacing || 20
-    const reverseTimeline = config.reverseTimeline || false
+    const canvasWidth = config.width || 1200
 
-    // 節點尺寸
+    // 節點尺寸（緊湊單行版本）
     const nodeWidth = 200
-    const nodeHeight = 80
+    const nodeHeight = 40  // 從 80 減少到 40
 
     // 計算每個輸入法的Y坐標
     const schemasWithY = schemas.map(schema => ({
         schema,
-        y: calculateYPosition(schema, minYear, yearSpacing, reverseTimeline)
+        y: calculateYPosition(schema, minYear, yearSpacingMap, baseSpacing, schemaSpacing)
     }))
 
     // 按Y坐標排序
@@ -64,7 +67,8 @@ export function calculateLayout(
             group.y,
             nodeWidth,
             nodeHeight,
-            nodeSpacing
+            nodeSpacing,
+            canvasWidth
         )
         layoutNodes.push(...nodesInGroup)
     })
@@ -125,7 +129,7 @@ function groupByProximity(
  * @param baseY 基準Y坐標
  * @param nodeWidth 節點寬度
  * @param nodeHeight 節點高度
- * @param nodeSpacing 節點間距
+ * @param canvasWidth 畫布寬度
  * @returns 佈局節點數組
  */
 function layoutHorizontally(
@@ -133,18 +137,19 @@ function layoutHorizontally(
     baseY: number,
     nodeWidth: number,
     nodeHeight: number,
-    nodeSpacing: number
+    nodeSpacing: number,
+    canvasWidth: number = 1200
 ): LayoutNode[] {
     const nodes: LayoutNode[] = []
 
     if (schemas.length === 0) return nodes
 
     // 畫布左側預留空間（用於時間軸）
-    const leftMargin = 100
+    const leftMargin = 80
     // 畫布右側預留空間
     const rightMargin = 50
-    // 可用寬度（假設畫布寬度為1200）
-    const availableWidth = 1200 - leftMargin - rightMargin
+    // 可用寬度
+    const availableWidth = canvasWidth - leftMargin - rightMargin
 
     if (schemas.length === 1) {
         // 只有一個節點，居中放置

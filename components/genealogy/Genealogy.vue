@@ -19,6 +19,7 @@ import {
     sortSchemasByDate,
     generateYearLabels,
     calculateYPosition,
+    calculateYearSpacingMap,
     getYearRange,
     getAllFeatures,
     getAllAuthors,
@@ -43,10 +44,15 @@ const props = withDefaults(defineProps<{
 
 // 默認配置
 const defaultConfig: GenealogyConfig = {
-    width: 1200,
-    height: 800,
-    nodeSpacing: 20,
-    yearSpacing: 100,
+    width: 900,
+    height: 1200,
+    nodeSpacing: 15,           // 卡片間距從 20 減少到 15
+    baseSpacing: 20,           // 短空白期從 30 減少到 20
+    schemaSpacing: 50,         // 每個輸入法從 90 減少到 50（卡片更小）
+    emptyYearThreshold: 3,     // 連續3年以上空白將被壓縮
+    emptySegmentSpacing: 40,   // 空白段總高度從 60 減少到 40
+    labelInterval: 5,          // 空白段內每5年顯示一次標籤
+    yearSpacing: 100,          // 已棄用，保留以兼容舊配置
     reverseTimeline: false,
     showDeprecated: true,
     highlightFeatures: []
@@ -124,6 +130,18 @@ const sortedSchemas = computed(() => {
     return sortSchemasByDate(filteredSchemas.value, config.value.reverseTimeline)
 })
 
+// 計算屬性：年份間距映射表（動態間距）
+const yearSpacingMap = computed(() => {
+    if (schemas.value.length === 0) return new Map<number, number>()
+    return calculateYearSpacingMap(
+        schemas.value,
+        config.value.baseSpacing || 30,
+        config.value.schemaSpacing || 90,
+        config.value.emptyYearThreshold || 3,
+        config.value.emptySegmentSpacing || 60
+    )
+})
+
 // 佈局優化選項
 const useOptimization = ref(false) // 是否使用力導向優化（可選功能）
 
@@ -133,11 +151,12 @@ const layoutNodes = computed<LayoutNode[]>(() => {
         return []
     }
 
-    // 使用佈局引擎計算初始佈局
+    // 使用佈局引擎計算初始佈局（使用動態間距）
     let nodes = calculateLayout(
         sortedSchemas.value,
         config.value,
-        minYear.value
+        minYear.value,
+        yearSpacingMap.value
     )
 
     // 可選：使用力導向算法優化佈局
@@ -153,6 +172,19 @@ const layoutQuality = computed(() => {
     return calculateLayoutQuality(layoutNodes.value)
 })
 
+// 計算屬性：動態畫布高度（基於年份間距映射表）
+const canvasHeight = computed(() => {
+    if (minYear.value === 0 || maxYear.value === 0 || yearSpacingMap.value.size === 0) {
+        return config.value.height || 1200
+    }
+    // 獲取最後一年的累積高度
+    const lastYearY = yearSpacingMap.value.get(maxYear.value) || 0
+    const baseSpacing = config.value.baseSpacing || 30
+    const topPadding = 100
+    const bottomPadding = 100
+    return lastYearY + baseSpacing + topPadding + bottomPadding
+})
+
 // 計算屬性：節點映射（用於連接線繪製）
 const nodesMap = computed(() => {
     const map = new Map<string, LayoutNode>()
@@ -165,7 +197,7 @@ const nodesMap = computed(() => {
 // 計算屬性：連接路徑
 const connectionPaths = computed(() => {
     if (connections.value.length === 0) return []
-    
+
     return generateConnectionPaths(connections.value, nodesMap.value)
 })
 
@@ -213,11 +245,12 @@ async function loadData() {
         minYear.value = range.minYear
         maxYear.value = range.maxYear
 
-        // 生成年份標籤
+        // 生成年份標籤（使用動態間距）
         yearLabels.value = generateYearLabels(
             data,
-            config.value.yearSpacing,
-            config.value.reverseTimeline
+            yearSpacingMap.value,
+            config.value.emptyYearThreshold || 3,
+            config.value.labelInterval || 5
         )
 
         // 獲取所有特性和作者
@@ -264,8 +297,9 @@ function toggleTimeline() {
         // 重新生成年份標籤
         yearLabels.value = generateYearLabels(
             schemas.value,
-            config.value.yearSpacing,
-            config.value.reverseTimeline
+            yearSpacingMap.value,
+            config.value.emptyYearThreshold || 3,
+            config.value.labelInterval || 5
         )
     }
 }
@@ -279,8 +313,9 @@ onMounted(() => {
 watch(() => props.config, () => {
     yearLabels.value = generateYearLabels(
         schemas.value,
-        config.value.yearSpacing,
-        config.value.reverseTimeline
+        yearSpacingMap.value,
+        config.value.emptyYearThreshold || 3,
+        config.value.labelInterval || 5
     )
 }, { deep: true })
 </script>
@@ -327,28 +362,18 @@ watch(() => props.config, () => {
 
                     <!-- 連接類型篩選 -->
                     <div class="btn-group btn-group-sm">
-                        <button
-                            class="btn btn-sm"
-                            :class="{ 'btn-active': connectionFilterType === null }"
-                            @click="connectionFilterType = null"
-                            title="顯示所有連接"
-                        >
+                        <button class="btn btn-sm" :class="{ 'btn-active': connectionFilterType === null }"
+                            @click="connectionFilterType = null" title="顯示所有連接">
                             全部
                         </button>
-                        <button
-                            class="btn btn-sm"
-                            :class="{ 'btn-active': connectionFilterType === 'feature' }"
+                        <button class="btn btn-sm" :class="{ 'btn-active': connectionFilterType === 'feature' }"
                             @click="connectionFilterType = connectionFilterType === 'feature' ? null : 'feature'"
-                            title="只顯示特性繼承"
-                        >
+                            title="只顯示特性繼承">
                             特性
                         </button>
-                        <button
-                            class="btn btn-sm"
-                            :class="{ 'btn-active': connectionFilterType === 'author' }"
+                        <button class="btn btn-sm" :class="{ 'btn-active': connectionFilterType === 'author' }"
                             @click="connectionFilterType = connectionFilterType === 'author' ? null : 'author'"
-                            title="只顯示作者繼承"
-                        >
+                            title="只顯示作者繼承">
                             作者
                         </button>
                     </div>
@@ -368,60 +393,39 @@ watch(() => props.config, () => {
 
             <!-- 畫布區域 -->
             <div class="canvas-wrapper">
-                <svg :width="config.width" :height="config.height" class="genealogy-svg">
+                <svg :width="config.width" :height="canvasHeight" class="genealogy-svg">
                     <!-- 定義箭頭標記 -->
                     <defs>
-                        <marker
-                            id="arrow-feature"
-                            viewBox="0 0 10 10"
-                            refX="9"
-                            refY="5"
-                            markerWidth="6"
-                            markerHeight="6"
-                            orient="auto"
-                        >
+                        <marker id="arrow-feature" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6"
+                            markerHeight="6" orient="auto">
                             <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(99, 102, 241, 0.6)" />
                         </marker>
-                        <marker
-                            id="arrow-author"
-                            viewBox="0 0 10 10"
-                            refX="9"
-                            refY="5"
-                            markerWidth="6"
-                            markerHeight="6"
-                            orient="auto"
-                        >
+                        <marker id="arrow-author" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6"
+                            orient="auto">
                             <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(34, 197, 94, 0.6)" />
                         </marker>
                     </defs>
 
                     <!-- 連接線（在節點下方） -->
                     <g class="connections">
-                        <path
-                            v-for="({ connection, path }, index) in visibleConnections"
-                            :key="`${connection.from}-${connection.to}-${connection.type}`"
-                            :d="path"
-                            :stroke="getConnectionColor(connection, 'light')"
-                            :stroke-width="getConnectionStrokeWidth(
+                        <path v-for="({ connection, path }, index) in visibleConnections"
+                            :key="`${connection.from}-${connection.to}-${connection.type}`" :d="path"
+                            :stroke="getConnectionColor(connection, 'light')" :stroke-width="getConnectionStrokeWidth(
                                 connection,
                                 focusedSchemaId === connection.from || focusedSchemaId === connection.to
-                            )"
-                            fill="none"
-                            :marker-end="`url(#arrow-${connection.type})`"
-                            :class="{
+                            )" fill="none" :marker-end="`url(#arrow-${connection.type})`" :class="{
                                 'connection-line': true,
                                 [`connection-${connection.type}`]: true,
                                 'connection-focused': focusedSchemaId === connection.from || focusedSchemaId === connection.to,
                                 'connection-dimmed': focusedSchemaId && focusedSchemaId !== connection.from && focusedSchemaId !== connection.to
-                            }"
-                        >
+                            }">
                             <title>{{ connection.label }}</title>
                         </path>
                     </g>
 
                     <!-- 年份標籤 -->
                     <g class="year-labels">
-                        <line :x1="50" :y1="50" :x2="50" :y2="config.height! - 50" class="timeline-axis" />
+                        <line :x1="50" :y1="50" :x2="50" :y2="canvasHeight - 50" class="timeline-axis" />
                         <text v-for="label in yearLabels" :key="label.year" :x="40" :y="label.y + 54"
                             class="year-label-text" text-anchor="end">
                             {{ label.year }}
@@ -440,19 +444,13 @@ watch(() => props.config, () => {
                             <!-- 卡片背景 -->
                             <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
 
-                            <!-- 輸入法名稱 -->
-                            <text :x="node.width / 2" :y="30" class="node-title" text-anchor="middle">
-                                {{ node.schema.name }}
-                            </text>
-
-                            <!-- 作者 -->
-                            <text :x="node.width / 2" :y="50" class="node-author" text-anchor="middle">
-                                {{ node.schema.authors.join('、') }}
-                            </text>
-
-                            <!-- 時間 -->
-                            <text :x="node.width / 2" :y="68" class="node-date" text-anchor="middle">
-                                {{ formatDate(node.schema.date) }}
+                            <!-- 單行顯示：輸入法名 作者名 | 年份 -->
+                            <text :x="10" :y="28" class="node-compact-text" text-anchor="start"
+                                shape-rendering="crispEdges" text-rendering="geometricPrecision">
+                                <tspan class="node-name">{{ node.schema.name }}</tspan>
+                                <tspan class="node-author" dx="8">{{ node.schema.authors.join(' ') }}</tspan>
+                                <tspan class="node-separator" dx="6"> </tspan>
+                                <tspan class="node-date" dx="6">{{ formatDate(node.schema.date) }}</tspan>
                             </text>
                         </g>
                     </g>
@@ -548,6 +546,7 @@ watch(() => props.config, () => {
     fill: var(--fallback-bc, oklch(var(--bc)/0.6));
     font-size: 12px;
     font-weight: 600;
+    stroke: none;
 }
 
 /* 節點樣式 */
@@ -563,10 +562,18 @@ watch(() => props.config, () => {
     transition: all 0.3s ease;
 }
 
+:global(.dark) .node-bg {
+    /* 使用主題默認色 */
+}
+
 .schema-node.hovered .node-bg {
     fill: var(--fallback-b3, oklch(var(--b3)));
     stroke-width: 3;
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+:global(.dark) .schema-node.hovered .node-bg {
+    /* 使用主題默認色 */
 }
 
 .schema-node.focused .node-bg {
@@ -576,6 +583,70 @@ watch(() => props.config, () => {
     filter: drop-shadow(0 6px 12px rgba(99, 102, 241, 0.3));
 }
 
+:global(.dark) .schema-node.focused .node-bg {
+    /* 使用主題默認色 */
+}
+
+/* 單行緊湊文字樣式 - 與字根圖保持一致 */
+.node-compact-text {
+    font-size: 12px;
+    stroke: none;
+}
+
+.node-name {
+    fill: var(--fallback-nc, oklch(var(--nc)));
+    font-weight: 600;
+    font-size: 13px;
+    stroke: none;
+}
+
+:global(.dark) .node-name {
+    fill: var(--fallback-nc, oklch(var(--nc)));
+}
+
+.node-author {
+    fill: var(--fallback-nc, oklch(var(--nc)/0.7));
+    font-size: 11px;
+    font-weight: 400;
+    stroke: none;
+}
+
+:global(.dark) .node-author {
+    fill: var(--fallback-nc, oklch(var(--nc)/0.7));
+}
+
+.node-separator {
+    fill: var(--fallback-nc, oklch(var(--nc)/0.5));
+    font-size: 11px;
+    stroke: none;
+}
+
+:global(.dark) .node-separator {
+    fill: var(--fallback-nc, oklch(var(--nc)/0.5));
+}
+
+.node-date {
+    fill: rgb(55, 65, 81);
+    font-size: 11px;
+    font-weight: 400;
+    stroke: none;
+}
+
+:global(.dark) .node-separator {
+    fill: #707070;
+}
+
+.node-date {
+    fill: #666666;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+:global(.dark) .node-date {
+    fill: var(--fallback-nc, oklch(var(--nc)/0.6));
+}
+
+/* 舊版樣式（已棄用，保留以防遷移需要）*/
 .node-title {
     fill: rgb(79, 70, 229);
     font-size: 14px;
@@ -584,16 +655,6 @@ watch(() => props.config, () => {
 
 :global(.dark) .node-title {
     fill: rgb(165, 180, 252);
-}
-
-.node-author {
-    fill: var(--fallback-bc, oklch(var(--bc)/0.7));
-    font-size: 12px;
-}
-
-.node-date {
-    fill: var(--fallback-bc, oklch(var(--bc)/0.5));
-    font-size: 10px;
 }
 
 /* 連接線樣式 */
