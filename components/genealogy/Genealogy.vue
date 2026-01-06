@@ -79,6 +79,7 @@ const allAuthors = ref<string[]>([])
 // 交互狀態
 const focusedSchemaId = ref<string | null>(null)
 const hoveredSchemaId = ref<string | null>(null)
+const hoveredLabelConnection = ref<Connection | null>(null)  // 鼠標懸停的標籤對應的連接
 
 // 篩選狀態
 const selectedFeatures = ref<string[]>([])
@@ -258,8 +259,15 @@ const groupedNodes = computed(() => {
     const highlightNodes: LayoutNode[] = []
 
     layoutNodes.value.forEach(node => {
-        const isHighlight = node.schema.id === focusedSchemaId.value ||
+        let isHighlight = node.schema.id === focusedSchemaId.value ||
             parentNodeIds.value.has(node.schema.id)
+
+        // 如果有標籤被 hover，只高亮該連接的兩端
+        if (hoveredLabelConnection.value) {
+            isHighlight = node.schema.id === hoveredLabelConnection.value.from ||
+                node.schema.id === hoveredLabelConnection.value.to
+        }
+
         if (isHighlight) {
             highlightNodes.push(node)
         } else {
@@ -485,6 +493,11 @@ function handleCardHover(schemaId: string | null) {
     hoveredSchemaId.value = schemaId
 }
 
+// Hover 連接標籤
+function handleLabelHover(connection: Connection | null) {
+    hoveredLabelConnection.value = connection
+}
+
 // 計算文字寬度（考慮中英文混合）
 function getTextWidth(text: string): number {
     let width = 0
@@ -652,12 +665,18 @@ watch(() => props.config, () => {
                             <path :d="path" :stroke="getConnectionColor(connection, isDark ? 'dark' : 'light')"
                                 :stroke-width="getConnectionStrokeWidth(
                                     connection,
-                                    focusedSchemaId === connection.from
+                                    focusedSchemaId === connection.from ||
+                                    (hoveredLabelConnection && hoveredLabelConnection.from === connection.from &&
+                                        hoveredLabelConnection.to === connection.to)
                                 )" fill="none" :marker-end="`url(#arrow-${connection.type})`" :class="{
                                     'connection-line': true,
                                     [`connection-${connection.type}`]: true,
-                                    'connection-focused': focusedSchemaId === connection.from,
-                                    'connection-dimmed': focusedSchemaId && focusedSchemaId !== connection.from
+                                    'connection-focused': (focusedSchemaId === connection.from && !hoveredLabelConnection) ||
+                                        (hoveredLabelConnection && hoveredLabelConnection.from === connection.from &&
+                                            hoveredLabelConnection.to === connection.to),
+                                    'connection-dimmed': hoveredLabelConnection ?
+                                        !(hoveredLabelConnection.from === connection.from && hoveredLabelConnection.to === connection.to) :
+                                        (focusedSchemaId && focusedSchemaId !== connection.from)
                                 }">
                                 <title>{{ connection.label }}</title>
                             </path>
@@ -766,7 +785,13 @@ watch(() => props.config, () => {
 
                     <!-- Focus 狀態：在連接線上顯示特徵標籤（在最上層，所有卡片之後） -->
                     <g v-if="focusedSchemaId" class="connection-labels">
-                        <g v-for="(labelBox, idx) in labeledConnections" :key="`label-${idx}`">
+                        <g v-for="(labelBox, idx) in labeledConnections" :key="`label-${idx}`"
+                            @mouseenter="handleLabelHover(labelBox.connection)" @mouseleave="handleLabelHover(null)"
+                            class="connection-label-group" :class="{
+                                'label-hovered': hoveredLabelConnection &&
+                                    hoveredLabelConnection.from === labelBox.connection.from &&
+                                    hoveredLabelConnection.to === labelBox.connection.to
+                            }">
                             <!-- 背景圆角方框 -->
                             <rect :x="labelBox.x - labelBox.width / 2" :y="labelBox.y - labelBox.height / 2"
                                 :width="labelBox.width" :height="labelBox.height" class="connection-label-bg" rx="4" />
@@ -1255,10 +1280,40 @@ watch(() => props.config, () => {
 .connection-label-bg {
     fill: var(--vp-c-bg, #ffffff);
     opacity: 0.95;
+    transition: all 0.2s ease;
 }
 
 :global(.dark) .connection-label-bg {
     fill: var(--vp-c-bg, #1e293b);
+}
+
+/* 連接線標籤組 */
+.connection-label-group {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.connection-label-group:hover .connection-label-bg,
+.connection-label-group.label-hovered .connection-label-bg {
+    opacity: 1;
+    fill: var(--vp-c-brand, rgb(99, 102, 241));
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+:global(.dark) .connection-label-group:hover .connection-label-bg,
+:global(.dark) .connection-label-group.label-hovered .connection-label-bg {
+    fill: rgb(165, 180, 252);
+}
+
+.connection-label-group:hover .connection-label,
+.connection-label-group.label-hovered .connection-label {
+    fill: white;
+    font-weight: 600;
+}
+
+:global(.dark) .connection-label-group:hover .connection-label,
+:global(.dark) .connection-label-group.label-hovered .connection-label {
+    fill: #1e293b;
 }
 
 /* 連接線標籤文字 */
@@ -1270,6 +1325,7 @@ watch(() => props.config, () => {
     animation: fadeIn 0.3s ease-in 0.2s forwards;
     pointer-events: none;
     stroke: none;
+    transition: all 0.2s ease;
 }
 
 :global(.dark) .connection-label {
