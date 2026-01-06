@@ -95,7 +95,7 @@ const isFullscreen = ref(false)
 const genealogyContainer = ref<HTMLElement | null>(null)
 
 // Y軸縮放狀態
-const yScaleFactor = ref(1.0) // 1.0 = 100%, 範圍 0.5-2.0
+const yScaleFactor = ref(1.0) // 1.0 = 100%
 
 // 篩選狀態
 const selectedFeatures = ref<string[]>([])
@@ -276,8 +276,8 @@ const parentNodeIds = computed(() => {
     const parents = new Set<string>()
     connections.value.forEach(conn => {
         // 父系：箭頭指向 focused 的節點（from 是父）
-        if (conn.to === focusedSchemaId.value) {
-            parents.add(conn.from)
+        if (conn.from === focusedSchemaId.value) {
+            parents.add(conn.to)
         }
     })
     return parents
@@ -290,8 +290,8 @@ const childNodeIds = computed(() => {
     const children = new Set<string>()
     connections.value.forEach(conn => {
         // 子系：箭頭從 focused 指向的節點（to 是子）
-        if (conn.from === focusedSchemaId.value) {
-            children.add(conn.to)
+        if (conn.to === focusedSchemaId.value) {
+            children.add(conn.from)
         }
     })
     return children
@@ -744,64 +744,75 @@ watch(() => props.config, () => {
 
         <!-- 主內容 -->
         <div v-else class="genealogy-content">
-            <!-- 工具欄 - 簡化單行版本 -->
+            <!-- 工具欄 - 兩行版本 -->
             <div class="toolbar-compact">
-                <div class="toolbar-left">
-                    <!-- 統計信息 -->
-                    <span class="text-sm text-gray-600 dark:text-gray-400">
-                        共 {{ filteredSchemas.length }} 個輸入法 ({{ minYear }}-{{ maxYear }})
-                    </span>
-
-                    <!-- 特徵篩選下拉菜單 -->
-                    <div class="dropdown-wrapper">
-                        <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
-                            特徵
-                            <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length }}</span>
-                            <span class="arrow">▼</span>
-                        </button>
-                        <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
-                            <div class="dropdown-header">
-                                <button @click="selectedFeatures = []" class="clear-btn">清除</button>
-                            </div>
-                            <label v-for="feature in allFeatures" :key="feature" class="dropdown-item">
-                                <input type="checkbox" :checked="selectedFeatures.includes(feature)"
-                                    @change="toggleFeature(feature)" />
-                                <span>{{ feature }}</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- 作者篩選下拉菜單 -->
-                    <div class="dropdown-wrapper">
-                        <button @click="showAuthorDropdown = !showAuthorDropdown" class="dropdown-trigger">
-                            作者
-                            <span v-if="selectedAuthors.length > 0" class="badge">{{ selectedAuthors.length }}</span>
-                            <span class="arrow">▼</span>
-                        </button>
-                        <div v-if="showAuthorDropdown" class="dropdown-menu" @click.stop>
-                            <div class="dropdown-header">
-                                <button @click="selectedAuthors = []" class="clear-btn">清除</button>
-                            </div>
-                            <label v-for="author in allAuthors" :key="author" class="dropdown-item">
-                                <input type="checkbox" :checked="selectedAuthors.includes(author)"
-                                    @change="toggleAuthor(author)" />
-                                <span>{{ author }}</span>
-                            </label>
-                        </div>
-                    </div>
+                <!-- 第一行：標題 -->
+                <div class="toolbar-header">
+                    <h2 class="toolbar-title">字形輸入法源流圖</h2>
                 </div>
 
-                <div class="toolbar-right">
-                    <!-- Y軸縮放控制 -->
-                    <div class="scale-control-inline">
-                        <input type="range" v-model.number="yScaleFactor" min="0.4" max="1.0" step="0.05"
-                            class="scale-slider-inline" />
+                <!-- 第二行：控制按鈕 -->
+                <div class="toolbar-controls">
+                    <div class="toolbar-left">
+                        <!-- 統計信息 -->
+                        <span class="text-sm text-gray-600 dark:text-gray-400">
+                            共 {{ filteredSchemas.length }} 個輸入法 ({{ minYear }}-{{ maxYear }})
+                        </span>
+
+                        <!-- 特徵篩選下拉菜單 -->
+                        <div class="dropdown-wrapper">
+                            <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
+                                特徵
+                                <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length
+                                }}</span>
+                                <span class="arrow">▼</span>
+                            </button>
+                            <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
+                                <div class="dropdown-header">
+                                    <button @click="selectedFeatures = []" class="clear-btn">清除</button>
+                                </div>
+                                <label v-for="feature in allFeatures" :key="feature" class="dropdown-item">
+                                    <input type="checkbox" :checked="selectedFeatures.includes(feature)"
+                                        @change="toggleFeature(feature)" />
+                                    <span>{{ feature }}</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- 作者篩選下拉菜單 -->
+                        <div class="dropdown-wrapper">
+                            <button @click="showAuthorDropdown = !showAuthorDropdown" class="dropdown-trigger">
+                                作者
+                                <span v-if="selectedAuthors.length > 0" class="badge">{{ selectedAuthors.length
+                                }}</span>
+                                <span class="arrow">▼</span>
+                            </button>
+                            <div v-if="showAuthorDropdown" class="dropdown-menu" @click.stop>
+                                <div class="dropdown-header">
+                                    <button @click="selectedAuthors = []" class="clear-btn">清除</button>
+                                </div>
+                                <label v-for="author in allAuthors" :key="author" class="dropdown-item">
+                                    <input type="checkbox" :checked="selectedAuthors.includes(author)"
+                                        @change="toggleAuthor(author)" />
+                                    <span>{{ author }}</span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- 全屏按鈕 -->
-                    <button @click="toggleFullscreen" class="btn-compact" :title="isFullscreen ? '退出全屏 (ESC)' : '進入全屏'">
-                        {{ isFullscreen ? '✕ 退出' : '⛶' }}
-                    </button>
+                    <div class="toolbar-right">
+                        <!-- Y軸縮放控制 -->
+                        <div class="scale-control-inline">
+                            <input type="range" v-model.number="yScaleFactor" min="0.4" max="1.0" step="0.01"
+                                class="scale-slider-inline" />
+                        </div>
+
+                        <!-- 全屏按鈕 -->
+                        <button @click="toggleFullscreen" class="btn-compact"
+                            :title="isFullscreen ? '退出全屏 (ESC)' : '進入全屏'">
+                            {{ isFullscreen ? '✕ 退出' : '⛶' }}
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -1031,12 +1042,11 @@ watch(() => props.config, () => {
     gap: 1rem;
 }
 
-/* 簡化工具欄 - 單行緊湊版本 */
+/* 簡化工具欄 - 兩行版本 */
 .toolbar-compact {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.75rem;
     padding: 0.75rem 1rem;
     background: var(--vp-c-bg-soft, #f8fafc);
     border-radius: 0.5rem;
@@ -1045,6 +1055,33 @@ watch(() => props.config, () => {
 
 :global(.dark) .toolbar-compact {
     background: var(--vp-c-bg-soft, #374151);
+}
+
+.toolbar-header {
+    display: flex;
+    align-items: center;
+}
+
+.toolbar-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--vp-c-text-1, #1e293b);
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-top: none;
+    font-family: "Noto Serif SC", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+:global(.dark) .toolbar-title {
+    color: var(--vp-c-text-1, #f1f5f9);
+}
+
+.toolbar-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .toolbar-left {
