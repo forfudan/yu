@@ -5,7 +5,7 @@
  */
 
 import type { SchemaData, LayoutNode, GenealogyConfig } from './types'
-import { calculateYPosition, parseYear } from './dataLoader'
+import { calculateYPosition, parseYear, formatDate } from './dataLoader'
 
 /**
  * 分組：將相近時間的輸入法分到同一組
@@ -26,7 +26,7 @@ interface TimeGroup {
  * @param text 文本內容
  * @returns 寬度（像素）
  */
-function getTextWidth(text: string): number {
+function getTextWidth(text: string, is_schema_name: boolean): number {
     let width = 0
     for (let i = 0; i < text.length; i++) {
         const char = text.charCodeAt(i)
@@ -34,7 +34,12 @@ function getTextWidth(text: string): number {
         if ((char >= 0x4E00 && char <= 0x9FFF) ||
             (char >= 0x3400 && char <= 0x4DBF) ||
             (char >= 0x20000 && char <= 0x2A6DF)) {
-            width += 12  // 中文字符寬度
+            if (is_schema_name) {
+                width += 15  // 中文字符寬度}
+            }
+            else {
+                width += 12  // 中文字符寬度
+            }
         } else {
             width += 6.5  // 英文字符寬度
         }
@@ -49,18 +54,20 @@ function getTextWidth(text: string): number {
  */
 function calculateCardWidth(schema: SchemaData): number {
     // 計算各部分文本寬度
-    const nameWidth = getTextWidth(schema.name)
-    const authorWidth = getTextWidth(schema.authors.join(' '))
-    const dateWidth = getTextWidth(formatYear(schema.date))  // "1994" 或 "2024-01"
+    const nameWidth = getTextWidth(schema.name, true)
+    const authorWidth = getTextWidth(schema.authors.join(' '), false)
+    const dateWidth = getTextWidth(formatDate(schema.date), false)  // "2024年3月12日" 等格式
 
-    // 總寬度 = 文本寬度 + 間距 + 左右內邊距
-    // 格式: [10px內邊距] 名稱 [8px] 作者 [6px] | [6px] 日期 [10px內邊距]
-    const totalTextWidth = nameWidth + 8 + authorWidth + 6 + dateWidth
-    const padding = 20  // 左右各10px
-    const minWidth = 120  // 最小寬度
+    // 三行布局：取三行中最宽的一行
+    // 格式: [10px內邊距] 第1行：名稱 [10px內邊距]
+    //       [10px內邊距] 第2行：作者 [10px內邊距]
+    //       [10px內邊距] 第3行：日期 [10px內邊距]
+    const maxTextWidth = Math.max(nameWidth, authorWidth, dateWidth)
+    const padding = 10  // 左右各5px
+    const minWidth = 60  // 最小寬度
     const maxWidth = 350  // 最大寬度
 
-    return Math.max(minWidth, Math.min(maxWidth, totalTextWidth + padding))
+    return Math.max(minWidth, Math.min(maxWidth, maxTextWidth + padding))
 }
 
 /**
