@@ -1509,8 +1509,7 @@ watch(() => props.config, () => {
     fill: var(--vp-c-brand, rgb(99, 102, 241));
     font-size: 10px;
     font-weight: 500;
-    opacity: 0;
-    animation: fadeIn 0.3s ease-in 0.2s forwards;
+    opacity: 1;
     pointer-events: none;
     stroke: none;
     transition: all 0.2s ease;
@@ -1518,18 +1517,6 @@ watch(() => props.config, () => {
 
 :global(.dark) .connection-label {
     fill: rgb(165, 180, 252);
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-5px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* 表單控件樣式 */
