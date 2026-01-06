@@ -246,36 +246,79 @@ const parentNodeIds = computed(() => {
     return parents
 })
 
-// 計算屬性：分組節點 - 背景節點和高亮節點
+// 計算屬性：獲取 focused 節點的子節點 ID 集合
+const childNodeIds = computed(() => {
+    if (!focusedSchemaId.value) return new Set<string>()
+
+    const children = new Set<string>()
+    connections.value.forEach(conn => {
+        if (conn.to === focusedSchemaId.value) {
+            children.add(conn.from)
+        }
+    })
+    return children
+})
+
+// 計算屬性：分組節點 - 背景節點、父系節點、子系節點
 const groupedNodes = computed(() => {
     if (!focusedSchemaId.value) {
         return {
             backgroundNodes: layoutNodes.value,
-            highlightNodes: []
+            parentNodes: [],
+            childNodes: [],
+            focusedNode: null
         }
     }
 
     const backgroundNodes: LayoutNode[] = []
-    const highlightNodes: LayoutNode[] = []
+    const parentNodes: LayoutNode[] = []
+    const childNodes: LayoutNode[] = []
+    let focusedNode: LayoutNode | null = null
+
+    // 收集所有可見連接中涉及的節點ID
+    const connectedNodeIds = new Set<string>()
+    visibleConnections.value.forEach(({ connection }) => {
+        connectedNodeIds.add(connection.from)
+        connectedNodeIds.add(connection.to)
+    })
 
     layoutNodes.value.forEach(node => {
-        let isHighlight = node.schema.id === focusedSchemaId.value ||
-            parentNodeIds.value.has(node.schema.id)
-
         // 如果有標籤被 hover，只高亮該連接的兩端
         if (hoveredLabelConnection.value) {
-            isHighlight = node.schema.id === hoveredLabelConnection.value.from ||
-                node.schema.id === hoveredLabelConnection.value.to
-        }
-
-        if (isHighlight) {
-            highlightNodes.push(node)
+            if (node.schema.id === hoveredLabelConnection.value.from ||
+                node.schema.id === hoveredLabelConnection.value.to) {
+                // 判断是父系还是子系
+                if (node.schema.id === focusedSchemaId.value) {
+                    focusedNode = node
+                } else if (parentNodeIds.value.has(node.schema.id)) {
+                    parentNodes.push(node)
+                } else if (childNodeIds.value.has(node.schema.id)) {
+                    childNodes.push(node)
+                }
+            } else {
+                backgroundNodes.push(node)
+            }
         } else {
-            backgroundNodes.push(node)
+            // 正常 focus 模式
+            if (node.schema.id === focusedSchemaId.value) {
+                focusedNode = node
+            } else if (connectedNodeIds.has(node.schema.id)) {
+                // 根據與焦點節點的關係分類
+                if (parentNodeIds.value.has(node.schema.id)) {
+                    parentNodes.push(node)
+                } else if (childNodeIds.value.has(node.schema.id)) {
+                    childNodes.push(node)
+                } else {
+                    // 同作者但無直接父子關係的節點，也放入父系（使用相同顏色）
+                    parentNodes.push(node)
+                }
+            } else {
+                backgroundNodes.push(node)
+            }
         }
     })
 
-    return { backgroundNodes, highlightNodes }
+    return { backgroundNodes, parentNodes, childNodes, focusedNode }
 })
 
 // 計算屬性：連接路徑
@@ -287,13 +330,52 @@ const connectionPaths = computed(() => {
 
 // 計算屬性：過濾後的連接
 const visibleConnections = computed(() => {
-    return connectionPaths.value.filter(({ connection }) =>
-        shouldShowConnection(
-            connection,
-            focusedSchemaId.value,
-            connectionFilterType.value
+    if (!focusedSchemaId.value) {
+        return connectionPaths.value.filter(({ connection }) =>
+            shouldShowConnection(
+                connection,
+                focusedSchemaId.value,
+                connectionFilterType.value
+            )
         )
-    )
+    }
+
+    // Focus 模式：顯示與焦點相關的連接，以及同作者之間的所有連接
+    const focusedSchema = schemas.value.find(s => s.id === focusedSchemaId.value)
+    if (!focusedSchema) {
+        return []
+    }
+
+    const focusedAuthors = new Set(focusedSchema.authors)
+
+    return connectionPaths.value.filter(({ connection }) => {
+        // 應用類型篩選
+        if (connectionFilterType.value && connection.type !== connectionFilterType.value) {
+            return false
+        }
+
+        // 顯示與焦點節點直接相關的連接
+        if (connection.from === focusedSchemaId.value || connection.to === focusedSchemaId.value) {
+            return true
+        }
+
+        // 顯示同作者方案之間的連接
+        const fromSchema = schemas.value.find(s => s.id === connection.from)
+        const toSchema = schemas.value.find(s => s.id === connection.to)
+
+        if (fromSchema && toSchema) {
+            // 檢查 from 和 to 是否都有與焦點方案相同的作者
+            const fromHasAuthor = fromSchema.authors.some(a => focusedAuthors.has(a))
+            const toHasAuthor = toSchema.authors.some(a => focusedAuthors.has(a))
+
+            // 如果兩個方案都有同作者，顯示它們之間的連接
+            if (fromHasAuthor && toHasAuthor) {
+                return true
+            }
+        }
+
+        return false
+    })
 })
 
 // 計算屬性：分離每個標籤的連接（用於防碰撞）
@@ -315,9 +397,11 @@ const separatedConnections = computed(() => {
 const labeledConnections = computed(() => {
     if (!focusedSchemaId.value) return []
 
-    // 只處理焦點節點的連接
+    // 處理焦點節點的父系和子系連接，但排除作者連接（不顯示標籤）
     const focusedItems = separatedConnections.value.filter(
-        item => item.connection.from === focusedSchemaId.value
+        item => (item.connection.from === focusedSchemaId.value ||
+            item.connection.to === focusedSchemaId.value) &&
+            item.connection.type !== 'author'  // 排除作者連接
     )
 
     // 計算每個標籤的初始位置和尺寸
@@ -665,18 +749,20 @@ watch(() => props.config, () => {
                             <path :d="path" :stroke="getConnectionColor(connection, isDark ? 'dark' : 'light')"
                                 :stroke-width="getConnectionStrokeWidth(
                                     connection,
-                                    focusedSchemaId === connection.from ||
+                                    focusedSchemaId === connection.from || focusedSchemaId === connection.to ||
                                     (hoveredLabelConnection && hoveredLabelConnection.from === connection.from &&
                                         hoveredLabelConnection.to === connection.to)
                                 )" fill="none" :marker-end="`url(#arrow-${connection.type})`" :class="{
                                     'connection-line': true,
                                     [`connection-${connection.type}`]: true,
-                                    'connection-focused': (focusedSchemaId === connection.from && !hoveredLabelConnection) ||
+                                    'connection-parent': focusedSchemaId === connection.from,
+                                    'connection-child': focusedSchemaId === connection.to,
+                                    'connection-focused': (focusedSchemaId === connection.from || focusedSchemaId === connection.to) && !hoveredLabelConnection ||
                                         (hoveredLabelConnection && hoveredLabelConnection.from === connection.from &&
                                             hoveredLabelConnection.to === connection.to),
                                     'connection-dimmed': hoveredLabelConnection ?
                                         !(hoveredLabelConnection.from === connection.from && hoveredLabelConnection.to === connection.to) :
-                                        (focusedSchemaId && focusedSchemaId !== connection.from)
+                                        (focusedSchemaId && focusedSchemaId !== connection.from && focusedSchemaId !== connection.to)
                                 }">
                                 <title>{{ connection.label }}</title>
                             </path>
@@ -722,33 +808,85 @@ watch(() => props.config, () => {
                         </g>
                     </g>
 
-                    <!-- 高亮輸入法卡片（在最上層） - 有 focus 時只顯示高亮的 -->
-                    <g v-if="focusedSchemaId" class="schema-nodes-highlight">
-                        <g v-for="node in groupedNodes.highlightNodes" :key="'hl-' + node.schema.id"
+                    <!-- 高亮輸入法卡片（在最上層） - 有 focus 時分層顯示 -->
+                    <!-- 父系節點（藍色） -->
+                    <g v-if="focusedSchemaId" class="schema-nodes-parents">
+                        <g v-for="node in groupedNodes.parentNodes" :key="'parent-' + node.schema.id"
                             :transform="`translate(${node.x}, ${node.y})`" @click="handleCardClick(node.schema.id)"
                             @mouseenter="handleCardHover(node.schema.id)" @mouseleave="handleCardHover(null)"
-                            class="schema-node" :class="{
-                                focused: focusedSchemaId === node.schema.id,
+                            class="schema-node schema-node-parent" :class="{
                                 hovered: hoveredSchemaId === node.schema.id
                             }">
                             <!-- 卡片背景 -->
                             <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
 
                             <!-- 三行顯示：第一行名稱，第二行作者，第三行日期 -->
-                            <!-- 第一行：輸入法名 -->
                             <text :x="10" :y="16" class="node-name" text-anchor="start" shape-rendering="crispEdges"
                                 text-rendering="geometricPrecision">
                                 {{ node.schema.name }}
                             </text>
-                            <!-- 第二行：作者 -->
                             <text :x="10" :y="31" class="node-author" text-anchor="start" shape-rendering="crispEdges"
                                 text-rendering="geometricPrecision">
                                 {{ node.schema.authors.join(' ') }}
                             </text>
-                            <!-- 第三行：日期 -->
                             <text :x="10" :y="46" class="node-date" text-anchor="start" shape-rendering="crispEdges"
                                 text-rendering="geometricPrecision">
                                 {{ formatDate(node.schema.date) }}
+                            </text>
+                        </g>
+                    </g>
+
+                    <!-- 子系節點（綠色） -->
+                    <g v-if="focusedSchemaId" class="schema-nodes-children">
+                        <g v-for="node in groupedNodes.childNodes" :key="'child-' + node.schema.id"
+                            :transform="`translate(${node.x}, ${node.y})`" @click="handleCardClick(node.schema.id)"
+                            @mouseenter="handleCardHover(node.schema.id)" @mouseleave="handleCardHover(null)"
+                            class="schema-node schema-node-child" :class="{
+                                hovered: hoveredSchemaId === node.schema.id
+                            }">
+                            <!-- 卡片背景 -->
+                            <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
+
+                            <!-- 三行顯示：第一行名稱，第二行作者，第三行日期 -->
+                            <text :x="10" :y="16" class="node-name" text-anchor="start" shape-rendering="crispEdges"
+                                text-rendering="geometricPrecision">
+                                {{ node.schema.name }}
+                            </text>
+                            <text :x="10" :y="31" class="node-author" text-anchor="start" shape-rendering="crispEdges"
+                                text-rendering="geometricPrecision">
+                                {{ node.schema.authors.join(' ') }}
+                            </text>
+                            <text :x="10" :y="46" class="node-date" text-anchor="start" shape-rendering="crispEdges"
+                                text-rendering="geometricPrecision">
+                                {{ formatDate(node.schema.date) }}
+                            </text>
+                        </g>
+                    </g>
+
+                    <!-- 焦點節點 -->
+                    <g v-if="focusedSchemaId && groupedNodes.focusedNode" class="schema-nodes-focused">
+                        <g :transform="`translate(${groupedNodes.focusedNode.x}, ${groupedNodes.focusedNode.y})`"
+                            @click="handleCardClick(groupedNodes.focusedNode.schema.id)"
+                            @mouseenter="handleCardHover(groupedNodes.focusedNode.schema.id)"
+                            @mouseleave="handleCardHover(null)" class="schema-node focused" :class="{
+                                hovered: hoveredSchemaId === groupedNodes.focusedNode.schema.id
+                            }">
+                            <!-- 卡片背景 -->
+                            <rect :width="groupedNodes.focusedNode.width" :height="groupedNodes.focusedNode.height"
+                                class="node-bg" rx="8" />
+
+                            <!-- 三行顯示：第一行名稱，第二行作者，第三行日期 -->
+                            <text :x="10" :y="16" class="node-name" text-anchor="start" shape-rendering="crispEdges"
+                                text-rendering="geometricPrecision">
+                                {{ groupedNodes.focusedNode.schema.name }}
+                            </text>
+                            <text :x="10" :y="31" class="node-author" text-anchor="start" shape-rendering="crispEdges"
+                                text-rendering="geometricPrecision">
+                                {{ groupedNodes.focusedNode.schema.authors.join(' ') }}
+                            </text>
+                            <text :x="10" :y="46" class="node-date" text-anchor="start" shape-rendering="crispEdges"
+                                text-rendering="geometricPrecision">
+                                {{ formatDate(groupedNodes.focusedNode.schema.date) }}
                             </text>
                         </g>
                     </g>
@@ -790,7 +928,9 @@ watch(() => props.config, () => {
                             class="connection-label-group" :class="{
                                 'label-hovered': hoveredLabelConnection &&
                                     hoveredLabelConnection.from === labelBox.connection.from &&
-                                    hoveredLabelConnection.to === labelBox.connection.to
+                                    hoveredLabelConnection.to === labelBox.connection.to,
+                                'label-parent': labelBox.connection.from === focusedSchemaId,
+                                'label-child': labelBox.connection.to === focusedSchemaId
                             }">
                             <!-- 背景圆角方框 -->
                             <rect :x="labelBox.x - labelBox.width / 2" :y="labelBox.y - labelBox.height / 2"
@@ -1163,6 +1303,45 @@ watch(() => props.config, () => {
     stroke: rgb(165, 180, 252);
 }
 
+/* 父系節點樣式（藍色） */
+.schema-node-parent .node-bg {
+    stroke: rgb(99, 102, 241);
+    fill: rgba(99, 102, 241, 0.05);
+}
+
+:global(.dark) .schema-node-parent .node-bg {
+    stroke: rgb(165, 180, 252);
+    fill: rgba(165, 180, 252, 0.05);
+}
+
+.schema-node-parent.hovered .node-bg {
+    stroke: rgb(99, 102, 241);
+    fill: rgba(99, 102, 241, 0.15);
+    stroke-width: 3;
+}
+
+/* 子系節點樣式（綠色） */
+.schema-node-child .node-bg {
+    stroke: rgb(34, 197, 94);
+    fill: rgba(34, 197, 94, 0.05);
+}
+
+:global(.dark) .schema-node-child .node-bg {
+    stroke: rgb(134, 239, 172);
+    fill: rgba(134, 239, 172, 0.05);
+}
+
+.schema-node-child.hovered .node-bg {
+    stroke: rgb(34, 197, 94);
+    fill: rgba(34, 197, 94, 0.15);
+    stroke-width: 3;
+}
+
+:global(.dark) .schema-node-child.hovered .node-bg {
+    stroke: rgb(134, 239, 172);
+    fill: rgba(134, 239, 172, 0.15);
+}
+
 /* 單行緊湊文字樣式 - 與字根圖保持一致 */
 .node-compact-text {
     font-size: 12px;
@@ -1249,6 +1428,24 @@ watch(() => props.config, () => {
     stroke-dasharray: 5, 5;
 }
 
+/* 父系連接線（藍色，從focused指向父節點） */
+.connection-parent {
+    stroke: rgba(99, 102, 241, 0.6);
+}
+
+:global(.dark) .connection-parent {
+    stroke: rgba(165, 180, 252, 0.6);
+}
+
+/* 子系連接線（綠色，從子節點指向focused） */
+.connection-child {
+    stroke: rgba(34, 197, 94, 0.6);
+}
+
+:global(.dark) .connection-child {
+    stroke: rgba(134, 239, 172, 0.6);
+}
+
 .connection-focused {
     stroke-width: 3 !important;
     opacity: 0.9 !important;
@@ -1293,16 +1490,52 @@ watch(() => props.config, () => {
     transition: all 0.2s ease;
 }
 
-.connection-label-group:hover .connection-label-bg,
-.connection-label-group.label-hovered .connection-label-bg {
+/* 父系標籤（藍色） */
+.connection-label-group.label-parent .connection-label {
+    fill: rgb(99, 102, 241);
+}
+
+:global(.dark) .connection-label-group.label-parent .connection-label {
+    fill: rgb(165, 180, 252);
+}
+
+.connection-label-group.label-parent:hover .connection-label-bg,
+.connection-label-group.label-parent.label-hovered .connection-label-bg {
     opacity: 1;
-    fill: var(--vp-c-brand, rgb(99, 102, 241));
+    fill: rgb(99, 102, 241);
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
-:global(.dark) .connection-label-group:hover .connection-label-bg,
-:global(.dark) .connection-label-group.label-hovered .connection-label-bg {
+:global(.dark) .connection-label-group.label-parent:hover .connection-label-bg,
+:global(.dark) .connection-label-group.label-parent.label-hovered .connection-label-bg {
     fill: rgb(165, 180, 252);
+}
+
+/* 子系標籤（綠色） */
+.connection-label-group.label-child .connection-label {
+    fill: rgb(34, 197, 94);
+}
+
+:global(.dark) .connection-label-group.label-child .connection-label {
+    fill: rgb(134, 239, 172);
+}
+
+.connection-label-group.label-child:hover .connection-label-bg,
+.connection-label-group.label-child.label-hovered .connection-label-bg {
+    opacity: 1;
+    fill: rgb(34, 197, 94);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+:global(.dark) .connection-label-group.label-child:hover .connection-label-bg,
+:global(.dark) .connection-label-group.label-child.label-hovered .connection-label-bg {
+    fill: rgb(134, 239, 172);
+}
+
+.connection-label-group:hover .connection-label-bg,
+.connection-label-group.label-hovered .connection-label-bg {
+    opacity: 1;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .connection-label-group:hover .connection-label,
