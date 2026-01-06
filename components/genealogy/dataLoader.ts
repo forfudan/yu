@@ -255,32 +255,33 @@ export function generateYearLabels(
     // 生成年份標籤
     const labels: YearLabel[] = []
 
+    // 使用固定間隔策略：每隔一定年份顯示一次標籤
+    const displayInterval = 5  // 每5年顯示一次
+    const nearbyRange = 2      // 檢查附近 N 年內是否有輸入法，如果有則顯示年份標籤
+
     for (let year = minYear; year <= maxYear; year++) {
         const y = yearSpacingMap.get(year) || 0
         const count = yearCounts.get(year) || 0
 
-        // 檢查是否在空白段內
-        const inEmptySegment = emptySegments.find(
-            seg => year >= seg.startYear && year <= seg.endYear
-        )
+        // 檢查是否應該顯示這個年份標籤
+        const isIntervalYear = (year % displayInterval === 0)
+        const isEdgeYear = (year === minYear) || (year === maxYear)
 
-        if (count > 0) {
-            // 有輸入法的年份：總是顯示
-            labels.push({ year, y })
-        } else if (!inEmptySegment) {
-            // 短空白期：顯示所有年份
-            labels.push({ year, y })
-        } else if (year === inEmptySegment.startYear) {
-            // 空白段起始：總是顯示
-            labels.push({ year, y })
-        } else if (year === inEmptySegment.endYear) {
-            // 空白段結束：總是顯示
-            labels.push({ year, y })
-        } else if (labelInterval > 0 && (year - inEmptySegment.startYear) % labelInterval === 0) {
-            // 空白段中間：按間隔顯示
-            labels.push({ year, y })
+        if (isIntervalYear || isEdgeYear) {
+            // 檢查附近是否有輸入法
+            let hasNearbySchemas = false
+            for (let nearYear = year - nearbyRange; nearYear <= year + nearbyRange; nearYear++) {
+                if ((yearCounts.get(nearYear) || 0) > 0) {
+                    hasNearbySchemas = true
+                    break
+                }
+            }
+
+            // 只有當附近有輸入法時才顯示標籤
+            if (hasNearbySchemas) {
+                labels.push({ year, y })
+            }
         }
-        // 否則跳過該年份標籤
     }
 
     return labels
