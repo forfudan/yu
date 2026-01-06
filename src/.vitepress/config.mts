@@ -300,15 +300,15 @@ export default defineConfig({
           ],
         },
         {
-          text: "日月光华",
+          text: "配天之靈",
           items: [
             {
-              text: "光华字根",
-              link: "/practice/root_light",
+              text: "靈明字根",
+              link: "/practice/root_ling",
             },
             {
-              text: "光华单字",
-              link: "/practice/char_light",
+              text: "靈明单字",
+              link: "/practice/char_ling",
             },
           ],
         },
@@ -336,26 +336,18 @@ export default defineConfig({
               text: "日月单字",
               link: "/practice/char_ming",
             },
-            {
-              text: "日月·作品高频字",
-              link: "/practice/char_ming_zhu",
-            },
           ],
         },
         {
-          text: "配天之靈",
+          text: "日月光华",
           items: [
             {
-              text: "靈明字根",
-              link: "/practice/root_ling",
+              text: "光华字根",
+              link: "/practice/root_light",
             },
             {
-              text: "靈明单字",
-              link: "/practice/char_ling",
-            },
-            {
-              text: "靈明·作品高频字",
-              link: "/practice/char_ling_zhu",
+              text: "光华单字",
+              link: "/practice/char_light",
             },
           ],
         },
@@ -765,15 +757,15 @@ export default defineConfig({
               ],
             },
             {
-              text: "日月光華",
+              text: "配天之靈",
               items: [
                 {
-                  text: "光華字根",
-                  link: "/zht/practice/root_light",
+                  text: "靈明字根",
+                  link: "/zht/practice/root_ling",
                 },
                 {
-                  text: "光華單字",
-                  link: "/zht/practice/char_light",
+                  text: "靈明單字",
+                  link: "/zht/practice/char_ling",
                 },
               ],
             },
@@ -801,26 +793,18 @@ export default defineConfig({
                   text: "日月單字",
                   link: "/zht/practice/char_ming",
                 },
-                {
-                  text: "日月·作品高頻字",
-                  link: "/zht/practice/char_ming_zhu",
-                },
               ],
             },
             {
-              text: "配天之靈",
+              text: "日月光華",
               items: [
                 {
-                  text: "靈明字根",
-                  link: "/zht/practice/root_ling",
+                  text: "光華字根",
+                  link: "/zht/practice/root_light",
                 },
                 {
-                  text: "靈明單字",
-                  link: "/zht/practice/char_ling",
-                },
-                {
-                  text: "靈明·作品高頻字",
-                  link: "/zht/practice/char_ling_zhu",
+                  text: "光華單字",
+                  link: "/zht/practice/char_light",
                 },
               ],
             },

@@ -15,6 +15,14 @@
 import { shallowRef, onMounted, ref, computed, nextTick, watch, onBeforeUnmount } from "vue";
 import { Card, cache, fetchChaifenOptimized, fetchZigen, makeCodesFromDivision, find8relativeChars, ChaifenMap } from "./share";
 import { AdvancedSchedule } from "./advancedSchedule";
+import {
+    useCellWidth,
+    useVisibleOffset,
+    useCenterPosition,
+    useVisibleItems,
+    useCurrentPositionInVisible,
+    isInVisibleRange as checkIsInVisibleRange
+} from "./cascadeStyles";
 
 interface ZigenGroup {
     /** 編碼 */
@@ -71,21 +79,10 @@ const handleResize = () => {
     windowWidth.value = window.innerWidth;
 };
 
-// 计算卡带单元格宽度
-const cellWidth = computed(() => {
-    // 获取容器宽度，默认使用 windowWidth 作为参考
-    const containerWidth = cascadeContainer.value?.offsetWidth || windowWidth.value;
-    const isWideScreen = windowWidth.value >= 720;
-    // 宽屏分成7个单元格，窄屏分成5个
-    const cellCount = isWideScreen ? 7 : 5;
-    return containerWidth / cellCount;
-});
-
-// 计算可视区域的偏移量（用于裁剪显示范围）
-const visibleOffset = computed(() => {
-    const isWideScreen = windowWidth.value >= 720;
-    return isWideScreen ? 3 : 2; // 左右各显示几个
-});
+// Cascade 展示相關計算屬性 - 使用公用工具函數
+const cellWidth = useCellWidth(cascadeContainer, windowWidth);
+const visibleOffset = useVisibleOffset(windowWidth);
+const centerPosition = useCenterPosition(windowWidth);
 
 // 從 localStorage 載入排序狀態
 function loadSortOrder() {
@@ -341,6 +338,31 @@ const zigenGapClass = computed(() => {
 const currentGroup = computed(() => cardGroups.value ? cardGroups.value[currentIndex.value] : null);
 const totalGroups = computed(() => cardGroups.value ? cardGroups.value.length : 0);
 
+// Cascade 展示：获取当前字根组前后的字根组 - 使用公用工具函數
+const visibleGroups = computed(() => {
+    if (!cardGroups.value || cardGroups.value.length === 0) return [];
+
+    // 使用公用工具函數生成可見項目，並轉換為原有的格式
+    const items = useVisibleItems(cardGroups, currentIndex).value;
+    return items.map(item => ({
+        group: item.item,
+        offset: item.offset,
+        index: item.index,
+        isCurrent: item.isCurrent
+    }));
+});
+
+// 计算当前元素在 visibleGroups 中的位置
+const currentPositionInVisible = computed(() => {
+    const idx = visibleGroups.value.findIndex(item => item.isCurrent);
+    return idx >= 0 ? idx : 0;
+});
+
+// 判断元素是否在可视范围内（用于优化显示）
+const isInVisibleRange = (offset: number) => {
+    return checkIsInVisibleRange(offset, visibleOffset.value);
+};
+
 // 使用已練習的字根組數來顯示進度，確保進度穩定且準確
 const practiceProgress = computed(() => {
     // 依賴 forceUpdate 來觸發重新計算
@@ -389,45 +411,6 @@ const isCompleted = computed(() => {
     forceUpdate.value; // 依賴更新觸發器
     return schedule.isCompleted();
 });
-
-// Cascade 展示：获取当前字根组前后的字根组
-const visibleGroups = computed(() => {
-    if (!cardGroups.value || cardGroups.value.length === 0) return [];
-
-    const total = cardGroups.value.length;
-    const current = currentIndex.value;
-
-    // 直接渲染所有字根组，确保完全平滑的滑动效果
-    const result = [];
-    for (let i = 0; i < total; i++) {
-        result.push({
-            group: cardGroups.value[i],
-            offset: i - current,
-            index: i,
-            isCurrent: i === current
-        });
-    }
-
-    return result;
-});
-
-// 计算当前元素在 visibleGroups 中的位置
-const currentPositionInVisible = computed(() => {
-    const idx = visibleGroups.value.findIndex(item => item.isCurrent);
-    return idx >= 0 ? idx : 0;
-});
-
-// 计算中间位置（格子索引）
-const centerPosition = computed(() => {
-    const isWideScreen = windowWidth.value >= 720;
-    return isWideScreen ? 3 : 2; // 宽屏时在格子3，窄屏时在格子2
-});
-
-// 判断元素是否在可视范围内（用于优化显示）
-const isInVisibleRange = (offset: number) => {
-    const maxOffset = visibleOffset.value;
-    return Math.abs(offset) <= maxOffset;
-};
 
 // 監聽輸入，自動處理正確答案或錯誤提示
 watch(inputValue, (newValue) => {
@@ -633,7 +616,7 @@ onBeforeUnmount(() => {
                     <span>已練習: {{ practiceProgress.current }} / {{ practiceProgress.total }} ({{
                         practiceProgress.percentage }}%) | 已掌握: {{ practiceProgress.mastered }}</span>
                     <span v-if="wrongInputCount > 0" class="text-red-600 dark:text-red-400">錯誤次數: {{ wrongInputCount
-                        }}</span>
+                    }}</span>
                 </div>
                 <div :class="[
                     'w-full bg-gray-200 dark:bg-gray-700 rounded-full',
@@ -907,6 +890,8 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
+@import './cascadeStyles.css';
+
 /* 確保字根顯示使用正確字體 */
 .zigen-font {
     font-family: 'Noto Serif SC', 'Noto Serif TC', 'Yuji Hentaigana Akari', 'Noto Serif Tangut', "Noto Serif Khitan Small Script",
@@ -981,33 +966,5 @@ kbd {
 
 .hover\:shadow-xl:hover {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-/* Cascade 条带样式 */
-.cascade-item {
-    position: relative;
-}
-
-.cascade-current {
-    z-index: 10;
-}
-
-.cascade-side {
-    z-index: 5;
-    cursor: pointer;
-}
-
-.cascade-side:hover {
-    transform: scale(0.95) !important;
-}
-
-/* 隐藏横向滚动条 */
-.overflow-x-auto::-webkit-scrollbar {
-    display: none;
-}
-
-.overflow-x-auto {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 </style>

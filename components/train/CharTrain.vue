@@ -18,6 +18,14 @@ import { shallowRef, onMounted, ref, watch, nextTick, computed, onBeforeUnmount 
 import { Card, cache, fetchChaifenOptimized, fetchZigen, makeCodesFromDivision, ChaifenMap } from "./share";
 import { AdvancedSchedule } from "./advancedSchedule";
 import MultiChaifen from "../chaifen/MultiChaifen.vue";
+import {
+  useCellWidth,
+  useVisibleOffset,
+  useCenterPosition,
+  useVisibleItems,
+  useCurrentPositionInVisible,
+  isInVisibleRange as checkIsInVisibleRange
+} from "./cascadeStyles";
 
 const p = defineProps<{
   /** 方案的名字 */
@@ -108,9 +116,21 @@ async function loadAndFilterMabiao() {
 
 // 響應式窗口大小
 const windowWidth = ref(typeof window !== 'undefined' ? window.innerWidth : 1024);
+const cascadeContainer = ref<HTMLElement>();
 
 const handleResize = () => {
   windowWidth.value = window.innerWidth;
+};
+
+// Cascade 展示相關計算屬性
+const cellWidth = useCellWidth(cascadeContainer, windowWidth);
+const visibleOffset = useVisibleOffset(windowWidth);
+const centerPosition = useCenterPosition(windowWidth);
+const visibleCards = useVisibleItems(cards, currentIndex);
+const currentPositionInVisible = useCurrentPositionInVisible(visibleCards);
+
+const isInVisibleRange = (offset: number) => {
+  return checkIsInVisibleRange(offset, visibleOffset.value);
 };
 
 // 計算字符大小類名 - 與 TupaTrain 一致
@@ -443,7 +463,7 @@ const handleKeydown = (event: KeyboardEvent) => {
           windowWidth < 768 ? 'mb-1' : 'mb-2'
         ]">
           <span>已練習: {{ practiceProgress.current }} / {{ practiceProgress.total }} ({{ practiceProgress.percentage
-            }}%) | 已掌握: {{ practiceProgress.mastered }}</span>
+          }}%) | 已掌握: {{ practiceProgress.mastered }}</span>
           <span v-if="wrongInputCount > 0" class="text-red-600 dark:text-red-400">錯誤次數: {{ wrongInputCount }}</span>
         </div>
         <div :class="[
@@ -461,13 +481,45 @@ const handleKeydown = (event: KeyboardEvent) => {
 
     <!-- 練習區域 -->
     <div :class="[
-      'w-full shadow-lg rounded-2xl transition-all duration-300 transform relative',
+      'w-full shadow-lg rounded-2xl transition-all duration-300 transform relative overflow-hidden',
       {
         'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-800': !isCorrect,
         'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800': isCorrect
       },
       'border-2 hover:shadow-xl'
     ]">
+      <!-- Cascade 漢字展示條帶 - 在卡片頂部 -->
+      <div ref="cascadeContainer" class="relative overflow-hidden py-3"
+        :style="{ height: windowWidth < 768 ? '60px' : '70px' }">
+        <!-- 滾動內容 -->
+        <div class="relative h-full flex items-center overflow-visible">
+          <!-- 響應式單元格，寬屏7個，窄屏5個，當前項永遠在中間 -->
+          <div class="flex items-center h-full transition-transform duration-500 ease-out" :style="{
+            transform: `translateX(${(centerPosition - currentPositionInVisible) * cellWidth}px)`
+          }">
+            <div v-for="item in visibleCards" :key="item.index" :class="[
+              'flex-shrink-0 flex items-center justify-center transition-all duration-500',
+              'cascade-item',
+              {
+                'cascade-current scale-110 font-bold': item.isCurrent,
+                'cascade-side opacity-40 scale-75': !item.isCurrent && isInVisibleRange(item.offset),
+                'opacity-0 scale-50': !isInVisibleRange(item.offset)
+              }
+            ]" :style="{ width: `${cellWidth}px` }">
+              <span class="zigen-font text-2xl md:text-3xl select-none" :class="{
+                'text-blue-700 dark:text-blue-300': item.isCurrent,
+                'text-gray-500 dark:text-gray-500': !item.isCurrent
+              }">
+                {{ item.item.name }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 分隔線 -->
+      <div class="border-b border-gray-200 dark:border-gray-700"></div>
+
       <!-- 卡片內控制按鈕 -->
       <div :class="[
         'absolute flex gap-2 z-10',
@@ -657,6 +709,8 @@ const handleKeydown = (event: KeyboardEvent) => {
 </template>
 
 <style scoped>
+@import './cascadeStyles.css';
+
 /* 確保字符顯示使用正確字體 */
 .zigen-font {
   font-family: 'Noto Serif SC', 'Noto Serif TC', 'Yuji Hentaigana Akari', 'Noto Serif Tangut', "Noto Serif Khitan Small Script",

@@ -1,0 +1,57 @@
+/**
+ * cascadeStyles.css - 训练卡片 Cascade 展示的公用样式
+ * 
+ * 用于字根练习和单字练习组件的卡片滚动展示效果
+ */
+
+/* Cascade 條帶樣式 */
+.cascade-item {
+    position: relative;
+}
+
+.cascade-current {
+    z-index: 10;
+}
+
+.cascade-side {
+    z-index: 5;
+    cursor: pointer;
+}
+
+.cascade-side:hover {
+    transform: scale(0.95) !important;
+}
+
+/* 隱藏橫向滾動條 */
+.overflow-x-auto::-webkit-scrollbar {
+    display: none;
+}
+
+.overflow-x-auto {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Cascade 容器高度 */
+.cascade-container-small {
+    height: 60px;
+}
+
+.cascade-container-large {
+    height: 70px;
+}
+
+/* Cascade 文字大小 */
+.cascade-text-small {
+    font-size: 1.5rem;
+    /* text-2xl */
+    line-height: 2rem;
+}
+
+@media (min-width: 768px) {
+    .cascade-text-small {
+        font-size: 1.875rem;
+        /* text-3xl */
+        line-height: 2.25rem;
+    }
+}

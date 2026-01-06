@@ -4,7 +4,7 @@ font,ma,pinyin
 九,bju,Jiǔ -> Ju
 冖,bi,Mì 🈤不取聲母 ㊟俗稱秃寶蓋
 ,bi,㊟同冖歸併
-,bo,🈤無讀音取o ㊕不做末根
+,bi,㊟同冖歸併 ㊕不做末根
 彐,bji,Jì
 ,bji,
 肀,bji,㊟同彐歸併
@@ -221,7 +221,7 @@ font,ma,pinyin
 心,mxi,Xīn -> Xi
 忄,mi,Xīn -> Xi 🈤不取聲母 ㊟俗稱豎心旁
 方,mfa,Fāŋ -> Fa
-爪,ma,Ẑuǎ -> Va 🈤Z和Ẑ作V
+爪,ma,Ẑuǎ -> Va 🈤Z和Ẑ作V但不取聲母
 瓜,mga,Guā -> Ga
 癶,mo,Bō 🈤不取聲母
 人,ne,rén -> Re 🈤不取聲母
@@ -258,7 +258,7 @@ font,ma,pinyin
 勹,pa,Bāo -> Ba 🈤不取聲母
 ,pa,
 ,pa,㊟同勹歸併
-巴,pa,Bā
+巴,pa,Bā 🈤不取聲母
 火,po,Huǒ -> Ho 🈤不取聲母
 灬,pba,Biāo -> Ba 🈕Hǔo
 臼,pu,Jìù -> Ju 🈤不取聲母
@@ -270,12 +270,11 @@ font,ma,pinyin
 又,qo,Yòu -> Yo 🈤不取聲母
 ,qo,🈤無讀音取o
 ,qo,
-卄,qa,Cǎo -> Ca 🈤不取聲母
+艹,qa,Cǎo -> Ca 🈤不取聲母
 廾,qa,㊟同艹歸併
-艹,qa,
+,qa,
 ,qa,
 ,qa,
-,qa,
 卅,qsa,Sà
 卌,qi,Xì 🈤不取聲母
 丂,rka,Kào -> Ka
@@ -288,7 +287,7 @@ font,ma,pinyin
 冫,rje,èr -> Je 🈑同二 🈑冰本字 🈕Bīng
 丬,ra,Qiáŋ -> Qa 🈤不取聲母
 疒,rne,Nè ㊟俗稱病字頭
-⺁,ri,Yì -> Yi
+⺁,ri,Yì -> Yi 🈤不取聲母
 來,rla,Lái -> La
 卜,rbu,Bǔ
 ⺊,rbu,㊟同⺊歸併
@@ -309,7 +308,7 @@ font,ma,pinyin
 言,ra,Yán -> Ya 🈤不取聲母
 辰,rce,Ĉén -> Ce
 马,rma,Mǎ
-也,se,Yě
+也,se,Yě 🈤不取聲母
 乜,sme,Miē -> Me
 ,ska,Kuà -> Ka
 ,ska,
@@ -377,12 +376,12 @@ font,ma,pinyin
 ⻍,wo,
 革,wge,Gé
 ,wo,🈤無讀音取o
-习,xi,Xí -> x
+习,xi,Xí 🈤不取聲母
 匚,xfa,Fāŋ -> Fa
 ,xfa,
 木,xu,Mù 🈤不取聲母
 朩,xu,
-甲,xja,Jiā -> Ja 🈤不取聲母
+甲,xja,Jiā -> Ja
 里,xli,Lǐ
 禺,xyu,yǔ
 而,xje,ér -> Je 🈤零聲母小碼取J
