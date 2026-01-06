@@ -573,7 +573,15 @@ async function loadData() {
 
 // 點擊卡片
 function handleCardClick(schemaId: string) {
-    focusedSchemaId.value = focusedSchemaId.value === schemaId ? null : schemaId
+    if (focusedSchemaId.value === schemaId) {
+        // 退出 focus 模式
+        focusedSchemaId.value = null
+        pinnedLabelConnection.value = null
+    } else {
+        // 進入 focus 模式
+        focusedSchemaId.value = schemaId
+        pinnedLabelConnection.value = null
+    }
 }
 
 // Hover 卡片
@@ -976,6 +984,13 @@ watch(() => props.config, () => {
                         </g>
                     </g>
                 </svg>
+            </div>
+
+            <!-- 浮動提示（右下角） -->
+            <div v-if="focusedSchemaId || pinnedLabelConnection" class="floating-hint">
+                <span v-if="pinnedLabelConnection">再次點擊特徵標籤解除釘選模式</span>
+                <span v-else-if="hoveredLabelConnection">點擊特徵標籤進入釘選模式</span>
+                <span v-else>再次點擊方案卡片解除關注模式</span>
             </div>
         </div>
     </div>
@@ -1795,6 +1810,40 @@ watch(() => props.config, () => {
     border-color: rgb(165, 180, 252);
 }
 
+/* 浮動提示樣式 */
+.floating-hint {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 0.75rem 1.25rem;
+    background: rgba(99, 102, 241, 0.95);
+    color: white;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    z-index: 1000;
+    pointer-events: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+:global(.dark) .floating-hint {
+    background: rgba(165, 180, 252, 0.95);
+    color: #1e293b;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(0.5rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* 響應式 */
 @media (max-width: 768px) {
     .toolbar {
@@ -1805,6 +1854,13 @@ watch(() => props.config, () => {
     .toolbar-left,
     .toolbar-right {
         justify-content: space-between;
+    }
+
+    .floating-hint {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.8125rem;
+        padding: 0.625rem 1rem;
     }
 }
 </style>
