@@ -12,7 +12,7 @@
 -->
 
 <script setup lang="ts">
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import type { SchemaData, YearLabel, GenealogyConfig, LayoutNode, Connection } from './types.ts'
 import {
     loadSchemas,
@@ -81,6 +81,14 @@ const focusedSchemaId = ref<string | null>(null)
 const hoveredSchemaId = ref<string | null>(null)
 const hoveredLabelConnection = ref<Connection | null>(null)  // 鼠標懸停的標籤對應的連接
 const pinnedLabelConnection = ref<Connection | null>(null)   // 被固定的標籤對應的連接
+
+// 拖動狀態
+const draggedNodeId = ref<string | null>(null)
+const dragStartX = ref(0)
+const dragCurrentX = ref(0)
+const dragTimer = ref<number | null>(null)
+const isDragging = ref(false)
+const customOffsets = ref<Map<string, number>>(new Map()) // 存儲每個節點的x偏移量
 
 // 篩選狀態
 const selectedFeatures = ref<string[]>([])
@@ -225,10 +233,21 @@ const canvasHeight = computed(() => {
     return lastYearY + lastYearHeight + topPadding + bottomPadding
 })
 
-// 計算屬性：節點映射（用於連接線繪製）
+// 計算屬性：應用自定義偏移後的節點
+const adjustedNodes = computed(() => {
+    return layoutNodes.value.map(node => {
+        const offset = customOffsets.value.get(node.schema.id) || 0
+        return {
+            ...node,
+            x: node.x + offset
+        }
+    })
+})
+
+// 計算屬性：節點映射（用於連接線繪製，使用調整後的位置）
 const nodesMap = computed(() => {
     const map = new Map<string, LayoutNode>()
-    layoutNodes.value.forEach(node => {
+    adjustedNodes.value.forEach(node => {
         map.set(node.schema.id, node)
     })
     return map
@@ -570,9 +589,70 @@ function toggleAuthor(author: string) {
     }
 }
 
+// 拖動相關函數
+function handleNodeMouseDown(event: MouseEvent, schemaId: string) {
+    // 記錄初始位置
+    dragStartX.value = event.clientX
+    dragCurrentX.value = event.clientX
+    draggedNodeId.value = schemaId
+
+    // 設置長按定時器（200ms後認為是拖動）
+    dragTimer.value = window.setTimeout(() => {
+        isDragging.value = true
+        document.body.style.cursor = 'grabbing'
+    }, 200)
+}
+
+function handleNodeMouseMove(event: MouseEvent) {
+    if (!draggedNodeId.value) return
+
+    dragCurrentX.value = event.clientX
+
+    // 如果已經進入拖動模式，更新虛影位置
+    if (isDragging.value) {
+        event.preventDefault()
+    }
+}
+
+function handleNodeMouseUp() {
+    // 清除定時器
+    if (dragTimer.value !== null) {
+        clearTimeout(dragTimer.value)
+        dragTimer.value = null
+    }
+
+    // 如果是拖動模式，應用偏移量並重繪
+    if (isDragging.value && draggedNodeId.value) {
+        const deltaX = dragCurrentX.value - dragStartX.value
+        const currentOffset = customOffsets.value.get(draggedNodeId.value) || 0
+        customOffsets.value.set(draggedNodeId.value, currentOffset + deltaX)
+
+        document.body.style.cursor = ''
+    } else if (draggedNodeId.value) {
+        // 如果不是拖動模式，執行正常的點擊行為
+        handleCardClick(draggedNodeId.value)
+    }
+
+    // 重置狀態
+    isDragging.value = false
+    draggedNodeId.value = null
+}
+
 // 組件掛載時加載數據
 onMounted(() => {
     loadData()
+    // 添加全局事件監聽器
+    document.addEventListener('mousemove', handleNodeMouseMove)
+    document.addEventListener('mouseup', handleNodeMouseUp)
+})
+
+// 組件卸載時清理
+onUnmounted(() => {
+    document.removeEventListener('mousemove', handleNodeMouseMove)
+    document.removeEventListener('mouseup', handleNodeMouseUp)
+    if (dragTimer.value !== null) {
+        clearTimeout(dragTimer.value)
+    }
 })
 
 // 監聽配置變化
@@ -713,10 +793,9 @@ watch(() => props.config, () => {
 
                     <!-- 統一渲染所有節點，用 CSS 類控制樣式 -->
                     <g class="schema-nodes-all">
-                        <g v-for="node in layoutNodes" :key="node.schema.id"
-                            :transform="`translate(${node.x}, ${node.y})`" @click="handleCardClick(node.schema.id)"
-                            @mouseenter="handleCardHover(node.schema.id)" @mouseleave="handleCardHover(null)"
-                            class="schema-node" :class="{
+                        <g v-for="node in adjustedNodes" :key="node.schema.id"
+                            :transform="`translate(${node.x}, ${node.y})`"
+                            @mousedown="handleNodeMouseDown($event, node.schema.id)" class="schema-node" :class="{
                                 hovered: hoveredSchemaId === node.schema.id,
                                 'schema-node-dimmed': focusedSchemaId &&
                                     node.schema.id !== focusedSchemaId &&
@@ -724,7 +803,8 @@ watch(() => props.config, () => {
                                     !childNodeIds.has(node.schema.id),
                                 'schema-node-parent': focusedSchemaId && parentNodeIds.has(node.schema.id),
                                 'schema-node-child': focusedSchemaId && childNodeIds.has(node.schema.id),
-                                'focused': focusedSchemaId === node.schema.id
+                                'focused': focusedSchemaId === node.schema.id,
+                                'dragging': isDragging && draggedNodeId === node.schema.id
                             }">
                             <!-- 卡片背景 -->
                             <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
@@ -742,6 +822,15 @@ watch(() => props.config, () => {
                                 text-rendering="geometricPrecision">
                                 {{ formatDate(node.schema.date) }}
                             </text>
+                        </g>
+                    </g>
+
+                    <!-- 拖動虛影 -->
+                    <g v-if="isDragging && draggedNodeId" class="drag-ghost">
+                        <g v-for="node in layoutNodes.filter(n => n.schema.id === draggedNodeId)"
+                            :key="'ghost-' + node.schema.id"
+                            :transform="`translate(${node.x + (dragCurrentX - dragStartX)}, ${node.y})`">
+                            <rect :width="node.width" :height="node.height" class="ghost-bg" rx="8" />
                         </g>
                     </g>
 
@@ -1093,8 +1182,27 @@ watch(() => props.config, () => {
 
 /* 節點樣式 */
 .schema-node {
-    cursor: pointer;
+    cursor: grab;
     transition: all 0.3s ease;
+}
+
+.schema-node.dragging {
+    cursor: grabbing;
+    opacity: 0.5;
+}
+
+/* 拖動虛影 */
+.drag-ghost .ghost-bg {
+    fill: var(--vp-c-brand, rgb(99, 102, 241));
+    opacity: 0.3;
+    stroke: var(--vp-c-brand, rgb(99, 102, 241));
+    stroke-width: 2;
+    stroke-dasharray: 5, 5;
+}
+
+:global(.dark) .drag-ghost .ghost-bg {
+    fill: rgb(165, 180, 252);
+    stroke: rgb(165, 180, 252);
 }
 
 /* 淡化的背景節點 */
