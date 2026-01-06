@@ -35,14 +35,29 @@
         "authors": [
             "朱邦復"
         ],
-        "date": "19760000",
+        "date": "19780800",
         "features": [
             "最長五碼",
             "字形特徵",
             "字根單編碼",
             "26鍵"
         ],
-        "description": ""
+        "description": "本名形意檢字法"
+    },
+    {
+        "id": "cangjie2",
+        "name": "倉頡二代",
+        "authors": [
+            "朱邦復"
+        ],
+        "date": "19791200",
+        "features": [
+            "最長五碼",
+            "字形特徵",
+            "字根單編碼",
+            "26鍵"
+        ],
+        "description": "本名形意檢字法"
     },
     {
         "id": "sucheng",
@@ -60,6 +75,21 @@
         "description": ""
     },
     {
+        "id": "cangjie3",
+        "name": "倉頡三代",
+        "authors": [
+            "朱邦復"
+        ],
+        "date": "19820000",
+        "features": [
+            "最長五碼",
+            "字形特徵",
+            "字根單編碼",
+            "26鍵"
+        ],
+        "description": "本名形意檢字法"
+    },
+    {
         "id": "wubi86",
         "name": "五筆字型86版",
         "authors": [
@@ -75,6 +105,36 @@
             "鍵盤分區"
         ],
         "description": ""
+    },
+    {
+        "id": "cangjie4",
+        "name": "倉頡四代",
+        "authors": [
+            "朱邦復"
+        ],
+        "date": "19850000",
+        "features": [
+            "最長五碼",
+            "字形特徵",
+            "字根單編碼",
+            "26鍵"
+        ],
+        "description": "本名形意檢字法"
+    },
+    {
+        "id": "cangjie5",
+        "name": "倉頡五代",
+        "authors": [
+            "朱邦復"
+        ],
+        "date": "19870000",
+        "features": [
+            "最長五碼",
+            "字形特徵",
+            "字根單編碼",
+            "26鍵"
+        ],
+        "description": "本名形意檢字法"
     },
     {
         "id": "biaoxing",
