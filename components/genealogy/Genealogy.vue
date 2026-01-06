@@ -684,18 +684,21 @@ watch(() => props.config, () => {
                             <!-- 卡片背景 -->
                             <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
 
-                            <!-- 兩行顯示：第一行名稱，第二行作者和日期 -->
+                            <!-- 三行顯示：第一行名稱，第二行作者，第三行日期 -->
                             <!-- 第一行：輸入法名 -->
                             <text :x="10" :y="16" class="node-name" text-anchor="start" shape-rendering="crispEdges"
                                 text-rendering="geometricPrecision">
                                 {{ node.schema.name }}
                             </text>
-                            <!-- 第二行：作者 | 日期 -->
-                            <text :x="10" :y="32" class="node-compact-text" text-anchor="start"
-                                shape-rendering="crispEdges" text-rendering="geometricPrecision">
-                                <tspan class="node-author">{{ node.schema.authors.join(' ') }}</tspan>
-                                <tspan class="node-separator" dx="6"> </tspan>
-                                <tspan class="node-date" dx="6">{{ formatDate(node.schema.date) }}</tspan>
+                            <!-- 第二行：作者 -->
+                            <text :x="10" :y="31" class="node-author" text-anchor="start" shape-rendering="crispEdges"
+                                text-rendering="geometricPrecision">
+                                {{ node.schema.authors.join(' ') }}
+                            </text>
+                            <!-- 第三行：日期 -->
+                            <text :x="10" :y="46" class="node-date" text-anchor="start" shape-rendering="crispEdges"
+                                text-rendering="geometricPrecision">
+                                {{ formatDate(node.schema.date) }}
                             </text>
                         </g>
                     </g>
@@ -712,18 +715,21 @@ watch(() => props.config, () => {
                             <!-- 卡片背景 -->
                             <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
 
-                            <!-- 兩行顯示：第一行名稱，第二行作者和日期 -->
+                            <!-- 三行顯示：第一行名稱，第二行作者，第三行日期 -->
                             <!-- 第一行：輸入法名 -->
                             <text :x="10" :y="16" class="node-name" text-anchor="start" shape-rendering="crispEdges"
                                 text-rendering="geometricPrecision">
                                 {{ node.schema.name }}
                             </text>
-                            <!-- 第二行：作者 | 日期 -->
-                            <text :x="10" :y="32" class="node-compact-text" text-anchor="start"
-                                shape-rendering="crispEdges" text-rendering="geometricPrecision">
-                                <tspan class="node-author">{{ node.schema.authors.join(' ') }}</tspan>
-                                <tspan class="node-separator" dx="6"> </tspan>
-                                <tspan class="node-date" dx="6">{{ formatDate(node.schema.date) }}</tspan>
+                            <!-- 第二行：作者 -->
+                            <text :x="10" :y="31" class="node-author" text-anchor="start" shape-rendering="crispEdges"
+                                text-rendering="geometricPrecision">
+                                {{ node.schema.authors.join(' ') }}
+                            </text>
+                            <!-- 第三行：日期 -->
+                            <text :x="10" :y="46" class="node-date" text-anchor="start" shape-rendering="crispEdges"
+                                text-rendering="geometricPrecision">
+                                {{ formatDate(node.schema.date) }}
                             </text>
                         </g>
                     </g>
@@ -739,18 +745,21 @@ watch(() => props.config, () => {
                             <!-- 卡片背景 -->
                             <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
 
-                            <!-- 兩行顯示：第一行名稱，第二行作者和日期 -->
+                            <!-- 三行顯示：第一行名稱，第二行作者，第三行日期 -->
                             <!-- 第一行：輸入法名 -->
                             <text :x="10" :y="16" class="node-name" text-anchor="start" shape-rendering="crispEdges"
                                 text-rendering="geometricPrecision">
                                 {{ node.schema.name }}
                             </text>
-                            <!-- 第二行：作者 | 日期 -->
-                            <text :x="10" :y="32" class="node-compact-text" text-anchor="start"
-                                shape-rendering="crispEdges" text-rendering="geometricPrecision">
-                                <tspan class="node-author">{{ node.schema.authors.join(' ') }}</tspan>
-                                <tspan class="node-separator" dx="6"> </tspan>
-                                <tspan class="node-date" dx="6">{{ formatDate(node.schema.date) }}</tspan>
+                            <!-- 第二行：作者 -->
+                            <text :x="10" :y="31" class="node-author" text-anchor="start" shape-rendering="crispEdges"
+                                text-rendering="geometricPrecision">
+                                {{ node.schema.authors.join(' ') }}
+                            </text>
+                            <!-- 第三行：日期 -->
+                            <text :x="10" :y="46" class="node-date" text-anchor="start" shape-rendering="crispEdges"
+                                text-rendering="geometricPrecision">
+                                {{ formatDate(node.schema.date) }}
                             </text>
                         </g>
                     </g>

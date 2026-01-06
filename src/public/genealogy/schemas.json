@@ -307,12 +307,12 @@
         "description": ""
     },
     {
-        "id": "tianma",
+        "id": "sky",
         "name": "天碼",
         "authors": [
             " 宋天"
         ],
-        "date": "20240312",
+        "date": "20240311",
         "features": [
             "最長四碼",
             "字根雙編碼",

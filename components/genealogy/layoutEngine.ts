@@ -97,8 +97,8 @@ export function calculateLayout(
     const nodeSpacing = config.nodeSpacing || 20
     const canvasWidth = config.width || 1200
 
-    // 節點高度保持固定
-    const nodeHeight = 40
+    // 節點支持3行顯示
+    const nodeHeight = 54
 
     // 計算每個輸入法的Y坐標和寬度
     const schemasWithY = schemas.map(schema => ({
