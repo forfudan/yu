@@ -90,6 +90,10 @@ const dragTimer = ref<number | null>(null)
 const isDragging = ref(false)
 const customOffsets = ref<Map<string, number>>(new Map()) // 存儲每個節點的x偏移量
 
+// 全屏模式狀態
+const isFullscreen = ref(false)
+const genealogyContainer = ref<HTMLElement | null>(null)
+
 // 篩選狀態
 const selectedFeatures = ref<string[]>([])
 const selectedAuthors = ref<string[]>([])
@@ -638,18 +642,64 @@ function handleNodeMouseUp() {
     draggedNodeId.value = null
 }
 
+// 全屏相關函數
+function toggleFullscreen() {
+    if (!genealogyContainer.value) return
+
+    if (!isFullscreen.value) {
+        // 進入全屏
+        if (genealogyContainer.value.requestFullscreen) {
+            genealogyContainer.value.requestFullscreen()
+        } else if ((genealogyContainer.value as any).webkitRequestFullscreen) {
+            (genealogyContainer.value as any).webkitRequestFullscreen()
+        } else if ((genealogyContainer.value as any).mozRequestFullScreen) {
+            (genealogyContainer.value as any).mozRequestFullScreen()
+        } else if ((genealogyContainer.value as any).msRequestFullscreen) {
+            (genealogyContainer.value as any).msRequestFullscreen()
+        }
+    } else {
+        // 退出全屏
+        if (document.exitFullscreen) {
+            document.exitFullscreen()
+        } else if ((document as any).webkitExitFullscreen) {
+            (document as any).webkitExitFullscreen()
+        } else if ((document as any).mozCancelFullScreen) {
+            (document as any).mozCancelFullScreen()
+        } else if ((document as any).msExitFullscreen) {
+            (document as any).msExitFullscreen()
+        }
+    }
+}
+
+function handleFullscreenChange() {
+    isFullscreen.value = !!(
+        document.fullscreenElement ||
+        (document as any).webkitFullscreenElement ||
+        (document as any).mozFullScreenElement ||
+        (document as any).msFullscreenElement
+    )
+}
+
 // 組件掛載時加載數據
 onMounted(() => {
     loadData()
     // 添加全局事件監聽器
     document.addEventListener('mousemove', handleNodeMouseMove)
     document.addEventListener('mouseup', handleNodeMouseUp)
+    document.addEventListener('fullscreenchange', handleFullscreenChange)
+    document.addEventListener('webkitfullscreenchange', handleFullscreenChange)
+    document.addEventListener('mozfullscreenchange', handleFullscreenChange)
+    document.addEventListener('MSFullscreenChange', handleFullscreenChange)
 })
 
 // 組件卸載時清理
 onUnmounted(() => {
     document.removeEventListener('mousemove', handleNodeMouseMove)
     document.removeEventListener('mouseup', handleNodeMouseUp)
+    document.removeEventListener('fullscreenchange', handleFullscreenChange)
+    document.removeEventListener('webkitfullscreenchange', handleFullscreenChange)
+    document.removeEventListener('mozfullscreenchange', handleFullscreenChange)
+    document.removeEventListener('MSFullscreenChange', handleFullscreenChange)
     if (dragTimer.value !== null) {
         clearTimeout(dragTimer.value)
     }
@@ -667,7 +717,7 @@ watch(() => props.config, () => {
 </script>
 
 <template>
-    <div class="genealogy-container">
+    <div ref="genealogyContainer" class="genealogy-container" :class="{ 'fullscreen-mode': isFullscreen }">
         <!-- 加載狀態 -->
         <div v-if="loading" class="loading-state">
             <div class="loading-spinner"></div>
@@ -684,47 +734,56 @@ watch(() => props.config, () => {
         <div v-else class="genealogy-content">
             <!-- 工具欄 - 簡化單行版本 -->
             <div class="toolbar-compact">
-                <!-- 統計信息 -->
-                <span class="text-sm text-gray-600 dark:text-gray-400">
-                    共 {{ filteredSchemas.length }} 個輸入法 ({{ minYear }}-{{ maxYear }})
-                </span>
+                <div class="toolbar-left">
+                    <!-- 統計信息 -->
+                    <span class="text-sm text-gray-600 dark:text-gray-400">
+                        共 {{ filteredSchemas.length }} 個輸入法 ({{ minYear }}-{{ maxYear }})
+                    </span>
 
-                <!-- 特徵篩選下拉菜單 -->
-                <div class="dropdown-wrapper">
-                    <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
-                        特徵
-                        <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length }}</span>
-                        <span class="arrow">▼</span>
-                    </button>
-                    <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
-                        <div class="dropdown-header">
-                            <button @click="selectedFeatures = []" class="clear-btn">清除</button>
+                    <!-- 特徵篩選下拉菜單 -->
+                    <div class="dropdown-wrapper">
+                        <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
+                            特徵
+                            <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length }}</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
+                            <div class="dropdown-header">
+                                <button @click="selectedFeatures = []" class="clear-btn">清除</button>
+                            </div>
+                            <label v-for="feature in allFeatures" :key="feature" class="dropdown-item">
+                                <input type="checkbox" :checked="selectedFeatures.includes(feature)"
+                                    @change="toggleFeature(feature)" />
+                                <span>{{ feature }}</span>
+                            </label>
                         </div>
-                        <label v-for="feature in allFeatures" :key="feature" class="dropdown-item">
-                            <input type="checkbox" :checked="selectedFeatures.includes(feature)"
-                                @change="toggleFeature(feature)" />
-                            <span>{{ feature }}</span>
-                        </label>
+                    </div>
+
+                    <!-- 作者篩選下拉菜單 -->
+                    <div class="dropdown-wrapper">
+                        <button @click="showAuthorDropdown = !showAuthorDropdown" class="dropdown-trigger">
+                            作者
+                            <span v-if="selectedAuthors.length > 0" class="badge">{{ selectedAuthors.length }}</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div v-if="showAuthorDropdown" class="dropdown-menu" @click.stop>
+                            <div class="dropdown-header">
+                                <button @click="selectedAuthors = []" class="clear-btn">清除</button>
+                            </div>
+                            <label v-for="author in allAuthors" :key="author" class="dropdown-item">
+                                <input type="checkbox" :checked="selectedAuthors.includes(author)"
+                                    @change="toggleAuthor(author)" />
+                                <span>{{ author }}</span>
+                            </label>
+                        </div>
                     </div>
                 </div>
 
-                <!-- 作者篩選下拉菜單 -->
-                <div class="dropdown-wrapper">
-                    <button @click="showAuthorDropdown = !showAuthorDropdown" class="dropdown-trigger">
-                        作者
-                        <span v-if="selectedAuthors.length > 0" class="badge">{{ selectedAuthors.length }}</span>
-                        <span class="arrow">▼</span>
+                <div class="toolbar-right">
+                    <!-- 全屏按鈕 -->
+                    <button @click="toggleFullscreen" class="btn-compact" :title="isFullscreen ? '退出全屏 (ESC)' : '進入全屏'">
+                        {{ isFullscreen ? '✕ 退出' : '⛶ 全屏' }}
                     </button>
-                    <div v-if="showAuthorDropdown" class="dropdown-menu" @click.stop>
-                        <div class="dropdown-header">
-                            <button @click="selectedAuthors = []" class="clear-btn">清除</button>
-                        </div>
-                        <label v-for="author in allAuthors" :key="author" class="dropdown-item">
-                            <input type="checkbox" :checked="selectedAuthors.includes(author)"
-                                @change="toggleAuthor(author)" />
-                            <span>{{ author }}</span>
-                        </label>
-                    </div>
                 </div>
             </div>
 
@@ -882,6 +941,33 @@ watch(() => props.config, () => {
     position: relative;
 }
 
+/* 全屏模式 */
+.genealogy-container.fullscreen-mode {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background: var(--vp-c-bg, #ffffff);
+    overflow: auto;
+}
+
+:global(.dark) .genealogy-container.fullscreen-mode {
+    background: var(--vp-c-bg, #1f2937);
+}
+
+.fullscreen-mode .genealogy-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.fullscreen-mode .canvas-wrapper {
+    flex: 1;
+    overflow: auto;
+}
+
 .loading-state,
 .error-state {
     display: flex;
@@ -917,6 +1003,7 @@ watch(() => props.config, () => {
 .toolbar-compact {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 1rem;
     padding: 0.75rem 1rem;
     background: var(--vp-c-bg-soft, #f8fafc);
@@ -926,6 +1013,19 @@ watch(() => props.config, () => {
 
 :global(.dark) .toolbar-compact {
     background: var(--vp-c-bg-soft, #374151);
+}
+
+.toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 /* 下拉菜單容器 */
