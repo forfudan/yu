@@ -210,15 +210,18 @@ function layoutHorizontallyWithY(
 
     // 計算每個輸入法的哈希值，用於確定其橫向偏移
     const getStableOffset = (schema: SchemaData, totalWidth: number): number => {
-        // 使用輸入法名稱和作者生成穩定的哈希值
-        const str = schema.name + schema.authors.join('')
+        // 使用輸入法名稱、作者和日期生成穩定的哈希值
+        const str = schema.id + schema.name + schema.authors.join('') + schema.date
         let hash = 0
         for (let i = 0; i < str.length; i++) {
+            // 使用更複雜的哈希算法增加分散度
             hash = ((hash << 5) - hash) + str.charCodeAt(i)
             hash = hash & hash // 轉換為32位整數
         }
+        // 使用二次哈希增加隨機性
+        hash = Math.abs(hash * 2654435761) % totalWidth
         // 將哈希值映射到 [0, totalWidth] 範圍
-        return Math.abs(hash) % totalWidth
+        return hash
     }
 
     if (schemasWithY.length === 1) {
@@ -265,17 +268,38 @@ function layoutHorizontallyWithY(
             })
         })
     } else {
-        // 多個節點，分散佈局
+        // 多個節點，使用循環列佈局
+        // 將節點分成多列，按循環排列，但起始列隨機
+        const columnsCount = Math.min(4, Math.ceil(Math.sqrt(schemasWithY.length))) // 最多4列
+        const columnWidth = availableWidth / columnsCount
+        const verticalSpacing = nodeHeight + nodeSpacing
+
+        // 根據組的第一個節點信息生成隨機起始列
+        const startColOffset = getStableOffset(schemasWithY[0].schema, columnsCount)
+
         schemasWithY.forEach((item, i) => {
-            const basePosition = (i / (schemasWithY.length - 1)) * (availableWidth - item.width)
-            // 添加基於哈希的隨機偏移（±30%的節點間距）
-            const hashOffset = getStableOffset(item.schema, nodeSpacing * 2) - nodeSpacing
-            const x = leftMargin + basePosition + hashOffset * 0.3
+            // 確定在第幾列（循環，但從隨機起始列開始）
+            // 例如：startColOffset=2 時：2,3,0,1,2,3,0,1...
+            const colIndex = (i + startColOffset) % columnsCount
+
+            // 確定在第幾行
+            const rowIndex = Math.floor(i / columnsCount)
+
+            // 計算基礎位置
+            const baseX = leftMargin + columnWidth * colIndex + columnWidth * 0.1
+            const maxOffsetX = columnWidth * 0.6
+
+            // 添加基於哈希的偏移，但範圍更大
+            const hashOffset = getStableOffset(item.schema, Math.floor(maxOffsetX))
+            const x = baseX + hashOffset
+
+            // Y坐標：使用原始Y坐標加上行偏移
+            const yOffset = rowIndex * verticalSpacing * 0.3  // 輕微的行偏移
 
             nodes.push({
                 schema: item.schema,
                 x: Math.max(leftMargin, Math.min(x, canvasWidth - rightMargin - item.width)),
-                y: item.y + 50, // 使用實際的y坐標
+                y: item.y + 50 + yOffset,
                 width: item.width,
                 height: nodeHeight
             })
@@ -315,15 +339,18 @@ function layoutHorizontally(
 
     // 計算每個輸入法的哈希值，用於確定其橫向偏移
     const getStableOffset = (schema: SchemaData, totalWidth: number): number => {
-        // 使用輸入法名稱和作者生成穩定的哈希值
-        const str = schema.name + schema.authors.join('')
+        // 使用輸入法名稱、作者和日期生成穩定的哈希值
+        const str = schema.id + schema.name + schema.authors.join('') + schema.date
         let hash = 0
         for (let i = 0; i < str.length; i++) {
+            // 使用更複雜的哈希算法增加分散度
             hash = ((hash << 5) - hash) + str.charCodeAt(i)
             hash = hash & hash // 轉換為32位整數
         }
+        // 使用二次哈希增加隨機性
+        hash = Math.abs(hash * 2654435761) % totalWidth
         // 將哈希值映射到 [0, totalWidth] 範圍
-        return Math.abs(hash) % totalWidth
+        return hash
     }
 
     if (schemas.length === 1) {
