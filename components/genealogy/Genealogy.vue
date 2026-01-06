@@ -662,20 +662,6 @@ watch(() => props.config, () => {
                                 <title>{{ connection.label }}</title>
                             </path>
                         </g>
-
-                        <!-- Focus 狀態：在連接線上顯示特徵標籤（每個標籤獨立，防碰撞） -->
-                        <g v-if="focusedSchemaId" class="connection-labels">
-                            <g v-for="(labelBox, idx) in labeledConnections" :key="`label-${idx}`">
-                                <!-- 背景圆角方框 -->
-                                <rect :x="labelBox.x - labelBox.width / 2" :y="labelBox.y - labelBox.height / 2"
-                                    :width="labelBox.width" :height="labelBox.height" class="connection-label-bg"
-                                    rx="4" />
-                                <!-- 標籤文字 -->
-                                <text :x="labelBox.x" :y="labelBox.y + 4" class="connection-label" text-anchor="middle">
-                                    {{ labelBox.label }}
-                                </text>
-                            </g>
-                        </g>
                     </g>
 
                     <!-- 年份標籤 -->
@@ -765,6 +751,19 @@ watch(() => props.config, () => {
                                 <tspan class="node-author">{{ node.schema.authors.join(' ') }}</tspan>
                                 <tspan class="node-separator" dx="6"> </tspan>
                                 <tspan class="node-date" dx="6">{{ formatDate(node.schema.date) }}</tspan>
+                            </text>
+                        </g>
+                    </g>
+
+                    <!-- Focus 狀態：在連接線上顯示特徵標籤（在最上層，所有卡片之後） -->
+                    <g v-if="focusedSchemaId" class="connection-labels">
+                        <g v-for="(labelBox, idx) in labeledConnections" :key="`label-${idx}`">
+                            <!-- 背景圆角方框 -->
+                            <rect :x="labelBox.x - labelBox.width / 2" :y="labelBox.y - labelBox.height / 2"
+                                :width="labelBox.width" :height="labelBox.height" class="connection-label-bg" rx="4" />
+                            <!-- 標籤文字 -->
+                            <text :x="labelBox.x" :y="labelBox.y + 4" class="connection-label" text-anchor="middle">
+                                {{ labelBox.label }}
                             </text>
                         </g>
                     </g>
@@ -1246,22 +1245,22 @@ watch(() => props.config, () => {
 /* 連接線標籤背景框 */
 .connection-label-bg {
     fill: var(--vp-c-bg, #ffffff);
-    stroke: var(--vp-c-brand, rgb(99, 102, 241));
-    stroke-width: 1.5;
+    opacity: 0.95;
 }
 
 :global(.dark) .connection-label-bg {
     fill: var(--vp-c-bg, #1e293b);
-    stroke: rgb(165, 180, 252);
 }
 
 /* 連接線標籤文字 */
 .connection-label {
     fill: var(--vp-c-brand, rgb(99, 102, 241));
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 10px;
+    font-weight: 500;
     opacity: 0;
     animation: fadeIn 0.3s ease-in 0.2s forwards;
+    pointer-events: none;
+    stroke: none;
 }
 
 :global(.dark) .connection-label {

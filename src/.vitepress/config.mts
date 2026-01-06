@@ -135,8 +135,8 @@ export default defineConfig({
               link: "/docs/statistics",
             },
             {
-              text: "字形输入法特性表和关系表",
-              link: "/docs/characteristics",
+              text: "字形输入法源流图",
+              link: "/docs/genealogy",
             },
             {
               text: "常见形码输入方案编码规则",
@@ -583,8 +583,8 @@ export default defineConfig({
                   link: "/zht/docs/statistics",
                 },
                 {
-                  text: "字形輸入法特性表和關係表",
-                  link: "/zht/docs/characteristics",
+                  text: "字形輸入法源流圖",
+                  link: "/zht/docs/genealogy",
                 },
                 {
                   text: "常見形碼輸入方案編碼規則",
