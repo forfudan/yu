@@ -44,7 +44,7 @@ const props = withDefaults(defineProps<{
 
 // 默認配置
 const defaultConfig: GenealogyConfig = {
-    width: 900,
+    width: 1024,
     height: 1200,
     nodeSpacing: 10,           // 卡片間距：15 → 10
     baseSpacing: 15,           // 短空白期：20 → 15
@@ -929,6 +929,9 @@ watch(() => props.config, () => {
                                 'label-hovered': hoveredLabelConnection &&
                                     hoveredLabelConnection.from === labelBox.connection.from &&
                                     hoveredLabelConnection.to === labelBox.connection.to,
+                                'label-dimmed': hoveredLabelConnection &&
+                                    !(hoveredLabelConnection.from === labelBox.connection.from &&
+                                        hoveredLabelConnection.to === labelBox.connection.to),
                                 'label-parent': labelBox.connection.from === focusedSchemaId,
                                 'label-child': labelBox.connection.to === focusedSchemaId
                             }">
@@ -1547,6 +1550,17 @@ watch(() => props.config, () => {
 :global(.dark) .connection-label-group:hover .connection-label,
 :global(.dark) .connection-label-group.label-hovered .connection-label {
     fill: #1e293b;
+}
+
+/* 淡化的標籤 */
+.connection-label-group.label-dimmed {
+    opacity: 0.2;
+    transition: opacity 0.2s ease;
+}
+
+.connection-label-group.label-dimmed .connection-label-bg,
+.connection-label-group.label-dimmed .connection-label {
+    opacity: 0.2 !important;
 }
 
 /* 連接線標籤文字 */
