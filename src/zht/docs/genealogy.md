@@ -7,6 +7,4 @@ aside: false
 import Genealogy from '@/genealogy/Genealogy.vue'
 </script>
 
-# 字形輸入法源流圖
-
 <Genealogy />

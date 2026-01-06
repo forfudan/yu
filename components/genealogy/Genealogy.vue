@@ -94,6 +94,9 @@ const customOffsets = ref<Map<string, number>>(new Map()) // 存儲每個節點�
 const isFullscreen = ref(false)
 const genealogyContainer = ref<HTMLElement | null>(null)
 
+// Y軸縮放狀態
+const yScaleFactor = ref(1.0) // 1.0 = 100%, 範圍 0.5-2.0
+
 // 篩選狀態
 const selectedFeatures = ref<string[]>([])
 const selectedAuthors = ref<string[]>([])
@@ -209,10 +212,10 @@ const layoutQuality = computed(() => {
     return calculateLayoutQuality(layoutNodes.value)
 })
 
-// 計算屬性：動態畫布高度（基於年份間距映射表）
+// 計算屬性：動態畫布高度（基於年份間距映射表和Y軸縮放）
 const canvasHeight = computed(() => {
     if (minYear.value === 0 || maxYear.value === 0 || yearSpacingMap.value.size === 0) {
-        return config.value.height || 1200
+        return (config.value.height || 1200) * yScaleFactor.value
     }
 
     // 如果有布局节点，使用实际最大Y坐标
@@ -220,7 +223,7 @@ const canvasHeight = computed(() => {
         const maxY = Math.max(...layoutNodes.value.map(n => n.y + n.height))
         const topPadding = 100
         const bottomPadding = 150  // 增加底部padding确保不会被截断
-        return maxY + topPadding + bottomPadding
+        return (maxY + topPadding + bottomPadding) * yScaleFactor.value
     }
 
     // 否则使用年份映射表估算
@@ -234,18 +237,27 @@ const canvasHeight = computed(() => {
     const lastYearCount = schemas.value.filter(s => parseYear(s.date) === maxYear.value).length
     const lastYearHeight = lastYearCount > 0 ? baseSpacing + lastYearCount * schemaSpacing : baseSpacing
 
-    return lastYearY + lastYearHeight + topPadding + bottomPadding
+    return (lastYearY + lastYearHeight + topPadding + bottomPadding) * yScaleFactor.value
 })
 
-// 計算屬性：應用自定義偏移後的節點
+// 計算屬性：應用自定義偏移和Y軸縮放後的節點
 const adjustedNodes = computed(() => {
     return layoutNodes.value.map(node => {
-        const offset = customOffsets.value.get(node.schema.id) || 0
+        const xOffset = customOffsets.value.get(node.schema.id) || 0
         return {
             ...node,
-            x: node.x + offset
+            x: node.x + xOffset,
+            y: node.y * yScaleFactor.value
         }
     })
+})
+
+// 計算屬性：應用Y軸縮放後的年份標籤
+const adjustedYearLabels = computed(() => {
+    return yearLabels.value.map(label => ({
+        ...label,
+        y: label.y * yScaleFactor.value
+    }))
 })
 
 // 計算屬性：節點映射（用於連接線繪製，使用調整後的位置）
@@ -780,9 +792,15 @@ watch(() => props.config, () => {
                 </div>
 
                 <div class="toolbar-right">
+                    <!-- Y軸縮放控制 -->
+                    <div class="scale-control-inline">
+                        <input type="range" v-model.number="yScaleFactor" min="0.4" max="1.0" step="0.05"
+                            class="scale-slider-inline" />
+                    </div>
+
                     <!-- 全屏按鈕 -->
                     <button @click="toggleFullscreen" class="btn-compact" :title="isFullscreen ? '退出全屏 (ESC)' : '進入全屏'">
-                        {{ isFullscreen ? '✕ 退出' : '⛶ 全屏' }}
+                        {{ isFullscreen ? '✕ 退出' : '⛶' }}
                     </button>
                 </div>
             </div>
@@ -844,7 +862,7 @@ watch(() => props.config, () => {
                     <!-- 年份標籤 -->
                     <g class="year-labels">
                         <line :x1="50" :y1="50" :x2="50" :y2="canvasHeight - 50" class="timeline-axis" />
-                        <text v-for="label in yearLabels" :key="label.year" :x="40" :y="label.y + 54"
+                        <text v-for="label in adjustedYearLabels" :key="label.year" :x="40" :y="label.y + 54"
                             class="year-label-text" text-anchor="end">
                             {{ label.year }}
                         </text>
@@ -1032,14 +1050,83 @@ watch(() => props.config, () => {
 .toolbar-left {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     flex: 1;
 }
 
 .toolbar-right {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1.5rem;
+}
+
+/* 內聯Y軸縮放控制 */
+.scale-control-inline {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--vp-c-divider, #e2e8f0);
+    border-radius: 0.375rem;
+    background: var(--vp-c-bg, #ffffff);
+}
+
+:global(.dark) .scale-control-inline {
+    border-color: var(--vp-c-divider, #4b5563);
+    background: var(--vp-c-bg, #374151);
+}
+
+.scale-slider-inline {
+    width: 120px;
+    height: 4px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--vp-c-divider, #e2e8f0);
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+:global(.dark) .scale-slider-inline {
+    background: var(--vp-c-divider, #4b5563);
+}
+
+.scale-slider-inline::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: rgb(99, 102, 241);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.scale-slider-inline::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+:global(.dark) .scale-slider-inline::-webkit-slider-thumb {
+    background: rgb(165, 180, 252);
+}
+
+.scale-slider-inline::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: rgb(99, 102, 241);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.scale-slider-inline::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+:global(.dark) .scale-slider-inline::-moz-range-thumb {
+    background: rgb(165, 180, 252);
 }
 
 /* 下拉菜單容器 */
@@ -1258,6 +1345,7 @@ watch(() => props.config, () => {
 }
 
 .canvas-wrapper {
+    position: relative;
     overflow: auto;
     border: 1px solid var(--vp-c-divider, #e2e8f0);
     border-radius: 0.5rem;
