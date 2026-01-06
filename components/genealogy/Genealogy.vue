@@ -632,12 +632,12 @@ watch(() => props.config, () => {
                 <svg :width="config.width" :height="canvasHeight" class="genealogy-svg">
                     <!-- 定義箭頭標記 -->
                     <defs>
-                        <marker id="arrow-feature" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6"
-                            markerHeight="6" orient="auto">
+                        <marker id="arrow-feature" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5"
+                            markerHeight="3" orient="auto">
                             <path d="M 0 0 L 10 5 L 0 10 z"
                                 :fill="isDark ? 'rgba(165, 180, 252, 0.6)' : 'rgba(99, 102, 241, 0.6)'" />
                         </marker>
-                        <marker id="arrow-author" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6"
+                        <marker id="arrow-author" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3" markerHeight="3"
                             orient="auto">
                             <path d="M 0 0 L 10 5 L 0 10 z"
                                 :fill="isDark ? 'rgba(134, 239, 172, 0.6)' : 'rgba(34, 197, 94, 0.6)'" />

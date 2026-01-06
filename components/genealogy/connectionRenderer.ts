@@ -22,15 +22,17 @@ export function generateBezierPath(
     y2: number,
     curvature: number = 0.5
 ): string {
-    // 计算控制点
+    // 計算控制點
     const dx = x2 - x1
     const dy = y2 - y1
 
-    // 使用垂直方向的贝塞尔曲线（适合时间轴布局）
+    // 使用垂直方向的貝塞爾曲線
+    // 弧度在中間區域，避免過於誇張的彎曲
+    const midY = (y1 + y2) / 2
     const cx1 = x1
-    const cy1 = y1 - dy * curvature
+    const cy1 = midY - (y2 - y1) * 0.0  // 數字越小線越彎曲
     const cx2 = x2
-    const cy2 = y2 + dy * curvature
+    const cy2 = midY + (y2 - y1) * 0.0  // 數字越小線越彎曲
 
     return `M ${x1},${y1} C ${cx1},${cy1} ${cx2},${cy2} ${x2},${y2}`
 }
@@ -96,7 +98,8 @@ export function generateConnectionPath(
     const start = getNodeAnchor(fromNode, 'top')
     const end = getNodeAnchor(toNode, 'bottom')
 
-    return generateBezierPath(start.x, start.y, end.x, end.y, 0.4)
+    // 使用较小曲率的贝塞尔曲线，使连接线更自然
+    return generateBezierPath(start.x, start.y, end.x, end.y, 0.3)
 }
 
 /**
