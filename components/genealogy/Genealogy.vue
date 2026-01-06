@@ -949,18 +949,32 @@ watch(() => props.config, () => {
     width: 100vw;
     height: 100vh;
     z-index: 9999;
-    background: var(--vp-c-bg, #ffffff);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
     overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 :global(.dark) .genealogy-container.fullscreen-mode {
-    background: var(--vp-c-bg, #1f2937);
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .fullscreen-mode .genealogy-content {
+    width: 90vw;
+    max-width: 1200px;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background: var(--vp-c-bg, #ffffff);
+    border-radius: 0;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+:global(.dark) .fullscreen-mode .genealogy-content {
+    background: var(--vp-c-bg, #1f2937);
 }
 
 .fullscreen-mode .canvas-wrapper {
