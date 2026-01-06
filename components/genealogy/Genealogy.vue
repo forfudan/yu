@@ -332,53 +332,15 @@ const connectionPaths = computed(() => {
     return generateConnectionPaths(connections.value, nodesMap.value)
 })
 
-// 計算屬性：過濾後的連接
+// 計算屬性：過濾後的連接（始終返回所有連接，通過CSS控制顯示）
 const visibleConnections = computed(() => {
-    if (!focusedSchemaId.value) {
-        return connectionPaths.value.filter(({ connection }) =>
-            shouldShowConnection(
-                connection,
-                focusedSchemaId.value,
-                connectionFilterType.value
-            )
-        )
-    }
-
-    // Focus 模式：顯示與焦點相關的連接，以及同作者之間的所有連接
-    const focusedSchema = schemas.value.find(s => s.id === focusedSchemaId.value)
-    if (!focusedSchema) {
-        return []
-    }
-
-    const focusedAuthors = new Set(focusedSchema.authors)
-
+    // 僅應用類型篩選，不再根據focus狀態過濾連接
     return connectionPaths.value.filter(({ connection }) => {
-        // 應用類型篩選
+        // 應用連接類型篩選
         if (connectionFilterType.value && connection.type !== connectionFilterType.value) {
             return false
         }
-
-        // 顯示與焦點節點直接相關的連接
-        if (connection.from === focusedSchemaId.value || connection.to === focusedSchemaId.value) {
-            return true
-        }
-
-        // 顯示同作者方案之間的連接
-        const fromSchema = schemas.value.find(s => s.id === connection.from)
-        const toSchema = schemas.value.find(s => s.id === connection.to)
-
-        if (fromSchema && toSchema) {
-            // 檢查 from 和 to 是否都有與焦點方案相同的作者
-            const fromHasAuthor = fromSchema.authors.some(a => focusedAuthors.has(a))
-            const toHasAuthor = toSchema.authors.some(a => focusedAuthors.has(a))
-
-            // 如果兩個方案都有同作者，顯示它們之間的連接
-            if (fromHasAuthor && toHasAuthor) {
-                return true
-            }
-        }
-
-        return false
+        return true
     })
 })
 
@@ -774,7 +736,7 @@ watch(() => props.config, () => {
                     <!-- 連接線（在節點下方） -->
                     <g class="connections">
                         <g v-for="({ connection, path }, index) in visibleConnections"
-                            :key="`${connection.from}-${connection.to}-${connection.type}-${index}-${focusedSchemaId || 'none'}`">
+                            :key="`${connection.from}-${connection.to}-${connection.type}-${index}`">
                             <!-- 連接線路徑 -->
                             <path :d="path" :stroke="getConnectionColor(connection, isDark ? 'dark' : 'light')"
                                 :stroke-width="getConnectionStrokeWidth(
@@ -812,142 +774,33 @@ watch(() => props.config, () => {
                         </text>
                     </g>
 
-                    <!-- 背景輸入法卡片（淡化） - 只在有 focus 時顯示 -->
-                    <g v-if="focusedSchemaId" class="schema-nodes-background">
-                        <g v-for="node in groupedNodes.backgroundNodes" :key="'bg-' + node.schema.id"
-                            :transform="`translate(${node.x}, ${node.y})`" @click="handleCardClick(node.schema.id)"
-                            @mouseenter="handleCardHover(node.schema.id)" @mouseleave="handleCardHover(null)"
-                            class="schema-node schema-node-dimmed" :class="{
-                                hovered: hoveredSchemaId === node.schema.id
-                            }">
-                            <!-- 卡片背景 -->
-                            <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
-
-                            <!-- 三行顯示：第一行名稱，第二行作者，第三行日期 -->
-                            <!-- 第一行：輸入法名 -->
-                            <text :x="10" :y="16" class="node-name" text-anchor="start" shape-rendering="crispEdges"
-                                text-rendering="geometricPrecision">
-                                {{ node.schema.name }}
-                            </text>
-                            <!-- 第二行：作者 -->
-                            <text :x="10" :y="31" class="node-author" text-anchor="start" shape-rendering="crispEdges"
-                                text-rendering="geometricPrecision">
-                                {{ node.schema.authors.join(' ') }}
-                            </text>
-                            <!-- 第三行：日期 -->
-                            <text :x="10" :y="46" class="node-date" text-anchor="start" shape-rendering="crispEdges"
-                                text-rendering="geometricPrecision">
-                                {{ formatDate(node.schema.date) }}
-                            </text>
-                        </g>
-                    </g>
-
-                    <!-- 高亮輸入法卡片（在最上層） - 有 focus 時分層顯示 -->
-                    <!-- 父系節點（藍色） -->
-                    <g v-if="focusedSchemaId" class="schema-nodes-parents">
-                        <g v-for="node in groupedNodes.parentNodes" :key="'parent-' + node.schema.id"
-                            :transform="`translate(${node.x}, ${node.y})`" @click="handleCardClick(node.schema.id)"
-                            @mouseenter="handleCardHover(node.schema.id)" @mouseleave="handleCardHover(null)"
-                            class="schema-node schema-node-parent" :class="{
-                                hovered: hoveredSchemaId === node.schema.id
-                            }">
-                            <!-- 卡片背景 -->
-                            <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
-
-                            <!-- 三行顯示：第一行名稱，第二行作者，第三行日期 -->
-                            <text :x="10" :y="16" class="node-name" text-anchor="start" shape-rendering="crispEdges"
-                                text-rendering="geometricPrecision">
-                                {{ node.schema.name }}
-                            </text>
-                            <text :x="10" :y="31" class="node-author" text-anchor="start" shape-rendering="crispEdges"
-                                text-rendering="geometricPrecision">
-                                {{ node.schema.authors.join(' ') }}
-                            </text>
-                            <text :x="10" :y="46" class="node-date" text-anchor="start" shape-rendering="crispEdges"
-                                text-rendering="geometricPrecision">
-                                {{ formatDate(node.schema.date) }}
-                            </text>
-                        </g>
-                    </g>
-
-                    <!-- 子系節點（綠色） -->
-                    <g v-if="focusedSchemaId" class="schema-nodes-children">
-                        <g v-for="node in groupedNodes.childNodes" :key="'child-' + node.schema.id"
-                            :transform="`translate(${node.x}, ${node.y})`" @click="handleCardClick(node.schema.id)"
-                            @mouseenter="handleCardHover(node.schema.id)" @mouseleave="handleCardHover(null)"
-                            class="schema-node schema-node-child" :class="{
-                                hovered: hoveredSchemaId === node.schema.id
-                            }">
-                            <!-- 卡片背景 -->
-                            <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
-
-                            <!-- 三行顯示：第一行名稱，第二行作者，第三行日期 -->
-                            <text :x="10" :y="16" class="node-name" text-anchor="start" shape-rendering="crispEdges"
-                                text-rendering="geometricPrecision">
-                                {{ node.schema.name }}
-                            </text>
-                            <text :x="10" :y="31" class="node-author" text-anchor="start" shape-rendering="crispEdges"
-                                text-rendering="geometricPrecision">
-                                {{ node.schema.authors.join(' ') }}
-                            </text>
-                            <text :x="10" :y="46" class="node-date" text-anchor="start" shape-rendering="crispEdges"
-                                text-rendering="geometricPrecision">
-                                {{ formatDate(node.schema.date) }}
-                            </text>
-                        </g>
-                    </g>
-
-                    <!-- 焦點節點 -->
-                    <g v-if="focusedSchemaId && groupedNodes.focusedNode" class="schema-nodes-focused">
-                        <g :transform="`translate(${groupedNodes.focusedNode.x}, ${groupedNodes.focusedNode.y})`"
-                            @click="handleCardClick(groupedNodes.focusedNode.schema.id)"
-                            @mouseenter="handleCardHover(groupedNodes.focusedNode.schema.id)"
-                            @mouseleave="handleCardHover(null)" class="schema-node focused" :class="{
-                                hovered: hoveredSchemaId === groupedNodes.focusedNode.schema.id
-                            }">
-                            <!-- 卡片背景 -->
-                            <rect :width="groupedNodes.focusedNode.width" :height="groupedNodes.focusedNode.height"
-                                class="node-bg" rx="8" />
-
-                            <!-- 三行顯示：第一行名稱，第二行作者，第三行日期 -->
-                            <text :x="10" :y="16" class="node-name" text-anchor="start" shape-rendering="crispEdges"
-                                text-rendering="geometricPrecision">
-                                {{ groupedNodes.focusedNode.schema.name }}
-                            </text>
-                            <text :x="10" :y="31" class="node-author" text-anchor="start" shape-rendering="crispEdges"
-                                text-rendering="geometricPrecision">
-                                {{ groupedNodes.focusedNode.schema.authors.join(' ') }}
-                            </text>
-                            <text :x="10" :y="46" class="node-date" text-anchor="start" shape-rendering="crispEdges"
-                                text-rendering="geometricPrecision">
-                                {{ formatDate(groupedNodes.focusedNode.schema.date) }}
-                            </text>
-                        </g>
-                    </g>
-
-                    <!-- 無 focus 時：顯示所有輸入法卡片 -->
-                    <g v-if="!focusedSchemaId" class="schema-nodes-all">
-                        <g v-for="node in layoutNodes" :key="'all-' + node.schema.id"
+                    <!-- 統一渲染所有節點，用 CSS 類控制樣式 -->
+                    <g class="schema-nodes-all">
+                        <g v-for="node in layoutNodes" :key="node.schema.id"
                             :transform="`translate(${node.x}, ${node.y})`" @click="handleCardClick(node.schema.id)"
                             @mouseenter="handleCardHover(node.schema.id)" @mouseleave="handleCardHover(null)"
                             class="schema-node" :class="{
-                                hovered: hoveredSchemaId === node.schema.id
+                                hovered: hoveredSchemaId === node.schema.id,
+                                'schema-node-dimmed': focusedSchemaId &&
+                                    node.schema.id !== focusedSchemaId &&
+                                    !groupedNodes.parentNodes.some(n => n.schema.id === node.schema.id) &&
+                                    !groupedNodes.childNodes.some(n => n.schema.id === node.schema.id),
+                                'schema-node-parent': focusedSchemaId && groupedNodes.parentNodes.some(n => n.schema.id === node.schema.id),
+                                'schema-node-child': focusedSchemaId && groupedNodes.childNodes.some(n => n.schema.id === node.schema.id),
+                                'focused': focusedSchemaId === node.schema.id
                             }">
                             <!-- 卡片背景 -->
                             <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
 
                             <!-- 三行顯示：第一行名稱，第二行作者，第三行日期 -->
-                            <!-- 第一行：輸入法名 -->
                             <text :x="10" :y="16" class="node-name" text-anchor="start" shape-rendering="crispEdges"
                                 text-rendering="geometricPrecision">
                                 {{ node.schema.name }}
                             </text>
-                            <!-- 第二行：作者 -->
                             <text :x="10" :y="31" class="node-author" text-anchor="start" shape-rendering="crispEdges"
                                 text-rendering="geometricPrecision">
                                 {{ node.schema.authors.join(' ') }}
                             </text>
-                            <!-- 第三行：日期 -->
                             <text :x="10" :y="46" class="node-date" text-anchor="start" shape-rendering="crispEdges"
                                 text-rendering="geometricPrecision">
                                 {{ formatDate(node.schema.date) }}
@@ -1308,13 +1161,15 @@ watch(() => props.config, () => {
 }
 
 /* 淡化的背景節點 */
+/* transition 淡化用時 */
 .schema-node-dimmed {
     opacity: 0.25;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .schema-node-dimmed:hover {
     opacity: 0.5;
+    transition: opacity 0.1s ease;
 }
 
 .node-bg {
@@ -1462,8 +1317,9 @@ watch(() => props.config, () => {
 }
 
 /* 連接線樣式 */
+/* transition 淡化用時 */
 .connection-line {
-    transition: all 0.3s ease;
+    transition: opacity 0.1s cubic-bezier(0.4, 0, 0.2, 1), stroke-width 0.3s ease, filter 0.3s ease;
     cursor: pointer;
     opacity: 0.15;
     /* 默认非常淡 */
