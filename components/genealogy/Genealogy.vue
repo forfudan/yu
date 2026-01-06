@@ -80,6 +80,7 @@ const allAuthors = ref<string[]>([])
 const focusedSchemaId = ref<string | null>(null)
 const hoveredSchemaId = ref<string | null>(null)
 const hoveredLabelConnection = ref<Connection | null>(null)  // 鼠標懸停的標籤對應的連接
+const pinnedLabelConnection = ref<Connection | null>(null)   // 被固定的標籤對應的連接
 
 // 篩選狀態
 const selectedFeatures = ref<string[]>([])
@@ -283,10 +284,13 @@ const groupedNodes = computed(() => {
     })
 
     layoutNodes.value.forEach(node => {
-        // 如果有標籤被 hover，只高亮該連接的兩端
-        if (hoveredLabelConnection.value) {
-            if (node.schema.id === hoveredLabelConnection.value.from ||
-                node.schema.id === hoveredLabelConnection.value.to) {
+        // 使用固定連接或懸停連接（優先使用固定的）
+        const activeConnection = pinnedLabelConnection.value || hoveredLabelConnection.value
+
+        // 如果有標籤被 hover/pinned，只高亮該連接的兩端
+        if (activeConnection) {
+            if (node.schema.id === activeConnection.from ||
+                node.schema.id === activeConnection.to) {
                 // 判断是父系还是子系
                 if (node.schema.id === focusedSchemaId.value) {
                     focusedNode = node
@@ -579,7 +583,25 @@ function handleCardHover(schemaId: string | null) {
 
 // Hover 連接標籤
 function handleLabelHover(connection: Connection | null) {
-    hoveredLabelConnection.value = connection
+    // 如果有固定的連接，hover 不起作用
+    if (!pinnedLabelConnection.value) {
+        hoveredLabelConnection.value = connection
+    }
+}
+
+// 點擊連接標籤（固定/取消固定）
+function handleLabelClick(connection: Connection) {
+    if (pinnedLabelConnection.value &&
+        pinnedLabelConnection.value.from === connection.from &&
+        pinnedLabelConnection.value.to === connection.to) {
+        // 取消固定
+        pinnedLabelConnection.value = null
+    } else {
+        // 固定連接
+        pinnedLabelConnection.value = connection
+        // 清除 hover 狀態
+        hoveredLabelConnection.value = null
+    }
 }
 
 // 計算文字寬度（考慮中英文混合）
@@ -750,18 +772,22 @@ watch(() => props.config, () => {
                                 :stroke-width="getConnectionStrokeWidth(
                                     connection,
                                     focusedSchemaId === connection.from || focusedSchemaId === connection.to ||
-                                    (hoveredLabelConnection && hoveredLabelConnection.from === connection.from &&
-                                        hoveredLabelConnection.to === connection.to)
+                                    ((hoveredLabelConnection || pinnedLabelConnection) &&
+                                        (hoveredLabelConnection?.from === connection.from && hoveredLabelConnection?.to === connection.to) ||
+                                        (pinnedLabelConnection?.from === connection.from && pinnedLabelConnection?.to === connection.to))
                                 )" fill="none" :marker-end="`url(#arrow-${connection.type})`" :class="{
                                     'connection-line': true,
                                     [`connection-${connection.type}`]: true,
                                     'connection-parent': focusedSchemaId === connection.from,
                                     'connection-child': focusedSchemaId === connection.to,
-                                    'connection-focused': (focusedSchemaId === connection.from || focusedSchemaId === connection.to) && !hoveredLabelConnection ||
-                                        (hoveredLabelConnection && hoveredLabelConnection.from === connection.from &&
-                                            hoveredLabelConnection.to === connection.to),
-                                    'connection-dimmed': hoveredLabelConnection ?
-                                        !(hoveredLabelConnection.from === connection.from && hoveredLabelConnection.to === connection.to) :
+                                    'connection-focused': (focusedSchemaId === connection.from || focusedSchemaId === connection.to) &&
+                                        !hoveredLabelConnection && !pinnedLabelConnection ||
+                                        ((hoveredLabelConnection || pinnedLabelConnection) &&
+                                            ((hoveredLabelConnection?.from === connection.from && hoveredLabelConnection?.to === connection.to) ||
+                                                (pinnedLabelConnection?.from === connection.from && pinnedLabelConnection?.to === connection.to))),
+                                    'connection-dimmed': (hoveredLabelConnection || pinnedLabelConnection) ?
+                                        !((hoveredLabelConnection?.from === connection.from && hoveredLabelConnection?.to === connection.to) ||
+                                            (pinnedLabelConnection?.from === connection.from && pinnedLabelConnection?.to === connection.to)) :
                                         (focusedSchemaId && focusedSchemaId !== connection.from && focusedSchemaId !== connection.to)
                                 }">
                                 <title>{{ connection.label }}</title>
@@ -925,13 +951,18 @@ watch(() => props.config, () => {
                     <g v-if="focusedSchemaId" class="connection-labels">
                         <g v-for="(labelBox, idx) in labeledConnections" :key="`label-${idx}`"
                             @mouseenter="handleLabelHover(labelBox.connection)" @mouseleave="handleLabelHover(null)"
-                            class="connection-label-group" :class="{
+                            @click="handleLabelClick(labelBox.connection)" class="connection-label-group" :class="{
                                 'label-hovered': hoveredLabelConnection &&
                                     hoveredLabelConnection.from === labelBox.connection.from &&
                                     hoveredLabelConnection.to === labelBox.connection.to,
-                                'label-dimmed': hoveredLabelConnection &&
-                                    !(hoveredLabelConnection.from === labelBox.connection.from &&
-                                        hoveredLabelConnection.to === labelBox.connection.to),
+                                'label-pinned': pinnedLabelConnection &&
+                                    pinnedLabelConnection.from === labelBox.connection.from &&
+                                    pinnedLabelConnection.to === labelBox.connection.to,
+                                'label-dimmed': (hoveredLabelConnection || pinnedLabelConnection) &&
+                                    !((hoveredLabelConnection?.from === labelBox.connection.from &&
+                                        hoveredLabelConnection?.to === labelBox.connection.to) ||
+                                        (pinnedLabelConnection?.from === labelBox.connection.from &&
+                                            pinnedLabelConnection?.to === labelBox.connection.to)),
                                 'label-parent': labelBox.connection.from === focusedSchemaId,
                                 'label-child': labelBox.connection.to === focusedSchemaId
                             }">
@@ -1550,6 +1581,45 @@ watch(() => props.config, () => {
 :global(.dark) .connection-label-group:hover .connection-label,
 :global(.dark) .connection-label-group.label-hovered .connection-label {
     fill: #1e293b;
+}
+
+/* 固定的標籤（pinned） */
+.connection-label-group.label-pinned .connection-label-bg {
+    opacity: 1 !important;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+.connection-label-group.label-pinned .connection-label {
+    fill: white !important;
+    font-weight: 700;
+}
+
+:global(.dark) .connection-label-group.label-pinned .connection-label {
+    fill: #1e293b !important;
+}
+
+/* 父系固定標籤 */
+.connection-label-group.label-pinned.label-parent .connection-label-bg {
+    fill: rgb(99, 102, 241);
+    stroke: rgb(79, 70, 229);
+}
+
+:global(.dark) .connection-label-group.label-pinned.label-parent .connection-label-bg {
+    fill: rgb(165, 180, 252);
+    stroke: rgb(129, 140, 248);
+}
+
+/* 子系固定標籤 */
+.connection-label-group.label-pinned.label-child .connection-label-bg {
+    fill: rgb(34, 197, 94);
+    stroke: rgb(22, 163, 74);
+}
+
+:global(.dark) .connection-label-group.label-pinned.label-child .connection-label-bg {
+    fill: rgb(134, 239, 172);
+    stroke: rgb(74, 222, 128);
 }
 
 /* 淡化的標籤 */
