@@ -275,7 +275,7 @@ const parentNodeIds = computed(() => {
 
     const parents = new Set<string>()
     connections.value.forEach(conn => {
-        // 父系：箭頭指向 focused 的節點（from 是父）
+        // 父系（蓝色）：箭頭從 focused 指向父（focused → parent），即 from === focused 時，to 是父
         if (conn.from === focusedSchemaId.value) {
             parents.add(conn.to)
         }
@@ -289,7 +289,7 @@ const childNodeIds = computed(() => {
 
     const children = new Set<string>()
     connections.value.forEach(conn => {
-        // 子系：箭頭從 focused 指向的節點（to 是子）
+        // 子系（绿色）：箭頭從子指向 focused（child → focused），即 to === focused 時，from 是子
         if (conn.to === focusedSchemaId.value) {
             children.add(conn.from)
         }
@@ -764,7 +764,7 @@ watch(() => props.config, () => {
                             <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
                                 特徵
                                 <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
@@ -784,7 +784,7 @@ watch(() => props.config, () => {
                             <button @click="showAuthorDropdown = !showAuthorDropdown" class="dropdown-trigger">
                                 作者
                                 <span v-if="selectedAuthors.length > 0" class="badge">{{ selectedAuthors.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showAuthorDropdown" class="dropdown-menu" @click.stop>

@@ -40,11 +40,15 @@ export enum ConnectionType {
 
 /**
  * 連接數據
+ * 
+ * 箭頭方向：from → to（从派生指向来源，即子 → 父）
+ * - from: 派生的输入法（子系，绿色高亮）
+ * - to: 来源的输入法（父系，蓝色高亮）
  */
 export interface Connection {
-    /** 源輸入法ID */
+    /** 源輸入法ID（箭头起点，派生方） */
     from: string
-    /** 目標輸入法ID */
+    /** 目標輸入法ID（箭头终点，来源方） */
     to: string
     /** 連接類型 */
     type: ConnectionType
