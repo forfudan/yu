@@ -240,8 +240,9 @@ const parentNodeIds = computed(() => {
 
     const parents = new Set<string>()
     connections.value.forEach(conn => {
-        if (conn.from === focusedSchemaId.value) {
-            parents.add(conn.to)
+        // 父系：箭頭指向 focused 的節點（from 是父）
+        if (conn.to === focusedSchemaId.value) {
+            parents.add(conn.from)
         }
     })
     return parents
@@ -253,76 +254,12 @@ const childNodeIds = computed(() => {
 
     const children = new Set<string>()
     connections.value.forEach(conn => {
-        if (conn.to === focusedSchemaId.value) {
-            children.add(conn.from)
+        // 子系：箭頭從 focused 指向的節點（to 是子）
+        if (conn.from === focusedSchemaId.value) {
+            children.add(conn.to)
         }
     })
     return children
-})
-
-// 計算屬性：分組節點 - 背景節點、父系節點、子系節點
-const groupedNodes = computed(() => {
-    if (!focusedSchemaId.value) {
-        return {
-            backgroundNodes: layoutNodes.value,
-            parentNodes: [],
-            childNodes: [],
-            focusedNode: null
-        }
-    }
-
-    const backgroundNodes: LayoutNode[] = []
-    const parentNodes: LayoutNode[] = []
-    const childNodes: LayoutNode[] = []
-    let focusedNode: LayoutNode | null = null
-
-    // 收集所有可見連接中涉及的節點ID
-    const connectedNodeIds = new Set<string>()
-    visibleConnections.value.forEach(({ connection }) => {
-        connectedNodeIds.add(connection.from)
-        connectedNodeIds.add(connection.to)
-    })
-
-    layoutNodes.value.forEach(node => {
-        // 使用固定連接或懸停連接（優先使用固定的）
-        const activeConnection = pinnedLabelConnection.value || hoveredLabelConnection.value
-
-        // 如果有標籤被 hover/pinned，只高亮該連接的兩端
-        if (activeConnection) {
-            if (node.schema.id === activeConnection.from ||
-                node.schema.id === activeConnection.to) {
-                // 判断是父系还是子系
-                if (node.schema.id === focusedSchemaId.value) {
-                    focusedNode = node
-                } else if (parentNodeIds.value.has(node.schema.id)) {
-                    parentNodes.push(node)
-                } else if (childNodeIds.value.has(node.schema.id)) {
-                    childNodes.push(node)
-                }
-            } else {
-                backgroundNodes.push(node)
-            }
-        } else {
-            // 正常 focus 模式
-            if (node.schema.id === focusedSchemaId.value) {
-                focusedNode = node
-            } else if (connectedNodeIds.has(node.schema.id)) {
-                // 根據與焦點節點的關係分類
-                if (parentNodeIds.value.has(node.schema.id)) {
-                    parentNodes.push(node)
-                } else if (childNodeIds.value.has(node.schema.id)) {
-                    childNodes.push(node)
-                } else {
-                    // 同作者但無直接父子關係的節點，也放入父系（使用相同顏色）
-                    parentNodes.push(node)
-                }
-            } else {
-                backgroundNodes.push(node)
-            }
-        }
-    })
-
-    return { backgroundNodes, parentNodes, childNodes, focusedNode }
 })
 
 // 計算屬性：連接路徑
@@ -783,10 +720,10 @@ watch(() => props.config, () => {
                                 hovered: hoveredSchemaId === node.schema.id,
                                 'schema-node-dimmed': focusedSchemaId &&
                                     node.schema.id !== focusedSchemaId &&
-                                    !groupedNodes.parentNodes.some(n => n.schema.id === node.schema.id) &&
-                                    !groupedNodes.childNodes.some(n => n.schema.id === node.schema.id),
-                                'schema-node-parent': focusedSchemaId && groupedNodes.parentNodes.some(n => n.schema.id === node.schema.id),
-                                'schema-node-child': focusedSchemaId && groupedNodes.childNodes.some(n => n.schema.id === node.schema.id),
+                                    !parentNodeIds.has(node.schema.id) &&
+                                    !childNodeIds.has(node.schema.id),
+                                'schema-node-parent': focusedSchemaId && parentNodeIds.has(node.schema.id),
+                                'schema-node-child': focusedSchemaId && childNodeIds.has(node.schema.id),
                                 'focused': focusedSchemaId === node.schema.id
                             }">
                             <!-- 卡片背景 -->
