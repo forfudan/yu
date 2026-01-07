@@ -166,9 +166,36 @@ const filteredSchemas = computed(() => {
     return result
 })
 
+// 計算屬性：擴展的輸入法（在關注模式下包含相關父子節點）
+const expandedSchemas = computed(() => {
+    if (!focusedSchemaId.value) {
+        return filteredSchemas.value
+    }
+
+    // 獲取被關注節點的所有父子節點ID
+    const relatedIds = new Set<string>([focusedSchemaId.value])
+
+    connections.value.forEach(conn => {
+        if (conn.from === focusedSchemaId.value) {
+            relatedIds.add(conn.to)
+        }
+        if (conn.to === focusedSchemaId.value) {
+            relatedIds.add(conn.from)
+        }
+    })
+
+    // 將所有相關節點加入結果集
+    const filteredIds = new Set(filteredSchemas.value.map(s => s.id))
+    const additionalSchemas = schemas.value.filter(s =>
+        relatedIds.has(s.id) && !filteredIds.has(s.id)
+    )
+
+    return [...filteredSchemas.value, ...additionalSchemas]
+})
+
 // 計算屬性：排序後的輸入法（用於佈局，倒序時不影響逻辑顺序）
 const sortedSchemas = computed(() => {
-    return sortSchemasByDate(filteredSchemas.value, false)
+    return sortSchemasByDate(expandedSchemas.value, false)
 })
 
 // 計算屬性：年份間距映射表（動態間距）
@@ -771,7 +798,7 @@ watch(() => props.config, () => {
                             <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
                                 特徵
                                 <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length
-                                    }}</span>
+                                }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
@@ -791,7 +818,7 @@ watch(() => props.config, () => {
                             <button @click="showAuthorDropdown = !showAuthorDropdown" class="dropdown-trigger">
                                 作者
                                 <span v-if="selectedAuthors.length > 0" class="badge">{{ selectedAuthors.length
-                                    }}</span>
+                                }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showAuthorDropdown" class="dropdown-menu" @click.stop>
@@ -898,6 +925,8 @@ watch(() => props.config, () => {
                                     !childNodeIds.has(node.schema.id),
                                 'schema-node-parent': focusedSchemaId && parentNodeIds.has(node.schema.id),
                                 'schema-node-child': focusedSchemaId && childNodeIds.has(node.schema.id),
+                                'schema-node-extended': focusedSchemaId &&
+                                    !filteredSchemas.map(s => s.id).includes(node.schema.id),
                                 'focused': focusedSchemaId === node.schema.id,
                                 'dragging': isDragging && draggedNodeId === node.schema.id
                             }">
@@ -1553,6 +1582,28 @@ watch(() => props.config, () => {
 :global(.dark) .schema-node-child.hovered .node-bg {
     stroke: rgb(134, 239, 172);
     fill: rgba(134, 239, 172, 0.15);
+}
+
+/* 擴展節點樣式（篩選外但因關注模式顯示的父子節點） */
+.schema-node-extended .node-bg {
+    stroke-dasharray: 4, 2;
+    opacity: 0.7;
+}
+
+.schema-node-extended.hovered .node-bg {
+    opacity: 1;
+}
+
+.schema-node-extended .node-name,
+.schema-node-extended .node-author,
+.schema-node-extended .node-date {
+    opacity: 0.7;
+}
+
+.schema-node-extended.hovered .node-name,
+.schema-node-extended.hovered .node-author,
+.schema-node-extended.hovered .node-date {
+    opacity: 1;
 }
 
 /* 單行緊湊文字樣式 - 與字根圖保持一致 */
