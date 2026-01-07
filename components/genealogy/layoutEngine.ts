@@ -114,84 +114,29 @@ export function calculateLayout(
         width: calculateCardWidth(schema)  // 根據內容計算寬度
     }))
 
-    // 按Y坐標排序
+    // 按Y坐標排序（時間順序）
     schemasWithY.sort((a, b) => a.y - b.y)
 
-    // 分組：將Y坐標相近的輸入法分到同一組
-    const groups = groupByProximity(schemasWithY, nodeHeight + nodeSpacing)
-
-    // 為每組計算橫向佈局（保留各自的Y坐標和寬度）
-    const layoutNodes: LayoutNode[] = []
-
-    groups.forEach(group => {
-        const nodesInGroup = layoutHorizontallyWithY(
-            schemasWithY.filter(item => group.schemas.includes(item.schema)),
-            nodeHeight,
-            nodeSpacing,
-            canvasWidth
-        )
-        layoutNodes.push(...nodesInGroup)
-    })
+    // 直接按時間順序填充 4 列
+    const layoutNodes = layoutInColumnsSequentially(
+        schemasWithY,
+        nodeHeight,
+        nodeSpacing,
+        canvasWidth
+    )
 
     return layoutNodes
 }
 
 /**
- * 將相近的輸入法按Y坐標分組
- * @param schemasWithY 帶Y坐標的輸入法數組
- * @param threshold 分組閾值（像素）
- * @returns 分組結果
- */
-function groupByProximity(
-    schemasWithY: Array<{ schema: SchemaData; y: number; width: number }>,
-    threshold: number
-): TimeGroup[] {
-    if (schemasWithY.length === 0) return []
-
-    const groups: TimeGroup[] = []
-    let currentGroup: TimeGroup = {
-        y: schemasWithY[0].y,
-        schemas: [schemasWithY[0].schema],
-        minY: schemasWithY[0].y,
-        maxY: schemasWithY[0].y
-    }
-
-    for (let i = 1; i < schemasWithY.length; i++) {
-        const item = schemasWithY[i]
-
-        // 如果與當前組的距離小於閾值，加入當前組
-        if (item.y - currentGroup.maxY < threshold) {
-            currentGroup.schemas.push(item.schema)
-            currentGroup.maxY = item.y
-            // 更新組的中心Y坐標
-            currentGroup.y = (currentGroup.minY + currentGroup.maxY) / 2
-        } else {
-            // 否則創建新組
-            groups.push(currentGroup)
-            currentGroup = {
-                y: item.y,
-                schemas: [item.schema],
-                minY: item.y,
-                maxY: item.y
-            }
-        }
-    }
-
-    // 添加最後一組
-    groups.push(currentGroup)
-
-    return groups
-}
-
-/**
- * 橫向佈局：為同一時間段的輸入法分配X坐標（保留各自的Y坐標和寬度）
- * @param schemasWithY 帶Y坐標和寬度的輸入法數組
+ * 按時間順序循環填充 4 列
+ * @param schemasWithY 帶Y坐標和寬度的輸入法數組（已按時間排序）
  * @param nodeHeight 節點高度
  * @param nodeSpacing 節點間距
  * @param canvasWidth 畫布寬度
  * @returns 佈局節點數組
  */
-function layoutHorizontallyWithY(
+function layoutInColumnsSequentially(
     schemasWithY: Array<{ schema: SchemaData; y: number; width: number }>,
     nodeHeight: number,
     nodeSpacing: number,
@@ -201,110 +146,65 @@ function layoutHorizontallyWithY(
 
     if (schemasWithY.length === 0) return nodes
 
-    // 畫布左側預留空間（用於時間軸）
+    // 畫布左右邊距
     const leftMargin = 80
-    // 畫布右側預留空間
     const rightMargin = 50
-    // 可用寬度
     const availableWidth = canvasWidth - leftMargin - rightMargin
 
-    // 計算每個輸入法的哈希值，用於確定其橫向偏移
-    const getStableOffset = (schema: SchemaData, totalWidth: number): number => {
-        // 使用輸入法名稱、作者和日期生成穩定的哈希值
+    // 固定 4 列
+    const columnsCount = 4
+    const columnWidth = availableWidth / columnsCount
+
+    // 三次哈希函數：用於生成穩定的隨機偏移
+    const getStableOffset = (schema: SchemaData, maxOffset: number): number => {
         const str = schema.id + schema.name + schema.authors.join('') + schema.date
         let hash = 0
+
+        // 第一次哈希
         for (let i = 0; i < str.length; i++) {
-            // 使用更複雜的哈希算法增加分散度
             hash = ((hash << 5) - hash) + str.charCodeAt(i)
-            hash = hash & hash // 轉換為32位整數
+            hash = hash & hash
         }
-        // 使用二次哈希增加隨機性
-        hash = Math.abs(hash * 2654435761) % totalWidth
-        // 將哈希值映射到 [0, totalWidth] 範圍
-        return hash
+
+        // 第二次哈希
+        hash = Math.abs(hash * 2654435761)
+
+        // 第三次哈希
+        hash = Math.abs(hash * 1597334677)
+
+        // 映射到 [-maxOffset/2, maxOffset/2] 範圍
+        return (hash % maxOffset) - maxOffset / 2
     }
 
-    if (schemasWithY.length === 1) {
-        // 只有一個節點，添加基於名稱的偏移而不是完全居中
-        const item = schemasWithY[0]
-        const maxOffset = availableWidth - item.width
-        const offset = getStableOffset(item.schema, Math.floor(maxOffset * 0.8)) + maxOffset * 0.1
+    // 按時間順序循環分配：1 - 2 - 3 - 0 - 1 - 2 - 3 - 0 ...
+    schemasWithY.forEach((item, index) => {
+        // 列索引：循環 1, 2, 3, 0, 1, 2, 3, 0 ...
+        const colIndex = (index + 1) % columnsCount
+
+        // 列的基礎 X 坐標（列中心）
+        const baseX = leftMargin + columnWidth * colIndex + columnWidth / 2
+
+        // 三次哈希偏移（在列寬的 60% 範圍內隨機偏移）
+        const maxOffset = columnWidth * 0.6
+        const offset = getStableOffset(item.schema, maxOffset)
+
+        // 最終 X 坐標
+        const x = baseX + offset - item.width / 2
+
+        // 限制在畫布範圍內
+        const finalX = Math.max(
+            leftMargin,
+            Math.min(x, canvasWidth - rightMargin - item.width)
+        )
+
         nodes.push({
             schema: item.schema,
-            x: leftMargin + offset,
-            y: item.y + 50, // 預留頂部空間，使用實際的y坐標
+            x: finalX,
+            y: item.y + 50, // 保留頂部空間
             width: item.width,
             height: nodeHeight
         })
-    } else if (schemasWithY.length === 2) {
-        // 兩個節點，使用1/3和2/3位置並添加偏移
-        const section = availableWidth / 3
-        const maxOffset = section * 0.6
-
-        schemasWithY.forEach((item, i) => {
-            const offset = getStableOffset(item.schema, Math.floor(maxOffset))
-            const baseX = i === 0 ? section * 0.5 : section * 1.8
-            nodes.push({
-                schema: item.schema,
-                x: leftMargin + baseX + offset,
-                y: item.y + 50, // 使用實際的y坐標
-                width: item.width,
-                height: nodeHeight
-            })
-        })
-    } else if (schemasWithY.length === 3) {
-        // 三個節點，均勻分佈
-        const section = availableWidth / 4
-        const maxOffset = section * 0.5
-
-        schemasWithY.forEach((item, i) => {
-            const offset = getStableOffset(item.schema, Math.floor(maxOffset))
-            nodes.push({
-                schema: item.schema,
-                x: leftMargin + section * (i + 0.5) + offset,
-                y: item.y + 50, // 使用實際的y坐標
-                width: item.width,
-                height: nodeHeight
-            })
-        })
-    } else {
-        // 多個節點，使用循環列佈局
-        // 將節點分成多列，按循環排列，但起始列隨機
-        const columnsCount = Math.min(4, Math.ceil(Math.sqrt(schemasWithY.length))) // 最多4列
-        const columnWidth = availableWidth / columnsCount
-        const verticalSpacing = nodeHeight + nodeSpacing
-
-        // 根據組的第一個節點信息生成隨機起始列
-        const startColOffset = getStableOffset(schemasWithY[0].schema, columnsCount)
-
-        schemasWithY.forEach((item, i) => {
-            // 確定在第幾列（循環，但從隨機起始列開始）
-            // 例如：startColOffset=2 時：2,3,0,1,2,3,0,1...
-            const colIndex = (i + startColOffset) % columnsCount
-
-            // 確定在第幾行
-            const rowIndex = Math.floor(i / columnsCount)
-
-            // 計算基礎位置
-            const baseX = leftMargin + columnWidth * colIndex + columnWidth * 0.1
-            const maxOffsetX = columnWidth * 0.6
-
-            // 添加基於哈希的偏移，但範圍更大
-            const hashOffset = getStableOffset(item.schema, Math.floor(maxOffsetX))
-            const x = baseX + hashOffset
-
-            // Y坐標：使用原始Y坐標加上行偏移
-            const yOffset = rowIndex * verticalSpacing * 0.3  // 輕微的行偏移
-
-            nodes.push({
-                schema: item.schema,
-                x: Math.max(leftMargin, Math.min(x, canvasWidth - rightMargin - item.width)),
-                y: item.y + 50 + yOffset,
-                width: item.width,
-                height: nodeHeight
-            })
-        })
-    }
+    })
 
     return nodes
 }

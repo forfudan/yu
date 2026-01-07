@@ -45,7 +45,7 @@ const props = withDefaults(defineProps<{
 
 // 默認配置
 const defaultConfig: GenealogyConfig = {
-    width: 1024,
+    width: 840,  // 默認畫布寬度
     height: 1200,
     nodeSpacing: 10,
     baseSpacing: 15,
