@@ -99,11 +99,13 @@ const genealogyContainer = ref<HTMLElement | null>(null)
 const yScaleFactor = ref(1.0) // 1.0 = 100%
 
 // 篩選狀態
+const selectedSchemas = ref<string[]>([])
 const selectedFeatures = ref<string[]>([])
 const selectedAuthors = ref<string[]>([])
 const searchQuery = ref('')
 
 // 下拉菜單狀態
+const showSchemaDropdown = ref(false)
 const showFeatureDropdown = ref(false)
 const showAuthorDropdown = ref(false)
 
@@ -137,6 +139,13 @@ const filteredSchemas = computed(() => {
     // 過濾停止維護的
     if (!config.value.showDeprecated) {
         result = result.filter(s => !s.deprecated)
+    }
+
+    // 按方案過濾
+    if (selectedSchemas.value.length > 0) {
+        result = result.filter(s =>
+            selectedSchemas.value.includes(s.id)
+        )
     }
 
     // 按特性過濾
@@ -619,6 +628,16 @@ function getConnectionMidpoint(connection: Connection, nodes: Map<string, Layout
     return `translate(${midX}, ${midY})`
 }
 
+// 切換方案選擇
+function toggleSchema(schemaId: string) {
+    const index = selectedSchemas.value.indexOf(schemaId)
+    if (index > -1) {
+        selectedSchemas.value.splice(index, 1)
+    } else {
+        selectedSchemas.value.push(schemaId)
+    }
+}
+
 // 切換特徵選擇
 function toggleFeature(feature: string) {
     const index = selectedFeatures.value.indexOf(feature)
@@ -783,32 +802,31 @@ watch(() => props.config, () => {
                 <!-- 第一行：標題 -->
                 <div class="toolbar-header">
                     <h2 class="toolbar-title">字形輸入法源流圖</h2>
+                    <!-- 統計信息 -->
+                    <span class="toolbar-stats">
+                        共 {{ filteredSchemas.length }} 個輸入法 ({{ minYear }}-{{ maxYear }})
+                    </span>
                 </div>
 
                 <!-- 第二行：控制按鈕 -->
                 <div class="toolbar-controls">
                     <div class="toolbar-left">
-                        <!-- 統計信息 -->
-                        <span class="text-sm text-gray-600 dark:text-gray-400">
-                            共 {{ filteredSchemas.length }} 個輸入法 ({{ minYear }}-{{ maxYear }})
-                        </span>
-
-                        <!-- 特徵篩選下拉菜單 -->
+                        <!-- 方案篩選下拉菜單 -->
                         <div class="dropdown-wrapper">
-                            <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
-                                特徵
-                                <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length
+                            <button @click="showSchemaDropdown = !showSchemaDropdown" class="dropdown-trigger">
+                                方案
+                                <span v-if="selectedSchemas.length > 0" class="badge">{{ selectedSchemas.length
                                 }}</span>
                                 <span class="arrow">▼</span>
                             </button>
-                            <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
+                            <div v-if="showSchemaDropdown" class="dropdown-menu" @click.stop>
                                 <div class="dropdown-header">
-                                    <button @click="selectedFeatures = []" class="clear-btn">清除</button>
+                                    <button @click="selectedSchemas = []" class="clear-btn">清除</button>
                                 </div>
-                                <label v-for="feature in allFeatures" :key="feature" class="dropdown-item">
-                                    <input type="checkbox" :checked="selectedFeatures.includes(feature)"
-                                        @change="toggleFeature(feature)" />
-                                    <span>{{ feature }}</span>
+                                <label v-for="schema in schemas" :key="schema.id" class="dropdown-item">
+                                    <input type="checkbox" :checked="selectedSchemas.includes(schema.id)"
+                                        @change="toggleSchema(schema.id)" />
+                                    <span>{{ schema.name }}</span>
                                 </label>
                             </div>
                         </div>
@@ -832,6 +850,26 @@ watch(() => props.config, () => {
                                 </label>
                             </div>
                         </div>
+
+                        <!-- 特徵篩選下拉菜單 -->
+                        <div class="dropdown-wrapper">
+                            <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
+                                特徵
+                                <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length
+                                }}</span>
+                                <span class="arrow">▼</span>
+                            </button>
+                            <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
+                                <div class="dropdown-header">
+                                    <button @click="selectedFeatures = []" class="clear-btn">清除</button>
+                                </div>
+                                <label v-for="feature in allFeatures" :key="feature" class="dropdown-item">
+                                    <input type="checkbox" :checked="selectedFeatures.includes(feature)"
+                                        @change="toggleFeature(feature)" />
+                                    <span>{{ feature }}</span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="toolbar-right">
@@ -851,8 +889,8 @@ watch(() => props.config, () => {
             </div>
 
             <!-- 點擊外部關閉下拉菜單 -->
-            <div v-if="showFeatureDropdown || showAuthorDropdown" class="dropdown-backdrop"
-                @click="showFeatureDropdown = false; showAuthorDropdown = false">
+            <div v-if="showSchemaDropdown || showFeatureDropdown || showAuthorDropdown" class="dropdown-backdrop"
+                @click="showSchemaDropdown = false; showFeatureDropdown = false; showAuthorDropdown = false">
             </div>
 
             <!-- 畫布區域 -->
@@ -1114,6 +1152,7 @@ watch(() => props.config, () => {
 .toolbar-header {
     display: flex;
     align-items: center;
+    gap: 1rem;
 }
 
 .toolbar-title {
@@ -1131,24 +1170,31 @@ watch(() => props.config, () => {
     color: var(--vp-c-text-1, #f1f5f9);
 }
 
+.toolbar-stats {
+    font-size: 0.875rem;
+    color: var(--vp-c-text-2, #64748b);
+}
+
+:global(.dark) .toolbar-stats {
+    color: var(--vp-c-text-2, #94a3b8);
+}
+
 .toolbar-controls {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
 }
 
 .toolbar-left {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    flex: 1;
+    gap: 0;
 }
 
 .toolbar-right {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 0;
 }
 
 /* 內聯Y軸縮放控制 */
