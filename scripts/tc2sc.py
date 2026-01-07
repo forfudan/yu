@@ -31,7 +31,7 @@ paths_of_docs = [
     "/docs/sypy.md",
     "/docs/coverage.md",
     "/docs/faq.md",
-    "/docs/genealogy.md",
+    "/docs/gene.md",
     # 教程
     "/learn/index.md",
     "/learn/division.md",

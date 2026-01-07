@@ -62,6 +62,22 @@ export function formatDate(dateStr: string): string {
 }
 
 /**
+ * 格式化日期（僅顯示到月份，用於卡片顯示）
+ * @param dateStr 8位日期字符串
+ * @returns 格式化後的日期字符串
+ */
+export function formatDateToMonth(dateStr: string): string {
+    const year = dateStr.substring(0, 4)
+    const month = dateStr.substring(4, 6)
+
+    if (month === '00') {
+        return `${year}年`
+    } else {
+        return `${year}年${parseInt(month)}月`
+    }
+}
+
+/**
  * 獲取日期精度
  * @param dateStr 8位日期字符串
  * @returns 'year' | 'month' | 'day'

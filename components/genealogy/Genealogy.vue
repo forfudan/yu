@@ -24,6 +24,7 @@ import {
     getAllFeatures,
     getAllAuthors,
     formatDate,
+    formatDateToMonth,
     parseYear
 } from './dataLoader'
 import { calculateLayout, optimizeLayout, calculateLayoutQuality } from './layoutEngine'
@@ -452,6 +453,12 @@ const connectionStats = computed(() => {
     return getConnectionStats(connections.value)
 })
 
+// 計算屬性：獲取當前關注節點的詳細信息
+const focusedSchemaDetails = computed(() => {
+    if (!focusedSchemaId.value) return null
+    return schemas.value.find(s => s.id === focusedSchemaId.value) || null
+})
+
 // 加載數據
 async function loadData() {
     loading.value = true
@@ -764,7 +771,7 @@ watch(() => props.config, () => {
                             <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
                                 特徵
                                 <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length
-                                    }}</span>
+                                }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
@@ -784,7 +791,7 @@ watch(() => props.config, () => {
                             <button @click="showAuthorDropdown = !showAuthorDropdown" class="dropdown-trigger">
                                 作者
                                 <span v-if="selectedAuthors.length > 0" class="badge">{{ selectedAuthors.length
-                                    }}</span>
+                                }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showAuthorDropdown" class="dropdown-menu" @click.stop>
@@ -908,7 +915,7 @@ watch(() => props.config, () => {
                             </text>
                             <text :x="10" :y="46" class="node-date" text-anchor="start" shape-rendering="crispEdges"
                                 text-rendering="geometricPrecision">
-                                {{ formatDate(node.schema.date) }}
+                                {{ formatDateToMonth(node.schema.date) }}
                             </text>
                         </g>
                     </g>
@@ -955,9 +962,24 @@ watch(() => props.config, () => {
 
             <!-- 浮動提示（右下角） -->
             <div v-if="focusedSchemaId || pinnedLabelConnection" class="floating-hint">
-                <span v-if="pinnedLabelConnection">再次點擊特徵標籤解除釘選模式</span>
-                <span v-else-if="hoveredLabelConnection">點擊特徵標籤進入釘選模式</span>
-                <span v-else>再次點擊方案卡片解除關注模式</span>
+                <!-- 關注節點的詳細信息 -->
+                <div v-if="focusedSchemaDetails" class="schema-details">
+                    <div class="schema-details-name">{{ focusedSchemaDetails.name }}</div>
+                    <div class="schema-details-authors">{{ focusedSchemaDetails.authors.join('、') }}</div>
+                    <div class="schema-details-date">{{ formatDate(focusedSchemaDetails.date) }}</div>
+                    <div class="schema-details-features">
+                        <span v-for="feature in focusedSchemaDetails.features" :key="feature" class="feature-tag">
+                            {{ feature }}
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 操作提示 -->
+                <div class="hint-text">
+                    <span v-if="pinnedLabelConnection">再次點擊特徵標籤解除釘選模式</span>
+                    <span v-else-if="hoveredLabelConnection">點擊特徵標籤進入釘選模式</span>
+                    <span v-else>再次點擊方案卡片解除關注模式</span>
+                </div>
             </div>
         </div>
     </div>
@@ -1952,11 +1974,67 @@ watch(() => props.config, () => {
     z-index: 1000;
     pointer-events: none;
     animation: fadeIn 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 400px;
 }
 
 :global(.dark) .floating-hint {
     background: rgba(165, 180, 252, 0.95);
     color: #1e293b;
+}
+
+/* 方案詳細信息樣式 */
+.schema-details {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+:global(.dark) .schema-details {
+    border-bottom-color: rgba(30, 41, 59, 0.3);
+}
+
+.schema-details-name {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.schema-details-authors {
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+.schema-details-date {
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+.schema-details-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    margin-top: 0.25rem;
+}
+
+.schema-details .feature-tag {
+    padding: 0.125rem 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+:global(.dark) .schema-details .feature-tag {
+    background: rgba(30, 41, 59, 0.3);
+}
+
+.hint-text {
+    font-size: 0.875rem;
 }
 
 @keyframes fadeIn {

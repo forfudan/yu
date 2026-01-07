@@ -136,7 +136,7 @@ export default defineConfig({
             },
             {
               text: "字形输入法源流图",
-              link: "/docs/genealogy",
+              link: "/docs/gene",
             },
             {
               text: "常见形码输入方案编码规则",
@@ -584,7 +584,7 @@ export default defineConfig({
                 },
                 {
                   text: "字形輸入法源流圖",
-                  link: "/zht/docs/genealogy",
+                  link: "/zht/docs/gene",
                 },
                 {
                   text: "常見形碼輸入方案編碼規則",
