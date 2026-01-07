@@ -771,7 +771,7 @@ watch(() => props.config, () => {
                             <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
                                 特徵
                                 <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
@@ -791,7 +791,7 @@ watch(() => props.config, () => {
                             <button @click="showAuthorDropdown = !showAuthorDropdown" class="dropdown-trigger">
                                 作者
                                 <span v-if="selectedAuthors.length > 0" class="badge">{{ selectedAuthors.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showAuthorDropdown" class="dropdown-menu" @click.stop>
@@ -971,6 +971,9 @@ watch(() => props.config, () => {
                         <span v-for="feature in focusedSchemaDetails.features" :key="feature" class="feature-tag">
                             {{ feature }}
                         </span>
+                    </div>
+                    <div v-if="focusedSchemaDetails.description" class="schema-details-description">
+                        <span class="description-label"></span>{{ focusedSchemaDetails.description }}
                     </div>
                 </div>
 
@@ -1689,10 +1692,13 @@ watch(() => props.config, () => {
     fill: var(--vp-c-bg, #ffffff);
     opacity: 0.95;
     transition: all 0.2s ease;
+    stroke: var(--vp-c-divider, #e5e7eb);
+    stroke-width: 1;
 }
 
 :global(.dark) .connection-label-bg {
     fill: var(--vp-c-bg, #1e293b);
+    stroke: var(--vp-c-divider, #4b5563);
 }
 
 /* 連接線標籤組 */
@@ -2031,6 +2037,23 @@ watch(() => props.config, () => {
 
 :global(.dark) .schema-details .feature-tag {
     background: rgba(30, 41, 59, 0.3);
+}
+
+.schema-details-description {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+:global(.dark) .schema-details-description {
+    border-top-color: rgba(30, 41, 59, 0.3);
+}
+
+.description-label {
+    font-weight: 600;
+    opacity: 1;
 }
 
 .hint-text {
