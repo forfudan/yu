@@ -985,7 +985,10 @@ watch(() => props.config, () => {
                     <g class="connections">
                         <g v-for="(data, index) in connectionRenderCache"
                             :key="`${data.connection.from}-${data.connection.to}-${data.connection.type}-${index}`"
-                            v-show="isConnectionVisible(data.connection)">
+                            v-show="isConnectionVisible(data.connection)"
+                            @mouseenter="focusedSchemaId && !data.isDimmed && handleLabelHover(data.connection)"
+                            @mouseleave="focusedSchemaId && !data.isDimmed && handleLabelHover(null)"
+                            @click="focusedSchemaId && !data.isDimmed && handleLabelClick(data.connection)">
                             <!-- 連接線路徑 -->
                             <path :d="data.path" :stroke="data.strokeColor" :stroke-width="data.strokeWidth" fill="none"
                                 :marker-end="`url(#arrow-${data.connection.type})`" :class="{
@@ -994,7 +997,8 @@ watch(() => props.config, () => {
                                     'connection-parent': data.isParent,
                                     'connection-child': data.isChild,
                                     'connection-focused': data.isFocused,
-                                    'connection-dimmed': data.isDimmed
+                                    'connection-dimmed': data.isDimmed,
+                                    'connection-interactive': !data.isDimmed
                                 }">
                                 <title>{{ data.connection.label }}</title>
                             </path>
@@ -1792,9 +1796,12 @@ watch(() => props.config, () => {
 
 /* 連接線樣式 */
 .connection-line {
-    cursor: pointer;
     opacity: 0.15;
     /* 默认非常淡 */
+}
+
+.connection-interactive {
+    cursor: pointer;
 }
 
 .connection-feature {
@@ -1833,12 +1840,6 @@ watch(() => props.config, () => {
 .connection-dimmed {
     opacity: 0.05;
     /* 其他线更淡 */
-}
-
-.connection-line:hover {
-    opacity: 0.8;
-    stroke-width: 3;
-    filter: drop-shadow(0 0 4px currentColor);
 }
 
 /* 暗色模式下的連接線 */
