@@ -12,7 +12,7 @@
 -->
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
 import type { SchemaData, YearLabel, GenealogyConfig, LayoutNode, Connection } from './types.ts'
 import {
     loadSchemas,
@@ -175,36 +175,31 @@ const filteredSchemas = computed(() => {
     return result
 })
 
-// 計算屬性：擴展的輸入法（在關注模式下包含相關父子節點）
-const expandedSchemas = computed(() => {
-    if (!focusedSchemaId.value) {
-        return filteredSchemas.value
-    }
-
-    // 獲取被關注節點的所有父子節點ID
-    const relatedIds = new Set<string>([focusedSchemaId.value])
-
-    connections.value.forEach(conn => {
-        if (conn.from === focusedSchemaId.value) {
-            relatedIds.add(conn.to)
-        }
-        if (conn.to === focusedSchemaId.value) {
-            relatedIds.add(conn.from)
-        }
-    })
-
-    // 將所有相關節點加入結果集
-    const filteredIds = new Set(filteredSchemas.value.map(s => s.id))
-    const additionalSchemas = schemas.value.filter(s =>
-        relatedIds.has(s.id) && !filteredIds.has(s.id)
-    )
-
-    return [...filteredSchemas.value, ...additionalSchemas]
+// 計算屬性：排序後的所有輸入法（用於佈局，始終基於全部數據，不受篩選影響）
+const sortedSchemas = computed(() => {
+    return sortSchemasByDate(schemas.value, false)
 })
 
-// 計算屬性：排序後的輸入法（用於佈局，倒序時不影響逻辑顺序）
-const sortedSchemas = computed(() => {
-    return sortSchemasByDate(expandedSchemas.value, false)
+// 計算屬性：應該顯示的節點ID集合（用於控制可見性）
+const visibleNodeIds = computed(() => {
+    // 如果有關注節點，顯示關注節點及其父子節點
+    if (focusedSchemaId.value) {
+        const ids = new Set<string>([focusedSchemaId.value])
+        connections.value.forEach(conn => {
+            if (conn.from === focusedSchemaId.value) {
+                ids.add(conn.to)
+            }
+            if (conn.to === focusedSchemaId.value) {
+                ids.add(conn.from)
+            }
+        })
+        // 添加所有篩選後的節點
+        filteredSchemas.value.forEach(s => ids.add(s.id))
+        return ids
+    }
+
+    // 沒有關注節點時，顯示所有篩選後的節點
+    return new Set(filteredSchemas.value.map(s => s.id))
 })
 
 // 計算屬性：年份間距映射表（動態間距）
@@ -222,7 +217,22 @@ const yearSpacingMap = computed(() => {
 // 佈局優化選項
 const useOptimization = ref(false) // 是否使用力導向優化（可選功能）
 
-// 計算屬性：佈局節點（使用智能佈局算法）
+// 輔助函數：檢查節點是否應該可見
+function isNodeVisible(nodeId: string): boolean {
+    return visibleNodeIds.value.has(nodeId)
+}
+
+// 輔助函數：檢查節點是否在篩選結果中（用於樣式）
+function isNodeInFilter(nodeId: string): boolean {
+    return filteredSchemas.value.some(s => s.id === nodeId)
+}
+
+// 輔助函數：檢查連接線是否應該可見（兩端節點都可見時才顯示）
+function isConnectionVisible(connection: Connection): boolean {
+    return isNodeVisible(connection.from) && isNodeVisible(connection.to)
+}
+
+// 計算屬性：佈局節點（使用智能佈局算法，始終基於所有數據）
 const layoutNodes = computed<LayoutNode[]>(() => {
     if (sortedSchemas.value.length === 0 || minYear.value === 0) {
         return []
@@ -353,6 +363,53 @@ const visibleConnections = computed(() => {
     })
 })
 
+// 計算屬性：連接渲染緩存（預計算所有屬性以優化性能）
+interface ConnectionRenderData {
+    connection: Connection
+    path: string
+    strokeColor: string
+    strokeWidth: number
+    isParent: boolean
+    isChild: boolean
+    isFocused: boolean
+    isDimmed: boolean
+}
+
+const connectionRenderCache = computed<ConnectionRenderData[]>(() => {
+    const theme = isDark.value ? 'dark' : 'light'
+    const focused = focusedSchemaId.value
+    const hoveredLabel = hoveredLabelConnection.value
+    const pinnedLabel = pinnedLabelConnection.value
+
+    return visibleConnections.value.map(({ connection, path }) => {
+        const isParent = focused === connection.from
+        const isChild = focused === connection.to
+        const isFocusedConnection = isParent || isChild
+
+        // 計算是否高亮
+        const isHighlighted = (!hoveredLabel && !pinnedLabel && isFocusedConnection) ||
+            (hoveredLabel?.from === connection.from && hoveredLabel?.to === connection.to) ||
+            (pinnedLabel?.from === connection.from && pinnedLabel?.to === connection.to)
+
+        // 計算是否變暗
+        const isDimmed = (hoveredLabel || pinnedLabel)
+            ? !(hoveredLabel?.from === connection.from && hoveredLabel?.to === connection.to ||
+                pinnedLabel?.from === connection.from && pinnedLabel?.to === connection.to)
+            : (focused && !isFocusedConnection)
+
+        return {
+            connection,
+            path,
+            strokeColor: getConnectionColor(connection, theme),
+            strokeWidth: getConnectionStrokeWidth(connection, isHighlighted),
+            isParent,
+            isChild,
+            isFocused: isFocusedConnection && !hoveredLabel && !pinnedLabel || isHighlighted,
+            isDimmed
+        }
+    })
+})
+
 // 計算屬性：分離每個標籤的連接（用於防碰撞）
 const separatedConnections = computed(() => {
     const result: Array<{ connection: Connection, path: string, label: string }> = []
@@ -426,9 +483,9 @@ const labeledConnections = computed(() => {
         }
     }).filter(Boolean) as LabelBox[]
 
-    // 檢測碰撞並調整位置
+    // 檢測碰撞並調整位置（優化：減少迭代次數）
     const padding = 4  // 標籤之間的最小間距
-    const maxIterations = 20
+    const maxIterations = 10  // 從 20 降至 10，減少計算量
 
     for (let iter = 0; iter < maxIterations; iter++) {
         let hasCollision = false
@@ -550,6 +607,8 @@ async function loadData() {
 
 // 點擊卡片
 function handleCardClick(schemaId: string) {
+    const startTime = performance.now()
+
     if (focusedSchemaId.value === schemaId) {
         // 退出 focus 模式
         focusedSchemaId.value = null
@@ -559,6 +618,18 @@ function handleCardClick(schemaId: string) {
         focusedSchemaId.value = schemaId
         pinnedLabelConnection.value = null
     }
+
+    // 性能監控
+    nextTick(() => {
+        const endTime = performance.now()
+        const duration = endTime - startTime
+        console.log(`關注模式切換耗時: ${duration.toFixed(2)}ms`, {
+            連接數: connectionPaths.value.length,
+            渲染緩存: connectionRenderCache.value.length,
+            標籤數: labeledConnections.value.length,
+            節點數: adjustedNodes.value.length
+        })
+    })
 }
 
 // Hover 卡片
@@ -912,32 +983,20 @@ watch(() => props.config, () => {
 
                     <!-- 連接線（在節點下方） -->
                     <g class="connections">
-                        <g v-for="({ connection, path }, index) in visibleConnections"
-                            :key="`${connection.from}-${connection.to}-${connection.type}-${index}`">
+                        <g v-for="(data, index) in connectionRenderCache"
+                            :key="`${data.connection.from}-${data.connection.to}-${data.connection.type}-${index}`"
+                            v-show="isConnectionVisible(data.connection)">
                             <!-- 連接線路徑 -->
-                            <path :d="path" :stroke="getConnectionColor(connection, isDark ? 'dark' : 'light')"
-                                :stroke-width="getConnectionStrokeWidth(
-                                    connection,
-                                    focusedSchemaId === connection.from || focusedSchemaId === connection.to ||
-                                    ((hoveredLabelConnection || pinnedLabelConnection) &&
-                                        (hoveredLabelConnection?.from === connection.from && hoveredLabelConnection?.to === connection.to) ||
-                                        (pinnedLabelConnection?.from === connection.from && pinnedLabelConnection?.to === connection.to))
-                                )" fill="none" :marker-end="`url(#arrow-${connection.type})`" :class="{
+                            <path :d="data.path" :stroke="data.strokeColor" :stroke-width="data.strokeWidth" fill="none"
+                                :marker-end="`url(#arrow-${data.connection.type})`" :class="{
                                     'connection-line': true,
-                                    [`connection-${connection.type}`]: true,
-                                    'connection-parent': focusedSchemaId === connection.from,
-                                    'connection-child': focusedSchemaId === connection.to,
-                                    'connection-focused': (focusedSchemaId === connection.from || focusedSchemaId === connection.to) &&
-                                        !hoveredLabelConnection && !pinnedLabelConnection ||
-                                        ((hoveredLabelConnection || pinnedLabelConnection) &&
-                                            ((hoveredLabelConnection?.from === connection.from && hoveredLabelConnection?.to === connection.to) ||
-                                                (pinnedLabelConnection?.from === connection.from && pinnedLabelConnection?.to === connection.to))),
-                                    'connection-dimmed': (hoveredLabelConnection || pinnedLabelConnection) ?
-                                        !((hoveredLabelConnection?.from === connection.from && hoveredLabelConnection?.to === connection.to) ||
-                                            (pinnedLabelConnection?.from === connection.from && pinnedLabelConnection?.to === connection.to)) :
-                                        (focusedSchemaId && focusedSchemaId !== connection.from && focusedSchemaId !== connection.to)
+                                    [`connection-${data.connection.type}`]: true,
+                                    'connection-parent': data.isParent,
+                                    'connection-child': data.isChild,
+                                    'connection-focused': data.isFocused,
+                                    'connection-dimmed': data.isDimmed
                                 }">
-                                <title>{{ connection.label }}</title>
+                                <title>{{ data.connection.label }}</title>
                             </path>
                         </g>
                     </g>
@@ -953,7 +1012,7 @@ watch(() => props.config, () => {
 
                     <!-- 統一渲染所有節點，用 CSS 類控制樣式 -->
                     <g class="schema-nodes-all">
-                        <g v-for="node in adjustedNodes" :key="node.schema.id"
+                        <g v-for="node in adjustedNodes" :key="node.schema.id" v-show="isNodeVisible(node.schema.id)"
                             :transform="`translate(${node.x}, ${node.y})`"
                             @mousedown="handleNodeMouseDown($event, node.schema.id)" class="schema-node" :class="{
                                 hovered: hoveredSchemaId === node.schema.id,
@@ -964,7 +1023,7 @@ watch(() => props.config, () => {
                                 'schema-node-parent': focusedSchemaId && parentNodeIds.has(node.schema.id),
                                 'schema-node-child': focusedSchemaId && childNodeIds.has(node.schema.id),
                                 'schema-node-extended': focusedSchemaId &&
-                                    !filteredSchemas.map(s => s.id).includes(node.schema.id),
+                                    !isNodeInFilter(node.schema.id),
                                 'focused': focusedSchemaId === node.schema.id,
                                 'dragging': isDragging && draggedNodeId === node.schema.id
                             }">
@@ -1498,6 +1557,19 @@ watch(() => props.config, () => {
     display: block;
 }
 
+/* SVG 性能優化：限制重排範圍 */
+.connections {
+    contain: layout style paint;
+}
+
+.schema-nodes-all {
+    contain: layout style paint;
+}
+
+.connection-labels {
+    contain: layout style paint;
+}
+
 /* 時間軸樣式 */
 .timeline-axis {
     stroke: var(--vp-c-divider, #cbd5e1);
@@ -1545,22 +1617,18 @@ watch(() => props.config, () => {
 }
 
 /* 淡化的背景節點 */
-/* transition 淡化用時 */
 .schema-node-dimmed {
     opacity: 0.25;
-    transition: opacity 0.1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .schema-node-dimmed:hover {
     opacity: 0.5;
-    transition: opacity 0.1s ease;
 }
 
 .node-bg {
     fill: var(--vp-c-bg-soft, #f1f5f9);
     stroke: rgb(99, 102, 241);
     stroke-width: 2;
-    transition: all 0.3s ease;
 }
 
 :global(.dark) .node-bg {
@@ -1723,9 +1791,7 @@ watch(() => props.config, () => {
 }
 
 /* 連接線樣式 */
-/* transition 淡化用時 */
 .connection-line {
-    transition: opacity 0.1s cubic-bezier(0.4, 0, 0.2, 1), stroke-width 0.3s ease, filter 0.3s ease;
     cursor: pointer;
     opacity: 0.15;
     /* 默认非常淡 */
