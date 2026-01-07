@@ -47,13 +47,12 @@ const props = withDefaults(defineProps<{
 const defaultConfig: GenealogyConfig = {
     width: 1024,
     height: 1200,
-    nodeSpacing: 10,           // 卡片間距：15 → 10
-    baseSpacing: 15,           // 短空白期：20 → 15
-    schemaSpacing: 35,         // 每個輸入法：50 → 35
-    emptyYearThreshold: 3,     // 連續3年以上空白將被壓縮
-    emptySegmentSpacing: 30,   // 空白段總高度：40 → 30
-    labelInterval: 5,          // 空白段內每5年顯示一次標籤
-    yearSpacing: 100,          // 已棄用，保留以兼容舊配置
+    nodeSpacing: 10,
+    baseSpacing: 15,
+    schemaSpacing: 35,
+    emptyYearThreshold: 3,
+    emptySegmentSpacing: 30,
+    labelInterval: 5,
     reverseTimeline: false,
     showDeprecated: true,
     highlightFeatures: []
@@ -1781,17 +1780,6 @@ watch(() => props.config, () => {
 
 :global(.dark) .node-date {
     fill: var(--fallback-nc, oklch(var(--nc)/0.6));
-}
-
-/* 舊版樣式（已棄用，保留以防遷移需要）*/
-.node-title {
-    fill: rgb(79, 70, 229);
-    font-size: 14px;
-    font-weight: 600;
-}
-
-:global(.dark) .node-title {
-    fill: rgb(165, 180, 252);
 }
 
 /* 連接線樣式 */

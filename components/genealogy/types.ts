@@ -92,8 +92,6 @@ export interface GenealogyConfig {
     height?: number
     /** 節點最小間距 */
     nodeSpacing?: number
-    /** 時間軸年份間距（像素）- 已棄用，使用動態間距 */
-    yearSpacing?: number
     /** 基礎年份間距（沒有輸入法的年份） */
     baseSpacing?: number
     /** 每個輸入法佔用的額外間距 */
