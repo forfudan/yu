@@ -254,7 +254,8 @@
             "字母編碼",
             "26鍵"
         ],
-        "description": ""
+        "description": "",
+        "url": "https://boshiamy.com/"
     },
     {
         "id": "hanglie",
@@ -267,11 +268,13 @@
             "最長4碼",
             "字根單編碼",
             "30鍵",
+            "40鍵",
             "筆畫定鍵",
             "字母編碼",
             "符號編碼"
         ],
-        "description": ""
+        "description": "早期為 40 鍵版，現在為 30 鍵版。",
+        "url": "https://array30.misterfishup.com/"
     },
     {
         "id": "zongheng",
