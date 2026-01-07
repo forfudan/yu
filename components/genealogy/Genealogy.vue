@@ -886,7 +886,7 @@ watch(() => props.config, () => {
                             <button @click="showSchemaDropdown = !showSchemaDropdown" class="dropdown-trigger">
                                 方案
                                 <span v-if="selectedSchemas.length > 0" class="badge">{{ selectedSchemas.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showSchemaDropdown" class="dropdown-menu" @click.stop>
@@ -906,7 +906,7 @@ watch(() => props.config, () => {
                             <button @click="showAuthorDropdown = !showAuthorDropdown" class="dropdown-trigger">
                                 作者
                                 <span v-if="selectedAuthors.length > 0" class="badge">{{ selectedAuthors.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showAuthorDropdown" class="dropdown-menu" @click.stop>
@@ -926,7 +926,7 @@ watch(() => props.config, () => {
                             <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
                                 特徵
                                 <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
@@ -1093,7 +1093,11 @@ watch(() => props.config, () => {
             <div v-if="focusedSchemaId || pinnedLabelConnection" class="floating-hint">
                 <!-- 關注節點的詳細信息 -->
                 <div v-if="focusedSchemaDetails" class="schema-details">
-                    <div class="schema-details-name">{{ focusedSchemaDetails.name }}</div>
+                    <div class="schema-details-name">
+                        {{ focusedSchemaDetails.name }}
+                        <a v-if="focusedSchemaDetails.url" :href="focusedSchemaDetails.url" target="_blank"
+                            rel="noopener noreferrer" class="schema-link-icon" title="访问网站">🔗</a>
+                    </div>
                     <div class="schema-details-authors">{{ focusedSchemaDetails.authors.join('、') }}</div>
                     <div class="schema-details-date">{{ formatDate(focusedSchemaDetails.date) }}</div>
                     <div class="schema-details-features">
@@ -2130,7 +2134,8 @@ watch(() => props.config, () => {
     font-weight: 500;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     z-index: 1000;
-    pointer-events: none;
+    pointer-events: auto;
+    user-select: text;
     animation: fadeIn 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -2160,6 +2165,21 @@ watch(() => props.config, () => {
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.schema-link-icon {
+    font-size: 0.875rem;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.schema-link-icon:hover {
+    opacity: 1;
 }
 
 .schema-details-authors {
@@ -2194,9 +2214,9 @@ watch(() => props.config, () => {
 .schema-details-description {
     font-size: 0.875rem;
     opacity: 0.9;
-    margin-top: 0.5rem;
-    padding-top: 0.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 0.25rem;
+    padding-top: 0.25rem;
+    /* border-top: 1px solid rgba(255, 255, 255, 0.2); */
 }
 
 :global(.dark) .schema-details-description {

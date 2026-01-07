@@ -96,8 +96,8 @@
         "description": ""
     },
     {
-        "id": "wubi86",
-        "name": "五筆字型86版",
+        "id": "wubi",
+        "name": "五筆字型",
         "authors": [
             "王永民"
         ],
@@ -111,7 +111,25 @@
             "字母編碼",
             "25鍵"
         ],
-        "description": "又稱「王碼」。取首、二、三、末根。"
+        "description": "又稱「王碼」。"
+    },
+    {
+        "id": "wubi86",
+        "name": "五筆字型86版",
+        "authors": [
+            "王永民"
+        ],
+        "date": "19860000",
+        "features": [
+            "字根單編碼",
+            "最長4碼",
+            "鍵盤分區",
+            "筆畫識別碼",
+            "結構識別碼",
+            "字母編碼",
+            "25鍵"
+        ],
+        "description": "又稱 4.5 版。取首、二、三、末根。"
     },
     {
         "id": "cangjie4",
@@ -429,7 +447,7 @@
             "字母編碼",
             "25鍵"
         ],
-        "description": "通過字根前兩筆來定位按鍵。使用末根末筆（五個按鍵）作爲補齊碼，故而是是雙編碼方案。"
+        "description": "通過字根前兩筆來定位按鍵。使用末根末筆（五個按鍵）作爲補齊碼，故而實質上是字根雙編碼。"
     },
     {
         "id": "xuma",
@@ -449,7 +467,8 @@
             "26鍵",
             "繁簡通打"
         ],
-        "description": "主動離散繁簡字根並優化繁簡混合文本下的選重率。回頭碼在首根為副根時必取。"
+        "description": "主動離散繁簡字根並優化繁簡混合文本下的選重率。回頭碼在首根為副根時必取。",
+        "url": "http://xumax.cn/"
     },
     {
         "id": "lingxingsuying",
@@ -520,7 +539,8 @@
             "26鍵",
             "頂功"
         ],
-        "description": ""
+        "description": "目前版本為 V20。",
+        "url": "https://yb6b.github.io/yima/graceful-code/"
     },
     {
         "id": "sapphire",
@@ -556,7 +576,8 @@
             "字母編碼",
             "26鍵"
         ],
-        "description": ""
+        "description": "",
+        "url": "https://www.yuque.com/smzm/zhengma"
     },
     {
         "id": "sapphire2",
@@ -607,7 +628,8 @@
             "字母編碼",
             "26鍵"
         ],
-        "description": ""
+        "description": "",
+        "url": "https://www.tiger-code.com/"
     },
     {
         "id": "yulight",
@@ -627,7 +649,8 @@
             "25鍵",
             "繁簡通打"
         ],
-        "description": "回頭碼在不足4碼時用於補齊。"
+        "description": "回頭碼在不足4碼時用於補齊。",
+        "url": "https://shurufa.app"
     },
     {
         "id": "yunma",
@@ -665,7 +688,7 @@
             "字母編碼",
             "25鍵"
         ],
-        "description": "使用字根前兩筆作為補齊碼，故而是是雙編碼方案。先補末根前兩筆，再補首根前兩筆，故而存在回頭碼。"
+        "description": "使用字根前兩筆作為補齊碼，故而實質上是字根雙編碼。先補末根前兩筆，再補首根前兩筆，故而存在回頭碼。"
     },
     {
         "id": "yustar",
@@ -684,7 +707,8 @@
             "25鍵",
             "繁簡通打"
         ],
-        "description": "Z鍵上不安排字根，故而它不出現在編碼開頭。"
+        "description": "Z鍵上不安排字根，故而它不出現在編碼開頭。",
+        "url": "https://shurufa.app"
     },
     {
         "id": "wafel",
@@ -719,7 +743,8 @@
             "字母編碼",
             "26鍵"
         ],
-        "description": "因爲字根取首二筆交叉和末筆作為小碼，故而可以認為是字根三編碼。"
+        "description": "因爲字根取首二筆交叉和末筆作為小碼，故而實質上是字根三編碼。",
+        "url": "https://yb6b.github.io/yima/easy-code/"
     },
     {
         "id": "sky",
@@ -740,7 +765,8 @@
             "26鍵",
             "繁簡通打"
         ],
-        "description": ""
+        "description": "",
+        "url": "http://www.soongsky.com/sky/"
     },
     {
         "id": "yujoy",
@@ -759,11 +785,12 @@
             "字母編碼",
             "繁簡通打"
         ],
-        "description": ""
+        "description": "",
+        "url": "https://shurufa.app"
     },
     {
         "id": "yima3",
-        "name": "弈碼",
+        "name": "奕碼",
         "authors": [
             "小泥巴"
         ],
@@ -776,7 +803,8 @@
             "字母編碼",
             "26鍵"
         ],
-        "description": ""
+        "description": "",
+        "url": "https://yb6b.github.io/yima/grand-code/"
     },
     {
         "id": "yujoy3",
@@ -815,7 +843,27 @@
             "25鍵",
             "繁簡通打"
         ],
-        "description": "大碼、聲碼的字母集合同韻碼的字母來自不同集合。韻碼共有5個字母。"
+        "description": "大碼、聲碼的字母集合同韻碼的字母來自不同集合。韻碼共有5個字母。",
+        "url": "https://shurufa.app"
+    },
+    {
+        "id": "xima",
+        "name": "淅碼",
+        "authors": [
+            "hertz-hwang"
+        ],
+        "date": "20250601",
+        "features": [
+            "最長4碼",
+            "字根三編碼",
+            "大碼亂序",
+            "小碼亂序",
+            "小碼形托",
+            "字母編碼",
+            "26鍵"
+        ],
+        "description": "韻碼共有6個字母。使用末根末筆作爲補齊碼，故而實質上是字根三編碼。",
+        "url": "https://hertz-hwang.github.io/hao/"
     },
     {
         "id": "songyan",
@@ -835,7 +883,8 @@
             "26鍵",
             "繁簡通打"
         ],
-        "description": "韻碼共有6個字母。"
+        "description": "韻碼共有6個字母。",
+        "url": "https://hertz-hwang.github.io/hao/"
     },
     {
         "id": "bingxueqingyun",
@@ -855,10 +904,11 @@
             "30鍵",
             "繁簡通打"
         ],
-        "description": "韻碼共有9個字母或符號。"
+        "description": "韻碼共有9個字母或符號。",
+        "url": "https://input.tansongchen.com/snow-qingyun/"
     },
     {
-        "id": "shengbimengma",
+        "id": "sbmm",
         "name": "聲筆猛碼",
         "authors": [
             "戴石麟"
@@ -876,7 +926,8 @@
             "41鍵",
             "頂功"
         ],
-        "description": "使用末根首筆補齊，故而是三編碼方案。"
+        "description": "使用末根首筆補齊，故而實質上是字根三編碼。",
+        "url": "https://sbxlm.github.io/sbmm/"
     },
     {
         "id": "yuling",
@@ -886,7 +937,7 @@
         ],
         "date": "20251212",
         "features": [
-            "最長5碼",
+            "最長4碼",
             "字根雙編碼",
             "字根三編碼",
             "小碼音托",
@@ -896,6 +947,7 @@
             "25鍵",
             "繁簡通打"
         ],
-        "description": ""
+        "description": "",
+        "url": "https://shurufa.app"
     }
 ]
