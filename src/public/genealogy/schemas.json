@@ -858,8 +858,10 @@
         "id": "yujoy3",
         "name": "三碼卿雲",
         "authors": [
-            "Litles",
             "朱宇浩"
+        ],
+        "maintainers": [
+            "Litles"
         ],
         "date": "20240824",
         "features": [

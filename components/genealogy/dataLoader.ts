@@ -364,14 +364,18 @@ export function getAllFeatures(schemas: SchemaData[]): string[] {
 }
 
 /**
- * 獲取所有唯一作者
+ * 獲取所有作者（包括維護者）
  * @param schemas 輸入法數據數組
- * @returns 作者數組
+ * @returns 作者名稱數組
  */
 export function getAllAuthors(schemas: SchemaData[]): string[] {
     const authors = new Set<string>()
     schemas.forEach(schema => {
         schema.authors.forEach(author => authors.add(author))
+        // 維護者也算作作者
+        if (schema.maintainers) {
+            schema.maintainers.forEach(maintainer => authors.add(maintainer))
+        }
     })
     return Array.from(authors).sort()
 }

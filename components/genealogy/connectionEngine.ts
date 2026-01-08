@@ -69,12 +69,18 @@ function calculateFeatureConnections(schemas: SchemaData[]): Connection[] {
 function calculateAuthorConnections(schemas: SchemaData[]): Connection[] {
     const connections: Connection[] = []
 
-    // 作者所有作品的映射：author -> schemaId[]
+    // 作者（包括維護者）所有作品的映射：author -> schemaId[]
     const authorWorks = new Map<string, string[]>()
 
     // 按时间顺序遍历
     for (const schema of schemas) {
-        for (const author of schema.authors) {
+        // 合併作者和維護者列表
+        const allAuthors = [...schema.authors]
+        if (schema.maintainers) {
+            allAuthors.push(...schema.maintainers)
+        }
+
+        for (const author of allAuthors) {
             const previousWorks = authorWorks.get(author) || []
 
             // 连接到该作者之前的所有作品
