@@ -35,13 +35,18 @@ function getTextWidth(text: string, is_schema_name: boolean): number {
             (char >= 0x3400 && char <= 0x4DBF) ||
             (char >= 0x20000 && char <= 0x2A6DF)) {
             if (is_schema_name) {
-                width += 15  // 中文字符寬度}
+                width += 15  // 中文字符寬度
             }
             else {
                 width += 12  // 中文字符寬度
             }
         } else {
-            width += 6.5  // 英文字符寬度
+            if (is_schema_name) {
+                width += 10  // 英文字符寬度
+            }
+            else {
+                width += 8 // 英文字符寬度
+            }
         }
     }
     return width
@@ -56,13 +61,11 @@ function calculateCardWidth(schema: SchemaData): number {
     // 計算各部分文本寬度
     const nameWidth = getTextWidth(schema.name, true)
     const authorWidth = getTextWidth(schema.authors.join(' '), false)
+    const maintainerWidth = schema.maintainers ? getTextWidth(schema.maintainers.join(' '), false) : 0
     const dateWidth = getTextWidth(formatDate(schema.date), false)  // "2024年3月12日" 等格式
 
-    // 三行布局：取三行中最宽的一行
-    // 格式: [10px內邊距] 第1行：名稱 [10px內邊距]
-    //       [10px內邊距] 第2行：作者 [10px內邊距]
-    //       [10px內邊距] 第3行：日期 [10px內邊距]
-    const maxTextWidth = Math.max(nameWidth, authorWidth, dateWidth)
+    // 取所有行中最宽的一行
+    const maxTextWidth = Math.max(nameWidth, authorWidth, maintainerWidth, dateWidth)
     const padding = 10  // 左右各5px
     const minWidth = 60  // 最小寬度
     const maxWidth = 350  // 最大寬度
@@ -105,15 +108,17 @@ export function calculateLayout(
     const canvasWidth = config.width || 1200
 
     // 節點支持3行顯示
+    // 高度：有維護者時為 4 行，無維護者時為 3 行
     const nodeHeight = 54
+    const nodeHeightWithMaintainer = 72
 
-    // 計算每個輸入法的Y坐標和寬度
+    // 計算每個輸入法的Y坐標、寬度和高度
     const schemasWithY = schemas.map(schema => ({
         schema,
         y: calculateYPosition(schema, minYear, yearSpacingMap, baseSpacing, schemaSpacing, schemas),
-        width: calculateCardWidth(schema)  // 根據內容計算寬度
+        width: calculateCardWidth(schema),  // 根據內容計算寬度
+        height: schema.maintainers ? nodeHeightWithMaintainer : nodeHeight
     }))
-
     // 按Y坐標排序（時間順序）
     schemasWithY.sort((a, b) => a.y - b.y)
 
@@ -130,14 +135,14 @@ export function calculateLayout(
 
 /**
  * 按時間順序循環填充 4 列
- * @param schemasWithY 帶Y坐標和寬度的輸入法數組（已按時間排序）
- * @param nodeHeight 節點高度
+ * @param schemasWithY 帶Y坐標、寬度和高度的輸入法數組（已按時間排序）
+ * @param nodeHeight 預設節點高度（3行卡片）
  * @param nodeSpacing 節點間距
  * @param canvasWidth 畫布寬度
  * @returns 佈局節點數組
  */
 function layoutInColumnsSequentially(
-    schemasWithY: Array<{ schema: SchemaData; y: number; width: number }>,
+    schemasWithY: Array<{ schema: SchemaData; y: number; width: number; height: number }>,
     nodeHeight: number,
     nodeSpacing: number,
     canvasWidth: number = 1200
@@ -202,7 +207,7 @@ function layoutInColumnsSequentially(
             x: finalX,
             y: item.y + 50, // 保留頂部空間
             width: item.width,
-            height: nodeHeight
+            height: item.height  // 使用動態計算的高度
         })
     })
 

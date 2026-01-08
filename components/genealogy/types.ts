@@ -12,6 +12,8 @@ export interface SchemaData {
     name: string
     /** 作者列表 */
     authors: string[]
+    /** 維護者列表 */
+    maintainers?: string[]
     /** 發明/發布時間 (8位字符串格式: YYYYMMDD)
      * - 19000000: 精確到年
      * - 19001200: 精確到月

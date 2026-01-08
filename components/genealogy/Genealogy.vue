@@ -1033,17 +1033,27 @@ watch(() => props.config, () => {
                             <!-- 卡片背景 -->
                             <rect :width="node.width" :height="node.height" class="node-bg" rx="8" />
 
-                            <!-- 三行顯示：第一行名稱，第二行作者，第三行日期 -->
+                            <!-- 第一行：名稱 -->
                             <text :x="10" :y="16" class="node-name" text-anchor="start" shape-rendering="crispEdges"
                                 text-rendering="geometricPrecision">
                                 {{ node.schema.name }}
                             </text>
-                            <text :x="10" :y="31" class="node-author" text-anchor="start" shape-rendering="crispEdges"
-                                text-rendering="geometricPrecision">
+
+                            <!-- 如果有維護者，顯示第二行：維護者 -->
+                            <text v-if="node.schema.maintainers" :x="10" :y="31" class="node-author" text-anchor="start"
+                                shape-rendering="crispEdges" text-rendering="geometricPrecision">
+                                {{ node.schema.maintainers.join(' ') }}
+                            </text>
+
+                            <!-- 第三行（有維護者時）或第二行（無維護者時）：作者 -->
+                            <text :x="10" :y="node.schema.maintainers ? 46 : 31" class="node-author" text-anchor="start"
+                                shape-rendering="crispEdges" text-rendering="geometricPrecision">
                                 {{ node.schema.authors.join(' ') }}
                             </text>
-                            <text :x="10" :y="46" class="node-date" text-anchor="start" shape-rendering="crispEdges"
-                                text-rendering="geometricPrecision">
+
+                            <!-- 第四行（有維護者時）或第三行（無維護者時）：日期 -->
+                            <text :x="10" :y="node.schema.maintainers ? 61 : 46" class="node-date" text-anchor="start"
+                                shape-rendering="crispEdges" text-rendering="geometricPrecision">
                                 {{ formatDateToMonth(node.schema.date) }}
                             </text>
                         </g>
@@ -1096,7 +1106,10 @@ watch(() => props.config, () => {
                     <div class="schema-details-name">
                         {{ focusedSchemaDetails.name }}
                         <a v-if="focusedSchemaDetails.url" :href="focusedSchemaDetails.url" target="_blank"
-                            rel="noopener noreferrer" class="schema-link-icon" title="访问网站">🔗</a>
+                            rel="noopener noreferrer" class="schema-link-icon" title="訪問網站">🔗</a>
+                    </div>
+                    <div v-if="focusedSchemaDetails.maintainers" class="schema-details-maintainers">
+                        {{ focusedSchemaDetails.maintainers.join('、') }} (修訂維護)
                     </div>
                     <div class="schema-details-authors">{{ focusedSchemaDetails.authors.join('、') }}</div>
                     <div class="schema-details-date">{{ formatDate(focusedSchemaDetails.date) }}</div>
@@ -2154,7 +2167,7 @@ watch(() => props.config, () => {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.25rem;
 }
 
 :global(.dark) .schema-details {
@@ -2162,8 +2175,9 @@ watch(() => props.config, () => {
 }
 
 .schema-details-name {
-    font-size: 1rem;
-    font-weight: 600;
+    font-family: --vp-font-family-base;
+    font-size: 1.2rem;
+    font-weight: 900;
     line-height: 1.2;
     display: flex;
     align-items: center;
@@ -2182,9 +2196,16 @@ watch(() => props.config, () => {
     opacity: 1;
 }
 
+.schema-details-maintainers {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    /* margin-top: 0.1rem; */
+}
+
 .schema-details-authors {
     font-size: 0.875rem;
     opacity: 0.9;
+    /* margin-top: 0.1rem; */
 }
 
 .schema-details-date {
@@ -2196,7 +2217,7 @@ watch(() => props.config, () => {
     display: flex;
     flex-wrap: wrap;
     gap: 0.375rem;
-    margin-top: 0.25rem;
+    /* margin-top: 0.25rem; */
 }
 
 .schema-details .feature-tag {
@@ -2214,8 +2235,8 @@ watch(() => props.config, () => {
 .schema-details-description {
     font-size: 0.875rem;
     opacity: 0.9;
-    margin-top: 0.25rem;
-    padding-top: 0.25rem;
+    /* margin-top: 0.25rem; */
+    /* padding-top: 0.25rem; */
     /* border-top: 1px solid rgba(255, 255, 255, 0.2); */
 }
 
