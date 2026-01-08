@@ -5,7 +5,7 @@
  */
 
 import type { SchemaData, LayoutNode, GenealogyConfig } from './types'
-import { calculateYPosition, parseYear, formatDate } from './dataLoader'
+import { calculateYPosition, parseYear, formatDateToMonth } from './dataLoader'
 
 /**
  * 分組：將相近時間的輸入法分到同一組
@@ -45,7 +45,7 @@ function getTextWidth(text: string, is_schema_name: boolean): number {
                 width += 10  // 英文字符寬度
             }
             else {
-                width += 8 // 英文字符寬度
+                width += 7 // 英文字符寬度
             }
         }
     }
@@ -62,7 +62,7 @@ function calculateCardWidth(schema: SchemaData): number {
     const nameWidth = getTextWidth(schema.name, true)
     const authorWidth = getTextWidth(schema.authors.join(' '), false)
     const maintainerWidth = schema.maintainers ? getTextWidth(schema.maintainers.join(' '), false) : 0
-    const dateWidth = getTextWidth(formatDate(schema.date), false)  // "2024年3月12日" 等格式
+    const dateWidth = getTextWidth(formatDateToMonth(schema.date), false)  // "2024年3月" 或 "2024年" 等格式
 
     // 取所有行中最宽的一行
     const maxTextWidth = Math.max(nameWidth, authorWidth, maintainerWidth, dateWidth)
@@ -110,7 +110,7 @@ export function calculateLayout(
     // 節點支持3行顯示
     // 高度：有維護者時為 4 行，無維護者時為 3 行
     const nodeHeight = 54
-    const nodeHeightWithMaintainer = 72
+    const nodeHeightWithMaintainer = 69
 
     // 計算每個輸入法的Y坐標、寬度和高度
     const schemasWithY = schemas.map(schema => ({
