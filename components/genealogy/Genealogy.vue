@@ -1,10 +1,10 @@
 <!--
-    Genealogy.vue - 輸入法源流圖組件
+    Genealogy.vue - 輸入法繫絡圖組件
 
   Features:
   - 展示輸入法發展歷史和演化關係
   - 基於時間軸的可視化佈局
-  - 支持按特性和作者追溯源流關係
+  - 支持按特性和作者追溯繫絡關係
   - 響應式設計和暗色模式支持
   
   Major Modification History:
@@ -871,7 +871,7 @@ watch(() => props.config, () => {
             <div class="toolbar-compact">
                 <!-- 第一行：標題 -->
                 <div class="toolbar-header">
-                    <h2 class="toolbar-title">字形輸入法源流圖</h2>
+                    <h2 class="toolbar-title">漢字字形輸入法繫絡圖</h2>
                     <!-- 統計信息 -->
                     <span class="toolbar-stats">
                         共 {{ filteredSchemas.length }} 個輸入法 ({{ minYear }}-{{ maxYear }})
@@ -886,7 +886,7 @@ watch(() => props.config, () => {
                             <button @click="showSchemaDropdown = !showSchemaDropdown" class="dropdown-trigger">
                                 方案
                                 <span v-if="selectedSchemas.length > 0" class="badge">{{ selectedSchemas.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showSchemaDropdown" class="dropdown-menu" @click.stop>
@@ -906,7 +906,7 @@ watch(() => props.config, () => {
                             <button @click="showAuthorDropdown = !showAuthorDropdown" class="dropdown-trigger">
                                 作者
                                 <span v-if="selectedAuthors.length > 0" class="badge">{{ selectedAuthors.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showAuthorDropdown" class="dropdown-menu" @click.stop>
@@ -926,7 +926,7 @@ watch(() => props.config, () => {
                             <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
                                 特徵
                                 <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
