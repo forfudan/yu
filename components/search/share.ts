@@ -43,7 +43,7 @@ export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, rule
     const ling = rule === 'ling'
 
     if (ling) {
-        // 靈明碼編碼邏輯
+        // 靈明編碼邏輯
         const lenRoots = divisionArray.length
         const rootA = divisionArray[0]
         const rootB = divisionArray[1] || ''

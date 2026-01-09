@@ -15,18 +15,24 @@ import { ref, computed } from 'vue'
 import TabbedSearch from '../search/TabbedSearch.vue'
 import ZigenMap from '../zigen/ZigenMap.vue'
 import SchemeSelector from '../shared/SchemeSelector.vue'
-import { SCHEMES, DEFAULT_SCHEME } from '../shared/schemes'
+import { SCHEMES, DEFAULT_SCHEME, filterSchemes } from '../shared/schemes'
 
 const props = defineProps<{
+    visibleSchemes?: string[]  // 要顯示的方案 ID 列表
     defaultScheme?: string
 }>()
+
+// 要顯示的方案列表（如果沒有指定則顯示所有方案）
+const displaySchemes = computed(() => {
+    return props.visibleSchemes ? filterSchemes(props.visibleSchemes) : SCHEMES
+})
 
 // 統一的方案狀態
 const activeScheme = ref(props.defaultScheme || DEFAULT_SCHEME)
 
 // 當前方案信息
 const currentScheme = computed(() => {
-    return SCHEMES.find(s => s.id === activeScheme.value) || SCHEMES[0]
+    return displaySchemes.value.find(s => s.id === activeScheme.value) || displaySchemes.value[0]
 })
 
 // 根據方案決定字根列寬度
@@ -70,7 +76,7 @@ function handleSchemeChange(schemeId: string) {
                         <span class="hint-text">點擊下方按鈕選擇輸入法</span>
                         <div class="hint-divider"></div>
                     </div>
-                    <SchemeSelector :schemes="SCHEMES" :active-scheme="activeScheme"
+                    <SchemeSelector :schemes="displaySchemes" :active-scheme="activeScheme"
                         @scheme-changed="handleSchemeChange" />
                 </div>
             </div>

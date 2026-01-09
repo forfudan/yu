@@ -61,12 +61,12 @@ export default defineConfig({
               link: "/docs/",
             },
             {
-              text: "光华输入法",
-              link: "/docs/light",
-            },
-            {
               text: "星陈输入法",
               link: "/docs/star",
+            },
+            {
+              text: "灵明输入法",
+              link: "/docs/ling",
             },
             {
               text: "卿云输入法",
@@ -77,8 +77,8 @@ export default defineConfig({
               link: "/docs/ming",
             },
             {
-              text: "灵明输入法",
-              link: "/docs/ling",
+              text: "光华输入法",
+              link: "/docs/light",
             },
             {
               text: "吉旦饼输入法",
@@ -509,12 +509,12 @@ export default defineConfig({
                   link: "/zht/docs/",
                 },
                 {
-                  text: "光華輸入法",
-                  link: "/zht/docs/light",
-                },
-                {
                   text: "星陳輸入法",
                   link: "/zht/docs/star",
+                },
+                {
+                  text: "靈明輸入法",
+                  link: "/zht/docs/ling",
                 },
                 {
                   text: "卿雲輸入法",
@@ -525,8 +525,8 @@ export default defineConfig({
                   link: "/zht/docs/ming",
                 },
                 {
-                  text: "靈明輸入法",
-                  link: "/zht/docs/ling",
+                  text: "光華輸入法",
+                  link: "/zht/docs/light",
                 },
                 {
                   text: "吉旦餅輸入法",

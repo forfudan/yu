@@ -22,7 +22,7 @@ export interface ZigenScheme extends BaseScheme {
     chaifenUrl: string
 }
 
-// 統一的方案配置
+// 統一的方案配置（包含所有可用方案）
 export const SCHEMES: SearchScheme[] = [
     {
         id: 'light',
@@ -81,6 +81,15 @@ export const SCHEMES: SearchScheme[] = [
         ling: true
     },
 ]
+
+/**
+ * 根據 ID 列表過濾方案
+ * @param schemeIds 要顯示的方案 ID 列表
+ * @returns 過濾後的方案列表
+ */
+export function filterSchemes(schemeIds: string[]): SearchScheme[] {
+    return SCHEMES.filter(scheme => schemeIds.includes(scheme.id))
+}
 
 // 轉換為 ZigenScheme 格式（用於字根圖）
 export const ZIGEN_SCHEMES: ZigenScheme[] = SCHEMES.map(scheme => ({

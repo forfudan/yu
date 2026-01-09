@@ -40,7 +40,10 @@ import UnifiedSchemeInterface from '@/unified/UnifiedSchemeInterface.vue'
 </script>
 
 <div class="zigen-font">
-<UnifiedSchemeInterface defaultScheme="ling" />
+<UnifiedSchemeInterface 
+  :visibleSchemes="['star', 'joy', 'ling', 'ming']"
+  defaultScheme="ling"
+/>
 </div>
 
 ::: tip 致有緣人
