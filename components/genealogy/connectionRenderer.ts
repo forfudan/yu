@@ -145,12 +145,18 @@ export function getConnectionColor(
         return theme === 'light'
             ? 'rgba(99, 102, 241, 0.5)'  // indigo-500
             : 'rgba(165, 180, 252, 0.5)' // indigo-300
-    } else {
+    } else if (connection.type === 'author') {
         // 作者继承：绿色系
         return theme === 'light'
             ? 'rgba(34, 197, 94, 0.5)'   // green-500
             : 'rgba(134, 239, 172, 0.5)' // green-300
+    } else if (connection.type === 'similar') {
+        // 相似关系：橙色系
+        return theme === 'light'
+            ? 'rgba(249, 115, 22, 0.5)'  // orange-500
+            : 'rgba(251, 191, 36, 0.5)'  // amber-300
     }
+    return 'rgba(156, 163, 175, 0.5)' // 默认灰色
 }
 
 /**

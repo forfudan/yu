@@ -38,6 +38,8 @@ export enum ConnectionType {
     FEATURE = 'feature',
     /** 作者繼承 */
     AUTHOR = 'author',
+    /** 高度相似 */
+    SIMILAR = 'similar',
 }
 
 /**

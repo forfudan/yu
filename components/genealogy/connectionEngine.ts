@@ -25,6 +25,10 @@ export function calculateConnections(schemas: SchemaData[]): Connection[] {
     const authorConnections = calculateAuthorConnections(schemas)
     connections.push(...authorConnections)
 
+    // 3. 计算高度相似关系
+    const similarConnections = calculateSimilarConnections(schemas, connections)
+    connections.push(...similarConnections)
+
     return connections
 }
 
@@ -105,6 +109,76 @@ function calculateAuthorConnections(schemas: SchemaData[]): Connection[] {
 }
 
 /**
+ * 计算高度相似关系
+ * 条件：特征只相差一个或完全一样，且不是父子关系，且不是同一作者
+ */
+function calculateSimilarConnections(schemas: SchemaData[], existingConnections: Connection[]): Connection[] {
+    const connections: Connection[] = []
+
+    // 构建已存在连接的快速查找集合
+    const existingPairs = new Set<string>()
+    existingConnections.forEach(conn => {
+        existingPairs.add(`${conn.from}-${conn.to}`)
+        existingPairs.add(`${conn.to}-${conn.from}`)
+    })
+
+    // 检查每对输入法
+    for (let i = 0; i < schemas.length; i++) {
+        for (let j = i + 1; j < schemas.length; j++) {
+            const schema1 = schemas[i]
+            const schema2 = schemas[j]
+
+            // 检查是否已经有连接（父子关系或作者关系）
+            if (existingPairs.has(`${schema1.id}-${schema2.id}`) ||
+                existingPairs.has(`${schema2.id}-${schema1.id}`)) {
+                continue
+            }
+
+            // 检查是否有共同作者或维护者
+            const authors1 = new Set([...schema1.authors, ...(schema1.maintainers || [])])
+            const authors2 = new Set([...schema2.authors, ...(schema2.maintainers || [])])
+            const hasCommonAuthor = [...authors1].some(a => authors2.has(a))
+
+            if (hasCommonAuthor) {
+                continue
+            }
+
+            // 计算特征差异
+            const features1 = new Set(schema1.features)
+            const features2 = new Set(schema2.features)
+
+            // 计算对称差异（只在一方有的特征数量）
+            const onlyIn1 = [...features1].filter(f => !features2.has(f)).length
+            const onlyIn2 = [...features2].filter(f => !features1.has(f)).length
+            const totalDifference = onlyIn1 + onlyIn2
+
+            // 如果特征完全一样或只相差一个
+            if (totalDifference <= 1) {
+                // 找出共同特征作为标签
+                const commonFeatures = [...features1].filter(f => features2.has(f))
+                const label = commonFeatures.length > 0 ?
+                    `相似: ${commonFeatures.slice(0, 2).join(', ')}${commonFeatures.length > 2 ? '...' : ''}` :
+                    '相似'
+
+                // 从较新的指向较旧的
+                const [from, to] = parseYear(schema1.date) > parseYear(schema2.date) ?
+                    [schema1.id, schema2.id] :
+                    [schema2.id, schema1.id]
+
+                connections.push({
+                    from,
+                    to,
+                    type: 'similar' as ConnectionType,
+                    label
+                })
+            }
+        }
+    }
+
+    return connections
+}
+
+/**
  * 获取某个输入法的所有连接（包括作为源和目标的）
  * @param schemaId 输入法ID
  * @param connections 所有连接
@@ -173,11 +247,13 @@ export function getConnectionStats(connections: Connection[]): {
     total: number
     featureConnections: number
     authorConnections: number
+    similarConnections: number
     byFeature: Map<string, number>
     byAuthor: Map<string, number>
 } {
     const featureConnections = connections.filter(c => c.type === 'feature')
     const authorConnections = connections.filter(c => c.type === 'author')
+    const similarConnections = connections.filter(c => c.type === 'similar')
 
     const byFeature = new Map<string, number>()
     const byAuthor = new Map<string, number>()
@@ -194,6 +270,7 @@ export function getConnectionStats(connections: Connection[]): {
         total: connections.length,
         featureConnections: featureConnections.length,
         authorConnections: authorConnections.length,
+        similarConnections: similarConnections.length,
         byFeature,
         byAuthor
     }

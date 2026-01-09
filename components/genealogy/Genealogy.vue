@@ -347,6 +347,24 @@ const childNodeIds = computed(() => {
     return children
 })
 
+// 計算屬性：獲取 focused 節點的相似節點 ID 集合
+const similarNodeIds = computed(() => {
+    if (!focusedSchemaId.value) return new Set<string>()
+
+    const similar = new Set<string>()
+    connections.value.forEach(conn => {
+        // 相似節點（橙色）：任一方向的 similar 連接
+        if (conn.type === 'similar') {
+            if (conn.from === focusedSchemaId.value) {
+                similar.add(conn.to)
+            } else if (conn.to === focusedSchemaId.value) {
+                similar.add(conn.from)
+            }
+        }
+    })
+    return similar
+})
+
 // 計算屬性：連接路徑
 const connectionPaths = computed(() => {
     if (connections.value.length === 0) return []
@@ -374,6 +392,7 @@ interface ConnectionRenderData {
     strokeWidth: number
     isParent: boolean
     isChild: boolean
+    isSimilar: boolean
     isFocused: boolean
     isDimmed: boolean
 }
@@ -387,7 +406,9 @@ const connectionRenderCache = computed<ConnectionRenderData[]>(() => {
     return visibleConnections.value.map(({ connection, path }) => {
         const isParent = focused === connection.from
         const isChild = focused === connection.to
-        const isFocusedConnection = isParent || isChild
+        const isSimilar = connection.type === 'similar' &&
+            (connection.from === focused || connection.to === focused)
+        const isFocusedConnection = isParent || isChild || isSimilar
 
         // 計算是否高亮
         const isHighlighted = (!hoveredLabel && !pinnedLabel && isFocusedConnection) ||
@@ -407,6 +428,7 @@ const connectionRenderCache = computed<ConnectionRenderData[]>(() => {
             strokeWidth: getConnectionStrokeWidth(connection, isHighlighted),
             isParent,
             isChild,
+            isSimilar,
             isFocused: isFocusedConnection && !hoveredLabel && !pinnedLabel || isHighlighted,
             isDimmed
         }
@@ -542,6 +564,7 @@ const connectionStats = computed(() => {
             total: 0,
             featureConnections: 0,
             authorConnections: 0,
+            similarConnections: 0,
             byFeature: new Map(),
             byAuthor: new Map()
         }
@@ -597,7 +620,8 @@ async function loadData() {
             作者數: allAuthors.value.length,
             連接數: connections.value.length,
             特性連接: connectionStats.value.featureConnections,
-            作者連接: connectionStats.value.authorConnections
+            作者連接: connectionStats.value.authorConnections,
+            相似連接: connectionStats.value.similarConnections
         })
 
     } catch (err) {
@@ -890,7 +914,7 @@ watch(() => props.config, () => {
                             <button @click="showSchemaDropdown = !showSchemaDropdown" class="dropdown-trigger">
                                 方案
                                 <span v-if="selectedSchemas.length > 0" class="badge">{{ selectedSchemas.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showSchemaDropdown" class="dropdown-menu" @click.stop>
@@ -910,7 +934,7 @@ watch(() => props.config, () => {
                             <button @click="showAuthorDropdown = !showAuthorDropdown" class="dropdown-trigger">
                                 作者
                                 <span v-if="selectedAuthors.length > 0" class="badge">{{ selectedAuthors.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showAuthorDropdown" class="dropdown-menu" @click.stop>
@@ -930,7 +954,7 @@ watch(() => props.config, () => {
                             <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
                                 特徵
                                 <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
@@ -982,6 +1006,11 @@ watch(() => props.config, () => {
                             <path d="M 0 0 L 10 5 L 0 10 z"
                                 :fill="isDark ? 'rgba(134, 239, 172, 0.6)' : 'rgba(34, 197, 94, 0.6)'" />
                         </marker>
+                        <marker id="arrow-similar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3"
+                            markerHeight="3" orient="auto">
+                            <path d="M 0 0 L 10 5 L 0 10 z"
+                                :fill="isDark ? 'rgba(251, 191, 36, 0.6)' : 'rgba(249, 115, 22, 0.6)'" />
+                        </marker>
                     </defs>
 
                     <!-- 連接線（在節點下方） -->
@@ -999,6 +1028,7 @@ watch(() => props.config, () => {
                                     [`connection-${data.connection.type}`]: true,
                                     'connection-parent': data.isParent,
                                     'connection-child': data.isChild,
+                                    'connection-similar': data.isSimilar,
                                     'connection-focused': data.isFocused,
                                     'connection-dimmed': data.isDimmed,
                                     'connection-interactive': !data.isDimmed
@@ -1026,9 +1056,11 @@ watch(() => props.config, () => {
                                 'schema-node-dimmed': focusedSchemaId &&
                                     node.schema.id !== focusedSchemaId &&
                                     !parentNodeIds.has(node.schema.id) &&
-                                    !childNodeIds.has(node.schema.id),
+                                    !childNodeIds.has(node.schema.id) &&
+                                    !similarNodeIds.has(node.schema.id),
                                 'schema-node-parent': focusedSchemaId && parentNodeIds.has(node.schema.id),
                                 'schema-node-child': focusedSchemaId && childNodeIds.has(node.schema.id),
+                                'schema-node-similar': focusedSchemaId && similarNodeIds.has(node.schema.id),
                                 'schema-node-extended': focusedSchemaId &&
                                     !isNodeInFilter(node.schema.id),
                                 'focused': focusedSchemaId === node.schema.id,
@@ -1088,8 +1120,10 @@ watch(() => props.config, () => {
                                         hoveredLabelConnection?.to === labelBox.connection.to) ||
                                         (pinnedLabelConnection?.from === labelBox.connection.from &&
                                             pinnedLabelConnection?.to === labelBox.connection.to)),
-                                'label-parent': labelBox.connection.from === focusedSchemaId,
-                                'label-child': labelBox.connection.to === focusedSchemaId
+                                'label-parent': labelBox.connection.from === focusedSchemaId && labelBox.connection.type !== 'similar',
+                                'label-child': labelBox.connection.to === focusedSchemaId && labelBox.connection.type !== 'similar',
+                                'label-similar': labelBox.connection.type === 'similar' &&
+                                    (labelBox.connection.from === focusedSchemaId || labelBox.connection.to === focusedSchemaId)
                             }">
                             <!-- 背景圆角方框 -->
                             <rect :x="labelBox.x - labelBox.width / 2" :y="labelBox.y - labelBox.height / 2"
@@ -1722,6 +1756,28 @@ watch(() => props.config, () => {
     fill: rgba(134, 239, 172, 0.15);
 }
 
+/* 相似節點樣式（橙色） */
+.schema-node-similar .node-bg {
+    stroke: rgb(249, 115, 22);
+    fill: rgba(249, 115, 22, 0.05);
+}
+
+:global(.dark) .schema-node-similar .node-bg {
+    stroke: rgb(251, 191, 36);
+    fill: rgba(251, 191, 36, 0.05);
+}
+
+.schema-node-similar.hovered .node-bg {
+    stroke: rgb(249, 115, 22);
+    fill: rgba(249, 115, 22, 0.15);
+    stroke-width: 3;
+}
+
+:global(.dark) .schema-node-similar.hovered .node-bg {
+    stroke: rgb(251, 191, 36);
+    fill: rgba(251, 191, 36, 0.15);
+}
+
 /* 擴展節點樣式（篩選外但因關注模式顯示的父子節點） */
 .schema-node-extended .node-bg {
     stroke-dasharray: 4, 2;
@@ -1821,6 +1877,10 @@ watch(() => props.config, () => {
     stroke-dasharray: 5, 5;
 }
 
+.connection-similar {
+    stroke-dasharray: 8, 4;
+}
+
 /* 父系連接線（藍色，從focused指向父節點） */
 .connection-parent {
     stroke: rgba(99, 102, 241, 0.6);
@@ -1837,6 +1897,15 @@ watch(() => props.config, () => {
 
 :global(.dark) .connection-child {
     stroke: rgba(134, 239, 172, 0.6);
+}
+
+/* 相似連接線（橙色） */
+.connection-similar {
+    stroke: rgba(249, 115, 22, 0.6);
+}
+
+:global(.dark) .connection-similar {
+    stroke: rgba(251, 191, 36, 0.6);
 }
 
 .connection-focused {
@@ -1922,6 +1991,27 @@ watch(() => props.config, () => {
     fill: rgb(134, 239, 172);
 }
 
+/* 相似標籤（橙色） */
+.connection-label-group.label-similar .connection-label {
+    fill: rgb(249, 115, 22);
+}
+
+:global(.dark) .connection-label-group.label-similar .connection-label {
+    fill: rgb(251, 191, 36);
+}
+
+.connection-label-group.label-similar:hover .connection-label-bg,
+.connection-label-group.label-similar.label-hovered .connection-label-bg {
+    opacity: 1;
+    fill: rgb(249, 115, 22);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+:global(.dark) .connection-label-group.label-similar:hover .connection-label-bg,
+:global(.dark) .connection-label-group.label-similar.label-hovered .connection-label-bg {
+    fill: rgb(251, 191, 36);
+}
+
 .connection-label-group:hover .connection-label-bg,
 .connection-label-group.label-hovered .connection-label-bg {
     opacity: 1;
@@ -1976,6 +2066,17 @@ watch(() => props.config, () => {
 :global(.dark) .connection-label-group.label-pinned.label-child .connection-label-bg {
     fill: rgb(134, 239, 172);
     stroke: rgb(74, 222, 128);
+}
+
+/* 相似固定標籤 */
+.connection-label-group.label-pinned.label-similar .connection-label-bg {
+    fill: rgb(249, 115, 22);
+    stroke: rgb(234, 88, 12);
+}
+
+:global(.dark) .connection-label-group.label-pinned.label-similar .connection-label-bg {
+    fill: rgb(251, 191, 36);
+    stroke: rgb(245, 158, 11);
 }
 
 /* 淡化的標籤 */
