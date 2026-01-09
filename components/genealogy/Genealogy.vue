@@ -973,7 +973,7 @@ watch(() => props.config, () => {
                     <div class="toolbar-right">
                         <!-- Y軸縮放控制 -->
                         <div class="scale-control-inline">
-                            <input type="range" v-model.number="yScaleFactor" min="0.3" max="1.0" step="0.01"
+                            <input type="range" v-model.number="yScaleFactor" min="0.25" max="1.0" step="0.05"
                                 class="scale-slider-inline" />
                         </div>
 
