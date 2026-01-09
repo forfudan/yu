@@ -135,7 +135,7 @@ export default defineConfig({
               link: "/docs/statistics",
             },
             {
-              text: "字形输入法源流图",
+              text: "字形输入法繫絡图",
               link: "/docs/gene",
             },
             {
@@ -583,7 +583,7 @@ export default defineConfig({
                   link: "/zht/docs/statistics",
                 },
                 {
-                  text: "字形輸入法源流圖",
+                  text: "字形輸入法繫絡圖",
                   link: "/zht/docs/gene",
                 },
                 {

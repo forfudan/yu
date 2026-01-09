@@ -1,5 +1,5 @@
 /**
- * 輸入法源流圖數據加載和解析工具
+ * 輸入法繫絡圖數據加載和解析工具
  */
 
 import type { SchemaData, YearLabel } from './types'
