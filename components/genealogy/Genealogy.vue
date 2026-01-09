@@ -1009,7 +1009,7 @@ watch(() => props.config, () => {
                         <marker id="arrow-similar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3"
                             markerHeight="3" orient="auto">
                             <path d="M 0 0 L 10 5 L 0 10 z"
-                                :fill="isDark ? 'rgba(251, 191, 36, 0.6)' : 'rgba(249, 115, 22, 0.6)'" />
+                                :fill="isDark ? 'rgba(251, 191, 36, 0.8)' : 'rgba(245, 158, 11, 0.7)'" />
                         </marker>
                     </defs>
 
@@ -1023,7 +1023,9 @@ watch(() => props.config, () => {
                             @click="focusedSchemaId && !data.isDimmed && handleLabelClick(data.connection)">
                             <!-- 連接線路徑 -->
                             <path :d="data.path" :stroke="data.strokeColor" :stroke-width="data.strokeWidth" fill="none"
-                                :marker-end="`url(#arrow-${data.connection.type})`" :class="{
+                                :marker-end="data.connection.type !== 'similar' ? `url(#arrow-${data.connection.type})` : undefined"
+                                :stroke-dasharray="data.connection.type === 'similar' ? '5, 5' : data.connection.type === 'author' ? '10, 6' : 'none'"
+                                :class="{
                                     'connection-line': true,
                                     [`connection-${data.connection.type}`]: true,
                                     'connection-parent': data.isParent,
@@ -1758,8 +1760,8 @@ watch(() => props.config, () => {
 
 /* 相似節點樣式（橙色） */
 .schema-node-similar .node-bg {
-    stroke: rgb(249, 115, 22);
-    fill: rgba(249, 115, 22, 0.05);
+    stroke: rgb(245, 158, 11);
+    fill: rgba(245, 158, 11, 0.05);
 }
 
 :global(.dark) .schema-node-similar .node-bg {
@@ -1768,8 +1770,8 @@ watch(() => props.config, () => {
 }
 
 .schema-node-similar.hovered .node-bg {
-    stroke: rgb(249, 115, 22);
-    fill: rgba(249, 115, 22, 0.15);
+    stroke: rgb(245, 158, 11);
+    fill: rgba(245, 158, 11, 0.15);
     stroke-width: 3;
 }
 
@@ -1874,11 +1876,7 @@ watch(() => props.config, () => {
 }
 
 .connection-author {
-    stroke-dasharray: 5, 5;
-}
-
-.connection-similar {
-    stroke-dasharray: 8, 4;
+    stroke-dasharray: 10, 6;
 }
 
 /* 父系連接線（藍色，從focused指向父節點） */
@@ -1901,17 +1899,17 @@ watch(() => props.config, () => {
 
 /* 相似連接線（橙色） */
 .connection-similar {
-    stroke: rgba(249, 115, 22, 0.6);
+    stroke-dasharray: 5, 5 !important;
+    stroke: rgba(245, 158, 11, 0.7);
 }
 
 :global(.dark) .connection-similar {
-    stroke: rgba(251, 191, 36, 0.6);
+    stroke: rgba(251, 191, 36, 0.8);
 }
 
 .connection-focused {
     stroke-width: 3 !important;
     opacity: 0.9 !important;
-    /* focus时明显 */
     filter: drop-shadow(0 0 4px currentColor);
 }
 
@@ -1958,18 +1956,6 @@ watch(() => props.config, () => {
     fill: rgb(165, 180, 252);
 }
 
-.connection-label-group.label-parent:hover .connection-label-bg,
-.connection-label-group.label-parent.label-hovered .connection-label-bg {
-    opacity: 1;
-    fill: rgb(99, 102, 241);
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-:global(.dark) .connection-label-group.label-parent:hover .connection-label-bg,
-:global(.dark) .connection-label-group.label-parent.label-hovered .connection-label-bg {
-    fill: rgb(165, 180, 252);
-}
-
 /* 子系標籤（綠色） */
 .connection-label-group.label-child .connection-label {
     fill: rgb(34, 197, 94);
@@ -1979,11 +1965,29 @@ watch(() => props.config, () => {
     fill: rgb(134, 239, 172);
 }
 
+/* 相似標籤（紫灰色） */
+.connection-label-group.label-similar .connection-label {
+    fill: rgb(245, 158, 11);
+}
+
+:global(.dark) .connection-label-group.label-similar .connection-label {
+    fill: rgb(251, 191, 36);
+}
+
+/* 標籤 hover 效果 - 統一處理 */
+.connection-label-group.label-parent:hover .connection-label-bg,
+.connection-label-group.label-parent.label-hovered .connection-label-bg {
+    fill: rgb(99, 102, 241);
+}
+
+:global(.dark) .connection-label-group.label-parent:hover .connection-label-bg,
+:global(.dark) .connection-label-group.label-parent.label-hovered .connection-label-bg {
+    fill: rgb(165, 180, 252);
+}
+
 .connection-label-group.label-child:hover .connection-label-bg,
 .connection-label-group.label-child.label-hovered .connection-label-bg {
-    opacity: 1;
     fill: rgb(34, 197, 94);
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 :global(.dark) .connection-label-group.label-child:hover .connection-label-bg,
@@ -1991,20 +1995,9 @@ watch(() => props.config, () => {
     fill: rgb(134, 239, 172);
 }
 
-/* 相似標籤（橙色） */
-.connection-label-group.label-similar .connection-label {
-    fill: rgb(249, 115, 22);
-}
-
-:global(.dark) .connection-label-group.label-similar .connection-label {
-    fill: rgb(251, 191, 36);
-}
-
 .connection-label-group.label-similar:hover .connection-label-bg,
 .connection-label-group.label-similar.label-hovered .connection-label-bg {
-    opacity: 1;
-    fill: rgb(249, 115, 22);
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    fill: rgb(245, 158, 11);
 }
 
 :global(.dark) .connection-label-group.label-similar:hover .connection-label-bg,
@@ -2070,13 +2063,13 @@ watch(() => props.config, () => {
 
 /* 相似固定標籤 */
 .connection-label-group.label-pinned.label-similar .connection-label-bg {
-    fill: rgb(249, 115, 22);
-    stroke: rgb(234, 88, 12);
+    fill: rgb(71, 85, 105);
+    stroke: rgb(51, 65, 85);
 }
 
 :global(.dark) .connection-label-group.label-pinned.label-similar .connection-label-bg {
-    fill: rgb(251, 191, 36);
-    stroke: rgb(245, 158, 11);
+    fill: rgb(226, 232, 240);
+    stroke: rgb(241, 245, 249);
 }
 
 /* 淡化的標籤 */
