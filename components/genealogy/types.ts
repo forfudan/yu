@@ -14,6 +14,8 @@ export interface SchemaData {
     authors: string[]
     /** 維護者列表 */
     maintainers?: string[]
+    /** 方案類別 */
+    category?: '字形' | '拼音'
     /** 發明/發布時間 (8位字符串格式: YYYYMMDD)
      * - 19000000: 精確到年
      * - 19001200: 精確到月

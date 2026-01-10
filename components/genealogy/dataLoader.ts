@@ -7,9 +7,9 @@ import type { SchemaData, YearLabel } from './types'
 /**
  * 從 JSON 文件加載輸入法數據
  */
-export async function loadSchemas(): Promise<SchemaData[]> {
+export async function loadSchemas(source: string = '/genealogy/schemas.json'): Promise<SchemaData[]> {
     try {
-        const response = await fetch('/genealogy/schemas.json')
+        const response = await fetch(source)
         if (!response.ok) {
             throw new Error('Failed to load schemas data')
         }

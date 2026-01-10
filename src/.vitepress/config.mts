@@ -134,7 +134,7 @@ export default defineConfig({
               link: "/docs/concepts",
             },
             {
-              text: "字形输入法系络图",
+              text: "汉字输入法系络图",
               link: "/docs/gene",
             },
             {
@@ -556,7 +556,7 @@ export default defineConfig({
                   link: "/zht/docs/concepts",
                 },
                 {
-                  text: "字形輸入法繫絡圖",
+                  text: "漢字輸入法繫絡圖",
                   link: "/zht/docs/gene",
                 },
                 {
