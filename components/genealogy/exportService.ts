@@ -29,7 +29,12 @@ export class GenealogyExportService {
         // 根據是否有關注節點調整布局方式
         const justifyContent = focusedSchemaDetails ? 'space-between' : 'center'
 
+        // 獲取 SVG 的實際寬度
+        const svgElement = containerElement.querySelector('svg') as SVGElement
+        const svgWidth = svgElement ? svgElement.getAttribute('width') : '840'
+
         watermarkDiv.style.cssText = `
+            width: ${svgWidth}px;   // 使用 SVG 的實際寬度
             padding: 4px 32px;      // 上下、左右（控制到兩側邊緣的距離）
             background: transparent;
             margin-top: 4px;        // 頁腳（底部信息）上方到畫布的距離
@@ -38,6 +43,7 @@ export class GenealogyExportService {
             justify-content: ${justifyContent};
             align-items: center;
             gap: 2rem;
+            box-sizing: border-box; // 確保 padding 包含在寬度內
         `
 
         // 如果有關注的輸入法，使用兩欄布局；否則使用單行布局
@@ -45,7 +51,7 @@ export class GenealogyExportService {
             // 左側：水印信息（三行）
             const leftDiv = document.createElement('div')
             leftDiv.style.cssText = `
-                flex: 0.5;               // 左側寬度和右側寬度之比
+                flex: 0.75;               // 左側寬度和右側寬度之比（左右比）
                 display: flex;
                 flex-direction: column;
                 gap: 0.25rem;
