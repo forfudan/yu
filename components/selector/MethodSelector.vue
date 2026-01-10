@@ -43,6 +43,7 @@ const reset = () => {
 
 <template>
     <div class="method-selector">
+        <h2 v-if="!isCompleted" class="selector-title">快速挑選適合的方案</h2>
         <div v-if="!isCompleted" class="question-card">
             <div class="question-content">
                 <h3 class="question-title">{{ currentQuestion.title }}</h3>
@@ -56,7 +57,6 @@ const reset = () => {
 
             <div class="button-group">
                 <button class="choice-button yes-button" @click="handleAnswer(true)">
-                    <div class="button-label">是</div>
                     <div v-if="currentQuestion.yesText" class="button-hint">
                         <p v-for="(para, index) in currentQuestion.yesText.split('\n').filter(p => p.trim())"
                             :key="index">
@@ -66,7 +66,6 @@ const reset = () => {
                 </button>
 
                 <button class="choice-button no-button" @click="handleAnswer(false)">
-                    <div class="button-label">否</div>
                     <div v-if="currentQuestion.noText" class="button-hint">
                         <p v-for="(para, index) in currentQuestion.noText.split('\n').filter(p => p.trim())"
                             :key="index">
@@ -108,6 +107,14 @@ const reset = () => {
     max-width: 600px;
     margin: 2rem auto;
     font-family: system-ui, -apple-system, sans-serif;
+}
+
+.selector-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111827;
+    text-align: center;
+    margin: 0 0 1.5rem 0;
 }
 
 .question-card,
@@ -182,7 +189,6 @@ const reset = () => {
 
 .choice-button:hover {
     border-color: #3b82f6;
-    background: #eff6ff;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
 }
@@ -191,28 +197,10 @@ const reset = () => {
     transform: translateY(0);
 }
 
-.yes-button:hover {
-    border-color: #10b981;
-    background: #ecfdf5;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
-}
-
-.no-button:hover {
-    border-color: #f59e0b;
-    background: #fffbeb;
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
-}
-
-.button-label {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #111827;
-    margin-bottom: 0.5rem;
-}
-
 .button-hint {
-    font-size: 0.875rem;
-    color: #6b7280;
+    font-size: 1rem;
+    color: #111827;
+    font-weight: 500;
     text-align: center;
 }
 
@@ -348,8 +336,8 @@ const reset = () => {
         color: #9ca3af;
     }
 
+    .selector-title,
     .question-title,
-    .button-label,
     .result-method {
         color: #f9fafb;
     }
@@ -366,22 +354,11 @@ const reset = () => {
     }
 
     .choice-button:hover {
-        background: #1e3a5f;
         border-color: #3b82f6;
     }
 
-    .yes-button:hover {
-        background: #064e3b;
-        border-color: #10b981;
-    }
-
-    .no-button:hover {
-        background: #78350f;
-        border-color: #f59e0b;
-    }
-
     .button-hint {
-        color: #9ca3af;
+        color: #f9fafb;
     }
 
     .result-features {

@@ -148,7 +148,7 @@ font,ma,pinyin
 彳,ki,Ĉì 🈤不取聲母 ㊟俗稱雙人旁
 彡,ka,Ŝān -> Sa 🈤不取聲母
 ,ka,
-,ko,🈤無讀音取o
+,ko,🈤無讀音取o ㊕不做末根
 犭,kqa,Quǎn -> Qa ㊟俗稱反犬旁
 豸,kvi,Ẑì -> Vi 🈤Z和Ẑ作V
 亍,kcu,Ĉù
@@ -263,10 +263,10 @@ font,ma,pinyin
 灬,pba,Biāo -> Ba 🈕Hǔo
 臼,pu,Jìù -> Ju 🈤不取聲母
 ⺽,pu,Jǔ 🈤不取聲母
-鬼,pi,Guǐ -> Gi 🈤不取聲母
-,pi,
 甶,pu,Fǔ -> Fu 🈤不取聲母
-,pu,
+,pu,㊟同甶歸併
+鬼,pi,Guǐ -> Gi 🈤不取聲母
+,pi,㊟同鬼歸併
 又,qo,Yòu -> Yo 🈤不取聲母
 ,qo,🈤無讀音取o
 ,qo,
@@ -317,7 +317,7 @@ font,ma,pinyin
 ,se,Ŝēŋ -> Se 🈤不取聲母
 耂,sla,Lǎo -> La
 壴,svu,Ẑú -> Vu 🈤Z和Ẑ作V
-,so,🈤無讀音取o
+,so,🈤無讀音取o ㊕不做末根
 尤,syo,Yóu -> Yo
 尢,so,Yóu -> Yo 🈤不取聲母 🈑尤本字 🈕Wāŋ
 廴,si,Yín -> Yi 🈤不取聲母
