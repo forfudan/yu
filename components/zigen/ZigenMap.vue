@@ -31,6 +31,7 @@ const props = defineProps<{
     columnMinWidth?: string
     zigenFontClass?: string // 自定義字根字體類名
     alwaysVisibleZigens?: string // 始終顯示的字根列表（不會被隱藏）
+    alwaysRedZigens?: string // 始終紅色標註的字根列表
 }>()
 
 // 字根字體類名，默認為 'zigen-font'
@@ -44,10 +45,31 @@ const alwaysVisibleZigens = computed(() => {
     }
     // 否則根據方案自動判斷
     switch (activeScheme.value) {
-        case 'ling':
-            return 'Q　W乚　R冫⺀虍　T乀龵用　P巴　S　F丆　G　H　J攵　K丄　L　X朩　C䒑　V　⺈肀　N⺌⺮　M'
+        // case 'ling':
+        //     return 'Q　W乚　R冫⺀虍　T乀龵用　P巴　S　F丆　G　H　J攵　K丄　L　X朩　C䒑　V　⺈肀　N⺌⺮　M'
         default:
             return '冫'
+    }
+})
+
+// 根據方案決定紅色標註的字根
+const alwaysRedZigens = computed(() => {
+    // 如果外部有傳入，優先使用外部傳入的值
+    if (props.alwaysRedZigens) {
+        return props.alwaysRedZigens
+    }
+    // 否則根據方案自動判斷
+    switch (activeScheme.value) {
+        case 'star':
+            return '上小口　三八麻牙　又尤尢由舟艹　人文了业冊　七心臼　矢世十止自　不夊夂鬥　二儿而'
+        case 'joy':
+            return '口'
+        case 'ling':
+            return ''
+        case 'ming':
+            return ''
+        default:
+            return ''
     }
 })
 
@@ -653,8 +675,14 @@ async function exportZigenMap() {
 }
 
 // 判斷是否為小根（總編碼長度為2的字根），僅對靈明和日月生效
-function isSmallRoot(code: string): boolean {
-    // 只對靈明和日月啟用小根標識
+// 或者是額外指定的紅色標註字根
+function isSmallRoot(code: string, font?: string): boolean {
+    // 檢查是否在額外紅色標註列表中
+    if (font && alwaysRedZigens.value.includes(font)) {
+        return true;
+    }
+
+    // 只對靈明和日月啟用小根標識（編碼長度為2）
     if (!['ling', 'ming'].includes(activeScheme.value)) {
         return false;
     }
@@ -829,7 +857,8 @@ onMounted(() => {
                         <span v-for="(zigen, index) in (sortByCodeLength ?
                             [...(showAllZigens ? zigenByKey[key].all : zigenByKey[key].all.filter(z => !z.isHidden))].sort((a, b) => a.code.length - b.code.length) :
                             (showAllZigens ? zigenByKey[key].all : zigenByKey[key].all.filter(z => !z.isHidden)))"
-                            :key="index" class="zigen-item" :class="{ 'small-root-zigen': isSmallRoot(zigen.code) }"
+                            :key="index" class="zigen-item"
+                            :class="{ 'small-root-zigen': isSmallRoot(zigen.code, zigen.font) }"
                             @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code }}</span>
@@ -892,7 +921,7 @@ onMounted(() => {
                         <span v-for="(zigen, index) in sortedZigenByKey[key]" :key="`sorted-${index}`"
                             class="mobile-zigen-item" :class="{
                                 'mobile-hidden-zigen': zigen.isHidden,
-                                'mobile-small-root-zigen': !zigen.isHidden && isSmallRoot(zigen.code)
+                                'mobile-small-root-zigen': !zigen.isHidden && isSmallRoot(zigen.code, zigen.font)
                             }" @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code
@@ -1692,44 +1721,36 @@ onMounted(() => {
 
 /* 小根樣式（編碼長度為2的字根）- 網格布局 */
 .small-root-zigen {
-    background: rgba(147, 197, 253, 0.05);
-    border: 1px solid rgba(59, 130, 246, 0.3);
+    color: rgb(185, 28, 28);
 }
 
 .dark .small-root-zigen {
-    background: rgba(59, 130, 246, 0.05);
-    border: 1px solid rgba(59, 130, 246, 0.3);
+    color: rgb(248, 113, 113);
 }
 
 .small-root-zigen:hover {
-    background: rgba(147, 197, 253, 0.15) !important;
-    border-color: rgba(59, 130, 246, 0.3) !important;
+    color: rgb(220, 38, 38) !important;
 }
 
 .dark .small-root-zigen:hover {
-    background: rgba(59, 130, 246, 0.12) !important;
-    border-color: rgba(59, 130, 246, 0.35) !important;
+    color: rgb(252, 165, 165) !important;
 }
 
 /* 小根樣式（編碼長度為2的字根）- 移動端和列表布局 */
 .mobile-small-root-zigen {
-    background: rgba(147, 197, 253, 0.1);
-    border: 1px solid rgba(59, 130, 246, 0.15);
+    color: rgb(185, 28, 28);
 }
 
 .dark .mobile-small-root-zigen {
-    background: rgba(59, 130, 246, 0.08);
-    border: 1px solid rgba(59, 130, 246, 0.2);
+    color: rgb(248, 113, 113);
 }
 
 .mobile-small-root-zigen:hover {
-    background: rgba(147, 197, 253, 0.15);
-    border-color: rgba(59, 130, 246, 0.3);
+    color: rgb(220, 38, 38);
 }
 
 .dark .mobile-small-root-zigen:hover {
-    background: rgba(59, 130, 246, 0.12);
-    border-color: rgba(59, 130, 246, 0.35);
+    color: rgb(252, 165, 165);
 }
 
 .mobile-zigen-item .zigen-font {

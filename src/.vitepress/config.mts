@@ -234,19 +234,6 @@ export default defineConfig({
           ],
         },
         {
-          text: "日月教程",
-          items: [
-            {
-              text: "字根编码",
-              link: "/learn/roots_ming",
-            },
-            {
-              text: "单字编码",
-              link: "/learn/chars_ming",
-            },
-          ],
-        },
-        {
           text: "灵明教程",
           items: [
             {
@@ -260,6 +247,19 @@ export default defineConfig({
             {
               text: "简码设置",
               link: "/learn/quick_ling",
+            },
+          ],
+        },
+        {
+          text: "日月教程",
+          items: [
+            {
+              text: "字根编码",
+              link: "/learn/roots_ming",
+            },
+            {
+              text: "单字编码",
+              link: "/learn/chars_ming",
             },
           ],
         },
@@ -682,19 +682,6 @@ export default defineConfig({
               ],
             },
             {
-              text: "日月教程",
-              items: [
-                {
-                  text: "字根編碼",
-                  link: "/zht/learn/roots_ming",
-                },
-                {
-                  text: "單字编码",
-                  link: "/zht/learn/chars_ming",
-                },
-              ],
-            },
-            {
               text: "靈明教程",
               items: [
                 {
@@ -708,6 +695,19 @@ export default defineConfig({
                 {
                   text: "簡碼設置",
                   link: "/zht/learn/quick_ling",
+                },
+              ],
+            },
+            {
+              text: "日月教程",
+              items: [
+                {
+                  text: "字根編碼",
+                  link: "/zht/learn/roots_ming",
+                },
+                {
+                  text: "單字编码",
+                  link: "/zht/learn/chars_ming",
                 },
               ],
             },
