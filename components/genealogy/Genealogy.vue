@@ -99,7 +99,7 @@ const genealogyContainer = ref<HTMLElement | null>(null)
 const yScaleFactor = ref(0.64) // 1.0 = 100%
 
 // 篩選狀態
-const selectedCategory = ref<'字形' | '拼音' | '全部'>('字形') // 大類篩選
+const selectedCategory = ref<'字形' | '字音' | '全部'>('字形') // 大類篩選
 const selectedSchemas = ref<string[]>([])
 const selectedFeatures = ref<string[]>([])
 const selectedAuthors = ref<string[]>([])
@@ -144,8 +144,8 @@ const pageTitle = computed(() => {
     switch (selectedCategory.value) {
         case '字形':
             return '漢字字形輸入法繫絡圖'
-        case '拼音':
-            return '漢字拼音輸入法繫絡圖'
+        case '字音':
+            return '漢字字音輸入法繫絡圖'
         case '全部':
         default:
             return '漢字輸入法繫絡圖'
@@ -605,7 +605,7 @@ async function loadData() {
 
         // 標記類別
         const xingSchemas = xingData.map(s => ({ ...s, category: '字形' as const }))
-        const yinSchemas = yinData.map(s => ({ ...s, category: '拼音' as const }))
+        const yinSchemas = yinData.map(s => ({ ...s, category: '字音' as const }))
 
         // 合併數據
         const allData = [...xingSchemas, ...yinSchemas]
@@ -640,7 +640,7 @@ async function loadData() {
         console.log('數據加載完成:', {
             總數: allData.length,
             字形: xingSchemas.length,
-            拼音: yinSchemas.length,
+            字音: yinSchemas.length,
             年份範圍: `${minYear.value}-${maxYear.value}`,
             特性數: allFeatures.value.length,
             作者數: allAuthors.value.length,
@@ -992,9 +992,9 @@ watch(() => props.config, () => {
                                     <span>字形</span>
                                 </div>
                                 <div class="dropdown-item"
-                                    @click="selectedCategory = '拼音'; showCategoryDropdown = false">
-                                    <input type="radio" :checked="selectedCategory === '拼音'" readonly>
-                                    <span>拼音</span>
+                                    @click="selectedCategory = '字音'; showCategoryDropdown = false">
+                                    <input type="radio" :checked="selectedCategory === '字音'" readonly>
+                                    <span>字音</span>
                                 </div>
                                 <div class="dropdown-item"
                                     @click="selectedCategory = '全部'; showCategoryDropdown = false">
