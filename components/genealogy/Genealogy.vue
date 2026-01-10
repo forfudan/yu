@@ -850,7 +850,8 @@ async function exportGenealogy() {
                 copyToClipboard: false,
                 download: true,
                 scale: 2,
-                addWatermark: true
+                addWatermark: true,
+                focusedSchemaDetails: focusedSchemaDetails.value
             }
         )
 
@@ -949,7 +950,7 @@ watch(() => props.config, () => {
                             <button @click="showSchemaDropdown = !showSchemaDropdown" class="dropdown-trigger">
                                 方案
                                 <span v-if="selectedSchemas.length > 0" class="badge">{{ selectedSchemas.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showSchemaDropdown" class="dropdown-menu" @click.stop>
@@ -969,7 +970,7 @@ watch(() => props.config, () => {
                             <button @click="showAuthorDropdown = !showAuthorDropdown" class="dropdown-trigger">
                                 作者
                                 <span v-if="selectedAuthors.length > 0" class="badge">{{ selectedAuthors.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showAuthorDropdown" class="dropdown-menu" @click.stop>
@@ -989,7 +990,7 @@ watch(() => props.config, () => {
                             <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
                                 特徵
                                 <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>

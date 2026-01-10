@@ -10,34 +10,115 @@ export class GenealogyExportService {
     }
 
     /**
-     * 動態添加水印文字到繫絡圖底部
+     * 動態添加水印文字到繫絡圖底部（兩欄布局）
      * @param containerElement 容器元素
-     * @param watermarkText 水印文字
+     * @param focusedSchemaDetails 當前關注的輸入法詳情
      * @returns 返回創建的水印元素，用於後續移除
      */
     static addTemporaryWatermark(
         containerElement: HTMLElement,
-        watermarkText: string = '宇浩系列輸入法 · 官網: shurufa.app · QQ 討論群: 170510762'
+        focusedSchemaDetails: any = null
     ): HTMLElement {
         const watermarkDiv = document.createElement('div')
         watermarkDiv.className = 'genealogy-export-watermark'
 
         // 根據當前主題設置水印樣式（使用透明背景，讓畫布背景透過）
         const isDarkMode = document.documentElement.classList.contains('dark')
+        const textColor = isDarkMode ? 'rgb(165, 180, 252)' : '#4f46e5'
+
         watermarkDiv.style.cssText = `
-            padding: 12px 16px;
+            padding: 4px 32px;      // 上下、左右（控制到兩側邊緣的距離）
             background: transparent;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 16px;
-            font-size: 0.9rem;
-            color: ${isDarkMode ? 'rgb(165, 180, 252)' : '#4f46e5'};
-            font-weight: 500;
-            border: none;
+            margin-top: 4px;        // 頁腳（底部信息）上方到畫布的距離
             font-family: 'Noto Serif SC', serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
         `
 
-        watermarkDiv.textContent = watermarkText
+        // 左側：水印信息（三行）
+        const leftDiv = document.createElement('div')
+        leftDiv.style.cssText = `
+            flex: 0.5;               // 左側寬度和右側寬度之比
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            font-size: 0.85rem;
+            color: ${textColor};
+            font-weight: 400;
+            justify-content: center;
+        `
+        leftDiv.innerHTML = `
+            <div style="font-weight: 600;">宇浩系列輸入法</div>
+            <div>官網：shurufa.app</div>
+            <div>QQ 討論群：170510762</div>
+        `
+
+        // 右側：懸浮信息窗（如果有）
+        if (focusedSchemaDetails) {
+            const rightDiv = document.createElement('div')
+            // 使用與網頁完全一致的浮動提示樣式
+            // 深色模式：浅蓝背景 + 深色文字；亮色模式：深蓝背景 + 白色文字
+            const bgColor = isDarkMode ? 'rgba(99, 102, 241, 0.95)' : 'rgba(99, 102, 241, 0.95)'
+            const textColorInBox = isDarkMode ? 'white' : 'white'
+            const borderColor = isDarkMode ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 255, 255, 0.3)'
+
+            rightDiv.style.cssText = `
+                flex: 1;
+                padding: 0.75rem 1.25rem;
+                background: ${bgColor};
+                color: ${textColorInBox};
+                border-radius: 0.5rem;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                display: flex;
+                flex-direction: column;
+                gap: 0.25rem;
+            `
+
+            // 輸入法名稱和鏈接
+            let nameHtml = `<div style="font-family: 'Noto Serif SC'; font-size: 1.2rem; font-weight: 900; line-height: 1.2; display: flex; align-items: center; gap: 0.5rem;">${focusedSchemaDetails.name}`
+            if (focusedSchemaDetails.url) {
+                nameHtml += ` <a href="${focusedSchemaDetails.url}" target="_blank" style="color: inherit; text-decoration: none; opacity: 0.7; font-size: 0.875rem;">🔗</a>`
+            }
+            nameHtml += `</div>`
+
+            // 維護者
+            let maintainersHtml = ''
+            if (focusedSchemaDetails.maintainers && focusedSchemaDetails.maintainers.length > 0) {
+                maintainersHtml = `<div style="font-size: 0.875rem; opacity: 0.9;">${focusedSchemaDetails.maintainers.join('、')} (修訂維護)</div>`
+            }
+
+            // 作者
+            const authorsHtml = `<div style="font-size: 0.875rem; opacity: 0.9;">${focusedSchemaDetails.authors.join('、')}</div>`
+
+            // 日期
+            const dateHtml = `<div style="font-size: 0.875rem; opacity: 0.8;">${focusedSchemaDetails.date}</div>`
+
+            // 特徵標籤
+            let featuresHtml = ''
+            if (focusedSchemaDetails.features && focusedSchemaDetails.features.length > 0) {
+                const tagBgColor = isDarkMode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(255, 255, 255, 0.2)'
+                const tagsHtml = focusedSchemaDetails.features.map((f: string) =>
+                    `<span style="display: inline-block; padding: 0.125rem 0.5rem; background: ${tagBgColor}; border-radius: 0.25rem; font-size: 0.75rem; white-space: nowrap;">${f}</span>`
+                ).join('')
+                featuresHtml = `<div style="display: flex; flex-wrap: wrap; gap: 0.375rem; margin-top: 0.25rem;">${tagsHtml}</div>`
+            }
+
+            // 描述
+            let descriptionHtml = ''
+            if (focusedSchemaDetails.description) {
+                descriptionHtml = `<div style="font-size: 0.875rem; opacity: 0.9; margin-top: 0.25rem; padding-top: 0.5rem; border-top: 1px solid ${borderColor};">${focusedSchemaDetails.description}</div>`
+            }
+
+            rightDiv.innerHTML = nameHtml + maintainersHtml + authorsHtml + dateHtml + featuresHtml + descriptionHtml
+            watermarkDiv.appendChild(leftDiv)
+            watermarkDiv.appendChild(rightDiv)
+        } else {
+            // 沒有關注節點時，只顯示左側信息
+            watermarkDiv.appendChild(leftDiv)
+        }
+
         containerElement.appendChild(watermarkDiv)
         return watermarkDiv
     }
@@ -64,13 +145,15 @@ export class GenealogyExportService {
             download?: boolean
             scale?: number
             addWatermark?: boolean
+            focusedSchemaDetails?: any
         } = {}
     ) {
         const {
             copyToClipboard = false,
             download = true,
             scale = 2,
-            addWatermark = true
+            addWatermark = true,
+            focusedSchemaDetails = null
         } = options
 
         // 找到實際的 SVG 容器
@@ -93,7 +176,7 @@ export class GenealogyExportService {
         // 動態添加水印文字
         let watermarkElement: HTMLElement | null = null
         if (addWatermark) {
-            watermarkElement = this.addTemporaryWatermark(contentElement)
+            watermarkElement = this.addTemporaryWatermark(contentElement, focusedSchemaDetails)
         }
 
         // 声明变量用于后续恢复
@@ -117,7 +200,7 @@ export class GenealogyExportService {
                 floatingHintElement.style.display = 'none'
             }
 
-            // 3. 添加標題欄（根据当前主题设置颜色）
+            // 3. 添加標題欄（根據當前主題設置顏色）
             const titleElement = document.createElement('div')
             titleElement.className = 'export-title'
             const isDarkMode = document.documentElement.classList.contains('dark')
@@ -125,8 +208,8 @@ export class GenealogyExportService {
                 text-align: center;
                 font-size: 1.8rem;
                 font-weight: bold;
-                margin-bottom: 1.5rem;
-                padding: 1rem;
+                margin-bottom: 0.25rem;  // 標題下方到畫布的距離
+                padding: 0.25rem;        // 標題內部的上下內邊距
                 color: ${isDarkMode ? 'rgb(165, 180, 252)' : '#5400a2ff'};
                 background: transparent;
                 font-family: 'Noto Serif SC', serif;
