@@ -131,12 +131,12 @@ export default defineConfig({
               link: "/docs/concepts",
             },
             {
-              text: "常见输入法测评数据",
-              link: "/docs/statistics",
-            },
-            {
               text: "字形输入法繫絡图",
               link: "/docs/gene",
+            },
+            {
+              text: "常见输入法测评数据",
+              link: "/docs/statistics",
             },
             {
               text: "常见形码输入方案编码规则",
@@ -579,12 +579,12 @@ export default defineConfig({
                   link: "/zht/docs/concepts",
                 },
                 {
-                  text: "常見輸入法測評數據",
-                  link: "/zht/docs/statistics",
-                },
-                {
                   text: "字形輸入法繫絡圖",
                   link: "/zht/docs/gene",
+                },
+                {
+                  text: "常見輸入法測評數據",
+                  link: "/zht/docs/statistics",
                 },
                 {
                   text: "常見形碼輸入方案編碼規則",
