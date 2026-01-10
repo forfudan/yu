@@ -9,6 +9,7 @@ aside: false
 import Train from "@/train/CharTrain.vue"
 import ZigenMap from "@/zigen/ZigenMap.vue"
 </script>
+
 <div class="zigen-font">
 <Train name="joy"  chaifenUrl="/chaifen.csv" zigenUrl="/zigen-joy.csv" :range="[0,500]" rule="joy" />
 </div>

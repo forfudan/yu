@@ -131,7 +131,7 @@ export default defineConfig({
               link: "/docs/concepts",
             },
             {
-              text: "字形输入法繫絡图",
+              text: "字形输入法系络图",
               link: "/docs/gene",
             },
             {
@@ -157,11 +157,11 @@ export default defineConfig({
             },
             {
               text: "天码",
-              link: "/sky/",
+              link: "/docs/sky",
             },
             {
               text: "徐码",
-              link: "/xuma/",
+              link: "/docs/xuma",
             },
             {
               text: "易码",
@@ -300,14 +300,14 @@ export default defineConfig({
           ],
         },
         {
-          text: "配天之靈",
+          text: "配天之灵",
           items: [
             {
-              text: "靈明字根",
+              text: "灵明字根",
               link: "/practice/root_ling",
             },
             {
-              text: "靈明单字",
+              text: "灵明单字",
               link: "/practice/char_ling",
             },
           ],
@@ -361,55 +361,22 @@ export default defineConfig({
           ],
         },
         {
-          text: "中古漢語",
+          text: "天码",
+          items: [
+            {
+              text: "天码字根",
+              link: "/practice/root_sky",
+            },
+          ],
+        },
+        {
+          text: "中古汉语",
           items: [
             {
               text: "中古拼音",
               link: "/practice/tupa",
             },
           ],
-        },
-      ],
-      "/chaifen": [
-        {
-          text: "星陈",
-          link: "/chaifen/",
-        },
-        {
-          text: "光华",
-          link: "/chaifen/light",
-        },
-        {
-          text: "卿云",
-          link: "/chaifen/joy",
-        },
-        {
-          text: "日月",
-          link: "/chaifen/ming",
-        },
-      ],
-      "/sky": [
-        {
-          text: "天码",
-          link: "/sky/",
-        },
-        {
-          text: "拆分查询",
-          link: "/sky/search",
-        },
-        {
-          text: "在線練習",
-          link: "/sky/practice",
-        },
-      ],
-      "/xuma": [
-        {
-          text: "徐码",
-          link: "/xuma/",
-        },
-        {
-          text: "教程",
-          link: "/xuma/learn",
         },
       ],
     },
@@ -605,11 +572,11 @@ export default defineConfig({
                 },
                 {
                   text: "天碼",
-                  link: "/zht/sky/",
+                  link: "/zht/docs/sky",
                 },
                 {
                   text: "徐碼",
-                  link: "/zht/xuma/",
+                  link: "/zht/docs/xuma",
                 },
                 {
                   text: "易碼",
@@ -818,6 +785,15 @@ export default defineConfig({
               ],
             },
             {
+              text: "天碼",
+              items: [
+                {
+                  text: "天碼字根",
+                  link: "/zht/practice/root_sky",
+                },
+              ],
+            },
+            {
               text: "中古漢語",
               items: [
                 {
@@ -826,49 +802,7 @@ export default defineConfig({
                 },
               ],
             },
-          ],
-          "/zht/chaifen": [
-            {
-              text: "星陳",
-              link: "/zht/chaifen/",
-            },
-            {
-              text: "光華",
-              link: "/zht/chaifen/light",
-            },
-            {
-              text: "卿雲",
-              link: "/zht/chaifen/joy",
-            },
-            {
-              text: "日月",
-              link: "/zht/chaifen/ming",
-            },
-          ],
-          "/zht/sky": [
-            {
-              text: "天碼",
-              link: "/zht/sky/",
-            },
-            {
-              text: "拆分查询",
-              link: "/zht/sky/search",
-            },
-            {
-              text: "在線練習",
-              link: "/zht/sky/practice",
-            },
-          ],
-          "/zht/xuma": [
-            {
-              text: "徐碼",
-              link: "/zht/xuma/",
-            },
-            {
-              text: "教程",
-              link: "/zht/xuma/learn",
-            },
-          ],
+          ]
         },
       },
     },

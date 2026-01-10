@@ -12,5 +12,5 @@ export interface Result {
     name: string;
     description?: string;
     features?: string[];
-    link?: string;
+    url?: string;  // 詳細瞭解的鏈接地址
 }

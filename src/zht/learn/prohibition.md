@@ -108,7 +108,7 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 `工土士干千禾キ王壬龶丰末未生古矢缶早羊虫`等字根不允許在`一一`間穿插其他字根。
 
-這個規定在常用字中比較少用。
+這個規定在常用字中比較少見。
 
 ::: tip 例
 
@@ -143,6 +143,24 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 <Chaifen char='妻' :parts='[1,1,1,1,1,3]' :colors='[1,0,1,0,1,3]' />
 ❌
 <Chaifen char='妻' :parts='[1,1,3,3]' :colors='[1,0,1,3]' />
+❌
+</div>
+
+:::
+
+## 對稱不擠壓
+
+對稱形態的字根，不允許其中分散的一部分被擠壓到一邊。
+
+這個規定在常用字中比較少見。
+
+::: tip 例
+
+`命`不拆`合卩`，而拆`人口一卩`。
+<div class="flex justify-left flex-wrap">
+<Chaifen char='命' :parts='[2,1,3,2]' />
+✅
+<Chaifen char='命' :parts='[6,2]' />
 ❌
 </div>
 

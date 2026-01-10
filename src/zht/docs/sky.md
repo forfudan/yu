@@ -1,12 +1,18 @@
+<script setup>
+import ZigenMap from "@/zigen/ZigenMap.vue"
+import ZigenTrain from "@/train/ZigenTrain.vue"
+import Search from '@/search/OptimizedFetchSearch.vue'
+</script>
+
 # 天碼
+
+<div class="zigen-font-tianma">
+<Search chaifenUrl="/chaifen-tianma.csv" zigenUrl="/zigen-tianma.csv" rule="star" />
+</div>
 
 ## 簡介
 
-天碼是一個表形碼輸入方案，由宋天研製。特點有：四碼定長、純字形、雙編碼、繁簡通打[^fanjian]等。因爲其大碼表形，小碼取音的設計哲學，易學性極高。QQ討論群：631302614
-
-<script setup>
-import ZigenMap from "@/zigen/ZigenMap.vue"
-</script>
+天碼是一個表形碼輸入方案，由宋天研製。特點有：四碼限長、純字形、雙編碼、繁簡通打[^fanjian]等。因爲其大碼表形，小碼取音的設計哲學，易學性極高。QQ討論群：631302614
 
 <ZigenMap :default-scheme="'tianma'" column-min-width="1rem" :zigenFontClass="'zigen-font-tianma'" />
 
@@ -37,5 +43,9 @@ import ZigenMap from "@/zigen/ZigenMap.vue"
 
 單行定義爲：ABCZza\[:4\]
 :::
+
+## 字根練習
+
+[天碼字根練習器](../practice/root_sky)
 
 [^fanjian]: 一般認爲單一碼表繁簡聯合選重率小於萬分之五十即具有繁簡通打特性。

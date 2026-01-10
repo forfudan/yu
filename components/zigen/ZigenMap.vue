@@ -48,7 +48,7 @@ const alwaysVisibleZigens = computed(() => {
         // case 'ling':
         //     return 'Q　W乚　R冫⺀虍　T乀龵用　P巴　S　F丆　G　H　J攵　K丄　L　X朩　C䒑　V　⺈肀　N⺌⺮　M'
         default:
-            return '冫'
+            return '冫巴用'
     }
 })
 
@@ -925,7 +925,7 @@ onMounted(() => {
                             }" @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code
-                            }}</span>
+                                }}</span>
                         </span>
                     </div>
                 </div>

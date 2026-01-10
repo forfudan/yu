@@ -79,19 +79,13 @@ paths_of_docs = [
     "/docs/install.md",
     # IME
     "/ime/ling.md",
+    "/ime/ling5.md",
     "/ime/ming.md",
-    # 拆分
-    "/chaifen/index.md",
-    "/chaifen/light.md",
-    "/chaifen/joy.md",
-    "/chaifen/ming.md",
     # 天碼
-    "/sky/index.md",
-    "/sky/search.md",
-    "/sky/practice.md",
+    "/docs/sky.md",
+    "/practice/root_sky.md",
     # 徐碼
-    "/xuma/index.md",
-    "/xuma/learn.md",
+    "/docs/xuma.md",
 ]
 
 for path_of_doc in paths_of_docs:

@@ -7,6 +7,6 @@ import IME from '@/ime/FetchInput.vue'
 
 # 靈明在線輸入
 
-[靈明](./ling) ｜ [日月](./ming)
+[日月](./ming) ｜ [靈明](./ling) ｜ [五靈](./ling5)
 
 <IME mabiaoUrl="/mabiao-ling.json" ruleName="ling" />

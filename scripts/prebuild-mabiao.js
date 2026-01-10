@@ -24,12 +24,17 @@ const MABIAO_FILES = [
     {
         input: path.join(projectRoot, 'src', 'public', 'mabiao-ming.txt'),
         output: path.join(projectRoot, 'src', 'public', 'mabiao-ming.json'),
-        name: '日月码表'
+        name: '日月碼表'
     },
     {
         input: path.join(projectRoot, 'src', 'public', 'mabiao-ling.txt'),
         output: path.join(projectRoot, 'src', 'public', 'mabiao-ling.json'),
-        name: '灵明码表'
+        name: '靈明碼表'
+    },
+    {
+        input: path.join(projectRoot, 'src', 'public', 'mabiao-ling5.txt'),
+        output: path.join(projectRoot, 'src', 'public', 'mabiao-ling5.json'),
+        name: '五靈碼表'
     }
 ]
 

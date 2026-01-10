@@ -5,6 +5,11 @@ import type { Question, Result } from './types';
 const props = defineProps<{
     question: Question;  // 改為單個根問題
     results: Record<string, Result>;
+    selectorTitle?: string;  // 選擇器標題
+    resultTitle?: string;  // 結果標題
+    resultMethodTemplate?: string;  // 結果方案文本模板（用 {name} 作為佔位符）
+    resetButtonText?: string;  // 重新測試按鈕文本
+    learnMoreText?: string;  // 詳細瞭解按鈕文本
 }>();
 
 const currentQuestion = ref<Question>(props.question);
@@ -43,6 +48,7 @@ const reset = () => {
 
 <template>
     <div class="method-selector">
+        <h2 v-if="!isCompleted && selectorTitle" class="selector-title">{{ selectorTitle }}</h2>
         <div v-if="!isCompleted" class="question-card">
             <div class="question-content">
                 <h3 class="question-title">{{ currentQuestion.title }}</h3>
@@ -56,7 +62,6 @@ const reset = () => {
 
             <div class="button-group">
                 <button class="choice-button yes-button" @click="handleAnswer(true)">
-                    <div class="button-label">是</div>
                     <div v-if="currentQuestion.yesText" class="button-hint">
                         <p v-for="(para, index) in currentQuestion.yesText.split('\n').filter(p => p.trim())"
                             :key="index">
@@ -66,7 +71,6 @@ const reset = () => {
                 </button>
 
                 <button class="choice-button no-button" @click="handleAnswer(false)">
-                    <div class="button-label">否</div>
                     <div v-if="currentQuestion.noText" class="button-hint">
                         <p v-for="(para, index) in currentQuestion.noText.split('\n').filter(p => p.trim())"
                             :key="index">
@@ -79,16 +83,16 @@ const reset = () => {
 
         <div v-else class="result-card">
             <div class="result-icon">✨</div>
-            <h2 class="result-title">推薦結果</h2>
+            <h2 v-if="resultTitle" class="result-title">{{ resultTitle }}</h2>
             <div class="result-content">
-                <h3 class="result-method">你適合 {{ finalResult?.name }} 輸入法</h3>
+                <h3 v-if="resultMethodTemplate" class="result-method">{{ resultMethodTemplate.replace('{name}',
+                    finalResult?.name || '') }}</h3>
                 <div v-if="finalResult?.description" class="result-description">
                     <p v-for="(para, index) in finalResult.description.split('\n').filter(p => p.trim())" :key="index">
                         {{ para }}
                     </p>
                 </div>
                 <div v-if="finalResult?.features" class="result-features">
-                    <h4>特點：</h4>
                     <ul>
                         <li v-for="(feature, index) in finalResult.features" :key="index">
                             {{ feature }}
@@ -96,9 +100,14 @@ const reset = () => {
                     </ul>
                 </div>
             </div>
-            <button class="reset-button" @click="reset">
-                重新測試
-            </button>
+            <div class="button-row">
+                <button v-if="resetButtonText" class="reset-button" @click="reset">
+                    {{ resetButtonText }}
+                </button>
+                <a v-if="learnMoreText && finalResult?.url" :href="finalResult.url" class="learn-more-button">
+                    {{ learnMoreText }}
+                </a>
+            </div>
         </div>
     </div>
 </template>
@@ -108,6 +117,14 @@ const reset = () => {
     max-width: 600px;
     margin: 2rem auto;
     font-family: system-ui, -apple-system, sans-serif;
+}
+
+.selector-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111827;
+    text-align: center;
+    margin: 0 0 1.5rem 0;
 }
 
 .question-card,
@@ -182,7 +199,6 @@ const reset = () => {
 
 .choice-button:hover {
     border-color: #3b82f6;
-    background: #eff6ff;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
 }
@@ -191,28 +207,10 @@ const reset = () => {
     transform: translateY(0);
 }
 
-.yes-button:hover {
-    border-color: #10b981;
-    background: #ecfdf5;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
-}
-
-.no-button:hover {
-    border-color: #f59e0b;
-    background: #fffbeb;
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
-}
-
-.button-label {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #111827;
-    margin-bottom: 0.5rem;
-}
-
 .button-hint {
-    font-size: 0.875rem;
-    color: #6b7280;
+    font-size: 1rem;
+    color: #111827;
+    font-weight: 500;
     text-align: center;
 }
 
@@ -294,7 +292,15 @@ const reset = () => {
     line-height: 1.5;
 }
 
-.reset-button {
+.button-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.reset-button,
+.learn-more-button {
     padding: 0.75rem 2rem;
     background: #3b82f6;
     color: white;
@@ -305,13 +311,17 @@ const reset = () => {
     cursor: pointer;
     transition: background 0.2s ease;
     font-family: inherit;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.reset-button:hover {
+.reset-button:hover,
+.learn-more-button:hover {
     background: #2563eb;
 }
 
-.reset-button:active {
+.reset-button:active,
+.learn-more-button:active {
     background: #1d4ed8;
 }
 
@@ -348,8 +358,8 @@ const reset = () => {
         color: #9ca3af;
     }
 
+    .selector-title,
     .question-title,
-    .button-label,
     .result-method {
         color: #f9fafb;
     }
@@ -366,22 +376,11 @@ const reset = () => {
     }
 
     .choice-button:hover {
-        background: #1e3a5f;
         border-color: #3b82f6;
     }
 
-    .yes-button:hover {
-        background: #064e3b;
-        border-color: #10b981;
-    }
-
-    .no-button:hover {
-        background: #78350f;
-        border-color: #f59e0b;
-    }
-
     .button-hint {
-        color: #9ca3af;
+        color: #f9fafb;
     }
 
     .result-features {
@@ -396,15 +395,18 @@ const reset = () => {
         color: #d1d5db;
     }
 
-    .reset-button {
+    .reset-button,
+    .learn-more-button {
         background: #3b82f6;
     }
 
-    .reset-button:hover {
+    .reset-button:hover,
+    .learn-more-button:hover {
         background: #2563eb;
     }
 
-    .reset-button:active {
+    .reset-button:active,
+    .learn-more-button:active {
         background: #1d4ed8;
     }
 }

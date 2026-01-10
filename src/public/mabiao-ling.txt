@@ -30,7 +30,7 @@ bn	負責
 bp	色彩
 bq	堅持
 br	写作
-bt	解决
+bt	角度
 bv	航空
 cb	绝对
 cc	纪录
@@ -837,7 +837,7 @@ e	的
 o	我
 u	不
 ba	群
-bu	部
+bu	解
 ca	前
 ce	给
 co	就
@@ -892,7 +892,9 @@ bjsi	晝
 bke	軍
 bla	親
 ble	韵
+blu	部
 bna	尔
+bri	写
 cla	鐵
 cmi	麽
 cna	京
@@ -951,6 +953,7 @@ kru	卡
 kso	掌
 kva	到
 kxo	空
+kye	寶
 ldi	所
 lha	然
 lja	刚
@@ -1010,6 +1013,7 @@ vnu	海
 vsi	法
 wle	话
 wte	以
+wwu	书
 xdi	想
 xdu	相
 xri	樣
@@ -128384,7 +128388,9 @@ kfvm	宇浩
 hrgm	星陈
 wmrj	卿云
 nxjt	光华
+bjhr	灵明
 djnn	中华人民共和国
+mjvs	输入法
 mjcm	爲什麽
 tjcm	為什麼
 hrhv	越來越
@@ -130830,4 +130836,6 @@ bjkl	盡力
 hrgx	星陳
 wmdy	卿雲
 nxqq	光華
+dyhr	靈明
 dqnn	中華人民共和國
+kjvs	輸入法
