@@ -44,6 +44,7 @@ export class GenealogyExportService {
             display: flex;
             flex-direction: column;
             gap: 0.25rem;
+            font-family: 'Noto Serif SC', serif;
             font-size: 0.85rem;
             color: ${textColor};
             font-weight: 400;
