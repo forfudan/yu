@@ -26,38 +26,42 @@ export class GenealogyExportService {
         const isDarkMode = document.documentElement.classList.contains('dark')
         const textColor = isDarkMode ? 'rgb(165, 180, 252)' : '#4f46e5'
 
+        // 根據是否有關注節點調整布局方式
+        const justifyContent = focusedSchemaDetails ? 'space-between' : 'center'
+
         watermarkDiv.style.cssText = `
             padding: 4px 32px;      // 上下、左右（控制到兩側邊緣的距離）
             background: transparent;
             margin-top: 4px;        // 頁腳（底部信息）上方到畫布的距離
             font-family: 'Noto Serif SC', serif;
             display: flex;
-            justify-content: space-between;
+            justify-content: ${justifyContent};
             align-items: center;
             gap: 2rem;
         `
 
-        // 左側：水印信息（三行）
-        const leftDiv = document.createElement('div')
-        leftDiv.style.cssText = `
-            flex: 0.5;               // 左側寬度和右側寬度之比
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-            font-family: 'Noto Serif SC', serif;
-            font-size: 0.85rem;
-            color: ${textColor};
-            font-weight: 400;
-            justify-content: center;
-        `
-        leftDiv.innerHTML = `
-            <div style="font-weight: 600;">宇浩系列輸入法</div>
-            <div>官網：shurufa.app</div>
-            <div>QQ 討論群：170510762</div>
-        `
-
-        // 右側：懸浮信息窗（如果有）
+        // 如果有關注的輸入法，使用兩欄布局；否則使用單行布局
         if (focusedSchemaDetails) {
+            // 左側：水印信息（三行）
+            const leftDiv = document.createElement('div')
+            leftDiv.style.cssText = `
+                flex: 0.5;               // 左側寬度和右側寬度之比
+                display: flex;
+                flex-direction: column;
+                gap: 0.25rem;
+                font-family: 'Noto Serif SC', serif;
+                font-size: 0.85rem;
+                color: ${textColor};
+                font-weight: 400;
+                justify-content: center;
+            `
+            leftDiv.innerHTML = `
+                <div style="font-weight: 600;">宇浩系列輸入法</div>
+                <div>官網：shurufa.app</div>
+                <div>QQ 討論群：170510762</div>
+            `
+
+            // 右側：懸浮信息窗
             const rightDiv = document.createElement('div')
             // 使用與網頁完全一致的浮動提示樣式
             // 深色模式：浅蓝背景 + 深色文字；亮色模式：深蓝背景 + 白色文字
@@ -116,8 +120,17 @@ export class GenealogyExportService {
             watermarkDiv.appendChild(leftDiv)
             watermarkDiv.appendChild(rightDiv)
         } else {
-            // 沒有關注節點時，只顯示左側信息
-            watermarkDiv.appendChild(leftDiv)
+            // 沒有關注節點時，單行顯示水印信息
+            const singleLineDiv = document.createElement('div')
+            singleLineDiv.style.cssText = `
+                text-align: center;
+                font-family: 'Noto Serif SC', serif;
+                font-size: 0.85rem;
+                color: ${textColor};
+                font-weight: 400;
+            `
+            singleLineDiv.textContent = '宇浩系列輸入法 · 官網: shurufa.app · QQ 討論群: 170510762'
+            watermarkDiv.appendChild(singleLineDiv)
         }
 
         containerElement.appendChild(watermarkDiv)
