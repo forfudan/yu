@@ -2272,7 +2272,7 @@ watch(() => props.config, () => {
 }
 
 .schema-details-name {
-    font-family: --vp-font-family-base;
+    font-family: 'Noto Serif SC';
     font-size: 1.2rem;
     font-weight: 900;
     line-height: 1.2;

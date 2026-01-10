@@ -153,12 +153,16 @@ function calculateSimilarConnections(schemas: SchemaData[], existingConnections:
             const totalDifference = onlyIn1.length + onlyIn2.length
 
             // 如果特徵完全一樣或只相差一個
-            if (totalDifference <= 1) {
+            if (onlyIn1.length <= 1 && onlyIn2.length <= 1) {
                 // 構建標籤：顯示不同的特徵
                 let label = '相似'
-                if (totalDifference === 1) {
+                if (totalDifference > 1) {
+                    const differentFeatures = [...onlyIn1, ...onlyIn2].join(' 對 ')
+                    label = `${differentFeatures}`
+                }
+                else if (totalDifference === 1) {
                     const differentFeature = onlyIn1.length > 0 ? onlyIn1[0] : onlyIn2[0]
-                    label = `相似。不同點：${differentFeature}`
+                    label = `${differentFeature} 不同`
                 } else if (totalDifference === 0) {
                     label = '高度相似'
                 }
