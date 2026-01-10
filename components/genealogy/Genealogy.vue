@@ -27,7 +27,7 @@ import {
     formatDateToMonth,
     parseYear
 } from './dataLoader'
-import { calculateLayout, optimizeLayout, calculateLayoutQuality } from './layoutEngine'
+import { calculateLayout } from './layoutEngine'
 import { calculateConnections, getConnectionStats } from './connectionEngine'
 import {
     generateConnectionPaths,
@@ -217,9 +217,6 @@ const yearSpacingMap = computed(() => {
     )
 })
 
-// 佈局優化選項
-const useOptimization = ref(false) // 是否使用力導向優化（可選功能）
-
 // 輔助函數：檢查節點是否應該可見
 function isNodeVisible(nodeId: string): boolean {
     return visibleNodeIds.value.has(nodeId)
@@ -249,17 +246,7 @@ const layoutNodes = computed<LayoutNode[]>(() => {
         yearSpacingMap.value
     )
 
-    // 可選：使用力導向算法優化佈局
-    if (useOptimization.value && nodes.length > 0) {
-        nodes = optimizeLayout(nodes, 30)
-    }
-
     return nodes
-})
-
-// 計算屬性：佈局質量分數
-const layoutQuality = computed(() => {
-    return calculateLayoutQuality(layoutNodes.value)
 })
 
 // 計算屬性：動態畫布高度（基於年份間距映射表和Y軸縮放）
@@ -914,7 +901,7 @@ watch(() => props.config, () => {
                             <button @click="showSchemaDropdown = !showSchemaDropdown" class="dropdown-trigger">
                                 方案
                                 <span v-if="selectedSchemas.length > 0" class="badge">{{ selectedSchemas.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showSchemaDropdown" class="dropdown-menu" @click.stop>
@@ -934,7 +921,7 @@ watch(() => props.config, () => {
                             <button @click="showAuthorDropdown = !showAuthorDropdown" class="dropdown-trigger">
                                 作者
                                 <span v-if="selectedAuthors.length > 0" class="badge">{{ selectedAuthors.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showAuthorDropdown" class="dropdown-menu" @click.stop>
@@ -954,7 +941,7 @@ watch(() => props.config, () => {
                             <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
                                 特徵
                                 <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
