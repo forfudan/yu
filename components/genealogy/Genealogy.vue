@@ -99,12 +99,14 @@ const genealogyContainer = ref<HTMLElement | null>(null)
 const yScaleFactor = ref(0.64) // 1.0 = 100%
 
 // 篩選狀態
+const selectedCategory = ref<'字形' | '拼音' | '全部'>('字形') // 大類篩選
 const selectedSchemas = ref<string[]>([])
 const selectedFeatures = ref<string[]>([])
 const selectedAuthors = ref<string[]>([])
 const searchQuery = ref('')
 
 // 下拉菜單狀態
+const showCategoryDropdown = ref(false)
 const showSchemaDropdown = ref(false)
 const showFeatureDropdown = ref(false)
 const showAuthorDropdown = ref(false)
@@ -137,9 +139,27 @@ onMounted(() => {
     })
 })
 
+// 計算屬性：根據類別生成標題
+const pageTitle = computed(() => {
+    switch (selectedCategory.value) {
+        case '字形':
+            return '漢字字形輸入法繫絡圖'
+        case '拼音':
+            return '漢字拼音輸入法繫絡圖'
+        case '全部':
+        default:
+            return '漢字輸入法繫絡圖'
+    }
+})
+
 // 計算屬性：過濾後的輸入法
 const filteredSchemas = computed(() => {
     let result = schemas.value
+
+    // 按類別過濾
+    if (selectedCategory.value !== '全部') {
+        result = result.filter(s => s.category === selectedCategory.value)
+    }
 
     // 過濾停止維護的
     if (!config.value.showDeprecated) {
@@ -577,37 +597,50 @@ async function loadData() {
     error.value = null
 
     try {
-        // 加載輸入法數據
-        const data = await loadSchemas()
-        if (data.length === 0) {
+        // 同時加載兩個數據源
+        const [xingData, yinData] = await Promise.all([
+            loadSchemas('/genealogy/schemas.json'),
+            loadSchemas('/genealogy/schemas_yin.json')
+        ])
+
+        // 標記類別
+        const xingSchemas = xingData.map(s => ({ ...s, category: '字形' as const }))
+        const yinSchemas = yinData.map(s => ({ ...s, category: '拼音' as const }))
+
+        // 合併數據
+        const allData = [...xingSchemas, ...yinSchemas]
+
+        if (allData.length === 0) {
             throw new Error('無法加載數據')
         }
 
-        schemas.value = data
+        schemas.value = allData
 
         // 計算年份範圍
-        const range = getYearRange(data)
+        const range = getYearRange(allData)
         minYear.value = range.minYear
         maxYear.value = range.maxYear
 
         // 生成年份標籤（使用動態間距）
         yearLabels.value = generateYearLabels(
-            data,
+            allData,
             yearSpacingMap.value,
             config.value.emptyYearThreshold || 3,
             config.value.labelInterval || 5
         )
 
         // 獲取所有特性和作者
-        allFeatures.value = getAllFeatures(data)
-        allAuthors.value = getAllAuthors(data)
+        allFeatures.value = getAllFeatures(allData)
+        allAuthors.value = getAllAuthors(allData)
 
         // 計算連接關係（連接關係始終基於時間順序，不受倒序影響）
-        const sortedData = sortSchemasByDate(data, false)
+        const sortedData = sortSchemasByDate(allData, false)
         connections.value = calculateConnections(sortedData)
 
         console.log('數據加載完成:', {
-            總數: data.length,
+            總數: allData.length,
+            字形: xingSchemas.length,
+            拼音: yinSchemas.length,
             年份範圍: `${minYear.value}-${maxYear.value}`,
             特性數: allFeatures.value.length,
             作者數: allAuthors.value.length,
@@ -851,7 +884,8 @@ async function exportGenealogy() {
                 download: true,
                 scale: 2,
                 addWatermark: true,
-                focusedSchemaDetails: focusedSchemaDetails.value
+                focusedSchemaDetails: focusedSchemaDetails.value,
+                title: pageTitle.value
             }
         )
 
@@ -935,7 +969,7 @@ watch(() => props.config, () => {
             <div class="toolbar-compact">
                 <!-- 第一行：標題 -->
                 <div class="toolbar-header">
-                    <h2 class="toolbar-title">漢字字形輸入法繫絡圖</h2>
+                    <h2 class="toolbar-title">{{ pageTitle }}</h2>
                     <!-- 統計信息 -->
                     <span class="toolbar-stats">
                         共 {{ filteredSchemas.length }} 個輸入法 ({{ minYear }}-{{ maxYear }})
@@ -945,6 +979,31 @@ watch(() => props.config, () => {
                 <!-- 第二行：控制按鈕 -->
                 <div class="toolbar-controls">
                     <div class="toolbar-left">
+                        <!-- 大類篩選下拉菜單 -->
+                        <div class="dropdown-wrapper">
+                            <button @click="showCategoryDropdown = !showCategoryDropdown" class="dropdown-trigger">
+                                {{ selectedCategory }}
+                                <span class="dropdown-arrow">▼</span>
+                            </button>
+                            <div v-if="showCategoryDropdown" class="dropdown-menu">
+                                <div class="dropdown-item"
+                                    @click="selectedCategory = '字形'; showCategoryDropdown = false">
+                                    <input type="radio" :checked="selectedCategory === '字形'" readonly>
+                                    <span>字形</span>
+                                </div>
+                                <div class="dropdown-item"
+                                    @click="selectedCategory = '拼音'; showCategoryDropdown = false">
+                                    <input type="radio" :checked="selectedCategory === '拼音'" readonly>
+                                    <span>拼音</span>
+                                </div>
+                                <div class="dropdown-item"
+                                    @click="selectedCategory = '全部'; showCategoryDropdown = false">
+                                    <input type="radio" :checked="selectedCategory === '全部'" readonly>
+                                    <span>全部</span>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- 方案篩選下拉菜單 -->
                         <div class="dropdown-wrapper">
                             <button @click="showSchemaDropdown = !showSchemaDropdown" class="dropdown-trigger">
