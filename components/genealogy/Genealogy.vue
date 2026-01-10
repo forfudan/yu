@@ -35,6 +35,7 @@ import {
     getConnectionStrokeWidth,
     shouldShowConnection
 } from './connectionRenderer'
+import { GenealogyExportService } from './exportService'
 
 // Props
 const props = withDefaults(defineProps<{
@@ -111,6 +112,11 @@ const showAuthorDropdown = ref(false)
 // 連接關係狀態
 const connections = ref<Connection[]>([])
 const connectionFilterType = ref<'feature' | 'author' | null>(null)
+
+// 導出功能相關狀態
+const isExporting = ref(false)
+const exportMessage = ref('')
+const canvasWrapper = ref<HTMLElement | null>(null)
 
 // 主题检测
 const isDark = ref(false)
@@ -830,6 +836,49 @@ function handleFullscreenChange() {
     )
 }
 
+// 導出繫絡圖功能
+async function exportGenealogy() {
+    if (isExporting.value || !canvasWrapper.value) return
+
+    isExporting.value = true
+    exportMessage.value = ''
+
+    try {
+        const result = await GenealogyExportService.exportGenealogyToPNG(
+            canvasWrapper.value,
+            {
+                copyToClipboard: false,
+                download: true,
+                scale: 2,
+                addWatermark: true,
+                focusedSchemaDetails: focusedSchemaDetails.value
+            }
+        )
+
+        if (result.success) {
+            exportMessage.value = result.message
+            console.log('繫絡圖導出成功:', result.filename)
+        } else {
+            exportMessage.value = result.message
+            console.error('繫絡圖導出失敗:', result.message)
+        }
+
+        // 3秒後清除消息
+        setTimeout(() => {
+            exportMessage.value = ''
+        }, 3000)
+    } catch (error) {
+        exportMessage.value = `導出失敗: ${error instanceof Error ? error.message : '未知錯誤'}`
+        console.error('導出繫絡圖時出錯:', error)
+
+        setTimeout(() => {
+            exportMessage.value = ''
+        }, 5000)
+    } finally {
+        isExporting.value = false
+    }
+}
+
 // 組件掛載時加載數據
 onMounted(() => {
     loadData()
@@ -901,7 +950,7 @@ watch(() => props.config, () => {
                             <button @click="showSchemaDropdown = !showSchemaDropdown" class="dropdown-trigger">
                                 方案
                                 <span v-if="selectedSchemas.length > 0" class="badge">{{ selectedSchemas.length
-                                    }}</span>
+                                }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showSchemaDropdown" class="dropdown-menu" @click.stop>
@@ -921,7 +970,7 @@ watch(() => props.config, () => {
                             <button @click="showAuthorDropdown = !showAuthorDropdown" class="dropdown-trigger">
                                 作者
                                 <span v-if="selectedAuthors.length > 0" class="badge">{{ selectedAuthors.length
-                                    }}</span>
+                                }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showAuthorDropdown" class="dropdown-menu" @click.stop>
@@ -941,7 +990,7 @@ watch(() => props.config, () => {
                             <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
                                 特徵
                                 <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length
-                                    }}</span>
+                                }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
@@ -964,6 +1013,12 @@ watch(() => props.config, () => {
                                 class="scale-slider-inline" />
                         </div>
 
+                        <!-- 導出按鈕 -->
+                        <button @click="exportGenealogy" class="btn-compact export-btn" :disabled="isExporting"
+                            :title="isExporting ? '正在導出...' : '截圖下載當前可見的繫絡圖'">
+                            {{ isExporting ? '⏳' : '📷' }}
+                        </button>
+
                         <!-- 全屏按鈕 -->
                         <button @click="toggleFullscreen" class="btn-compact"
                             :title="isFullscreen ? '退出全屏 (ESC)' : '進入全屏'">
@@ -978,8 +1033,13 @@ watch(() => props.config, () => {
                 @click="showSchemaDropdown = false; showFeatureDropdown = false; showAuthorDropdown = false">
             </div>
 
+            <!-- 導出消息提示 -->
+            <div v-if="exportMessage" class="export-message">
+                {{ exportMessage }}
+            </div>
+
             <!-- 畫布區域 -->
-            <div class="canvas-wrapper">
+            <div ref="canvasWrapper" class="canvas-wrapper">
                 <svg :width="config.width" :height="canvasHeight" class="genealogy-svg">
                     <!-- 定義箭頭標記 -->
                     <defs>
@@ -1189,8 +1249,8 @@ watch(() => props.config, () => {
 }
 
 .fullscreen-mode .genealogy-content {
-    width: 90vw;
-    max-width: 1200px;
+    width: fit-content;
+    max-width: 90vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -1238,6 +1298,8 @@ watch(() => props.config, () => {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    width: fit-content;
+    max-width: 100%;
 }
 
 /* 簡化工具欄 - 兩行版本 */
@@ -1587,8 +1649,58 @@ watch(() => props.config, () => {
     border-color: rgb(165, 180, 252);
 }
 
+/* 導出按鈕特殊樣式 */
+.export-btn {
+    position: relative;
+}
+
+.export-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.export-btn:disabled:hover {
+    transform: none;
+    background: var(--vp-c-bg, #ffffff);
+}
+
+:global(.dark) .export-btn:disabled:hover {
+    background: var(--vp-c-bg, #1f2937);
+}
+
+/* 導出消息提示 */
+.export-message {
+    padding: 0.75rem 1rem;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 0.5rem;
+    color: rgb(21, 128, 61);
+    font-size: 0.875rem;
+    text-align: center;
+    animation: slideDown 0.3s ease-out;
+}
+
+:global(.dark) .export-message {
+    background: rgba(34, 197, 94, 0.15);
+    border-color: rgba(34, 197, 94, 0.4);
+    color: rgb(134, 239, 172);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .canvas-wrapper {
     position: relative;
+    width: fit-content;
     overflow: auto;
     border: 1px solid var(--vp-c-divider, #e2e8f0);
     border-radius: 0.5rem;
