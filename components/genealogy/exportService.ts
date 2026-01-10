@@ -4,9 +4,9 @@ export class GenealogyExportService {
     /**
      * 生成文件名
      */
-    static generateFileName(): string {
+    static generateFileName(title: string = '漢字字形輸入法繫絡圖'): string {
         const today = new Date().toISOString().split('T')[0].replace(/-/g, '')
-        return `漢字字形輸入法繫絡圖${today}.png`
+        return `${title}${today}.png`
     }
 
     /**
@@ -166,6 +166,7 @@ export class GenealogyExportService {
             scale?: number
             addWatermark?: boolean
             focusedSchemaDetails?: any
+            title?: string
         } = {}
     ) {
         const {
@@ -173,7 +174,8 @@ export class GenealogyExportService {
             download = true,
             scale = 2,
             addWatermark = true,
-            focusedSchemaDetails = null
+            focusedSchemaDetails = null,
+            title = '漢字字形輸入法繫絡圖'
         } = options
 
         // 找到實際的 SVG 容器
@@ -234,7 +236,7 @@ export class GenealogyExportService {
                 background: transparent;
                 font-family: 'Noto Serif SC', serif;
             `
-            titleElement.textContent = '漢字字形輸入法繫絡圖'
+            titleElement.textContent = title
             contentElement.insertBefore(titleElement, contentElement.firstChild)
 
             // 等待樣式應用
@@ -283,7 +285,7 @@ export class GenealogyExportService {
 
             // 獲取圖片數據
             const dataUrl = canvas.toDataURL('image/png', 1.0)
-            const filename = this.generateFileName()
+            const filename = this.generateFileName(title)
 
             // 複製到剪貼板（如果启用）
             if (copyToClipboard && this.isClipboardSupported()) {
