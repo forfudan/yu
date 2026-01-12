@@ -893,6 +893,7 @@ bke	軍
 bla	親
 ble	韵
 bna	尔
+bri	写
 cla	鐵
 cmi	麽
 cna	京
@@ -1010,6 +1011,7 @@ vnu	海
 vsi	法
 wle	话
 wte	以
+wwu	书
 xdi	想
 xdu	相
 xri	樣

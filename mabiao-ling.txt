@@ -893,6 +893,7 @@ bke	軍
 bla	親
 ble	韵
 bna	尔
+bri	写
 cla	鐵
 cmi	麽
 cna	京
@@ -1010,6 +1011,7 @@ vnu	海
 vsi	法
 wle	话
 wte	以
+wwu	书
 xdi	想
 xdu	相
 xri	樣
@@ -128384,7 +128386,9 @@ kfvm	宇浩
 hrgm	星陈
 wmrj	卿云
 nxjt	光华
+bjhr	灵明
 djnn	中华人民共和国
+mjvs	输入法
 mjcm	爲什麽
 tjcm	為什麼
 hrhv	越來越
@@ -130830,4 +130834,6 @@ bjkl	盡力
 hrgx	星陳
 wmdy	卿雲
 nxqq	光華
+dyhr	靈明
 dqnn	中華人民共和國
+kjvs	輸入法
