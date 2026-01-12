@@ -1212,7 +1212,7 @@
             "字母編碼",
             "25鍵"
         ],
-        "description": ""
+        "description": "取卿雲前三碼，整句輸入。"
     },
     {
         "id": "yuming",
