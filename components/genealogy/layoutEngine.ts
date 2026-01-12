@@ -156,8 +156,8 @@ function layoutInColumnsSequentially(
     const rightMargin = 50
     const availableWidth = canvasWidth - leftMargin - rightMargin
 
-    // 固定 4 列
-    const columnsCount = 4
+    // 固定 5 列
+    const columnsCount = 5
     const columnWidth = availableWidth / columnsCount
 
     // 三次哈希函數：用於生成穩定的隨機偏移
@@ -181,10 +181,11 @@ function layoutInColumnsSequentially(
         return (hash % maxOffset) - maxOffset / 2
     }
 
-    // 按時間順序循環分配：1 - 2 - 3 - 0 - 1 - 2 - 3 - 0 ...
+    // 按時間順序循環分配：3 - 4 - 5 - 1 - 2 - 3 - 4 - 5 - 1 - 2 ...
+    // 即從第3列開始（索引2），按 2, 3, 4, 0, 1, 2, 3, 4, 0, 1 ... 循環
     schemasWithY.forEach((item, index) => {
-        // 列索引：循環 1, 2, 3, 0, 1, 2, 3, 0 ...
-        const colIndex = (index + 1) % columnsCount
+        // 列索引：循環 2, 3, 4, 0, 1, 2, 3, 4, 0, 1 ...
+        const colIndex = (index + 2) % columnsCount
 
         // 列的基礎 X 坐標（列中心）
         const baseX = leftMargin + columnWidth * colIndex + columnWidth / 2
