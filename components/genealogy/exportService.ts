@@ -62,11 +62,10 @@ export class GenealogyExportService {
                 justify-content: center;
             `
             leftDiv.innerHTML = `
-                <div style="font-weight: 600;">宇浩系列輸入法</div>
-                <div>官網：shurufa.app</div>
+                <div style="font-weight: 600;">宇浩系列輸入法·雜談</div>
+                <div>官網：shurufa.app/docs/gene</div>
                 <div>QQ 討論群：170510762</div>
             `
-
             // 右側：懸浮信息窗
             const rightDiv = document.createElement('div')
             // 使用與網頁完全一致的浮動提示樣式
