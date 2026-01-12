@@ -137,6 +137,24 @@
         "url": "https://www.zrmfans.cn/"
     },
     {
+        "id": "snow4",
+        "name": "冰雪四拼",
+        "authors": [
+            "譚淞宸"
+        ],
+        "date": "20240427",
+        "features": [
+            "純音",
+            "包含聲調",
+            "頂功",
+            "字詞",
+            "碼長無上限",
+            "26鍵"
+        ],
+        "description": "",
+        "url": "https://input.tansongchen.com/snow4/"
+    },
+    {
         "id": "moqi",
         "name": "墨奇音形",
         "authors": [
