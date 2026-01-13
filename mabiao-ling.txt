@@ -952,6 +952,7 @@ kru	卡
 kso	掌
 kva	到
 kxo	空
+kye	寶
 ldi	所
 lha	然
 lja	刚
