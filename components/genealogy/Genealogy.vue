@@ -1133,7 +1133,8 @@ watch(selectedCategory, () => {
 
             <!-- 畫布區域 -->
             <div ref="canvasWrapper" class="canvas-wrapper">
-                <svg :width="config.width" :height="canvasHeight" class="genealogy-svg">
+                <svg :width="config.width" :height="canvasHeight" :viewBox="`0 0 ${config.width} ${canvasHeight}`"
+                    preserveAspectRatio="xMidYMin meet" class="genealogy-svg">
                     <!-- 定義箭頭標記 -->
                     <defs>
                         <marker id="arrow-feature" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5"
@@ -1391,7 +1392,7 @@ watch(selectedCategory, () => {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: fit-content;
+    width: 100%;
     max-width: 100%;
 }
 
@@ -1404,6 +1405,16 @@ watch(selectedCategory, () => {
     background: var(--vp-c-bg-soft, #f8fafc);
     border-radius: 0.5rem;
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 宽屏时限制最大宽度，与画布保持一致 */
+@media (min-width: 1024px) {
+    .toolbar-compact {
+        max-width: fit-content;
+        min-width: 840px;
+    }
 }
 
 :global(.dark) .toolbar-compact {
@@ -1793,11 +1804,21 @@ watch(selectedCategory, () => {
 
 .canvas-wrapper {
     position: relative;
-    width: fit-content;
-    overflow: auto;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
     border: 1px solid var(--vp-c-divider, #e2e8f0);
     border-radius: 0.5rem;
     background: var(--vp-c-bg, #ffffff);
+    box-sizing: border-box;
+}
+
+/* 宽屏时限制最大宽度 */
+@media (min-width: 1024px) {
+    .canvas-wrapper {
+        max-width: fit-content;
+        min-width: 840px;
+    }
 }
 
 :global(.dark) .canvas-wrapper {
@@ -1807,6 +1828,15 @@ watch(selectedCategory, () => {
 
 .genealogy-svg {
     display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 宽屏时使用固定宽度 */
+@media (min-width: 1024px) {
+    .genealogy-svg {
+        max-width: none;
+    }
 }
 
 /* SVG 性能優化：限制重排範圍 */
