@@ -65,8 +65,9 @@ const config = computed<GenealogyConfig>(() => ({
     ...props.config
 }))
 
-// 數據狀態
-const schemas = ref<SchemaData[]>([])
+// 數據狀態 - 分別存儲兩個數據源
+const xingSchemas = ref<SchemaData[]>([])
+const yinSchemas = ref<SchemaData[]>([])
 const yearLabels = ref<YearLabel[]>([])
 const loading = ref(true)
 const error = ref<string | null>(null)
@@ -152,14 +153,24 @@ const pageTitle = computed(() => {
     }
 })
 
+// 計算屬性：根據類別選擇返回當前應該使用的schemas（核心：數據源切換）
+const schemas = computed(() => {
+    switch (selectedCategory.value) {
+        case '字形':
+            return xingSchemas.value
+        case '字音':
+            return yinSchemas.value
+        case '全部':
+        default:
+            return [...xingSchemas.value, ...yinSchemas.value]
+    }
+})
+
 // 計算屬性：過濾後的輸入法
 const filteredSchemas = computed(() => {
     let result = schemas.value
 
-    // 按類別過濾
-    if (selectedCategory.value !== '全部') {
-        result = result.filter(s => s.category === selectedCategory.value)
-    }
+    // 注意：不需要按類別過濾，因為schemas已經根據selectedCategory返回了對應的數據
 
     // 過濾停止維護的
     if (!config.value.showDeprecated) {
@@ -603,52 +614,21 @@ async function loadData() {
             loadSchemas('/genealogy/schemas_yin.json')
         ])
 
-        // 標記類別
-        const xingSchemas = xingData.map(s => ({ ...s, category: '字形' as const }))
-        const yinSchemas = yinData.map(s => ({ ...s, category: '字音' as const }))
+        // 標記類別並分別存儲
+        xingSchemas.value = xingData.map(s => ({ ...s, category: '字形' as const }))
+        yinSchemas.value = yinData.map(s => ({ ...s, category: '字音' as const }))
 
-        // 合併數據
-        const allData = [...xingSchemas, ...yinSchemas]
-
-        if (allData.length === 0) {
+        if (xingSchemas.value.length === 0 && yinSchemas.value.length === 0) {
             throw new Error('無法加載數據')
         }
 
-        schemas.value = allData
-
-        // 計算年份範圍
-        const range = getYearRange(allData)
-        minYear.value = range.minYear
-        maxYear.value = range.maxYear
-
-        // 生成年份標籤（使用動態間距）
-        yearLabels.value = generateYearLabels(
-            allData,
-            yearSpacingMap.value,
-            config.value.emptyYearThreshold || 3,
-            config.value.labelInterval || 5
-        )
-
-        // 獲取所有特性和作者
-        allFeatures.value = getAllFeatures(allData)
-        allAuthors.value = getAllAuthors(allData)
-
-        // 計算連接關係（連接關係始終基於時間順序，不受倒序影響）
-        const sortedData = sortSchemasByDate(allData, false)
-        connections.value = calculateConnections(sortedData)
-
         console.log('數據加載完成:', {
-            總數: allData.length,
-            字形: xingSchemas.length,
-            字音: yinSchemas.length,
-            年份範圍: `${minYear.value}-${maxYear.value}`,
-            特性數: allFeatures.value.length,
-            作者數: allAuthors.value.length,
-            連接數: connections.value.length,
-            特性連接: connectionStats.value.featureConnections,
-            作者連接: connectionStats.value.authorConnections,
-            相似連接: connectionStats.value.similarConnections
+            字形: xingSchemas.value.length,
+            字音: yinSchemas.value.length
         })
+
+        // 觸發初始計算（通過schemas的computed屬性自動觸發）
+        recalculateAll()
 
     } catch (err) {
         error.value = err instanceof Error ? err.message : '加載失敗'
@@ -656,6 +636,43 @@ async function loadData() {
     } finally {
         loading.value = false
     }
+}
+
+// 重新計算所有依賴schemas的屬性
+function recalculateAll() {
+    const currentSchemas = schemas.value
+
+    if (currentSchemas.length === 0) return
+
+    // 計算年份範圍
+    const range = getYearRange(currentSchemas)
+    minYear.value = range.minYear
+    maxYear.value = range.maxYear
+
+    // 生成年份標籤（使用動態間距）
+    yearLabels.value = generateYearLabels(
+        currentSchemas,
+        yearSpacingMap.value,
+        config.value.emptyYearThreshold || 3,
+        config.value.labelInterval || 5
+    )
+
+    // 獲取所有特性和作者
+    allFeatures.value = getAllFeatures(currentSchemas)
+    allAuthors.value = getAllAuthors(currentSchemas)
+
+    // 計算連接關係（連接關係始終基於時間順序，不受倒序影響）
+    const sortedData = sortSchemasByDate(currentSchemas, false)
+    connections.value = calculateConnections(sortedData)
+
+    console.log('重新計算完成:', {
+        類別: selectedCategory.value,
+        方案數: currentSchemas.length,
+        年份範圍: `${minYear.value}-${maxYear.value}`,
+        特性數: allFeatures.value.length,
+        作者數: allAuthors.value.length,
+        連接數: connections.value.length
+    })
 }
 
 // 點擊卡片
@@ -947,6 +964,23 @@ watch(() => props.config, () => {
         config.value.labelInterval || 5
     )
 }, { deep: true })
+
+// 監聽類別變化，重新計算所有內容
+watch(selectedCategory, () => {
+    console.log('類別切換:', selectedCategory.value)
+    // 清除當前的關注和篩選狀態
+    focusedSchemaId.value = null
+    pinnedLabelConnection.value = null
+    hoveredLabelConnection.value = null
+    selectedSchemas.value = []
+    selectedFeatures.value = []
+    selectedAuthors.value = []
+    searchQuery.value = ''
+    customOffsets.value.clear()
+
+    // 重新計算所有內容
+    recalculateAll()
+})
 </script>
 
 <template>
@@ -1009,7 +1043,7 @@ watch(() => props.config, () => {
                             <button @click="showSchemaDropdown = !showSchemaDropdown" class="dropdown-trigger">
                                 方案
                                 <span v-if="selectedSchemas.length > 0" class="badge">{{ selectedSchemas.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showSchemaDropdown" class="dropdown-menu" @click.stop>
@@ -1029,7 +1063,7 @@ watch(() => props.config, () => {
                             <button @click="showAuthorDropdown = !showAuthorDropdown" class="dropdown-trigger">
                                 作者
                                 <span v-if="selectedAuthors.length > 0" class="badge">{{ selectedAuthors.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showAuthorDropdown" class="dropdown-menu" @click.stop>
@@ -1049,7 +1083,7 @@ watch(() => props.config, () => {
                             <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
                                 特徵
                                 <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
