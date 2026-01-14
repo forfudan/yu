@@ -30,7 +30,7 @@ bn	負責
 bp	色彩
 bq	堅持
 br	写作
-bt	解决
+bt	角度
 bv	航空
 cb	绝对
 cc	纪录
@@ -837,7 +837,7 @@ e	的
 o	我
 u	不
 ba	群
-bu	部
+bu	解
 ca	前
 ce	给
 co	就
@@ -892,6 +892,7 @@ bjsi	晝
 bke	軍
 bla	親
 ble	韵
+blu	部
 bna	尔
 bri	写
 cla	鐵
