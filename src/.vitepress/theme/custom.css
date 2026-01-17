@@ -2,9 +2,44 @@ th {
   white-space: nowrap;
 }
 
+/* ===== Logo 图片渲染优化 ===== */
+/* 防止 Cloudflare 等 CDN 对 PNG 透明度处理错误，同时修复深色模式下的黑边问题 */
+.VPImage.logo,
+.VPNavBarTitle .VPImage,
+.VPNavBarTitle .logo,
+img[src*="logo"] {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  /* 关键：移除任何可能的背景色 */
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* 深色模式下的特殊处理 */
+.dark .VPImage.logo,
+.dark .VPNavBarTitle .VPImage,
+.dark .VPNavBarTitle .logo,
+.dark img[src*="logo"] {
+  filter: none !important;
+  backdrop-filter: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  /* 移除任何可能的阴影或边框 */
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
 :root {
   /* 宇浩字根字體優先 */
-  --vp-font-family-base: 'yuhao-font',
+  --vp-font-family-base:
+    'yuhao-font',
+    'Noto Sans SC',
+    'Noto Sans TC',
     'Chinese Quotes',
     'Inter var',
     'Inter',
@@ -634,27 +669,5 @@ html.dark *::-webkit-scrollbar-thumb:hover {
 /* 針對導航欄中的外部鏈接隱藏箭頭圖標 */
 .VPNavBar .VPNavBarMenuLink .vp-external-link-icon::after,
 .VPNavBar .VPNavBarMenuLink.vp-external-link-icon::after {
-  display: none !important;
-}
-
-/* ===== 语言切换按钮样式优化 ===== */
-/* 隐藏语言选择下拉菜单 */
-.VPNavBarTranslations .VPMenu {
-  display: none !important;
-}
-
-/* 让语言按钮在繁体时改变文字颜色 */
-.VPNavBarTranslations button.lang-active {
-  color: var(--vp-c-brand-1) !important;
-}
-
-/* 调整按钮文本显示 */
-.VPNavBarTranslations .text {
-  font-family: 'Noto Sans SC', 'Noto Sans TC', sans-serif;
-  font-weight: 500;
-}
-
-/* 隐藏语言按钮的下拉箭头图标 */
-.VPNavBarTranslations .vpi-chevron-down {
   display: none !important;
 }

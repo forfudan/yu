@@ -4,16 +4,16 @@
   "private": true,
   "description": "",
   "devDependencies": {
-    "@types/node": "^20.11.24",
-    "autoprefixer": "^10.4.18",
-    "daisyui": "^4.7.2",
+    "@types/node": "^20.19.30",
+    "autoprefixer": "^10.4.23",
+    "daisyui": "^4.12.24",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
     "medium-zoom": "^1.1.0",
-    "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19",
     "vitepress": "1.0.0-rc.44",
-    "vue": "^3.4.21"
+    "vue": "^3.5.26"
   },
   "repository": {
     "type": "git",
@@ -31,8 +31,8 @@
     "verify": "node scripts/verify-build.js"
   },
   "dependencies": {
-    "@vueuse/core": "^10.9.0",
-    "hanzi-writer": "^3.7.2",
-    "html2canvas-pro": "^1.5.11"
+    "@vueuse/core": "^10.11.1",
+    "hanzi-writer": "^3.7.3",
+    "html2canvas-pro": "^1.6.4"
   }
 }

@@ -1,7 +1,6 @@
 font,ma,pinyin
 乂,bi,Yì 🈤不取聲母
 ,bi,
-九,bju,Jiǔ -> Ju
 冖,bi,Mì 🈤不取聲母 ㊟俗稱秃寶蓋
 ,bi,㊟同冖歸併
 ,bi,㊟同冖歸併 ㊕不做末根
@@ -14,7 +13,6 @@ font,ma,pinyin
 臣,be,Ĉén -> Ce 🈤不取聲母
 ,bi,Yí 🈤不取聲母 ㊟熙左上
 ,bi,Yí 🈤不取聲母
-舟,bvo,Ẑōu -> Vo 🈤Z和Ẑ作V
 虫,bo,Ĉóŋ -> Co 🈤不取聲母 🈕Huǐ
 门,bme,Mén -> Me
 丷,ca,Bā 🈤不取聲母
@@ -46,14 +44,15 @@ font,ma,pinyin
 口,do,Kǒu -> Ko 🈤不取聲母
 〇,do,㊟同口歸併
 早,da,Zǎo -> Va 🈤Z和Ẑ作V但不取聲母
-皮,dpi,Pí
 目,dmu,Mù
 耳,dje,ěr -> Je 🈤零聲母小碼取J
 雨,dyu,Yǔ
+,do,🈤無讀音取o ㊕不做末根
 鸟,dna,Niǎo -> Na
 ,dna,
 乌,dwu,Wū
-,do,🈤無讀音取o ㊕不做末根
+舟,dvo,Ẑōu -> Vo 🈤Z和Ẑ作V
+皮,dpi,Pí
 斤,dji,Jīn -> Ji
 一,fi,Yī 🈤基本筆畫不取聲母 ㊟俗稱横
 厂,fa,Ĉǎŋ -> Ca 🈤不取聲母 🈕Hǎn Yán ān
@@ -321,6 +320,7 @@ font,ma,pinyin
 ,so,🈤無讀音取o ㊕不做末根
 尤,syo,Yóu -> Yo
 尢,so,Yóu -> Yo 🈤不取聲母 🈑尤本字 🈕Wāŋ
+九,sju,Jiǔ -> Ju
 廴,si,Yín -> Yi 🈤不取聲母
 豕,ssi,Ŝǐ
 ,ssi,㊟同豕歸併 🈕Gēng

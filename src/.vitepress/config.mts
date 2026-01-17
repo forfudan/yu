@@ -22,7 +22,9 @@ export default defineConfig({
     },
   },
   head: [
-    ["link", { rel: "icon", href: "/logo_blue.png", type: "image/png" }]
+    ["link", { rel: "icon", href: "/logo_blue.png", type: "image/png" }],
+    ["meta", { name: "cf-edge-cache", content: "no-transform" }],
+    ["meta", { "http-equiv": "Cache-Control", content: "no-transform" }]
   ],
   vite: {
     css: {

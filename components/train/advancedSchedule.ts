@@ -320,31 +320,35 @@ export class AdvancedSchedule {
      * 保存到本地存儲
      */
     private saveToStorage(): void {
-        if (typeof localStorage !== 'undefined') {
-            const data = {
-                items: Array.from(this.items.entries()),
-                currentLearningIndex: this.currentLearningIndex,
-                practiceCounter: this.practiceCounter,
-                totalGroups: this.totalGroups
-            };
-            localStorage.setItem(this.storageKey, JSON.stringify(data));
+        if (typeof window !== 'undefined' && typeof localStorage !== 'undefined' && typeof localStorage.setItem === 'function') {
+            try {
+                const data = {
+                    items: Array.from(this.items.entries()),
+                    currentLearningIndex: this.currentLearningIndex,
+                    practiceCounter: this.practiceCounter,
+                    totalGroups: this.totalGroups
+                };
+                localStorage.setItem(this.storageKey, JSON.stringify(data));
+            } catch (error) {
+                console.warn('保存存儲數據失敗:', error);
+            }
         }
     }    /**
      * 從本地存儲加載
      */
     private loadFromStorage(): void {
-        if (typeof localStorage !== 'undefined') {
-            const saved = localStorage.getItem(this.storageKey);
-            if (saved) {
-                try {
+        if (typeof window !== 'undefined' && typeof localStorage !== 'undefined' && typeof localStorage.getItem === 'function') {
+            try {
+                const saved = localStorage.getItem(this.storageKey);
+                if (saved) {
                     const data = JSON.parse(saved);
                     this.items = new Map(data.items || []);
                     this.currentLearningIndex = data.currentLearningIndex || 0;
                     this.practiceCounter = data.practiceCounter || 0;
                     this.totalGroups = data.totalGroups || 0;
-                } catch (error) {
-                    console.warn('載入存儲數據失敗:', error);
                 }
+            } catch (error) {
+                console.warn('載入存儲數據失敗:', error);
             }
         }
     }
