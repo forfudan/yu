@@ -2,6 +2,7 @@
   CharTrain.vue - 單字練習組件
   
   Modification History:
+  - 2026-01-17 by 朱宇浩: 添加速度評級、連擊和分數系統，優化UI佈局
   - 2025-12-23 by 朱宇浩: 允許前綴碼方案在單字練習中輸入無空格簡碼
   - 2025-12-22 by 朱宇浩: 合併 TrainCard.vue，升級使用 advancedSchedule.ts，現代化UI設計
   - 2025-08-14 by 朱宇浩: 增加參數 ming，允許日月字根訓練對五個一碼上屏字增加兼容輸入
@@ -13,7 +14,7 @@
 -->
 
 <script setup lang="ts">
-/** 单字练习 */
+/** 單字練習 */
 import { shallowRef, onMounted, ref, watch, nextTick, computed, onBeforeUnmount } from "vue";
 import { Card, cache, fetchChaifenOptimized, fetchZigen, makeCodesFromDivision, ChaifenMap } from "./share";
 import { AdvancedSchedule } from "./advancedSchedule";
@@ -69,6 +70,52 @@ const userKeys = shallowRef('')
 const forceUpdate = ref(0)
 const showResetConfirm = ref(false)
 const wrongInputCount = ref(0)
+
+// 速度評級和分數系統
+const questionStartTime = ref(0)
+const responseTime = ref(0)
+const combo = ref(0)
+const maxCombo = ref(0)
+const score = ref(0)
+const speedRating = ref<{ level: string; score: number; color: string } | null>(null)
+const showSpeedEffect = ref(false)
+
+// 速度評級系統
+const getSpeedRating = (time: number) => {
+  if (time < 500) return { level: '極速', score: 10, color: 'text-yellow-400' }
+  if (time < 1000) return { level: '高速', score: 8, color: 'text-orange-400' }
+  if (time < 1500) return { level: '快速', score: 6, color: 'text-green-400' }
+  if (time < 2000) return { level: '普速', score: 4, color: 'text-blue-400' }
+  if (time < 3000) return { level: '慢速', score: 2, color: 'text-gray-400' }
+  return { level: '慢速', score: 1, color: 'text-red-400' }
+}
+
+// 連擊倍數計算
+const multiplier = computed(() => {
+  if (combo.value >= 100) return 5
+  if (combo.value >= 50) return 4
+  if (combo.value >= 30) return 3
+  if (combo.value >= 20) return 2.5
+  if (combo.value >= 10) return 2
+  if (combo.value >= 5) return 1.5
+  return 1
+})
+
+// 添加分數
+const addScore = (baseScore: number) => {
+  const finalScore = Math.floor(baseScore * multiplier.value)
+  score.value += finalScore
+  return finalScore
+}
+
+// 顯示速度特效
+const displaySpeedEffect = (rating: { level: string; score: number; color: string }) => {
+  speedRating.value = rating
+  showSpeedEffect.value = true
+  setTimeout(() => {
+    showSpeedEffect.value = false
+  }, 1500)
+}
 
 // 讀取和過濾碼表的函數
 async function loadAndFilterMabiao() {
@@ -223,7 +270,7 @@ onMounted(async () => {
     return;
   }
 
-  // 使用优化的JSON格式读取拆分数据
+  // 使用優化的JSON格式讀取拆分數據
   chaifenMap.value = await fetchChaifenOptimized(p.chaifenUrl)
   const fetchedZigenMap = await fetchZigen(p.zigenUrl)
   zigenMap.value = fetchedZigenMap
@@ -241,7 +288,7 @@ onMounted(async () => {
 
   cache[cardsName] = cards.value
 
-  /** 生成复习计划时，需要读取localStorage，所以要放到onMounted里执行 */
+  /** 生成復習計劃時，需要讀取localStorage，所以要放到onMounted里執行 */
   thisSchedule = new AdvancedSchedule(cardsName)
   thisSchedule.initializeWithGroupCount(cards.value.length)
   const nextIdx = thisSchedule.getNextIndex()
@@ -315,12 +362,26 @@ const handleCorrectAnswer = () => {
 
   isCorrect.value = true
 
+  // 计算响应时间和速度评级
+  responseTime.value = Date.now() - questionStartTime.value
+  const rating = getSpeedRating(responseTime.value)
+
+  // 连击
+  combo.value++
+  maxCombo.value = Math.max(maxCombo.value, combo.value)
+
+  // 分数
+  addScore(rating.score)
+
+  // 显示速度特效
+  displaySpeedEffect(rating)
+
   // 使用基於索引的調度演算法記錄成功
   thisSchedule.recordSuccess(currentIndex.value)
   // 觸發進度條更新
   forceUpdate.value++
 
-  // 立即進入下一個字符，無延遲
+  // 立即进入下一题，不阻塞用户
   nextChar()
 }
 
@@ -330,6 +391,9 @@ const handleWrongAnswer = () => {
   isCorrect.value = false
   wrongInputCount.value++
   isFirstLearn.value = false  // 顯示答案後不再是第一次學習
+
+  // 重置连击
+  combo.value = 0
 
   // 使用基於索引的調度演算法記錄失敗
   thisSchedule.recordFailure(currentIndex.value)
@@ -360,6 +424,11 @@ const nextChar = () => {
   isCorrect.value = true
   wrongInputCount.value = 0
   userKeys.value = ''
+  // speedRating.value = null  // 不清空，保持显示上一次的评级
+  // showSpeedEffect.value = false  // 不需要了
+
+  // 记录题目开始时间
+  questionStartTime.value = Date.now()
 
   // 檢查是否為第一次見到此字符，如果是則直接顯示答案
   if (thisSchedule.isFirstTime(currentIndex.value)) {
@@ -381,6 +450,13 @@ function restartTraining() {
 
   isCompleted.value = false
   forceUpdate.value++
+
+  // 重置分数系统
+  combo.value = 0
+  maxCombo.value = 0
+  score.value = 0
+  speedRating.value = null
+  showSpeedEffect.value = false
 
   // 開始第一個字符
   nextChar()
@@ -430,10 +506,24 @@ const handleKeydown = (event: KeyboardEvent) => {
     <div class="mb-8">
       <div class="text-6xl mb-4">🎉</div>
       <h2 class="text-4xl font-bold mb-2">恭喜你完成練習！</h2>
-      <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">
+      <p class="text-xl text-gray-600 dark:text-gray-400 mb-4">
         你已經完成了 {{ cards.length }} 個單字的練習。
         感謝你的努力和堅持，為中華文明和漢字的傳承又增添了一份力量！
       </p>
+
+      <!-- 最终统计 -->
+      <div class="flex justify-center gap-8 mb-8">
+        <div
+          class="bg-gradient-to-br from-yellow-100 to-yellow-200 dark:from-yellow-900/30 dark:to-yellow-800/30 rounded-xl px-6 py-4">
+          <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">總分</div>
+          <div class="text-3xl font-bold text-yellow-700 dark:text-yellow-400">{{ score }}</div>
+        </div>
+        <div
+          class="bg-gradient-to-br from-red-100 to-red-200 dark:from-red-900/30 dark:to-red-800/30 rounded-xl px-6 py-4">
+          <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">最高連擊</div>
+          <div class="text-3xl font-bold text-red-700 dark:text-red-400">{{ maxCombo }}</div>
+        </div>
+      </div>
     </div>
 
     <div class="space-y-4">
@@ -464,7 +554,13 @@ const handleKeydown = (event: KeyboardEvent) => {
         ]">
           <span>已練習: {{ practiceProgress.current }} / {{ practiceProgress.total }} ({{ practiceProgress.percentage
           }}%) | 已掌握: {{ practiceProgress.mastered }}</span>
-          <span v-if="wrongInputCount > 0" class="text-red-600 dark:text-red-400">錯誤次數: {{ wrongInputCount }}</span>
+          <div class="flex items-center gap-3">
+            <span class="font-semibold text-yellow-600 dark:text-yellow-400">分數: {{ score }}</span>
+            <span v-if="combo > 0" class="font-semibold text-red-600 dark:text-red-400">連擊: {{ combo }}x</span>
+            <span v-if="multiplier > 1" class="font-semibold text-orange-600 dark:text-orange-400">倍數: {{ multiplier
+            }}x</span>
+            <span v-if="wrongInputCount > 0" class="text-red-600 dark:text-red-400">錯誤: {{ wrongInputCount }}</span>
+          </div>
         </div>
         <div :class="[
           'w-full bg-gray-200 dark:bg-gray-700 rounded-full',
@@ -537,10 +633,23 @@ const handleKeydown = (event: KeyboardEvent) => {
         </button>
       </div>
 
+      <!-- 速度評級 - 固定在卡片左下角，透明背景 -->
+      <div :class="[
+        'absolute z-30 bottom-4 left-4 font-bold drop-shadow-lg',
+        windowWidth < 768 ? 'text-base' : 'text-xl'
+      ]">
+        <div v-if="speedRating" :class="speedRating.color">
+          {{ speedRating.level }} <span class="text-sm">+{{ Math.floor(speedRating.score * multiplier) }}</span>
+        </div>
+        <div v-else class="text-gray-400 text-sm">
+          等待輸入...
+        </div>
+      </div>
+
       <!-- 漢字和拆分圖顯示 -->
       <div :class="[
         'text-center flex items-center justify-center',
-        windowWidth < 768 ? 'h-40 py-4' : 'h-56 py-8'
+        windowWidth < 768 ? 'h-32 py-2' : 'h-40 py-4'
       ]">
         <div :class="[
           'flex items-center justify-center',
@@ -568,7 +677,7 @@ const handleKeydown = (event: KeyboardEvent) => {
       <!-- 輸入區域 -->
       <div :class="[
         'flex justify-center',
-        windowWidth < 768 ? 'pt-2 pb-3' : 'pt-4 pb-8'
+        windowWidth < 768 ? 'pt-2 pb-2' : 'pt-3 pb-4'
       ]">
         <input ref="inputElement" v-model="userKeys" type="text" placeholder="編碼" :class="[
           'text-center border-2 rounded-xl font-mono',
@@ -584,31 +693,29 @@ const handleKeydown = (event: KeyboardEvent) => {
       <!-- 答案顯示區域 -->
       <div :class="[
         'text-center transition-all duration-300',
-        windowWidth < 768 ? 'pb-3' : 'pb-8',
+        windowWidth < 768 ? 'pb-2' : 'pb-4',
         { 'opacity-0 transform translate-y-2': !isFirstLearn, 'opacity-100': isFirstLearn }
       ]">
         <div :class="[
           'inline-block bg-gray-100 dark:bg-gray-800 rounded-lg',
           windowWidth < 768 ? 'px-2 py-1' : 'px-4 py-2'
         ]">
-          <span :class="[
+          <!-- <span :class="[
             'text-gray-800 dark:text-gray-200',
             windowWidth < 768 ? 'text-sm' : ''
-          ]">答案是 </span>
+          ]">全碼 </span> -->
           <span :class="[
             'font-mono font-bold text-blue-600 dark:text-blue-400',
             windowWidth < 768 ? 'text-lg' : 'text-xl'
           ]">{{ card.key }}</span>
-          <span v-if="chaifenMap" :class="[
+          <span v-if="currentShortCode" :class="[
             'text-gray-600 dark:text-gray-400 ml-2',
             windowWidth < 768 ? 'text-xs' : 'text-sm'
-          ]">（{{ chaifenMap.get(card.name)?.division }}）</span>
-        </div>
-        <div v-if="currentShortCode" :class="[
-          'text-gray-500 dark:text-gray-400 mt-2',
-          windowWidth < 768 ? 'text-xs' : 'text-sm'
-        ]">
-          也可以使用簡碼 <b class="font-mono text-blue-600 dark:text-blue-400">{{ currentShortCode }}</b> 直接上屏
+          ]">簡碼 <b class="font-mono text-blue-600 dark:text-blue-400">{{ currentShortCode }}</b></span>
+          <!-- <span v-if="chaifenMap" :class="[
+            'text-gray-600 dark:text-gray-400 ml-2',
+            windowWidth < 768 ? 'text-xs' : 'text-sm'
+          ]">〔{{ chaifenMap.get(card.name)?.division }}〕</span> -->
         </div>
       </div>
     </div>
@@ -735,6 +842,52 @@ input::placeholder {
 kbd {
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
   font-weight: 600;
+}
+
+/* 速度特效动画 - 从右侧滑入 */
+.speed-float-enter-active {
+  animation: speed-slide-in 0.3s ease-out;
+}
+
+.speed-float-leave-active {
+  animation: speed-slide-out 0.4s ease-in;
+}
+
+@keyframes speed-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%) scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes speed-slide-out {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(20%) scale(0.9);
+  }
+}
+
+/* 連擊動畫 */
+@keyframes combo-pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 /* 響應式字體大小調整 */
