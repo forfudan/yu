@@ -13,7 +13,6 @@ font,ma,pinyin
 臣,be,Ĉén -> Ce 🈤不取聲母
 ,bi,Yí 🈤不取聲母 ㊟熙左上
 ,bi,Yí 🈤不取聲母
-舟,bvo,Ẑōu -> Vo 🈤Z和Ẑ作V
 虫,bo,Ĉóŋ -> Co 🈤不取聲母 🈕Huǐ
 门,bme,Mén -> Me
 丷,ca,Bā 🈤不取聲母
@@ -45,14 +44,15 @@ font,ma,pinyin
 口,do,Kǒu -> Ko 🈤不取聲母
 〇,do,㊟同口歸併
 早,da,Zǎo -> Va 🈤Z和Ẑ作V但不取聲母
-皮,dpi,Pí
 目,dmu,Mù
 耳,dje,ěr -> Je 🈤零聲母小碼取J
 雨,dyu,Yǔ
+,do,🈤無讀音取o ㊕不做末根
 鸟,dna,Niǎo -> Na
 ,dna,
 乌,dwu,Wū
-,do,🈤無讀音取o ㊕不做末根
+舟,dvo,Ẑōu -> Vo 🈤Z和Ẑ作V
+皮,dpi,Pí
 斤,dji,Jīn -> Ji
 一,fi,Yī 🈤基本筆畫不取聲母 ㊟俗稱横
 厂,fa,Ĉǎŋ -> Ca 🈤不取聲母 🈕Hǎn Yán ān
