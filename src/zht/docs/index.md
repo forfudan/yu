@@ -1,6 +1,6 @@
 <script setup>
-import Chaifen from '@/chaifen/Chaifen.vue'
-import MultiChaifen from '@/chaifen/MultiChaifen.vue'
+import CharPlot from '@/plot/CharPlot.vue'
+import MultiCharPlot from '@/plot/MultiCharPlot.vue'
 import MethodSelector from '@/selector/MethodSelector.vue'
 
 // 構建問題樹：根據第一題答案顯示不同的第二題
@@ -74,7 +74,7 @@ const results = {
 
 [點擊此處加入QQ交流群](https://qm.qq.com/q/1hYF5Shdbg)
 
-<MultiChaifen chars="宇浩系列輸入法" :size="50" loc='left' />
+<MultiCharPlot chars="宇浩系列輸入法" :size="50" loc='left' />
 
 包括：[**光華**輸入法](./light)、[**星陳**輸入法](./star)、[**卿雲**輸入法](./joy)、[**日月**輸入法](./ming)、[**靈明**輸入法](./ling)。他們都是[純字形輸入法](./concepts#字形輸入法)，使用**完全一致**的[拆分表](../learn/division.md)，只是字根排布、編碼方案、輸入體驗等方面各有不同。
 
@@ -107,8 +107,8 @@ const results = {
 - 第三步：將這四個字母輸入到電腦中，`韻`這個字就會顯示出來。
 
 <div class="flex justify-left flex-wrap">
-<Chaifen char='韻' :parts='[5,4,3,7]' />
-<Chaifen char='韵' :parts='[5,4,2,2]' />
+<CharPlot char='韻' :parts='[5,4,3,7]' />
+<CharPlot char='韵' :parts='[5,4,2,2]' />
 </div>
 
 宇浩輸入法具有以下的優點：

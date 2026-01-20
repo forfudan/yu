@@ -1,11 +1,11 @@
 <script setup>
-import Chaifen from '@/chaifen/Chaifen.vue'
+import CharPlot from '@/plot/CharPlot.vue'
 </script>
 
 # 星陳輸入法簡碼設置
 
 學完了宇碼的單字編碼，我們發現，星陳輸入法的單字碼長一般是 2 到 4 位之間。不少常用的字，碼長是 4 位，比如字頻第一的「的」字，編碼爲`DWKd`。
-<Chaifen char='的' :parts='[5,2,1]' />
+<CharPlot char='的' :parts='[5,2,1]' />
 
 一種科學的輸入策略，應該使得常用字的碼長更低，從而加快輸入的速度。試想，如果輸入「的」字，每次都要按`DWKd`四下按鍵，真是太浪費時間了。
 
@@ -29,7 +29,7 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 ::: tip 例
 `我`全碼爲 `丿扌戈・ GFKg`，一級簡碼爲`G`。輸入`G_`即可實現上屏。
-<Chaifen char='我' :parts='[1,1,2,3]' :colors='[1,0,2,3,5,1]' />
+<CharPlot char='我' :parts='[1,1,2,3]' :colors='[1,0,2,3,5,1]' />
 `的`全碼爲 `白⼓丶・ DWKd`，一級簡碼爲`D`。輸入`D_`即可實現上屏。
 :::
 
@@ -47,10 +47,10 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 ::: tip 例
 `都`全碼爲 `耂日阝・ HJYf`，二級簡碼爲 `HJ`。輸入 `HJ_` 即可實現上屏。
-<Chaifen char='都' :parts='[4,4,2]' />
+<CharPlot char='都' :parts='[4,4,2]' />
 
 `林`全碼爲 `木木・ AAm`，二級簡碼爲 `AA`。輸入 `AA_` 即可實現上屏。
-<Chaifen char='林' :parts='[4,4]' />
+<CharPlot char='林' :parts='[4,4]' />
 :::
 
 ::: info 簡體二級簡碼字矩陣
@@ -58,7 +58,7 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 簡體二級簡碼字矩陣如下圖。先取行，再看列。如：
 
 D行，F列對應`后`字，則`后`的簡碼爲`DF`，其全碼爲`DFLv`。
-<Chaifen char='后' :parts='[2,1,3]' />
+<CharPlot char='后' :parts='[2,1,3]' />
 
 :::
 

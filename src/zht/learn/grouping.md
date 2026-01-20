@@ -1,6 +1,6 @@
 <script setup>
-import Chaifen from '@/chaifen/Chaifen.vue'
-import MultiChaifen from '@/chaifen/MultiChaifen.vue'
+import CharPlot from '@/plot/CharPlot.vue'
+import MultiCharPlot from '@/plot/MultiCharPlot.vue'
 </script>
 
 # 歸併聚類
@@ -19,15 +19,15 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 ::: tip 例
 以下四字的第一個字根，都包括了`广`的特性，因此放在同一個大碼上，有利於記憶。用戶只要記住`广`的位置，便知道了其他三個字根的位置。
 
-<MultiChaifen chars="廣病磨慶" :size="60" loc='left' />
+<MultiCharPlot chars="廣病磨慶" :size="60" loc='left' />
 
 以下四字的第一個字根，都包括了`丆`的特性，因此放在同一個大碼上，有利於記憶。用戶只要記住`丆`的位置，便知道了其他三個字根的位置。
 
-<MultiChaifen chars="石百不压" :size="60" loc='left' />
+<MultiCharPlot chars="石百不压" :size="60" loc='left' />
 
 以下四個字根，都包括了`目`的特性，因此放在同一個大碼上，有利於記憶。用戶只要記住`目`的位置，便知道了其他三個字根的位置。
 
-<MultiChaifen chars="目且貝見" :size="60" loc='left' />
+<MultiCharPlot chars="目且貝見" :size="60" loc='left' />
 :::
 
 選擇「輕歸併」的原因，主要是以下幾點：
@@ -37,7 +37,7 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 ::: tip 例
 按字源歸併後，以下漢字必定重碼。
 
-<MultiChaifen chars="說说員员" :size="60" loc='left' />
+<MultiCharPlot chars="說说員员" :size="60" loc='left' />
 
 :::
 
@@ -50,6 +50,6 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 ::: tip 例
 以下兩字的右邊部首，一個是`𠤎`（ㄏㄨㄚ），一個是`匕`（ㄅㄛ）。較難區分，故而合爲一個字根`匕`。
 
-<MultiChaifen chars="化比" :size="75" loc='left' />
+<MultiCharPlot chars="化比" :size="75" loc='left' />
 
 :::

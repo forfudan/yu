@@ -1,6 +1,6 @@
 <script setup>
-import Chaifen from '@/chaifen/Chaifen.vue'
-import MultiChaifen from '@/chaifen/MultiChaifen.vue'
+import CharPlot from '@/plot/CharPlot.vue'
+import MultiCharPlot from '@/plot/MultiCharPlot.vue'
 </script>
 
 # 字根的内在屬性
@@ -13,8 +13,8 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 `吉`拆成`士口`而不是`土口`，`周`拆成`⺆土口`而不是`⺆士口`，這是因爲`土`的下面一筆更長，而`士`的下面一筆更短。這是區別兩個字根的本質原因和内在屬性。
 
 <div class="flex justify-left flex-wrap">
-<Chaifen char='吉' :parts='[3,3]' />
-<Chaifen char='周' :parts='[2,3,3]' />
+<CharPlot char='吉' :parts='[3,3]' />
+<CharPlot char='周' :parts='[2,3,3]' />
 </div>
 :::
 
@@ -23,9 +23,9 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 ::: tip 例
 `敝`拆爲`丷巾八攵`而非`氺巾攵`，這看似違反了「字根最少」原則，但其實沒有。注意到，`敝`字左下的筆畫是撇不是提；在`氺`中，左下角的筆畫是提不是撇。故而，`敝`字裡並不存在`氺`字根。正因爲如此，我們取四根`丷巾八攵`而非三根`氺巾攵`。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='敝' :parts='[2,3,2,4]' />
+<CharPlot char='敝' :parts='[2,3,2,4]' />
 ✅
-<Chaifen char='敝' :parts='[2,2,3,4]' :colors='[1,2,1,3]' />
+<CharPlot char='敝' :parts='[2,2,3,4]' :colors='[1,2,1,3]' />
 ❌
 </div>
 :::
@@ -68,11 +68,11 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 `为` `卵`等字的兩點和`冬`下的兩點不同，非連續筆畫，且被半包圍或全包圍分割，故而不認定爲「兩點」。詳[「散件不分隔」禁手](#散件不分割)。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='冬' :parts='[3,2]' :colors='[0,1]' />
+<CharPlot char='冬' :parts='[3,2]' :colors='[0,1]' />
 ✅
-<Chaifen char='为' :parts='[1,2,1]' :colors='[1,0,1]' />
+<CharPlot char='为' :parts='[1,2,1]' :colors='[1,0,1]' />
 ❌
-<Chaifen char='卵' :parts='[2,1,1,2,1]' :colors='[0,1,0,0,1]' />
+<CharPlot char='卵' :parts='[2,1,1,2,1]' :colors='[0,1,0,0,1]' />
 ❌
 </div>
 
@@ -84,30 +84,30 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 1. 凡左撇不低於右捺，視作`人`根。
     <div class="flex justify-left flex-wrap">
-    <Chaifen char='令' :parts='[2,1,3]' :colors='[1,0,0]' />
-    <Chaifen char='内' :parts='[2,2]' :colors='[0,1]' />
-    <Chaifen char='两' :parts='[1,2,2,2]' :colors='[0,0,1,2]' />
+    <CharPlot char='令' :parts='[2,1,3]' :colors='[1,0,0]' />
+    <CharPlot char='内' :parts='[2,2]' :colors='[0,1]' />
+    <CharPlot char='两' :parts='[1,2,2,2]' :colors='[0,0,1,2]' />
     </div>
 
 2. 凡左撇低於右捺，視作`入`根。
     <div class="flex justify-left flex-wrap">
-    <Chaifen char='籴' :parts='[2,6]' :colors='[1,0]' />
-    <Chaifen char='陝' :parts='[2,1,2,2,2]' :colors='[0,0,0,1,2]' />
-    <Chaifen char='兩' :parts='[1,3,2,2]' :colors='[0,0,1,2]' />
+    <CharPlot char='籴' :parts='[2,6]' :colors='[1,0]' />
+    <CharPlot char='陝' :parts='[2,1,2,2,2]' :colors='[0,0,0,1,2]' />
+    <CharPlot char='兩' :parts='[1,3,2,2]' :colors='[0,0,1,2]' />
     </div>
 
 3. 凡左撇右捺分離，視作`八`根。
     <div class="flex justify-left flex-wrap">
-    <Chaifen char='分' :parts='[2,2]' :colors='[1,0]' />
-    <Chaifen char='兴' :parts='[4,2]' :colors='[0,1]' />
-    <Chaifen char='典' :parts='[6,2]' :colors='[0,1]' />
+    <CharPlot char='分' :parts='[2,2]' :colors='[1,0]' />
+    <CharPlot char='兴' :parts='[4,2]' :colors='[0,1]' />
+    <CharPlot char='典' :parts='[6,2]' :colors='[0,1]' />
     </div>
 
 4. 凡左撇右捺的中間被其他筆畫隔開，視作`<丿乀>`根。宇碼中，它和`八`同大小碼。
     <div class="flex justify-left flex-wrap">
-    <Chaifen char='办' :parts='[2,2]' :colors='[0,1]' />
-    <Chaifen char='朱' :parts='[4,2]' :colors='[0,1]' />
-    <Chaifen char='兼' :parts='[8,2]' :colors='[0,1]' />
+    <CharPlot char='办' :parts='[2,2]' :colors='[0,1]' />
+    <CharPlot char='朱' :parts='[4,2]' :colors='[0,1]' />
+    <CharPlot char='兼' :parts='[8,2]' :colors='[0,1]' />
     </div>
 
 :::
@@ -129,16 +129,16 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 - `古`下的`口`中如果包含完整的筆畫，應該拆如`十囗`。例如：`鄙`左下方的`口`中有`口`，故而應該拆成`口十囗口阝`。
     <div class="flex justify-left flex-wrap">
-    <Chaifen char='鄙' :parts='[3,2,2,3,1,2]' :colors='[1,2,3,4,3,5]' />
+    <CharPlot char='鄙' :parts='[3,2,2,3,1,2]' :colors='[1,2,3,4,3,5]' />
     ✅
-    <Chaifen char='鄙' :parts='[3,4,3,1,2]' :colors='[1,2,3,2,4]' />
+    <CharPlot char='鄙' :parts='[3,4,3,1,2]' :colors='[1,2,3,2,4]' />
     ❌
     </div>
 - `合`下的`口`中如果包含完整的筆畫，應該拆如`人一囗`。例如：`會`中間的`口`中有`小`，故而應該拆成<span class="yuniversus">人一日</span>。
     <div class="flex justify-left flex-wrap">
-    <Chaifen char='會' :parts='[2,1,6,4]' :colors='[1,2,3,4]' />
+    <CharPlot char='會' :parts='[2,1,6,4]' :colors='[1,2,3,4]' />
     ✅
-    <Chaifen char='會' :parts='[5,3,1,4]' :colors='[1,2,1,3]' />
+    <CharPlot char='會' :parts='[5,3,1,4]' :colors='[1,2,1,3]' />
     ❌
     </div>
 
@@ -155,9 +155,9 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 `夔`字中的`一自八`不作`頁`字根拆，因爲它被`止㔾`穿插。
 
 <div class="flex justify-left flex-wrap">
-<Chaifen char='夔' :parts='[3,4,6,3,2,3]' :colors='[1,3,2,4,5,6]' />
+<CharPlot char='夔' :parts='[3,4,6,3,2,3]' :colors='[1,3,2,4,5,6]' />
 ✅
-<Chaifen char='夔' :parts='[2,1,4,6,3,2,3]' :colors='[1,2,3,2,4,2,5]' />
+<CharPlot char='夔' :parts='[2,1,4,6,3,2,3]' :colors='[1,2,3,2,4,2,5]' />
 ❌
 </div>
 :::

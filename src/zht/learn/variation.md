@@ -1,6 +1,6 @@
 <script setup>
-import Chaifen from '@/chaifen/Chaifen.vue'
-import MultiChaifen from '@/chaifen/MultiChaifen.vue'
+import CharPlot from '@/plot/CharPlot.vue'
+import MultiCharPlot from '@/plot/MultiCharPlot.vue'
 </script>
 
 # 字形書體及筆順
@@ -22,25 +22,25 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 1. `⼇`作頭時的`丶一`，無論書體，一概視爲「散」。
     <div class="flex justify-left flex-wrap">
-    <Chaifen char='主' :parts='[1,4]' />
+    <CharPlot char='主' :parts='[1,4]' />
     ✅
-    <Chaifen char='主' :parts='[2,3]' />
+    <CharPlot char='主' :parts='[2,3]' />
     ❌
     </div>
 
 2. `䒑`作頭時的`丷一`是`艹`的草化，無論書體，一概視爲「連」。
     <div class="flex justify-left flex-wrap">
-    <Chaifen char='兰' :parts='[3,2]' />
+    <CharPlot char='兰' :parts='[3,2]' />
     ✅
-    <Chaifen char='兰' :parts='[2,3]' />
+    <CharPlot char='兰' :parts='[2,3]' />
     ❌
     </div>
 
 3. `龷`在字中時的`艹一`，無論書體，一概視爲「連」。
     <div class="flex justify-left flex-wrap">
-    <Chaifen char='垂' :parts='[3,4,1]' />
+    <CharPlot char='垂' :parts='[3,4,1]' />
     ✅
-    <Chaifen char='垂' :parts='[3,3,2]' />
+    <CharPlot char='垂' :parts='[3,3,2]' />
     ❌
     </div>
 :::
@@ -86,17 +86,17 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 比如`攀 = 木乂乂木手`（大陸標準）和`攀 = 乂乂木木手`（臺灣標準）兼收。
 
 <div class="flex justify-left flex-wrap">
-<Chaifen char='攀' :parts='[4,2,2,4,3,4]' :colors='[1,2,3,0,0,4]' />
+<CharPlot char='攀' :parts='[4,2,2,4,3,4]' :colors='[1,2,3,0,0,4]' />
 陸
-<Chaifen char='攀' :parts='[4,2,2,4,3,4]' :colors='[3,1,2,0,0,4]' />
+<CharPlot char='攀' :parts='[4,2,2,4,3,4]' :colors='[3,1,2,0,0,4]' />
 臺
 </div>
 
 比如`與 = ⺽丂丄八`（大陸標準）和`與 = 丂丿⺽一八`（臺灣標準）兼收。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='與' :parts='[4,2,1,3,1,2]' :colors='[1,2,3,1,3,4]' />
+<CharPlot char='與' :parts='[4,2,1,3,1,2]' :colors='[1,2,3,1,3,4]' />
 陸
-<Chaifen char='與' :parts='[4,2,1,3,1,2]' :colors='[3,1,2,3,0,4]' />
+<CharPlot char='與' :parts='[4,2,1,3,1,2]' :colors='[3,1,2,3,0,4]' />
 臺
 </div>
 :::

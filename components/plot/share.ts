@@ -1,6 +1,6 @@
 /*
 Name: share.ts
-      Chaifen.vue
+      CharPlot.vue
 
 Purpose: 可視化漢字拆分
 Version: 20240407
@@ -18,10 +18,10 @@ DESCRIPTION 介紹:
 數據來源 Hanzi Writer v3.0.3 | https://chanind.github.io/hanzi-writer
 使用時,在 md 中插入以下代碼:
   <script setup>
-  import Chaifen from '@/chaifen/Chaifen.vue'
+  import CharPlot from '@/plot/CharPlot.vue'
   </script>
 渲染漢字時,使用以下代碼:
-  <Chaifen char="部" :parts='[5,3,2]' :colors='[1,2,3]'/>
+  <CharPlot char="部" :parts='[5,3,2]' :colors='[1,2,3]'/>
 其中, char 爲想渲染的漢字, parts 爲該漢字每一個字根的筆畫數.
   colors 爲每個部件調用的顔色.
 
@@ -30,6 +30,7 @@ DESCRIPTION 介紹:
 20240408: 生成隨機 id.
 20240901: 修正 SSR 報錯.
 20240925: 將 HanziWriter 改為引用, 刪除本地代碼.
+20260120: 改進錯誤處理
  */
 
 // TypeScript declarations for HanziWriter library
@@ -110,17 +111,26 @@ export function getDivision(
     return;
   }
 
+  const targetElement = document.getElementById(target);
+  if (!targetElement) {
+    console.warn('Target element not found:', target);
+    return;
+  }
+
   HanziWriter.loadCharacterData(char).then(function (charData) {
-    const targetElement = document.getElementById(target);
-    if (targetElement && charData && 'strokes' in charData) {
+    // Re-check the element exists after async operation
+    const element = document.getElementById(target);
+    if (element && charData && 'strokes' in charData) {
       renderFanningStrokesNew(
-        targetElement,
+        element,
         char,
         charData.strokes,
         parts,
         colors,
         size,
       );
+    } else if (!element) {
+      console.warn('Target element disappeared:', target);
     }
   }).catch(function (error) {
     console.warn('Failed to load character data for:', char, error);

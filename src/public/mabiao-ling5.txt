@@ -936,6 +936,7 @@ jdu	保
 jfi	使
 jgi	率
 jhi	但
+jja	收到
 jka	倒
 jki	候
 jmi	代
@@ -1002,6 +1003,8 @@ pso	周
 qji	花
 qme	藏
 qsi	著
+qwa	获
+qwu	获得
 rba	点
 rle	話
 rvi	認

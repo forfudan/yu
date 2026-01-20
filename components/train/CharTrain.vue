@@ -18,7 +18,7 @@
 import { shallowRef, onMounted, ref, watch, nextTick, computed, onBeforeUnmount } from "vue";
 import { Card, cache, fetchChaifenOptimized, fetchZigen, makeCodesFromDivision, ChaifenMap } from "./share";
 import { AdvancedSchedule } from "./advancedSchedule";
-import MultiChaifen from "../chaifen/MultiChaifen.vue";
+import MultiCharPlot from "../plot/MultiCharPlot.vue";
 import {
   useCellWidth,
   useVisibleOffset,
@@ -669,7 +669,7 @@ const handleKeydown = (event: KeyboardEvent) => {
 
           <!-- 拆分圖 -->
           <div class="flex tracking-widest flex-col opacity-80">
-            <MultiChaifen :chars="card.name" :size="windowWidth < 768 ? 80 : 120" :key="card.name" loc="" />
+            <MultiCharPlot :chars="card.name" :size="windowWidth < 768 ? 80 : 120" :key="card.name" loc="" />
           </div>
         </div>
       </div>

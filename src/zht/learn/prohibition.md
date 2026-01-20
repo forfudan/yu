@@ -1,7 +1,7 @@
 
 <script setup>
-import Chaifen from '@/chaifen/Chaifen.vue'
-import MultiChaifen from '@/chaifen/MultiChaifen.vue'
+import CharPlot from '@/plot/CharPlot.vue'
+import MultiCharPlot from '@/plot/MultiCharPlot.vue'
 </script>
 
 # 宇浩拆分禁手
@@ -20,17 +20,17 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 `为`字的兩點不可以被視爲字根`两点`，因爲它們非連續寫成、且被半包圍結構分割。  
 <div class="flex justify-left flex-wrap">
-<Chaifen char='为' :parts='[1,2,1]' />
+<CharPlot char='为' :parts='[1,2,1]' />
 ✅
-<Chaifen char='为' :parts='[1,2,1]' :colors='[1,2,1]' />
+<CharPlot char='为' :parts='[1,2,1]' :colors='[1,2,1]' />
 ❌
 </div>
 
 `卵`字不拆`卯⺀`而拆成`卯丶丶`，因爲`卯`字的兩點非連續寫成、且被半包圍結構分割。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='卵' :parts='[2,1,1,2,1]' :colors='[1,2,1,1,3]' />
+<CharPlot char='卵' :parts='[2,1,1,2,1]' :colors='[1,2,1,1,3]' />
 ✅
-<Chaifen char='卵' :parts='[2,1,1,2,1]' :colors='[1,2,1,1,2]' />
+<CharPlot char='卵' :parts='[2,1,1,2,1]' :colors='[1,2,1,1,2]' />
 ❌
 </div>
 :::
@@ -56,34 +56,34 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 `卿` = `卯彐厶`
 <div class="flex justify-left flex-wrap">
-<Chaifen char='卿' :parts='[3,3,2,2]' :colors='[1,0,0,1]' />
+<CharPlot char='卿' :parts='[3,3,2,2]' :colors='[1,0,0,1]' />
 ✅
-<Chaifen char='卿' :parts='[3,3,2,2]' :colors='[1,0,0,4]' />
+<CharPlot char='卿' :parts='[3,3,2,2]' :colors='[1,0,0,4]' />
 ❌
 </div>
 
 `胤` = `儿幺月`
 <div class="flex justify-left flex-wrap">
-<Chaifen char='胤' :parts='[1,3,4,1]' :colors='[1,0,0,1]' />
+<CharPlot char='胤' :parts='[1,3,4,1]' :colors='[1,0,0,1]' />
 ✅
-<Chaifen char='胤' :parts='[1,3,4,1]' :colors='[1,0,0,4]' />
+<CharPlot char='胤' :parts='[1,3,4,1]' :colors='[1,0,0,4]' />
 ❌
 </div>
 
 `亘` = `一日一`
 <div class="flex justify-left flex-wrap">
-<Chaifen char='亘' :parts='[1,4,1]' :colors='[1,0,3]' />
+<CharPlot char='亘' :parts='[1,4,1]' :colors='[1,0,3]' />
 ✅
-<Chaifen char='亘' :parts='[1,4,1]' :colors='[1,0,1]' />
+<CharPlot char='亘' :parts='[1,4,1]' :colors='[1,0,1]' />
 ❌
 </div>
 
 `僵` = `亻一田一田一`
 
 <div class="flex justify-left flex-wrap">
-<Chaifen char='僵' :parts='[2,1,5,1,5,1]' :colors='[0,2,0,4,0,6]' />
+<CharPlot char='僵' :parts='[2,1,5,1,5,1]' :colors='[0,2,0,4,0,6]' />
 ✅
-<Chaifen char='僵' :parts='[2,1,5,1,5,1]' :colors='[0,2,0,2,0,2]' />
+<CharPlot char='僵' :parts='[2,1,5,1,5,1]' :colors='[0,2,0,2,0,2]' />
 ❌
 </div>
 :::
@@ -95,9 +95,9 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 某些輸入法設置了`衣下`字根，但`亠`和`𧘇`的出現並不總是成對的，必須看到最下方才能正確判斷。
 
 <div class="flex justify-left flex-wrap">
-<Chaifen char='襄' :parts='[2,11,4]' :colors='[1,0,1]' />
-<Chaifen char='衮' :parts='[2,4,4]' :colors='[1,0,1]' />
-<Chaifen char='兖' :parts='[2,4,2]' :colors='[1,0,2]' />
+<CharPlot char='襄' :parts='[2,11,4]' :colors='[1,0,1]' />
+<CharPlot char='衮' :parts='[2,4,4]' :colors='[1,0,1]' />
+<CharPlot char='兖' :parts='[2,4,2]' :colors='[1,0,2]' />
 </div>
 
 :::
@@ -114,35 +114,35 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 `再`不拆`王冂`，而拆`一冂土`
 <div class="flex justify-left flex-wrap">
-<Chaifen char='再' :parts='[1,2,3]' />
+<CharPlot char='再' :parts='[1,2,3]' />
 ✅
-<Chaifen char='再' :parts='[1,2,3]' :colors='[1,0,1]' />
+<CharPlot char='再' :parts='[1,2,3]' :colors='[1,0,1]' />
 ❌
 </div>
 
 `垂`不拆`壬龷`，而拆`千龷一`
 <div class="flex justify-left flex-wrap">
-<Chaifen char='垂' :parts='[3,4,1]' :colors='[1,2,3]' />
+<CharPlot char='垂' :parts='[3,4,1]' :colors='[1,2,3]' />
 ✅
-<Chaifen char='垂' :parts='[3,4,1]' :colors='[1,0,1]' />
+<CharPlot char='垂' :parts='[3,4,1]' :colors='[1,0,1]' />
 ❌
 </div>
 
 `禹`不拆`丿虫冂`，而拆`丿口冂<丄丶>`
 <div class="flex justify-left flex-wrap">
-<Chaifen char='禹' :parts='[1,3,2,3]' :colors='[1,2,3,4]' />
+<CharPlot char='禹' :parts='[1,3,2,3]' :colors='[1,2,3,4]' />
 ✅
-<Chaifen char='禹' :parts='[1,3,2,3]' :colors='[0,1,0,1]' />
+<CharPlot char='禹' :parts='[1,3,2,3]' :colors='[0,1,0,1]' />
 ❌
 </div>
 
 `妻`不拆 `キコ女`或`龶乛女`，而拆`十彐女`。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='妻' :parts='[1,3,1,3]' :colors='[1,2,1,3]' />
+<CharPlot char='妻' :parts='[1,3,1,3]' :colors='[1,2,1,3]' />
 ✅
-<Chaifen char='妻' :parts='[1,1,1,1,1,3]' :colors='[1,0,1,0,1,3]' />
+<CharPlot char='妻' :parts='[1,1,1,1,1,3]' :colors='[1,0,1,0,1,3]' />
 ❌
-<Chaifen char='妻' :parts='[1,1,3,3]' :colors='[1,0,1,3]' />
+<CharPlot char='妻' :parts='[1,1,3,3]' :colors='[1,0,1,3]' />
 ❌
 </div>
 
@@ -158,9 +158,9 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 `命`不拆`合卩`，而拆`人口一卩`。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='命' :parts='[2,1,3,2]' />
+<CharPlot char='命' :parts='[2,1,3,2]' />
 ✅
-<Chaifen char='命' :parts='[6,2]' />
+<CharPlot char='命' :parts='[6,2]' />
 ❌
 </div>
 

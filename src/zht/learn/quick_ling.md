@@ -1,12 +1,12 @@
 <script setup>
-import Chaifen from '@/chaifen/Chaifen.vue'
-import MultiChaifen from '@/chaifen/MultiChaifen.vue'
+import CharPlot from '@/plot/CharPlot.vue'
+import MultiCharPlot from '@/plot/MultiCharPlot.vue'
 </script>
 
 # 靈明輸入法簡碼設置
 
 我們發現，靈明輸入法的單字碼長一般是 2 到 4 位之間。不少常用的字，碼長是 4 位，比如字頻第一的「的」字，編碼爲`KbPT`。
-<Chaifen char='的' :parts='[5,2,1]' />
+<CharPlot char='的' :parts='[5,2,1]' />
 
 一種科學的輸入策略，應該使得常用字的碼長更低，從而加快輸入的速度。試想，如果輸入「的」字，每次都要按`KbPT`四下按鍵，真是太浪費時間了。
 
@@ -44,7 +44,7 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 一碼上屏簡碼字分別是：的E、是I、我O、不U、了A。
 
-<MultiChaifen chars="的是我不了" />
+<MultiCharPlot chars="的是我不了" />
 
 ## 兩碼上屏簡碼字
 
@@ -57,10 +57,10 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 ::: tip 兩碼上屏簡碼字舉例
 
 「前」拆分爲 `䒑月刂`，字根對應編碼為 `Ca-Le-Vda`，全碼為 `CLVd`。取其首碼 `C` 加末根韻碼 `a`，得到簡碼 `Ca`。
-<Chaifen char='前' :parts='[3,4,2]' />
+<CharPlot char='前' :parts='[3,4,2]' />
 
 「有」拆分爲 `𠂇月`，字根對應編碼為 `Mvo-Le`，全碼為 `MvLe`。取其首碼 `M` 加末根韻碼 `e`，得到簡碼 `Me`。
-<Chaifen char='有' :parts='[2,4]' />
+<CharPlot char='有' :parts='[2,4]' />
 
 :::
 
@@ -108,10 +108,10 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 ::: tip 三碼上屏簡碼字舉例
 
 「道」拆分爲 `䒑自辶`，字根對應編碼為 `Ca-Nvi-Wo`，全碼為 `CNWo`。取其前兩碼 `CN` 加末根韻碼 `o`，得到簡碼 `CNo`。
-<Chaifen char='道' :parts='[3,6,3]' />
+<CharPlot char='道' :parts='[3,6,3]' />
 
 「想」拆分爲 `木目心`，字根對應編碼為 `Xu-Dmu-Mxi`，全碼為 `XDMx`。取其前兩碼 `XD` 加末根韻碼 `i`，得到簡碼 `XDi`。
-<Chaifen char='想' :parts='[4,5,4]' />
+<CharPlot char='想' :parts='[4,5,4]' />
 
 :::
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { shallowRef, computed } from "vue";
 import { onMounted } from "vue";
-import Chaifen from "./Chaifen.vue";
+import CharPlot from "./CharPlot.vue";
 import { fetchCsvAsMap } from "../search/share";
 
 const p = defineProps<{
@@ -31,14 +31,14 @@ function checkCharacterData() {
     chars.forEach(char => {
         // 檢查字符是否在數據庫中存在
         if (!chaifenPlotMap.value!.has(char)) {
-            console.warn(`[MultiChaifen] 字符 "${char}" 在數據庫中不存在`);
+            console.warn(`[MultiCharPlot] 字符 "${char}" 在數據庫中不存在`);
             return;
         }
 
         // 檢查字符是否有parts信息
         const charData = chaifenPlotMap.value!.get(char);
         if (charData && (!charData.parts || charData.parts.trim() === '')) {
-            console.warn(`[MultiChaifen] 字符 "${char}" 沒有檢索到 parts 信息`);
+            console.warn(`[MultiCharPlot] 字符 "${char}" 沒有檢索到 parts 信息`);
         }
     });
 }
@@ -64,7 +64,7 @@ const defaultSize = computed(() => p.size || 48);
 
 <template>
     <div :class="desc_class">
-        <Chaifen v-if="chaifenPlotMap" v-for="item in [...p.chars].filter(zi => chaifenPlotMap.has(zi))" :char='item'
+        <CharPlot v-if="chaifenPlotMap" v-for="item in [...p.chars].filter(zi => chaifenPlotMap.has(zi))" :char='item'
             :parts='chaifenPlotMap?.get(item)?.parts' :colors='chaifenPlotMap?.get(item)?.colors' :size="defaultSize" />
     </div>
     <template v-if="(chaifenPlotMap)" v-for="item in [...p.chars]">

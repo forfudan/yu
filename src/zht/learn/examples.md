@@ -1,6 +1,6 @@
 <script setup>
-import Chaifen from '@/chaifen/Chaifen.vue'
-import MultiChaifen from '@/chaifen/MultiChaifen.vue'
+import CharPlot from '@/plot/CharPlot.vue'
+import MultiCharPlot from '@/plot/MultiCharPlot.vue'
 </script>
 
 # 字海拾珍 —— 必拆字舉隅
@@ -13,60 +13,60 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 ## 特殊字根和複雜漢字
 
-<MultiChaifen chars="華民发假即帶曳吏舞命拿侖亮京襄与與互惠赤臧鼎齊冒段卑徽彀囊鄙會贯尧丝麗處嘉倉幾纖龍蕤鬭" :size="64" loc="left" />
+<MultiCharPlot chars="華民发假即帶曳吏舞命拿侖亮京襄与與互惠赤臧鼎齊冒段卑徽彀囊鄙會贯尧丝麗處嘉倉幾纖龍蕤鬭" :size="64" loc="left" />
 
 ## 獨體字
 
-<MultiChaifen chars="及书冉串凹凸亞亚毋乎弟甚韦龙廿甘氏专丏象斥农尺册矛戋乐东拣柬彧焉" :size="64" loc="left" />
+<MultiCharPlot chars="及书冉串凹凸亞亚毋乎弟甚韦龙廿甘氏专丏象斥农尺册矛戋乐东拣柬彧焉" :size="64" loc="left" />
 
 ## 散件不分割
 
-<MultiChaifen chars="为卵" :size="64" loc="left" />
+<MultiCharPlot chars="为卵" :size="64" loc="left" />
 
 ## 橫間不穿心
 
-<MultiChaifen chars="再垂禹" :size="64" loc="left" />
+<MultiCharPlot chars="再垂禹" :size="64" loc="left" />
 
 ## 豎向不包夾
 
-<MultiChaifen chars="亘僵晉裏" :size="64" loc="left" />
+<MultiCharPlot chars="亘僵晉裏" :size="64" loc="left" />
 
 ## 橫向可包夾
 
-<MultiChaifen chars="卿胤渊办" :size="64" loc="left" />
+<MultiCharPlot chars="卿胤渊办" :size="64" loc="left" />
 
 ## 根少優先
 
-<MultiChaifen chars="事平并堇衡屯夷承庸淵秉東束威衷黃噩牽" :size="64" loc="left" />
+<MultiCharPlot chars="事平并堇衡屯夷承庸淵秉東束威衷黃噩牽" :size="64" loc="left" />
 
 ## 符合筆順
 
-<MultiChaifen chars="来御啬聿" :size="64" loc="left" />
+<MultiCharPlot chars="来御啬聿" :size="64" loc="left" />
 
 ## 結構完整
 
-<MultiChaifen chars="匹免单万陽" :size="64" loc="left" />
+<MultiCharPlot chars="匹免单万陽" :size="64" loc="left" />
 
 ## 能散不連
 
-<MultiChaifen chars="主" :size="64" loc="left" />
+<MultiCharPlot chars="主" :size="64" loc="left" />
 
 ## 能連不交
 
-<MultiChaifen chars="开无天出于击那" :size="64" loc="left" />
+<MultiCharPlot chars="开无天出于击那" :size="64" loc="left" />
 
 ## 能交不斷
 
-<MultiChaifen chars="果" :size="64" loc="left" />
+<MultiCharPlot chars="果" :size="64" loc="left" />
 
 ## 因根少而斷筆
 
-<MultiChaifen chars="我重熏識蕺" :size="64" loc="left" />
+<MultiCharPlot chars="我重熏識蕺" :size="64" loc="left" />
 
 ## 非歪斜根取大
 
-<MultiChaifen chars="失朱井" :size="64" loc="left" />
+<MultiCharPlot chars="失朱井" :size="64" loc="left" />
 
 ## 向前取大
 
-<MultiChaifen chars="离彦產彖录丈兴严妻夬" :size="64" loc="left" />
+<MultiCharPlot chars="离彦產彖录丈兴严妻夬" :size="64" loc="left" />

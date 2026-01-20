@@ -1,5 +1,5 @@
 <script setup>
-import Chaifen from '@/chaifen/Chaifen.vue'
+import CharPlot from '@/plot/CharPlot.vue'
 </script>
 
 # 單字拆分
@@ -11,12 +11,12 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 ::: tip 例
 
 <div class="flex justify-left flex-wrap">
-<Chaifen char='糧' :parts='[6,4,1,7]' />
-<Chaifen char='錘' :parts='[8,3,4,1]' />
-<Chaifen char='錢' :parts='[8,4,4]' />
-<Chaifen char='瓶' :parts='[3,3,4]' />
-<Chaifen char='琴' :parts='[4, 4, 2, 1, 1]' />
-<Chaifen char='鴿' :parts='[6, 11]' />
+<CharPlot char='糧' :parts='[6,4,1,7]' />
+<CharPlot char='錘' :parts='[8,3,4,1]' />
+<CharPlot char='錢' :parts='[8,4,4]' />
+<CharPlot char='瓶' :parts='[3,3,4]' />
+<CharPlot char='琴' :parts='[4, 4, 2, 1, 1]' />
+<CharPlot char='鴿' :parts='[6, 11]' />
 </div>
 :::
 
@@ -34,9 +34,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 `朱`這個字，我們可以繼續將它拆成`牛`和`八`。查字根圖可知，`牛`和`八`正好是兩個字根，拆字成功。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='戋' :parts='[1,4]' />
-<Chaifen char='丸' :parts='[2,1]' />
-<Chaifen char='朱' :parts='[4,2]' />
+<CharPlot char='戋' :parts='[1,4]' />
+<CharPlot char='丸' :parts='[2,1]' />
+<CharPlot char='朱' :parts='[4,2]' />
 </div>
 :::
 
@@ -46,9 +46,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 `再`，可以拆`一冂土`，也可以拆`王冂`。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='再' :parts='[1,2,3]' :colors='[1,2,3]' />
+<CharPlot char='再' :parts='[1,2,3]' :colors='[1,2,3]' />
 ❓
-<Chaifen char='再' :parts='[1,2,3]' :colors='[1,2,1]' />
+<CharPlot char='再' :parts='[1,2,3]' :colors='[1,2,1]' />
 ❓
 </div>
 
@@ -56,11 +56,11 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 `井`，可以拆`二{介下}`，也可以拆`一廾`。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='井' :parts='[1,3]' />
+<CharPlot char='井' :parts='[1,3]' />
 ❓
-<Chaifen char='井' :parts='[2,2]' />
+<CharPlot char='井' :parts='[2,2]' />
 ❓
-<Chaifen char='井' :parts='[3,1]' />
+<CharPlot char='井' :parts='[3,1]' />
 ❓
 </div>
 
@@ -68,11 +68,11 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 `单`可以拆成`丷日十`也可以拆成`丷冂丰`。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='单' :parts='[2,4,2]' />
+<CharPlot char='单' :parts='[2,4,2]' />
 ❓
-<Chaifen char='单' :parts='[2,2,1,1,2]' :colors='[1,2,3,2,3]' />
+<CharPlot char='单' :parts='[2,2,1,1,2]' :colors='[1,2,3,2,3]' />
 ❓
-<Chaifen char='单' :parts='[2,2,4]' />
+<CharPlot char='单' :parts='[2,2,4]' />
 ❓
 </div>
 
@@ -80,11 +80,11 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 `主`可以拆成`丶王`也可以拆成`亠土`。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='主' :parts='[1,4]' />
+<CharPlot char='主' :parts='[1,4]' />
 ❓
-<Chaifen char='主' :parts='[2,3]' />
+<CharPlot char='主' :parts='[2,3]' />
 ❓
-<Chaifen char='主' :parts='[1,3,1]' :colors='[1,2,1]' />
+<CharPlot char='主' :parts='[1,3,1]' :colors='[1,2,1]' />
 ❓
 </div>
 :::
@@ -131,17 +131,17 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 `国`如果完全符合筆順，應該拆成`冂王丶一`，是四個字根。但拆成`囗王丶`，只用三個字根就夠了。因爲「少」優先級高於「順」，所以應該拆成`囗王丶`。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='国' :parts='[2,4,1,1]' :colors='[1,2,3,1]' />
+<CharPlot char='国' :parts='[2,4,1,1]' :colors='[1,2,3,1]' />
 ✅
-<Chaifen char='国' :parts='[2,4,1,1]' />
+<CharPlot char='国' :parts='[2,4,1,1]' />
 ❌
 </div>
 
 `國`如果完全符合筆順，應該拆成`冂一口一𠄌丿丶一`，是八個字根。但拆成`囗戈口一`，只用四個字根就夠了。因爲「少」優先級高於「順」，所以拆成`囗戈口一`。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='國' :parts='[2,1,3,1, 3, 1]' :colors='[1,2,3,4,2,1]' />
+<CharPlot char='國' :parts='[2,1,3,1, 3, 1]' :colors='[1,2,3,4,2,1]' />
 ✅
-<Chaifen char='國' :parts='[2,1,3,1,1,1,1,1]' />
+<CharPlot char='國' :parts='[2,1,3,1,1,1,1,1]' />
 ❌
 </div>
 
@@ -157,9 +157,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 「昜」拆「日一勹」不拆「日丆𠃌」，因為前者的半包圍結構完整。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='昜' :parts='[4,1,2,2]' />
+<CharPlot char='昜' :parts='[4,1,2,2]' />
 ✅
-<Chaifen char='昜' :parts='[4,2,1,2]' />
+<CharPlot char='昜' :parts='[4,2,1,2]' />
 ❌
 </div>
 
@@ -167,9 +167,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 「单」可以拆成「丷日十」也可以拆成「丷冂丰」。兩者都是三根。因爲包圍結構不拆散，故而「单」拆成「丷日十」。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='单' :parts='[2,4,2]' />
+<CharPlot char='单' :parts='[2,4,2]' />
 ✅
-<Chaifen char='单' :parts='[2,2,4]' />
+<CharPlot char='单' :parts='[2,2,4]' />
 ❌
 </div>
 
@@ -177,9 +177,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 「免」可以拆成「⺈口」也可以拆成「⺈冂尢」。兩者都是三根。因爲包圍結構不拆散，故而「免」拆成「⺈口」。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='免' :parts='[2,3,2]' />
+<CharPlot char='免' :parts='[2,3,2]' />
 ✅
-<Chaifen char='免' :parts='[2,2,3]' />
+<CharPlot char='免' :parts='[2,2,3]' />
 ❌
 </div>
 
@@ -187,9 +187,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 「万」拆成「一」而非「丆㇆」。因爲前者不僅完全符合筆順，同時也保持了結構完整。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='万' :parts='[1,2]' />
+<CharPlot char='万' :parts='[1,2]' />
 ✅
-<Chaifen char='万' :parts='[1,1,1]' :colors='[1,2,1]' />
+<CharPlot char='万' :parts='[1,1,1]' :colors='[1,2,1]' />
 ❌
 </div>
 
@@ -197,9 +197,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 「匹」拆「匚儿」而不拆「兀乚」，因爲前者結構完整。相似結構的「区医」也都是類似的拆法。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='匹' :parts='[1,2,1]' :colors='[1,2,1]' />
+<CharPlot char='匹' :parts='[1,2,1]' :colors='[1,2,1]' />
 ✅
-<Chaifen char='匹' :parts='[3,1]' />
+<CharPlot char='匹' :parts='[3,1]' />
 ❌
 </div>
 :::
@@ -219,9 +219,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 1. **全部字根穿插寫就**（又稱整體不合筆順）：指這種拆分方式下，所有的字根都是穿插寫就的。「州」字若拆成「川」，便算作整體不合筆順。這種情況很少出現，一般見於兩根字中。
 
 <div class="flex justify-left flex-wrap">
-<Chaifen char='涸' :parts='[3,2,5,1]' :colors='[1,2,3,4]' />
-<Chaifen char='涸' :parts='[3,2,5,1]' :colors='[1,2,3,2]' />
-<Chaifen char='州' :parts='[1,1,1,1,1,1]' :colors='[1,2,1,2,1,2]' />
+<CharPlot char='涸' :parts='[3,2,5,1]' :colors='[1,2,3,4]' />
+<CharPlot char='涸' :parts='[3,2,5,1]' :colors='[1,2,3,2]' />
+<CharPlot char='州' :parts='[1,1,1,1,1,1]' :colors='[1,2,1,2,1,2]' />
 </div>
 
 「符合筆順」規則便是要求：如果存在兩種不同的拆分方式，則優先選擇**一體寫就**字根**更多**的那一種拆分。
@@ -232,9 +232,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 `来`可以拆成`一米`也可以拆成`未丷`，都是兩根，但拆成`一米`時，全部字根一體寫就。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='来' :parts='[1,6]' />
+<CharPlot char='来' :parts='[1,6]' />
 ✅
-<Chaifen char='来' :parts='[1,2,4]' :colors='[1,2,1]' />
+<CharPlot char='来' :parts='[1,2,4]' :colors='[1,2,1]' />
 ❌
 </div>
 
@@ -242,9 +242,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 `聿`可以拆成`彐キ`也可以拆成`肀二`，都是兩根，但拆成`彐キ`時，全部字根一體寫就。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='聿' :parts='[3,3]' />
+<CharPlot char='聿' :parts='[3,3]' />
 ✅
-<Chaifen char='聿' :parts='[3,2,1]' :colors='[1,2,1]' />
+<CharPlot char='聿' :parts='[3,2,1]' :colors='[1,2,1]' />
 ❌
 </div>
 
@@ -252,9 +252,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 `妻`可以拆成`十彐女`也可以拆成`キコ女`，都是三根。拆成`十彐女`時，兩個字根一體寫就；拆成`キコ女`時，只有一個字根一體寫就。故而拆成`十彐女`更符合筆順。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='妻' :parts='[1,3,1,3]' :colors='[1,2,1,3]' />
+<CharPlot char='妻' :parts='[1,3,1,3]' :colors='[1,2,1,3]' />
 ✅
-<Chaifen char='妻' :parts='[1,1,1,1,1,3]' :colors='[1,2,1,2,1,3]' />
+<CharPlot char='妻' :parts='[1,1,1,1,1,3]' :colors='[1,2,1,2,1,3]' />
 ❌
 </div>
 :::
@@ -277,9 +277,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 ::: tip 例
 「主」可以拆成「丶王」也可以拆成「亠土」。觀察到，「丶王」是散開的，而「亠土」是相連的，後者符合「能散不連」。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='主' :parts='[1,4]' />
+<CharPlot char='主' :parts='[1,4]' />
 ✅
-<Chaifen char='主' :parts='[2,3]' />
+<CharPlot char='主' :parts='[2,3]' />
 ❌
 </div>
 :::
@@ -291,9 +291,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 ::: tip 例
 「开」可以拆成「一廾」也可以拆成「二」。觀察到，第一種拆法字根相連，第二種拆法字根相交。故而拆成「一廾」符合「能連不交」。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='开' :parts='[1,3]' />
+<CharPlot char='开' :parts='[1,3]' />
 ✅
-<Chaifen char='开' :parts='[2,2]' />
+<CharPlot char='开' :parts='[2,2]' />
 ❌
 </div>
 :::
@@ -305,9 +305,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 ::: tip 例
 「果」拆作「日木」，不拆成「田木」或「甲木」，這是因爲後者將中間的豎斷開了。因爲「字根相交」的優先級高於「筆畫斷開」，「果」應當拆成「日木」。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='果' :parts='[4,4]' />
+<CharPlot char='果' :parts='[4,4]' />
 ✅
-<Chaifen char='果' :parts='[4,1,1,2]' :colors='[1,2,0,2]' />
+<CharPlot char='果' :parts='[4,1,1,2]' :colors='[1,2,0,2]' />
 ❌
 </div>
 
@@ -315,9 +315,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 「栽」拆作「十戈木」，不拆成「土戈木」，這是因爲後者將中間的横斷開了。因爲「字根相連」的優先級高於「筆畫斷開」，「栽」應當拆成「十戈木」。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='栽' :parts='[2,1,4,3]' :colors='[1,3,2,3]' />
+<CharPlot char='栽' :parts='[2,1,4,3]' :colors='[1,3,2,3]' />
 ✅
-<Chaifen char='栽' :parts='[2,1,4,3]' :colors='[1,0,2,3]' />
+<CharPlot char='栽' :parts='[2,1,4,3]' :colors='[1,0,2,3]' />
 ❌
 </div>
 :::
@@ -334,17 +334,17 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 ::: tip 例
 「我」拆作「丿扌戈」，不拆成「丿扌乚丿丶」。雖然前者將中間的橫斷開了，但因爲「字根最少」，我們選擇只有三根的「丿扌戈」。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='我' :parts='[1,1,2,3]' :colors='[1,0,2,3,5,1]' />
+<CharPlot char='我' :parts='[1,1,2,3]' :colors='[1,0,2,3,5,1]' />
 ✅
-<Chaifen char='我' :parts='[1,3,1,1,1]' />
+<CharPlot char='我' :parts='[1,3,1,1,1]' />
 ❌
 </div>
 
 「熏」拆作「千黑」，不拆成「千囗丷二灬」。雖然前者將中間的豎斷開了，但因爲「字根最少」，我們選擇只有兩根的「千黑」。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='熏' :parts='[2,5,1,6]' :colors='[1,2,0,2,3,5,1]' />
+<CharPlot char='熏' :parts='[2,5,1,6]' :colors='[1,2,0,2,3,5,1]' />
 ✅
-<Chaifen char='熏' :parts='[2,2,2,1,1,2,4]' :colors='[1,2,3,2,1,4,5]' />
+<CharPlot char='熏' :parts='[2,2,2,1,1,2,4]' :colors='[1,2,3,2,1,4,5]' />
 ❌
 </div>
 :::
@@ -372,9 +372,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 `失`拆`丿夫`而不拆`牛乀`，因爲`牛`的一豎是撇。故而對`夫`取大。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='失' :parts='[1,4]' />
+<CharPlot char='失' :parts='[1,4]' />
 ✅
-<Chaifen char='失' :parts='[4,1]' :colors='[1,2]' />
+<CharPlot char='失' :parts='[4,1]' :colors='[1,2]' />
 ❌
 </div>
 
@@ -382,9 +382,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 `井`拆`二{介下}`而不拆`キ丨`，因爲`キ`的一豎是撇。故而對`{介下}`取大。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='井' :parts='[2,2]' />
+<CharPlot char='井' :parts='[2,2]' />
 ✅
-<Chaifen char='井' :parts='[3,1]' />
+<CharPlot char='井' :parts='[3,1]' />
 ❌
 </div>
 
@@ -394,11 +394,11 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 另外一種拆法`丌䒑丿`不取的原因是`䒑`字根中的點應當和橫相連（艹字頭的行書寫法），而`严`字中兩點分散了。這違反了[字根的內在屬性](./intrinsic)。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='严' :parts='[1,5,1]' />
+<CharPlot char='严' :parts='[1,5,1]' />
 ✅
-<Chaifen char='严' :parts='[3,2,2]' />
+<CharPlot char='严' :parts='[3,2,2]' />
 ❌
-<Chaifen char='严' :parts='[3,3,1]' />
+<CharPlot char='严' :parts='[3,3,1]' />
 ❌
 </div>
 
@@ -407,9 +407,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 `缓`拆`纟爪干又`而不拆`纟爪二夂`。雖然前者`干`的豎是撇，但後者出現了「字根相交」。根據規則優先級，「字根相交」低於「字根相連」，故而拆爲`纟爪干又`。
 
 <div class="flex justify-left flex-wrap">
-<Chaifen char='缓' :parts='[3, 4, 3, 2]' />
+<CharPlot char='缓' :parts='[3, 4, 3, 2]' />
 ✅
-<Chaifen char='缓' :parts='[3, 4, 2, 3]' />
+<CharPlot char='缓' :parts='[3, 4, 2, 3]' />
 ❌
 </div>
 :::
@@ -423,9 +423,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 ::: tip 例
 `夬`拆爲`ユ人`，而不拆成`乛大`，因爲「字根取大」原則。讓首筆靠前的字根的筆劃數儘量地多，這裡，`ユ`的筆畫數大於`乛`。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='夬' :parts='[2,2]' />
+<CharPlot char='夬' :parts='[2,2]' />
 ✅
-<Chaifen char='夬' :parts='[1,3]' />
+<CharPlot char='夬' :parts='[1,3]' />
 ❌
 </div>
 
@@ -433,9 +433,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 
 `丈`拆爲`𠂇丶`，而不拆成`一乂`，因爲「字根取大」原則。讓首筆靠前的字根的筆劃數儘量地多，這裡，`𠂇`的筆畫數大於`一`。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='丈' :parts='[2,1]' />
+<CharPlot char='丈' :parts='[2,1]' />
 ✅
-<Chaifen char='丈' :parts='[1,2]' />
+<CharPlot char='丈' :parts='[1,2]' />
 ❌
 </div>
 :::
@@ -488,9 +488,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 - 都不適用「結構合理」。
 - 進入兜底規則「字根取大」。根據規則，只要其中某個字根多寫一筆仍然符合筆順，就多寫一筆。觀察到，`{聿上}一灬皿`的第一根一共寫了四筆，故而勝出。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='盡' :parts='[4,1,4,5]' />
+<CharPlot char='盡' :parts='[4,1,4,5]' />
 ✅
-<Chaifen char='盡' :parts='[3,2,4,5]' />
+<CharPlot char='盡' :parts='[3,2,4,5]' />
 ❌
 </div>
 
@@ -501,9 +501,9 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 - `曱`按笔顺取大，故而是`日丨`。
 - `甴`，候选拆分为`日丨` `囗丄`。两者都是两根，都結構完整。按笔顺取大，故而是`日丨`。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='曱' :parts='[4,1]' />
+<CharPlot char='曱' :parts='[4,1]' />
 ✅
-<Chaifen char='甴' :parts='[2,1,2]' :colors='[1,2,1]' />
+<CharPlot char='甴' :parts='[2,1,2]' :colors='[1,2,1]' />
 ✅
 </div>
 
@@ -517,13 +517,13 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 - 「戈口一」和「弋口一彡」中，穿插寫就的字根數量相同，均爲一個「戈」。都有「相交」情況。
 - 進入兜底規則「字根取大」。觀察到，「戈」的筆畫數大於「弋」，故而勝出。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='彧' :parts='[1,3,1,1,1,2,1]' :colors='[1,2,3,4,5,5,6]' />
+<CharPlot char='彧' :parts='[1,3,1,1,1,2,1]' :colors='[1,2,3,4,5,5,6]' />
 ❌
-<Chaifen char='彧' :parts='[1,3,1,1,1,2,1]' :colors='[1,4,3,1,1,2,1]' />
+<CharPlot char='彧' :parts='[1,3,1,1,1,2,1]' :colors='[1,4,3,1,1,2,1]' />
 ❌
-<Chaifen char='彧' :parts='[1,3,1,1,1,2,1]' :colors='[1,2,3,4,4,4,1]' />
+<CharPlot char='彧' :parts='[1,3,1,1,1,2,1]' :colors='[1,2,3,4,4,4,1]' />
 ❌
-<Chaifen char='彧' :parts='[1,3,1,1,1,2,1]' :colors='[1,2,3,1,1,4,1]' />
+<CharPlot char='彧' :parts='[1,3,1,1,1,2,1]' :colors='[1,2,3,1,1,4,1]' />
 ✅
 </div>
 

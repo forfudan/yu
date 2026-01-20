@@ -1,5 +1,5 @@
 <script setup>
-import Chaifen from '@/chaifen/Chaifen.vue'
+import CharPlot from '@/plot/CharPlot.vue'
 </script>
 
 # 星陳輸入法單字編碼
@@ -32,22 +32,22 @@ import Chaifen from '@/chaifen/Chaifen.vue'
 ::: tip 例
 
 `嫩`字拆成`女木口夂`，分別對應了首根、二根、三根、末根，我們直接取〔`女` Cn `木` Am `口` Lv `夂` Tu〕四個字根的大碼 CALT 即可出字。
-<Chaifen char='嫩' :parts='[3,1,3,3,4]' :colors='[1,2,3,2,4]' />
+<CharPlot char='嫩' :parts='[3,1,3,3,4]' :colors='[1,2,3,2,4]' />
 
 `整`字拆成`木口夂正`，我們只取首根、二根、三根、末根，也就是〔`木` Am `口` Lv `攵` Tu `正` Lz〕的大碼，輸入 ALTP 即可出字。
-<Chaifen char='整' :parts='[1,3,3,4,5]' :colors='[1,2,1,3,4]' />
+<CharPlot char='整' :parts='[1,3,3,4,5]' :colors='[1,2,1,3,4]' />
 
 `算`字拆成`竹目卄`，只有三根，所以我們取全部根，也就是〔`𥫗` Gz `目` Jm `廾` So〕的大碼，即 GJS。此時，注意到不足四碼，故而補上最末根的小碼 o。輸入 GJso 即可出字。
-<Chaifen char='算' :parts='[6,5,3]' />
+<CharPlot char='算' :parts='[6,5,3]' />
 
 `织`字拆成`纟口八`，只有三根，所以我們取全部根大碼，也就是 KLK。此時，注意到不足四碼，故而補上最末根的小碼 a。輸入 KLKa 即可出字。
-<Chaifen char='织' :parts='[3,3,2]' />
+<CharPlot char='织' :parts='[3,3,2]' />
 
 `认`字拆成`讠人`，只有兩根，所以我們取全部根，也就是〔`讠` Dy `人` Re〕的大碼，即 DR 。此時，注意到不足四碼，故而補上最末根的小碼 e。注意到仍然不足四碼，於是再添上首根的小碼 y。輸入 DRey 即可出字。
-<Chaifen char='认' :parts='[2,2]' />
+<CharPlot char='认' :parts='[2,2]' />
 
 `好`字拆成`女子`，只有兩根，所以我們取全部根，也就是〔`女` Cn `子` Kz〕的大碼，即 CK。此時，注意到不足四碼，故而補上最末根的小碼 z。注意到仍然不足四碼，於是再添上首根的小碼 n。輸入 CKzn 即可出字。
-<Chaifen char='好' :parts='[3,3]' />
+<CharPlot char='好' :parts='[3,3]' />
 :::
 
 末尾添加首根的小碼，只是爲了補齊四碼的作用，只有在雙根字中才會出現。
@@ -97,6 +97,6 @@ A：首先是爲了讓字根編碼規則和單字編碼規則一致。其次，�
 
 一個字的編碼等於 4 位，且有後續字符等待輸入。我們不需要按空格鍵。只要直接輸入下一個字的首碼，這個字就會自動上屏。我們稱之爲「五碼頂屏」。例如：我們打「霽雨」二字，「霽」字的編碼是`〔雨文{介下}・ CTKa〕`。輸入`a`後，我們直接輸入「雨」字的編碼`〔雨・ Cvv〕`，則「霽」字會自動上屏。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='霁' :parts='[8,4,2]' />
-<Chaifen char='雨' :parts='[8]' />
+<CharPlot char='霁' :parts='[8,4,2]' />
+<CharPlot char='雨' :parts='[8]' />
 </div>

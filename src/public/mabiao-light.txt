@@ -18375,7 +18375,6 @@ rgnu	全
 eyjd	像
 eteh	处
 uwen	望
-vxii	飞
 yxje	命
 tfvi	今
 ywhw	解
@@ -134623,7 +134622,6 @@ ruyw	𪛁
 jwyw	𪛂
 ynyw	𪛕
 ynyu	𪛖
-vxvx	𠃧
 ekje	𠉤
 etje	𠐔
 emxb	𠐴
@@ -134739,7 +134737,6 @@ wwal	𦈺
 wddw	𦈼
 msje	𦋿
 rsnu	𦏜
-xxvx	𦐭
 awds	𦖋
 wbsj	𦚪
 whmt	𦛘
@@ -134839,14 +134836,12 @@ chmt	𨹮
 wddw	𨿠
 rsnw	𩁕
 dwds	𩃒
-drqx	𩄩
 gwal	𩈮
 gwal	𩋙
 ijbs	𩐦
 rwal	𩗪
 rwds	𩗰
 rsje	𩘳
-vxux	𩙱
 ywds	𩜀
 yoqs	𩜏
 ysje	𩞄
@@ -135173,7 +135168,6 @@ hmtj	𫎯
 hmtj	𫎰
 hwal	𫐏
 hmtp	𫐨
-gdsx	𫗌
 qsje	𫚧
 waly	𫛲
 hmty	𫛿
@@ -135415,8 +135409,6 @@ hmtk	𬫁
 twal	𬭕
 phmt	𬮨
 cwdy	𬯝
-vxeb	𬲉
-lyvx	𬲊
 tisv	𬵱
 nfns	𫡃
 ijgt	𫤶
@@ -135677,7 +135669,6 @@ jtfy	𮭦
 kvqe	𮭬
 etdb	𮮧
 wddh	𬼓
-evxq	𬾘
 oqss	𬿎
 soqs	𭂔
 lhmc	𭉞
@@ -135709,7 +135700,6 @@ whme	𮢵
 wald	𮨒
 rsnd	𮨠
 rjje	𮨮
-vxhv	𮨶
 trje	𮬀
 ehog	𬿢
 ehlg	𭀁
@@ -135921,7 +135911,6 @@ owds	𰵶
 okje	𰵸
 mhmt	𰷘
 hmtr	𰷰
-wvxi	𰼠
 tkje	𰾓
 rsny	𱊭
 shlg	𰄂
@@ -136084,26 +136073,21 @@ hqem	𲎣
 hqhm	𲎤
 hwat	𱗱
 wdds	𱗼
-cvxi	𱙆
 owal	𱚊
 jsje	𱜅
-fvxi	𱢿
 iaww	𱩋
 uwds	𱫘
 hmtu	𱫿
-tvxi	𱭙
 rwal	𱮅
 gsje	𱯞
 hmtm	𱲓
 pmxb	𱷜
 vhmt	𱺝
-kvxi	𱿙
 osje	𲂓
 hmtq	𲃇
 hmtm	𲃈
 whmt	𲄠
 hmtc	𲆟
-gvxi	𲆧
 hmtk	𲊼
 dhmt	𲋹
 djsa	𱑓
@@ -136124,7 +136108,6 @@ ywht	⻆
 yktt	⻇
 sjti	⻩
 yjbw	⻱
-vxii	⻜
 hwks	⾭
 ssjt	⿈
 kntt	⿋
@@ -136495,11 +136478,7 @@ irry	𳑂
 kntt	𳑑
 ntxh	𳑰
 hmtq	𮰊
-uvxi	𮳛
-svxi	𮶞
 hmtk	𮷑
-vxvx	𮸽
-xvxi	𮹂
 xwal	𮹋
 oqsi	𛀔
 oqsi	𛀕

@@ -46,7 +46,7 @@ export default defineConfig({
     logo: "/logo_blue.png",
     nav: [
       { text: "介绍", link: "/docs/" },
-      { text: "学习", link: "/learn/" },
+      { text: "学习", link: "/learn/division" },
       { text: "练习", link: "/practice/root" },
       { text: "安装", link: "/docs/install" },
       { text: "体验", link: "/ime/ling" },
@@ -461,7 +461,7 @@ export default defineConfig({
         logo: "/logo_purple.png",
         nav: [
           { text: "介紹", link: "/zht/docs/" },
-          { text: "學習", link: "/zht/learn/" },
+          { text: "學習", link: "/zht/learn/division" },
           { text: "練習", link: "/zht/practice/root" },
           { text: "安裝", link: "/zht/docs/install" },
           { text: "體驗", link: "/zht/ime/ling" },

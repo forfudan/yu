@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { genIdentifier, getDivision } from "./share";
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const p = defineProps({
     char: { type: String },
@@ -19,7 +19,10 @@ const p = defineProps({
     },
 })
 
-const randYu = genIdentifier(12);
+// Use ref to ensure the ID is consistent between SSR and client
+const randYu = ref<string>('');
+const isMounted = ref(false);
+
 var parts: Array<number>
 var colors: Array<number>
 
@@ -42,15 +45,20 @@ if (typeof p.colors === "string") {
     colors = p.colors
 };
 
-// Only call getDivision when component is mounted (client-side)
+// Only generate ID and render on client side
 onMounted(() => {
-    getDivision(randYu, p.char, parts, colors, p.size);
+    randYu.value = genIdentifier(12);
+    isMounted.value = true;
+    // Use nextTick to ensure DOM is updated with the new ID
+    setTimeout(() => {
+        getDivision(randYu.value, p.char, parts, colors, p.size);
+    }, 0);
 });
 
 </script>
 
 <template>
-    <div v-bind='{ id: randYu }'></div>
+    <div v-if="isMounted" v-bind='{ id: randYu }'></div>
 </template>
 
 <script lang="ts">

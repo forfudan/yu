@@ -1,6 +1,6 @@
 <script setup>
-import Chaifen from '@/chaifen/Chaifen.vue'
-import MultiChaifen from '@/chaifen/MultiChaifen.vue'
+import CharPlot from '@/plot/CharPlot.vue'
+import MultiCharPlot from '@/plot/MultiCharPlot.vue'
 </script>
 
 # 前言
@@ -17,7 +17,7 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 ## 漢字輸入法
 
-<MultiChaifen chars="漢字輸入法" :size="50" loc='left' />
+<MultiCharPlot chars="漢字輸入法" :size="50" loc='left' />
 
 漢字輸入法，顧名思義，就是漢字（部首、筆畫）錄入進電腦中的方法。大多數時候，輸入的過程，有兩個階段：
 
@@ -38,14 +38,14 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 - 音形（形音）混合。
 
 <div class="flex justify-left flex-wrap">
-<Chaifen char='音' :parts='[5,4]' />
-<Chaifen char='码' :parts='[5,3]' />
+<CharPlot char='音' :parts='[5,4]' />
+<CharPlot char='码' :parts='[5,3]' />
 </div>
 
 **音碼輸入法**，最常見的例子就是拼音。我們將漢字對應的拼音，直接輸入到軟件中，軟件會顯示對應的漢字供你選擇。這其中包括了一個反饋的過程，即：輸入字母——獲得候選——輸入數字——獲得漢字。
 <div class="flex justify-left flex-wrap">
-<Chaifen char='形' :parts='[4,3]' />
-<Chaifen char='碼' :parts='[5,10]' />
+<CharPlot char='形' :parts='[4,3]' />
+<CharPlot char='碼' :parts='[5,10]' />
 </div>
 
 **形碼輸入法**，最常見的例子是五筆字型。我們將漢字拆成若干部件，輸入每一個部件對應的代碼，軟件會顯示出漢字。常見的形碼，還包括五筆字型，鄭碼，倉頡等等。這其中有時包括了一個反饋的過程，但因爲形碼的確定性，大多數時候是不需要確認的，即：輸入字母——獲得漢字。
@@ -65,11 +65,11 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 音碼的缺點，那便是同音字很多，經常需要選字。雖然當代的不少輸入軟片在「智能化」上下足了工夫，但在輸入一些書面語、古文、或者生僻字詞時，還是需要選字。大量翻頁會打輸入的節奏。筆者正是因爲寫小説時候被翻頁打斷思路而使用了形碼。
 
-<MultiChaifen chars='優點' loc='left' />
+<MultiCharPlot chars='優點' loc='left' />
 
 形碼的優點，便是像**寫字**一樣去打字。你不需要知道每個字的具體讀音。同時，因爲編碼比較離散，你甚至不怎麽需要去選字。這在寫作時，保證你的思路不被打斷。在看打、或者打古文的時候，形碼的速度很快。
 
-<MultiChaifen chars='缺點' loc='left' />
+<MultiCharPlot chars='缺點' loc='left' />
 
 形碼缺點是，如果你一下字忘了這個字的寫法，那就會卡住，必須臨時改用拼音輸入法（反查）。
 
@@ -97,8 +97,8 @@ import MultiChaifen from '@/chaifen/MultiChaifen.vue'
 
 `程`字，大家會自然地將他拆分爲`禾口王`三個部分。  
 <div class="flex justify-left flex-wrap">
-<Chaifen char='部' :parts='[5,3,2]' />
-<Chaifen char='程' :parts='[5,3,4]' />
+<CharPlot char='部' :parts='[5,3,2]' />
+<CharPlot char='程' :parts='[5,3,4]' />
 </div>
 :::
 
