@@ -17443,6 +17443,7 @@ dcc	車
 dcc	🩤
 dcc	🩫
 dcc	
+dcc	
 dccc	𬤚
 dccf	𮤊
 dcci	𤽛
@@ -18880,6 +18881,7 @@ dii	𦥑
 dii	⺽
 dii	⾅
 dii	
+dii	
 diia	楽
 diia	𨏍
 diia	𨏏
@@ -31331,6 +31333,7 @@ fss	⺘
 fss	⼿
 fss	🈐
 fss	𘠲
+fss	
 fssa	擛
 fssg	撶
 fssi	𘣍
@@ -45931,6 +45934,7 @@ hzz	走
 hzz	壴
 hzz	⾛
 hzz	🈰
+hzz	
 i	小
 i	小时
 i	小组
@@ -85084,6 +85088,7 @@ pii	龰
 pii	𱤻
 pii	⽌
 pii	
+pii	
 piia	𨆴
 piia	𬧘
 piib	𤚔
@@ -86019,6 +86024,7 @@ pnn	𠂒
 pnn	⺧
 pnn	⽜
 pnn	𘳂
+pnn	
 pnnb	𤘥
 pnnb	𧿥
 pnnb	𨟵
@@ -93242,6 +93248,8 @@ qyy	⽺
 qyy	𘤘
 qyy	
 qyy	
+qyy	
+qyy	
 qyyk	𘱣
 r	人
 r	人群

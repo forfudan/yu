@@ -47,6 +47,7 @@ font,ma,pinyin
 目,dmu,Mù
 耳,dje,ěr -> Je 🈤零聲母小碼取J
 雨,dyu,Yǔ
+曲,dku,Qǔ -> Ku 🈤Q作K
 ,do,🈤無讀音取o ㊕不做末根
 鸟,dna,Niǎo -> Na
 ,dna,
@@ -77,7 +78,6 @@ font,ma,pinyin
 見,fja,Jiàn -> Ja
 頁,fye,Yè
 足,fvu,Zú -> Vu 🈤Z和Ẑ作V
-𧾷,fvu,Zú ㊟俗稱足字旁
 丰,ge,Fēŋ -> Fe 🈤不取聲母
 艮,gge,Gěn -> Ge
 ,gge,㊟同艮歸併
@@ -90,24 +90,24 @@ font,ma,pinyin
 申,gse,Ŝēn -> Se
 电,ga,Diàn -> Da 🈤不取聲母
 鱼,gyu,Yú
+气,gki,Qì -> Ki 🈤Q作K
 阝,gu,Fǔ 🈤不取聲母 ㊟俗稱掛耳旁 🈑在左同阜在右同邑
 馬,gma,Mǎ
 ,gma,
 丁,hdi,Dīŋ -> d
 丅,hdi,㊟同丁歸併 🈑下本字
 下,ha,Xià -> x 🈤不取聲母
-了,hle,Le
+了,hla,Liǎo -> La 🈕le
 子,hvi,Zǐ -> Vi 🈤Z和Ẑ作V
+孑,hje,Jié -> je ㊟多根字中都拆作子
 予,hu,Yǔ 🈤不取聲母
-其,hqi,Qí 🈕Jī Jì
 广,hga,Guǎŋ -> Ga 🈕Yǎn ān
 文,hwe,Wén -> We
 日,hri,Rì
-曰,hye,Yuē -> Ye
+曰,hye,Yuē -> Ye ㊟多根字中除汩抇曶都拆作日
 ,hri,㊟同日歸併
 ,hri,㊟同日歸併
 黑,hhe,Hēi -> He
-犬,hqa,Quǎn -> Qa
 示,hsi,Ŝì -> Si
 礻,hsi,Ŝì -> Si ㊟俗稱示字旁
 走,hvo,Zǒu -> Zo 🈤Z和Ẑ作V
@@ -149,8 +149,6 @@ font,ma,pinyin
 彡,ka,Ŝān -> Sa 🈤不取聲母
 ,ka,
 ,ko,🈤無讀音取o ㊕不做末根
-犭,kqa,Quǎn -> Qa ㊟俗稱反犬旁
-豸,kvi,Ẑì -> Vi 🈤Z和Ẑ作V
 亍,kcu,Ĉù
 亡,kwa,Wáŋ -> Wa
 ,klo,Luó -> Lo
@@ -170,8 +168,8 @@ font,ma,pinyin
 ,kdi,Duī -> Di
 至,kvi,Ẑì -> Vi 🈤Z和Ẑ作V
 車,kce,Ĉē
-叀,kce,
 ,kce,
+,kce,
 长,kca,Ĉáŋ -> Ca
 矢,ksi,Ŝǐ -> Si
 缶,kfo,Fǒu -> Fo
@@ -182,12 +180,11 @@ font,ma,pinyin
 ,ljo,
 冊,lce,Cè
 ,lce,
-曲,lqu,Qǔ
 鬥,ldo,Dòu -> Do
 十,li,Ŝi -> Si 🈤不取聲母
 干,lga,Gān -> Ga
-千,lqa,Qiān -> Qa
-,lqa,
+千,lka,Qiān -> Ka 🈤Q作K
+,lka,
 壬,lre,Rén -> Re
 毛,lma,Máo -> Ma
 古,lgu,Gǔ
@@ -196,24 +193,23 @@ font,ma,pinyin
 戸,lhu,
 戶,lu,Hù -> Hu 🈤不取聲母
 月,le,Yuè = Ye 🈤不取聲母
-⺝,le,
 ,le,
 ,le,
 夕,lxi,Xī
 未,lwe,Wèi -> We
 末,lmo,Mò
 止,lvi,Ẑǐ -> Vi 🈤Z和Ẑ作V
-龰,lvi,㊟同止歸併
+,lvi,㊟同止歸併
 齒,lci,Ĉǐ
 飛,lfe,Fēi -> Fe
 ,mvo,Zuǒ -> Zo 🈤Z和Ẑ作V 🈑左本字
 车,mce,Ĉē
 牛,mnu,Niú -> Nu
-⺧,mnu,㊟同牛歸併
+,mnu,㊟同牛歸併
 尸,msi,Ŝī -> Si
 ,msi,㊟同尸歸併
 ,msi,㊟同尸歸併
-七,mi,Qī -> qi 🈤不取聲母
+七,mi,Qī -> ki 🈤不取聲母 🈤Q作K
 ,mi,㊟同七歸併
 弋,myi,Yì -> yi
 戈,mge,Gē
@@ -223,12 +219,13 @@ font,ma,pinyin
 方,mfa,Fāŋ -> Fa
 爪,ma,Ẑuǎ -> Va 🈤Z和Ẑ作V但不取聲母
 瓜,mga,Guā -> Ga
+豸,mvi,Ẑì -> Vi 🈤Z和Ẑ作V
 癶,mo,Bō 🈤不取聲母
 人,ne,rén -> Re 🈤不取聲母
 合,nhe,Hé
 ,nhe,
 ,nhe,
-僉,na,Qiān -> Qa 🈤不取聲母
+僉,na,Qiān -> Ka 🈤不取聲母 🈤Q作K
 食,nsi,Ŝí
 飠,nsi,
 兀,nwu,Wù
@@ -236,16 +233,14 @@ font,ma,pinyin
 小,nxa,Xiǎo -> Xa
 ⺌,nxa,Xiǎo -> Xa 🈑同小
 ,nxa,
-⺍,na,Xiǎo -> Xa 🈤不取聲母
+,na,Xiǎo -> Xa 🈤不取聲母
 ,na,
 米,nmi,Mǐ
 自,nvi,Zì -> Vi 🈤Z和Ẑ作V
 貝,nbe,Bèi -> Be
 竹,nu,Ẑú -> Vu 🈤不取聲母 🈤Z和Ẑ作V
-⺮,nu,
 ,no,🈤無讀音取o
 ,no,
-气,nqi,Qì
 西,ni,Xī 🈤不取聲母
 酉,nyo,Yǒu -> Yo
 石,psi,Ŝí
@@ -262,21 +257,22 @@ font,ma,pinyin
 火,po,Huǒ -> Ho 🈤不取聲母
 灬,pba,Biāo -> Ba 🈕Hǔo
 臼,pu,Jìù -> Ju 🈤不取聲母
-⺽,pu,Jǔ 🈤不取聲母
+,pu,Jǔ 🈤不取聲母
 甶,pu,Fǔ -> Fu 🈤不取聲母
 ,pu,㊟同甶歸併
 鬼,pi,Guǐ -> Gi 🈤不取聲母
 ,pi,㊟同鬼歸併
+其,qki,Qí 🈤Q作K 🈕Jī Jì
 又,qo,Yòu -> Yo 🈤不取聲母
 ,qo,🈤無讀音取o
 ,qo,
-艹,qa,Cǎo -> Ca 🈤不取聲母
-廾,qa,㊟同艹歸併
-,qa,
-,qa,
-,qa,
-卅,qsa,Sà
 卌,qi,Xì 🈤不取聲母
+卅,qi,㊟同卌歸併 🈕Sà
+艹,qi,㊟同卌歸併 🈕Cǎo
+廾,qi,㊟同卌歸併 🈕Gǒng
+,qi,㊟同卌歸併
+,qi,㊟同卌歸併
+,qi,㊟同卌歸併
 丂,rka,Kào -> Ka
 ,rka,
 业,rye,Yè
@@ -285,12 +281,12 @@ font,ma,pinyin
 ⺀,rje,㊟同二歸併
 ,rje,㊟同二歸併
 冫,rje,èr -> Je 🈑同二 🈑冰本字 🈕Bīng
-丬,ra,Qiáŋ -> Qa 🈤不取聲母
+丬,ra,Qiáŋ -> Ka 🈤不取聲母 🈤Q作K
 疒,rne,Nè ㊟俗稱病字頭
-⺁,ri,Yì -> Yi 🈤不取聲母
+,ri,Yì -> Yi 🈤不取聲母
 來,rla,Lái -> La
 卜,rbu,Bǔ
-⺊,rbu,㊟同⺊歸併
+,rbu,㊟同⺊歸併
 ,ro,🈤無讀音取o
 ,ro,
 虎,rhu,Hǔ
@@ -301,8 +297,8 @@ font,ma,pinyin
 皿,rmi,Mǐn -> Mi
 ,ro,🈤無讀音取o
 羊,rya,Yáŋ -> Ya
-⺶,rya,
-⺷,rya,
+,rya,
+,rya,
 ,ro,🈤無讀音取o
 见,rja,Jiàn -> j
 言,ra,Yán -> Ya 🈤不取聲母
@@ -316,7 +312,7 @@ font,ma,pinyin
 土,su,Tǔ -> Tu 🈤不取聲母
 ,se,Ŝēŋ -> Se 🈤不取聲母
 耂,sla,Lǎo -> La
-壴,svu,Ẑú -> Vu 🈤Z和Ẑ作V
+,svu,Ẑú -> Vu 🈤Z和Ẑ作V
 ,so,🈤無讀音取o ㊕不做末根
 尤,syo,Yóu -> Yo
 尢,so,Yóu -> Yo 🈤不取聲母 🈑尤本字 🈕Wāŋ
@@ -331,11 +327,11 @@ font,ma,pinyin
 ,swu,
 丶,tu,Ẑǔ 🈤基本筆畫不取聲母 ㊟俗稱點
 乀,tu,Fú 🈤基本筆畫不取聲母 ㊟俗稱捺
-欠,tqa,Qiān -> Qa
+欠,tka,Qiān -> Ka 🈤Q作K
 匕,ti,Bi 🈤不取聲母
 ,ti,㊟同匕歸併 🈑化本字 🈕Huà
 手,tso,Ŝǒu -> So
-龵,tso,
+,tso,
 扌,to,Ŝǒu -> So 🈤不取聲母 ㊟俗稱提手旁
 用,to,Yòŋ -> Yo 🈤不取聲母
 ,vo,🈤無讀音取o
@@ -345,13 +341,15 @@ font,ma,pinyin
 刀,va,Dāo -> Da 🈤不取聲母
 刂,vda,Dāo -> Da ㊟俗稱立刀旁
 巾,vji,Jīn -> Ji
-且,ve,Qiě -> Qe 🈤不取聲母
+且,ve,Qiě -> Ke 🈤不取聲母 🈤Q作K
 ,vo,🈤無讀音取o
 水,vi,Ŝuǐ -> Si 🈤不取聲母
 氺,vi,
 氵,vi,Ŝuǐ -> Si 🈤不取聲母 ㊟俗稱三點水
 ,vo,🈤無讀音取o
 甫,vu,Fǔ -> Fu 🈤不取聲母
+犬,wa,Quǎn -> Ka 🈤Q作K
+犭,wka,Quǎn -> Ka 🈤Q作K ㊟俗稱反犬旁
 乃,wna,Nǎi -> Na
 乙,wi,Yǐ 🈤基本筆畫不取聲母 ㊟一切折筆皆同碼
 乚,wi,Yí 🈤基本筆畫不取聲母 ㊟一切折筆皆同碼
