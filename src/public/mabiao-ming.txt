@@ -113689,6 +113689,7 @@ fkdi	〶
 fkdi	𘠧
 fke	⼿
 fke	🈐
+fke	
 fkfi	𘮍
 fkfmc	𢌱
 fkfmc	𢌱
@@ -115494,6 +115495,7 @@ gnsdg	癩
 gnu	⽜
 gnu	⺧
 gnu	𘳂
+gnu	
 gnvjc	㈵
 gnvjc	㊕
 go	⼉
@@ -115629,6 +115631,7 @@ hsgje	㒻
 hsgme	冒
 hsi	⽌
 hsi	
+hsi	
 hskfl	歲
 hslfg	頻
 hslge	頻
@@ -116136,6 +116139,7 @@ kjrni	䳎
 kju	⾅
 kju	⺽
 kju	
+kju	
 kjwlq	𣢧
 kka	⼺
 kka	𘡂
@@ -120169,6 +120173,7 @@ rre	車
 rre	🩤
 rre	🩫
 rre	
+rre	
 rrfdh	輻
 rrjnd	軔
 rrjxo	𛄒
@@ -122643,6 +122648,7 @@ vsqku	殺
 vsqrn	𪄅
 vsrwo	閷
 vstcu	⿎
+vsu	
 vswdk	𛀛
 vswli	勇
 vswli	勇
@@ -125993,6 +125999,8 @@ xo	⺷
 xo	𘤘
 xo	
 xo	
+xo	
+xo	
 xpda	𛃋
 xpda	𛃌
 xpda	𛃍

@@ -37,7 +37,7 @@ font,ma
 耂,Gt
 士,Gs
 ,Gs
-壴,Lz
+,Lz
 大,Kr
 夫,Xf
 寸,Me
@@ -78,7 +78,7 @@ font,ma
 走,Gz
 車,Fj
 ,Fj
-叀,Fj
+,Fj
 车,Lj
 辰,Pc
 酉,Wy
@@ -100,7 +100,7 @@ font,ma
 丶,Le
 乀,Le
 丷,Qb
-䒑,Qb
+,Qb
 ,Qb
 之,Hz
 亠,Lt
@@ -118,7 +118,7 @@ font,ma
 方,Nd
 氵,Is
 ,Is
-⺍,Is
+,Is
 火,Th
 灬,Th
 疒,Yb
@@ -127,8 +127,8 @@ font,ma
 米,Ak
 羊,Hy
 ,Hy
-⺷,Hy
-⺶,Hy
+,Hy
+,Hy
 衤,Vy
 言,Uy
 讠,My
@@ -193,13 +193,12 @@ font,ma
 心,Uf
 忄,Hx
 手,Ps
-龵,Ps
+,Ps
 斤,Cn
-⺁,Cn
+,Cn
 月,Wi
 ,Wi
 ,Wi
-⺝,Wi
 欠,Gq
 殳,Dp
 毛,Wm
@@ -209,7 +208,7 @@ font,ma
 爪,Bz
 片,Cp
 牛,Mn
-⺧,Mn
+,Mn
 犭,Qq
 瓜,Bg
 生,Ek
@@ -220,11 +219,10 @@ font,ma
 竹,Dz
 ,Dz
 ,Dz
-⺮,Dz
 缶,Ff
 自,Hd
 臼,Hj
-⺽,Hj
+,Hj
 舌,Xs
 舟,Qz
 豸,Kz
@@ -271,7 +269,7 @@ font,ma
 卜,Nb
 ,Nb
 ,Nb
-⺊,Nb
+,Nb
 口,Oz
 〇,Oz
 咼,Tg
@@ -291,7 +289,7 @@ font,ma
 曰,Jy
 曲,Hq
 止,Nz
-龰,Nz
+,Nz
 水,Fs
 氺,Fs
 田,Yt
@@ -312,7 +310,6 @@ font,ma
 貝,Sb
 贝,Cb
 足,Fz
-𧾷,Fz
 里,Di
 門,Cm
 非,Mf

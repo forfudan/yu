@@ -48,7 +48,7 @@ const alwaysVisibleZigens = computed(() => {
         // case 'ling':
         //     return 'Q　W乚　R冫⺀虍　T乀龵用　P巴　S　F丆　G　H　J攵　K丄　L　X朩　C䒑　V　⺈肀　N⺌⺮　M'
         default:
-            return '冫巴用'
+            return '冫巴用艹'
     }
 })
 

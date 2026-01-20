@@ -97,12 +97,11 @@ font,ma,pinyin
 竹,Gz,ZHú -> z
 ,Gz,
 ,Gz,
-⺮,Gz,
 寸,Hc,Cùn -> c
 电,Hd,Diàn -> d
 骨,Hg,Gǔ -> g
 夭,Hi,yāo = iāo -> i
-⺁,Hi,yì -> ì
+,Hi,yì -> ì
 耂,Hl,Lǎo -> l
 鹿,Hl,Lù -> l
 ,Hl,
@@ -123,13 +122,13 @@ font,ma,pinyin
 艮,Ig,Gěn -> g
 ,Ig,
 臼,Ij,Jìù -> j
-⺽,Ij,
+,Ij,
 宀,Im,Miǎn -> m
 气,Iq,Qì -> q
 入,Ir,rù -> r
 申,Is,SHēn -> s
 ,Iw,wéi -> w ㊟取爲音w
-⺍,Ix,Xiǎo -> x
+,Ix,Xiǎo -> x
 ,Ix,
 小,Ix,Xiǎo -> x
 ,Ix,
@@ -168,7 +167,7 @@ font,ma,pinyin
 〇,Kl,Líng -> l
 面,Km,Miàn -> m
 手,Ks,SHǒu -> s
-龵,Ks,
+,Ks,
 豕,Ks,SHǐ -> s
 ,Ks,
 口,Kv,Kǒu -> v ㊟特例
@@ -180,7 +179,7 @@ font,ma,pinyin
 ,Lb,
 疒,Lb,Bìng -> b
 貝,Lb,Bèi -> b
-䒑,Lc,cǎo -> c
+,Lc,cǎo -> c
 辰,Lc,CHén -> c
 耳,Le,ěr -> e
 酉,Li,yǒu = iǒu -> i
@@ -195,6 +194,7 @@ font,ma,pinyin
 ,Lv,Ø -> v ㊟無讀音或生僻部首
 西,Lx,Xī -> x
 子,Lz,Zǐ -> z
+孑,Lz,
 八,Mb,Bā -> b
 灬,Mb,Biāo -> b
 髟,Mb,Biāo -> b
@@ -209,8 +209,8 @@ font,ma,pinyin
 ,Mg,
 火,Mh,Huǒ -> h
 羊,Mi,yáng = iáng -> i
-⺷,Mi,
-⺶,Mi,
+,Mi,
+,Mi,
 ,Mr,rén -> r
 矢,Ms,SHǐ -> s
 尢,Mw,wǎng -> w
@@ -227,7 +227,7 @@ font,ma,pinyin
 瓦,Nw,wǎ -> w
 心,Nx,Xīn -> x
 止,Nz,ZHǐ -> z
-龰,Nz,
+,Nz,
 巴,Ob,Bā -> b
 亍,Oc,CHù -> c
 隹,Oc,Cuī -> c
@@ -264,7 +264,7 @@ font,ma,pinyin
 阝,Pf,Fǔ -> f
 革,Pg,Gé -> g
 牛,Pn,Niú -> n
-⺧,Pn,
+,Pn,
 生,Ps,SHēng -> s
 豸,Pz,ZHì -> z
 丰,Qf,Fēng -> f
@@ -331,7 +331,7 @@ font,ma,pinyin
 ,Ts,
 鱼,Tv,yú = ǘ -> v
 卜,Ub,Bǔ -> b
-⺊,Ub,
+,Ub,
 辶,Uc,CHuò -> c
 ⻍,Uc,
 广,Ug,Guǎng -> g
@@ -357,7 +357,7 @@ font,ma,pinyin
 食,Vs,SHí -> s
 飠,Vs,
 禺,Vv,yǔ = ǚ -> v
-壴,Vz,ZHú -> z
+,Vz,ZHú -> z
 爪,Vz,ZHuǎ -> z
 彳,Wc,CHì -> c
 ,Wd,Duī -> d
@@ -375,7 +375,7 @@ font,ma,pinyin
 未,Ww,wèi -> w
 車,Xc,CHē -> c
 ,Xc,
-叀,Xc,
+,Xc,
 黑,Xh,Hēi -> h
 牙,Xi,yá = iá -> i
 皿,Xm,Mǐn -> m
@@ -384,7 +384,6 @@ font,ma,pinyin
 ,Xn,
 乌,Xw,wū -> w
 足,Xz,Zú -> z
-𧾷,Xz,
 ,Xz,Zuǒ -> z
 亦,Yi,yì = ì
 ,Yi,
@@ -392,6 +391,5 @@ font,ma,pinyin
 月,Yv,yuè = y
 ,Yv,
 ,Yv,
-⺝,Yv,
 王,Yw,wáng -> w
 夕,Yx,Xī -> x

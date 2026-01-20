@@ -8,13 +8,13 @@
     font-family: "yuhao-font";
     src: url("/Yuniversus.woff") format("woff");
     unicode-range: U+F400-F8FF;
-    font-display: swap;
+    /* font-display: swap; */
 }
 
 @font-face {
     font-family: "tianma-font";
     src: url("/sky.woff") format("woff");
-    font-display: swap;
+    /* font-display: swap; */
 }
 
 .zigen-font {
