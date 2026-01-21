@@ -92,7 +92,6 @@ fp	系
 fr	一部分
 fs	喜欢
 ft	兩個
-fv	严
 fw	求
 gb	痛苦
 gc	反正
@@ -121,15 +120,15 @@ hp	央视
 hq	甚
 hs	步
 ht	思
-hv	刚刚
 hv	刚
+hv	刚刚
 hw	内容
 hx	羽
 hz	越
 jb	巴黎
 jc	过程
-jd	事情
 jd	事
+jd	事情
 jf	才
 jg	·
 jh	映
@@ -1205,6 +1204,7 @@ rga	珠
 rgi	琢
 rhi	默
 rhu	墨
+rja	严
 rji	卫
 rki	理
 rko	碌
@@ -1706,7 +1706,6 @@ fpto	币
 fpvi	翻
 fpvo	釋
 ftke	兩
-fvfe	严
 fwni	求
 gbbe	貼
 gbge	嬰
@@ -3526,6 +3525,7 @@ cccsm	桑
 ccctp	敪
 cccu	叒
 cccyd	剟
+ccfvj	斲
 cclnd	书
 ccu	双
 cfccf	飝
@@ -7527,7 +7527,6 @@ fdjvk	鿹
 fdo	击
 fdpi	鲏
 fdvi	吏
-fdvjo	斲
 fdxci	豆
 fdxcu	豉
 fdxge	頭
@@ -7990,7 +7989,6 @@ fvdke	鲒
 fve	亚
 fvfdk	鲘
 fvfki	鲓
-fvfpe	严
 fvhbo	赉
 fvjfo	鳞
 fvji	晋
@@ -16649,6 +16647,7 @@ rcnqh	瑵
 rcvns	琺
 rcydi	琍
 rdbka	琮
+rdccv	鬭
 rdcmt	鬫
 rdddk	噩
 rddsm	璪
@@ -16661,7 +16660,6 @@ rdfgv	鬮
 rdfhs	琔
 rdfkb	璌
 rdflu	琓
-rdfvj	鬭
 rdgka	瑑
 rdhns	离
 rdhwc	離
@@ -16811,6 +16809,7 @@ rjso	斉
 rjsxc	斓
 rjsyd	剤
 rjtka	琕
+rjxga	严
 rjxo	忞
 rjydi	剂
 rjygm	璼
@@ -21699,7 +21698,6 @@ wfsvk	峹
 wfswc	雓
 wftjo	伂
 wftke	倆
-wfvfp	俨
 wfvht	僠
 wfvi	伛
 wfvjx	僁
@@ -22294,6 +22292,7 @@ wrre	俥
 wrrli	傡
 wrsgj	儭
 wrtpe	僌
+wrxga	俨
 wrxni	鸧
 wrydi	创
 wsbbi	烋
@@ -23132,7 +23131,6 @@ yftvd	隚
 yfu	阝
 yfvcj	隯
 yfvcu	阪
-yfvfp	酽
 yfvfx	隑
 yfvfx	隥
 yfvht	隞
@@ -23288,6 +23286,7 @@ yrdke	醅
 yrdns	醨
 yrjjx	醷
 yrmi	酕
+yrxga	酽
 ysbdk	笘
 ysbga	笟
 ysbgl	籧
@@ -25724,7 +25723,6 @@ bmftc	𲋸
 bmftj	𩡸
 bmfvh	䮳
 bmfvj	𩣕
-bmfvl	𮪜
 bmfwn	𮪅
 bmgbb	䮽
 bmgbb	𳎏
@@ -26073,6 +26071,7 @@ bmrrj	𩧜
 bmrrr	𩧍
 bmrsm	𩦃
 bmrxc	𬵿
+bmrxl	𮪜
 bmsci	䱢
 bmsdd	𩤓
 bmsdj	𩦙
@@ -27063,9 +27062,16 @@ ccddk	𠭎
 ccde	𫌵
 ccdke	𰇍
 ccffe	𤕪
+ccffi	𠁁
+ccfge	𩔡
+ccfgj	𧡸
 ccfgo	𫨹
 ccfnd	𱑶
 ccfne	𱎃
+ccfto	𧞐
+ccfvj	𰴛
+ccfyd	㓸
+ccfyf	𨜹
 ccgnu	𤘩
 ccgtp	𠮆
 cchns	𰆽
@@ -28472,6 +28478,7 @@ ckccr	𤅏
 ckccs	𪶽
 ckccu	𰛝
 ckccu	𮳄
+ckccv	𤂊
 ckcdf	𣹤
 ckcdk	𣷓
 ckcdl	㖳
@@ -28867,12 +28874,9 @@ ckftj	𱧈
 ckftw	𤂝
 ckfve	𮳅
 ckfve	𲰫
-ckfvf	𬇬
 ckfvj	㴽
-ckfvj	𤂊
 ckfvj	𪶮
 ckfvk	𤄤
-ckfvl	𤂢
 ckfvl	𤄪
 ckfvo	𰛓
 ckfvv	𱩣
@@ -30539,7 +30543,9 @@ ckrwk	𣹗
 ckrwl	𭰛
 ckrwl	𰛞
 ckrwo	㴸
+ckrxg	𬇬
 ckrxg	𱩶
+ckrxl	𤂢
 ckryd	𭱆
 cksbb	𮳉
 cksbd	𲩡
@@ -31803,6 +31809,7 @@ cnbvc	𡡗
 cnbvd	𡝇
 cnbve	𱙧
 cnccb	𩤦
+cnccf	𡟳
 cnccf	𭒌
 cncci	㐐
 cnccl	𭒋
@@ -31981,7 +31988,6 @@ cnfci	𫰍
 cnfcl	𡜞
 cnfcn	𡞾
 cnfdc	𡠑
-cnfde	𡟳
 cnfdf	𫰟
 cnfdg	𡣓
 cnfdh	𫱆
@@ -32042,10 +32048,8 @@ cnfpw	𡞡
 cnfsc	𡛋
 cnfsm	㛆
 cnftf	𡛷
-cnfvf	𱙔
 cnfvj	𡠂
 cnfvj	𡡁
-cnfvl	𭒭
 cnfvm	𫝫
 cnfwc	𡡳
 cnfwn	㛏
@@ -32701,6 +32705,8 @@ cnrtp	𡝺
 cnru	𡠄
 cnrvd	𡣫
 cnrwv	𲛲
+cnrxg	𱙔
+cnrxl	𭒭
 cnryc	𡤆
 cnsbk	𡞫
 cnscn	𡝋
@@ -33111,6 +33117,7 @@ dbtpe	𧪤
 dbvkg	𮙅
 dbvkx	𫍗
 dbwo	𧩐
+dccfi	𧪧
 dccjx	𧪅
 dcclg	𰎈
 dccu	𧦀
@@ -33373,7 +33380,6 @@ dfcnd	𧥯
 dfcu	𰆲
 dfdci	𧦖
 dfdcu	𠭆
-dfde	𧪧
 dfdfi	𦫹
 dfdfo	𫵮
 dfdi	𮘁
@@ -33645,8 +33651,10 @@ djcbk	𨭡
 djcbl	𳇔
 djcbo	𨨓
 djccc	𨯏
+djccf	𨪐
 djccf	𮡪
 djccu	𨥖
+djccv	𨮕
 djcdk	𠯶
 djcdk	𨨛
 djcdn	𨧵
@@ -33808,7 +33816,6 @@ djdyt	𲇠
 djfcf	𨥦
 djfcg	𨩙
 djfcn	𨬀
-djfde	𨪐
 djfdg	𨯲
 djfdj	𨥛
 djfdj	𫒳
@@ -33873,7 +33880,6 @@ djfth	𨪳
 djftj	𨥚
 djftj	𨫍
 djftk	𨨄
-djfvj	𨮕
 djfvk	𧨨
 djfvx	𨰪
 djfwb	𨫨
@@ -35881,7 +35887,6 @@ dkfvb	𱿒
 dkfvc	𠷛
 dkfvd	𭊩
 dkfvd	𰇱
-dkfvf	𫪂
 dkfvg	𠽲
 dkfvh	𪡺
 dkfvh	𭊇
@@ -37304,6 +37309,8 @@ dkrcc	𱓘
 dkrci	𠵣
 dkrcs	𲘁
 dkrct	㘚
+dkrcv	𡆏
+dkrcv	𡆞
 dkrdc	𫫀
 dkrdd	𫬭
 dkrde	𫫅
@@ -37330,8 +37337,6 @@ dkrfk	𠻅
 dkrfl	𠶃
 dkrfm	𫫭
 dkrfo	𡄠
-dkrfv	𡆏
-dkrfv	𡆞
 dkrfx	𡂛
 dkrgc	𠻿
 dkrgd	𡅫
@@ -37424,6 +37429,7 @@ dkrwh	𭋳
 dkrwk	𫪴
 dkrwl	𱒣
 dkrwy	𭌋
+dkrxg	𫪂
 dkrxr	𠺚
 dkryd	𭇯
 dkryd	𰇞
@@ -40055,7 +40061,6 @@ fddpd	𬻠
 fddsm	𫚫
 fddtk	𠦵
 fddyf	𨝶
-fde	𠁁
 fdfdi	𱇸
 fdfgm	𥂉
 fdfhd	𧽇
@@ -40066,8 +40071,6 @@ fdflr	𨒧
 fdfmq	𩽽
 fdfrn	𪀕
 fdfso	𠁱
-fdge	𩔡
-fdgje	𧡸
 fdgo	𠑺
 fdhbe	𱆏
 fdhce	𠀷
@@ -40160,9 +40163,7 @@ fdsme	𣏁
 fdtjo	𰀌
 fdvdk	𠲀
 fdvhs	𲓾
-fdvje	𰴛
 fdvjf	𲢖
-fdvlt	𧞐
 fdvtp	𫾫
 fdvvm	𫣚
 fdwdk	𣕤
@@ -40233,9 +40234,7 @@ fdxwl	𮷋
 fdxxc	𧰐
 fdxyd	䜽
 fdxyf	𰶠
-fdydi	㓸
 fdyfu	𨚎
-fdyfu	𨜹
 ffa	𤘆
 ffa	𬶅
 ffbcu	𱡙
@@ -40560,7 +40559,6 @@ ffvbc	𰕅
 ffvbh	㔸
 ffvck	𪟮
 ffvfk	𠥚
-ffvfp	𲍓
 ffvft	𠥃
 ffvht	𱈕
 ffvjo	𣂪
@@ -42389,6 +42387,7 @@ frlsi	𥾟
 frni	𩾏
 frvdu	𡉝
 frvjo	𣂕
+frxga	𲍓
 fsbbi	𪸓
 fsbxo	𰤊
 fscnd	𫚋
@@ -42538,16 +42537,11 @@ fvfcu	𢾵
 fvfi	𠄡
 fvfjx	𢣡
 fvfkg	𬌘
-fvflb	䴡
-fvfrn	𪇾
-fvfth	𭴪
-fvftp	𫿞
 fvfvi	𫣙
 fvfvm	𣘐
 fvfvm	𭫝
 fvfvm	𰙉
 fvfxc	𤘑
-fvfyf	𮠑
 fvgbo	𮚅
 fvge	𩓋
 fvggb	𰠥
@@ -47303,6 +47297,7 @@ gmbsk	𪾦
 gmbso	𥊪
 gmbve	𥋖
 gmccc	𭿁
+gmccf	𥉝
 gmcci	𥄀
 gmccu	𱲰
 gmcdk	𥆃
@@ -47435,7 +47430,6 @@ gmdwy	𥇂
 gme	𠨱
 gmfcg	𥈱
 gmfci	𮵆
-gmfde	𥉝
 gmfdi	𪎜
 gmfdj	𥈋
 gmfdl	𥉅
@@ -53735,7 +53729,6 @@ jftyd	𠜱
 jftyf	𭙆
 jfvdu	𡉘
 jfve	㫫
-jfvfp	𰖈
 jfvfx	𳂄
 jfvge	𩔰
 jfvht	𣊩
@@ -55859,6 +55852,7 @@ jrwko	𣲂
 jrwli	𠡗
 jrwno	𦣨
 jrwo	𱢚
+jrxga	𰖈
 jrxro	𲤮
 jrybr	𣱄
 jrybs	𣠿
@@ -65119,6 +65113,7 @@ ltbvt	𧛙
 ltccc	𬽃
 ltcct	𧚰
 ltcct	𧛿
+ltcct	𧞗
 ltclf	𠅂
 ltcto	𬡇
 ltddb	𥜘
@@ -65162,7 +65157,6 @@ ltfhw	𠅈
 ltfjt	𧘘
 ltfjt	𧙩
 ltfkt	𧘙
-ltfvt	𧞗
 ltfwt	𧚍
 ltfwt	𧜸
 ltfyt	𲀯
@@ -72804,7 +72798,6 @@ nftvj	𦠀
 nfve	𬁺
 nfvi	𬁵
 nfvjx	𬛐
-nfvlb	𮍇
 nfvvd	𦈰
 nfvvl	𦉗
 nfvwc	𦉎
@@ -73501,6 +73494,7 @@ nrsme	𦠯
 nrsxc	䑌
 nrvdu	𦢓
 nrvro	𬂇
+nrxlb	𮍇
 nsbbu	𫨦
 nsbgb	𫨫
 nsbma	𱄑
@@ -76349,7 +76343,6 @@ pqfsh	𤟃
 pqftj	𤜳
 pqfve	𰡉
 pqfvf	𤞈
-pqfvf	𤞤
 pqfvh	㺕
 pqfvm	𰡎
 pqfvo	𰡂
@@ -76829,6 +76822,7 @@ pqrsm	𤡦
 pqrtp	𤡄
 pqrwc	𨿗
 pqrwc	𪻉
+pqrxg	𤞤
 pqrxn	𫛭
 pqsci	𤝤
 pqsdd	𤟎
@@ -79915,6 +79909,11 @@ rjvjc	𤨅
 rjvka	𡴺
 rjvka	𤤼
 rjvmi	𱯂
+rjxgl	䴡
+rjxgr	𪇾
+rjxgt	𫿞
+rjxgt	𭴪
+rjxgy	𮠑
 rjxo	𪻒
 rjxo	𱞂
 rjyfu	𤥌
@@ -80200,7 +80199,6 @@ rkfsm	𣕼
 rkfu	𬍥
 rkfve	𰦴
 rkfve	𳃵
-rkfvf	𰦾
 rkfvh	𨊄
 rkfvi	𥐰
 rkfvm	𱴄
@@ -80947,6 +80945,7 @@ rkru	䃖
 rkrvj	𥕌
 rkrvn	𨊝
 rkrwo	䠾
+rkrxg	𰦾
 rkrxl	𥗮
 rksbq	𥖬
 rkscu	𥑊
@@ -81939,6 +81938,7 @@ rmcbk	𮤥
 rmccc	䦤
 rmccn	𨵋
 rmccu	𨳦
+rmccv	𨷖
 rmcdk	𲨊
 rmcfg	𨵨
 rmcfn	𣮁
@@ -82096,7 +82096,6 @@ rmftj	𤨮
 rmftj	𨳪
 rmfvd	𤪣
 rmfvh	𨶸
-rmfvj	𨷖
 rmfvm	𰚙
 rmfwo	𫞩
 rmfwt	𭯧
@@ -84201,7 +84200,6 @@ sfsfp	𱍂
 sfsfp	𮹝
 sfsme	𬺜
 sftjo	𫥀
-sfvfp	𫥍
 sfwco	𪞩
 sfwnd	𠗈
 sfwro	𠗎
@@ -88432,6 +88430,7 @@ srtpe	𠘜
 sru	𭂛
 srwco	𨶄
 srwkk	𠗰
+srxga	𫥍
 ssbbi	𤈀
 ssbcu	𦤺
 sscle	𫇏
@@ -91883,7 +91882,6 @@ vdfsm	𣐟
 vdfso	𪢸
 vdftj	𲘺
 vdfvd	𲙀
-vdfvf	𫭲
 vdfvi	𫭟
 vdfvm	𱖬
 vdfwf	𡑊
@@ -92816,6 +92814,7 @@ vdrvj	𡐛
 vdrvk	𫮖
 vdrwc	𭏽
 vdrww	𫮇
+vdrxg	𫭲
 vdscd	𡌟
 vdscn	𫭞
 vdscv	𡌞
@@ -93421,7 +93420,6 @@ vftlr	𨔄
 vftlr	𮞏
 vftvk	𬐂
 vfve	𲂉
-vfvfp	𰵨
 vfvht	𮷊
 vfvi	𤕜
 vfvkb	𧹲
@@ -94075,8 +94073,6 @@ vkftt	𢾷
 vkfu	𰵩
 vkfvd	𡊽
 vkfve	𱛝
-vkfvf	𪨷
-vkfvf	𰎠
 vkfvj	𡺽
 vkfvj	𱜈
 vkfvk	𡵤
@@ -95037,6 +95033,8 @@ vkrvk	𭗃
 vkrvm	𬚩
 vkrwc	𡽛
 vkrwh	𫶗
+vkrxg	𪨷
+vkrxg	𰎠
 vksci	𡶃
 vksck	𫯅
 vksct	𪌨
@@ -96683,6 +96681,7 @@ vrvxp	𫐗
 vrvyu	𳅘
 vrwjc	𰹿
 vrwnv	𫐉
+vrxga	𰵨
 vrxgl	𫟦
 vrxmc	𫐌
 vrxni	𮷙
@@ -97140,6 +97139,7 @@ wcbyf	𨝱
 wccbc	𬯰
 wcccu	𬾧
 wcccu	𲉩
+wccfi	𠍄
 wcci	𠃲
 wcclf	𲉫
 wcclz	𫲫
@@ -97412,7 +97412,6 @@ wfcne	𪜨
 wfcne	𱙉
 wfcsm	𣜈
 wfcwc	㒑
-wfde	𠍄
 wfdfk	𠋒
 wfdgb	𠏺
 wfdge	𭀆
@@ -97615,11 +97614,8 @@ wfvji	𰖗
 wfvji	𱎿
 wfvjo	𰁳
 wfvjx	𱏀
-wfvkb	𠏊
-wfvlb	𠐚
 wfvlu	𠎛
 wfvqf	𮨨
-wfvtp	𫤌
 wfvyf	𬪏
 wfwfi	𠍮
 wfwfi	𱎮
@@ -99576,6 +99572,9 @@ wrwo	𬿂
 wrwro	𠓾
 wrwro	𫤪
 wrxcu	𪝫
+wrxkb	𠏊
+wrxlb	𠐚
+wrxtp	𫤌
 wrydi	𠛮
 wrydi	𰂁
 wryfu	𨛈
@@ -100255,14 +100254,11 @@ xcfjx	𢘤
 xcfjx	𬑵
 xcfjx	𲳄
 xcfkg	𦏁
-xcfkg	𭟱
 xcflb	𭅐
-xcfld	𭉵
 xcflf	𭁌
 xcflk	𭁙
 xcfll	𪟸
 xcflr	𨒃
-xcfls	𮍹
 xcfmc	𠭶
 xcfme	𲊚
 xcfmu	𡟿
@@ -100270,7 +100266,6 @@ xcfrd	𭽶
 xcfrj	𡭉
 xcfrk	𮷕
 xcfsb	𰅼
-xcfsj	𠩖
 xcfso	𰕰
 xcfst	㪵
 xcftk	𪟶
@@ -100285,11 +100280,15 @@ xcgck	𬎼
 xcgge	𩔀
 xcgje	𳁓
 xcgka	㒸
+xcgkg	𭟱
+xcgld	𭉵
 xcglk	𧷭
+xcgls	𮍹
 xcglt	㸂
 xcgme	𱲣
 xcgpq	𱮁
 xcgqq	𧔑
+xcgsj	𠩖
 xcgyd	𠝮
 xcgyv	𡐂
 xchbj	𮫲
@@ -101675,6 +101674,7 @@ yfbvk	𱀼
 yfbvk	𱀽
 yfccc	𨺝
 yfccd	𫕓
+yfccf	𨻉
 yfccn	𱀚
 yfccs	𨻗
 yfccu	𫷗
@@ -101748,7 +101748,6 @@ yfdxc	𫑶
 yffcf	𱀭
 yffci	𱍺
 yffdd	䧢
-yffde	𨻉
 yffdh	𨺤
 yffdh	𫕆
 yffdj	𨸧
@@ -105385,6 +105384,7 @@ ccffi	𗉇
 ccffi	𗊲
 ccffi	𗾺
 ccffi	𗿣
+ccffi	
 ccffp	𗃜
 ccffp	𗉹
 ccffp	𗋙
@@ -111120,7 +111120,6 @@ fdbwo	뱼
 fdci	ㅲ
 fdci	ㅴ
 fddli	ㅸ
-fde	
 fdfbb	빠
 fdfbb	뽜
 fdfbo	뺘
@@ -125194,6 +125193,7 @@ xcfls	𘛘
 xcflv	𗓔
 xcfmv	𗓏
 xcfo	𛂟
+xcfpe	
 xcfrs	𗒝
 xcftf	𘕋
 xcftj	𘧿
@@ -126616,7 +126616,7 @@ kqjll	背景
 gkjjb	按照
 ckwo	没人
 fhyfo	两年
-fvkqk	严重
+rjkqk	严重
 wysi	作用
 smwnj	概念
 vjyxc	都要
@@ -127460,7 +127460,7 @@ vhsml	调整
 jcfjo	过于
 xclfo	并非
 nzwo	路人
-fvsmd	严格
+rjsmd	严格
 pdsst	大致
 rlwtk	颜值
 fhfvm	再来
@@ -128238,7 +128238,7 @@ ysxgm	等着
 hvwll	周边
 vrrld	车站
 dmxxd	完善
-fvsjk	严肃
+rjsjk	严肃
 smpda	极大
 cnhfd	如同
 wlfpt	货币
@@ -128732,7 +128732,7 @@ mbkbn	不公
 wddmj	保守
 ksmcc	综艺
 mzxjj	有错
-fvvgs	严谨
+rjvgs	严谨
 chskd	委屈
 fdslh	融资
 dkyqi	口气
@@ -129927,7 +129927,7 @@ slpdj	姿态
 vxxcl	说道
 tjksn	初级
 hjlzi	包子
-xcfvf	尊严
+xcrjg	尊严
 fmne	五月
 bkcma	神马
 shnll	肩膀
