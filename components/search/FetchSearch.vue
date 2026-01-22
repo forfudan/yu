@@ -17,10 +17,10 @@ import { ZigenMap, ChaifenMap, fetchZigen } from "./share";
 import ChaiDataLoader from "./ChaiDataLoader";
 
 const p = defineProps<{
-    chaifenUrl: string,  // Required - specifies which chaifen file to use
-    zigenUrl: string,
-    rule: string,
-    modelValue?: string, // 支持 v-model 传入用户输入
+    chaifenUrl: string,  // 拆分表文件 URL
+    zigenUrl: string,  // 字根表文件 URL
+    rule: string,  // 編碼規則
+    modelValue?: string, // 支持 v-model 傳入用戶輸入
 }>()
 
 const emit = defineEmits<{
@@ -34,7 +34,7 @@ const isDataLoaded = shallowRef(false)
 const userInput = shallowRef(p.modelValue || '')
 const loadError = shallowRef<string | null>(null)
 
-// 诗词数组和随机选择
+// 詩詞數組和隨機選擇
 const poets: string[] = [
     "小樓一夜聽春雨　深巷明朝賣杏花",
     "休對故人思故國　且將新火試新茶",
@@ -66,29 +66,29 @@ const randomPoetry = computed(() => {
     return poets[index];
 })
 
-// 同步外部传入的值
+// 同步外部傳入的值
 watch(() => p.modelValue, (newValue) => {
     if (newValue !== undefined && newValue !== userInput.value) {
         userInput.value = newValue
-        // 如果外部传入的值不为空且数据还没加载，立即加载数据
+        // 如果外部傳入的值不為空且數據還沒加載，立即加載數據
         if (newValue.trim().length > 0 && !isDataLoaded.value) {
             loadData()
         }
     }
 }, { immediate: true })
 
-// 当内部值改变时，通知父组件
+// 當內部值改變時，通知父組件
 watch(userInput, (newValue) => {
     emit('update:modelValue', newValue)
-    // 当用户开始输入时加载数据
+    // 當用戶開始輸入時加載數據
     if (newValue.trim().length > 0 && !isDataLoaded.value) {
         loadData()
     }
 })
 
-// 监听数据加载状态和用户输入，确保组件创建时能正确显示结果
+// 監聽數據加載狀態和用戶輸入，確保組件創建時能正確顯示結果
 watch([isDataLoaded, userInput], ([dataLoaded, input]) => {
-    // 当数据加载完成且有用户输入时，触发搜索显示
+    // 當數據加載完成且有用戶輸入時，觸發搜索顯示
     if (dataLoaded && input && input.trim().length > 0) {
         console.log(`🔍 Data loaded, ready to search for: "${input}"`)
     }
@@ -140,7 +140,7 @@ async function loadData() {
     }
 }// Preload data if user hasn't interacted yet (optional optimization)
 onMounted(() => {
-    // 如果组件创建时已经有输入值，立即加载数据
+    // 如果組件創建時已經有輸入值，立即加載數據
     if (userInput.value.trim().length > 0) {
         loadData()
     }
@@ -174,7 +174,7 @@ function quickSearch(query: string) {
         <!-- Loading state -->
         <div v-if="isLoading" class="text-gray-600 text-center py-4">
             <div class="loading loading-spinner loading-sm mr-2"></div>
-            正在加载拆分数据……
+            正在加載拆分數據……
         </div>
 
         <!-- Error state -->
@@ -184,7 +184,7 @@ function quickSearch(query: string) {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span>加载失败：{{ loadError }}</span>
+            <span>加載失敗：{{ loadError }}</span>
         </div>
 
         <!-- Search component (only when data is loaded) -->
@@ -199,7 +199,7 @@ function quickSearch(query: string) {
 
         <!-- Empty state -->
         <div v-else-if="userInput.trim().length > 0 && !isLoading" class="text-gray-500 text-center py-4">
-            开始输入以查看拆分……
+            開始輸入以查看拆分……
         </div>
     </div>
 </template>
