@@ -18,7 +18,7 @@ export default defineConfig({
       dark: "material-theme-palenight",
     },
     config: (md) => {
-      md.use(mdFootnote);
+      md.use(mdFootnote as any);
     },
   },
   head: [

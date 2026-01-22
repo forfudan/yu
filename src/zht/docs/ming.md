@@ -63,7 +63,7 @@ import ZigenMap from "@/zigen/ZigenMap.vue"
 1. 冖 = ⺈ -> Mo
 1. 䒑丷 -> Xci
 1. 皮 -> Dpi
-1. 丩 = <span class="yuniversus"></span> -> Qo
+1. 丩 =  -> Qo
 
 20250622 更新
 
@@ -80,8 +80,8 @@ import ZigenMap from "@/zigen/ZigenMap.vue"
 20250630 更新
 
 1. <ruby>疒<rt>nè</rt></ruby> -> Gne
-1. ⺍<span class="yuniversus"></span> -> Lxi ~ `小`
-1. <span class="yuniversus"></span> -> Dji ~ `⺔` （避免 ⺔<span class="yuniversus"></span> - <span class="yuniversus"></span>豕 編碼不一致）
+1. ⺍ -> Lxi ~ `小`
+1.  -> Dji ~ `⺔` （避免 ⺔ - 豕 編碼不一致）
 1. `川巛ㄍ` -> Jri (同指不位移優先)
 1. `工` -> Jgi (同指不位移優先)
 1. `瓦` -> Ja (同指不位移優先)
@@ -107,7 +107,7 @@ import ZigenMap from "@/zigen/ZigenMap.vue"
 1. `食`，`FKa` -> `WKa` （和`人`聚類）
 1. `水`，`FKo` -> `WKo`
 1. <ruby>厂丆<rt>ān</rt></ruby>，`Kre` -> `Ga` （和`广疒鹿麻`聚類）
-1. <span class="yuniversus"><ruby>風<rt>fēng</rt>虫<rt>hǔi</rt></ruby></span>，`M` -> `Q` （和`几殳`聚類）
+1. <ruby>風<rt>fēng</rt>虫<rt>hǔi</rt></ruby>，`M` -> `Q` （和`几殳`聚類）
 1. <ruby>耂<rt>lǎo</rt></ruby>，`Vli` -> `Vo` （生僻字，只做首部，此處作無音化處理）
 1. <ruby>壴<rt>zhú</rt></ruby>，`Fsu` -> `Vsu` （和`土士龶耂`聚類）
 

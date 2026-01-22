@@ -1,7 +1,7 @@
 <script setup>
 import ZigenMap from "@/zigen/ZigenMap.vue"
 import ZigenTrain from "@/train/ZigenTrain.vue"
-import Search from '@/search/OptimizedFetchSearch.vue'
+import Search from '@/search/FetchSearch.vue'
 </script>
 
 # 天碼

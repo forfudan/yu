@@ -2,7 +2,7 @@ font,ma,pinyin
 二,Ae,èr -> e
 ⺀,Ae,
 ,Ae,
-冫,Ae,èr -> e
+,Ae,èr -> e
 甫,Af,Fǔ -> f
 干,Ag,Gān -> g
 用,Ai,yòng = iòng -> i
@@ -16,19 +16,19 @@ font,ma,pinyin
 马,Bm,Mǎ -> m
 舌,Bs,SHé -> s
 囗,Bw,wéi = w
-忄,Bx,Xīn -> x
+,Bx,Xīn -> x
 穴,Bx,Xuè -> x
 丁,Cd,Dīng -> d
 乂,Ci,yì = i
 ,Ci,
-讠,Ci,yán = ián -> i
+,Ci,yán = ián -> i
 咼,Ck,Kuǎi -> k ㊟古音
 ,Ck,
 來,Cl,Lái -> l
 馬,Cm,Mǎ -> m
 ,Cm,
 示,Cs,SHì -> s
-礻,Cs,
+,Cs,
 下,Cx,Xià -> x
 丅,Cx,
 自,Cz,Zì -> z
@@ -54,7 +54,6 @@ font,ma,pinyin
 卌,Ds,
 丑,Ec,CHǒu -> c
 鬥,Ed,Dòu -> d
-,Ed,Dòu -> d
 儿,Ee,ér -> e
 ,Ee,
 ,Ee,
@@ -73,7 +72,7 @@ font,ma,pinyin
 ,Em,Mù -> m ㊟木無枝也故取木音
 且,Eq,Qiě -> q
 ,Eq,
-亻,Er,rén -> r
+,Er,rén -> r
 文,Ew,wén -> w
 贝,Fb,Bèi -> b
 巛,Fc,CHuān -> c
@@ -82,7 +81,7 @@ font,ma,pinyin
 非,Ff,Fēi -> f
 一,Fi,yī = ī
 九,Fj,Jiǔ -> j
-扌,Fs,SHǒu -> s
+,Fs,SHǒu -> s
 车,Gc,CHè -> c
 禾,Gh,Hé -> h
 廴,Gi,yín = ín -> i
@@ -223,7 +222,7 @@ font,ma,pinyin
 壬,Nr,rén -> r
 水,Ns,SHuǐ -> s
 氺,Ns,
-氵,Ns,SHuǐ -> s
+,Ns,SHuǐ -> s
 瓦,Nw,wǎ -> w
 心,Nx,Xīn -> x
 止,Nz,ZHǐ -> z
@@ -238,19 +237,22 @@ font,ma,pinyin
 ,Oi,
 ,Oi,
 亅,Oi,
-,Oi,
-乛,Oi,
+,Oi,
+,Oi,
+,Oi,
+,Oi,
+,Oi,
 丌,Oj,Jì -> j
 ,Oj,
 冖,Om,Miǎn -> m
-,Om,
+,Om,
 丬,Oq,Qiáng -> q
 上,Os,SHàng -> s
 ,Os,
 丄,Os,
 巳,Os,Sì -> s
 ,Os,
-纟,Os,Sī -> s
+,Os,Sī -> s
 ,Os,
 魚,Ov,yú = ü -> v
 ,Ov,Ø -> v ㊟無讀音或生僻部首
@@ -261,7 +263,7 @@ font,ma,pinyin
 舟,Oz,ZHōu -> z
 冊,Pc,Cè -> c
 ,Pc,
-阝,Pf,Fǔ -> f
+,Pf,Fǔ -> f
 革,Pg,Gé -> g
 牛,Pn,Niú -> n
 ,Pn,
@@ -298,7 +300,7 @@ font,ma,pinyin
 合,Sh,Hé -> h
 ,Sh,
 ,Sh,
-衤,Si,yī = ī
+,Si,yī = ī
 ,Si,yī = ī ㊟取衣音y
 ,Si,
 几,Sj,Jǐ -> j
@@ -317,7 +319,10 @@ font,ma,pinyin
 ,Th,
 虍,Th,
 乚,Ti,yí = i
+,Ti,
 ,Ti,
+,Ti,
+,Ti,
 ,Ti,
 金,Tj,Jīn -> j
 鹵,Tl,Lǔ -> l
@@ -338,9 +343,9 @@ font,ma,pinyin
 由,Ui,yóu = ióu -> i
 人,Ur,rén -> r
 糸,Us,Sī -> s
-糹,Us,
+,Us,
 身,Us,SHēn -> s
-饣,Us,SHi -> s
+,Us,SHi -> s
 ,Uv,Ø -> v ㊟無讀音或生僻部首
 ,Uv,
 亡,Uw,wáng -> w
@@ -352,10 +357,9 @@ font,ma,pinyin
 彐,Vj,Jì -> j
 ,Vj,
 肀,Vj,
-钅,Vj,Jīn -> J
+,Vj,Jīn -> J
 麻,Vm,Má -> m
 食,Vs,SHí -> s
-飠,Vs,
 禺,Vv,yǔ = ǚ -> v
 ,Vz,ZHú -> z
 爪,Vz,ZHuǎ -> z

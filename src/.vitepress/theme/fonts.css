@@ -5,37 +5,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Yuji+Hentaigana+Akari&display=swap');
 
 @font-face {
-    font-family: "yuhao-font";
-    src: url("/Yuniversus.woff") format("woff");
+    font-family: "Yuniversus";
+    src: url("/fonts/Yuniversus.woff") format("woff");
     unicode-range: U+F400-F8FF;
     /* font-display: swap; */
 }
 
 @font-face {
     font-family: "tianma-font";
-    src: url("/sky.woff") format("woff");
+    src: url("/fonts/sky.woff") format("woff");
+    /* font-display: swap; */
+}
+
+@font-face {
+    font-family: "WenJinMinchoP2";
+    src: url("/fonts/WenJinMinchoP2-Regular.woff") format("woff");
     /* font-display: swap; */
 }
 
 .zigen-font {
     font-family: 'Noto Serif SC', 'Noto Serif TC', 'Yuji Hentaigana Akari', 'Noto Serif Tangut', "Noto Serif Khitan Small Script",
-        "yuhao-font", 'TH-Tshyn-P2', 'TH-Tshyn-P0', 'TH-Tshyn-P1', 'TH-Tshyn-P16',
+        'Yuniversus', 'WenJinMinchoP2', 'TH-Tshyn-P2', 'TH-Tshyn-P0', 'TH-Tshyn-P1', 'TH-Tshyn-P16',
         Georgia, "Nimbus Roman No9 L", "Songti SC Regular", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 }
 
 .zigen-font-tc {
     font-family: 'Noto Serif TC', 'Noto Serif SC', 'Yuji Hentaigana Akari', 'Noto Serif Tangut', "Noto Serif Khitan Small Script",
-        "yuhao-font", 'TH-Tshyn-P2', 'TH-Tshyn-P0', 'TH-Tshyn-P1', 'TH-Tshyn-P16',
+        'Yuniversus', 'WenJinMinchoP2', 'TH-Tshyn-P2', 'TH-Tshyn-P0', 'TH-Tshyn-P1', 'TH-Tshyn-P16',
         Georgia, "Nimbus Roman No9 L", "Songti SC Regular", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 }
 
-.yuniversus {
-    font-family: "yuhao-font";
+.only-yuniversus {
+    font-family: "Yuniversus";
 }
 
 .zigen-font-tianma {
     font-family: 'Noto Serif SC', 'Noto Serif TC', 'Yuji Hentaigana Akari', 'Noto Serif Tangut', "Noto Serif Khitan Small Script",
-        "tianma-font", 'TH-Tshyn-P2', 'TH-Tshyn-P0', 'TH-Tshyn-P1', 'TH-Tshyn-P16',
+        'tianma-font', 'WenJinMinchoP2', 'TH-Tshyn-P2', 'TH-Tshyn-P0', 'TH-Tshyn-P1', 'TH-Tshyn-P16',
         Georgia, "Nimbus Roman No9 L", "Songti SC Regular", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 }
 

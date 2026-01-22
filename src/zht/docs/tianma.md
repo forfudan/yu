@@ -12,7 +12,7 @@
 注意，本拆分查詢中不顯示首根小碼補碼。
 
 <script setup>
-import Search from '@/search/OptimizedFetchSearch.vue'
+import Search from '@/search/FetchSearch.vue'
 import CharTrain from "@/train/CharTrain.vue"
 import ZigenTrain from "@/train/ZigenTrain.vue"
 </script>

@@ -37,10 +37,11 @@ img[src*="logo"] {
 :root {
   /* 宇浩字根字體優先 */
   --vp-font-family-base:
-    'yuhao-font',
+    'Yuniversus',
     'Noto Sans SC',
     'Noto Sans TC',
     'Chinese Quotes',
+    'Inconsolata',
     'Inter var',
     'Inter',
     ui-sans-serif,
@@ -54,6 +55,7 @@ img[src*="logo"] {
     Arial,
     'Noto Sans',
     sans-serif,
+    'WenJinMinchoP2',
     'Apple Color Emoji',
     'Segoe UI Emoji',
     'Segoe UI Symbol',

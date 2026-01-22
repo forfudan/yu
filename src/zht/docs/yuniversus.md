@@ -2,15 +2,15 @@
 
 ## Yuniversus 簡介
 
-爲了顯示宇浩系列輸入法的特有字根，我使用[天珩字庫](http://cheonhyeong.com/Simplified/download.html)和[思源宋體](https://source.typekit.com/source-han-serif/)生成了專門的字體，定名爲 [Yuniversus](/Yuniversus.woff). 即 「宇」的拼音 Yu 和「宇宙/合一」的拉丁文 Universus 的合寫。
+爲了顯示宇浩系列輸入法的特有字根，我使用[天珩字庫](http://cheonhyeong.com/Simplified/download.html)和[思源宋體](https://source.typekit.com/source-han-serif/)生成了專門的字體，定名爲 [Yuniversus](/fonts/Yuniversus.woff). 即 「宇」的拼音 Yu 和「宇宙/合一」的拉丁文 Universus 的合寫。
 
 爲了方便檢索和拓展，字根的排佈嚴格按照字根的前三個筆畫。
 
-[Yuniversus](/Yuniversus.woff) 不僅包括宇碼的特有字根，也包括一些常見的漢字構件，可以用於表示其他形碼類輸入法的拆分。它和[汉字自动拆分系统](https://chaifen.app/)所定義私用字的映射關係在[見此](/yuniversus-chaipua.csv)。
+[Yuniversus](/fonts/Yuniversus.woff) 不僅包括宇碼的特有字根，也包括一些常見的漢字構件，可以用於表示其他形碼類輸入法的拆分。它和[汉字自动拆分系统](https://chaifen.app/)所定義私用字的映射關係在[見此](/fonts/yuniversus-chaipua.csv)。
 
 ## Unicode 區塊
 
-[Yuniversus](/Yuniversus.woff) 佔用 Unicode 第零位面的私用區（Private Use Area / PUA）。具體地，佔用了 F400-F8FF 的碼位。
+[Yuniversus](/fonts/Yuniversus.woff) 佔用 Unicode 第零位面的私用區（Private Use Area / PUA）。具體地，佔用了 F400-F8FF 的碼位。
 
 這個位置的選取，基於最小化同天珩字庫第零位面（P0）的衝突。這一部分，在天珩字庫中基本爲空。
 
@@ -46,10 +46,10 @@
 
 ## 字根舉例
 
-举例：<span class="yuniversus"></span>
+举例：「」
 豎折横。故而位於第2大區第5小區前16个，即 F58x 行，
 
-举例：<span class="yuniversus"></span>
+举例：「」
 順折。故而位於第5大區第6小區單折變形區，即 F8Bx 行。
 
 ## 字根一覽

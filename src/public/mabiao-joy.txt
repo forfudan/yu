@@ -1184,7 +1184,6 @@ afve	𱣜
 afvi	桠
 afvj	榗
 afvn	𣓉
-afvw	𫥍
 afvw	𰗻
 afwl	𰄀
 afwx	𲥽
@@ -3666,6 +3665,7 @@ aol	橄
 aola	𱂊
 aols	𬎽
 aolt	橄
+aolv	𫥍
 aom	樵
 aoma	棎
 aoma	𰗯
@@ -9217,10 +9217,8 @@ cftq	𡯼
 cftt	𠣣
 cfue	㍍
 cful	𲻇
-cfvb	𮪜
 cfvi	𲂉
 cfvj	𬓎
-cfvw	𰵨
 cfya	𲋻
 cfyb	臰
 cfyo	䮋
@@ -10322,8 +10320,10 @@ coki	𩣮
 coki	𮂪
 cokk	𮂚
 coks	𱵦
+colb	𮪜
 colk	𩃅
 colt	𰶆
+colv	𰵨
 coma	𩤞
 coma	𬤂
 comb	谯
@@ -20109,9 +20109,7 @@ ecxy	倄
 ecz	㑑
 ed	停
 ed	鬥
-ed	𠁁
 ed	⾾
-ed	
 eda	俑
 edaa	𠋦
 edad	𠊁
@@ -20210,7 +20208,6 @@ edit	𫣟
 edix	倞
 edj	借
 edj	伣
-edj	𰴛
 edja	𭀅
 edjd	𠐎
 edjm	𪝡
@@ -20351,7 +20348,6 @@ eebb	𫔛
 eec	𨳞
 eec	𪜫
 eeck	𨵅
-eed	𠍄
 eedb	𨵁
 eedi	𠬫
 eedm	𬾴
@@ -20406,8 +20402,6 @@ eekv	𫢧
 eel	俚
 eel	𨴻
 eelb	䝺
-eelj	鬭
-eelj	𨷖
 eell	𠈎
 eelo	𨶨
 eels	𘰙
@@ -20741,15 +20735,10 @@ eftc	𘟶
 eftm	俫
 efuh	𫝊
 eful	𠉝
-efv	俨
-efvb	𠐚
 efvi	𱎫
 efvj	𱎿
-efvm	𠏊
 efvn	倢
 efvn	𱏀
-efvt	𫤌
-efvw	俨
 efwa	𗕛
 efwa	𗕬
 efwa	𘑟
@@ -20831,7 +20820,6 @@ egj	斍
 egj	𣁐
 egj	𧠉
 egj	𧠢
-egj	𧡸
 egj	𨴼
 egjd	𲐘
 egjr	䦭
@@ -21035,7 +21023,6 @@ ehx	㑯
 ehx	䪶
 ehx	𨵪
 ehx	𩑧
-ehx	𩔡
 ehx	𮨂
 ehxl	儥
 ehxm	𨵯
@@ -21844,7 +21831,6 @@ elie	𠐅
 elif	𰂣
 elii	𬻘
 elj	僧
-elj	斲
 elj	伒
 elj	𨳜
 eljd	𠈼
@@ -21934,7 +21920,6 @@ elqo	𗇺
 elri	𠋜
 elrm	𱘳
 elrs	𠦁
-elrs	𧞐
 elrs	𗇬
 elrt	𠍯
 els	伳
@@ -22366,7 +22351,6 @@ eoct	傻
 eocx	𱎦
 eod	刘
 eod	刞
-eod	㓸
 eoda	𗈞
 eodd	𗖯
 eodi	﨎
@@ -22462,10 +22446,12 @@ eokk	像
 eokk	像
 eoks	𬾲
 eokv	𨷍
+eol	俨
 eola	𗖐
 eola	𗖤
 eola	𗖵
 eolb	偩
+eolb	𠐚
 eolb	𗖬
 eolc	𗖃
 eolc	𗖎
@@ -22478,6 +22464,7 @@ eolf	𗖗
 eolf	𗗇
 eoli	𗖝
 eoll	𗖭
+eolm	𠏊
 eoln	𠐣
 eolo	𫢳
 eolo	𗗅
@@ -22491,7 +22478,9 @@ eolr	𗖡
 eolt	闞
 eolt	鬫
 eolt	㒈
+eolt	𫤌
 eolt	𮡜
+eolv	俨
 eolw	𗖂
 eolw	𗖆
 eolw	𗖢
@@ -22623,7 +22612,6 @@ epeo	𠊏
 epf	䢸
 epf	𨙺
 epf	𨛋
-epf	𨜹
 epfi	𨴕
 epg	𱎼
 ephh	𲑜
@@ -23212,8 +23200,11 @@ etnp	𠌬
 etnx	𰂦
 etob	𗇯
 etob	𗈠
+etof	𠍄
 etog	倨
 etok	侷
+etol	鬭
+etol	𨷖
 etp	𢻱
 etp	𨳭
 etp	𫾨
@@ -30772,8 +30763,6 @@ fvvj	𢬞
 fvvo	掙
 fvvv	𢸖
 fvvw	𲣖
-fvw	严
-fvwb	䴡
 fvwd	𭢹
 fvwd	𰔵
 fvwf	摇
@@ -30783,16 +30772,11 @@ fvwk	捃
 fvwk	𠰶
 fvwk	𢵾
 fvwl	𧵹
-fvwm	𭴪
 fvwn	挼
 fvwn	𱙎
-fvwp	严
 fvwp	𤚹
-fvwp	𮠑
-fvwq	𪇾
 fvwq	𲍣
 fvws	𢵓
-fvwt	𫿞
 fvxh	㩊
 fvxh	㩱
 fvxn	𱉨
@@ -37200,7 +37184,6 @@ hftu	𱋀
 hfus	縠
 hfvi	垭
 hfvl	𣫌
-hfvw	𫭲
 hfwd	𩕂
 hfwf	䍍
 hfwn	㜌
@@ -39066,6 +39049,7 @@ hoks	𡄜
 hokx	𭏛
 hoky	𤨻
 holt	𡑒
+holv	𫭲
 holw	𡔝
 homa	堔
 homa	𩎲
@@ -47099,9 +47083,6 @@ jfvn	𡹈
 jfvn	𢏵
 jfvs	𩠞
 jfvs	𩠢
-jfvw	𪨷
-jfvw	𰎠
-jfvw	𰖈
 jfwb	𣅬
 jfwg	𥟟
 jfwg	𭥮
@@ -49508,6 +49489,9 @@ jolb	𲝰
 jols	𪰇
 jolt	𣊟
 jolt	𭗐
+jolv	𪨷
+jolv	𰎠
+jolv	𰖈
 jom	熙
 jomb	熙
 jomb	嶕
@@ -52355,8 +52339,6 @@ kee	𠁤
 keec	𠴾
 keei	咃
 keel	𠸨
-keel	𡆏
-keel	𡆞
 keem	喉
 keem	𲕶
 keeq	𪅺
@@ -52486,6 +52468,8 @@ ketd	𠽙
 kete	𠳔
 ketj	𬫈
 ketk	𡁤
+ketl	𡆏
+ketl	𡆞
 ketp	𢼙
 ketu	𠳎
 ketw	𠼸
@@ -53026,7 +53010,6 @@ kfvn	啑
 kfvn	䝊
 kfvs	𭊇
 kfvt	𡅒
-kfvw	𫪂
 kfvz	𲔮
 kfw	威
 kfwf	믎
@@ -55745,6 +55728,7 @@ kolu	욄
 kolu	욊
 kolu	욋
 kolu	욌
+kolv	𫪂
 kolv	묉
 kolv	묕
 kolv	욅
@@ -59154,7 +59138,6 @@ lfvi	𮗇
 lfvi	𰌦
 lfvi	𱍰
 lfvj	𡦌
-lfvw	酽
 lfw	乒
 lfwa	𗂔
 lfwa	𗒤
@@ -61447,6 +61430,7 @@ lolt	𤺍
 lolt	𦗪
 lolt	𧸂
 lolu	𲅫
+lolv	酽
 loma	賝
 lomb	醮
 lomb	癄
@@ -62975,7 +62959,9 @@ lvam	𤷕
 lvam	𫆇
 lvan	𭼰
 lvau	𲅱
+lvbb	𮍹
 lvbk	𨡞
+lvbk	𭉵
 lvcs	𨣽
 lvdb	𤽽
 lvdp	郞
@@ -63020,6 +63006,7 @@ lvjm	𪧄
 lvjn	㠮
 lvjr	普
 lvjr	𲱕
+lvkg	𭟱
 lvkk	𠁝
 lvks	𨣴
 lvkv	㝆
@@ -63099,6 +63086,7 @@ lvur	𤵨
 lvus	醿
 lvus	𠁔
 lvv	𤸒
+lvvj	𠩖
 lvvj	𤶍
 lvvj	𫡆
 lvvj	𲆬
@@ -63139,9 +63127,7 @@ lwat	𱱬
 lwau	𥍲
 lwax	𱊗
 lwbb	𭅐
-lwbb	𮍹
 lwbd	𥍾
-lwbk	𭉵
 lwbl	𥎣
 lwbu	𰴌
 lwca	𗁪
@@ -63373,7 +63359,6 @@ lwjv	𬹠
 lwjw	𥍴
 lwjz	瘴
 lwkg	𢦧
-lwkg	𭟱
 lwki	𥎔
 lwkj	職
 lwkj	𧸉
@@ -63446,6 +63431,7 @@ lwop	𥎎
 lwos	𭘊
 lwp	矛
 lwp	⽭
+lwp	
 lwpa	𥎊
 lwpf	𥎝
 lwpk	𥍱
@@ -63594,7 +63580,6 @@ lwuu	𳅁
 lwux	𥃄
 lwvd	𥍯
 lwvg	𥍹
-lwvj	𠩖
 lwvm	𰴍
 lwvn	𤷞
 lww	𦕜
@@ -69425,7 +69410,6 @@ nele	𰭸
 nele	𱨅
 nele	𱩶
 nelh	灍
-nelj	𤂊
 nelm	𤂛
 nelm	𪶤
 nelm	𱨕
@@ -69719,13 +69703,11 @@ nfuh	𤃁
 nfuh	𱧈
 nfuk	𰝔
 nfun	𣻧
-nfvb	𤂢
 nfvi	𮳅
 nfvj	溍
 nfvn	𣶏
 nfvn	𪶮
 nfvs	𩚻
-nfvw	𬇬
 nfvw	𬈗
 nfvw	𱩋
 nfwg	𣴜
@@ -71916,11 +71898,13 @@ nokk	潒
 nokk	𦑳
 nokm	𣻍
 noku	𣾹
+nolb	𤂢
 nolb	𭱘
 nolf	𱧿
 nolj	𣵥
 noln	𲪴
 nolt	澉
+nolv	𬇬
 noma	深
 noma	浫
 nomb	潐
@@ -72946,6 +72930,7 @@ ntog	涺
 ntoi	𣲐
 ntoj	𣼇
 ntok	𬇴
+ntol	𤂊
 ntos	𣾮
 ntoz	𤃯
 ntp	攻
@@ -78526,8 +78511,11 @@ olul	𩺋
 oluo	𩸟
 olur	깃
 oluu	깄
+olv	严
 olv	纾
 olv	魣
+olvb	䴡
+olvc	严
 olvg	𩸰
 olvi	𩹁
 olvj	䲕
@@ -78535,6 +78523,10 @@ olvj	깉
 olvm	缣
 olvm	鰜
 olvm	𦩵
+olvm	𭴪
+olvp	𮠑
+olvq	𪇾
+olvt	𫿞
 olwa	鰇
 olwa	𗈷
 olwa	𘇗
@@ -81834,7 +81826,6 @@ pebu	𬩑
 pec	靵
 pecm	𩣂
 pecx	𲉓
-ped	𨻉
 peda	𮧫
 pee	先
 peea	𩋍
@@ -83524,6 +83515,7 @@ ptmu	陿
 ptmz	𨺛
 ptnx	𢛮
 ptob	𨹣
+ptof	𨻉
 ptog	𩋜
 ptog	𮳼
 ptp	牧
@@ -84902,8 +84894,6 @@ qfvi	𰡉
 qfvi	𰦴
 qfvn	𤟃
 qfvn	𥓐
-qfvw	𤞤
-qfvw	𰦾
 qfwl	𲳧
 qfwp	𠂶
 qfyb	𮬳
@@ -86592,6 +86582,8 @@ qoks	𧰺
 qola	𥒩
 qolt	㺖
 qolt	𥕵
+qolv	𤞤
+qolv	𰦾
 qom	礁
 qoma	𤞶
 qoma	𱴑
@@ -88576,7 +88568,6 @@ reck	𧨂
 reck	𧬱
 recm	𧮕
 recs	𧝥
-red	𧪧
 reda	𬣈
 redb	𮘓
 reec	𧩖
@@ -88629,7 +88620,6 @@ rekx	𲄅
 rel	𢃇
 rel	𫟯
 reld	𧦾
-rels	𧞗
 rem	颠
 rem	𪩴
 remb	真
@@ -91327,10 +91317,12 @@ rtnx	𬐾
 rtoc	𗭭
 rtod	𠝻
 rtoe	㽎
+rtof	𧪧
 rtog	䛯
 rtog	𠔴
 rtoi	𧥯
 rtoi	𘢟
+rtos	𧞗
 rtp	䚺
 rtp	𡕔
 rtp	𢼵
@@ -92739,7 +92731,6 @@ sebr	𮵁
 sec	𥄨
 sec	𧘥
 seck	𳀵
-sed	𥉝
 sedb	𳀶
 sedi	𤰯
 seei	𥅂
@@ -92916,8 +92907,8 @@ sfjm	𥏈
 sfjm	𧝄
 sfjr	凬
 sfjr	𥅏
+sfjr	𫽑
 sfjs	𥄝
-sfjv	𫽑
 sfjw	𠙊
 sfke	𮖰
 sfkg	𱲷
@@ -95735,6 +95726,7 @@ stnp	䙙
 stnu	𧞽
 stnx	𭟠
 stod	𳉟
+stof	𥉝
 stog	裾
 stos	𩂵
 stos	𩆾
@@ -97642,7 +97634,6 @@ tec	𳎔
 teck	𣄰
 teck	𣄸
 teco	𪖸
-ted	𨪐
 teda	𮣆
 tedb	𧇚
 tedb	𳅿
@@ -97751,7 +97742,6 @@ tel	𪟯
 tela	𠥑
 telc	𗃸
 teld	𨥻
-telj	𨮕
 tell	𬖼
 telm	𬫺
 telt	𠤼
@@ -98318,7 +98308,6 @@ tfuu	듰
 tfvi	𮇔
 tfvj	늩
 tfvj	듵
-tfvw	𲍓
 tfwf	늞
 tfwf	듪
 tfwg	𲇌
@@ -100819,23 +100808,32 @@ tofc	𗊪
 tofc	𗋖
 tofc	𗋳
 tofc	𗌄
+tofd	𰴛
 tofd	놏
 tofd	늋
 tofd	돛
 tofd	듗
 tofd	𗉿
+toff	𠁁
+toff	
+tofg	𧡸
 tofh	𨩶
+tofh	𩔡
 tofj	놉
 tofj	늅
 tofj	돕
 tofj	듑
 tofk	鉰
 tofk	䥂
+tofl	斲
 tofl	𗊆
 tofl	𗊕
+tofo	㓸
 tofo	𗌑
+tofp	𨜹
 tofq	𗊇
 tofs	虧
+tofs	𧞐
 tofs	𭕽
 tofs	虧
 toft	𗊅
@@ -101028,6 +101026,7 @@ tolu	됤
 tolu	됪
 tolu	됫
 tolu	됬
+tolv	𲍓
 tolv	뇙
 tolv	뇥
 tolv	됥
@@ -102552,6 +102551,7 @@ ttod	뙻
 ttod	뜢
 ttod	뜣
 ttof	𠚞
+ttof	𨪐
 ttof	똞
 ttof	똨
 ttof	똪
@@ -102613,6 +102613,7 @@ ttok	뜛
 ttok	뜜
 ttok	뜡
 ttok	뜧
+ttol	𨮕
 ttol	뙈
 ttol	뙤
 tton	𢤹
@@ -104245,9 +104246,9 @@ uajf	馇
 uajl	𬘆
 uajm	𱬔
 uajo	𢋬
+uajr	練
 uajs	𱺉
 uajv	𦣹
-uajv	練
 uakf	𢌐
 uakf	𩐕
 uakk	𧇵
@@ -115275,7 +115276,6 @@ weas	𲱇
 webr	𫰡
 wec	妞
 wecm	𩦍
-wed	𡟳
 weda	𮉹
 wedd	𡢸
 wedl	𥫎
@@ -115673,7 +115673,6 @@ wfur	릇
 wfus	徽
 wfuu	릈
 wfv	娅
-wfvb	𭒭
 wfvh	𡭑
 wfvi	娅
 wfvj	𡠂
@@ -115684,7 +115683,6 @@ wfvn	徢
 wfvn	𬼌
 wfvo	衟
 wfvo	𧘄
-wfvw	𱙔
 wfvw	𱙢
 wfwa	𦈪
 wfwf	릂
@@ -117732,6 +117730,7 @@ wokv	롬
 wokv	륨
 wola	𫲑
 wolb	媍
+wolb	𭒭
 wold	룆
 wold	룇
 wolf	뢾
@@ -117761,6 +117760,7 @@ wolu	뢼
 wolu	룂
 wolu	룃
 wolu	룄
+wolv	𱙔
 wolv	뢽
 wolv	룉
 wolw	뢸
@@ -118661,6 +118661,7 @@ wtoc	銜
 wtoc	䧽
 wtoc	𧗱
 wtod	𠞾
+wtof	𡟳
 wtog	婮
 wtog	𫁦
 wtoi	𠀭
@@ -123722,7 +123723,6 @@ yfsk	𲚰
 yfst	䐉
 yftm	𱮾
 yftp	𭐦
-yfvb	𮍇
 yfvi	𬁺
 yfvi	𮴏
 yfvj	瑨
@@ -125163,6 +125163,7 @@ yoks	𤧔
 yoks	𭩈
 yoks	𭹣
 yoku	𱯤
+yolb	𮍇
 yolt	𰯔
 yolt	𱯨
 yom	琛

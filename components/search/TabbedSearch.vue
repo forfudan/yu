@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 import { ref, computed, watch } from "vue";
-import OptimizedFetchSearch from "./OptimizedFetchSearch.vue";
+import FetchSearch from "./FetchSearch.vue";
 import { SCHEMES } from '../shared/schemes';
 
 // Define available schemes
@@ -108,7 +108,7 @@ const componentKey = computed(() => `search-${activeScheme.value}`)
         </div>
 
         <!-- Search Component -->
-        <OptimizedFetchSearch :key="componentKey" :chaifenUrl="currentScheme.chaifenUrl"
+        <FetchSearch :key="componentKey" :chaifenUrl="currentScheme.chaifenUrl"
             :zigenUrl="currentScheme.zigenUrl" :rule="effectiveRule" v-model="sharedUserInput" />
     </div>
 </template>
