@@ -18,16 +18,22 @@ font,ma,pinyin
 未,bo,wèi = uèi -> o
 末,bmo,Mò
 示,bka,SHì -> Ka
-礻,bka,
+,bka,
 乙,ci,yǐ = i
-乛,ci,
 亅,ci,
 ,ci,
 ,ci,
-,ci,
+,ci,
+,ci,
+,ci,
+,ci,
+,ci,
 乚,ci,yí = i
+,ci,
 ,ci,
 ,ci,
+,ci,
+,ci,
 飛,cfo,Fēi -> Fo
 ,co,Ø -> o ㊟無讀音或生僻部首
 世,cka,SHì -> Ka
@@ -37,7 +43,7 @@ font,ma,pinyin
 禾,che,Hé
 生,cke,SHēng -> Ke
 來,cle,Lái -> Le
-氵,cko,SHuǐ = SHuěi -> Ko
+,cko,SHuǐ = SHuěi -> Ko
 口,dke,Kǒu -> Ke
 〇,dli,Líng -> Li
 凵,do,Ø -> o ㊟無讀音或生僻部首
@@ -98,7 +104,7 @@ font,ma,pinyin
 豕,gka,SHi -> Ka
 ,gka,
 夭,gi,yāo = iāo -> i
-扌,gke,SHǒu -> Ke
+,gke,SHǒu -> Ke
 革,gge,Gé
 艮,hge,Gěn -> Ge
 ,hge,Gěn -> Ge
@@ -164,7 +170,7 @@ font,ma,pinyin
 彡,kka,SHān -> Ka
 ,kka,
 彳,kri,CHì -> Ri
-纟,ksi,Sī
+,ksi,Sī
 ,ksi,
 ,ko,Ø -> o ㊟無讀音或生僻部首
 弋,ki,yì = i
@@ -190,8 +196,8 @@ font,ma,pinyin
 甫,kfu,Fǔ
 辛,kxo,Xīn -> Xo
 孑,lzi,
-糹,lsi,
 ,lbi,
+,lsi,
 丨,lgi,Gǔn = Guěn -> Gi
 〢,lo,Ø -> o ㊟無讀音或生僻部首
 〣,lo,Ø -> o ㊟無讀音或生僻部首
@@ -219,7 +225,7 @@ font,ma,pinyin
 兀,lu,wù = ū
 正,lse,ZHeng -> Se
 欠,lqi,Qiān -> Qi ㊟聲母在左手時韻碼取i
-饣,lka,SHi -> Ka
+,lka,SHi -> Ka
 曲,lqe,Qǔ = Qǚ -> Qe
 向,lxo,Xiàng -> Xo
 ,lxo,Ø -> o ㊟無讀音或生僻部首
@@ -309,7 +315,7 @@ font,ma,pinyin
 朩,sme,
 二,so,èr -> o
 ⺀,so,èr -> o
-冫,so,èr -> o
+,so,èr -> o
 ,so,èr -> o
 彐,sji,Jì
 ,sji,
@@ -331,7 +337,7 @@ font,ma,pinyin
 巾,tjo,Jīn -> Jo
 由,tu,yóu = ióu -> u
 火,tho,Huǒ -> Ho
-衤,ti,yī = i
+,ti,yī = i
 ,to,Ø -> o ㊟無讀音或生僻部首
 ,to,
 ,to,Ø -> o ㊟無讀音或生僻部首
@@ -357,17 +363,16 @@ font,ma,pinyin
 山,vka,SHān -> Ka
 米,vmi,Mǐ
 业,ve,yè = ie -> e
-讠,ve,yán = ián -> e
+,ve,yán = ián -> e
 车,vre,CHē -> Re
 氺,wko,
-飠,wka,
 人,wo,rén -> o ㊟ren視為零聲母
 合,whe,Hé
 ,wo,Ø -> o ㊟無讀音或生僻部首
 ,wo,Ø -> o ㊟無讀音或生僻部首
 僉,wqi,Qiān -> Qi ㊟聲母在左手時韻碼取i
 食,wka,SHí -> Ka
-亻,wo,rén -> o
+,wo,rén -> o
 隹,wco,Cuī = Cuēi -> co
 禺,we,yǔ = ǚ -> e
 申,wke,SHēn -> Ke
@@ -383,7 +388,7 @@ font,ma,pinyin
 乌,xu,wū = ū
 鸟,xni,Niǎo -> Ni
 ,xni,
-钅,xjo,Jīn -> Jo
+,xjo,Jīn -> Jo
 竹,ysu,ZHú -> Su
 ,ysu,
 ,yo,Ø -> o ㊟無讀音或生僻部首
@@ -391,4 +396,4 @@ font,ma,pinyin
 西,yxi,Xī
 酉,yu,yǒu = iǒu -> u
 刂,ydi,Dāo -> Di
-阝,yfu,Fǔ
+,yfu,Fǔ

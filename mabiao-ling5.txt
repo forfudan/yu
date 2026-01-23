@@ -238,7 +238,7 @@ qt	通过
 qv	范围
 qw	艺术
 qx	萬一
-rb	战争
+rb	識别
 rc	記得
 rd	誤解
 rf	語言
@@ -248,7 +248,7 @@ rk	設計
 rl	評論
 rm	證明
 rn	許多
-rp	訓練
+rp	战争
 rq	反正
 rr	詳細
 rs	讀書
@@ -427,7 +427,7 @@ cqr	绀
 crf	鐶
 csc	岿
 csd	𨭎
-csf	峛
+csf	峘
 csg	酆
 csh	嵚
 csj	峯
@@ -566,7 +566,6 @@ jnd	亶
 jsd	僖
 jsj	𫗴
 jsl	馕
-jvr	螽
 kbc	皑
 kbm	皭
 kcc	輶
@@ -575,7 +574,7 @@ kcj	蟿
 kck	軤
 kcl	軲
 kql	謇
-kwd	韍
+kwd	韝
 kxd	窎
 kxm	窀
 kxs	窵
@@ -680,9 +679,6 @@ qrj	苋
 qrs	藷
 qtk	芡
 qwp	萩
-rbd	逴
-rbl	粲
-rbn	卤
 rjg	馮
 rjt	粢
 rmb	驺
@@ -697,6 +693,9 @@ rnk	痂
 rnn	痼
 rnq	癱
 rny	瘗
+rpd	逴
+rpl	粲
+rpn	卤
 rwf	鹮
 rww	罶
 ryr	凿
@@ -714,12 +713,12 @@ srs	摯
 sss	櫫
 syc	魢
 syg	鰺
-syh	鱅
+syh	堾
 syk	鰉
 sym	䲁
-syn	鱠
+syn	鰮
 syp	鮈
-syr	鮜
+syr	鮎
 sys	鱻
 syw	鰳
 tfs	掾
@@ -761,7 +760,7 @@ whh	馧
 whk	秭
 whl	稹
 whp	鹙
-whs	穡
+whs	穭
 wkb	虱
 wkc	猄
 wkh	猓
@@ -953,7 +952,6 @@ kfi	定
 kga	體
 klo	加
 kpa	寫
-kru	卡
 kso	掌
 kva	到
 kxa	突
@@ -1005,8 +1003,8 @@ qme	藏
 qsi	著
 qwa	获
 qwu	获得
-rba	点
 rle	話
+rpa	点
 rvi	認
 rwu	這個
 ryi	變
@@ -1681,8 +1679,6 @@ bqxyu	蠇
 bqyi	緊
 bqyqi	蠎
 brbbj	蠅
-brbu	卧
-brbu	虲
 brcdo	蟮
 brce	蜄
 brdo	蛅
@@ -1696,6 +1692,8 @@ brli	蚪
 brma	蚂
 brmi	蛊
 brpbo	蠋
+brpu	卧
+brpu	虲
 brrhu	螔
 brshr	蠩
 brsro	蠌
@@ -2356,7 +2354,7 @@ ckpe	鎲
 ckpvo	鑹
 ckqfv	鑳
 ckqtu	鑧
-ckrbu	鉲
+ckrpu	鉲
 cksa	绱
 cksa	鋿
 cksi	鉃
@@ -2845,7 +2843,6 @@ cqvtu	剏
 cqwi	鍖
 cqwo	迸
 cqywa	瓶
-crbu	釙
 crcdo	缮
 crcdo	鐥
 crce	鋠
@@ -2876,6 +2873,7 @@ crlu	鏀
 crmge	銭
 crnbe	鍞
 crpbo	鐲
+crpu	釙
 crqo	鈑
 crqo	鈙
 crrjc	鑆
@@ -3905,11 +3903,11 @@ dknwo	遺
 dkptu	啲
 dkqi	呏
 dkqsu	噻
-dkrbu	咔
 dkrce	農
 dkrjo	嚹
 dkrli	噑
 dkrmi	盅
+dkrpu	咔
 dksu	嘡
 dkthr	嚐
 dkti	咜
@@ -4380,7 +4378,6 @@ dqwi	啿
 dqxbo	囆
 dqxyu	噧
 dra	唁
-drbu	卟
 drcwo	嚺
 drcyf	噗
 drda	啅
@@ -4408,6 +4405,7 @@ drnbe	嘪
 drnqo	唥
 drnsi	飸
 drpbo	噣
+drpu	卟
 drrhu	號
 drrhu	嗁
 drrjc	嚉
@@ -4447,7 +4445,7 @@ dsro	啈
 dsrwo	噠
 dsse	哋
 dssnw	嘵
-dssrb	啩
+dssrp	啩
 dssu	哇
 dsthr	嗜
 dsti	咾
@@ -5988,7 +5986,6 @@ fyqls	褠
 fyqrt	襪
 fyqtu	衩
 fyqqx	褬
-fyrbu	补
 fyrpb	襡
 fyrce	裖
 fyrdo	袩
@@ -5997,6 +5994,7 @@ fyrhu	裭
 fyrjc	褥
 fyrrj	襨
 fyrtl	褙
+fyrpu	补
 fyrrh	褫
 fyrsr	襗
 fyrgt	襬
@@ -7395,7 +7393,6 @@ hrbdp	晚
 hrbhp	晩
 hrblr	曨
 hrbfr	曕
-hrbu	钋
 hrbmv	晞
 hrbwo	曃
 hrbxl	曈
@@ -7607,6 +7604,7 @@ hrpns	鶡
 hrpks	鶍
 hrpnt	歇
 hrptu	旳
+hrpu	钋
 hrpkv	剔
 hrpnw	遏
 hrpnw	曷
@@ -7935,12 +7933,12 @@ hvprj	赹
 hvprr	趒
 hvqhr	趞
 hvqgl	趪
-hvrbu	赴
 hvrda	趠
 hvrdo	趈
 hvrtd	趦
 hvrkl	勐
 hvrmi	孟
+hvrpu	赴
 hvrtk	趑
 hvsdo	趌
 hvssn	趬
@@ -8440,10 +8438,10 @@ jknrk	粵
 jknyd	奧
 jkpe	傥
 jkqsu	僿
-jkrbu	佧
 jkrgi	偿
 jkrje	乑
 jkrmi	侐
+jkrpu	佧
 jksa	倘
 jksjc	偫
 jkssi	傢
@@ -8705,7 +8703,6 @@ jqwi	偡
 jra	信
 jrbbj	僶
 jrblv	偼
-jrbu	仆
 jrcbe	侦
 jrcdo	僐
 jrce	侲
@@ -8732,6 +8729,7 @@ jrlnm	儏
 jrnbe	偵
 jrnxh	糴
 jrnmi	籴
+jrpu	仆
 jrqo	仮
 jrrhu	傂
 jrshr	儲
@@ -8872,11 +8870,11 @@ jvkli	务
 jvksi	侯
 jvla	俱
 jvnmi	夈
-jvrbu	处
 jvrbb	螽
 jvrdo	咎
 jvrhr	昝
 jvrje	冬
+jvrpu	处
 jvska	夅
 jvswo	逄
 jvtu	仞
@@ -9650,7 +9648,6 @@ kqyi	紧
 kra	徾
 krbbi	龜
 krbqo	寝
-krbu	卡
 krce	宸
 krco	宑
 krcsk	衅
@@ -9666,6 +9663,7 @@ krlbu	衃
 krldm	循
 krmi	血
 krnbe	寊
+krpu	卡
 krqtu	衊
 krrfo	衇
 krsna	鴔
@@ -10352,7 +10350,7 @@ lkqo	叐
 lkqsn	鵩
 lkqtu	臗
 lkqfy	甀
-lkrbu	胩
+lkrpu	胩
 lkrtr	埀
 lkrti	乖
 lksu	膛
@@ -10782,8 +10780,8 @@ lxlxx	翗
 lxma	腼
 lxnsi	飧
 lxnvi	膝
-lxrbu	外
 lxrli	斘
+lxrpu	外
 lxrdt	夞
 lxrwo	迯
 lxska	舛
@@ -13826,7 +13824,7 @@ pxja	炠
 pxkka	爩
 pxnca	煉
 pxphr	熸
-pxrbu	烞
+pxrpu	烞
 pxtu	炢
 pxu	炑
 pxvo	炬
@@ -15019,68 +15017,24 @@ qyyi	蕬
 ra	言
 ra	丬
 ra	訁
-rbbfd	睿
 rbbgu	鄳
 rbbi	訤
 rbbji	黽
-rbbkj	敹
-rbble	肻
-rbbfq	叡
 rbbqo	誛
-rbbfs	壑
-rbbfs	壡
 rbbwi	諍
-rbcbe	贞
-rbda	卓
-rbdfj	覘
-rbdfy	頕
 rbdjv	讂
-rbdmg	战
-rbdo	占
-rbdpb	点
-rbdrq	敁
-rbdrj	觇
-rbdsn	鵫
 rbdtu	讒
-rbdwi	乩
-rbdwo	逴
-rbdwo	迠
-rbdww	鼑
-rbdqx	梷
-rbdyd	奌
 rbfcj	詭
 rbfra	譫
 rbhmx	譩
 rbhri	諳
-rbhxu	桌
 rbja	訩
-rbka	卨
 rbkce	諢
 rbkka	諺
-rblqf	韰
-rblqn	餐
-rblqn	粲
-rbltk	欳
-rblxi	歺
-rbmcy	颅
-rbmdn	鸬
 rbmhr	識
 rbmle	誵
-rbmsi	卢
-rbnbe	貞
-rbnbi	卤
-rbnbg	鹾
-rbnbg	禼
-rbnkt	卥
-rbnvo	卣
-rbnvw	逌
-rbnwo	遉
 rbpe	訦
 rbpu	諂
-rbqo	攴
-rbrmi	盀
-rbsna	鳪
-rbu	卜
 rbwku	殷
 rbwmx	慇
 rcbla	謙
@@ -15819,25 +15773,69 @@ rnycn	療
 rnyns	瘞
 rnycs	瘗
 rnyhy	癍
+rpbfd	睿
+rpbkj	敹
 rpbja	詾
+rpble	肻
+rpbfq	叡
+rpbfs	壑
+rpbfs	壡
 rpca	訓
+rpcbe	贞
+rpda	卓
+rpdfj	覘
+rpdfy	頕
+rpdmg	战
+rpdo	占
 rpdo	訽
+rpdpb	点
+rpdrq	敁
+rpdrj	觇
+rpdsn	鵫
+rpdwi	乩
+rpdwo	逴
+rpdwo	迠
+rpdww	鼑
+rpdqx	梷
+rpdyd	奌
 rpgku	譭
 rphri	詢
+rphxu	桌
 rpi	謉
 rpjjc	謅
+rpka	卨
 rpkqo	謏
+rplqf	韰
 rpli	諀
+rplqn	餐
+rplqn	粲
+rpltk	欳
+rplxi	歺
+rpmcy	颅
+rpmdn	鸬
+rpmsi	卢
+rpnbe	貞
+rpnbi	卤
 rpne	諛
+rpnbg	鹾
+rpnbg	禼
 rpnmi	諊
+rpnkt	卥
+rpnvo	卣
+rpnvw	逌
+rpnwo	遉
 rppe	誽
 rppjv	夑
 rppo	談
 rpppo	爕
 rppqo	燮
+rpqo	攴
+rprmi	盀
 rprrj	誂
 rpsdo	調
+rpsna	鳪
 rptu	訋
+rpu	卜
 rqdhi	讙
 rqfpb	讌
 rqhqo	護
@@ -15863,7 +15861,6 @@ rqwo	返
 rra	誩
 rrbbj	譝
 rrbji	謔
-rrbu	訃
 rrce	誫
 rrdo	詀
 rrfdo	詬
@@ -15874,6 +15871,7 @@ rrhu	諕
 rrkjo	謼
 rrkmg	議
 rrla	誺
+rrpu	訃
 rrra	譶
 rrrhu	謕
 rrrjc	譵
@@ -16687,7 +16685,6 @@ sqto	埇
 sqwi	堪
 sqwkl	墈
 srbdm	龼
-srbu	圤
 srcdo	墡
 srcyf	墣
 srdo	坫
@@ -16706,6 +16703,7 @@ srndp	皾
 srnfj	覿
 srnlg	夁
 sro	幸
+srpu	圤
 srqo	坂
 srrle	塉
 srrmi	盐
@@ -16766,8 +16764,8 @@ ssmgy	豯
 ssndo	墻
 sspa	豝
 sspdo	豞
-ssrbu	卦
 ssrbj	鼃
+ssrpu	卦
 ssrwo	墶
 sssbc	豷
 sssfy	顤
@@ -17519,8 +17517,8 @@ tkqi	抍
 tkqlv	疑
 tkqo	报
 tkqto	觺
-tkrbu	拤
 tkri	抸
+tkrpu	拤
 tksu	摚
 tkti	拕
 tktka	欵
@@ -17767,7 +17765,6 @@ tqtbo	搔
 tqto	捅
 tqtu	扠
 tqwi	揕
-trbu	扑
 trce	振
 trcyf	撲
 trda	掉
@@ -17789,6 +17786,7 @@ trli	抖
 trmxi	摅
 trnbe	揁
 trpbo	擉
+trpu	扑
 trqci	鋬
 trqo	扳
 trrhu	搋
@@ -17829,7 +17827,7 @@ tso	龵
 tsrka	拷
 tsrwo	撻
 tssnw	撓
-tssrb	掛
+tssrp	掛
 tssu	挂
 tstbo	蛰
 tstcb	贽
@@ -19970,10 +19968,10 @@ wqska	译
 wqto	诵
 wqwi	谌
 wrbji	谑
-wrbu	讣
 wrco	讲
 wrfdo	诟
 wrje	飞
+wrpu	讣
 wrtdo	谘
 wrya	详
 wrya	牂
@@ -20913,7 +20911,6 @@ xqvjc	欂
 xqwi	椹
 xqxdo	櫙
 xqyi	櫀
-xrbu	朴
 xrcbe	桢
 xrcdo	橏
 xrce	桭
@@ -20948,6 +20945,7 @@ xrmge	桟
 xrmsi	栌
 xrnbe	楨
 xrpba	榚
+xrpu	朴
 xrqo	板
 xrrhu	榹
 xrrla	檏
@@ -22197,7 +22195,7 @@ bcggi	𧐳
 bcgge	𧓪
 bcgke	𧋘
 bcgmx	䗹
-bcgrb	𧌷
+bcgrp	𧌷
 bcgu	𮠌
 bchgi	𧑵
 bchhr	𮔿
@@ -23801,8 +23799,6 @@ blqto	𮄯
 blqwi	𥪘
 blqfx	𥪽
 blqlx	𥪿
-blrbu	𥩖
-blrbu	𫊰
 blre	𦣠
 blrli	䇆
 blrkm	𥪑
@@ -23810,6 +23806,8 @@ blrkm	𥫃
 blrmi	𫋋
 blrmi	𭾑
 blrkn	𥪐
+blrpu	𥩖
+blrpu	𫊰
 blrrj	𧊨
 blrwt	𫁟
 blrti	𬠕
@@ -24059,7 +24057,7 @@ bmlma	𧋦
 bmlma	𨸃
 bmlne	𮤯
 bmlpb	𤎦
-bmlrb	𬮡
+bmlrp	𬮡
 bmlnt	𳈘
 bmlva	𰿪
 bmmdb	𰿾
@@ -24545,7 +24543,6 @@ brbbj	𬹝
 brbfi	𪚺
 brbgt	𱋽
 brbli	𬛦
-brbu	㓀
 brbvo	𪩨
 brce	𫤹
 brcji	𲿓
@@ -24607,6 +24604,7 @@ brpo	𱫌
 brppo	𪹌
 brppo	𲀕
 brpqo	𧕊
+brpu	㓀
 brqo	𢼧
 brqsu	𡏃
 brrda	𲿼
@@ -24687,7 +24685,7 @@ bsrya	𧕇
 bssi	䖶
 bssi	𧰼
 bssna	𰳟
-bssrb	𬠎
+bssrp	𬠎
 bsstu	𧏂
 bstu	𧈮
 bstu	𧌮
@@ -25087,7 +25085,7 @@ bxkmx	𧏽
 bxknm	𥻦
 bxkny	𧕪
 bxkpb	𤍁
-bxkrb	𭪍
+bxkrp	𭪍
 bxksn	𪄅
 bxksi	𲾡
 bxkxu	𭯂
@@ -25860,12 +25858,12 @@ cgqi	𮢋
 cgqi	𰼺
 cgqqo	𰽎
 cgqqx	𮪼
-cgrbu	𠧦
 cgrdm	𠅿
 cgrka	𨥿
 cgrka	𬫙
 cgrli	𩫄
 cgrmx	𪬄
+cgrpu	𠧦
 cgrrj	𨪤
 cgsjv	𨫭
 cgsna	𪁚
@@ -26679,7 +26677,6 @@ clra	䴦
 clrbo	𧔈
 clrbj	𪔀
 clrpb	𫋡
-clrbu	𫒓
 clrpb	𬋽
 clrdm	𨩩
 clrfd	𪊪
@@ -26699,6 +26696,7 @@ clrmx	𮷴
 clrne	𡙪
 clrpe	𨬋
 clrdp	𪋃
+clrpu	𫒓
 clrpe	𰥅
 clrqo	𢿇
 clrpq	𫸠
@@ -27037,7 +27035,7 @@ cmjkn	𡮤
 cmjkn	𲜰
 cmjgp	𪎣
 cmjqo	𨳟
-cmjrb	𨳢
+cmjrp	𨳢
 cmjkr	𨴖
 cmjnr	𨴰
 cmjrr	𨴳
@@ -27133,7 +27131,7 @@ cmlqn	𪎰
 cmlkq	𨵟
 cmlre	𨳝
 cmlrk	𨳣
-cmlrb	𨳿
+cmlrp	𨳿
 cmllr	𨵴
 cmlse	䦚
 cmlrt	𨵞
@@ -27287,7 +27285,6 @@ cmqhy	𫔩
 cmra	䜆
 cmrbb	𪓹
 cmrbi	𬬝
-cmrbu	𰿗
 cmrcs	𤹳
 cmrco	𨳩
 cmrdo	䦓
@@ -27314,6 +27311,7 @@ cmrmx	𲠒
 cmrln	𤻚
 cmrpb	𤺣
 cmrpb	𨶅
+cmrpu	𰿗
 cmrkq	𨶔
 cmrqo	𪎘
 cmrsr	䦴
@@ -27610,7 +27608,7 @@ cnli	𨥞
 cnli	𫒍
 cnlma	𩠔
 cnlne	𨪗
-cnlrb	𩠘
+cnlrp	𩠘
 cnlse	𨨝
 cnlsk	𬙈
 cnlvi	𱥅
@@ -27934,7 +27932,6 @@ crbdm	𨬴
 crbji	𨩝
 crbji	𨩽
 crblv	𨩼
-crbu	𱺏
 crce	𰬙
 crcja	𨬭
 crcla	𠁟
@@ -28030,6 +28027,7 @@ crnca	𫟈
 crnli	𲇠
 crnqo	𨧌
 crnsk	𳇀
+crpu	𱺏
 crqfo	𬬕
 crqhr	𨯆
 crqkl	𠁜
@@ -28766,7 +28764,7 @@ cskwp	𲝻
 csknq	𡹧
 cskqo	𮱦
 cskri	𡶉
-cskrb	𡶛
+cskrp	𡶛
 cskhr	𪉻
 csknr	𫶊
 csksi	㞺
@@ -32086,12 +32084,12 @@ dlqi	𠱥
 dlqnm	𡅊
 dlqwi	𭌫
 dlqxi	𠺏
-dlrbu	𠰻
 dlre	𠰃
 dlrje	𠯍
 dlrka	𠯋
 dlrla	𭍐
 dlrmi	𠸟
+dlrpu	𠰻
 dlrrm	𭉃
 dlrti	𱓅
 dlsna	𩿦
@@ -32969,7 +32967,6 @@ dmqty	𤭲
 dmqry	𥌯
 dmra	𠽹
 dmryb	䂅
-dmrbu	𥃨
 dmrbj	𥈴
 dmrpb	𥋛
 dmrbb	𥋝
@@ -33017,6 +33014,7 @@ dmrnb	𠽬
 dmrqn	𢾔
 dmrvn	𥊜
 dmrln	𲲳
+dmrpu	𥃨
 dmrpp	𥍏
 dmrpb	𭿔
 dmrqo	㗇
@@ -33422,7 +33420,6 @@ dnqki	𱕍
 dnqsk	𭋩
 dnqbs	𲎈
 dnqyd	𫬡
-dnrbu	𱑗
 dnrff	𫜅
 dnrgi	𧶊
 dnrhu	𧈐
@@ -33433,6 +33430,7 @@ dnrlx	𱕌
 dnrmx	𠷿
 dnrmi	𰈦
 dnrma	𲍬
+dnrpu	𱑗
 dnrqo	𲖣
 dnse	𠰹
 dnsjc	𠾡
@@ -33548,7 +33546,7 @@ dpfhr	𱓉
 dpfjo	𤿍
 dpfqn	𨡶
 dpfqn	𨢹
-dpfrb	𱲂
+dpfrp	𱲂
 dpfu	𡛬
 dpfvd	𠠉
 dpfye	𩒇
@@ -33678,10 +33676,10 @@ dpqfx	𱲇
 dpra	𪡡
 dprbb	𥀨
 dprbb	𪓜
-dprbu	𱱿
 dprdo	𠸞
 dprla	𡁎
 dprmi	𪾍
+dprpu	𱱿
 dpsdo	𲤫
 dpsgi	𰤟
 dpsi	𠰴
@@ -34264,9 +34262,9 @@ dtqjv	𫬒
 dtqki	𲖄
 dtqla	𫪵
 dtqla	𲖴
-dtrbu	𰇚
 dtrce	𠺲
 dtrhi	𡆆
+dtrpu	𰇚
 dtrqo	𫩾
 dtrti	𱕪
 dtryf	𡃒
@@ -34274,7 +34272,7 @@ dtsjc	𱓙
 dtskl	𠴋
 dtso	𠰅
 dtspb	𱓰
-dtsrb	𫫔
+dtsrp	𫫔
 dtstu	𪠺
 dtswu	𡀴
 dtswo	𡃿
@@ -34954,9 +34952,9 @@ dxqla	𱕟
 dxqmx	𱕔
 dxqxu	𡁽
 dxqyd	𡃗
-dxrbu	𱒖
 dxrhu	𣘫
 dxrmf	㘄
+dxrpu	𱒖
 dxrqo	𫪒
 dxrvi	𱕇
 dxryf	𡃾
@@ -37147,12 +37145,12 @@ fkqnb	𡤐
 fkqo	𮰻
 fkqqo	𡢷
 fkrbi	䶯
-fkrbu	𡛨
 fkrce	𡡪
 fkrjv	𩰽
 fkrla	𠔐
 fkrmx	𭜳
 fkrmi	𮕜
+fkrpu	𡛨
 fkrwi	𡛋
 fksa	𡞀
 fksa	𣦎
@@ -38372,7 +38370,6 @@ frbji	𱙞
 frbku	𰆤
 frbnx	𲐇
 frbo	𰲸
-frbu	𭑧
 frcbe	𰌂
 frco	𲧲
 frcpe	𡣛
@@ -38443,6 +38440,7 @@ frpla	𦦫
 frpo	𭒏
 frppo	𡤗
 frptu	𫱎
+frpu	𭑧
 frqo	𠨹
 frqo	𪥩
 frrmi	𡡇
@@ -38513,7 +38511,7 @@ fsjcu	㕑
 fsjfo	𧞡
 fsjmy	𠁀
 fsjcm	𱍦
-fsjrb	𭠠
+fsjrp	𭠠
 fsjvi	𡕠
 fska	𠨭
 fska	𠩇
@@ -39102,7 +39100,7 @@ fvkri	䟪
 fvkqr	𨃎
 fvkrj	𬢉
 fvknr	𬦾
-fvkrb	𮛑
+fvkrp	𮛑
 fvksa	䠀
 fvkls	𨁆
 fvkqs	𨁠
@@ -39192,7 +39190,7 @@ fvlqo	𢺷
 fvltq	𨅅
 fvlrk	𧿝
 fvllr	𨂾
-fvlrb	𮛒
+fvlrp	𮛒
 fvlse	䟯
 fvlsu	𨀅
 fvlsi	𨁗
@@ -39456,7 +39454,6 @@ fvqqx	𬧉
 fvqnx	𮜌
 fvqrx	𰸜
 fvqmy	𨆠
-fvrbu	䟔
 fvrce	䟴
 fvrtd	䠖
 fvrcd	𮜖
@@ -39490,6 +39487,7 @@ fvrma	𲃖
 fvrjm	𲄓
 fvrne	𨂑
 fvrnb	𮛶
+fvrpu	䟔
 fvrdp	𨃊
 fvrpp	𨇾
 fvrpu	𰸯
@@ -41908,7 +41906,6 @@ gkqlk	𨹱
 gkqsu	𳈲
 gkra	𧦪
 gkra	𧦬
-gkrbu	𲉋
 gkrgi	𰚼
 gkrhu	𣱤
 gkryh	𲨯
@@ -41917,6 +41914,7 @@ gkrje	𣱖
 gkrlu	㲶
 gkrlx	𣱞
 gkrlx	𲨟
+gkrpu	𲉋
 gkrqo	㪂
 gksdo	𨼈
 gksdo	𰛀
@@ -41962,7 +41960,7 @@ gkvne	𡘢
 gkwo	𨒧
 gkwo	𨻡
 gkxnc	𣱨
-gkxrb	𬇑
+gkxrp	𬇑
 gkxu	𨹄
 gkxu	𬇏
 gkyi	𲨜
@@ -42125,13 +42123,13 @@ glqxy	𬚑
 glqxu	𲉗
 glqyf	䎯
 glqyd	𦔃
-glrbu	𦓦
 glrce	𦓶
 glrgi	䎬
 glrje	𨸨
 glrkl	𮋫
 glrla	𦓹
 glrma	𳈠
+glrpu	𦓦
 glrpo	𲬯
 glrro	𦔥
 glrro	𰭲
@@ -42679,7 +42677,6 @@ gmqhy	䮬
 gmqmy	𩦟
 gmqly	𮪒
 gmrpb	䮷
-gmrbu	𩡭
 gmrda	䮓
 gmrda	𤚷
 gmrcd	𩦐
@@ -42696,6 +42693,7 @@ gmrmn	𩥍
 gmrtm	𩥝
 gmrkm	𲌃
 gmrgm	𳌒
+gmrpu	𩡭
 gmrpp	𩧟
 gmrpe	𫘌
 gmrqo	𨺽
@@ -42982,7 +42980,6 @@ gra	𫌷
 gra	𬯂
 gra	𰴨
 grbdm	𳈳
-grbu	𫨦
 grcdo	𮥣
 grcyf	䧤
 grda	𨺑
@@ -43012,6 +43009,7 @@ grmxi	㤍
 grnbe	𨺟
 grnbe	𫨫
 grpbo	𮥦
+grpu	𫨦
 grqda	𫶱
 grqsu	𡋴
 grra	䛒
@@ -43408,7 +43406,6 @@ gtqlt	𭻥
 gtqlw	𬏘
 gtqlw	𱱂
 gtqfy	𤳉
-gtrbu	𤰘
 gtrce	𤱼
 gtrce	𤲆
 gtrda	𤲤
@@ -43420,6 +43417,7 @@ gtrka	𰢶
 gtrla	𤲓
 gtrkm	𭻳
 gtrmi	𰤷
+gtrpu	𤰘
 gtrwr	𪽦
 gtrti	𱰬
 gtryf	𲱊
@@ -43981,7 +43979,6 @@ gyqrt	𱈙
 gyqxu	𨽬
 gyqhx	𬶯
 gyqqx	𱈎
-gyrbu	𱇎
 gyrdj	𰕡
 gyrgf	𡢮
 gyrfi	𫚈
@@ -44001,6 +43998,7 @@ gyrrl	𳎡
 gyrtl	𳎤
 gyrgm	𭟄
 gyrdp	𫤝
+gyrpu	𱇎
 gyrqo	𱇖
 gyrdr	𠸮
 gyrgr	𧈕
@@ -45787,7 +45785,6 @@ hhqrt	𬹛
 hhqfx	𪑞
 hhqxy	𪒪
 hhrbb	䵴
-hhrbu	𪐙
 hhrdb	𮕔
 hhrcb	𬹕
 hhrdo	㸃
@@ -45802,6 +45799,7 @@ hhrrl	𪒲
 hhrmi	𥂮
 hhrms	𱋶
 hhrnb	𪑳
+hhrpu	𪐙
 hhrvj	𪑷
 hhrcy	𪒢
 hhrye	𮸗
@@ -46053,10 +46051,10 @@ hkqsu	𥎚
 hkqsu	𳇴
 hkqtu	𥍰
 hkqyd	𥍼
-hkrbu	𰽩
 hkrdm	𥍿
 hkrlu	𪉝
 hkrmi	𥁛
+hkrpu	𰽩
 hkrvi	𥎅
 hkrya	𰿊
 hksa	𲈆
@@ -46344,7 +46342,7 @@ hrbnr	𣋣
 hrbpr	𥁻
 hrbnr	𭧿
 hrbfr	𰖵
-hrbrb	𱢊
+hrbrp	𱢊
 hrbss	𪰷
 hrbht	𣋚
 hrbtu	𬀨
@@ -47367,7 +47365,6 @@ hrqxy	𲥂
 hrqmy	𣋒
 hrqly	𦃙
 hrra	𧦊
-hrrbu	𣅃
 hrrbb	𣋋
 hrrrb	𪓲
 hrrcj	𣉸
@@ -47410,6 +47407,7 @@ hrrwm	𣌀
 hrrms	𬀭
 hrrym	𱟛
 hrrmi	𲈘
+hrrpu	𣅃
 hrrpc	𣉤
 hrrlp	𣋍
 hrrpa	𭦗
@@ -48369,9 +48367,7 @@ hsqfx	𥜈
 hsqxy	𥜍
 hsqhy	𮂓
 hsra	𫀎
-hsrbu	䃼
 hsrbb	𥜐
-hsrbu	𨈒
 hsrpb	𨊒
 hsrce	𨉎
 hsrfd	𥙐
@@ -48403,6 +48399,8 @@ hsrkm	𲴼
 hsrrn	𥛕
 hsrnb	𨊋
 hsro	𰧵
+hsrpu	䃼
+hsrpu	𨈒
 hsrkp	𫀖
 hsrqo	𢼗
 hsrqo	𨈙
@@ -48944,7 +48942,7 @@ hvldp	𫲦
 hvlpe	𭓃
 hvlqo	䞚
 hvlqo	𪦶
-hvlrb	𧻏
+hvlrp	𧻏
 hvlti	𧺼
 hvlvo	𡥰
 hvlvi	𧺠
@@ -50539,7 +50537,7 @@ jgcco	𰂽
 jgcfo	𧚽
 jgcha	𰂖
 jgci	㑭
-jgcrb	𤣧
+jgcrp	𤣧
 jgcrj	𰃈
 jgcsu	𡌅
 jgcsk	𩎵
@@ -50658,12 +50656,12 @@ jgqo	𠬳
 jgqo	𠭇
 jgqsu	𱎘
 jgqwo	𨓋
-jgrbu	𤱈
 jgrgy	𮘎
 jgrha	𬍏
 jgrjo	𲁱
 jgrke	𲁹
 jgrka	𮯺
+jgrpu	𤱈
 jgrsn	𪅄
 jgrtu	𬬘
 jgrvd	𠞩
@@ -51117,7 +51115,6 @@ jkqts	𠏯
 jkqtu	𫣷
 jkqxu	𬿾
 jkrbo	𬴥
-jkrbu	𬽸
 jkrbi	𱏜
 jkrci	𨦷
 jkrdm	𬾱
@@ -51135,6 +51132,7 @@ jkrla	𭁕
 jkrmi	𥂡
 jkrnx	𫢁
 jkrnb	𳂗
+jkrpu	𬽸
 jkrqo	𢽥
 jkrqo	𭣢
 jkrrj	𠍸
@@ -51360,13 +51358,13 @@ jlqo	𰁥
 jlqtu	𠇞
 jlra	㑾
 jlrbj	𪓖
-jlrbu	𱏳
 jlrfo	𮕫
 jlrje	𬽆
 jlrjv	𭐣
 jlrka	𠆵
 jlrmx	𫣜
 jlrnx	𰂮
+jlrpu	𱏳
 jlrti	𰂓
 jlsfo	𮖋
 jlsgt	𫣔
@@ -51951,7 +51949,6 @@ jrbdm	𠏻
 jrbku	𪝛
 jrblv	𤴘
 jrbme	𱏱
-jrbu	𪽁
 jrcbe	𱏠
 jrci	𳆗
 jrcsu	𲑽
@@ -52065,6 +52062,7 @@ jrpbo	㒔
 jrpgi	𫣌
 jrpqo	𠑄
 jrpsu	𠍝
+jrpu	𪽁
 jrqda	䓥
 jrqfo	𧙾
 jrqo	𠆸
@@ -52203,7 +52201,7 @@ jsjch	𬳓
 jsjjs	𲎳
 jsjvk	𫗯
 jsjkk	𱄅
-jsjrb	𪎍
+jsjrp	𪎍
 jsjsk	𫵮
 jsjwo	𬲸
 jska	𠈵
@@ -52297,11 +52295,11 @@ jsqqq	𬳂
 jsqrj	𩠁
 jsqsk	𬲳
 jsqbs	𱄈
-jsrbu	𬲥
 jsrdo	𬲫
 jsrcd	𳋱
 jsrfo	䙝
 jsrlx	𫗩
+jsrpu	𬲥
 jsrtu	𠌷
 jsrwo	㒓
 jssci	𨬇
@@ -52412,7 +52410,7 @@ jvdvj	𪤵
 jvdmx	㤩
 jvdpi	𬾢
 jvdrq	𢼛
-jvdrb	𠧨
+jvdrp	𠧨
 jvdtk	𣢷
 jvdvd	㓢
 jvdpv	𪕘
@@ -52494,7 +52492,6 @@ jvqlw	𨕊
 jvqyf	𪝳
 jvra	𮗺
 jvrkb	䶱
-jvrbu	𠅄
 jvrgu	𨚟
 jvrbg	𱍇
 jvrhi	䧷
@@ -52504,6 +52501,7 @@ jvrla	𬽖
 jvrgl	𰯇
 jvrdm	𢛃
 jvrvm	𢢍
+jvrpu	𠅄
 jvrsq	𮮧
 jvrsn	䳉
 jvrds	𳍛
@@ -53039,7 +53037,6 @@ kbqtk	𪴭
 kbqtu	𱱻
 kbqmw	𤾸
 kbqbx	𤾔
-kbrbu	𱱺
 kbrgi	𤽎
 kbrhl	𤽗
 kbrhu	𤽾
@@ -53052,6 +53049,7 @@ kbrrl	𪴞
 kbrmi	𭽾
 kbrln	𭽢
 kbro	𤽝
+kbrpu	𱱺
 kbrrq	𢿎
 kbrqo	𤽐
 kbrwr	𪾅
@@ -53707,7 +53705,6 @@ kcqjw	𨏕
 kcqqx	䡦
 kcqly	𨍞
 kcqfy	𨎔
-kcrbu	𨊣
 kcrfc	𨋜
 kcrce	𨌑
 kcrda	𨌬
@@ -53730,6 +53727,7 @@ kcrmi	𪾔
 kcrma	𲈤
 kcrnb	䡠
 kcrpb	𢖇
+kcrpu	𨊣
 kcrfp	𨌌
 kcrqo	䡊
 kcrqo	𡪵
@@ -54613,11 +54611,11 @@ kgqhq	𩪭
 kgqls	𩪝
 kgqrt	䯦
 kgqfx	𩩥
-kgrbu	𩨓
 kgrld	𩩻
 kgrfy	𮨥
 kgrka	𢓳
 kgrrl	𩪤
+kgrpu	𩨓
 kgrqo	𩨩
 kgrsn	𱉂
 kgrcy	𩪛
@@ -55487,7 +55485,6 @@ klqo	𠬦
 klqo	𫹍
 klqo	𭓧
 klra	𭔙
-klrbu	𰺮
 klrdm	𥅉
 klrfy	䫇
 klrfo	𲟪
@@ -55495,6 +55492,7 @@ klrhu	𮰎
 klrje	𢓏
 klrka	𠂞
 klrma	𳌘
+klrpu	𰺮
 klrtu	𦏞
 klryw	𬩇
 klrwo	𬩟
@@ -55544,7 +55542,7 @@ klwo	𨒂
 klxkl	𭜀
 klxli	㣫
 klxmx	𢡹
-klxrb	𠡙
+klxrp	𠡙
 klxtk	𲟫
 klyda	𲜌
 klyi	𦆁
@@ -55800,7 +55798,7 @@ kngpa	𬏓
 kngpi	𭻻
 kngqo	𢿥
 kngqo	𭻫
-kngrb	𭻣
+kngrp	𭻣
 kngtk	𬅱
 kngtk	𬏗
 kngtu	𭻬
@@ -56603,7 +56601,6 @@ ksqfs	𮀆
 ksqhx	𭬷
 ksqhy	𰦞
 ksra	𧨲
-ksrbu	𰦓
 ksrwb	𱷫
 ksrda	𥏥
 ksrgo	𥏺
@@ -56618,6 +56615,7 @@ ksrnb	𢖏
 ksro	𢔛
 ksro	𫡈
 ksro	𫳐
+ksrpu	𰦓
 ksrqo	𥎮
 ksrqo	𰕋
 ksrsu	𡫓
@@ -58104,12 +58102,12 @@ lbqwg	𣎤
 lbqtw	𨖕
 lbra	𰴪
 lbrbo	𧒦
-lbrbu	𭶺
-lbrbu	𲭀
 lbrwd	𬐩
 lbrfu	𡜌
 lbrhd	㸘
 lbrja	𲁑
+lbrpu	𭶺
+lbrpu	𲭀
 lbrnr	𠁙
 lbrrm	𦡿
 lbrts	𤕛
@@ -58679,11 +58677,11 @@ ldqlc	𩰓
 ldqli	𧂽
 ldqo	𦝒
 ldqrt	𬴱
-ldrbu	𲓭
 ldrce	𭩒
 ldrgi	𮌻
 ldrka	𦚊
 ldrne	𭩗
+ldrpu	𲓭
 ldrya	𮊪
 ldsna	𪂂
 ldssp	𩰟
@@ -58970,12 +58968,12 @@ lgqdf	𲊜
 lgqi	𪪳
 lgqo	㕝
 lgqrj	𤮻
-lgrbu	𭁅
 lgrco	𪪁
 lgrdo	𭙀
 lgrli	𲣽
 lgrmi	㿻
 lgrmi	𲲏
+lgrpu	𭁅
 lgrrj	䐞
 lgrya	𦍬
 lgsgi	𭘿
@@ -60138,10 +60136,10 @@ llrmx	𲠮
 llrne	𰮶
 llrpb	𱫠
 llrqo	𢽩
-llrrb	𦣰
+llrrp	𦣰
 llrro	𰆀
 llrro	𰆂
-llrrb	𲓯
+llrrp	𲓯
 llrsk	𢆥
 llrsn	𪃢
 llrsu	𪤟
@@ -60497,7 +60495,6 @@ lmqhy	𱤒
 lmra	𧧬
 lmra	𰚝
 lmrbi	𣰹
-lmrbu	𲨄
 lmrgi	𬆽
 lmryh	𣱀
 lmrjc	𣯋
@@ -60507,6 +60504,7 @@ lmrje	𰮓
 lmrgk	𣰜
 lmrli	𣬯
 lmrle	𦜤
+lmrpu	𲨄
 lmrdp	𲨐
 lmryd	𣮺
 lmrya	𱻋
@@ -61017,7 +61015,6 @@ lra	𧦗
 lrbbj	𣎜
 lrbji	𦞐
 lrbpa	䒊
-lrbu	𦘱
 lrcyf	𠔯
 lrcyd	𦢂
 lrda	𦜰
@@ -61078,6 +61075,7 @@ lrnro	𲺹
 lrpa	𦛐
 lrphr	𰃢
 lrpqo	𦢝
+lrpu	𦘱
 lrpvj	𬛂
 lrpyf	𦢋
 lrpyd	𦢹
@@ -61184,7 +61182,7 @@ lskkj	𮎀
 lskli	㔚
 lskqi	𦧌
 lskri	𬜆
-lskrb	𰯽
+lskrp	𰯽
 lskls	𦧝
 lskti	𦧑
 lsle	䑚
@@ -61298,7 +61296,7 @@ ltklv	𦡸
 ltldo	𦜟
 lto	𦙸
 ltryf	𦢟
-ltsrb	𦟺
+ltsrp	𦟺
 lttkb	𦝨
 lttsu	䏶
 ltvdn	𱊓
@@ -61924,13 +61922,13 @@ lwpsn	𪆈
 lwqo	𫨴
 lwqrm	𦝚
 lwrbb	𧔵
-lwrbu	𪟾
 lwrdp	𰤬
 lwrsh	𣠖
 lwrje	𲺮
 lwrql	𣯷
 lwrnl	𰘦
 lwrmi	𥁾
+lwrpu	𪟾
 lwrti	𦟇
 lwrqv	𠞲
 lwrya	𦟃
@@ -62182,7 +62180,7 @@ lxsgm	𩣏
 lxsna	𬷠
 lxspb	𭴝
 lxsrm	𩧶
-lxsrb	𫝣
+lxsrp	𫝣
 lxsrr	𭐸
 lxssu	㘶
 lxssn	𪀾
@@ -63678,8 +63676,8 @@ mkqnb	𪬡
 mkqo	𱱶
 mkqrj	𢢈
 mkqrm	𪬌
-mkrbu	𱞊
 mkrla	𫺙
+mkrpu	𱞊
 mkryi	𦅸
 mksbj	𢥼
 mksi	𤼩
@@ -64132,7 +64130,7 @@ mnkln	𤘻
 mnknx	𭞜
 mnknb	𱭲
 mnkpq	𤚔
-mnkrb	𤙐
+mnkrp	𤙐
 mnkrm	𭷞
 mnksa	𤙽
 mnkss	𤚣
@@ -64201,7 +64199,7 @@ mnlrj	𤘟
 mnlkr	𤙉
 mnlrm	𪺰
 mnlre	𭷗
-mnlrb	𭷜
+mnlrp	𭷜
 mnlvs	䱥
 mnlsu	𤘼
 mnlvt	𧤊
@@ -65129,7 +65127,7 @@ mslqq	𡲋
 mslyq	𡳊
 mslqi	𫸛
 mslnq	𫸡
-mslrb	𠧮
+mslrp	𠧮
 mslre	𪨋
 mslmr	𫵦
 mslrl	𰎄
@@ -66160,8 +66158,8 @@ mypu	𢠅
 myqi	𢙱
 myqrj	𤮼
 myra	𰐐
-myrbu	𭶬
 myrfj	𢎏
+myrpu	𭶬
 myrnt	𬥠
 mysdo	𢢂
 myshr	㦋
@@ -66544,7 +66542,6 @@ nbqbs	𮚩
 nbqwi	𧶿
 nbqhy	𧷸
 nbrbx	䉸
-nbrbu	𧴤
 nbrqb	𲿜
 nbrcc	𧶥
 nbrdo	䞅
@@ -66565,6 +66562,7 @@ nbrkm	𧸡
 nbrma	𬳸
 nbrnb	𧶸
 nbrnb	𧸏
+nbrpu	𧴤
 nbrdp	𪹭
 nbryd	𧶾
 nbsbc	𮚢
@@ -67065,7 +67063,6 @@ nfqnb	𮙿
 nfqsn	𱈸
 nfqtk	𣢴
 nfqxu	𥴘
-nfrbu	𠧩
 nfrbo	𧖦
 nfrda	𧟻
 nfrdo	𱕏
@@ -67077,6 +67074,7 @@ nfrlu	𫜈
 nfrlv	𭼂
 nfrla	𰴍
 nfrnb	𫂥
+nfrpu	𠧩
 nfrpb	𱪷
 nfrrm	𣬁
 nfsgi	𬡺
@@ -67463,7 +67461,6 @@ nhqvi	𮆭
 nhqvj	𱸩
 nhqwi	𥮞
 nhqyi	𮆷
-nhrbu	𫝇
 nhrdo	𥯎
 nhrrf	𥃋
 nhrfo	𬓘
@@ -67477,6 +67474,7 @@ nhrli	𣁴
 nhrmf	𥵀
 nhrmi	𱸋
 nhrgp	𡄬
+nhrpu	𫝇
 nhrqo	𢿏
 nhrqo	𥲑
 nhrbq	𫣽
@@ -67599,9 +67597,9 @@ njpo	𤒥
 njprj	𱸉
 njqla	𥯏
 njqtu	𬔹
-njrbu	䇚
 njrdo	𥮑
 njrje	𮗀
+njrpu	䇚
 njryf	𥵜
 njse	𮅅
 njska	䇨
@@ -67742,9 +67740,9 @@ nkptu	𫂇
 nkqi	𧟨
 nkqo	𰆰
 nkqwo	𨕞
-nkrbu	𲵵
 nkrje	𥫪
 nkrjv	𭐥
+nkrpu	𲵵
 nkrti	𥷵
 nkrtu	𥷶
 nksa	𬕒
@@ -67907,12 +67905,12 @@ nlqnb	𥳡
 nlqo	𰩶
 nlqo	𱷲
 nlqrm	𫇙
-nlrbu	𬔷
 nlre	𲁉
 nlrhr	𫧬
 nlrje	𭘾
 nlrje	𰩱
 nlrka	𥬋
+nlrpu	𬔷
 nlse	𬾍
 nlska	𥬫
 nlskj	𮆁
@@ -68590,7 +68588,6 @@ nmqfx	𫒄
 nmqrx	𱹍
 nmqly	䊔
 nmryb	𥾃
-nmrbu	𲶵
 nmrdc	𫃔
 nmrtd	𥻓
 nmrfd	𬖙
@@ -68616,6 +68613,7 @@ nmrym	𲷨
 nmrtn	𥼻
 nmrln	𥽆
 nmro	𥹎
+nmrpu	𲶵
 nmrqo	䈔
 nmrlq	𱡡
 nmrsr	𥼶
@@ -68916,7 +68914,7 @@ nnnne	𲑏
 nnnqi	𠑋
 nnnqi	𢍩
 nnnqi	𥱅
-nnnrb	𠨉
+nnnrp	𠨉
 nnnsu	𥭭
 nnnsu	𱖦
 nnntu	𮅌
@@ -68960,10 +68958,10 @@ nnsna	𥵌
 nnsna	𩿕
 nnsna	𪆲
 nnspi	𲚥
-nnsrb	𡎢
-nnsrb	𡎦
+nnsrp	𡎢
+nnsrp	𡎦
 nnsrm	𡒪
-nnsrb	𱗾
+nnsrp	𱗾
 nnstu	𫂏
 nnsti	𫭿
 nnsu	𡔗
@@ -69161,7 +69159,6 @@ nrbmy	𮆋
 nrbmg	𮆘
 nrbtu	𥴸
 nrbtu	𮯝
-nrbu	𫁰
 nrbyw	䉚
 nrce	𨑇
 nrcji	𥱬
@@ -69236,6 +69233,7 @@ nrnrj	𱪺
 nrnxu	𣡷
 nrpba	𱫔
 nrpdo	𥶏
+nrpu	𫁰
 nrpvd	𥶖
 nrqla	𮆌
 nrqo	𫾦
@@ -69757,7 +69755,6 @@ nsqxu	𣜈
 nsqrx	𩝇
 nsqly	䭊
 nsqgy	𩞶
-nsrbu	𩚅
 nsrpb	𩞾
 nsrpb	𮩊
 nsrdo	䬯
@@ -69777,6 +69774,7 @@ nsrmx	䭐
 nsrne	𥱩
 nsrnb	𥶦
 nsrnm	𥶶
+nsrpu	𩚅
 nsrqo	𥴆
 nsrqi	𬲙
 nsrsr	䭞
@@ -70682,7 +70680,6 @@ nwqto	𡇮
 nwqxu	𦊧
 nwqwx	𦊻
 nwqhy	𡈗
-nwrbu	𡆥
 nwrfd	𡈰
 nwrdo	𰉏
 nwrfi	𡆨
@@ -70696,6 +70693,7 @@ nwrkl	𥵚
 nwrli	䈖
 nwrym	𡈻
 nwrmi	𬐗
+nwrpu	𡆥
 nwrqo	𢻲
 nwrwi	𡆰
 nwrxm	𲘬
@@ -71964,7 +71962,7 @@ pcji	𬉺
 pcjle	𪹛
 pcjqo	𤎬
 pcjru	𠓨
-pcjrb	𱐸
+pcjrp	𱐸
 pcjvj	𤐛
 pckhr	𲬱
 pcklj	𠚋
@@ -72989,9 +72987,9 @@ plqla	𪸸
 plqo	𤆳
 plqo	𱪫
 plqo	𳌱
-plrbu	𪸟
 plrdm	𤊻
 plrmi	𥂤
+plrpu	𪸟
 plrpb	𱬰
 plrqo	㪏
 plrti	𲫬
@@ -73614,8 +73612,6 @@ pra	𤉘
 pra	𧪵
 pra	𧫏
 prbbj	𪓢
-prbu	𤆊
-prbu	𩱻
 prbxi	𤏽
 prcdo	㷽
 prce	䢅
@@ -73731,6 +73727,8 @@ prpqo	𤍛
 prpqo	𮘽
 prpsi	𤋛
 prpsu	𱫴
+prpu	𤆊
+prpu	𩱻
 prqi	𪪸
 prqo	𢻷
 prqo	𤆝
@@ -73750,7 +73748,7 @@ prrle	𩴎
 prrnx	𡭰
 prrqo	𢻸
 prrqo	𮧤
-prrrb	𠧞
+prrrp	𠧞
 prrrj	𬢋
 prrra	𭶩
 prrvd	𠛪
@@ -73946,7 +73944,7 @@ psdrc	䃩
 psdkr	䃲
 psdrm	𪿱
 psdqr	𪿼
-psdrb	𰧅
+psdrp	𰧅
 psdtu	䂨
 psdti	𥓀
 psdti	𰇤
@@ -74242,7 +74240,7 @@ pskqq	𱴿
 pskqi	𮵋
 psknr	𬒗
 pskrm	𥒌
-pskrb	𰦯
+pskrp	𰦯
 psknr	𰧔
 psksi	䂠
 pskqs	𡎂
@@ -74333,7 +74331,7 @@ pslvr	𥔞
 pslrm	𥔦
 pslrr	𰧗
 pslre	𲳍
-pslrb	𲳗
+pslrp	𲳗
 psllr	𲳭
 pslcr	𲳼
 pslsi	𥒔
@@ -74619,7 +74617,6 @@ psqky	𥓹
 psqhy	𥕓
 psqcy	𮁅
 psra	䂴
-psrbu	𥐚
 psrpb	𥖠
 psrjb	𪿫
 psrco	𥐹
@@ -74662,6 +74659,7 @@ psrln	𲴁
 psrnb	𲴇
 psrln	𲴐
 psro	𲫩
+psrpu	𥐚
 psrpa	𥑽
 psrdp	𬊲
 psrgp	𱴹
@@ -74718,7 +74716,7 @@ psspb	𤒋
 pssps	𥓩
 psspi	𲴎
 pssqo	𱬮
-pssrb	𩳴
+pssrp	𩳴
 pssrr	𱴤
 psssu	𤋑
 psssu	𤏎
@@ -75873,7 +75871,7 @@ qffmv	𦰓
 qffmu	𦲝
 qffmx	𦼇
 qffo	𦲕
-qffrb	𮐣
+qffrp	𮐣
 qffsu	𡐳
 qffvj	𭘧
 qffxu	𧀢
@@ -76740,12 +76738,12 @@ qjqo	𮎢
 qjqtu	𬜧
 qjra	𦴩
 qjra	𧦙
-qjrbu	𦬙
 qjrdo	䓘
 qjrhr	𧄔
 qjri	𦮩
 qjrli	𦵝
 qjrla	𧀸
+qjrpu	𦬙
 qjrwi	𮫖
 qjryf	𦿍
 qjsa	𮶜
@@ -77037,7 +77035,6 @@ qkqrm	𱽷
 qkqsu	𫉲
 qkqtu	𦭊
 qkqhw	𭁞
-qkrbu	𦭌
 qkrbi	𲽫
 qkrdo	𫊚
 qkrhw	𦿵
@@ -77051,6 +77048,7 @@ qkrmi	𦱣
 qkrmf	𱟤
 qkrmf	𱡵
 qkrfn	𤻓
+qkrpu	𦭌
 qkrro	𫊏
 qkrti	𦮃
 qkrve	𧃘
@@ -77348,7 +77346,6 @@ qlqqo	𦲔
 qlqrj	𲼟
 qlqxu	𦶫
 qlqxu	𦹁
-qlrbu	𫟌
 qlrdo	𧃇
 qlre	𦬰
 qlre	𲻳
@@ -77360,6 +77357,7 @@ qlrli	𦽹
 qlrle	𭁚
 qlrmi	𱽵
 qlrmi	𲲑
+qlrpu	𫟌
 qlrqo	𢼦
 qlrqo	𢽁
 qlrqo	𭣹
@@ -77374,7 +77372,7 @@ qlskl	𠢉
 qlsle	𩼮
 qlsna	䳍
 qlsnw	𫊐
-qlsrb	𠨊
+qlsrp	𠨊
 qlssu	𦴂
 qlssn	𪃺
 qlsu	𡋍
@@ -78136,7 +78134,6 @@ qrbsn	𪇓
 qrbsn	𪈆
 qrbsn	𪈘
 qrbsn	𪈛
-qrbu	𫇥
 qrbvo	𡗐
 qrbwo	𬩝
 qrbxi	𦒃
@@ -78278,6 +78275,7 @@ qrprj	𲻾
 qrptu	𦸵
 qrptk	𧃏
 qrptu	𫈯
+qrpu	𫇥
 qrqi	𦸳
 qrqo	𲻱
 qrqqo	𧅰
@@ -79265,162 +79263,35 @@ qyyxu	𮑃
 rbbbi	𦥼
 rbbbo	𧕵
 rbbbi	𪚴
-rbbfd	䜭
 rbbdp	𥀩
-rbbfd	𥌄
-rbbld	𧮲
 rbbdo	𪓞
-rbbld	𱲲
-rbbff	䪥
-rbblf	𧢕
-rbbff	𱂎
 rbbhr	𧭘
-rbbnj	𢿓
-rbbfj	𢿶
 rbbji	𧧠
-rbbfj	𫿂
-rbbfj	𭣫
-rbbfj	𲲻
-rbbsk	𢒪
-rbbmk	𣫋
-rbbke	𭅯
-rbbke	𭅰
 rbbli	𧪻
-rbbfl	𧷁
-rbbkn	𥹄
 rbbnx	𮘸
 rbbo	𲁷
-rbblp	𤈭
-rbbfq	㕡
-rbbfq	㕢
-rbbfq	㪫
-rbbfq	𢿡
-rbbkq	𮓚
 rbbqo	𮮡
-rbbfq	𰇀
-rbbfq	𰕐
-rbbns	𡑧
-rbbfs	𡓝
-rbbfs	𧷎
-rbbfs	𪠀
-rbbfs	𫫽
-rbblt	𣤧
-rbbft	𤫀
-rbblv	𠧶
-rbbrv	𱐞
-rbbmv	𱑖
 rbbwi	𧬦
-rbbbw	𲅮
-rbbfw	𲯃
-rbbmx	𨤐
 rbbya	𪓪
 rbcpb	𤎹
 rbcsa	𧧱
-rbcwo	𲅗
 rbda	𧫱
 rbdbo	𲁾
-rbdrc	𥅶
-rbdrc	𦕡
-rbdcy	𬱗
-rbddj	𣂣
-rbddp	𤿝
-rbddn	𫛱
-rbdfd	𰆅
-rbdkd	𲤂
-rbdgu	𬩷
-rbdhi	𨿧
-rbdjf	𱂽
-rbdka	㣌
-rbdkk	𠧳
-rbdka	𢒛
-rbdkk	𢒦
-rbdkk	𢒭
-rbdku	𣪙
-rbdke	𭾛
-rbdhl	𠧄
-rbdll	𡖡
-rbdlr	𦕢
-rbdll	𫆶
-rbdle	𰮗
-rbdmx	㤐
-rbdmg	㦸
-rbdmx	𢛂
-rbdmm	𢧗
-rbdgm	𪟷
-rbdnm	𰒬
-rbdln	𣦖
-rbdcn	𩠥
-rbdln	𫧯
 rbdo	𮘟
 rbdpe	䜛
-rbdjp	𠨀
-rbdpo	𤈱
 rbdpe	𧨕
-rbdpo	𭴙
-rbdmp	𰞿
 rbdpe	𰵃
-rbdrq	㪕
-rbdkq	𠦲
-rbdgq	𠦷
-rbdpq	𠧇
 rbdqo	𧭦
-rbdqq	𫧴
-rbdkr	𠧹
-rbdrb	𪟿
 rbdrj	𲁰
 rbdss	𧬛
-rbdsn	𪀄
-rbdpt	𠣳
-rbdtk	𣢤
-rbdft	𰙐
-rbdkt	𲓮
-rbdvd	㓠
-rbdva	𠛤
-rbdva	𪟂
-rbdwi	𠃵
-rbdwi	𠧡
-rbdwo	𨓗
 rbdwi	𮘩
-rbdxx	𭅭
 rbe	𧧰
-rbfdj	𠧣
 rbffi	𮘙
-rbfhv	𡥋
 rbfks	𧩩
 rbfku	𭮴
-rbflg	𢆌
-rbfnm	𥹐
 rbfu	𧩕
-rbfcv	𱜦
-rbgge	𲓬
 rbgjc	𧫿
-rbhtd	𠸿
-rbhtd	𣂢
-rbhld	𣂸
-rbhkd	𰕠
-rbhtf	𧡑
-rbhyf	𩐃
-rbhkf	𰆄
-rbhhv	𡥣
-rbhi	𨾇
-rbhjv	𠧫
-rbhtk	㲃
-rbhkk	𠧻
-rbhla	𪟽
-rbhfm	𢧛
 rbhpe	𧫙
-rbhtq	𢽭
-rbhrj	𫭬
-rbhri	𬺩
-rbhls	𱖻
-rbhti	𠧢
-rbhtv	𠜷
-rbhkv	𠝅
-rbhvj	𢂦
-rbhnw	𠨅
-rbhtw	𨖏
-rbhtw	𨗋
-rbhnw	𰁐
 rbjpe	𧧗
 rbkdo	𧨡
 rbke	𰴵
@@ -79429,223 +79300,36 @@ rbki	𬢞
 rbkje	𮘷
 rbkkc	𧮘
 rbkla	𫍓
-rbklp	𠧽
-rbkfv	𰆆
 rbkwo	𧬪
 rbkwo	𨔕
-rbkwo	𳄩
-rbkly	𰆈
-rblqc	𠭘
-rblcs	𢀸
-rblrd	𠧰
-rblqd	𦖥
-rblqd	𰆉
 rble	𦙪
-rblqf	㛑
-rblfu	𠧜
-rblnf	𠨁
-rblfu	𡛝
-rblfi	𣦵
-rbljf	𣩻
-rblqf	𩔒
-rblbg	𥜽
-rblgu	𨛖
-rblgy	𬆙
-rblqg	𮬞
-rbljh	𠨌
-rblwh	𣨯
-rblqh	𮁹
 rbli	𧦰
-rbljv	𢽋
-rblqk	㣓
-rblqk	𠡡
-rblka	𣨷
-rblnk	𦥋
 rblku	𧫫
-rblnl	𠧯
-rbllg	𣧮
-rblqm	𠧼
-rblqm	𢤅
-rblqm	𢤕
-rblqm	𢤰
-rblfm	𣨦
-rblqn	䝳
-rblne	𠧖
-rblln	𠨆
-rblln	𠨈
-rblne	𣦸
-rblnh	𣨄
-rblqn	𥹟
-rblln	𦚛
-rbltn	𧷧
-rblns	𩛈
-rbldn	𬥡
-rblqn	𮠯
-rblqp	𮀜
-rblqo	㕟
-rblsq	𠭉
-rblrq	𢼾
-rblnq	𢿝
-rblfq	𣦻
-rblqo	𣦼
-rbllq	𣨏
-rblqq	𰆇
-rblfq	𱥌
-rblro	𠧲
-rblmr	𥂥
-rblry	𦍲
-rbljr	𬆖
-rblrk	𭭿
-rblkr	𮕞
 rblro	𮙇
-rblra	𰴬
-rblqs	䱗
-rblqs	𡋪
-rblqs	𡋹
-rblsy	𣩕
-rblbs	𦘖
-rblqs	𪆶
-rblti	𭭾
-rblvd	𠜐
-rblqv	𠠋
-rblqv	𢂺
-rblkv	𣨖
-rblwi	𣦷
-rblwy	𣧕
-rblwo	𨓘
-rblfw	𨔖
-rblqx	𠨇
 rblxu	𧨾
-rblnx	𬃄
-rblnx	𭪢
-rblqx	𲥿
-rblly	𠧿
 rblya	𧭅
-rblny	𫯱
-rbmkc	𲄴
-rbmmp	𬊐
-rbmns	𰏧
 rbmvj	䛥
 rbmxi	𰴻
-rbnmc	𫧸
-rbnbc	𱊻
-rbnbc	𲎊
-rbndo	㔽
-rbnbd	𠨄
-rbnjd	𢨟
-rbnbd	𬸵
-rbnbd	𳐝
-rbnvf	䚃
-rbnnf	𧡹
 rbnfj	𧮤
-rbnfy	𫖣
-rbnbf	𱊽
-rbnvg	𨛕
-rbnjg	𨛹
-rbngu	𨜓
-rbnwg	𫁅
-rbnbh	𬸶
-rbnqj	𠚝
-rbnjv	𠧧
-rbnsj	𠧺
-rbnkj	𠧾
-rbnnj	𥽽
-rbnbj	𬸹
-rbnmk	𠧸
-rbnka	𢒟
-rbnnk	𫧷
-rbnbk	𮭰
-rbnnl	𣰮
-rbnbl	𬸸
-rbnbl	𳐜
-rbnne	𠧚
-rbnnn	𠧪
-rbnnn	𠨋
-rbnnn	𥻆
-rbnnn	𥾄
-rbnbn	𫠗
-rbnvp	𤈴
-rbnpb	𭵐
-rbnqq	𠭹
-rbnmq	𢻛
-rbnnq	𢾃
-rbnbq	𢿑
-rbnbq	𱊼
-rbnbq	𳐞
 rbnrm	𧭗
-rbnvr	𪾏
-rbnbr	𫜊
-rbnns	𡌓
-rbnks	𡍏
-rbnks	𡎱
-rbnbs	𱊺
-rbnnt	𣣧
-rbnnt	𣣸
-rbnvt	𣤦
-rbnvt	𤨗
-rbnvt	𤩤
-rbnnt	𤪇
-rbnnt	𤪎
-rbnnv	𠟫
-rbnnv	𫦛
-rbnbw	𠧟
-rbnvw	𠧠
-rbnkw	𠧱
-rbnnw	𠧴
-rbnkw	𥟫
-rbnjw	𨔁
-rbnnw	𨔟
-rbnvw	𨖯
-rbnvw	𨗰
-rbndw	𨘵
-rbnvw	𨙃
-rbnnx	㮚
-rbnlx	𣓨
-rbnkx	𣖴
-rbnmx	𣗴
-rbnnx	𣡼
 rbnxa	𧦽
-rbnvx	𰗧
-rbnny	𠧵
-rbnny	𡙉
-rbnky	𡙏
-rbnby	𬸷
-rbnyd	𰆃
 rbo	𧉌
 rbpa	𧧘
 rbpa	𰰕
-rbpqd	𱴅
-rbpkk	𠨂
 rbppu	𫍈
-rbqtg	𢽂
-rbqle	𢻿
 rbqsu	𫍊
-rbqwo	𬨞
-rbrhu	𫧰
 rbshr	𬣄
 rbska	𧧪
-rbtka	𭭄
 rbtmn	𮙁
 rbto	𧨖
-rbva	𠚬
-rbvda	𠚩
 rbve	𧨏
 rbvi	𧨹
-rbvtu	𠧓
-rbwxd	𣑅
 rbwfi	𬣉
 rbwi	㐆
 rbwi	𠂣
-rbwi	𠧒
-rbwjl	𠧝
-rbwpb	𤆛
 rbwpa	𰻷
 rbwqo	𭮱
-rbwsn	𩾤
-rbwva	𠚱
-rbwvi	𣲊
 rbwwo	𫐺
-rbwwo	𮞂
 rbxfj	𧭼
 rbxi	䛨
 rbxli	𧬤
@@ -79728,7 +79412,7 @@ rcyda	𧧤
 rcygm	𲁿
 rcyqi	𧫵
 rcyra	𧬸
-rcyrb	𱭘
+rcyrp	𱭘
 rcyva	𮘞
 rdbo	𧪎
 rddcs	𧬌
@@ -80509,7 +80193,7 @@ rjkli	𭂇
 rjkpe	𰄆
 rjknq	𭂑
 rjkrj	𠖵
-rjkrb	𠖺
+rjkrp	𠖺
 rjkrm	𠗅
 rjkbr	𠘦
 rjkrr	𭘀
@@ -80563,7 +80247,7 @@ rjlfr	𣁿
 rjlrm	𥁇
 rjlvr	𥁣
 rjlra	𧥽
-rjlrb	𱐂
+rjlrp	𱐂
 rjlse	㓉
 rjlls	𠗬
 rjlvs	𡋇
@@ -80928,11 +80612,11 @@ rkqo	𧨠
 rkqo	𫨲
 rkqra	𧮎
 rkqsu	𰴹
-rkrbu	𭅴
 rkri	𧦟
 rkri	𧩰
 rkrka	𰀇
 rkrmi	𧧓
+rkrpu	𭅴
 rkrqo	𰕃
 rksa	𧩡
 rksgi	𮘮
@@ -81147,7 +80831,7 @@ rljqk	𪍀
 rljhq	𪍩
 rljcr	𪊆
 rljrk	𪋽
-rljrb	𪋿
+rljrp	𪋿
 rljnr	𪌟
 rljpr	𪌪
 rljhr	𪍝
@@ -81286,7 +80970,6 @@ rlqo	𭣖
 rlqjt	𰱷
 rlqwi	𪉯
 rlqrx	𪉴
-rlrbu	𧦨
 rlrdo	𪉜
 rlre	䚾
 rlrje	䛁
@@ -81297,6 +80980,7 @@ rlrla	𠐇
 rlrla	𮭮
 rlrli	𰂤
 rlrmi	𪉟
+rlrpu	𧦨
 rlrrj	𧧛
 rlsna	𱈱
 rlspb	𲬄
@@ -81514,11 +81198,11 @@ rmqgl	𱅦
 rmqfp	𱅬
 rmqqo	𮹃
 rmqbs	𬴌
-rmrbu	𲌄
 rmrcd	𲌊
 rmrtf	𱅌
 rmrka	𥀿
 rmrma	𱄿
+rmrpu	𲌄
 rmrqo	𧪕
 rmrrm	𱅒
 rmrry	𱅧
@@ -82271,7 +81955,6 @@ rnqnw	𤼇
 rnqqx	𤸯
 rnqly	𤸡
 rnra	𤶘
-rnrbu	𤴩
 rnrce	𭼏
 rnrda	𤷘
 rnrcd	𤺪
@@ -82306,6 +81989,7 @@ rnrnb	𤸘
 rnrln	𤹽
 rnrnb	𬏽
 rnro	𱱏
+rnrpu	𤴩
 rnrpb	𤹂
 rnrqo	㽹
 rnrrh	㾷
@@ -82498,15 +82182,142 @@ ro	𳑳
 rpa	𠂬
 rpa	𬢛
 rpba	𰞀
+rpbfd	䜭
+rpbfd	𥌄
+rpbld	𧮲
+rpbld	𱲲
+rpbff	䪥
+rpblf	𧢕
+rpbff	𱂎
+rpbnj	𢿓
+rpbfj	𢿶
+rpbfj	𫿂
+rpbfj	𭣫
+rpbfj	𲲻
+rpbsk	𢒪
+rpbmk	𣫋
+rpbke	𭅯
+rpbke	𭅰
+rpbfl	𧷁
+rpbkn	𥹄
+rpblp	𤈭
+rpbfq	㕡
+rpbfq	㕢
+rpbfq	㪫
+rpbfq	𢿡
+rpbkq	𮓚
+rpbfq	𰇀
+rpbfq	𰕐
+rpbns	𡑧
+rpbfs	𡓝
+rpbfs	𧷎
+rpbfs	𪠀
+rpbfs	𫫽
+rpblt	𣤧
+rpbft	𤫀
+rpblv	𠧶
+rpbrv	𱐞
+rpbmv	𱑖
 rpbwi	𧦷
+rpbbw	𲅮
+rpbfw	𲯃
+rpbmx	𨤐
 rpcsi	䛌
+rpcwo	𲅗
 rpcxj	𦓙
+rpdrc	𥅶
+rpdrc	𦕡
+rpdcy	𬱗
+rpddj	𣂣
+rpddp	𤿝
+rpddn	𫛱
+rpdfd	𰆅
+rpdkd	𲤂
+rpdgu	𬩷
+rpdhi	𨿧
+rpdjf	𱂽
+rpdka	㣌
+rpdkk	𠧳
+rpdka	𢒛
+rpdkk	𢒦
+rpdkk	𢒭
+rpdku	𣪙
+rpdke	𭾛
+rpdhl	𠧄
+rpdll	𡖡
+rpdlr	𦕢
+rpdll	𫆶
+rpdle	𰮗
+rpdmx	㤐
+rpdmg	㦸
+rpdmx	𢛂
+rpdmm	𢧗
+rpdgm	𪟷
+rpdnm	𰒬
+rpdln	𣦖
+rpdcn	𩠥
+rpdln	𫧯
+rpdjp	𠨀
+rpdpo	𤈱
+rpdpo	𭴙
+rpdmp	𰞿
+rpdrq	㪕
+rpdkq	𠦲
+rpdgq	𠦷
+rpdpq	𠧇
+rpdqq	𫧴
+rpdkr	𠧹
+rpdrp	𪟿
+rpdsn	𪀄
+rpdpt	𠣳
+rpdtk	𣢤
+rpdft	𰙐
+rpdkt	𲓮
+rpdvd	㓠
+rpdva	𠛤
+rpdva	𪟂
+rpdwi	𠃵
+rpdwi	𠧡
+rpdwo	𨓗
+rpdxx	𭅭
+rpfdj	𠧣
+rpfhv	𡥋
+rpflg	𢆌
+rpfnm	𥹐
+rpfcv	𱜦
 rpfye	𩒒
+rpgge	𲓬
 rpgo	䛼
+rphtd	𠸿
+rphtd	𣂢
+rphld	𣂸
+rphkd	𰕠
+rphtf	𧡑
+rphyf	𩐃
+rphkf	𰆄
+rphhv	𡥣
 rphhv	𧪂
 rphi	𧮓
+rphi	𨾇
+rphjv	𠧫
+rphtk	㲃
+rphkk	𠧻
+rphla	𪟽
+rphfm	𢧛
+rphtq	𢽭
 rphrk	𧩛
 rphrk	𧪱
+rphrj	𫭬
+rphri	𬺩
+rphls	𱖻
+rphti	𠧢
+rphtv	𠜷
+rphkv	𠝅
+rphvj	𢂦
+rphnw	𠨅
+rphtw	𨖏
+rphtw	𨗋
+rphnw	𰁐
 rphxu	䜈
 rpjbi	𧩣
 rpjgi	𧮏
@@ -82515,29 +82326,216 @@ rpkfo	䛬
 rpkjc	𡭍
 rpkmx	𧩓
 rpkmx	𧩪
+rpklp	𠧽
+rpkfv	𰆆
+rpkwo	𳄩
+rpkly	𰆈
+rplqc	𠭘
+rplcs	𢀸
+rplrd	𠧰
+rplqd	𦖥
+rplqd	𰆉
+rplqf	㛑
+rplfu	𠧜
+rplnf	𠨁
+rplfu	𡛝
+rplfi	𣦵
+rpljf	𣩻
+rplqf	𩔒
+rplbg	𥜽
+rplgu	𨛖
+rplgy	𬆙
+rplqg	𮬞
+rpljh	𠨌
+rplwh	𣨯
+rplqh	𮁹
+rpljv	𢽋
+rplqk	㣓
+rplqk	𠡡
+rplka	𣨷
+rplnk	𦥋
+rplnl	𠧯
+rpllg	𣧮
+rplqm	𠧼
+rplqm	𢤅
+rplqm	𢤕
+rplqm	𢤰
+rplfm	𣨦
+rplqn	䝳
+rplne	𠧖
+rplln	𠨆
+rplln	𠨈
+rplne	𣦸
+rplnh	𣨄
+rplqn	𥹟
+rplln	𦚛
+rpltn	𧷧
+rplns	𩛈
+rpldn	𬥡
+rplqn	𮠯
+rplqp	𮀜
+rplqo	㕟
+rplsq	𠭉
+rplrq	𢼾
+rplnq	𢿝
+rplfq	𣦻
+rplqo	𣦼
+rpllq	𣨏
+rplqq	𰆇
+rplfq	𱥌
+rplro	𠧲
+rplmr	𥂥
+rplry	𦍲
+rpljr	𬆖
+rplrk	𭭿
+rplkr	𮕞
+rplra	𰴬
+rplqs	䱗
+rplqs	𡋪
+rplqs	𡋹
+rplsy	𣩕
+rplbs	𦘖
+rplqs	𪆶
+rplti	𭭾
+rplvd	𠜐
+rplqv	𠠋
+rplqv	𢂺
+rplkv	𣨖
+rplwi	𣦷
+rplwy	𣧕
 rplwe	𧭵
+rplwo	𨓘
+rplfw	𨔖
+rplqx	𠨇
+rplnx	𬃄
+rplnx	𭪢
+rplqx	𲥿
+rplly	𠧿
+rplny	𫯱
+rpmkc	𲄴
+rpmmp	𬊐
+rpmns	𰏧
 rpnbe	𧫇
+rpnmc	𫧸
+rpnbc	𱊻
+rpnbc	𲎊
+rpndo	㔽
+rpnbd	𠨄
+rpnjd	𢨟
+rpnbd	𬸵
+rpnbd	𳐝
+rpnvf	䚃
+rpnnf	𧡹
+rpnfy	𫖣
+rpnbf	𱊽
+rpnvg	𨛕
+rpnjg	𨛹
+rpngu	𨜓
+rpnwg	𫁅
+rpnbh	𬸶
+rpnqj	𠚝
+rpnjv	𠧧
+rpnsj	𠧺
+rpnkj	𠧾
+rpnnj	𥽽
+rpnbj	𬸹
+rpnmk	𠧸
+rpnka	𢒟
+rpnnk	𫧷
+rpnbk	𮭰
+rpnnl	𣰮
+rpnbl	𬸸
+rpnbl	𳐜
+rpnne	𠧚
+rpnnn	𠧪
+rpnnn	𠨋
+rpnnn	𥻆
+rpnnn	𥾄
 rpnnb	𧭾
+rpnbn	𫠗
+rpnvp	𤈴
+rpnpb	𭵐
+rpnqq	𠭹
+rpnmq	𢻛
+rpnnq	𢾃
+rpnbq	𢿑
+rpnbq	𱊼
+rpnbq	𳐞
+rpnvr	𪾏
+rpnbr	𫜊
+rpnns	𡌓
+rpnks	𡍏
+rpnks	𡎱
+rpnbs	𱊺
+rpnnt	𣣧
+rpnnt	𣣸
+rpnvt	𣤦
+rpnvt	𤨗
+rpnvt	𤩤
+rpnnt	𤪇
+rpnnt	𤪎
+rpnnv	𠟫
 rpnvo	𧭞
+rpnnv	𫦛
+rpnbw	𠧟
+rpnvw	𠧠
+rpnkw	𠧱
+rpnnw	𠧴
+rpnkw	𥟫
+rpnjw	𨔁
+rpnnw	𨔟
+rpnvw	𨖯
+rpnvw	𨗰
+rpndw	𨘵
+rpnvw	𨙃
+rpnnx	㮚
+rpnlx	𣓨
+rpnkx	𣖴
+rpnmx	𣗴
+rpnnx	𣡼
+rpnvx	𰗧
+rpnny	𠧵
+rpnny	𡙉
+rpnky	𡙏
+rpnby	𬸷
+rpnyd	𰆃
 rpo	𤇇
+rppqd	𱴅
 rppjf	𩙜
 rppkl	䜎
+rppkk	𠨂
 rpppo	𧭓
 rppxu	𧭄
 rppyw	㽊
 rppyw	𤮶
 rppyd	𪥢
+rpqtg	𢽂
+rpqle	𢻿
 rpqo	𧦛
+rpqwo	𬨞
 rpra	𧮊
 rpra	𰵀
+rprhu	𫧰
 rprje	𧥺
 rprpe	𧫘
 rpsdo	𳁱
 rpsi	𧦳
 rpsna	𮭌
 rpti	𮗽
+rptka	𭭄
 rpu	𧧖
+rpva	𠚬
+rpvda	𠚩
 rpvjc	𠪻
+rpvtu	𠧓
+rpwxd	𣑅
+rpwi	𠧒
+rpwjl	𠧝
+rpwpb	𤆛
+rpwsn	𩾤
+rpwva	𠚱
+rpwvi	𣲊
+rpwwo	𮞂
 rqbbi	𧩃
 rqbss	𧭊
 rqcca	𧮧
@@ -83815,8 +83813,8 @@ sbpsi	𥑟
 sbpvj	𢅍
 sbpyd	𪣷
 sbqsu	𡐖
-sbrbu	𰋈
 sbrfo	𡕅
+sbrpu	𰋈
 sbrxi	𭏕
 sbssi	𫮑
 sbstu	𡋶
@@ -84644,8 +84642,6 @@ sjqvj	𪎐
 sjqyd	𬹍
 sjra	𧥠
 sjrbb	𪓒
-sjrbu	𫧮
-sjrbu	𱖘
 sjrdo	𪎋
 sjrdo	𬹎
 sjrgo	𱋧
@@ -84654,6 +84650,8 @@ sjrje	𰉡
 sjrje	𮰛
 sjrka	𱋄
 sjrle	𱼊
+sjrpu	𫧮
+sjrpu	𱖘
 sjryf	㙸
 sjryd	𬼣
 sjsgi	𱋋
@@ -85077,12 +85075,12 @@ slqo	𭍾
 slqo	𰉠
 slqqo	䨼
 slqqo	𩇥
-slrbu	𭎉
 slrdo	𦒻
 slrdk	𬁥
 slrfo	𱗦
 slrje	𡉱
 slrnb	𧷏
+slrpu	𭎉
 slrtk	𣤶
 slrwo	𨙋
 slryw	㼥
@@ -85593,7 +85591,7 @@ snlnn	𦠂
 snlnb	𧷗
 snlmn	𱉁
 snlqo	𳎨
-snlrb	𡍐
+snlrp	𡍐
 snlrm	𭾌
 snlsk	𡑝
 snlsu	𬷆
@@ -85939,7 +85937,6 @@ sra	𫭷
 srbbj	𰊷
 srbca	𡕃
 srbji	𱗒
-srbu	𪢱
 srce	𲙉
 srco	㘫
 srcpc	𱗭
@@ -86020,6 +86017,7 @@ srpqo	𰋃
 srprj	𡐸
 srpts	𢱬
 srpts	𭣆
+srpu	𪢱
 srpvj	𢅲
 srqdo	𭇸
 srqo	𡯘
@@ -87407,7 +87405,6 @@ syqkx	𱇌
 syqly	𩹅
 syqhy	𩻁
 syrpb	𩼟
-syrbu	𬵂
 syrce	𩷩
 syrda	𩷹
 syrdo	𩺦
@@ -87449,6 +87446,7 @@ syrnm	𱆾
 syrns	𳍺
 syrpa	𩷁
 syrfp	𩷴
+syrpu	𬵂
 syrpb	𱆺
 syrpq	𩽉
 syrqo	𮫱
@@ -88416,11 +88414,11 @@ tjpve	𱡔
 tjqi	𢪴
 tjqto	𭢨
 tjra	𭡩
-tjrbu	𢪗
 tjrdo	𭡗
 tjrfo	𢸬
 tjrgi	𰓠
 tjrje	𢫝
+tjrpu	𢪗
 tjryf	𢷏
 tjsa	𰒼
 tjse	𢫌
@@ -88768,7 +88766,6 @@ tlqtu	𢬌
 tlqva	𫽂
 tlqxu	𢱴
 tlra	㨱
-tlrbu	𢫑
 tlrdm	𢯾
 tlre	𢪭
 tlrfo	𢹞
@@ -88778,6 +88775,7 @@ tlrli	𫽒
 tlrmi	𫽗
 tlrmx	𭢙
 tlrma	𱅀
+tlrpu	𢫑
 tlrrj	𪮜
 tlrti	𢮿
 tlska	𢬓
@@ -90020,9 +90018,9 @@ tyqfj	𧡗
 tyqla	𮮏
 tyqxu	𢺌
 tyqya	𪏜
-tyrbu	𢯜
 tyrda	𱡂
 tyrja	𰓻
+tyrpu	𢯜
 tysna	𩿢
 tyssu	㨒
 tysu	𭠨
@@ -90247,7 +90245,7 @@ vcgke	𭃦
 vcgma	㶒
 vcgpb	𭲵
 vcgrm	𤅿
-vcgrb	𬇿
+vcgrp	𬇿
 vcgsu	𤀟
 vcgta	𬈠
 vchhi	𤂦
@@ -90544,13 +90542,13 @@ vdqo	𣳚
 vdqo	𭰮
 vdqrj	㵵
 vdra	𤁳
-vdrbu	𠧙
-vdrbu	𣵝
 vdrce	𤂪
 vdrja	𰴖
 vdrmi	𥁏
 vdrmi	𬐯
 vdrmi	𱧴
+vdrpu	𠧙
+vdrpu	𣵝
 vdrrh	𪷢
 vdse	𭰿
 vdshr	𣾻
@@ -91437,8 +91435,6 @@ vjqtw	𢄟
 vjqrx	𢃱
 vjqlx	𫷐
 vjqly	㡕
-vjrbu	𫶽
-vjrbu	𱥸
 vjrld	㡒
 vjryh	𢅾
 vjrhr	𣸄
@@ -91447,6 +91443,8 @@ vjrkj	𭘤
 vjrrl	㡤
 vjrli	𤃙
 vjrdm	㥈
+vjrpu	𫶽
+vjrpu	𱥸
 vjrqo	𢁵
 vjrrh	㡗
 vjrrm	𪾒
@@ -91750,9 +91748,7 @@ vkqrm	𬈋
 vkqsu	𤀕
 vkqyd	𭳉
 vkra	𤅗
-vkrbu	𣳓
 vkrbi	𪷾
-vkrbu	𭃑
 vkrce	𣾋
 vkrdm	㵌
 vkrfo	𤃆
@@ -91764,6 +91760,8 @@ vkrkj	𱪊
 vkrla	𭳪
 vkrmi	𬐛
 vkrmi	𭰻
+vkrpu	𣳓
+vkrpu	𭃑
 vkrrm	𥁷
 vkrtu	𤄞
 vkrtu	𱪅
@@ -91964,7 +91962,6 @@ vlqnw	𣷝
 vlqo	𣲰
 vlqrj	㵇
 vlqrj	𣺇
-vlrbu	𣳢
 vlrdm	㴘
 vlrdo	𭲯
 vlre	𭯺
@@ -91977,6 +91974,7 @@ vlrle	𣶀
 vlrli	𣶉
 vlrmi	𭱦
 vlrmx	𭲖
+vlrpu	𣳢
 vlrpe	𭲀
 vlrrj	𣺡
 vlryi	𪸅
@@ -92083,7 +92081,7 @@ vmgla	𣸂
 vmgo	𣳇
 vmgo	𭰖
 vmgqo	𪷶
-vmgrb	𬉝
+vmgrp	𬉝
 vmgts	𲣘
 vmgwo	㵦
 vmgya	𣴤
@@ -92800,8 +92798,6 @@ vrbfu	𣷑
 vrbjv	𱪐
 vrbla	𣴸
 vrbsk	𱩎
-vrbu	𣱶
-vrbu	𲨳
 vrcdo	㵛
 vrcfi	𣴋
 vrcfo	𤁆
@@ -92893,6 +92889,8 @@ vrpnm	𤅴
 vrpo	𣺸
 vrpqo	𪸂
 vrpsk	𭳫
+vrpu	𣱶
+vrpu	𲨳
 vrpyf	𤄂
 vrpyd	𤄾
 vrqo	𢼹
@@ -93050,9 +93048,9 @@ vsqo	𣳏
 vsqo	𣿡
 vsqo	𰛓
 vsrbo	𤄁
-vsrbu	𱥴
 vsrdo	𬈉
 vsrmx	𭲓
+vsrpu	𱥴
 vsrtu	𣼳
 vsrya	㶍
 vsrya	𣸉
@@ -93064,7 +93062,7 @@ vsslx	𤄮
 vssnb	𤃋
 vssps	𣼤
 vssrm	𣿣
-vssrb	𲩙
+vssrp	𲩙
 vsssi	𤀴
 vsswo	𤃤
 vssyu	𩼪
@@ -93961,7 +93959,7 @@ wglma	𩉪
 wglqn	䩿
 wglnx	𩊶
 wglqo	𩉨
-wglrb	𩊃
+wglrp	𩊃
 wglsi	䩠
 wglvi	𩉮
 wglva	𩉵
@@ -95105,7 +95103,6 @@ whqfx	𱶦
 whqly	𥠚
 whqhy	𥡸
 whra	𲵋
-whrbu	𥝒
 whrpb	𥣋
 whrlb	𧎗
 whrco	𥝷
@@ -95137,6 +95134,7 @@ whrln	𥢽
 whrnb	𬓲
 whrdn	𰨶
 whrpb	䅵
+whrpu	𥝒
 whrtq	𢾽
 whrsr	䆁
 whrrh	𥠱
@@ -95727,7 +95725,7 @@ wkjmn	𤞗
 wkjcm	𬌿
 wkjgp	𤞀
 wkjrj	㹣
-wkjrb	𤝥
+wkjrp	𤝥
 wkjfs	𤝵
 wkjsk	𤝷
 wkjsi	𲭹
@@ -95792,7 +95790,7 @@ wkkhp	𭸍
 wkkpq	𤟫
 wkkqo	𧰍
 wkkri	𤝑
-wkkrb	𱭶
+wkkrp	𱭶
 wkknr	𲮨
 wkksj	𤝨
 wkkms	𤡺
@@ -95850,7 +95848,7 @@ wklpe	𲮁
 wklqo	𱭴
 wklrm	𤠅
 wkllr	𬌹
-wklrb	𰡇
+wklrp	𰡇
 wkltr	𲮎
 wklsi	㹶
 wklsu	𤝫
@@ -96057,7 +96055,6 @@ wkqnx	𱮒
 wkqly	𤠉
 wkqfy	𤡉
 wkqmy	𤢑
-wkrbu	𲭫
 wkrwc	𡽺
 wkrce	𪺼
 wkrcj	𱭸
@@ -96088,6 +96085,7 @@ wkrms	𰡄
 wkrmg	𱮙
 wkro	𤝪
 wkrpo	𰡤
+wkrpu	𲭫
 wkrpb	𲮩
 wkrnq	𲮈
 wkrqi	𲮟
@@ -96523,7 +96521,7 @@ wnlfh	𨾫
 wnli	𰅮
 wnllx	㚉
 wnlmo	㭆
-wnlrb	𬼏
+wnlrp	𬼏
 wnmi	𥸥
 wnmi	𥸦
 wnmvj	𱜨
@@ -97676,7 +97674,7 @@ xflps	𬒟
 xflpb	𱣽
 xflqo	𣖀
 xflqo	𰅪
-xflrb	㔰
+xflrp	㔰
 xflti	𣒽
 xflvi	𫧎
 xflxu	𭫾
@@ -98401,12 +98399,12 @@ xkqsu	𪲙
 xkqsu	𰘷
 xkqtu	𣟂
 xkrbj	𪓫
-xkrbu	𭩦
 xkrdm	𣛝
 xkrfo	𱤪
 xkrgi	𪳴
 xkrjv	𣟷
 xkrje	𱣃
+xkrpu	𭩦
 xkrss	𱤘
 xkrya	𣠾
 xksa	㭻
@@ -98595,7 +98593,6 @@ xlqwi	𳅪
 xlqxu	𭪷
 xlqxu	𭫏
 xlqyd	𲛂
-xlrbu	𲥵
 xlrdm	𣔺
 xlre	𣐅
 xlrfo	𣟴
@@ -98607,6 +98604,7 @@ xlrli	𬃐
 xlrmi	㮎
 xlrmx	㯖
 xlrmf	𪴂
+xlrpu	𲥵
 xlrqo	𭣯
 xlrrm	𣕆
 xlrti	𣔪
@@ -99516,7 +99514,7 @@ xsrya	𣟲
 xssi	㭬
 xssmx	𬃰
 xsspb	𭵣
-xssrb	𱣧
+xssrp	𱣧
 xsssi	𬤾
 xssu	𣗃
 xssu	𮰝
@@ -100955,7 +100953,7 @@ ydxdo	𡘝
 ydxfy	𱂘
 ydxli	𲸤
 ydxdn	𡚚
-ydxrb	𠧭
+ydxrp	𠧭
 ydxu	㚓
 ydxu	𤥯
 ydxu	𮴳
@@ -101529,12 +101527,12 @@ yjnro	𰫦
 yjpba	𤈅
 yjpfo	𤪿
 yjqyd	𦆌
-yjrbu	𥾾
-yjrbu	𮴊
 yjrfo	𱯯
 yjrje	𤤮
 yjrje	𭸹
 yjrlc	𲸞
+yjrpu	𥾾
+yjrpu	𮴊
 yjrtk	𲰔
 yjru	𰫗
 yjryf	𤪟
@@ -101703,12 +101701,12 @@ ykqsu	𬗛
 ykqsu	𮴚
 ykqtu	𦆼
 ykqxu	𲸡
-ykrbu	𰡶
 ykrdm	𦅑
 ykrfo	𪼮
 ykri	𲷭
 ykrke	𱯫
 ykrmx	𢦋
+ykrpu	𰡶
 ykrrj	𱺇
 ykrtu	𭹻
 ykrya	䌴
@@ -101873,11 +101871,11 @@ ylqo	𤤣
 ylqo	𥾣
 ylqo	𥿈
 ylqo	𭸷
-ylrbu	𤤫
 ylrfo	𭹹
 ylrje	𤣽
 ylrje	𥾢
 ylrle	𤦛
+ylrpu	𤤫
 ylrpe	𪼚
 ylsdo	𦂑
 ylsu	𥿛
@@ -102460,8 +102458,6 @@ yrbdo	𤩅
 yrbdm	𤪻
 yrbji	𭹦
 yrbku	𬎀
-yrbu	㺪
-yrbu	𫃚
 yrcbe	𱮺
 yrcdo	𤩕
 yrce	𦁄
@@ -102530,6 +102526,8 @@ yrpgi	𪼎
 yrppo	𤫙
 yrpqo	𤫉
 yrptu	𤩁
+yrpu	㺪
+yrpu	𫃚
 yrqgu	𤥸
 yrqo	㺳
 yrqo	𥾲
@@ -102629,7 +102627,7 @@ yssi	𤥨
 yssi	𪼅
 yssjc	䋽
 yssnw	𤩊
-yssrb	𦁊
+yssrp	𦁊
 ysssu	𦇇
 ysssu	𲚨
 ysti	𲷱
@@ -102680,10 +102678,10 @@ ytnrj	𰡳
 yto	𤤪
 yto	𮈉
 ytqrj	𱯉
-ytrbu	𲷬
 ytrda	𦄹
 ytrmg	𤩺
 ytrne	𱯶
+ytrpu	𲷬
 ytsbo	𤧠
 ytsna	𩿱
 ytso	𥾹
@@ -103479,7 +103477,7 @@ bjkfq	툦
 bjkfq	툧
 bjkqo	팆
 bjkfq	팇
-bjkrb	톼
+bjkrp	톼
 bjkvj	㣇
 bjkwi	톡
 bjkww	톢
@@ -103514,7 +103512,6 @@ bjkxf	틷
 bjlkb	𘃸
 bjlvf	𘃹
 bjljo	𘤲
-bjrbu	타
 bjrcb	탍
 bjrbj	탙
 bjrkb	탩
@@ -103641,6 +103638,7 @@ bjrkn	톖
 bjrkn	톗
 bjrkn	톘
 bjro	탸
+bjrpu	타
 bjrqo	탖
 bjrfq	탗
 bjrkq	탲
@@ -104334,7 +104332,7 @@ cfkqo	핒
 cfkqo	핓
 cfkqo	𗐫
 cfkqo	𗑔
-cfkrb	퐈
+cfkrp	퐈
 cfkrj	𗒣
 cfkrj	𘛎
 cfksk	𗒤
@@ -104407,7 +104405,6 @@ cfqbi	𗓏
 cfqfi	𗅬
 cfqti	𗆅
 cfqwi	𗅔
-cfrbu	파
 cfrbj	팙
 cfrbj	팥
 cfrbj	팵
@@ -104533,6 +104530,7 @@ cfrne	폢
 cfrne	폣
 cfrne	폤
 cfro	퍄
+cfrpu	파
 cfrqo	팢
 cfrqo	팣
 cfrqo	팾
@@ -105035,7 +105033,7 @@ cjkfq	룢
 cjkfq	룣
 cjkqo	맂
 cjkfq	맃
-cjkrb	롸
+cjkrp	롸
 cjkwi	록
 cjkww	롞
 cjkwi	론
@@ -105073,7 +105071,6 @@ cjlti	𗄻
 cjlwi	𘛤
 cjne	ᆳ
 cjne	ㄽ
-cjrbu	라
 cjrcb	랉
 cjrbj	랕
 cjrkb	랥
@@ -105201,6 +105198,7 @@ cjrkn	롒
 cjrkn	롓
 cjrkn	롔
 cjro	랴
+cjrpu	라
 cjrqo	랒
 cjrfq	랓
 cjrkq	랮
@@ -107326,12 +107324,10 @@ dkqo	몾
 dkqo	밎
 dkqo	옺
 dkqo	잊
-dkrbu	뫄
 dkrbj	뫑
 dkrbj	뫝
 dkrbj	뫭
 dkrbj	뫹
-dkrbu	와
 dkrbj	왍
 dkrbj	왙
 dkrbj	왩
@@ -107415,6 +107411,8 @@ dkrne	왨
 dkrne	왮
 dkrne	왯
 dkrne	왰
+dkrpu	뫄
+dkrpu	와
 dkrqo	뫚
 dkrqo	뫛
 dkrqo	뫶
@@ -107528,8 +107526,6 @@ drbji	맡
 drbji	먙
 drbji	앝
 drbji	얕
-drbu	마
-drbu	아
 drcbj	맕
 drcbj	먍
 drcbj	앑
@@ -107820,6 +107816,8 @@ drnne	았
 drnne	얐
 dro	먀
 dro	야
+drpu	마
+drpu	아
 drqo	맞
 drqo	먖
 drqo	앚
@@ -108645,9 +108643,9 @@ fjfqo	삊
 fjfqo	삋
 fjfqo	삦
 fjfqo	삧
-fjfrb	빠
+fjfrp	빠
 fjfro	뺘
-fjfrb	뽜
+fjfrp	뽜
 fjfti	𗀫
 fjfwi	벅
 fjfwi	벆
@@ -109024,7 +109022,7 @@ fjkqo	뵺
 fjkqo	뵻
 fjkqo	빚
 fjkqo	빛
-fjkrb	봐
+fjkrp	봐
 fjkwi	복
 fjkwi	볶
 fjkwi	본
@@ -109059,7 +109057,6 @@ fjne	ᆹ
 fjne	ㅄ
 fjnxf	ㅵ
 fjo	𛄢
-fjrbu	바
 fjrbj	밡
 fjrbj	밭
 fjrbj	밽
@@ -109185,6 +109182,7 @@ fjrne	볪
 fjrne	볫
 fjrne	볬
 fjro	뱌
+fjrpu	바
 fjrqo	밪
 fjrqo	밫
 fjrqo	뱆
@@ -110210,7 +110208,7 @@ fqkqo	춏
 fqkqo	칮
 fqkqo	칯
 fqkqo	𘚆
-fqkrb	촤
+fqkrp	촤
 fqkrj	𗵛
 fqkrj	𗵧
 fqkrj	𗵪
@@ -110264,7 +110262,6 @@ fqo	ᄎ
 fqo	ᆾ
 fqo	ㅊ
 fqqki	𗵄
-fqrbu	차
 fqrbj	찵
 fqrbj	챁
 fqrbj	챑
@@ -110397,6 +110394,7 @@ fqrne	쳾
 fqrne	쳿
 fqrne	촀
 fqro	챠
+fqrpu	차
 fqrqo	찾
 fqrqo	찿
 fqrqo	챚
@@ -110791,7 +110789,7 @@ go	ㆲ
 go	ェ
 go	エ
 go	𘠫
-gqbrb	㌇
+gqbrp	㌇
 gqwco	𗘴
 grlti	𗍥
 gscsa	﨩
@@ -111400,7 +111398,7 @@ jwna	𘰢
 jwrje	ぜ
 jwrje	𘰥
 jwrlk	㌢
-jwrrb	㌣
+jwrrp	㌣
 jwtu	𘰝
 jwtu	𘰠
 jwwbi	𗭧
@@ -112980,7 +112978,7 @@ knlke	𗂲
 knmi	⾤
 knne	𘱄
 knne	𘱅
-knrbu	㌩
+knrpu	㌩
 knwwi	𗀹
 ko	
 kpftu	
@@ -112993,8 +112991,6 @@ krbbi	⻱
 krbbi	龜
 krbbi	龜
 krbbi	龜
-krbu	ᅪ
-krbu	ㅘ
 krcbi	𗺈
 krcke	𗎰
 krcke	𗺇
@@ -113036,6 +113032,8 @@ krlwi	𘚩
 krlwi	𘚱
 krmi	⾎
 kro	
+krpu	ᅪ
+krpu	ㅘ
 krqti	𗎲
 krrje	𘮗
 krvfi	𘉣
@@ -113125,7 +113123,7 @@ kwlrj	𗀽
 kwlfw	𗗎
 kwlya	望
 kwlya	望
-kwnrb	㍗
+kwnrp	㍗
 kwqbi	𗃍
 kwqi	𗀼
 kwqrj	𗁡
@@ -113250,7 +113248,7 @@ lfi	さ
 lfna	㌬
 lfrje	ざ
 lfwpe	㌭
-lfwrb	㌫
+lfwrp	㌫
 lga	⼲
 lga	𘠨
 lga	𘬃
@@ -114109,7 +114107,6 @@ nknne	싰
 nkqke	𗭂
 nkqo	솢
 nkqo	싲
-nkrbu	솨
 nkrbj	솵
 nkrbj	쇁
 nkrbj	쇑
@@ -114154,6 +114151,7 @@ nkrne	쇐
 nkrne	쇖
 nkrne	쇗
 nkrne	쇘
+nkrpu	솨
 nkrqo	솾
 nkrqo	솿
 nkrqo	쇚
@@ -114609,7 +114607,7 @@ nnkqo	쑞
 nnkqo	쑟
 nnkqo	씾
 nnkqo	씿
-nnkrb	쏴
+nnkrp	쏴
 nnkwi	쏙
 nnkwi	쏚
 nnkwi	쏜
@@ -114644,7 +114642,6 @@ nnne	𘱆
 nnnkl	𘱉
 nnnne	𘱈
 nnntu	𘱇
-nnrbu	싸
 nnrbj	쌅
 nnrbj	쌑
 nnrbj	쌡
@@ -114770,6 +114767,7 @@ nnrne	쏎
 nnrne	쏏
 nnrne	쏐
 nnro	쌰
+nnrpu	싸
 nnrqo	쌎
 nnrqo	쌏
 nnrqo	쌪
@@ -114827,7 +114825,6 @@ nqo	𘰅
 nqo	𘰺
 nrbji	샅
 nrbji	샽
-nrbu	사
 nrcbj	삹
 nrcbj	샱
 nrcdo	삶
@@ -114976,6 +114973,7 @@ nrnne	샀
 nrnne	샸
 nro	𛀼
 nro	샤
+nrpu	사
 nrqo	샂
 nrqo	샺
 nrrdo	샇
@@ -116015,7 +116013,6 @@ qknne	짔
 qknti	𗷉
 qkqo	좆
 qkqo	짖
-qkrbu	좌
 qkrbj	좙
 qkrbj	좥
 qkrbj	좵
@@ -116061,6 +116058,7 @@ qkrne	좴
 qkrne	좺
 qkrne	좻
 qkrne	좼
+qkrpu	좌
 qkrqo	좢
 qkrqo	좣
 qkrqo	좾
@@ -116566,7 +116564,7 @@ qqkqo	쭂
 qqkqo	쭃
 qqkqo	찢
 qqkqo	찣
-qqkrb	쫘
+qqkrp	쫘
 qqkwi	쪽
 qqkwi	쪾
 qqkwi	쫀
@@ -116602,7 +116600,6 @@ qqo	🈒
 qqo	ᄍ
 qqo	ㅉ
 qqo	
-qqrbu	짜
 qqrbj	짩
 qqrbj	짵
 qqrbj	쨅
@@ -116728,6 +116725,7 @@ qqrne	쪲
 qqrne	쪳
 qqrne	쪴
 qqro	쨔
+qqrpu	짜
 qqrqo	짲
 qqrqo	짳
 qqrqo	쨎
@@ -116773,7 +116771,6 @@ qqrxf	쪧
 qrbji	잩
 qrbji	쟡
 qrblx	夢
-qrbu	자
 qrcbj	잝
 qrcbj	쟕
 qrcdo	잚
@@ -116936,6 +116933,7 @@ qrne	쟛
 qrnne	잤
 qrnne	쟜
 qro	쟈
+qrpu	자
 qrqo	잦
 qrqo	쟞
 qrrdo	잫
@@ -117112,75 +117110,8 @@ ra	⾔
 ra	⺦
 ra	
 rbbbi	
-rbbi	
 rbbji	⿌
-rbdpb	🉄
-rbki	ᅢ
-rbki	ㅐ
-rblxi	⺞
 rbmhr	識
-rbnbi	⻧
-rbqo	⽁
-rbrje	㌧
-rbrje	ド
-rbrpe	㌦
-rbu	⼘
-rbu	⺊
-rbu	㋣
-rbu	ト
-rbu	ᅡ
-rbu	ㅏ
-rbu	
-rbwfb	𗡿
-rbwfb	𗢀
-rbwrb	𗹻
-rbwrb	𗹿
-rbwrb	𗺂
-rbwrb	𗺃
-rbwjb	𘉀
-rbwpb	𘉅
-rbwfb	𘔯
-rbwrc	𘝐
-rbwfi	𘡷
-rbwff	𘧯
-rbwi	𘠶
-rbwi	𘠷
-rbwjs	𘥳
-rbwrk	𗹲
-rbwrk	𗹷
-rbwrk	𗹹
-rbwrk	𗹾
-rbwrl	𗹽
-rbwjl	𘉁
-rbwpc	𘥴
-rbwrq	𗟝
-rbwrq	𗹯
-rbwrq	𘪥
-rbwrj	𗹭
-rbwpr	𘉆
-rbwpr	𘉇
-rbwpr	𘉈
-rbwrj	𘣴
-rbwrj	𘣵
-rbwrj	𘣶
-rbwrj	𘣷
-rbwct	𗎴
-rbwrt	𗹮
-rbwrt	𗹰
-rbwrt	𗹳
-rbwrt	𗹵
-rbwrt	𗹶
-rbwrt	𗹸
-rbwrt	𗹼
-rbwrt	𗺀
-rbwrt	𗺁
-rbwjt	𘈿
-rbwjt	𘉂
-rbwrv	𗹴
-rbwrv	𗹺
-rbwrw	𗹱
-rbwpw	𘉃
-rbwpw	𘉄
 rce	⾠
 rce	辰
 rckke	𘁉
@@ -117713,7 +117644,7 @@ rjdfq	힂
 rjdfq	힃
 rjdkq	힞
 rjdkq	힟
-rjdrb	하
+rjdrp	하
 rjdro	햐
 rjdkr	화
 rjdrw	학
@@ -118054,7 +117985,74 @@ ro	
 ro	
 ro	
 ro	
+rpbi	
+rpdpb	🉄
+rpki	ᅢ
+rpki	ㅐ
+rplxi	⺞
+rpnbi	⻧
+rpqo	⽁
+rprje	㌧
+rprje	ド
+rprpe	㌦
 rpsdo	調
+rpu	⼘
+rpu	⺊
+rpu	㋣
+rpu	ト
+rpu	ᅡ
+rpu	ㅏ
+rpu	
+rpwfb	𗡿
+rpwfb	𗢀
+rpwrb	𗹻
+rpwrb	𗹿
+rpwrb	𗺂
+rpwrb	𗺃
+rpwjb	𘉀
+rpwpb	𘉅
+rpwfb	𘔯
+rpwrc	𘝐
+rpwfi	𘡷
+rpwff	𘧯
+rpwi	𘠶
+rpwi	𘠷
+rpwjs	𘥳
+rpwrk	𗹲
+rpwrk	𗹷
+rpwrk	𗹹
+rpwrk	𗹾
+rpwrl	𗹽
+rpwjl	𘉁
+rpwpc	𘥴
+rpwrq	𗟝
+rpwrq	𗹯
+rpwrq	𘪥
+rpwrj	𗹭
+rpwpr	𘉆
+rpwpr	𘉇
+rpwpr	𘉈
+rpwrj	𘣴
+rpwrj	𘣵
+rpwrj	𘣶
+rpwrj	𘣷
+rpwct	𗎴
+rpwrt	𗹮
+rpwrt	𗹰
+rpwrt	𗹳
+rpwrt	𗹵
+rpwrt	𗹶
+rpwrt	𗹸
+rpwrt	𗹼
+rpwrt	𗺀
+rpwrt	𗺁
+rpwjt	𘈿
+rpwjt	𘉂
+rpwrv	𗹴
+rpwrv	𗹺
+rpwrw	𗹱
+rpwpw	𘉃
+rpwpw	𘉄
 rqfsu	謹
 rqmdo	諾
 rqmdo	諾
@@ -119823,7 +119821,7 @@ wfkqo	쿚
 wfkqo	쿛
 wfkqo	킺
 wfkqo	킻
-wfkrb	콰
+wfkrp	콰
 wfkwi	걱
 wfkwi	걲
 wfkwi	건
@@ -119894,7 +119892,6 @@ wfpe	㌃
 wfqkj	𗃧
 wfqo	긎
 wfqo	늦
-wfrbu	카
 wfrbj	캁
 wfrbj	캍
 wfrbj	캝
@@ -120024,6 +120021,7 @@ wfrne	콊
 wfrne	콋
 wfrne	콌
 wfro	캬
+wfrpu	카
 wfrqo	캊
 wfrqo	캋
 wfrqo	캦
@@ -120445,7 +120443,7 @@ wi	
 wi	
 wi	
 wi	
-wjfrb	㌳
+wjfrp	㌳
 wjsa	𘣈
 wjsa	𘣉
 wka	⺨
@@ -120882,12 +120880,10 @@ wkqo	깆
 wkqo	놎
 wkqo	닞
 wkqrj	𗉰
-wkrbu	과
 wkrbj	괉
 wkrbj	괕
 wkrbj	괥
 wkrbj	괱
-wkrbu	놔
 wkrbj	놡
 wkrbj	놭
 wkrbj	놽
@@ -120972,6 +120968,8 @@ wkrne	놼
 wkrne	뇂
 wkrne	뇃
 wkrne	뇄
+wkrpu	과
+wkrpu	놔
 wkrqo	괒
 wkrqo	괓
 wkrqo	괮
@@ -121207,7 +121205,7 @@ wlffi	𗘕
 wlfi	𘢾
 wlflg	𗘉
 wlflj	𗘗
-wlfrb	㌀
+wlfrp	㌀
 wli	𘡗
 wli	𘲸
 wljbi	𘒶
@@ -121642,9 +121640,6 @@ wrbji	같
 wrbji	걑
 wrbji	낱
 wrbji	냩
-wrbu	가
-wrbu	나
-wrbu	𘲘
 wrcbj	갍
 wrcbj	걅
 wrcbj	낥
@@ -121956,6 +121951,9 @@ wrnne	냤
 wro	갸
 wro	냐
 wro	𘢺
+wrpu	가
+wrpu	나
+wrpu	𘲘
 wrqo	갖
 wrqo	걎
 wrqo	낮
@@ -122337,7 +122335,7 @@ wwfqo	끛
 wwfqo	끶
 wwfqo	끷
 wwfqo	𗉿
-wwfrb	㌲
+wwfrp	㌲
 wwftu	𗉈
 wwfti	𗉺
 wwfti	𗊈
@@ -122717,7 +122715,7 @@ wwkqo	낒
 wwkqo	낓
 wwkqi	𗟘
 wwkqo	𗾊
-wwkrb	꽈
+wwkrp	꽈
 wwkrj	𗊀
 wwkrj	𗋅
 wwkrj	𗋊
@@ -122794,7 +122792,6 @@ wwnlj	𗊜
 wwnti	𗋠
 wwqbi	𗋲
 wwqti	𗌞
-wwrbu	까
 wwrbj	깙
 wwrbj	깥
 wwrbj	깵
@@ -122931,6 +122928,7 @@ wwrne	꼣
 wwrne	꼤
 wwro	꺄
 wwro	𗊐
+wwrpu	까
 wwrqo	깢
 wwrqo	깣
 wwrqo	깾
@@ -123457,7 +123455,7 @@ xfkfq	둊
 xfkfq	둋
 xfkqo	딪
 xfkfq	딫
-xfkrb	돠
+xfkrp	돠
 xfksi	㊩
 xfkwi	독
 xfkww	돆
@@ -123494,7 +123492,6 @@ xfpe	⺛
 xfpe	㍁
 xfqmd	匿
 xfqi	枅
-xfrbu	다
 xfrcb	닱
 xfrbj	닽
 xfrkb	댍
@@ -123621,6 +123618,7 @@ xfrkn	뎺
 xfrkn	뎻
 xfrkn	뎼
 xfro	댜
+xfrpu	다
 xfrqo	닺
 xfrfq	닻
 xfrkq	댖
@@ -124145,7 +124143,7 @@ xfxfq	띚
 xfxfq	띛
 xfxkq	띶
 xfxkq	띷
-xfxrb	따
+xfxrp	따
 xfxro	땨
 xfxkr	똬
 xfxrw	딱
@@ -124265,7 +124263,7 @@ xja	㆙
 xje	⽽
 xje	𛂎
 xje	𘬡
-xjrrb	㌽
+xjrrp	㌽
 xkco	杻
 xki	𘭋
 xkti	梎
@@ -124291,7 +124289,7 @@ xnfmu	🀢
 xngkj	櫛
 xnlts	﨔
 xpgta	椔
-xprbu	㌾
+xprpu	㌾
 xptu	杓
 xqjjc	﨓
 xrje	㌿
