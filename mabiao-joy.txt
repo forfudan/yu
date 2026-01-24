@@ -92907,8 +92907,8 @@ sfjm	𥏈
 sfjm	𧝄
 sfjr	凬
 sfjr	𥅏
+sfjr	𫽑
 sfjs	𥄝
-sfjv	𫽑
 sfjw	𠙊
 sfke	𮖰
 sfkg	𱲷
@@ -104246,9 +104246,9 @@ uajf	馇
 uajl	𬘆
 uajm	𱬔
 uajo	𢋬
+uajr	練
 uajs	𱺉
 uajv	𦣹
-uajv	練
 uakf	𢌐
 uakf	𩐕
 uakk	𧇵

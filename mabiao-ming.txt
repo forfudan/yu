@@ -72913,7 +72913,7 @@ nhji	𬛄
 nhjjx	𮌢
 nhjxo	𦞜
 nhke	䶺
-nhkje	䐇
+nhkji	䐇
 nhkjx	𦜩
 nhkjx	𦝰
 nhkne	𰮱
@@ -78977,7 +78977,7 @@ qjxci	𠘵
 qjxht	𠙘
 qjxo	𠙌
 qjyfu	䢳
-qkgje	𫽑
+qkgji	𫽑
 qki	𫞕
 qklcu	𫩃
 qklo	𬆞
@@ -117473,7 +117473,7 @@ lslxo	䌴
 lsmre	紐
 lso	
 lssgk	𛀐
-lssje	練
+lssji	練
 lsskx	練
 lsskx	練
 lsso	𘮗

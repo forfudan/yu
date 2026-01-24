@@ -574,7 +574,7 @@ kcj	蟿
 kck	軤
 kcl	軲
 kql	謇
-kwd	韝
+kwd	韍
 kxd	窎
 kxm	窀
 kxs	窵
@@ -23491,7 +23491,6 @@ blhpj	䪮
 blhmj	𢥭
 blhjv	𢾚
 blhpj	𥫏
-blhje	𪞐
 blhsj	𮧻
 blhjx	𲊧
 blhpk	𥪔
@@ -23556,6 +23555,7 @@ blhps	𪅑
 blhsy	𮸲
 blhpt	䪨
 blhbt	𩐗
+blhvi	𪞐
 blhvd	𫦊
 blhnw	䪩
 blhwe	𥩛
@@ -25962,7 +25962,6 @@ chjbo	𮕁
 chjcs	𡼖
 chjcu	𳆡
 chjdn	𬸫
-chje	𨥂
 chje	𨩛
 chjfi	𠆞
 chjfe	𣦤
@@ -26076,6 +26075,7 @@ chvda	𫝐
 chvdo	𬙄
 chvdo	𳆾
 chve	𨨃
+chvi	𨥂
 chvne	𡥹
 chwfi	𬫩
 chwi	𨦂
@@ -45872,7 +45872,6 @@ hjlre	𰽻
 hjnfi	𫔑
 hjnrk	𰾺
 hjqtu	䥽
-hjrmi	𥁂
 hjsna	𪅥
 hjti	𨱂
 hjvi	𨾏
@@ -46724,7 +46723,6 @@ hrhhw	𮲗
 hrhi	㫿
 hrhfj	𣈜
 hrhjj	𭦥
-hrhje	𰕳
 hrhfj	𲤚
 hrhki	𤰶
 hrhkg	𩩪
@@ -46779,6 +46777,7 @@ hrhqt	𭨃
 hrhmt	𰖊
 hrhvi	㫗
 hrhhv	𫦡
+hrhvi	𰕳
 hrhwv	𱢟
 hrhxw	𥣷
 hrhhw	𨗏
@@ -47221,6 +47220,7 @@ hrpkc	𱢅
 hrpvd	㷖
 hrpkd	𣂨
 hrpnd	𣂰
+hrpkd	𭨝
 hrpkd	𲕂
 hrpnf	䫘
 hrpff	𣉖
@@ -49116,6 +49116,7 @@ hvrks	𬦚
 hvrli	𧺯
 hvrla	𧼛
 hvrlx	𬦊
+hvrmi	𥁂
 hvrgm	𧾧
 hvrma	𲃉
 hvrmf	𳃃
@@ -49439,7 +49440,6 @@ hyfrk	𰽴
 hyfu	𫓧
 hyfyd	𬭟
 hyhri	𮸔
-hypkd	𭨝
 hyssu	𲈌
 hywhe	𮸙
 hywo	𫟼
@@ -56711,8 +56711,8 @@ ktfvu	𫠼
 ktfye	𩒂
 ktgge	㝗
 kthlv	䶶
+kthri	𫽑
 kthxu	𡩕
-kthye	𫽑
 ktjvi	𢼊
 ktka	𢓑
 ktkcu	𬠽
@@ -60800,7 +60800,7 @@ lpjpo	𦣁
 lpjya	𡯲
 lpkgt	㸋
 lpkgu	𡰊
-lpkhy	䐇
+lpkhr	䐇
 lpki	𫤮
 lpkja	𦛴
 lpkla	𡯫
@@ -75319,7 +75319,7 @@ qble	䒿
 qble	𮏒
 qble	𰱇
 qblfj	𮗛
-qblhj	𦰊
+qblhv	𦰊
 qbllg	𦯼
 qblrm	𲽨
 qblsk	𦲋
@@ -92514,7 +92514,7 @@ vpka	𰄡
 vpkdo	𭰞
 vpkdm	𭱓
 vpkgt	𣹒
-vpkhy	㳷
+vpkhr	㳷
 vpkli	𭰛
 vpkle	𭰴
 vpkrc	𤅁
@@ -94478,7 +94478,6 @@ whhwh	𩡐
 whhxh	𲋰
 whhfj	䅞
 whhjj	䭯
-whhje	𥝔
 whhje	𥠀
 whhfj	𩡘
 whhqj	𩡙
@@ -94560,6 +94559,7 @@ whhft	𩡋
 whhbt	𫘃
 whhu	𥝱
 whhvd	𠝲
+whhvi	𥝔
 whhqv	𩡉
 whhrv	𩡟
 whhnv	𳋿
@@ -99106,7 +99106,7 @@ xpjpo	𣠙
 xpjtu	𣐠
 xpka	𲥱
 xpke	𬂟
-xpkhy	𣓗
+xpkhr	𣓗
 xpkja	𣖣
 xpkkc	𣡴
 xpkmx	𪲨
@@ -101362,7 +101362,6 @@ yhhri	𬗡
 yhhri	𭹕
 yhja	𰡻
 yhjcu	𬗔
-yhje	𥾌
 yhjhi	𤫚
 yhjhi	𮉞
 yhjmx	𭺓
@@ -101429,6 +101428,7 @@ yhu	𤤂
 yhvda	𦀑
 yhvdo	𰫳
 yhvi	㺭
+yhvi	𥾌
 yhvi	𰫙
 yhvo	𮴙
 yhwa	𦀫
@@ -124411,7 +124411,7 @@ yti	𘬭
 ytu	⽟
 ywa	⽡
 ywwi	𥾆
-yxhye	練
+yxhri	練
 yxli	理
 yxli	𛃵
 yxnca	練

@@ -22858,11 +22858,11 @@ efjg	𠙊
 efji	𠍶
 efjq	𧍻
 efjr	凬
+efjr	𫽑
 efjs	便
 efjs	便
 efjt	𫢽
 efjt	𬿒
-efjy	𫽑
 efka	俹
 efka	𩗠
 efka	𩗽
@@ -80010,11 +80010,11 @@ oajg	𦆪
 oaji	𦂠
 oajm	緗
 oajr	𡘐
+oajr	練
 oajt	𦂊
 oajv	𱺉
 oajw	𰖫
 oajx	𣣩
-oajy	練
 oak	铰
 oakc	𦀹
 oakd	奉
