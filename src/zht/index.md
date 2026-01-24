@@ -79,13 +79,12 @@ import UnifiedSchemeInterface from '@/unified/UnifiedSchemeInterface.vue'
 - [C42@譚淞宸](https://github.com/tansongchen/c42)〔[漢字自動拆分系統](https://chaifen.app/)〕
 - [092](https://092wb.github.io/)
 - [三碼鄭碼@史岳](http://zzzm.ysepan.com/?xzpd=1)
-- [小鶴音形@何海峰](https://flypy.com/)
+- [小鶴音形@何海峰](https://flypy.cc/)
 - 藍寶石@秋風
 - [虎碼@PeaceB](https://www.tiger-code.com/)〔[虎碼測評網](http://assess.tiger-code.com/)〕
 - [逸碼@小泥巴](https://yb6b.github.io/yima/graceful-code/)
 - [易碼@小泥巴](https://yb6b.github.io/yima/)〔[測評工具](https://yb6b.github.io/#/)〕
-- [吉蛋餅](https://lost-melody.github.io/wafel/)〔[倉輸入法工具
-](https://lost-melody.github.io/hamster-tools/)〕
+- [吉蛋餅](https://lost-melody.github.io/wafel/)〔[倉輸入法工具](https://lost-melody.github.io/hamster-tools/)〕
 [雲碼@爲雲](https://github.com/orbitoo/kumo)
 [天碼@宋天](http://soongsky.com/sky/)
 [聲筆系列@戴石麟](https://sbxlm.github.io/)

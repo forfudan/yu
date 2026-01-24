@@ -80,6 +80,8 @@ paths_of_docs = [
     "/ime/ling.md",
     "/ime/ling5.md",
     "/ime/ming.md",
+    # DIY
+    "/diy/index.md",
     # 天碼
     "/docs/sky.md",
     "/practice/root_sky.md",
