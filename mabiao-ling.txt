@@ -716,7 +716,7 @@ syg	鰺
 syh	堾
 syk	鰉
 sym	䲁
-syn	鱠
+syn	鰮
 syp	鮈
 syr	鮎
 sys	鱻
@@ -1992,7 +1992,9 @@ cddq	钁
 cddr	鍔
 cddx	缲
 cddx	鐰
+cdfi	亜
 cdfl	鋲
+cdfm	悪
 cdfy	鋘
 cdga	绳
 cdgt	鐳
@@ -3508,6 +3510,7 @@ dcbp	嚪
 dccf	嘤
 dccf	咝
 dccl	噀
+dcdf	唖
 dcdp	哾
 dcfs	嘊
 dcga	嗃
@@ -3619,7 +3622,6 @@ dfdk	嗝
 dfdm	嘎
 dffm	噁
 dffo	啞
-dffo	唖
 dfha	咳
 dfhb	哽
 dfhf	咺
@@ -4907,10 +4909,8 @@ fflg	姧
 ffml	娬
 ffmu	姆
 ffmx	惡
-ffmx	悪
 ffnw	妧
 ffo	亞
-ffo	亜
 ffpa	厉
 ffpg	娙
 ffpk	励
@@ -16142,6 +16142,7 @@ sbbq	埐
 sbbv	埽
 sbbw	埩
 sbda	墇
+sbdf	壷
 sbdo	培
 sbdt	堍
 sbfc	壹
@@ -16151,7 +16152,6 @@ sbfd	皼
 sbff	壼
 sbfm	懿
 sbfo	壺
-sbfo	壷
 sbfr	壸
 sbfr	壗
 sbfs	塜
@@ -25498,7 +25498,9 @@ cddy	𨭰
 cdfc	𫓐
 cdfg	𨨎
 cdfi	𫒒
+cdfm	𣱌
 cdfr	𨬆
+cdfs	𡏍
 cdgt	𱺭
 cdhi	𨯟
 cdhk	𬬏
@@ -30112,6 +30114,7 @@ dccg	𡀢
 dccj	𫩯
 dccy	𫖲
 dcdj	𡆑
+dcdm	𫫖
 dcdn	𫛫
 dcdo	𠼋
 dcdy	𰉋
@@ -30598,7 +30601,6 @@ dffb	𭌮
 dffj	𠯞
 dffj	𠾇
 dffm	𫪰
-dffm	𫫖
 dfgg	𫑣
 dfgj	𠵾
 dfgj	𭋝
@@ -35949,6 +35951,7 @@ fccf	𱙔
 fccj	𫝧
 fccl	𡢀
 fcct	𭒭
+fcdf	𫰫
 fcdj	𡣟
 fcdj	𣂕
 fcdk	𫱧
@@ -36395,7 +36398,6 @@ fffj	𪥦
 fffk	𡢹
 fffl	𭒋
 fffm	𡢇
-fffo	𫰫
 ffft	𣣾
 fffx	𬪿
 fffy	𡟗
@@ -36417,7 +36419,6 @@ ffi	𱙁
 ffja	𩑋
 ffjg	𤲾
 ffjh	𱙭
-ffjm	𢨖
 ffjm	𰁚
 ffjo	㚥
 ffkm	𬻪
@@ -36445,7 +36446,6 @@ ffo	𣦶
 ffpg	𫟫
 ffpo	𤊗
 ffpr	𲁔
-ffps	𡏍
 ffpv	𫥵
 ffqf	𬻜
 ffqh	𠩨
@@ -36479,7 +36479,6 @@ ffvt	㛏
 ffvu	𧾸
 ffwj	𡣜
 ffwl	𡤌
-ffwm	𣱌
 ffwo	䢝
 ffwt	𠨮
 ffxl	𲛝
@@ -46366,6 +46365,7 @@ hrcc	𲤶
 hrcd	䦅
 hrcd	𫞃
 hrce	𫓵
+hrcf	𪰥
 hrcf	𪱒
 hrcf	𰖈
 hrcg	㬑
@@ -46509,7 +46509,6 @@ hrff	𧡨
 hrff	𧡰
 hrff	𩑰
 hrff	𩔰
-hrff	𪰥
 hrff	𫖥
 hrff	𭨎
 hrff	𰖐
@@ -62403,6 +62402,7 @@ mccx	𰺒
 mcdd	𢣻
 mcdf	𫏐
 mcdf	𰌆
+mcdf	𰤐
 mcdk	𬆦
 mcdl	𬆂
 mcdl	𮝶
@@ -62727,7 +62727,6 @@ mffj	𭞭
 mffl	𣄂
 mffm	𭞪
 mffo	𢛟
-mffo	𰤐
 mfgb	𭤽
 mfgc	𰕧
 mfgg	𣄏
@@ -71854,6 +71853,7 @@ pccs	𭗼
 pcda	𰏄
 pcdc	𪖵
 pcdd	𡿷
+pcdf	𤉁
 pcdf	𩔪
 pcdj	𠣸
 pcdj	𡬲
@@ -72201,7 +72201,6 @@ pfdk	𱆎
 pfdo	𲫚
 pffj	𪸒
 pffm	𪹪
-pffo	𤉁
 pffp	𤇃
 pffv	𨆜
 pffy	𩕈
@@ -75642,6 +75641,7 @@ qdfj	𦰲
 qdfk	𦷇
 qdfk	𮐌
 qdfl	𮏊
+qdfm	𢨖
 qdfr	𦲰
 qdfw	𫇯
 qdfw	𮎳
@@ -89426,6 +89426,7 @@ tsbs	𰔑
 tsbt	𱟴
 tsbx	𢷌
 tscc	𱠔
+tscf	𢳩
 tscg	𢲤
 tscg	𭠲
 tscj	𢲳
@@ -89459,7 +89460,6 @@ tsdv	𢬚
 tsdv	𭠻
 tsdy	𭿊
 tsfc	𰎬
-tsff	𢳩
 tsfh	𭡍
 tsfj	𭠺
 tsfk	𫹊
@@ -97196,6 +97196,7 @@ xccl	𣗕
 xcct	𭬸
 xccw	𣟙
 xccy	𲧊
+xcdf	𬂲
 xcdo	𣙎
 xcdo	𫞉
 xcfl	𭪤
@@ -97573,7 +97574,6 @@ xffj	𭅕
 xffm	𬄚
 xffn	㔷
 xffo	𣒘
-xffo	𬂲
 xfft	𣐛
 xfft	𫧌
 xffy	𩒅
@@ -98463,6 +98463,7 @@ xlbm	𭟛
 xlbn	𨤧
 xlby	㮦
 xlci	𰘌
+xlcm	𬅂
 xlcy	㮳
 xldf	𣝄
 xldf	𰘧
@@ -98485,7 +98486,6 @@ xlfe	𣖍
 xlfi	𣑭
 xlfj	𧠵
 xlfl	𰙻
-xlfm	𬅂
 xlgb	𧌻
 xlgc	𮪺
 xlgc	𳆂
@@ -107202,6 +107202,7 @@ dkff	욬
 dkff	욮
 dkfi	묘
 dkfi	요
+dkfi	
 dkfj	몹
 dkfj	묣
 dkfj	묩
@@ -109752,7 +109753,6 @@ fo	𘯝
 fo	
 fo	
 fo	
-fo	
 fo	
 fo	
 fo	

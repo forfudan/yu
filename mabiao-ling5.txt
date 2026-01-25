@@ -716,7 +716,7 @@ syg	鰺
 syh	堾
 syk	鰉
 sym	䲁
-syn	鱠
+syn	鰮
 syp	鮈
 syr	鮎
 sys	鱻
@@ -1992,7 +1992,9 @@ cddqo	钁
 cddrk	鍔
 cddxu	缲
 cddxu	鐰
+cdfi	亜
 cdfla	鋲
+cdfmx	悪
 cdfyd	鋘
 cdga	绳
 cdgta	鐳
@@ -3508,6 +3510,7 @@ dcbpu	嚪
 dccfu	嘤
 dccfi	咝
 dccla	噀
+dcdfi	唖
 dcdpe	哾
 dcfsu	嘊
 dcga	嗃
@@ -3619,7 +3622,6 @@ dfdki	嗝
 dfdmg	嘎
 dffmx	噁
 dffo	啞
-dffo	唖
 dfha	咳
 dfhbi	哽
 dfhfi	咺
@@ -4907,10 +4909,8 @@ fflga	姧
 ffmlv	娬
 ffmu	姆
 ffmxi	惡
-ffmxi	悪
 ffnwu	妧
 ffo	亞
-ffo	亜
 ffpa	厉
 ffpgo	娙
 ffpkl	励
@@ -16142,6 +16142,7 @@ sbbqo	埐
 sbbvj	埽
 sbbwi	埩
 sbda	墇
+sbdfi	壷
 sbdo	培
 sbdtu	堍
 sbfca	壹
@@ -16151,7 +16152,6 @@ sbfdp	皼
 sbffo	壼
 sbfmx	懿
 sbfo	壺
-sbfo	壷
 sbfry	壸
 sbfrm	壗
 sbfss	塜
@@ -25498,7 +25498,9 @@ cddya	𨭰
 cdfca	𫓐
 cdfgu	𨨎
 cdfi	𫒒
+cdfmi	𣱌
 cdfrk	𨬆
+cdfsu	𡏍
 cdgta	𱺭
 cdhi	𨯟
 cdhka	𬬏
@@ -30112,6 +30114,7 @@ dccga	𡀢
 dccji	𫩯
 dccye	𫖲
 dcdjv	𡆑
+dcdmx	𫫖
 dcdna	𫛫
 dcdo	𠼋
 dcdyd	𰉋
@@ -30598,7 +30601,6 @@ dffbi	𭌮
 dffji	𠯞
 dffjc	𠾇
 dffmu	𫪰
-dffmx	𫫖
 dfggu	𫑣
 dfgja	𠵾
 dfgjv	𭋝
@@ -35949,6 +35951,7 @@ fccfa	𱙔
 fccji	𫝧
 fccla	𡢀
 fccti	𭒭
+fcdfi	𫰫
 fcdje	𡣟
 fcdji	𣂕
 fcdke	𫱧
@@ -36395,7 +36398,6 @@ fffji	𪥦
 fffkl	𡢹
 ffflg	𭒋
 fffmx	𡢇
-fffo	𫰫
 ffftk	𣣾
 fffxl	𬪿
 fffyd	𡟗
@@ -36417,7 +36419,6 @@ ffi	𱙁
 ffja	𩑋
 ffjgt	𤲾
 ffjhi	𱙭
-ffjmg	𢨖
 ffjmg	𰁚
 ffjo	㚥
 ffkmg	𬻪
@@ -36445,7 +36446,6 @@ ffo	𣦶
 ffpgu	𫟫
 ffpo	𤊗
 ffprj	𲁔
-ffpsu	𡏍
 ffpvd	𫥵
 ffqfi	𬻜
 ffqhv	𠩨
@@ -36479,7 +36479,6 @@ ffvtu	㛏
 ffvu	𧾸
 ffwjv	𡣜
 ffwlv	𡤌
-ffwmi	𣱌
 ffwo	䢝
 ffwtu	𠨮
 ffxli	𲛝
@@ -46366,6 +46365,7 @@ hrclc	𲤶
 hrcdo	䦅
 hrcdo	𫞃
 hrce	𫓵
+hrcdf	𪰥
 hrcqf	𪱒
 hrccf	𰖈
 hrchg	㬑
@@ -46509,7 +46509,6 @@ hrflf	𧡨
 hrffj	𧡰
 hrffy	𩑰
 hrfrf	𩔰
-hrffo	𪰥
 hrfdf	𫖥
 hrfxf	𭨎
 hrffo	𰖐
@@ -58510,7 +58509,7 @@ ldbdo	𣗞
 ldbfo	𠁕
 ldbfo	𧚐
 ldbfo	𧞢
-ldbfo	𬻫
+ldbfi	𬻫
 ldbfo	𲁃
 ldbdg	䰗
 ldbhg	𩰘
@@ -62403,6 +62402,7 @@ mccxj	𰺒
 mcddo	𢣻
 mcdfv	𫏐
 mcdfu	𰌆
+mcdfi	𰤐
 mcdku	𬆦
 mcdlv	𬆂
 mcdfl	𮝶
@@ -62727,7 +62727,6 @@ mffjc	𭞭
 mffbl	𣄂
 mffmx	𭞪
 mffo	𢛟
-mffo	𰤐
 mfgbo	𭤽
 mfgco	𰕧
 mfgyg	𣄏
@@ -71854,6 +71853,7 @@ pccsa	𭗼
 pcda	𰏄
 pcdpc	𪖵
 pcddo	𡿷
+pcdfi	𤉁
 pcdpf	𩔪
 pcdjv	𠣸
 pcdjc	𡬲
@@ -72201,7 +72201,6 @@ pfdki	𱆎
 pfdo	𲫚
 pffji	𪸒
 pffmx	𪹪
-pffo	𤉁
 pffpa	𤇃
 pffvu	𨆜
 pffye	𩕈
@@ -73787,7 +73786,7 @@ psbnf	𥗽
 psbwf	䃤
 psbxf	𥗒
 psbfu	𮀨
-psbfo	𱴕
+psbdf	𱴕
 psbsf	𱴵
 psbfo	𲳜
 psbnf	𲴘
@@ -75642,6 +75641,7 @@ qdfjo	𦰲
 qdfka	𦷇
 qdfkw	𮐌
 qdfla	𮏊
+qdfmg	𢨖
 qdfrk	𦲰
 qdfwi	𫇯
 qdfwi	𮎳
@@ -89426,6 +89426,7 @@ tsbss	𰔑
 tsbst	𱟴
 tsbxu	𢷌
 tscyc	𱠔
+tscfi	𢳩
 tscga	𢲤
 tscgo	𭠲
 tscjv	𢲳
@@ -89459,7 +89460,6 @@ tsdvj	𢬚
 tsdkv	𭠻
 tsdty	𭿊
 tsfgc	𰎬
-tsffo	𢳩
 tsfgh	𭡍
 tsfja	𭠺
 tsfgk	𫹊
@@ -97196,6 +97196,7 @@ xcclr	𣗕
 xcctk	𭬸
 xccwo	𣟙
 xccyd	𲧊
+xcdfi	𬂲
 xcdo	𣙎
 xcdo	𫞉
 xcflg	𭪤
@@ -97573,7 +97574,6 @@ xffjo	𭅕
 xffmx	𬄚
 xffln	㔷
 xffo	𣒘
-xffo	𬂲
 xfftu	𣐛
 xffwt	𫧌
 xffye	𩒅
@@ -97898,7 +97898,7 @@ xfyly	𱑆
 xgbdo	㯁
 xgcbe	𱣚
 xgccb	𬃮
-xgcfo	𣙶
+xgcfi	𣙶
 xgcnb	𣙿
 xgcnv	𱤛
 xgcss	𪳹
@@ -98463,6 +98463,7 @@ xlbhm	𭟛
 xlbnx	𨤧
 xlbyi	㮦
 xlci	𰘌
+xlcmx	𬅂
 xlcyd	㮳
 xldfo	𣝄
 xldfo	𰘧
@@ -98485,7 +98486,6 @@ xlfe	𣖍
 xlfi	𣑭
 xlfja	𧠵
 xlfxl	𰙻
-xlfmx	𬅂
 xlgbo	𧌻
 xlgcg	𮪺
 xlgci	𳆂
@@ -102572,7 +102572,7 @@ yryfo	𤫛
 yryga	𤪄
 yryhi	㼈
 yryro	𦆎
-ysbfo	𤩖
+ysbfi	𤩖
 ysbi	𥿔
 ysbyi	𦄨
 yscla	𦀗
@@ -107202,6 +107202,7 @@ dkffi	욬
 dkffi	욮
 dkfi	묘
 dkfi	요
+dkfi	
 dkfja	몹
 dkfja	묣
 dkfja	묩
@@ -109752,7 +109753,6 @@ fo	𘯝
 fo	
 fo	
 fo	
-fo	
 fo	
 fo	
 fo	
