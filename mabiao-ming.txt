@@ -6444,6 +6444,7 @@ dkfdl	嗝
 dkfdx	哣
 dkffj	噁
 dkffo	啞
+dkffo	唖
 dkfgj	噆
 dkfgk	哦
 dkfgm	諡
@@ -6843,7 +6844,6 @@ dkqsm	哚
 dkqwc	雖
 dkrbd	嚸
 dkrcn	唼
-dkrdf	唖
 dkrdw	囄
 dkrfk	喭
 dkrho	嘿
@@ -7591,6 +7591,7 @@ ffjqx	鹥
 ffjqy	醫
 ffjvi	鲠
 ffjxo	惡
+ffjxo	悪
 ffki	亏
 fflfo	匪
 fflqj	匟
@@ -7608,6 +7609,7 @@ ffmwk	匶
 ffnmc	匥
 ffo	亞
 ffo	鲕
+ffo	亜
 ffpdd	匲
 ffpww	匧
 ffqho	蝁
@@ -16776,8 +16778,6 @@ rjba	鿱
 rjbka	斎
 rjci	対
 rjcke	瑆
-rjdfi	亜
-rjdfj	悪
 rjdke	玿
 rjdvi	瑙
 rje	卩
@@ -20926,7 +20926,6 @@ vklxl	嵭
 vklxt	崹
 vklym	崺
 vkmci	诫
-vkmdf	壷
 vkmdg	嶑
 vkmdn	巉
 vkmdw	巏
@@ -20937,6 +20936,7 @@ vkmfi	岯
 vkmfj	懿
 vkmfl	峣
 vkmfo	壺
+vkmfo	壷
 vkmfr	鷧
 vkmft	嵽
 vkmfv	壸
@@ -32001,6 +32001,7 @@ cnffj	𫱋
 cnffj	𭑻
 cnffk	𡚯
 cnffo	𡢉
+cnffo	𫰫
 cnffp	𡜄
 cnfgg	𰌊
 cnfgj	𡡖
@@ -32655,7 +32656,6 @@ cnqvi	㚯
 cnrcn	𡞘
 cnrcn	𫱠
 cnrdd	𪦰
-cnrdf	𫰫
 cnrdg	㜔
 cnrdk	𲛬
 cnrdn	𮱓
@@ -35772,6 +35772,7 @@ dkfdx	𡁑
 dkffi	𠳍
 dkffj	㗑
 dkffj	𪡄
+dkffj	𫫖
 dkffk	𠮱
 dkffk	𠮲
 dkffl	𮞐
@@ -37317,7 +37318,6 @@ dkrdf	𭣈
 dkrdg	𭌨
 dkrdg	𱕳
 dkrdj	𠼿
-dkrdj	𫫖
 dkrdj	𬫈
 dkrdk	㖣
 dkrdk	𠳺
@@ -40370,6 +40370,7 @@ ffhqi	𠥩
 ffhsi	𫧎
 ffhti	𤲢
 ffhti	𭅗
+ffhvd	𡏍
 ffhwo	𠥮
 ffhwo	𫚎
 ffja	𱇟
@@ -40520,6 +40521,7 @@ ffqdk	㔯
 ffqho	𧈟
 ffqmi	𠥰
 ffqmq	𠥯
+ffqmq	𣱌
 ffqqq	𠥨
 ffqqq	𧓨
 ffrfj	𫧙
@@ -40579,6 +40581,7 @@ ffwco	𩁃
 ffwdd	𫧗
 ffwge	𩕿
 ffwgj	㔲
+ffwkg	𢨖
 ffwkg	𰁚
 ffwlc	𫨼
 ffwls	𠥑
@@ -46548,6 +46551,7 @@ gkvdw	𢮌
 gkve	𭠙
 gkvfd	㧨
 gkvfd	𲣓
+gkvff	𢳩
 gkvfi	𦋶
 gkvfj	𢬯
 gkvfj	𧱒
@@ -46648,7 +46652,6 @@ gkvqh	𢳰
 gkvqk	𢯸
 gkvqm	𪭭
 gkvrd	𱠩
-gkvrf	𢳩
 gkvri	𢭷
 gkvrn	𢸐
 gkvrn	𪁊
@@ -53391,6 +53394,7 @@ jffmo	𠂼
 jffo	𠂦
 jffo	𣇅
 jffo	𣊵
+jffo	𪰥
 jffo	𰖐
 jfftj	𢄾
 jfftl	𮞱
@@ -53419,8 +53423,8 @@ jfhdk	𮧏
 jfhdo	𣆴
 jfhdo	𭦋
 jfhfi	𣇥
-jfhfi	𣊰
 jfhfi	𱢡
+jfhfo	𣊰
 jfhgb	𧸯
 jfhgg	𳊢
 jfhgj	𧡨
@@ -55600,7 +55604,6 @@ jrddo	𡿹
 jrddv	𠽺
 jrde	䛗
 jrde	𧥥
-jrdfi	𪰥
 jrdjc	𨝖
 jrdjf	𢹭
 jrdjg	𩔪
@@ -67570,7 +67573,6 @@ mcdfh	𧀯
 mcdfj	𦮣
 mcdfj	𦱗
 mcdfj	𦵤
-mcdfk	𢨖
 mcdfm	𬜭
 mcdfx	𦷳
 mcdgj	𦶴
@@ -79789,8 +79791,6 @@ rjcrc	𰆼
 rjcu	𠬝
 rjcvd	𪼑
 rjddd	𡂦
-rjdfm	𣱌
-rjdfv	𡏍
 rjdi	𭸵
 rjdi	𰄢
 rjdke	𤥁
@@ -80671,7 +80671,6 @@ rkmcs	𥖢
 rkmcs	𪿼
 rkmdd	𱴦
 rkmdf	𥔬
-rkmdf	𱴕
 rkmdg	𨉏
 rkmdg	𱴻
 rkmdg	𲴍
@@ -80692,6 +80691,7 @@ rkmfi	㻔
 rkmfi	𥑜
 rkmfj	𥔒
 rkmfl	𮁆
+rkmfo	𱴕
 rkmfp	𥓹
 rkmft	𥕧
 rkmfw	𮁙
@@ -83925,7 +83925,7 @@ rvktp	𤦫
 rvlsi	𤨄
 rvltp	𤨉
 rvlzi	𤥝
-rvmfi	𤩖
+rvmfo	𤩖
 rvmi	㪰
 rvmi	𤥄
 rvmne	𲯢
@@ -86066,6 +86066,7 @@ smffj	𬄚
 smffj	𲦮
 smffo	𣒘
 smffo	𣚊
+smffo	𬂲
 smffs	𭫗
 smfft	𣑙
 smfge	𩒅
@@ -86590,6 +86591,7 @@ smkff	𭬰
 smkfg	𣕆
 smkfj	𣛴
 smkfj	𣟱
+smkfj	𬅂
 smkfk	𣖥
 smkfu	㭪
 smkfv	𲧡
@@ -86671,7 +86673,6 @@ smknx	𬸔
 smkpj	𬃼
 smkqg	𣘛
 smkqk	𣒃
-smkrj	𬅂
 smkrw	𪴚
 smksa	㭅
 smksd	𬅀
@@ -87224,7 +87225,6 @@ smqyf	𬂪
 smrcc	𲦐
 smrdc	𬃪
 smrdd	𣚍
-smrdf	𬂲
 smrdj	𣟥
 smrdk	𣙎
 smrdk	𫞉
@@ -89009,6 +89009,7 @@ thfdx	𭴧
 thfe	𰞳
 thffj	𪹪
 thffk	𤆏
+thffo	𤉁
 thffo	𤏙
 thffp	𲫗
 thfgm	𱫨
@@ -89689,7 +89690,6 @@ thqnd	𤆘
 thqnd	𭴄
 thqvi	𮳠
 thrbk	𤓁
-thrdf	𤉁
 thrdg	𭶘
 thrdj	𲬱
 thrdk	𱬅
@@ -93357,6 +93357,7 @@ vfdxc	𰵫
 vfdxn	𳐕
 vfdyd	㔁
 vffke	𰔕
+vffo	𰤐
 vfgge	𩌊
 vfgge	𩌥
 vfgkg	𰵮
@@ -96548,7 +96549,6 @@ vrchn	𬨏
 vrci	𰹯
 vrcjc	𰺃
 vrcne	𫍭
-vrdfi	𰤐
 vrdfl	𰺇
 vrdjj	𨐊
 vrdjr	𰺑
@@ -110093,7 +110093,6 @@ dklff	묰
 dklff	묲
 dklff	믿
 dklfi	묘
-dklfi	
 dklfs	묥
 dklfs	묱
 dklfv	묮
@@ -114116,6 +114115,7 @@ fo	
 fo	
 fo	
 fo	
+fo	
 fpbci	𘡸
 fpbcl	𗢂
 fpbcn	𗢁
