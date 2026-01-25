@@ -22181,12 +22181,12 @@ kwuc	螝
 kwwo	蜪
 kytw	蠏
 kywc	螐
+lalf	唖
 lcql	噊
 ldjv	唭
 ldlr	鷜
 levg	嗘
 lewo	嗂
-lfja	唖
 lflu	哣
 lgiv	喕
 lhhm	啩
@@ -22673,6 +22673,8 @@ ajgf	揋
 ajwt	掦
 akwy	撊
 alag	擑
+alfi	亜
+alfy	悪
 ammb	揁
 aoan	揨
 aofh	捖
@@ -22985,13 +22987,11 @@ fhov	枺
 fhto	槸
 filc	槴
 fiqt	楌
-fjai	亜
 fjbs	樏
 fjfi	柦
 fjjj	櫑
 fjjr	椙
 fjwi	槯
-fjyi	悪
 fkac	専
 fkjr	曺
 fkkt	彨
@@ -25851,9 +25851,9 @@ hyet	垥
 hyfx	亄
 hygc	堚
 hygc	禈
-hyja	壷
 hyjt	塓
 hyjt	墖
+hylf	壷
 hyod	镹
 hypd	塠
 hyqj	坈
@@ -36128,12 +36128,12 @@ agxk	𢳝
 agyi	𢴥
 agyo	𢩮
 ahac	𢰙
+ahaf	𢳩
 ahaw	𤭖
 ahbm	𢮇
 ahbo	𢬌
 ahcj	𢰗
 aher	𦕜
-ahfj	𢳩
 ahfo	𢩿
 ahfu	𢵊
 ahgr	𢸩
@@ -36327,7 +36327,9 @@ aleh	𢼔
 alei	𠀿
 alei	𢭻
 alel	𠶱
+alfa	𣱌
 alfg	𢫸
+alfh	𡏍
 alfm	𠶘
 algd	𡘀
 algg	𢦪
@@ -44037,7 +44039,6 @@ fjcn	𡛎
 fjde	𩓩
 fjdv	𣑬
 fjed	𣗏
-fjeg	𢨖
 fjeh	𢽬
 fjej	𣂪
 fjfd	𣠢
@@ -44098,7 +44099,6 @@ fjsq	𣔑
 fjst	𣚣
 fjsu	𣕴
 fjsv	𠄃
-fjta	𣱌
 fjti	𤰓
 fjtj	𣉩
 fjtv	𣐬
@@ -44113,7 +44113,6 @@ fjvv	𣠭
 fjwb	𣍇
 fjwf	𣍏
 fjwg	𣍛
-fjwh	𡏍
 fjwi	𨿢
 fjwj	𣙌
 fjwn	𣠍
@@ -45317,7 +45316,7 @@ fvrm	𣔜
 fvro	𩿒
 fvsd	𧰳
 fvsf	𣒝
-fvtj	𣙶
+fvtf	𣙶
 fvtm	𣙿
 fvva	𣕀
 fvvb	𣚎
@@ -46112,9 +46111,9 @@ ghwc	𠣼
 ghwe	𨎞
 ghwy	𤦭
 ghxh	𩊲
+ghyf	𤩖
 ghyi	𤥴
 ghyi	𩊴
-ghyj	𤩖
 giah	𤤾
 gibf	𨎛
 gidc	𨋢
@@ -51723,9 +51722,9 @@ jfna	𣊒
 jfnb	𢻖
 jfnc	𢁈
 jfne	𪑛
+jfnf	𣊰
 jfnh	𢆝
 jfnj	𡺔
-jfnj	𣊰
 jfnk	𨤱
 jfnl	𠸭
 jfnm	𢅨
@@ -60213,7 +60212,6 @@ ouqr	𡧽
 ourk	𡨝
 ourk	𧋲
 oury	𤇯
-ousc	𡣹
 ousj	𩫑
 ouub	𢻟
 ouuo	𡨼
@@ -67754,6 +67752,7 @@ slcj	𨚞
 slde	𩑲
 sldq	𧁾
 slfa	𦮣
+slfg	𢨖
 slfy	𤲽
 slgd	𦮥
 slgn	𠩥
@@ -70626,6 +70625,7 @@ uakc	𧏛
 uakj	𢈤
 uaku	𢇗
 ualc	𨚚
+ualf	𤉁
 ualg	𧬼
 uall	𦏤
 ualv	𠲑
@@ -70964,7 +70964,6 @@ ufgo	𧨩
 ufgo	𨢚
 ufhw	𦍘
 ufio	𤆂
-ufja	𤉁
 ufjf	𤌓
 ufjf	𤐀
 ufjf	𦍼
@@ -72307,6 +72306,7 @@ uuua	𤮶
 uuua	𧩵
 uuua	𧭛
 uuub	𤍛
+uuuc	𡣹
 uuuc	𨞇
 uuue	𣀢
 uuuf	𤒇
@@ -80001,6 +80001,7 @@ iyox	𪟛
 iytn	𫁣
 jabn	𪱕
 jaks	𪨢
+jalf	𪰥
 jalv	𪰏
 jalv	𪽍
 jalv	𪽎
@@ -80031,7 +80032,6 @@ jfeh	𪰱
 jffi	𪰐
 jfhw	𪰈
 jfhw	𪽊
-jfja	𪰥
 jfki	𪩠
 jfld	𫖥
 jfna	𪧺
@@ -83049,6 +83049,7 @@ byjf	𬗥
 bynq	𬘇
 byqp	𫵘
 cakn	𫰈
+calf	𫰫
 calh	𫮄
 calj	𬯣
 calm	𬯩
@@ -83094,7 +83095,6 @@ cewk	𫰙
 cfbf	𫰟
 cfci	𫰌
 cffo	𫰬
-cfja	𫰫
 cfjh	𬯔
 cfkh	𫰝
 cfkr	𫱹
@@ -83721,6 +83721,7 @@ facv	𬂝
 fade	𬱀
 faei	𬅞
 fagg	𫼁
+falf	𬂲
 famv	𬐟
 fauo	𬉶
 fawo	𬎥
@@ -83738,8 +83739,8 @@ fcll	𬰜
 fclq	𫪸
 fcsf	𬄪
 fcwy	𬁶
+fday	𬅂
 fddh	𬄯
-fdfy	𬅂
 fdjf	𬃱
 fdjr	𬄛
 fdks	𬄬
@@ -83766,7 +83767,6 @@ ffgt	𫽷
 ffhh	𬄷
 ffhv	𬃚
 ffiv	𬂜
-ffja	𬂲
 ffjy	𬄚
 ffki	𬃛
 ffki	𬃲
@@ -85079,6 +85079,7 @@ laeb	𫩾
 lagt	𫫄
 lahm	𫫔
 laks	𫫺
+laly	𫫖
 laoq	𫩽
 laos	𫬬
 lapd	𫪀
@@ -85131,7 +85132,6 @@ lfeb	𫪒
 lfft	𫪲
 lfgn	𫪗
 lfiv	𬺣
-lfjy	𫫖
 lfkk	𫪃
 lfpm	𫪁
 lfrj	𫬕
@@ -89180,8 +89180,8 @@ dlod	𬺿
 dlri	𭊢
 dltg	𭈬
 dlwy	𮦑
+dlyf	𬻫
 dlyh	𮁸
-dlyj	𬻫
 dlyk	𮕛
 dlym	𬻧
 dlyn	𭧢
@@ -95978,6 +95978,7 @@ ayoy	𰑔
 ayyo	𰔚
 badb	𰍸
 baft	𰍽
+balf	𰤐
 bare	𰄷
 baty	𱆫
 baya	𱉟
@@ -96003,7 +96004,6 @@ beua	𰴸
 beyf	𰫜
 bfff	𰅀
 bfih	𰍰
-bfja	𰤐
 bfko	𰄮
 bfmv	𰫚
 bfrm	𰄧
@@ -101305,7 +101305,7 @@ dxtd	𱳸
 dxxi	𱻛
 dyeu	𱍛
 dyfv	𱳼
-dyja	𱴕
+dylf	𱴕
 dylo	𱴒
 dylq	𱴻
 dyqp	𲉴
@@ -133999,6 +133999,7 @@ wtlq	𨉋
 wlen	𨉑
 whqe	𨉞
 wwss	𨉡
+waly	𨉼
 wsjt	𨊇
 gqvb	𨋃
 gdxk	𨋛
@@ -138974,7 +138975,7 @@ kvif	
 ktif	
 wyyy	
 jrrr	
-jaaa	
+lnfi	
 ldlv	
 jdir	
 ciii	

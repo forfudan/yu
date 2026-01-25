@@ -716,7 +716,7 @@ syg	鰺
 syh	堾
 syk	鰉
 sym	䲁
-syn	鰮
+syn	鱠
 syp	鮈
 syr	鮎
 sys	鱻
@@ -51834,7 +51834,6 @@ jpqm	𱞱
 jpqq	𲐵
 jpqw	𨔮
 jpra	𬿏
-jprf	𡣹
 jprl	㒜
 jprn	𱹝
 jprp	𭶥
@@ -82501,6 +82500,7 @@ rpny	𬸷
 rpny	𰆃
 rpo	𤇇
 rppd	𱴅
+rppf	𡣹
 rppj	𩙜
 rppk	䜎
 rppk	𠨂

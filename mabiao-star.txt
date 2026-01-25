@@ -394,11 +394,11 @@ abkc	桪
 abkc	𬃮
 abkd	杈
 abkd	𣏧
+abkf	𣙶
 abkg	𱣘
 abki	𰗦
 abkj	𣙿
 abkk	樼
-abkk	𣙶
 abkk	𰗹
 abkq	㮻
 abkw	𣕋
@@ -1198,7 +1198,6 @@ afk	栈
 afka	椏
 afka	𠆊
 afka	𣒘
-afka	𬂲
 afkc	杅
 afkg	栈
 afkg	𧘘
@@ -1851,7 +1850,6 @@ aiia	𣞁
 aiia	𣟕
 aiib	𣔱
 aiib	𬊧
-aiic	𡣹
 aiie	橩
 aiig	𣜧
 aiih	棪
@@ -2065,7 +2063,6 @@ ajfk	棏
 ajfn	𠅹
 ajfp	㮛
 ajfq	𲦶
-ajfr	𬅂
 ajfs	𣖥
 ajfu	𥂸
 ajfu	𬴷
@@ -2165,6 +2162,7 @@ ajlg	𧙃
 ajlj	𪳲
 ajll	櫮
 ajll	𣘁
+ajlr	𬅂
 ajlv	柯
 ajlv	椥
 ajlv	𬃽
@@ -2823,6 +2821,7 @@ alla	髞
 alla	𣝞
 alle	楫
 alle	𮥿
+allf	𬂲
 allg	樿
 allg	𠅷
 allg	𤬥
@@ -7168,7 +7167,6 @@ bfjs	𧨒
 bfk	彌
 bfka	䛩
 bfka	𡱻
-bfka	𰤐
 bfka	𘤴
 bfkc	訏
 bfkc	弙
@@ -8093,6 +8091,7 @@ bii	談
 biib	燮
 biib	𤈫
 biib	𧩮
+biic	𡣹
 biie	㞑
 biie	𩙜
 biif	𤲯
@@ -9560,6 +9559,7 @@ blla	譟
 bllb	𢐆
 bllb	𧮜
 blle	諿
+bllf	𰤐
 bllf	즆
 bllf	튶
 bllg	彈
@@ -12958,7 +12958,6 @@ cfjx	𘮰
 cfjy	𨟃
 cfk	赋
 cfka	婭
-cfka	𫰫
 cfka	𘯁
 cfkc	㚥
 cfkc	𡬬
@@ -14228,6 +14227,7 @@ clld	𪈝
 clld	𱆢
 clle	㣬
 clle	𱙝
+cllf	𫰫
 cllg	嬋
 cllg	𩅦
 cllh	𩇎
@@ -28794,7 +28794,6 @@ fheh	𢬹
 fhem	𢮇
 fhem	𭡡
 fhfi	𱟩
-fhfk	𢳩
 fhg	攬
 fhgf	𱡏
 fhgg	𭡉
@@ -28850,6 +28849,7 @@ fhkz	𢭦
 fhl	擷
 fhlc	撷
 fhld	擡
+fhlf	𢳩
 fhlg	㨬
 fhlj	擷
 fhlj	𢷴
@@ -29372,7 +29372,6 @@ fka	扒
 fkaa	𱡈
 fkad	𭢭
 fkai	亞
-fkai	亜
 fkai	𠔀
 fkai	𢌬
 fkai	𬺢
@@ -29399,7 +29398,6 @@ fkeh	𡔈
 fkeh	𨾌
 fkei	𡤼
 fkei	𢪬
-fkek	𢨖
 fkek	𰁚
 fkes	𢩪
 fkes	𰒻
@@ -29491,7 +29489,6 @@ fkkj	𢴠
 fkkj	𣉩
 fkkj	𮧶
 fkkj	𘬎
-fkkx	𣱌
 fkl	拉
 fklb	𱠉
 fkld	𱠰
@@ -29564,7 +29561,6 @@ fkre	𢎁
 fkre	𘭹
 fkrh	𤡾
 fkri	惡
-fkri	悪
 fkri	惡
 fkri	𛀅
 fkrs	扖
@@ -29631,7 +29627,6 @@ fkvv	𩸖
 fkvv	𬪿
 fkw	攏
 fkwb	𡯔
-fkwh	𡏍
 fkws	㧔
 fkws	𠀮
 fkwu	攏
@@ -36626,6 +36621,7 @@ glxa	𣠔
 glxa	𣡖
 glxa	𣡪
 glxa	𱤦
+glxf	𬻫
 glxg	囊
 glxg	嚢
 glxg	𧚐
@@ -36635,7 +36631,6 @@ glxj	䝴
 glxj	𬻧
 glxj	𮁸
 glxk	𠁕
-glxk	𬻫
 glxl	𣗞
 glxm	
 glxo	𡚀
@@ -45721,7 +45716,6 @@ hxjx	𬅭
 hxk	壺
 hxka	壺
 hxka	堔
-hxka	壷
 hxka	𡍕
 hxka	𡕏
 hxka	𩎲
@@ -45739,6 +45733,7 @@ hxkw	𡔴
 hxkx	𣤟
 hxla	𣓷
 hxld	𮝘
+hxlf	壷
 hxlg	𡄜
 hxlh	𡔪
 hxli	𰊅
@@ -47205,7 +47200,6 @@ ifk	宇
 ifka	㝞
 ifka	𡦿
 ifka	𡧆
-ifka	𤉁
 ifka	𥦳
 ifka	𘮩
 ifkc	宇
@@ -49305,6 +49299,7 @@ ille	𣪯
 ille	𤉈
 ille	𭵓
 ille	휸
+illf	𤉁
 illf	흂
 illf	흌
 illf	흎
@@ -53283,7 +53278,6 @@ jfk	盱
 jfka	𣇅
 jfka	𤦩
 jfka	𥏝
-jfka	𪰥
 jfka	𰖐
 jfka	具
 jfkb	𠮊
@@ -53437,6 +53431,7 @@ jfpb	𰖰
 jfpc	题
 jfpd	鶗
 jfpe	𣌎
+jfpf	𣊰
 jfpg	尟
 jfpi	是
 jfpi	𤓐
@@ -53448,7 +53443,6 @@ jfpj	𪰾
 jfpj	𲤳
 jfpk	𣈡
 jfpk	𣊒
-jfpk	𣊰
 jfpk	𪧺
 jfpk	𪰿
 jfpk	𭕦
@@ -54105,7 +54099,7 @@ jhwy	𤦭
 jhwy	𬎛
 jhwy	晴
 jhwy	晴
-jhxk	𤩖
+jhxf	𤩖
 jhxk	𰧴
 jhxq	曀
 jhxq	𪾼
@@ -55555,6 +55549,7 @@ jlle	䁒
 jlle	𥚶
 jlle	𦉅
 jlle	𭦱
+jllf	𪰥
 jllg	禪
 jllg	暺
 jllg	𠧈
@@ -58662,7 +58657,6 @@ kaa	𘠐
 kaa	𘰨
 kaa	
 kaa	
-kaa	
 kaa	
 kaa	
 kaa	
@@ -64245,7 +64239,6 @@ lfjy	퓎
 lfjy	퓕
 lfk	啦
 lfka	啞
-lfka	唖
 lfka	𠳑
 lfka	𦖂
 lfkc	吁
@@ -64256,7 +64249,6 @@ lfkk	𫬹
 lfkl	啦
 lfkp	𫪗
 lfkr	噁
-lfkr	𫫖
 lfks	𡁠
 lfks	𬚨
 lfku	𲕁
@@ -66677,6 +66669,8 @@ llfe	𩀇
 llfg	𡄿
 llfh	咢
 llfh	𠸈
+llfh	𡏍
+llfi	亜
 llfj	顎
 llfj	覨
 llfm	鹗
@@ -66687,6 +66681,7 @@ llfo	𠱐
 llfo	𨕓
 llfo	𨕬
 llfo	𨜝
+llfr	悪
 llfr	뮶
 llfr	윲
 llfs	𠶬
@@ -66696,6 +66691,7 @@ llfu	𢃋
 llfu	𭋍
 llfw	뮵
 llfw	윱
+llfx	𣱌
 llfy	鄂
 llg	嘍
 llga	𪡰
@@ -66843,6 +66839,7 @@ llle	𡄸
 llle	𩀏
 llle	𩙝
 llle	𭊯
+lllf	唖
 lllf	𠄷
 lllf	뮾
 lllf	윺
@@ -66896,6 +66893,7 @@ lllp	𠹜
 lllp	𠻖
 lllq	𰏬
 lllr	𤮱
+lllr	𫫖
 lllr	𭊍
 llls	舙
 llls	𦧵
@@ -68537,6 +68535,7 @@ lufh	묟
 lufh	욛
 lufi	묘
 lufi	요
+lufi	
 lufk	嚱
 lufk	𠵄
 lufl	묞
@@ -101157,6 +101156,7 @@ slew	𦲭
 slew	𱐴
 slfe	𫇯
 slfi	𫦥
+slfk	𢨖
 slfk	𦮣
 slfk	𭄻
 slfk	𲽑
@@ -118009,10 +118009,10 @@ vxjq	畳
 vxjs	砗
 vxka	𫙢
 vxka	𱴑
-vxka	𱴕
 vxkd	畂
 vxkd	𮵉
 vxkl	𩷮
+vxlf	𱴕
 vxlk	𩸃
 vxlk	𩽝
 vxlk	𰧫

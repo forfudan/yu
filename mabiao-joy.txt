@@ -1067,7 +1067,6 @@ afdo	㭢
 afee	㍁
 afei	椏
 afei	𣒘
-afei	𬂲
 afej	𲦣
 afem	杅
 afem	𫤿
@@ -2000,7 +1999,7 @@ ajr	杳
 ajr	𣏬
 ajr	🀀
 ajr	𛁹
-ajre	𣙶
+ajrf	𣙶
 ajrf	𬃮
 ajrj	柫
 ajrj	㭹
@@ -3605,7 +3604,6 @@ aofb	㭥
 aofh	𬃧
 aofk	柌
 aofk	𪳘
-aofn	𬅂
 aog	枯
 aogc	𰗢
 aogh	櫯
@@ -3653,6 +3651,7 @@ aokc	𮧴
 aoke	凂
 aoke	梚
 aoke	𣝊
+aokf	𬂲
 aokh	夀
 aoki	欃
 aoki	㭸
@@ -3701,6 +3700,7 @@ aood	欆
 aoog	𱂈
 aooh	𠗭
 aoom	㯢
+aoon	𬅂
 aoor	𬰷
 aoou	𣟙
 aopg	𫠅
@@ -13636,7 +13636,6 @@ dfdw	𮏂
 dfe	芋
 dfei	𠆊
 dfei	𦲕
-dfei	𰤐
 dfem	芋
 dfem	芋
 dfen	𦼇
@@ -15476,6 +15475,7 @@ dkfi	𦮠
 dkfi	𦴹
 dkfi	𱱵
 dkfk	葴
+dkfk	𢨖
 dkfm	茣
 dkfm	茣
 dkfn	𦽫
@@ -17107,6 +17107,7 @@ doka	𣛳
 doke	莬
 doke	𪽿
 doke	𮒉
+dokf	𰤐
 doki	菟
 dokk	营
 dokk	𦺨
@@ -21040,7 +21041,6 @@ ei	𛃝
 ei	𛃞
 ei	
 ei	
-ei	
 eiae	伨
 eiae	𰼙
 eiam	俕
@@ -25301,7 +25301,6 @@ fedm	𢰇
 fedn	𢍐
 feec	𢮢
 feei	𢫌
-feek	𢨖
 feek	𭗻
 feek	𰁚
 feem	𢰡
@@ -25324,18 +25323,15 @@ fehx	𬱀
 fehx	𱡐
 fei	亞
 fei	扡
-fei	亜
 fei	𰷠
 fei	
 feic	蝁
-feih	𡏍
 feij	𭢶
 fej	𪜁
 fej	𰒸
 fejd	摛
 feje	𭡛
 fejf	𢭱
-fejg	𣱌
 fejj	𢺄
 fejm	𢹶
 fejo	攡
@@ -25374,7 +25370,6 @@ fenq	𤡾
 fenq	𪅴
 fenr	拰
 fenx	惡
-fenx	悪
 fenx	𪮰
 fenx	惡
 fenx	𛀅
@@ -25862,7 +25857,6 @@ fhdx	搕
 fhei	𲡩
 fhel	𢲪
 fhew	𢭷
-fhfe	𢳩
 fhfk	㧨
 fhfo	𢬯
 fhfr	𰓳
@@ -25917,6 +25911,7 @@ fhns	𰔎
 fhnx	𭠶
 fhoa	𢷌
 fhob	𢫷
+fhof	𢳩
 fhoh	擣
 fhoi	𪮭
 fhoi	𰔁
@@ -38915,7 +38910,6 @@ hoee	𫎵
 hoee	𭎃
 hoee	𱘋
 hoei	壺
-hoei	壷
 hoel	𡔬
 hoem	𪣷
 hoeq	𱖴
@@ -39034,6 +39028,7 @@ hoke	𮚻
 hoke	𮭵
 hoke	𰉲
 hoke	𳐯
+hokf	壷
 hokh	𡔪
 hokh	𡔽
 hokh	𪤳
@@ -46763,7 +46758,6 @@ jfeg	𮡛
 jfei	𠨣
 jfei	𡹄
 jfei	𣇅
-jfei	𪰥
 jfei	𰖐
 jfej	印
 jfej	㊞
@@ -46959,8 +46953,8 @@ jfnc	𲋭
 jfnd	𢻖
 jfnd	𪰯
 jfnd	𰖰
-jfne	𣊰
 jfne	𨤱
+jfnf	𣊰
 jfng	𧡨
 jfng	𭦯
 jfnh	題
@@ -49475,6 +49469,7 @@ joke	𡷭
 joke	𡸊
 joke	𡽡
 joke	𭗹
+jokf	𪰥
 jokg	𱟠
 joki	巉
 joki	𡻑
@@ -52552,14 +52547,12 @@ kfea	𰈁
 kfed	𱒧
 kfee	𠯚
 kfei	啞
-kfei	唖
 kfej	𰈐
 kfel	𨤥
 kfel	𭉜
 kfem	吁
 kfem	𠯊
 kfen	噁
-kfen	𫫖
 kfeu	𱒫
 kfex	𲕁
 kff	啡
@@ -54849,6 +54842,7 @@ klff	욮
 klfi	𠰋
 klfi	묘
 klfi	요
+klfi	
 klfj	묣
 klfj	묩
 klfj	밉
@@ -55647,6 +55641,7 @@ koke	𠲶
 koke	𡁅
 koke	𩈦
 koke	𱕷
+kokf	唖
 kokh	𫮳
 koki	嚵
 koki	𰇳
@@ -55656,6 +55651,7 @@ kokl	몽
 kokl	뮹
 kokl	옹
 kokl	융
+kokn	𫫖
 koko	䣈
 koko	𨛜
 koks	𠷦
@@ -64641,7 +64637,6 @@ mfdn	𬴧
 mfdn	𱪩
 mfdo	㓫
 mfeh	𰦟
-mfei	𤉁
 mfei	𥏝
 mfei	𩭯
 mfem	㝼
@@ -66954,6 +66949,7 @@ moke	𤑑
 moke	𩯯
 moke	𫙁
 moke	𬊕
+mokf	𤉁
 moki	𤒰
 moki	𨳂
 moki	𩰃
@@ -78016,6 +78012,9 @@ okey	𰯭
 okf	缄
 okfb	𰬚
 okfc	㌛
+okfg	𣱌
+okfh	𡏍
+okfi	亜
 okfk	缄
 okfk	鰔
 okfk	𦩢
@@ -78023,6 +78022,7 @@ okfm	𦨳
 okfm	𩶭
 okfm	𬵢
 okfn	鱤
+okfn	悪
 okfw	鰄
 okfw	𦩬
 okfw	𮬇
@@ -86527,7 +86527,6 @@ qoee	𮀚
 qoee	𮬮
 qoee	𲮁
 qoeg	𮗘
-qoei	𱴕
 qofh	𥔒
 qofh	𳏓
 qofk	𭷿
@@ -86571,6 +86570,7 @@ qojm	猽
 qojr	𤣃
 qojr	𥗆
 qoke	𱴻
+qokf	𱴕
 qoki	㺥
 qoki	𢩢
 qoki	𤟛
@@ -89735,8 +89735,8 @@ rkoc	𮁸
 rkoe	𠁕
 rkoe	𧪯
 rkoe	𬻧
-rkoe	𬻫
 rkof	阓
+rkof	𬻫
 rkoi	誠
 rkoi	蠹
 rkoi	蟗
@@ -90200,7 +90200,6 @@ rm	门槛
 rm	⻔
 rmak	𧧳
 rmak	𮘗
-rmaw	𡣹
 rmb	六
 rmb	𧫄
 rmb	六
@@ -90336,6 +90335,7 @@ rmms	䜎
 rmms	𧘳
 rmms	𩙜
 rmmt	夑
+rmmw	𡣹
 rmng	𧪘
 rmnh	𩕴
 rmns	𧩚
@@ -115424,7 +115424,6 @@ wfdo	𡜇
 wfdo	𧗦
 wfdw	𭑾
 wfei	婭
-wfei	𫰫
 wfem	㚥
 wfem	䍂
 wfem	𫡚
@@ -117713,6 +117712,7 @@ wojx	𨐞
 wok	娩
 woke	娩
 woke	𡤎
+wokf	𫰫
 woki	婏
 woki	㜶
 woki	𡤹
@@ -123929,7 +123929,7 @@ yhnx	䏯
 yhnx	𤥴
 yhob	𦛐
 yhoc	𦟿
-yhoe	𤩖
+yhof	𤩖
 yhoh	璹
 yhoh	𦡴
 yhoi	𤤜
