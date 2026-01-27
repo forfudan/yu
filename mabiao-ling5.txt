@@ -1009,6 +1009,7 @@ qme	藏
 qsi	著
 qwa	获
 qwu	获得
+rjo	进
 rle	話
 rpa	点
 rqu	𧬗
@@ -1034,6 +1035,7 @@ vte	浪
 wha	利
 wle	话
 wqu	谋
+wro	讲
 wsu	那個
 wte	以
 wwu	书

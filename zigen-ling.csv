@@ -103,9 +103,9 @@ font,ma,pinyin
 广,hga,Guǎŋ -> Ga 🈕Yǎn ān
 文,hwe,Wén -> We
 日,hri,Rì
-曰,hye,Yuē -> Ye ㊟多根字中除汩抇曶都拆作日
 ,hri,㊟同日歸併
 ,hri,㊟同日歸併
+曰,hye,Yuē -> Ye ㊟多根字中除汩抇曶都拆作日
 黑,hhe,Hēi -> He
 示,hsi,Ŝì -> Si
 ,hsi,Ŝì -> Si ㊟俗稱示字旁
@@ -190,6 +190,8 @@ font,ma,pinyin
 毛,lma,Máo -> Ma
 古,lgu,Gǔ
 舌,lse,Ŝé
+未,lwe,Wèi -> We
+末,lmo,Mò
 户,lhu,Hù
 戸,lhu,
 戶,lu,Hù -> u 🈤不取聲母
@@ -197,8 +199,6 @@ font,ma,pinyin
 ,le,
 ,le,
 夕,lxi,Xī
-未,lwe,Wèi -> We
-末,lmo,Mò
 止,lvi,Ẑǐ -> Vi 🈤Z和Ẑ作V
 ,lvi,㊟同止歸併
 齒,lci,Ĉǐ
