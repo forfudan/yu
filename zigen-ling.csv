@@ -185,6 +185,8 @@ font,ma,pinyin
 千,lka,Qiān -> Ka 🈤Q作K
 ,lka,
 壬,lre,Rén -> Re
+手,lso,Ŝǒu -> So
+,lso,
 毛,lma,Máo -> Ma
 古,lgu,Gǔ
 舌,lse,Ŝé
@@ -328,8 +330,6 @@ font,ma,pinyin
 欠,tka,Qiān -> Ka 🈤Q作K
 匕,ti,i 🈤不取聲母
 ,ti,㊟同匕歸併 🈑化本字 🈕Huà
-手,tso,Ŝǒu -> So
-,tso,
 ,to,Ŝǒu -> o 🈤不取聲母 ㊟俗稱提手旁
 用,to,Yòŋ -> o 🈤不取聲母
 ,vo,🈤無讀音取o
@@ -339,7 +339,7 @@ font,ma,pinyin
 刀,va,Dāo -> a 🈤不取聲母
 刂,vda,Dāo -> Da ㊟俗稱立刀旁
 巾,vji,Jīn -> Ji
-且,ve,Qiě -> e 🈤不取聲母
+且,vke,Qiě -> Ke 🈤Q作K
 ,vo,🈤無讀音取o
 水,vi,Ŝuǐ -> i 🈤不取聲母
 氺,vi,
