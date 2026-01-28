@@ -1,0 +1,5 @@
+src/public/fonts/*.woff filter=lfs diff=lfs merge=lfs -text
+src/public/*.jpeg filter=lfs diff=lfs merge=lfs -text
+src/public/*.mp4 filter=lfs diff=lfs merge=lfs -text
+src/public/*.png filter=lfs diff=lfs merge=lfs -text
+src/public/*.webp filter=lfs diff=lfs merge=lfs -text
