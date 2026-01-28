@@ -1851,7 +1851,6 @@ aiia	𣞁
 aiia	𣟕
 aiib	𣔱
 aiib	𬊧
-aiic	𡣹
 aiie	橩
 aiig	𣜧
 aiih	棪
@@ -8093,6 +8092,7 @@ bii	談
 biib	燮
 biib	𤈫
 biib	𧩮
+biic	𡣹
 biie	㞑
 biie	𩙜
 biif	𤲯

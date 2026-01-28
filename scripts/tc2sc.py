@@ -25,9 +25,7 @@ paths_of_docs = [
     "/docs/ming.md",
     "/docs/ling.md",
     "/docs/joy.md",
-    "/docs/yima.md",
     "/docs/characteristics.md",
-    "/docs/sypy.md",
     "/docs/coverage.md",
     "/docs/faq.md",
     "/docs/gene.md",
@@ -74,19 +72,22 @@ paths_of_docs = [
     "/practice/char_ling_zhu.md",
     "/practice/root_wafel.md",
     "/practice/tupa.md",
+    "/practice/root_sky.md",
     # 安裝
     "/docs/install.md",
-    # IME
-    "/ime/ling.md",
-    "/ime/ling5.md",
-    "/ime/ming.md",
+    # 在線輸入
+    "/pad/ling.md",
+    "/pad/ling5.md",
+    "/pad/ming.md",
     # DIY
     "/diy/index.md",
-    # 天碼
-    "/docs/sky.md",
-    "/practice/root_sky.md",
-    # 徐碼
-    "/docs/xuma.md",
+    # 大觀
+    "/ime/index.md",
+    "/ime/sypy.md", # 宇浩詩韻拼音
+    "/ime/sky.md", # 天碼
+    "/ime/xuma.md", # 徐碼
+    "/ime/yima.md", # 易碼
+    "/ime/sbmm.md",
 ]
 
 for path_of_doc in paths_of_docs:

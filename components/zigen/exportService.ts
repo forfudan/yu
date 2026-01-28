@@ -67,22 +67,25 @@ export class ZigenExportService {
             scale?: number
             backgroundColor?: string
             addWatermark?: boolean
+            customFooter?: string
         } = {}
     ) {
         const {
             copyToClipboard = true,
             download = true,
             scale = 2,
-            addWatermark = true
+            addWatermark = true,
+            customFooter
         } = options
 
         // 统一使用亮色背景
         const backgroundColor = '#ffffff'
 
-        // 動態添加水印文字
+        // 動態添加水印文字（使用自定义 footer 或默認值）
         let watermarkElement: HTMLElement | null = null
         if (addWatermark) {
-            watermarkElement = this.addTemporaryWatermark(element)
+            const footerText = customFooter || '宇浩系列輸入法 · 官網: shurufa.app · QQ 討論群: 170510762'
+            watermarkElement = this.addTemporaryWatermark(element, footerText)
         }
 
         // 声明变量用于后续恢复
@@ -121,7 +124,9 @@ export class ZigenExportService {
                 const hintElement = hint as HTMLElement
                 if (hintElement.textContent?.includes('點擊字根可查看例字') ||
                     hintElement.textContent?.includes('切換圖表形態') ||
-                    hintElement.textContent?.includes('按鍵排序')) {
+                    hintElement.textContent?.includes('按鍵排序') ||
+                    hintElement.textContent?.includes('編碼長度') ||
+                    hintElement.textContent?.includes('顯示模式')) {
                     originalHintDisplays[index] = hintElement.style.display
                     hintElement.style.display = 'none'
                 }

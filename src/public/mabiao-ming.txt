@@ -39781,6 +39781,7 @@ dtqji	𧦕
 dtrni	𱈱
 dtscn	𫌿
 dtso	𳁭
+dttcn	𡣹
 dttgj	𧡠
 dttho	𤉞
 dttja	㽊
@@ -65557,7 +65558,6 @@ lttns	𣕏
 lttqj	𧘊
 lttrn	𪀰
 lttrn	𲍞
-lttsc	𡣹
 lttsi	𧙚
 lttst	𧛉
 ltttk	䘚

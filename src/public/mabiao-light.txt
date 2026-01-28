@@ -60213,7 +60213,6 @@ ouqr	𡧽
 ourk	𡨝
 ourk	𧋲
 oury	𤇯
-ousc	𡣹
 ousj	𩫑
 ouub	𢻟
 ouuo	𡨼
@@ -72307,6 +72306,7 @@ uuua	𤮶
 uuua	𧩵
 uuua	𧭛
 uuub	𤍛
+uuuc	𡣹
 uuuc	𨞇
 uuue	𣀢
 uuuf	𤒇

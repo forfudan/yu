@@ -1,3 +1,7 @@
+---
+aside: false
+---
+
 <script setup>
 import ZigenMap from "@/zigen/ZigenMap.vue"
 import ZigenTrain from "@/train/ZigenTrain.vue"

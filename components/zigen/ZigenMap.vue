@@ -2,7 +2,7 @@
     ZigenMap.vue - 字根圖生成組件
 
   Features:
-  - 支持多個方案切換（卿雲、光華、星陳、日月）
+  - 支持多個方案切換（卿雲、光華、星陳、日月、靈明）
   - 點擊顯示歸併字根和例字
   
   Major Modification History:
@@ -15,6 +15,7 @@
   - 2025-12-30 by 朱複丹: 允許依照編碼長度對字根進行排序，將短碼字根優先顯示
                           允許在字根圖模式下點擊按鈕顯示所有字根
   - 2025-12-31 by 朱複丹: 允許用戶在字根圖中點擊按鈕展開查看更多例字
+  - 2026-01-28 by 朱複丹: 允許用戶自定義例字,允許用戶自定義無字根按鍵顯示信息
 -->
 
 <script setup lang="ts">
@@ -32,7 +33,16 @@ const props = defineProps<{
     zigenFontClass?: string // 自定義字根字體類名
     alwaysVisibleZigens?: string // 始終顯示的字根列表（不會被隱藏）
     alwaysRedZigens?: string // 始終紅色標註的字根列表
+    readExamplesFromCsv?: boolean // 是否從 CSV 的 examples 欄位讀取例字，默認為 false。若為 true，則從 CSV 讀取而不是從 chaifen.json 查找
+    customEmptyKeyLabels?: Record<string, string | string[]> // 自定義無字根按鍵的顯示信息，key 為按鍵，value 為顯示內容（字符串或字符串數組）
+    schemeCnName?: string // 輸入法中文名稱，用於導出時顯示（例：星陳、光華等）
+    customFooter?: string // 自定義導出圖片的頁腳文字，若未提供則使用默認頁腳
 }>()
+
+// 是否從 CSV 的 examples 欄位讀取例字
+// 反轉邏輯以處理 Vue boolean prop 默認值問題
+// Vue 默認會將未傳入的布爾屬性視為 false，故而需要明確判斷是否為 true
+const readExamplesFromCsv = computed(() => props.readExamplesFromCsv === true);
 
 // 字根字體類名，默認為 'zigen-font'
 const zigenFontClass = computed(() => props.zigenFontClass || 'zigen-font')
@@ -383,9 +393,37 @@ const getExampleChars = async (zigen: string): Promise<string[]> => {
         return Array.from(examples).slice(0, MAX_EXAMPLES);
     }
 
-    if (!chaifenLoader.value) {
-        console.log('chaifenLoader 未初始化');
+    // 判斷是否從 CSV 讀取例字
+    if (readExamplesFromCsv.value) {
+        // 從 zigenMap 的 examples 欄位讀取例字
+        if (!zigenMap.value) {
+            console.log('zigenMap 未初始化');
+            return [];
+        }
+
+        // 查找該字根的數據
+        for (const [key, data] of zigenMap.value) {
+            if (data.font === normalizedZigen && data.examples) {
+                // 將 examples 字符串分割成陣列（假設以逗號或空格分隔）
+                const exampleArray = data.examples.split(/[,\s]+/).filter(c => c.length > 0);
+                examples = new Set(exampleArray);
+                // 緩存結果
+                cachedExampleChars.value.set(normalizedZigen, examples);
+                console.log(`✅ 從 zigen 數據獲取字根 "${normalizedZigen}" 的例字 ${examples.size} 個`);
+                return Array.from(examples).slice(0, MAX_EXAMPLES);
+            }
+        }
+
+        console.log(`未在 zigen 數據中找到字根 "${normalizedZigen}" 的例字`);
         return [];
+    }
+
+    // 從拆分表查找例字（原有邏輯）
+    if (!chaifenLoader.value) {
+        console.log('初始化拆分數據加載器...');
+        const urls = getSchemeUrls(activeScheme.value);
+        chaifenLoader.value = ChaiDataLoader.getInstance(urls.chaifenUrl);
+        console.log(`已初始化 ChaiDataLoader，使用文件: ${urls.chaifenUrl}`);
     }
 
     try {
@@ -466,9 +504,35 @@ const getAllExampleChars = async (zigen: string): Promise<string[]> => {
     const normalizedZigen = zigen.normalize('NFC');
     let examples: Set<string> = new Set();
 
-    if (!chaifenLoader.value) {
-        console.log('chaifenLoader 未初始化');
+    // 判斷是否從 CSV 讀取例字
+    if (readExamplesFromCsv.value) {
+        // 從 zigenMap 的 examples 欄位讀取所有例字（與 getExampleChars 相同，因為已經是完整列表）
+        if (!zigenMap.value) {
+            console.log('zigenMap 未初始化');
+            return [];
+        }
+
+        // 查找該字根的數據
+        for (const [key, data] of zigenMap.value) {
+            if (data.font === normalizedZigen && data.examples) {
+                // 將 examples 字符串分割成陣列
+                const exampleArray = data.examples.split(/[,\s]+/).filter(c => c.length > 0);
+                examples = new Set(exampleArray);
+                console.log(`✅ 從 zigen 數據獲取字根 "${normalizedZigen}" 的所有例字 ${examples.size} 個`);
+                return Array.from(examples);
+            }
+        }
+
+        console.log(`未在 zigen 數據中找到字根 "${normalizedZigen}" 的例字`);
         return [];
+    }
+
+    // 從拆分表查找所有例字（原有邏輯）
+    if (!chaifenLoader.value) {
+        console.log('初始化拆分數據加載器...');
+        const urls = getSchemeUrls(activeScheme.value);
+        chaifenLoader.value = ChaiDataLoader.getInstance(urls.chaifenUrl);
+        console.log(`已初始化 ChaiDataLoader，使用文件: ${urls.chaifenUrl}`);
     }
 
     try {
@@ -529,6 +593,12 @@ function getKeyLabel(key: string): string {
         case '.': return '句號';
         default: return '无字根';
     }
+}
+
+// 獲取自定義按鍵標籤（若未自定義則返回 null）
+function getCustomKeyLabel(key: string): string | string[] | null {
+    if (!props.customEmptyKeyLabels) return null;
+    return props.customEmptyKeyLabels[key] || null;
 }
 
 // 處理字根點擊 - 固定彈窗
@@ -633,8 +703,8 @@ async function exportZigenMap() {
         // 等待一下讓彈窗完全關閉
         await new Promise(resolve => setTimeout(resolve, 100));
 
-        // 獲取方案顯示名稱
-        const schemeName = ZigenExportService.getSchemeDisplayName(activeScheme.value);
+        // 獲取方案顯示名稱（優先使用自定義名稱）
+        const schemeName = props.schemeCnName || ZigenExportService.getSchemeDisplayName(activeScheme.value);
 
         // 導出圖片
         const result = await ZigenExportService.exportZigenMapToPNG(
@@ -645,7 +715,8 @@ async function exportZigenMap() {
                 copyToClipboard: false, // 不复制到剪贴板
                 download: true,
                 scale: 3, // 提高分辨率
-                addWatermark: true
+                addWatermark: true,
+                customFooter: props.customFooter // 传递自定义页脚
             }
         );
 
@@ -869,7 +940,15 @@ onMounted(() => {
 
                     <!-- 無字根提示 -->
                     <div v-else-if="!emptyKeys.includes(key)" class="text-xs text-gray-400 no-zigen-text">
-                        <div v-if="key === '/'" class="vertical-text zigen-font">
+                        <!-- 自定義標籤優先 -->
+                        <div v-if="getCustomKeyLabel(key)" class="vertical-text zigen-font">
+                            <div v-if="Array.isArray(getCustomKeyLabel(key))">
+                                <div v-for="(line, idx) in getCustomKeyLabel(key)" :key="idx">{{ line }}</div>
+                            </div>
+                            <div v-else class="single-line">{{ getCustomKeyLabel(key) }}</div>
+                        </div>
+                        <!-- 默認標籤 -->
+                        <div v-else-if="key === '/'" class="vertical-text zigen-font">
                             <div>引導特殊符號</div>
                             <div>切換多重註解</div>
                         </div>
@@ -925,14 +1004,19 @@ onMounted(() => {
                             }" @click="handleZigenClick($event, zigen)">
                             <span :class="zigenFontClass">{{ zigen.font }}</span>
                             <span class="zigen-code">{{ zigen.code
-                                }}</span>
+                            }}</span>
                         </span>
                     </div>
                 </div>
 
                 <!-- 无字根提示（移動端簡化版） -->
                 <div v-else-if="!emptyKeys.includes(key)" class="mobile-no-zigen">
-                    <span v-if="key === '/'" class="mobile-key-desc zigen-font">引導特殊符號</span>
+                    <!-- 自定義標籤優先（移動端顯示第一行或單行） -->
+                    <span v-if="getCustomKeyLabel(key)" class="mobile-key-desc zigen-font">
+                        {{ Array.isArray(getCustomKeyLabel(key)) ? getCustomKeyLabel(key)[0] : getCustomKeyLabel(key) }}
+                    </span>
+                    <!-- 默認標籤 -->
+                    <span v-else-if="key === '/'" class="mobile-key-desc zigen-font">引導特殊符號</span>
                     <span v-else-if="key === 'z'" class="mobile-key-desc zigen-font">引導拼音反查</span>
                     <span v-else-if="['a', 'e', 'i', 'o', 'u'].includes(key)" class="mobile-key-desc zigen-font">
                         一碼上屏字
@@ -975,7 +1059,8 @@ onMounted(() => {
                                         {{ expandedZigens.has(zigen.font) ? '▲' : '▼' }}
                                     </button>
                                 </div>
-                                <div v-else class="example-chars-same-line">
+                                <!-- 只有在從拆分表查找時才顯示加載中 -->
+                                <div v-else-if="!readExamplesFromCsv" class="example-chars-same-line">
                                     <span class="loading-text">正在加載...</span>
                                 </div>
                             </div>
@@ -1005,7 +1090,8 @@ onMounted(() => {
                                         {{ expandedZigens.has(zigen.font) ? '▲' : '▼' }}
                                     </button>
                                 </div>
-                                <div v-else class="example-chars-same-line">
+                                <!-- 只有在從拆分表查找時才顯示加載中 -->
+                                <div v-else-if="!readExamplesFromCsv" class="example-chars-same-line">
                                     <span class="loading-text">正在加載...</span>
                                 </div>
                             </div>

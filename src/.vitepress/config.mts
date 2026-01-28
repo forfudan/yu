@@ -49,9 +49,10 @@ export default defineConfig({
       { text: "学习", link: "/learn/division" },
       { text: "练习", link: "/practice/root" },
       { text: "安装", link: "/docs/install" },
-      { text: "体验", link: "/ime/ling" },
+      { text: "体验", link: "/pad/ling" },
       { text: "跟打", link: "https://genda.shurufa.app" },
       { text: "测评", link: "https://ceping.shurufa.app" },
+      { text: "大观", link: "/ime/" },
     ],
     sidebar: {
       "/docs": [
@@ -150,24 +151,30 @@ export default defineConfig({
             },
           ],
         },
+      ],
+      "/ime": [
         {
           text: "大观",
-          items: [
+          items:[
             {
               text: "宇浩诗韵拼音",
-              link: "/docs/sypy",
+              link: "/ime/sypy",
             },
             {
               text: "天码",
-              link: "/docs/sky",
+              link: "/ime/sky",
             },
             {
               text: "徐码",
-              link: "/docs/xuma",
+              link: "/ime/xuma",
             },
             {
               text: "易码",
-              link: "/docs/yima",
+              link: "/ime/yima",
+            },
+            {
+              text: "声笔猛码",
+              link: "/ime/sbmm",
             },
           ],
         },
@@ -203,11 +210,7 @@ export default defineConfig({
             {
               text: "特殊部件拆分",
               link: "/learn/radicals",
-            },
-            {
-              text: "拆分机器实现",
-              link: "/learn/machine",
-            },
+            }
           ],
         },
         {
@@ -279,6 +282,10 @@ export default defineConfig({
             {
               text: "高频字拆分图解——传统字",
               link: "/learn/frequent_tc",
+            },
+            {
+              text: "拆分机器实现",
+              link: "/learn/machine",
             },
           ],
         },
@@ -464,9 +471,10 @@ export default defineConfig({
           { text: "學習", link: "/zht/learn/division" },
           { text: "練習", link: "/zht/practice/root" },
           { text: "安裝", link: "/zht/docs/install" },
-          { text: "體驗", link: "/zht/ime/ling" },
+          { text: "體驗", link: "/zht/pad/ling" },
           { text: "跟打", link: "https://genda.shurufa.app" },
           { text: "測評", link: "https://ceping.shurufa.app" },
+          { text: "大觀", link: "/zht/ime/" },
         ],
         sidebar: {
           "/zht/docs": [
@@ -565,24 +573,30 @@ export default defineConfig({
                 },
               ],
             },
+          ],
+          "/zht/ime": [
             {
               text: "大觀",
-              items: [
+              items:[
                 {
                   text: "宇浩詩韻拼音",
-                  link: "/zht/docs/sypy",
+                  link: "/zht/ime/sypy",
                 },
                 {
                   text: "天碼",
-                  link: "/zht/docs/sky",
+                  link: "/zht/ime/sky",
                 },
                 {
                   text: "徐碼",
-                  link: "/zht/docs/xuma",
+                  link: "/zht/ime/xuma",
                 },
                 {
                   text: "易碼",
-                  link: "/zht/docs/yima",
+                  link: "/zht/ime/yima",
+                },
+                {
+                  text: "聲筆猛碼",
+                  link: "/zht/ime/sbmm",
                 },
               ],
             },
@@ -618,11 +632,7 @@ export default defineConfig({
                 {
                   text: "特殊部件拆分",
                   link: "/zht/learn/radicals",
-                },
-                {
-                  text: "拆分機器實現",
-                  link: "/zht/learn/machine",
-                },
+                }
               ],
             },
             {
@@ -695,17 +705,12 @@ export default defineConfig({
                   text: "高频字拆分图解——传统字",
                   link: "/zht/learn/frequent_tc",
                 },
-              ],
-            },
-            {
-              text: "光華",
-              items: [
                 {
-                  text: "光華方案字根圖表",
-                  link: "/zht/learn/light",
+                  text: "拆分機器實現",
+                  link: "/zht/learn/machine",
                 },
               ],
-            },
+            }
           ],
           "/zht/practice": [
             {

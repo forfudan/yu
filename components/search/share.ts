@@ -25,7 +25,8 @@ export interface Chaifen {
 export interface Zigen {
     font: string,
     ma: string,
-    pinyin?: string
+    pinyin?: string,
+    examples?: string  // 字根的例字列表（逗號分隔）
 }
 
 export type ZigenMap = Map<string, Zigen>

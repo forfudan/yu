@@ -90200,7 +90200,6 @@ rm	门槛
 rm	⻔
 rmak	𧧳
 rmak	𮘗
-rmaw	𡣹
 rmb	六
 rmb	𧫄
 rmb	六
@@ -90336,6 +90335,7 @@ rmms	䜎
 rmms	𧘳
 rmms	𩙜
 rmmt	夑
+rmmw	𡣹
 rmng	𧪘
 rmnh	𩕴
 rmns	𧩚
