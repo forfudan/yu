@@ -610,8 +610,8 @@ mgm	剗
 mgy	谿
 mlq	爰
 mnl	邾
-mnp	酇
 mnx	悃
+mpm	酇
 msd	擘
 msk	屦
 mss	尻
@@ -866,7 +866,7 @@ ko	知
 ku	得
 lo	还
 me	有
-mo	告
+mo	友
 mu	特
 no	回
 qa	英
@@ -903,6 +903,7 @@ bri	写
 cfi	缘
 cla	鐵
 cmi	開
+cmo	開始
 cna	京
 cno	道
 cpu	釣
@@ -926,6 +927,8 @@ fqu	型
 fwi	婚
 ggi	引
 gme	阵
+hda	歌
+hde	可以
 hgi	應
 hgo	度
 hgu	底
@@ -980,11 +983,9 @@ mgi	或
 mgu	發
 mji	爲什麽
 mna	物
-mne	先
 mqu	怪
 mse	情
 mso	展
-mvo	友
 mvu	在
 nbu	購
 ndi	算
@@ -1009,6 +1010,7 @@ qme	藏
 qsi	著
 qwa	获
 qwu	获得
+rco	讓
 rjo	进
 rle	話
 rpa	点
@@ -1032,6 +1034,7 @@ vnu	海
 vpe	沒有
 vsi	法
 vte	浪
+vti	泳
 wha	利
 wle	话
 wqu	谋
@@ -1043,6 +1046,7 @@ xdi	想
 xdu	相
 xfa	欧
 xri	樣
+ybu	纔
 yfa	現
 yfo	經
 yji	總
@@ -10936,29 +10940,37 @@ mcyy	辏
 mddd	懾
 mddh	懼
 mddl	憚
+mddn	鹄
 mddn	懫
 mddq	戄
 mddr	愕
 mddx	懆
 mdfy	悮
+mdfy	頶
+mdgu	郜
 mdhr	慒
 mdji	忻
 mdkc	愦
 mdki	忡
+mdkl	勂
 mdkn	憒
 mdla	怾
 mdle	悁
 mdlf	慺
 mdnb	愪
+mdo	告
 mdpa	悒
 mdpe	怳
 mdpi	怶
 mdqq	慑
 mdrc	憹
+mdsn	鵠
 mdtk	惞
+mdwo	造
 mdwy	悞
 mdxj	懦
 mdya	悜
+mdyf	靠
 mfa	方
 mfbh	旘
 mfbs	旔
@@ -11253,18 +11265,10 @@ mncj	犜
 mnco	忦
 mncp	犥
 mnda	憛
-mndd	鹄
-mndf	頶
-mndg	郜
-mndk	勂
 mndn	鸫
-mndo	告
 mndo	恛
 mndo	吿
-mnds	鵠
-mndw	造
 mndw	犑
-mndy	靠
 mnfd	牾
 mnfg	牼
 mnfh	懀
@@ -11322,20 +11326,12 @@ mnnp	牭
 mnnr	慍
 mnnw	恍
 mnny	牷
-mnpc	赞
-mnpe	先
 mnpe	怬
-mnpg	酂
-mnpg	酇
 mnpj	犓
 mnpk	物
 mnpm	惣
-mnpn	贊
 mnpn	鿯
-mnpp	兟
-mnpv	劗
 mnpv	犣
-mnpw	选
 mnqp	憮
 mnqt	犕
 mnrm	犠
@@ -11373,18 +11369,26 @@ mpbj	恟
 mpcs	怉
 mpcs	爮
 mpdo	怐
+mpe	先
 mphh	惸
 mphr	恂
 mpi	愧
 mpjb	惱
 mpkm	惚
 mpkm	愡
+mpmc	赞
+mpmg	酂
+mpmg	酇
+mpmn	贊
+mpmp	兟
+mpmv	劗
 mppk	憦
 mppo	惔
 mprl	懙
 mprr	恌
 mpsd	惆
 mpu	舀
+mpwo	选
 mqbs	懞
 mqda	愺
 mqdh	懽
@@ -32861,7 +32865,6 @@ dmns	𭾮
 dmnt	𬑆
 dmnt	𰦋
 dmnt	𱲩
-dmnu	𭇆
 dmnu	𰠧
 dmnv	𥋠
 dmnw	𥃺
@@ -32880,6 +32883,7 @@ dmny	𥆺
 dmny	𭿎
 dmny	𱲱
 dmny	𲲡
+dmo	𭇆
 dmpa	𠵺
 dmpa	𱲫
 dmpb	𥄧
@@ -62771,6 +62775,8 @@ mdbi	𲟶
 mdbj	𪜃
 mdbj	𰒅
 mdbk	𭄧
+mdcp	𭍁
+mdcs	𡷥
 mddd	𫺢
 mddd	𰒡
 mddj	㦍
@@ -62783,6 +62789,7 @@ mddm	𢥇
 mddn	㦭
 mddo	𢙲
 mddo	𤔑
+mddp	𤿩
 mddr	𱟊
 mddv	𢠮
 mddy	𪬮
@@ -62790,44 +62797,73 @@ mdfc	𢢪
 mdfc	𲠉
 mdfd	𢤓
 mdfi	𱱵
+mdfj	𧠼
 mdfj	𫺃
 mdfl	𭜾
 mdga	𰑪
 mdgg	𫺻
 mdgu	𢝞
+mdhi	䧼
 mdhi	𭟙
+mdhk	𡀻
+mdhu	𮰕
 mdjc	𱬾
 mdje	𢙘
 mdjj	𤕈
+mdjv	𢽍
 mdjv	𪺒
+mdkb	𬐊
+mdkc	𢁏
+mdkl	𭣂
 mdkl	𰑍
 mdkm	㥙
 mdkr	𢝈
+mdku	𬆧
 mdla	𬋦
 mdld	𤔦
 mdll	𫻠
 mdll	𭟘
 mdlm	𲠹
 mdlq	𤔬
+mdmd	𠼑
+mdmd	𭌳
 mdmg	𢟘
+mdmg	𫻵
 mdmu	𥄃
 mdmu	𭜜
+mdmx	𰑣
 mdnc	𢚻
+mdnj	𫿜
 mdnw	𲠂
+mdny	𮠭
 mdpe	𪺎
+mdpk	𠵞
+mdpt	𫧂
+mdqi	𢍎
 mdqo	𢛏
 mdqo	𪺐
 mdqo	𰇂
+mdqr	𪽀
 mdrc	𢤟
+mdrw	𬩙
+mdrw	𬩭
+mdsl	𳊗
 mdti	𢚉
 mdtu	𢘛
+mdvd	𠜯
 mdvk	𭶴
+mdwd	𪢡
 mdwg	𤔞
 mdwi	㤴
 mdwi	𠃭
 mdwl	𢥻
+mdwl	𨖰
+mdxr	𥂷
 mdxu	𰑠
 mdxu	𰠀
+mdxx	䎋
+mdyw	𨘴
+mdyy	𮧈
 mfbc	㫉
 mfbk	𣄈
 mfbl	𢜀
@@ -63473,6 +63509,7 @@ mgsv	𫻿
 mgsw	𱫳
 mgta	𤔉
 mgta	𪽋
+mgta	𱰩
 mgtg	𰢝
 mgtk	𣢚
 mgto	𢦨
@@ -63855,6 +63892,7 @@ mkss	𢜿
 mkss	𲠞
 mksw	𢤪
 mkti	𰑏
+mktk	𣢳
 mktk	𣣳
 mktm	𱞛
 mktu	𤓲
@@ -63875,6 +63913,7 @@ mkyd	𫻀
 mkyf	𤔅
 mkyi	𱞚
 mkyw	𨘺
+mla	𭁆
 mlbi	𰑂
 mlbk	𭜲
 mlbk	𰑰
@@ -64107,55 +64146,23 @@ mncr	𤜀
 mncs	㹖
 mncs	𡵣
 mncv	𢤣
-mndc	𡷥
-mndc	𢁏
 mndc	𤙿
-mndd	𠼑
 mndd	𢠑
-mndd	𤿩
-mndd	𪢡
 mndd	𬌞
-mndd	𭌳
 mndf	𤛠
-mndf	𧠼
 mndf	𱭬
-mndh	䧼
 mndh	𤜅
-mndh	𮰕
 mndj	㸫
-mndj	𢽍
-mndj	𫿜
-mndk	𠵞
-mndk	𡀻
-mndk	𬆧
-mndk	𬐊
-mndl	𨖰
-mndl	𭣂
-mndl	𳊗
-mndm	𫻵
-mndm	𰑣
 mndn	𤜙
 mndn	𪬱
-mndn	𮠭
 mndn	𰠼
 mndo	𤘘
 mndp	𤙎
 mndp	𤙝
-mndp	𭍁
-mndq	𢍎
-mndr	𥂷
-mndr	𪽀
-mndt	𫧂
 mndt	𭇤
-mndv	𠜯
-mndw	𨘴
-mndw	𬩙
-mndw	𬩭
 mndw	𭝽
 mndx	㹘
-mndx	䎋
 mndy	𤙬
-mndy	𮧈
 mnfc	𰠪
 mnfd	𫺧
 mnff	㹔
@@ -64203,7 +64210,6 @@ mngo	𢘐
 mngp	𭷙
 mngt	𢟷
 mngt	𤛤
-mngt	𱰩
 mngu	𬩶
 mngu	𮠉
 mngu	𰻨
@@ -64304,12 +64310,10 @@ mnks	𤙽
 mnks	𤚣
 mnks	𤛋
 mnkt	㸰
-mnkt	𣢳
 mnku	𤼺
 mnky	𤙈
 mnky	𤚝
 mnla	𬌙
-mnla	𭁆
 mnlb	𤘢
 mnlb	𧑤
 mnlb	𰠫
@@ -64457,86 +64461,37 @@ mnnx	𤙛
 mnnx	𤛣
 mnny	㸶
 mnpa	㸭
-mnpb	𧑯
-mnpb	𧖟
-mnpb	𰺧
 mnpc	㸪
-mnpc	𭀳
 mnpc	𭷝
-mnpc	𮣄
 mnpd	㹙
 mnpd	㹚
-mnpd	𠓀
-mnpd	𠸜
 mnpd	𤘽
-mnpd	𭀺
 mnpd	𲭡
 mnpf	𤙊
-mnpf	𧠺
-mnpf	𩒙
-mnpf	𫌦
-mnpf	𱥜
-mnpf	𲑸
-mnpg	䢾
-mnpg	𩣂
 mnpg	𭷖
-mnpg	𰼀
-mnph	㬱
-mnph	𨾷
 mnpi	𤛂
-mnpj	㪇
-mnpj	𣀹
 mnpj	𤘪
-mnpj	𫤢
 mnpj	𰠶
-mnpk	𠒒
-mnpk	𠒣
 mnpk	𠡵
 mnpk	𢒢
 mnpk	𤛮
-mnpk	𥏋
-mnpk	𩱕
-mnpk	𩱩
-mnpk	𬚬
-mnpk	𲓏
-mnpl	𣭟
-mnpl	𣭡
 mnpm	㹅
 mnpm	𢜓
 mnpm	𢝰
 mnpm	𤙹
-mnpm	𲟻
-mnpn	𠈣
-mnpn	𠒑
 mnpn	𤚂
 mnpn	𤛃
-mnpn	𭀷
 mnpo	𤘭
-mnpp	𠓙
 mnpp	𤊘
 mnpp	𤑀
 mnpp	𪺯
-mnpq	𣀶
-mnpr	𠒷
 mnpr	𤙔
 mnpr	𤜋
 mnpr	𤜓
-mnps	𪀷
 mnps	𫙦
-mnpt	㰫
-mnpt	𫤠
-mnpv	𠜎
-mnpv	𤄳
-mnpv	𭀲
-mnpv	𭄛
 mnpv	𭱮
-mnpv	𲒷
-mnpw	𲆌
 mnpw	𲏧
-mnpx	𭀵
 mnpx	𭬲
-mnpx	𮶌
-mnpy	𪞄
 mnqb	𤛻
 mnqb	𤜐
 mnqb	𤜒
@@ -64619,7 +64574,6 @@ mnts	𪀻
 mntt	𤘥
 mntv	𭞶
 mnty	𰠳
-mnu	𠂒
 mnvi	𢙆
 mnvj	𤚽
 mnvk	𡭶
@@ -64666,26 +64620,44 @@ mnyq	𭷦
 mnyq	𱟕
 mnyt	𮲇
 mnyw	𤚩
+mo	𠂒
 mpa	𢗌
 mpa	𱬷
 mpbh	𢤾
 mpbj	𢚰
+mpbj	𫤢
+mpbk	𬚬
+mpbx	𰺧
 mpcs	𢙉
+mpcv	𲒷
 mpdf	𧡳
 mpdh	𡥯
 mpdk	𤔱
 mpdk	𬐏
+mpdy	𪞄
 mpfb	𰒋
+mpfc	𭀳
 mpfi	𤔘
+mpfj	𧠺
+mpfm	𱥜
+mpfn	𠒑
+mpfn	𭀷
 mpfw	𪬀
+mpfy	𩒙
 mpfy	𮨚
+mpgd	𠓀
 mpgi	𢗕
+mpgk	𠒒
 mpgl	𱞳
+mpgm	𩣂
 mpgm	𩥓
 mpgo	𢝘
+mpgu	䢾
+mphi	𨾷
 mphj	𢣀
 mphr	𢞛
 mphr	𢞦
+mpht	𫤠
 mphw	𭜭
 mpja	𠚘
 mpja	𠚡
@@ -64696,22 +64668,49 @@ mpjl	𢣃
 mpjl	𫻣
 mpjo	𭜗
 mpjp	𢥡
+mpjr	𠒷
 mpjr	𢥯
+mpjv	㪇
 mpka	𢗘
 mpkd	𢝻
 mpkf	𱞢
 mpkh	𤕄
 mpki	𰀋
+mpkk	𠒣
 mpkq	㥰
 mpkq	𤔣
+mpks	𥏋
 mpkv	𠝄
+mpkv	𭀲
+mpld	𠸜
 mplf	𠚜
 mpli	𢛞
 mpli	𭶲
 mpll	𢤽
+mplm	𣭟
+mplm	𣭡
 mplp	𤕉
 mplv	𤕊
+mplx	𭀵
+mpmb	𧑯
+mpmb	𧖟
+mpmc	𮣄
+mpmf	𫌦
+mpmf	𲑸
+mpmg	𰼀
+mpmh	㬱
+mpmj	𣀹
+mpmk	𩱕
+mpmk	𩱩
+mpmk	𲓏
+mpmp	𠓙
+mpmq	𣀶
+mpmv	𤄳
+mpmv	𭄛
+mpmw	𲆌
+mpmx	𲟻
 mpne	㥚
+mpne	𠈣
 mpnm	㥌
 mpnn	𢤳
 mpnv	𰒞
@@ -64728,20 +64727,25 @@ mpps	𡐼
 mpps	𢣶
 mppy	𢣙
 mpra	𢝁
+mprd	𭀺
 mprj	𢗋
 mprl	𢡨
 mprs	𢤫
 mpsd	𬋬
 mpsi	𫹺
+mpsn	𪀷
 mpsn	𪅎
+mptk	㰫
 mptk	𰙗
 mptu	㣿
 mpu	𦥝
+mpvd	𠜎
 mpvd	𠞞
 mpvd	𦦌
 mpvh	𲬮
 mpvl	𢣹
 mpxu	𤔥
+mpxx	𮶌
 mpyt	𤨐
 mqbk	𫺘
 mqbm	𫻟
@@ -103084,6 +103088,7 @@ bi	𘱌
 bi	
 bi	
 bi	
+bi	
 bi	
 bjbj	
 bjcb	튩
@@ -104623,6 +104628,7 @@ ci	ᅲ
 ci	ㅠ
 ci	
 ci	
+ci	
 cjbj	ᆴ
 cjbj	ㄾ
 cjcb	륥
@@ -112562,6 +112568,7 @@ kjca	𘯩
 kje	⼙
 kje	ㄗ
 kje	ㆡ
+kje	
 kjfb	𗁁
 kjfi	𘠺
 kji	⼏
@@ -113563,6 +113570,8 @@ ma	⽖
 ma	⺤
 ma	⺥
 ma	爫
+ma	
+ma	
 mbi	𘦅
 mbi	
 mbmj	𛀃
@@ -113609,11 +113618,11 @@ mnsj	㈵
 mnsj	㊕
 mntq	怜
 mnu	⽜
-mnu	⺧
 mnu	𘳂
-mnu	
 mnxu	慄
 mo	⽨
+mo	⺧
+mo	
 mqbs	懞
 mqkp	慌
 mqkp	慌
@@ -113663,6 +113672,7 @@ mvne	𘭬
 mvnt	𘭭
 mvo	㋤
 mvo	ナ
+mvo	
 mvrj	た
 mvrr	だ
 mvtt	𘮄
@@ -113693,7 +113703,6 @@ na	㋡
 na	ッ
 na	ツ
 na	𘡍
-na	𘱾
 na	
 na	
 na	
@@ -115016,6 +115025,8 @@ nsi	⾷
 nsi	⻝
 nsi	⻞
 nsi	⻟
+nsi	
+nsi	
 nsjc	𛁽
 nsju	𘰋
 nska	年
@@ -115096,6 +115107,7 @@ nxa	⼩
 nxa	⺌
 nxa	𘡌
 nxa	𘮦
+nxa	𘱾
 nxbj	当
 nxfa	ㅼ
 nxfb	𗭸
@@ -118417,6 +118429,7 @@ vcwt	𗈜
 vcwt	𘜂
 vda	⺉
 vda	𘮖
+vda	
 vdfu	𛂠
 vdfy	洖
 vdpe	免
@@ -120454,8 +120467,6 @@ wi	𘳋
 wi	
 wi	
 wi	
-wi	
-wi	
 wjfr	㌳
 wjsa	𘣈
 wjsa	𘣉
@@ -120466,6 +120477,7 @@ wka	𛅥
 wka	고
 wka	노
 wka	𘢎
+wka	
 wkbb	𗃣
 wkbb	𗳤
 wkbb	𗳦
@@ -124508,7 +124520,7 @@ hvhv	孩子
 nnkf	答案
 jqyr	发现
 hsxf	社区
-cnmn	首先
+cnmp	首先
 jntk	作为
 hvfn	起来
 flnk	两个
@@ -124545,7 +124557,7 @@ dlmv	只有
 rynw	美国
 lknf	重要
 mndk	特别
-mntq	选择
+mptq	选择
 nbch	简单
 cyky	关系
 nwks	国家
@@ -124617,7 +124629,7 @@ fjhr	于是
 hrfh	最好
 wtha	以下
 dlnf	只要
-mnwd	告诉
+mdwd	告诉
 nfhr	要是
 smjv	城市
 mfvs	方法
@@ -124868,7 +124880,7 @@ wcwl	说话
 xrhv	样子
 nnfn	从来
 thjq	提供
-hgmn	广告
+hgmd	广告
 gdvv	台湾
 wljn	评价
 csfw	结婚
@@ -125001,7 +125013,7 @@ ydhg	态度
 whvq	香港
 nnnx	从小
 clxm	前面
-mnmw	造成
+mdmw	造成
 lbnm	不断
 tqxt	描述
 mfjf	方便
@@ -125074,7 +125086,7 @@ chjb	单位
 xdxd	想想
 kbps	的确
 hrcg	最高
-mnje	先生
+mpje	先生
 gtch	思维
 vpky	淘宝
 kdfv	追求
@@ -125440,7 +125452,7 @@ lklj	肌肉
 djjl	叫做
 kskc	家长
 yfcb	规则
-rpmn	点赞
+rpmp	点赞
 hkrl	矛盾
 mnrp	特点
 jljv	任务
@@ -125453,7 +125465,7 @@ ffxd	互相
 hwjm	文件
 jdgn	保险
 jtrf	化妆
-mnwc	靠谱
+mdwc	靠谱
 dlnr	只会
 jwlw	仍然
 nhjn	合作
@@ -125563,7 +125575,7 @@ xdyx	整理
 dknb	中学
 xnxh	检查
 fhbl	好意
-mnmn	制造
+mnmd	制造
 gkrl	气质
 jjkv	收到
 pcjf	顺便
@@ -125607,7 +125619,7 @@ nwqh	困难
 fgxm	画面
 gtfv	思路
 ljfh	刚好
-ncmn	创造
+ncmd	创造
 gjdj	附近
 mvxd	快速
 vtgg	浪费
@@ -125725,7 +125737,7 @@ csnk	半个
 ggwp	强调
 blmw	亲戚
 cgfi	高一
-mnlj	赞同
+mplj	赞同
 whtk	称为
 fcld	厕所
 tpry	抱着
@@ -125928,7 +125940,7 @@ mwsl	成都
 hrfy	明天
 mccl	连续
 wnsr	论坛
-tkmn	报告
+tkmd	报告
 mxto	采用
 qkci	基金
 jxjb	偶像
@@ -126477,7 +126489,7 @@ hsnb	视觉
 kfrp	安卓
 nxxf	小区
 qwdj	获取
-mnls	选手
+mpls	选手
 ydrj	奋斗
 mxgt	心思
 jdwm	保留
@@ -126602,7 +126614,7 @@ wkhb	犹豫
 hsbt	视角
 dmdm	睡眠
 klvg	加油
-jjmn	依靠
+jjmd	依靠
 mlfq	愤怒
 lska	手上
 nxmg	策划
@@ -126816,7 +126828,7 @@ kvls	到手
 msjd	情侣
 nxcl	当前
 lbkf	否定
-mnfq	造型
+mdfq	造型
 wdwc	敢说
 lbyd	不爽
 knhg	临床
@@ -126927,7 +126939,7 @@ mwhr	成果
 mxxd	心想
 jlkf	做完
 gnms	阶层
-mnrj	先进
+mprj	先进
 kxhv	穿越
 lnhd	谷歌
 jqbl	发音
@@ -127212,7 +127224,7 @@ bcth	负担
 lbtg	不良
 vtvg	浙江
 mcgb	惊艳
-cjmn	塑造
+cjmd	塑造
 hhwn	默认
 lgkf	公安
 gkgk	气氛
@@ -127225,7 +127237,7 @@ bmlq	希腊
 rjsl	冷静
 bmne	军人
 ktha	往下
-cjmn	改造
+cjmd	改造
 slkh	都得
 nxjd	当事
 gynm	参数
@@ -127296,7 +127308,7 @@ lvnm	此类
 hcqk	预期
 dlwh	只剩
 vjvi	流水
-hdmn	可靠
+hdmd	可靠
 kjfp	几万
 rqjs	反馈
 ydgk	大气
@@ -127456,7 +127468,7 @@ fstw	压抑
 klcf	边缘
 lvjv	此处
 lxwh	名称
-jsmn	优先
+jsmp	优先
 lsmq	看懂
 ggts	强势
 hrhr	昨晚
@@ -127531,7 +127543,7 @@ vhwh	温和
 vjjr	流传
 jsrl	优质
 mqhl	懂了
-mnjc	造出
+mdjc	造出
 hrhv	量子
 gnkc	队长
 lbvt	不忍
@@ -127625,7 +127637,7 @@ clmf	前方
 jljx	偏向
 nmhr	粗暴
 tgrj	抬头
-mndj	靠近
+mddj	靠近
 fwfr	厌恶
 wtkt	以往
 rjlb	决不
@@ -127810,7 +127822,7 @@ kjjv	几条
 rjlh	头脑
 fllb	再不
 lkxl	千里
-mnrf	先后
+mprf	先后
 klka	边上
 tshr	热量
 ljlx	内外
@@ -127880,7 +127892,7 @@ kwdm	盲目
 fnry	来着
 mcvy	转变
 fyhv	被子
-tpmn	挑选
+tpmp	挑选
 drps	号码
 bjfv	寻求
 nmvn	糊涂
@@ -127888,7 +127900,7 @@ slkh	教徒
 kgwl	审计
 wkyd	犹太
 wpbm	询问
-mnks	告知
+mdks	告知
 thps	打破
 fvnq	跳舞
 fllk	两千
@@ -127940,7 +127952,7 @@ dmgt	眼界
 lhvn	脑海
 jqhs	发射
 fvhr	跑题
-ntmn	领先
+ntmp	领先
 jrcg	传递
 brkh	写字
 dhvi	喝水
@@ -128062,7 +128074,7 @@ lxdj	名叫
 djjm	近代
 wllv	评分
 kllv	加分
-mnry	靠着
+mdry	靠着
 thyf	打球
 cvgk	帅气
 mvms	布局
@@ -128147,7 +128159,7 @@ rpmv	占有
 msbx	屠杀
 lgmf	平方
 djqk	近期
-mngc	选项
+mpgc	选项
 cccg	丝毫
 pvxh	鼠标
 lbfk	还原
@@ -128220,7 +128232,7 @@ lgvp	平淡
 cgkl	绑架
 wfrm	司马
 vthr	注明
-mnfy	先天
+mpfy	先天
 kgrj	骨头
 fqdr	型号
 nbfl	学妹
@@ -128241,7 +128253,7 @@ knnk	监管
 tkhs	托福
 jlbl	任意
 yscm	琢磨
-ncmn	筛选
+ncmp	筛选
 mxcb	采购
 jmra	代言
 kxlh	窗户
@@ -128263,7 +128275,7 @@ jcha	停下
 thms	扩展
 lxmv	外貌
 yckc	班长
-thmn	打造
+thmd	打造
 nhhr	复旦
 cglm	细腻
 kxka	穿上
@@ -128382,7 +128394,7 @@ vnxl	海里
 twtj	抵抗
 cfjv	线条
 dnqc	吃药
-mnnl	选举
+mpnl	选举
 hvpe	孩儿
 cmtk	摩擦
 qbnl	荣誉
@@ -128545,7 +128557,7 @@ mvjn	有個
 bjrr	建議
 cmmf	關於
 mfhr	於是
-mnrd	告訴
+mdrd	告訴
 nfjn	每個
 rlrn	評論
 fwdb	歷史
@@ -128697,7 +128709,7 @@ rcrl	説話
 rlrl	說話
 xrhv	樣子
 knrl	從來
-hgmn	廣告
+hgmd	廣告
 sdvr	臺灣
 rljn	評價
 ysfw	結婚
@@ -129046,14 +129058,14 @@ jvjn	各個
 blfj	意見
 kshc	家長
 yfnb	規則
-hhmn	點贊
+hhmp	點贊
 mnhh	特點
 jlhk	任務
 rkjq	設備
 nsyw	年級
 jdgn	保險
 jtwf	化妝
-mnrc	靠譜
+mdrc	靠譜
 dlnf	只會
 fjkv	見到
 yjfi	統一
@@ -129117,7 +129129,7 @@ hhmf	雙方
 pbfw	學歷
 dkpb	中學
 xnxh	檢查
-mnmn	製造
+mnmd	製造
 gkdj	氣質
 pcjf	順便
 pbkx	學術
@@ -129146,7 +129158,7 @@ vhbj	漫畫
 nwqf	困難
 bjxm	畫面
 ljfh	剛好
-ntmn	創造
+ntmd	創造
 vtgg	浪費
 fknb	原則
 jgvq	充滿
@@ -129216,7 +129228,7 @@ fvne	兩人
 csjn	半個
 ggrp	強調
 blmw	親戚
-mnlj	贊同
+mplj	贊同
 whmw	稱爲
 whtw	稱為
 hgld	廁所
@@ -129348,7 +129360,7 @@ hwqs	文藝
 rmtr	證據
 kcys	連續
 rnsj	論壇
-srmn	報告
+srmd	報告
 tmto	採用
 bfgn	危險
 vlqs	活著
@@ -129940,7 +129952,7 @@ hwgj	進攻
 kbmn	寵物
 vvmx	決心
 gtms	階層
-mnhw	先進
+mphw	先進
 mgbl	發音
 hwrh	文獻
 fhcm	好麽
@@ -130266,7 +130278,7 @@ fhtw	壓抑
 nvyf	邊緣
 lvrh	此處
 lxwh	名稱
-jfmn	優先
+jfmp	優先
 ggsl	強勢
 mgjg	發育
 kfjm	宣佈
@@ -130478,7 +130490,7 @@ shxm	場面
 jcgm	伴隨
 gyjk	幾條
 fdlp	頭腦
-mnkg	先後
+mpkg	先後
 nvka	邊上
 slhr	熱量
 ljlx	內外
@@ -130562,7 +130574,7 @@ yhqk	維基
 lpvn	腦海
 mghs	發射
 fvhr	跑題
-ntmn	領先
+ntmp	領先
 jkrr	傳遞
 kpkh	寫字
 cjhw	改進
@@ -130631,7 +130643,7 @@ lxrf	外語
 klgk	力氣
 qxfn	萬元
 rllv	評分
-mnqs	靠著
+mdqs	靠著
 kdgk	帥氣
 jmms	佈局
 cnkc	就連

@@ -104889,6 +104889,8 @@ bsa	⽖
 bsa	⺤
 bsa	⺥
 bsa	爫
+bsa	
+bsa	
 bsghj	爵
 bsghj	爵
 bsmcu	𛁊
@@ -107174,8 +107176,6 @@ ci	𘳋
 ci	
 ci	
 ci	
-ci	
-ci	
 cjbbu	과
 cjbbu	놔
 cjbci	곽
@@ -117083,6 +117083,7 @@ ksi	⺰
 ksi	𛁄
 ksi	𛁅
 ksi	
+ksi	
 ksjke	
 ksmds	㍈
 ksxci	㍉
@@ -118667,6 +118668,7 @@ mo	𛂍
 mo	𛅕
 mo	𘠛
 mo	
+mo	
 mo	
 mo	
 mo	
@@ -119191,6 +119193,7 @@ mzne	𛀍
 mznnd	𘮄
 mzo	㋤
 mzo	ナ
+mzo	
 mzso	た
 mzsso	だ
 mztjo	𛂲
@@ -119357,6 +119360,7 @@ pqhdk	🐶
 pqhdk	🦮
 pqi	⽝
 pqi	⺨
+pqi	
 pqjck	🦍
 pqjck	🦧
 pqjkc	獵
@@ -119495,6 +119499,7 @@ rje	⼙
 rje	⺋
 rje	ㄗ
 rje	ㆡ
+rje	
 rjfbb	파
 rjfbc	팍
 rjfbc	팎
@@ -123628,6 +123633,8 @@ wka	⾷
 wka	⻝
 wka	⻞
 wka	⻟
+wka	
+wka	
 wkcci	숚
 wkcdl	숞
 wkcfd	飼
@@ -126015,6 +126022,7 @@ ycvi	𘰉
 ycwo	𘰍
 ydi	⺉
 ydi	𘮖
+ydi	
 ydji	🈻
 ydlne	𣫺
 ydtls	繁

@@ -610,8 +610,8 @@ mgm	剗
 mgy	谿
 mlq	爰
 mnl	邾
-mnp	酇
 mnx	悃
+mpm	酇
 msd	擘
 msk	屦
 mss	尻
@@ -866,7 +866,7 @@ ko	知
 ku	得
 lo	还
 me	有
-mo	告
+mo	友
 mu	特
 no	回
 qa	英
@@ -903,6 +903,7 @@ bri	写
 cfi	缘
 cla	鐵
 cmi	開
+cmo	開始
 cna	京
 cno	道
 cpu	釣
@@ -926,6 +927,8 @@ fqu	型
 fwi	婚
 ggi	引
 gme	阵
+hda	歌
+hde	可以
 hgi	應
 hgo	度
 hgu	底
@@ -980,11 +983,9 @@ mgi	或
 mgu	發
 mji	爲什麽
 mna	物
-mne	先
 mqu	怪
 mse	情
 mso	展
-mvo	友
 mvu	在
 nbu	購
 ndi	算
@@ -1009,6 +1010,7 @@ qme	藏
 qsi	著
 qwa	获
 qwu	获得
+rco	讓
 rjo	进
 rle	話
 rpa	点
@@ -1032,6 +1034,7 @@ vnu	海
 vpe	沒有
 vsi	法
 vte	浪
+vti	泳
 wha	利
 wle	话
 wqu	谋
@@ -1043,6 +1046,7 @@ xdi	想
 xdu	相
 xfa	欧
 xri	樣
+ybu	纔
 yfa	現
 yfo	經
 yji	總
@@ -10936,29 +10940,37 @@ mcyfy	辏
 mdddj	懾
 mddhi	懼
 mddli	憚
+mddna	鹄
 mddnb	懫
 mddqo	戄
 mddrk	愕
 mddxu	懆
 mdfyd	悮
+mdfye	頶
+mdgu	郜
 mdhri	慒
 mdji	忻
 mdkcb	愦
 mdki	忡
+mdkli	勂
 mdknb	憒
 mdla	怾
 mdle	悁
 mdlfu	慺
 mdnbe	愪
+mdo	告
 mdpa	悒
 mdpe	怳
 mdpi	怶
 mdqqo	慑
 mdrce	憹
+mdsna	鵠
 mdtka	惞
+mdwo	造
 mdwyd	悞
 mdxje	懦
 mdya	悜
+mdyfe	靠
 mfa	方
 mfbmh	旘
 mfbss	旔
@@ -11253,18 +11265,10 @@ mnchj	犜
 mnco	忦
 mncpb	犥
 mnda	憛
-mnddn	鹄
-mndfy	頶
-mndgu	郜
-mndkl	勂
 mndna	鸫
-mndo	告
 mndo	恛
 mndo	吿
-mndsn	鵠
-mndwo	造
 mndwa	犑
-mndyf	靠
 mnfkd	牾
 mnfpg	牼
 mnfhr	懀
@@ -11322,20 +11326,12 @@ mnnpe	牭
 mnnrm	慍
 mnnwu	恍
 mnnya	牷
-mnpmc	赞
-mnpe	先
 mnpe	怬
-mnpmg	酂
-mnpmg	酇
 mnpjj	犓
 mnpka	物
 mnpkm	惣
-mnpmn	贊
 mnpkn	鿯
-mnpmp	兟
-mnpmv	劗
 mnpnv	犣
-mnpwo	选
 mnqpb	憮
 mnqkt	犕
 mnrkm	犠
@@ -11373,18 +11369,26 @@ mpbja	恟
 mpcsi	怉
 mpcsi	爮
 mpdo	怐
+mpe	先
 mphhv	惸
 mphri	恂
 mpi	愧
 mpjbi	惱
 mpkmx	惚
 mpkmx	愡
+mpmcb	赞
+mpmgu	酂
+mpmgu	酇
+mpmnb	贊
+mpmpe	兟
+mpmvd	劗
 mppkl	憦
 mppo	惔
 mprla	懙
 mprrj	恌
 mpsdo	惆
 mpu	舀
+mpwo	选
 mqbss	懞
 mqda	愺
 mqdhi	懽
@@ -32861,7 +32865,6 @@ dmnsk	𭾮
 dmnti	𬑆
 dmnrt	𰦋
 dmntu	𱲩
-dmnu	𭇆
 dmnu	𰠧
 dmnhv	𥋠
 dmnwu	𥃺
@@ -32880,6 +32883,7 @@ dmnyo	𥆺
 dmnyd	𭿎
 dmnyd	𱲱
 dmnyd	𲲡
+dmo	𭇆
 dmpa	𠵺
 dmpa	𱲫
 dmpba	𥄧
@@ -62771,6 +62775,8 @@ mdbi	𲟶
 mdbji	𪜃
 mdbji	𰒅
 mdbkl	𭄧
+mdcps	𭍁
+mdcsa	𡷥
 mdddo	𫺢
 mdddo	𰒡
 mddjc	㦍
@@ -62783,6 +62789,7 @@ mddmg	𢥇
 mddne	㦭
 mddo	𢙲
 mddo	𤔑
+mddpi	𤿩
 mddrk	𱟊
 mddvi	𢠮
 mddya	𪬮
@@ -62790,44 +62797,73 @@ mdfca	𢢪
 mdfcs	𲠉
 mdfdo	𢤓
 mdfi	𱱵
+mdfja	𧠼
 mdfjo	𫺃
 mdfla	𭜾
 mdga	𰑪
 mdgge	𫺻
 mdgu	𢝞
+mdhi	䧼
 mdhi	𭟙
+mdhka	𡀻
+mdhu	𮰕
 mdjcu	𱬾
 mdje	𢙘
 mdjjo	𤕈
+mdjvi	𢽍
 mdjvi	𪺒
+mdkba	𬐊
+mdkcj	𢁏
+mdkls	𭣂
 mdkli	𰑍
 mdkmx	㥙
 mdkrm	𢝈
+mdku	𬆧
 mdla	𬋦
 mdldo	𤔦
 mdlle	𫻠
 mdlle	𭟘
 mdlmx	𲠹
 mdlqo	𤔬
+mdmdo	𠼑
+mdmdo	𭌳
 mdmge	𢟘
+mdmge	𫻵
 mdmu	𥄃
 mdmu	𭜜
+mdmxi	𰑣
 mdnco	𢚻
+mdnjv	𫿜
 mdnwi	𲠂
+mdnyo	𮠭
 mdpe	𪺎
+mdpka	𠵞
+mdptu	𫧂
+mdqi	𢍎
 mdqo	𢛏
 mdqo	𪺐
 mdqo	𰇂
+mdqrj	𪽀
 mdrce	𢤟
+mdrwo	𬩙
+mdrwo	𬩭
+mdsle	𳊗
 mdti	𢚉
 mdtu	𢘛
+mdvda	𠜯
 mdvke	𭶴
+mdwdo	𪢡
 mdwgi	𤔞
 mdwi	㤴
 mdwi	𠃭
 mdwle	𢥻
+mdwla	𨖰
+mdxrm	𥂷
 mdxu	𰑠
 mdxu	𰠀
+mdxxi	䎋
+mdywo	𨘴
+mdyyd	𮧈
 mfbfc	㫉
 mfbkc	𣄈
 mfblv	𢜀
@@ -63473,6 +63509,7 @@ mgsvu	𫻿
 mgswu	𱫳
 mgta	𤔉
 mgta	𪽋
+mgta	𱰩
 mgtgg	𰢝
 mgtka	𣢚
 mgto	𢦨
@@ -63855,6 +63892,7 @@ mkssi	𢜿
 mkssk	𲠞
 mkswo	𢤪
 mkti	𰑏
+mktka	𣢳
 mktka	𣣳
 mktmg	𱞛
 mktu	𤓲
@@ -63875,6 +63913,7 @@ mkydo	𫻀
 mkyfu	𤔅
 mkyi	𱞚
 mkywo	𨘺
+mla	𭁆
 mlbi	𰑂
 mlbkl	𭜲
 mlbkl	𰑰
@@ -64107,55 +64146,23 @@ mnchr	𤜀
 mncys	㹖
 mncsa	𡵣
 mncvd	𢤣
-mndcs	𡷥
-mndkc	𢁏
 mndfc	𤙿
-mndmd	𠼑
 mnddo	𢠑
-mnddp	𤿩
-mndwd	𪢡
 mnddo	𬌞
-mndmd	𭌳
 mndlf	𤛠
-mndfj	𧠼
 mndfi	𱭬
-mndhi	䧼
 mndhi	𤜅
-mndhu	𮰕
 mndji	㸫
-mndjv	𢽍
-mndnj	𫿜
-mndpk	𠵞
-mndhk	𡀻
-mndku	𬆧
-mndkb	𬐊
-mndwl	𨖰
-mndkl	𭣂
-mndsl	𳊗
-mndmg	𫻵
-mndmx	𰑣
 mnddn	𤜙
 mndnb	𪬱
-mndny	𮠭
 mndkn	𰠼
 mndo	𤘘
 mndpi	𤙎
 mndpa	𤙝
-mndcp	𭍁
-mndqi	𢍎
-mndxr	𥂷
-mndqr	𪽀
-mndpt	𫧂
 mndti	𭇤
-mndvd	𠜯
-mndyw	𨘴
-mndrw	𬩙
-mndrw	𬩭
 mndwo	𭝽
 mndxj	㹘
-mndxx	䎋
 mndfy	𤙬
-mndyy	𮧈
 mnfcj	𰠪
 mnfdo	𫺧
 mnfgf	㹔
@@ -64203,7 +64210,6 @@ mngo	𢘐
 mngpe	𭷙
 mngta	𢟷
 mnggt	𤛤
-mngta	𱰩
 mngu	𬩶
 mngu	𮠉
 mngu	𰻨
@@ -64304,12 +64310,10 @@ mnksa	𤙽
 mnkss	𤚣
 mnksu	𤛋
 mnkti	㸰
-mnktk	𣢳
 mnku	𤼺
 mnkyf	𤙈
 mnkya	𤚝
 mnla	𬌙
-mnla	𭁆
 mnlbu	𤘢
 mnlbb	𧑤
 mnlbi	𰠫
@@ -64444,7 +64448,7 @@ mnnle	𤙜
 mnnls	𤙱
 mnnli	𲭛
 mnntm	𤚋
-mnnnp	𮟾
+mnnpa	𮟾
 mnntq	㸳
 mnnro	㸲
 mnnse	㸱
@@ -64457,86 +64461,37 @@ mnnfx	𤙛
 mnnxx	𤛣
 mnnyd	㸶
 mnpa	㸭
-mnpmb	𧑯
-mnpmb	𧖟
-mnpbx	𰺧
 mnpca	㸪
-mnpfc	𭀳
 mnpcs	𭷝
-mnpmc	𮣄
 mnppd	㹙
 mnppd	㹚
-mnpgd	𠓀
-mnpld	𠸜
 mnpdo	𤘽
-mnprd	𭀺
 mnpsd	𲭡
 mnprf	𤙊
-mnpfj	𧠺
-mnpfy	𩒙
-mnpmf	𫌦
-mnpfm	𱥜
-mnpmf	𲑸
-mnpgu	䢾
-mnpgm	𩣂
 mnpgi	𭷖
-mnpmg	𰼀
-mnpmh	㬱
-mnphi	𨾷
 mnpi	𤛂
-mnpjv	㪇
-mnpmj	𣀹
 mnpjo	𤘪
-mnpbj	𫤢
 mnplj	𰠶
-mnpgk	𠒒
-mnpkk	𠒣
 mnpkk	𠡵
 mnpkk	𢒢
 mnppk	𤛮
-mnpks	𥏋
-mnpmk	𩱕
-mnpmk	𩱩
-mnpbk	𬚬
-mnpmk	𲓏
-mnplm	𣭟
-mnplm	𣭡
 mnpkm	㹅
 mnpbm	𢜓
 mnpkm	𢝰
 mnpkm	𤙹
-mnpmx	𲟻
-mnpne	𠈣
-mnpfn	𠒑
 mnpnn	𤚂
 mnpnn	𤛃
-mnpfn	𭀷
 mnpo	𤘭
-mnpmp	𠓙
 mnpkp	𤊘
 mnppo	𤑀
 mnppo	𪺯
-mnpmq	𣀶
-mnpjr	𠒷
 mnprr	𤙔
 mnpra	𤜋
 mnprr	𤜓
-mnpsn	𪀷
 mnpks	𫙦
-mnptk	㰫
-mnpht	𫤠
-mnpvd	𠜎
-mnpmv	𤄳
-mnpkv	𭀲
-mnpmv	𭄛
 mnpkv	𭱮
-mnpcv	𲒷
-mnpmw	𲆌
 mnpkw	𲏧
-mnplx	𭀵
 mnpkx	𭬲
-mnpxx	𮶌
-mnpdy	𪞄
 mnqmb	𤛻
 mnqmb	𤜐
 mnqxb	𤜒
@@ -64619,7 +64574,6 @@ mntsn	𪀻
 mntti	𤘥
 mntvd	𭞶
 mntya	𰠳
-mnu	𠂒
 mnvi	𢙆
 mnvjc	𤚽
 mnvke	𡭶
@@ -64666,26 +64620,44 @@ mnylq	𭷦
 mnyqi	𱟕
 mnytu	𮲇
 mnywh	𤚩
+mo	𠂒
 mpa	𢗌
 mpa	𱬷
 mpbhv	𢤾
 mpbja	𢚰
+mpbje	𫤢
+mpbka	𬚬
+mpbxi	𰺧
 mpcsa	𢙉
+mpcvd	𲒷
 mpdfj	𧡳
 mpdhv	𡥯
 mpdku	𤔱
 mpdkb	𬐏
+mpdyd	𪞄
 mpfbi	𰒋
+mpfcb	𭀳
 mpfi	𤔘
+mpfja	𧠺
+mpfmu	𱥜
+mpfnw	𠒑
+mpfnb	𭀷
 mpfwi	𪬀
+mpfye	𩒙
 mpfye	𮨚
+mpgdo	𠓀
 mpgi	𢗕
+mpgki	𠒒
 mpgle	𱞳
+mpgma	𩣂
 mpgma	𩥓
 mpgo	𢝘
+mpgu	䢾
+mphi	𨾷
 mphjc	𢣀
 mphrk	𢞛
 mphri	𢞦
+mphti	𫤠
 mphwe	𭜭
 mpja	𠚘
 mpja	𠚡
@@ -64696,22 +64668,49 @@ mpjli	𢣃
 mpjli	𫻣
 mpjo	𭜗
 mpjpo	𢥡
+mpjra	𠒷
 mpjrc	𢥯
+mpjvi	㪇
 mpka	𢗘
 mpkdm	𢝻
 mpkfo	𱞢
 mpkhr	𤕄
 mpki	𰀋
+mpkkc	𠒣
 mpkqo	㥰
 mpkqo	𤔣
+mpksi	𥏋
 mpkvd	𠝄
+mpkvo	𭀲
+mpldo	𠸜
 mplfi	𠚜
 mpli	𢛞
 mpli	𭶲
 mplla	𢤽
+mplma	𣭟
+mplma	𣭡
 mplpo	𤕉
 mplvk	𤕊
+mplxi	𭀵
+mpmbo	𧑯
+mpmbo	𧖟
+mpmci	𮣄
+mpmfj	𫌦
+mpmfm	𲑸
+mpmgu	𰼀
+mpmhr	㬱
+mpmjv	𣀹
+mpmki	𩱕
+mpmki	𩱩
+mpmkl	𲓏
+mpmpe	𠓙
+mpmqo	𣀶
+mpmvi	𤄳
+mpmvd	𭄛
+mpmwo	𲆌
+mpmxi	𲟻
 mpne	㥚
+mpne	𠈣
 mpnmi	㥌
 mpnnb	𢤳
 mpnvo	𰒞
@@ -64728,20 +64727,25 @@ mppsu	𡐼
 mppsk	𢣶
 mppya	𢣙
 mpra	𢝁
+mprdo	𭀺
 mprje	𢗋
 mprli	𢡨
 mprsk	𢤫
 mpsdo	𬋬
 mpsi	𫹺
+mpsna	𪀷
 mpsna	𪅎
+mptka	㰫
 mptka	𰙗
 mptu	㣿
 mpu	𦥝
+mpvda	𠜎
 mpvda	𠞞
 mpvdo	𦦌
 mpvhr	𲬮
 mpvla	𢣹
 mpxu	𤔥
+mpxxi	𮶌
 mpytu	𤨐
 mqbkl	𫺘
 mqbmx	𫻟
@@ -103084,6 +103088,7 @@ bi	𘱌
 bi	
 bi	
 bi	
+bi	
 bi	
 bjbji	
 bjccb	튩
@@ -104623,6 +104628,7 @@ ci	ᅲ
 ci	ㅠ
 ci	
 ci	
+ci	
 cjbji	ᆴ
 cjbji	ㄾ
 cjccb	륥
@@ -112562,6 +112568,7 @@ kjca	𘯩
 kje	⼙
 kje	ㄗ
 kje	ㆡ
+kje	
 kjfbi	𗁁
 kjfi	𘠺
 kji	⼏
@@ -113563,6 +113570,8 @@ ma	⽖
 ma	⺤
 ma	⺥
 ma	爫
+ma	
+ma	
 mbi	𘦅
 mbi	
 mbmjv	𛀃
@@ -113609,11 +113618,11 @@ mnsjc	㈵
 mnsjc	㊕
 mntqo	怜
 mnu	⽜
-mnu	⺧
 mnu	𘳂
-mnu	
 mnxu	慄
 mo	⽨
+mo	⺧
+mo	
 mqbss	懞
 mqkpe	慌
 mqkpe	慌
@@ -113663,6 +113672,7 @@ mvne	𘭬
 mvntu	𘭭
 mvo	㋤
 mvo	ナ
+mvo	
 mvrje	た
 mvrrj	だ
 mvttu	𘮄
@@ -113693,7 +113703,6 @@ na	㋡
 na	ッ
 na	ツ
 na	𘡍
-na	𘱾
 na	
 na	
 na	
@@ -115016,6 +115025,8 @@ nsi	⾷
 nsi	⻝
 nsi	⻞
 nsi	⻟
+nsi	
+nsi	
 nsjcu	𛁽
 nsju	𘰋
 nska	年
@@ -115096,6 +115107,7 @@ nxa	⼩
 nxa	⺌
 nxa	𘡌
 nxa	𘮦
+nxa	𘱾
 nxbji	当
 nxfa	ㅼ
 nxfkb	𗭸
@@ -118417,6 +118429,7 @@ vcwti	𗈜
 vcwti	𘜂
 vda	⺉
 vda	𘮖
+vda	
 vdfu	𛂠
 vdfyd	洖
 vdpe	免
@@ -120454,8 +120467,6 @@ wi	𘳋
 wi	
 wi	
 wi	
-wi	
-wi	
 wjfrp	㌳
 wjsa	𘣈
 wjsa	𘣉
@@ -120466,6 +120477,7 @@ wka	𛅥
 wka	고
 wka	노
 wka	𘢎
+wka	
 wkbbi	𗃣
 wkbbi	𗳤
 wkbbi	𗳦

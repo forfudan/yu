@@ -82,9 +82,8 @@ font,ma,pinyin
 乚,Ei,yí = i
 ,Ei,
 ,Ei,
-,Ei,
-,Ei,
 ,Ei,
+,Ei,
 隹,Eh,ZHuī -> h ㊟取第二字母h
 ,Er,rén -> r
 ,Ez,Zuǒ -> z
@@ -125,7 +124,7 @@ font,ma,pinyin
 ,Hk,
 牙,Ha,yá -> a ㊟取韻a
 犬,Hq,Quǎn -> q
-犭,Hq,
+,Hq,
 臣,Hc,CHén -> c
 ,Hc,
 ,Hc,
@@ -220,7 +219,7 @@ font,ma,pinyin
 乌,Mw,wū -> w
 豸,Mz,ZHì -> z
 刀,Md,Dāo -> d
-刂,Md,Dāo -> d
+,Md,Dāo -> d
 禾,Mh,Hé -> h
 毛,Mm,Máo -> m
 千,Mq,Qiān -> q

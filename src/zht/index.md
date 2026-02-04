@@ -25,7 +25,7 @@ hero:
       link: /zht/docs/install
     - theme: alt
       text: 體驗
-      link: /zht/ime/ling
+      link: /zht/pad/ling
     - theme: alt
       text: 跟打
       link: https://genda.shurufa.app
@@ -41,7 +41,7 @@ import UnifiedSchemeInterface from '@/unified/UnifiedSchemeInterface.vue'
 
 <div class="zigen-font">
 <UnifiedSchemeInterface 
-  :visibleSchemes="['star', 'joy', 'ling', 'ming']"
+  :visibleSchemes="['light', 'star', 'joy', 'ling', 'ming']"
   defaultScheme="ling"
 />
 </div>
