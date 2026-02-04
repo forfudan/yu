@@ -230,7 +230,7 @@ font,ma,pinyin
 巴,Ob,Bā -> b
 亍,Oc,CHù -> c
 隹,Oc,Cuī -> c
-刂,Od,Dāo -> d
+,Od,Dāo -> d
 飛,Of,Fēi -> f
 古,Og,Gǔ -> g
 乙,Oi,yǐ = ǐ
@@ -283,7 +283,7 @@ font,ma,pinyin
 鳥,Qn,Niǎo -> n
 ,Qn,
 犬,Qq,Quǎn -> q
-犭,Qq,
+,Qq,
 石,Qs,SHí -> s
 烏,Qw,wū -> w
 ,Qw,

@@ -41,7 +41,7 @@ import UnifiedSchemeInterface from '@/unified/UnifiedSchemeInterface.vue'
 
 <div class="zigen-font">
 <UnifiedSchemeInterface 
-  :visibleSchemes="['star', 'joy', 'ling', 'ming']"
+  :visibleSchemes="['light', 'star', 'joy', 'ling', 'ming']"
   defaultScheme="ling"
 />
 </div>
