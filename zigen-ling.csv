@@ -204,17 +204,17 @@ font,ma,pinyin
 齒,lci,Ĉǐ
 飛,lfe,Fēi -> Fe
 ,mvo,Zuǒ -> Zo 🈤Z和Ẑ作V 🈑左本字
-车,mce,Ĉē
-牛,mnu,Niú -> Nu
-,mnu,㊟同牛歸併
-尸,msi,Ŝī -> Si
-,msi,㊟同尸歸併
-,msi,㊟同尸歸併
 七,mi,Qī -> i 🈤不取聲母
 ,mi,㊟同七歸併
 弋,myi,Yì -> yi
 戈,mge,Gē
 戊,mwu,Wù
+车,mce,Ĉē
+牛,mnu,Niú -> Nu
+,mo,🈤無讀音取o
+尸,msi,Ŝī -> Si
+,msi,㊟同尸歸併
+,msi,㊟同尸歸併
 心,mxi,Xīn -> Xi
 ,mi,Xīn -> i 🈤不取聲母 ㊟俗稱豎心旁
 方,mfa,Fāŋ -> Fa
@@ -337,7 +337,7 @@ font,ma,pinyin
 亦,vyi,Yì
 ,vyi,
 刀,va,Dāo -> a 🈤不取聲母
-刂,vda,Dāo -> Da ㊟俗稱立刀旁
+,vda,Dāo -> Da ㊟俗稱立刀旁
 巾,vji,Jīn -> Ji
 且,vke,Qiě -> Ke 🈤Q作K
 ,vo,🈤無讀音取o
@@ -347,7 +347,7 @@ font,ma,pinyin
 ,vo,🈤無讀音取o
 甫,vu,Fǔ -> u 🈤不取聲母
 犬,wa,Quǎn -> a 🈤不取聲母
-犭,wka,Quǎn -> Ka 🈤Q作K ㊟俗稱反犬旁
+,wka,Quǎn -> Ka 🈤Q作K ㊟俗稱反犬旁
 乃,wna,Nǎi -> Na
 乙,wi,Yǐ -> i 🈤基本筆畫不取聲母 ㊟一切折筆皆同碼
 乚,wi,Yí -> i 🈤基本筆畫不取聲母 ㊟一切折筆皆同碼
