@@ -69,7 +69,7 @@ const modifiedDynamicStats = ref<DynamicStats | null>(null)
 // 加載字符集數據
 async function loadCharsetData() {
   try {
-    const response = await fetch('https://raw.githubusercontent.com/forfudan/yuhao-assess/main/public/data/charsets.json')
+    const response = await fetch('https://cdn.jsdelivr.net/gh/forfudan/yuhao-assess-data@main/data/charsets.json')
     charsetData.value = await response.json()
   } catch (error) {
     console.error('Failed to load charset data:', error)
@@ -81,12 +81,12 @@ async function loadCharsetData() {
 async function loadCharFrequencies() {
   try {
     // 使用jsdelivr CDN加載yuhao-assess項目的字頻數據
-    const baseUrl = 'https://cdn.jsdelivr.net/gh/forfudan/yuhao-assess@main/public/data'
+    const baseUrl = 'https://cdn.jsdelivr.net/gh/forfudan/yuhao-assess-data@main'
     const [zhihuRes, scRes, tcRes, gujiRes] = await Promise.all([
-      fetch(`${baseUrl}/charFrequencyZhihu.json`),
-      fetch(`${baseUrl}/charFrequencySC.json`),
-      fetch(`${baseUrl}/charFrequencyTC.json`),
-      fetch(`${baseUrl}/charFrequencyGuji.json`)
+      fetch(`${baseUrl}/data/charAbsoluteFrequencyZhihu.json`),
+      fetch(`${baseUrl}/data/charAbsoluteFrequencySC.json`),
+      fetch(`${baseUrl}/data/charAbsoluteFrequencyTC.json`),
+      fetch(`${baseUrl}/data/charAbsoluteFrequencyGuji.json`)
     ])
     
     // 檢查所有響應是否成功

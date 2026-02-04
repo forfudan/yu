@@ -2106,6 +2106,7 @@ ajj	𰆊
 ajj	⺋
 ajj	⼙
 ajj	ㆡ
+ajj	
 ajja	𣚏
 ajja	𣝇
 ajjb	欔
@@ -26586,6 +26587,7 @@ ez	𠂇
 ezz	𠂇
 ezz	㋤
 ezz	ナ
+ezz	
 f	一
 f	一个
 f	一定
@@ -43891,6 +43893,7 @@ hqq	犬
 hqq	犭
 hqq	⺨
 hqq	⽝
+hqq	
 hqqi	𤠁
 hqqi	𫮐
 hqql	墡
@@ -51301,6 +51304,7 @@ ivv	⺌
 ivv	⼩
 ivv	𘡌
 ivv	𘮦
+ivv	𘱾
 ivva	𰍗
 ivvc	寥
 ivvc	熮
@@ -60312,6 +60316,7 @@ kjiz	𰌣
 kjj	纟
 kjj	⺰
 kjj	
+kjj	
 kjjb	𨾁
 kjjb	𩞗
 kjjc	孾
@@ -61873,6 +61878,8 @@ kss	⻝
 kss	⻞
 kss	⻟
 kss	⾷
+kss	
+kss	
 kssa	䭟
 kssi	餀
 kssr	𡦘
@@ -70154,6 +70161,7 @@ mdd	⺉
 mdd	⼑
 mdd	𘮖
 mdd	𘲡
+mdd	
 mdda	𪎜
 mddg	㢂
 mddj	𧴃
@@ -78833,7 +78841,6 @@ nss	シ
 nss	ッ
 nss	ツ
 nss	𘡍
-nss	𘱾
 nss	
 nss	
 nss	
@@ -113852,6 +113859,8 @@ uzz	⺤
 uzz	⺥
 uzz	⽖
 uzz	爫
+uzz	
+uzz	
 v	不
 v	不要
 v	不同
@@ -123507,6 +123516,7 @@ xmm	⺈
 xmm	⼍
 xmm	㋗
 xmm	ク
+xmm	
 xmmj	𬨁
 xmmm	𲁄
 xmnj	𮷙
@@ -126422,8 +126432,6 @@ yii	𘲶
 yii	
 yii	
 yii	
-yii	
-yii	
 yiia	𨽃
 yiib	𨺦
 yiih	𮥐
