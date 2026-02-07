@@ -274,7 +274,7 @@ font,ma,pinyin
 ,pdi,Dí
 雨,pe,yǔ = ǚ -> e
 犬,pqi,Quǎn -> Qi
-犭,pqi,Quǎn -> Qi
+,pqi,Quǎn -> Qi
 豸,psi,ZHì -> Si
 几,qji,Jǐ
 殳,qku,SHǔ -> Ku
@@ -395,5 +395,5 @@ font,ma,pinyin
 气,yqi,Qì
 西,yxi,Xī
 酉,yu,yǒu = iǒu -> u
-刂,ydi,Dāo -> Di
+,ydi,Dāo -> Di
 ,yfu,Fǔ
