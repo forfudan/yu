@@ -926,6 +926,7 @@ fqu	型
 fwi	婚
 ggi	引
 gme	阵
+hde	可以
 hgi	應
 hgo	度
 hgu	底
