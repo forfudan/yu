@@ -903,6 +903,7 @@ bri	写
 cfi	缘
 cla	鐵
 cmi	開
+cmo	開始
 cna	京
 cno	道
 cpu	釣
@@ -926,6 +927,7 @@ fqu	型
 fwi	婚
 ggi	引
 gme	阵
+hda	歌
 hde	可以
 hgi	應
 hgo	度
@@ -1008,6 +1010,7 @@ qme	藏
 qsi	著
 qwa	获
 qwu	获得
+rco	讓
 rjo	进
 rle	話
 rpa	点
@@ -1043,6 +1046,7 @@ xdi	想
 xdu	相
 xfa	欧
 xri	樣
+ybu	纔
 yfa	現
 yfo	經
 yji	總
