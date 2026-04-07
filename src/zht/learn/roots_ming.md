@@ -140,6 +140,7 @@ import ZigenMap from "@/zigen/ZigenMap.vue"
 
 韻碼的設置，雖有一定的自由度，但總地來説是有體系的，你可以在練習時歸納總結，也可以使用下表進行瞭解。下表爲漢語拼音**音節**、注音符號**音節**、**韻碼**對應表。`～`表示任何聲母。
 
+<!-- do not translate -->
 | 拼音音節                              | 注音音節                                                | 韻碼 | 舉例   | 備註                        |
 | :------------------------------------ | :------------------------------------------------------ | :--- | :----- | :-------------------------- |
 | ～a                                   | ～ㄚ                                                    | A    | 巴 Jba |                             |
@@ -149,7 +150,7 @@ import ZigenMap from "@/zigen/ZigenMap.vue"
 | ～ao                                  | ～ㄠ                                                    | I    | 刀 Jdi |                             |
 | ～e                                   | ～ㄜ                                                    | E    | 禾 Che |                             |
 | ～ei                                  | ～ㄟ                                                    | O    | 黑 Rho |                             |
-| ～en                                  | ～ㄣ                                                    | E    | 艮 Mge |                             |
+| ～en                                  | ～ㄣ                                                    | E    | 艮 Hge |                             |
 | ～eng                                 | ～ㄥ                                                    | E    | 生 Cke |                             |
 | ～i                                   | ～ㄧ                                                    | I    | 一 Fi  |                             |
 | ～ia                                  | ～ㄧㄚ                                                  | A    | 牙 Fa  |                             |
@@ -159,18 +160,18 @@ import ZigenMap from "@/zigen/ZigenMap.vue"
 | ～iang yang                           | ～ㄧㄤ                                                  | O    | 羊 Xo  |                             |
 | ～ie ye                               | ～ㄧㄝ                                                  | E    | 也 Me  |                             |
 | ～iu you                              | ～ㄧㄡ                                                  | U    | 又 Cu  |                             |
-| ～in yin                              | ～ㄧㄣ                                                  | O    | 廴 Fo  |                             |
+| ～in yin                              | ～ㄧㄣ                                                  | O    | 廴 Do  |                             |
 | ～ing ying                            | ～ㄧㄥ                                                  | I    | 丁 KDi |                             |
 | ～iong yong                           | ～ㄩㄥ                                                  | I    | 用 Si  |                             |
 | ～ong                                 | ～ㄨㄥ                                                  | I    | 工 Jgi |                             |
 | ～ou                                  | ～ㄡ                                                    | E    | 缶 NFe |                             |
 | bu fu du lu gu hu<br>zhu chu shu zu u | ㄅㄨ ㄈㄨ ㄉㄨ ㄌㄨ ㄍㄨ ㄏㄨ<br>ㄓㄨ ㄔㄨ ㄕㄨ ㄗㄨ ㄨ | U    | 鳥 RNi | 聲碼非mu/pu時，韻碼取u      |
-| mu, pu                                | ㄇㄨ ㄆㄨ                                               | E    | 母 Dmu | 聲碼爲mu/pu時，韻碼取e      |
+| mu, pu                                | ㄇㄨ ㄆㄨ                                               | E    | 母 Dme | 聲碼爲mu/pu時，韻碼取e      |
 | ～ua wa                               | ～ㄨㄚ                                                  | A    | 爪 Bsa |                             |
 | ～uan wan                             | ～ㄨㄢ                                                  | I    | 川 Jri |                             |
 | ～uang wang                           | ～ㄨㄤ                                                  | O    | 王 Ro  |                             |
 | ～un wen                              | ～ㄨㄣ                                                  | I    | 文 Ri  |                             |
-| ～uo ～o                              | ～ㄨㄛ ～ㄛ                                             | O    | 𠂇 Mzo  |                             |
+| ～uo ～o                              | ～ㄨㄛ ～ㄛ                                             | O    | 𠂇 Mzo |                             |
 | ～üan                                 | ～ㄩㄢ                                                  | I    | 犬 Pqi |                             |
 | ～üê yue                              | ～ㄩㄝ                                                  | E    | 月 Ne  |                             |
 | ～ü yu                                | ～ㄩ                                                    | E    | 魚 Be  |                             |
@@ -179,6 +180,7 @@ import ZigenMap from "@/zigen/ZigenMap.vue"
 | ri                                    | ㄖ                                                      | I    | 日 Ji  |                             |
 | ru                                    | ㄖㄨ                                                    | E    | 入 Ke  |                             |
 | ren                                   | ㄖㄣ                                                    | O    | 人 Wo  |                             |
+<!-- do not translate -->
 
 更概括性地，下表爲漢語拼音的**韻母**和本方案的**韻碼**之間的對應表。星號表示爲了爲了手感（左右互擊）考慮，而存在兩種對映關係：
 

@@ -185,7 +185,7 @@ import MultiCharPlot from '@/plot/MultiCharPlot.vue'
 
 ::: tip 例
 
-「命」不拆「合卩」，而拆「人口一卩」。
+「命」不拆「合卩」，而拆「人一口卩」。
 
 <div class="flex justify-left flex-wrap">
 <CharPlot char='命' :parts='[2,1,3,2]' />
