@@ -4,9 +4,9 @@ export class GenealogyExportService {
     /**
      * 生成文件名
      */
-    static generateFileName(): string {
+    static generateFileName(title: string = '漢字字形輸入法繫絡圖'): string {
         const today = new Date().toISOString().split('T')[0].replace(/-/g, '')
-        return `漢字字形輸入法繫絡圖${today}.png`
+        return `${title}${today}.png`
     }
 
     /**
@@ -62,11 +62,10 @@ export class GenealogyExportService {
                 justify-content: center;
             `
             leftDiv.innerHTML = `
-                <div style="font-weight: 600;">宇浩系列輸入法</div>
-                <div>官網：shurufa.app</div>
+                <div style="font-weight: 600;">宇浩系列輸入法·雜談</div>
+                <div>網址：shurufa.app/docs/gene</div>
                 <div>QQ 討論群：170510762</div>
             `
-
             // 右側：懸浮信息窗
             const rightDiv = document.createElement('div')
             // 使用與網頁完全一致的浮動提示樣式
@@ -135,7 +134,7 @@ export class GenealogyExportService {
                 color: ${textColor};
                 font-weight: 400;
             `
-            singleLineDiv.textContent = '宇浩系列輸入法 · 官網: shurufa.app · QQ 討論群: 170510762'
+            singleLineDiv.textContent = '宇浩系列輸入法 · 網址: shurufa.app/docs/gene · QQ 討論群: 170510762'
             watermarkDiv.appendChild(singleLineDiv)
         }
 
@@ -166,6 +165,7 @@ export class GenealogyExportService {
             scale?: number
             addWatermark?: boolean
             focusedSchemaDetails?: any
+            title?: string
         } = {}
     ) {
         const {
@@ -173,7 +173,8 @@ export class GenealogyExportService {
             download = true,
             scale = 2,
             addWatermark = true,
-            focusedSchemaDetails = null
+            focusedSchemaDetails = null,
+            title = '漢字字形輸入法繫絡圖'
         } = options
 
         // 找到實際的 SVG 容器
@@ -204,8 +205,19 @@ export class GenealogyExportService {
         let originalToolbarDisplay: string = ''
         let floatingHintElement: HTMLElement | null = null
         let originalFloatingHintDisplay: string = ''
+        let originalContentWidth: string = ''
+        let originalContentMaxWidth: string = ''
 
         try {
+            // 0. 获取 SVG 的实际宽度
+            const svgWidth = svgElement.getAttribute('width') || '840'
+
+            // 临时限制 contentElement 的宽度，防止右侧出现空白
+            originalContentWidth = contentElement.style.width
+            originalContentMaxWidth = contentElement.style.maxWidth
+            contentElement.style.width = `${svgWidth}px`
+            contentElement.style.maxWidth = `${svgWidth}px`
+
             // 1. 暫時隱藏工具欄
             toolbarElement = contentElement.querySelector('.toolbar-compact') as HTMLElement
             if (toolbarElement) {
@@ -224,7 +236,10 @@ export class GenealogyExportService {
             const titleElement = document.createElement('div')
             titleElement.className = 'export-title'
             const isDarkMode = document.documentElement.classList.contains('dark')
+
             titleElement.style.cssText = `
+                width: ${svgWidth}px;
+                max-width: 100%;
                 text-align: center;
                 font-size: 1.8rem;
                 font-weight: bold;
@@ -233,8 +248,9 @@ export class GenealogyExportService {
                 color: ${isDarkMode ? 'rgb(165, 180, 252)' : '#5400a2ff'};
                 background: transparent;
                 font-family: 'Noto Serif SC', serif;
+                box-sizing: border-box;
             `
-            titleElement.textContent = '漢字字形輸入法繫絡圖'
+            titleElement.textContent = title
             contentElement.insertBefore(titleElement, contentElement.firstChild)
 
             // 等待樣式應用
@@ -278,12 +294,15 @@ export class GenealogyExportService {
                 originalToolbarDisplay,
                 floatingHintElement,
                 originalFloatingHintDisplay,
-                contentElement.querySelector('.export-title') as HTMLElement
+                contentElement.querySelector('.export-title') as HTMLElement,
+                contentElement,
+                originalContentWidth,
+                originalContentMaxWidth
             )
 
             // 獲取圖片數據
             const dataUrl = canvas.toDataURL('image/png', 1.0)
-            const filename = this.generateFileName()
+            const filename = this.generateFileName(title)
 
             // 複製到剪貼板（如果启用）
             if (copyToClipboard && this.isClipboardSupported()) {
@@ -337,7 +356,10 @@ export class GenealogyExportService {
                 originalToolbarDisplay,
                 floatingHintElement,
                 originalFloatingHintDisplay,
-                contentElement?.querySelector('.export-title') as HTMLElement
+                contentElement?.querySelector('.export-title') as HTMLElement,
+                contentElement,
+                originalContentWidth,
+                originalContentMaxWidth
             )
 
             return {
@@ -362,8 +384,17 @@ export class GenealogyExportService {
         originalToolbarDisplay: string,
         floatingHintElement: HTMLElement | null,
         originalFloatingHintDisplay: string,
-        titleElement: HTMLElement | null
+        titleElement: HTMLElement | null,
+        contentElement: HTMLElement | null = null,
+        originalContentWidth: string = '',
+        originalContentMaxWidth: string = ''
     ) {
+        // 恢复容器宽度
+        if (contentElement) {
+            contentElement.style.width = originalContentWidth
+            contentElement.style.maxWidth = originalContentMaxWidth
+        }
+
         // 恢复工具栏显示
         if (toolbarElement) {
             toolbarElement.style.display = originalToolbarDisplay

@@ -65,8 +65,9 @@ const config = computed<GenealogyConfig>(() => ({
     ...props.config
 }))
 
-// 數據狀態
-const schemas = ref<SchemaData[]>([])
+// 數據狀態 - 分別存儲兩個數據源
+const xingSchemas = ref<SchemaData[]>([])
+const yinSchemas = ref<SchemaData[]>([])
 const yearLabels = ref<YearLabel[]>([])
 const loading = ref(true)
 const error = ref<string | null>(null)
@@ -99,12 +100,14 @@ const genealogyContainer = ref<HTMLElement | null>(null)
 const yScaleFactor = ref(0.64) // 1.0 = 100%
 
 // 篩選狀態
+const selectedCategory = ref<'字形' | '字音' | '全部'>('字形') // 大類篩選
 const selectedSchemas = ref<string[]>([])
 const selectedFeatures = ref<string[]>([])
 const selectedAuthors = ref<string[]>([])
 const searchQuery = ref('')
 
 // 下拉菜單狀態
+const showCategoryDropdown = ref(false)
 const showSchemaDropdown = ref(false)
 const showFeatureDropdown = ref(false)
 const showAuthorDropdown = ref(false)
@@ -137,9 +140,37 @@ onMounted(() => {
     })
 })
 
+// 計算屬性：根據類別生成標題
+const pageTitle = computed(() => {
+    switch (selectedCategory.value) {
+        case '字形':
+            return '漢字字形輸入法繫絡圖'
+        case '字音':
+            return '漢字字音輸入法繫絡圖'
+        case '全部':
+        default:
+            return '漢字輸入法繫絡圖'
+    }
+})
+
+// 計算屬性：根據類別選擇返回當前應該使用的schemas（核心：數據源切換）
+const schemas = computed(() => {
+    switch (selectedCategory.value) {
+        case '字形':
+            return xingSchemas.value
+        case '字音':
+            return yinSchemas.value
+        case '全部':
+        default:
+            return [...xingSchemas.value, ...yinSchemas.value]
+    }
+})
+
 // 計算屬性：過濾後的輸入法
 const filteredSchemas = computed(() => {
     let result = schemas.value
+
+    // 注意：不需要按類別過濾，因為schemas已經根據selectedCategory返回了對應的數據
 
     // 過濾停止維護的
     if (!config.value.showDeprecated) {
@@ -577,45 +608,27 @@ async function loadData() {
     error.value = null
 
     try {
-        // 加載輸入法數據
-        const data = await loadSchemas()
-        if (data.length === 0) {
+        // 同時加載兩個數據源
+        const [xingData, yinData] = await Promise.all([
+            loadSchemas('/genealogy/schemas.json'),
+            loadSchemas('/genealogy/schemas_yin.json')
+        ])
+
+        // 標記類別並分別存儲
+        xingSchemas.value = xingData.map(s => ({ ...s, category: '字形' as const }))
+        yinSchemas.value = yinData.map(s => ({ ...s, category: '字音' as const }))
+
+        if (xingSchemas.value.length === 0 && yinSchemas.value.length === 0) {
             throw new Error('無法加載數據')
         }
 
-        schemas.value = data
-
-        // 計算年份範圍
-        const range = getYearRange(data)
-        minYear.value = range.minYear
-        maxYear.value = range.maxYear
-
-        // 生成年份標籤（使用動態間距）
-        yearLabels.value = generateYearLabels(
-            data,
-            yearSpacingMap.value,
-            config.value.emptyYearThreshold || 3,
-            config.value.labelInterval || 5
-        )
-
-        // 獲取所有特性和作者
-        allFeatures.value = getAllFeatures(data)
-        allAuthors.value = getAllAuthors(data)
-
-        // 計算連接關係（連接關係始終基於時間順序，不受倒序影響）
-        const sortedData = sortSchemasByDate(data, false)
-        connections.value = calculateConnections(sortedData)
-
         console.log('數據加載完成:', {
-            總數: data.length,
-            年份範圍: `${minYear.value}-${maxYear.value}`,
-            特性數: allFeatures.value.length,
-            作者數: allAuthors.value.length,
-            連接數: connections.value.length,
-            特性連接: connectionStats.value.featureConnections,
-            作者連接: connectionStats.value.authorConnections,
-            相似連接: connectionStats.value.similarConnections
+            字形: xingSchemas.value.length,
+            字音: yinSchemas.value.length
         })
+
+        // 觸發初始計算（通過schemas的computed屬性自動觸發）
+        recalculateAll()
 
     } catch (err) {
         error.value = err instanceof Error ? err.message : '加載失敗'
@@ -623,6 +636,43 @@ async function loadData() {
     } finally {
         loading.value = false
     }
+}
+
+// 重新計算所有依賴schemas的屬性
+function recalculateAll() {
+    const currentSchemas = schemas.value
+
+    if (currentSchemas.length === 0) return
+
+    // 計算年份範圍
+    const range = getYearRange(currentSchemas)
+    minYear.value = range.minYear
+    maxYear.value = range.maxYear
+
+    // 生成年份標籤（使用動態間距）
+    yearLabels.value = generateYearLabels(
+        currentSchemas,
+        yearSpacingMap.value,
+        config.value.emptyYearThreshold || 3,
+        config.value.labelInterval || 5
+    )
+
+    // 獲取所有特性和作者
+    allFeatures.value = getAllFeatures(currentSchemas)
+    allAuthors.value = getAllAuthors(currentSchemas)
+
+    // 計算連接關係（連接關係始終基於時間順序，不受倒序影響）
+    const sortedData = sortSchemasByDate(currentSchemas, false)
+    connections.value = calculateConnections(sortedData)
+
+    console.log('重新計算完成:', {
+        類別: selectedCategory.value,
+        方案數: currentSchemas.length,
+        年份範圍: `${minYear.value}-${maxYear.value}`,
+        特性數: allFeatures.value.length,
+        作者數: allAuthors.value.length,
+        連接數: connections.value.length
+    })
 }
 
 // 點擊卡片
@@ -851,7 +901,8 @@ async function exportGenealogy() {
                 download: true,
                 scale: 2,
                 addWatermark: true,
-                focusedSchemaDetails: focusedSchemaDetails.value
+                focusedSchemaDetails: focusedSchemaDetails.value,
+                title: pageTitle.value
             }
         )
 
@@ -913,6 +964,23 @@ watch(() => props.config, () => {
         config.value.labelInterval || 5
     )
 }, { deep: true })
+
+// 監聽類別變化，重新計算所有內容
+watch(selectedCategory, () => {
+    console.log('類別切換:', selectedCategory.value)
+    // 清除當前的關注和篩選狀態
+    focusedSchemaId.value = null
+    pinnedLabelConnection.value = null
+    hoveredLabelConnection.value = null
+    selectedSchemas.value = []
+    selectedFeatures.value = []
+    selectedAuthors.value = []
+    searchQuery.value = ''
+    customOffsets.value.clear()
+
+    // 重新計算所有內容
+    recalculateAll()
+})
 </script>
 
 <template>
@@ -935,7 +1003,7 @@ watch(() => props.config, () => {
             <div class="toolbar-compact">
                 <!-- 第一行：標題 -->
                 <div class="toolbar-header">
-                    <h2 class="toolbar-title">漢字字形輸入法繫絡圖</h2>
+                    <h2 class="toolbar-title">{{ pageTitle }}</h2>
                     <!-- 統計信息 -->
                     <span class="toolbar-stats">
                         共 {{ filteredSchemas.length }} 個輸入法 ({{ minYear }}-{{ maxYear }})
@@ -945,12 +1013,37 @@ watch(() => props.config, () => {
                 <!-- 第二行：控制按鈕 -->
                 <div class="toolbar-controls">
                     <div class="toolbar-left">
+                        <!-- 大類篩選下拉菜單 -->
+                        <div class="dropdown-wrapper">
+                            <button @click="showCategoryDropdown = !showCategoryDropdown" class="dropdown-trigger">
+                                {{ selectedCategory }}
+                                <span class="dropdown-arrow">▼</span>
+                            </button>
+                            <div v-if="showCategoryDropdown" class="dropdown-menu">
+                                <div class="dropdown-item"
+                                    @click="selectedCategory = '字形'; showCategoryDropdown = false">
+                                    <input type="radio" :checked="selectedCategory === '字形'" readonly>
+                                    <span>字形</span>
+                                </div>
+                                <div class="dropdown-item"
+                                    @click="selectedCategory = '字音'; showCategoryDropdown = false">
+                                    <input type="radio" :checked="selectedCategory === '字音'" readonly>
+                                    <span>字音</span>
+                                </div>
+                                <div class="dropdown-item"
+                                    @click="selectedCategory = '全部'; showCategoryDropdown = false">
+                                    <input type="radio" :checked="selectedCategory === '全部'" readonly>
+                                    <span>全部</span>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- 方案篩選下拉菜單 -->
                         <div class="dropdown-wrapper">
                             <button @click="showSchemaDropdown = !showSchemaDropdown" class="dropdown-trigger">
                                 方案
                                 <span v-if="selectedSchemas.length > 0" class="badge">{{ selectedSchemas.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showSchemaDropdown" class="dropdown-menu" @click.stop>
@@ -970,7 +1063,7 @@ watch(() => props.config, () => {
                             <button @click="showAuthorDropdown = !showAuthorDropdown" class="dropdown-trigger">
                                 作者
                                 <span v-if="selectedAuthors.length > 0" class="badge">{{ selectedAuthors.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showAuthorDropdown" class="dropdown-menu" @click.stop>
@@ -990,7 +1083,7 @@ watch(() => props.config, () => {
                             <button @click="showFeatureDropdown = !showFeatureDropdown" class="dropdown-trigger">
                                 特徵
                                 <span v-if="selectedFeatures.length > 0" class="badge">{{ selectedFeatures.length
-                                }}</span>
+                                    }}</span>
                                 <span class="arrow">▼</span>
                             </button>
                             <div v-if="showFeatureDropdown" class="dropdown-menu" @click.stop>
@@ -1040,7 +1133,8 @@ watch(() => props.config, () => {
 
             <!-- 畫布區域 -->
             <div ref="canvasWrapper" class="canvas-wrapper">
-                <svg :width="config.width" :height="canvasHeight" class="genealogy-svg">
+                <svg :width="config.width" :height="canvasHeight" :viewBox="`0 0 ${config.width} ${canvasHeight}`"
+                    preserveAspectRatio="xMidYMin meet" class="genealogy-svg">
                     <!-- 定義箭頭標記 -->
                     <defs>
                         <marker id="arrow-feature" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5"
@@ -1298,7 +1392,7 @@ watch(() => props.config, () => {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: fit-content;
+    width: 100%;
     max-width: 100%;
 }
 
@@ -1311,6 +1405,16 @@ watch(() => props.config, () => {
     background: var(--vp-c-bg-soft, #f8fafc);
     border-radius: 0.5rem;
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 宽屏时限制最大宽度，与画布保持一致 */
+@media (min-width: 1024px) {
+    .toolbar-compact {
+        max-width: fit-content;
+        min-width: 840px;
+    }
 }
 
 :global(.dark) .toolbar-compact {
@@ -1700,11 +1804,21 @@ watch(() => props.config, () => {
 
 .canvas-wrapper {
     position: relative;
-    width: fit-content;
-    overflow: auto;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
     border: 1px solid var(--vp-c-divider, #e2e8f0);
     border-radius: 0.5rem;
     background: var(--vp-c-bg, #ffffff);
+    box-sizing: border-box;
+}
+
+/* 宽屏时限制最大宽度 */
+@media (min-width: 1024px) {
+    .canvas-wrapper {
+        max-width: fit-content;
+        min-width: 840px;
+    }
 }
 
 :global(.dark) .canvas-wrapper {
@@ -1714,6 +1828,15 @@ watch(() => props.config, () => {
 
 .genealogy-svg {
     display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 宽屏时使用固定宽度 */
+@media (min-width: 1024px) {
+    .genealogy-svg {
+        max-width: none;
+    }
 }
 
 /* SVG 性能優化：限制重排範圍 */
