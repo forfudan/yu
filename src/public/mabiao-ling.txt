@@ -764,7 +764,7 @@ whh	馧
 whk	秭
 whl	稹
 whp	鹙
-whs	穡
+whs	穭
 wkb	虱
 wkc	猄
 wkh	猓
@@ -956,6 +956,7 @@ jvi	市
 jvu	处
 jxi	体
 jxo	裏
+jye	俠
 kbu	樂
 kdi	師
 kfi	定
@@ -21612,9 +21613,9 @@ ykff	瑄
 ykff	縇
 ykfl	綻
 ykfl	琔
+ykfl	縯
 ykfl	珟
 ykfl	璌
-ykfl	縯
 ykfn	繽
 ykfn	綄
 ykfn	璸

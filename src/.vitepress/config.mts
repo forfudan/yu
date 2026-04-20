@@ -176,6 +176,10 @@ export default defineConfig({
               text: "声笔猛码",
               link: "/ime/sbmm",
             },
+            {
+              text: "魔灵",
+              link: "/ime/moling",
+            },
           ],
         },
       ],
@@ -598,6 +602,10 @@ export default defineConfig({
                   text: "聲筆猛碼",
                   link: "/zht/ime/sbmm",
                 },
+                {
+                  text: "魔靈",
+                  link: "/zht/ime/moling",
+                }
               ],
             },
           ],

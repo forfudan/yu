@@ -5,7 +5,6 @@
 
 [永碩網盤](http://zhuyuhao.ysepan.com/)  
 [Github](https://github.com/forFudan/yuhao/releases/)  
-[Gitee 碼雲](https://gitee.com/forFudan/yuhao/releases/)  
 :::
 
 ## 碼表直接掛載
