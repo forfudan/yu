@@ -42,6 +42,8 @@ const p = defineProps<{
     mode: 'A' | 'a' | 'both'
     /** 編碼規則，可選值: joy, light, star, ming, wafel, ling */
     rule?: string
+    /** 拆分數據的URL，默認根據方案名稱生成 */
+    chaifenUrl?: string
 }>()
 
 let cardsName = p.name + '_zigen_grouped'
@@ -528,7 +530,7 @@ onMounted(async () => {
     // 获取方案对应的拆分文件URL
     const BaseSchemes = ['joy', 'light', 'star', 'ming', 'wafel', 'ling'];
     const isBase = BaseSchemes.includes(p.name);
-    const chaifenUrl = isBase ? '/chaifen.json' : `/chaifen-${p.name}.json`;
+    const chaifenUrl = p.chaifenUrl ? p.chaifenUrl : isBase ? '/chaifen.json' : `/chaifen-${p.name}.json`;
 
     console.log(`字根训练方案: ${p.name}, 使用拆分文件: ${chaifenUrl}`);
 
