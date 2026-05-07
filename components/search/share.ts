@@ -42,6 +42,7 @@ export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, rule
     const ming = rule === 'ming'
     const wafel = rule === 'wafel'
     const ling = rule === 'ling'
+    const moling = rule === 'moling'
 
     if (ling) {
         // 靈明編碼邏輯
@@ -173,6 +174,35 @@ export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, rule
 
         return result.join('')
     }
+
+    else if (moling) {
+        // 依次取一、二、三、末根大碼
+        let result = divisionArray.map(zigen => zigenMap.get(zigen)?.ma?.[0].toUpperCase() || '?')
+
+        // 不足四碼時，補上 SzYz or SzS1Y1
+        if (result.length < 4) {
+            let lastZigenMa = zigenMap.get(divisionArray[divisionArray.length - 1])?.ma
+
+            if (divisionArray.length === 2) {
+                if (lastZigenMa) {
+                    if (lastZigenMa.length > 2) {
+                        result.push(lastZigenMa[1])
+                    }
+                } else {
+                    result.push('?')
+                }
+
+                lastZigenMa = zigenMap.get(divisionArray[0])?.ma
+            }
+
+            if (result.length < 4) {
+                result.push(lastZigenMa ? lastZigenMa.slice(1, 1 + 4 - result.length) : '?')
+            }
+        }
+
+        return result.join('')
+    }
+
 
     else {
         // 依次取一、二、三、末根大碼

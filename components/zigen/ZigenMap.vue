@@ -37,6 +37,7 @@ const props = defineProps<{
     customEmptyKeyLabels?: Record<string, string | string[]> // 自定義無字根按鍵的顯示信息，key 為按鍵，value 為顯示內容（字符串或字符串數組）
     schemeCnName?: string // 輸入法中文名稱，用於導出時顯示（例：星陳、光華等）
     customFooter?: string // 自定義導出圖片的頁腳文字，若未提供則使用默認頁腳
+    chaifenUrl?: string // 自定義拆分數據的 URL，默認為根據方案自動生成（例如 /chaifen-star.json）
 }>()
 
 // 是否從 CSV 的 examples 欄位讀取例字
@@ -185,7 +186,7 @@ function getSchemeUrls(schemeId: string) {
     const isBase = BaseSchemes.includes(schemeId);
     return {
         zigenUrl: `/zigen-${schemeId}.csv`,
-        chaifenUrl: isBase ? '/chaifen.json' : `/chaifen-${schemeId}.json`
+        chaifenUrl: props.chaifenUrl ? props.chaifenUrl : isBase ? '/chaifen.json' : `/chaifen-${schemeId}.json`
     };
 }
 
