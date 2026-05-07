@@ -4,8 +4,7 @@ aside: false
 
 # 魔靈
 
-[魔靈兩可](https://github.com/Dieken/code_genie/tree/moling/moling#readme)輸入方案，簡稱「魔靈」，
-結合了 90% 的[靈明](https://shurufa.app/docs/ling.html) 和 10% 的[星陳](https://shurufa.app/docs/star.html)的設計：
+[魔靈兩可](https://github.com/Dieken/code_genie/tree/moling/moling#readme)輸入方案，簡稱「魔靈」，結合了 90% 的[靈明](https://shurufa.app/docs/ling.html) 和 10% 的[星陳](https://shurufa.app/docs/star.html)的設計：
 
 1. 參照靈明，使用 25 鍵方案，聲母 z/zh 用 v 代替，零聲母用 w 代替，另外聲母 y 用 k 代替以降低 Y 鍵壓力；
 2. 字根聚類程度接近靈明；
@@ -30,7 +29,7 @@ aside: false
 致謝：
 
 * 感謝朱宇浩製作的優質拆分和靈明、星陳優質方案；
-* 感謝 @荒 的[碼靈](https://github.com/hertz-hwang/code_genie) 優化程序；
+* 感謝 @荒 的[碼靈](https://github.com/hertz-hwang/code_genie)優化程序；
 * 感謝上述兩位作者的討論和指導，以及羣友 @Litles 的多次啓發，尤其是提出了取字根首筆筆畫代替韻母的設計；
 
 <script setup>
