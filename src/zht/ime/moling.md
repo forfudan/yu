@@ -6,7 +6,7 @@ aside: false
 
 ## 簡介
 
-[魔靈兩可](https://github.com/Dieken/code_genie/tree/moling/moling#readme)輸入方案，簡稱「魔靈」，結合了 90% 的[靈明](https://shurufa.app/docs/ling.html) 和 10% 的[星陳](https://shurufa.app/docs/star.html)的設計：
+[魔靈兩可](https://github.com/Dieken/code_genie/tree/moling/moling#readme)輸入方案，簡稱「魔靈」，結合了 90% 的[靈明](https://shurufa.app/docs/ling.html)和 10% 的[星陳](https://shurufa.app/docs/star.html)的設計：
 
 1. 參照靈明，使用 25 鍵方案，聲母 z/zh 用 v 代替，零聲母用 w 代替，另外聲母 y 用 k 代替以降低 Y 鍵壓力；
 2. 字根聚類程度接近靈明；
@@ -51,6 +51,7 @@ import ZigenMap from "@/zigen/ZigenMap.vue"
 
 <ZigenMap 
 :default-scheme="'moling'"
+alwaysVisibleZigens="卩丂丩屮丱髟廾豕彡"
 chaifenUrl="/chaifen.json"
 column-min-width="1rem"
 schemeCnName="魔靈"
