@@ -24,3 +24,6 @@ src/public/*.json
 src/public/*.json.gz
 src/public/build-info.json
 !src/public/mb-*.txt
+
+# 总是使用最新 OpenCC，不考虑兼容性
+uv.lock

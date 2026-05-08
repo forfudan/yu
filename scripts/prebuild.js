@@ -10,6 +10,17 @@ import { fileURLToPath } from 'url'
 import { dirname, join } from 'path'
 import fs from 'fs'
 
+
+function checkCommand(command) {
+    try {
+        execSync(command, { stdio: 'ignore' });
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
+
+
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 const projectRoot = join(__dirname, '..')
@@ -48,7 +59,8 @@ try {
     // Check if Python script exists
     const tc2scPath = join(projectRoot, 'scripts', 'tc2sc.py')
     if (fs.existsSync(tc2scPath)) {
-        execSync('python scripts/tc2sc.py', {
+        const cmd = checkCommand('uv --version') ? 'uv run' : checkCommand('python3 --version') ? 'python3' : 'python'
+        execSync(`${cmd} scripts/tc2sc.py`, {
             cwd: projectRoot,
             stdio: 'inherit'
         })
