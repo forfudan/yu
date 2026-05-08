@@ -31,8 +31,8 @@ aside: false
 ## 致謝
 
 * 感謝朱宇浩製作的優質拆分和靈明、星陳優質方案；
-* 感謝 @荒 的[碼靈](https://github.com/hertz-hwang/code_genie)優化程序；
-* 感謝上述兩位作者的討論和指導，以及羣友 @Litles 的多次啓發，尤其是提出了取字根首筆筆畫代替韻母的設計；
+* 感謝 [@荒](https://github.com/hertz-hwang) 的[碼靈](https://github.com/hertz-hwang/code_genie)優化程序；
+* 感謝上述兩位作者的討論和指導，以及羣友 [@Litles](https://github.com/litles) 的多次啓發，尤其是提出了取字根首筆筆畫代替韻母的設計；
 
 
 <script setup>
