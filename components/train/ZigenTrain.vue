@@ -851,6 +851,11 @@ onBeforeUnmount(() => {
         </div>
     </div>
 
+    <!-- 加載中提示 -->
+    <h2 class="text-gray-700 dark:text-gray-300 text-center" v-else>
+        下載資料中……
+    </h2>
+
     <!-- 重置確認對話框 -->
     <div v-if="showResetConfirm" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
         @click="cancelReset">
@@ -884,11 +889,6 @@ onBeforeUnmount(() => {
             </div>
         </div>
     </div>
-
-    <!-- 加載中提示 -->
-    <h2 class="text-gray-700 dark:text-gray-300 text-center" v-else>
-        下載資料中……
-    </h2>
 </template>
 
 <style scoped>
