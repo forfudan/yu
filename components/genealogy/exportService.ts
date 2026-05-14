@@ -63,7 +63,7 @@ export class GenealogyExportService {
             `
             leftDiv.innerHTML = `
                 <div style="font-weight: 600;">宇浩系列輸入法·雜談</div>
-                <div>網址：shurufa.app/docs/gene</div>
+                <div>網址：shurufa.app/ime/gene</div>
                 <div>QQ 討論群：170510762</div>
             `
             // 右側：懸浮信息窗
@@ -134,7 +134,7 @@ export class GenealogyExportService {
                 color: ${textColor};
                 font-weight: 400;
             `
-            singleLineDiv.textContent = '宇浩系列輸入法 · 網址: shurufa.app/docs/gene · QQ 討論群: 170510762'
+            singleLineDiv.textContent = '宇浩系列輸入法 · 網址: shurufa.app/ime/gene · QQ 討論群: 170510762'
             watermarkDiv.appendChild(singleLineDiv)
         }
 

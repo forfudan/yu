@@ -58,15 +58,53 @@ console.log('🈚 Step 3: Running Traditional to Simplified Chinese conversion..
 try {
     // Check if Python script exists
     const tc2scPath = join(projectRoot, 'scripts', 'tc2sc.py')
-    if (fs.existsSync(tc2scPath)) {
-        const cmd = checkCommand('uv --version') ? 'uv run' : checkCommand('python3 --version') ? 'python3' : 'python'
-        execSync(`${cmd} scripts/tc2sc.py`, {
+    if (!fs.existsSync(tc2scPath)) {
+        console.log('⚠️  tc2sc.py not found, skipping...\n')
+    } else if (checkCommand('uv --version')) {
+        // Preferred path: uv reads pyproject.toml and installs deps automatically.
+        console.log('🐍 Using uv to sync Python dependencies from pyproject.toml...')
+        execSync('uv sync --quiet', { cwd: projectRoot, stdio: 'inherit' })
+        execSync('uv run python scripts/tc2sc.py', {
             cwd: projectRoot,
             stdio: 'inherit'
         })
         console.log('✅ Traditional to Simplified Chinese conversion completed\n')
     } else {
-        console.log('⚠️  tc2sc.py not found, skipping...\n')
+        // Fallback: bootstrap a local .venv and install opencc with pip.
+        const isWin = process.platform === 'win32'
+        const venvDir = join(projectRoot, '.venv')
+        const venvPython = isWin
+            ? join(venvDir, 'Scripts', 'python.exe')
+            : join(venvDir, 'bin', 'python')
+
+        if (!fs.existsSync(venvPython)) {
+            const py = checkCommand('python3 --version')
+                ? 'python3'
+                : checkCommand('python --version') ? 'python' : null
+            if (!py) {
+                throw new Error('No Python interpreter found. Install Python 3.10+ (or `uv`).')
+            }
+            console.log('🐍 Creating local Python virtual environment at .venv ...')
+            execSync(`${py} -m venv .venv`, { cwd: projectRoot, stdio: 'inherit' })
+        }
+
+        // Make sure opencc is present in the venv. `pip install` is a no-op if already satisfied.
+        console.log('📦 Ensuring opencc is installed in .venv ...')
+        execSync(`"${venvPython}" -m pip install --quiet --upgrade pip`, {
+            cwd: projectRoot,
+            stdio: 'inherit'
+        })
+        execSync(`"${venvPython}" -m pip install --quiet "opencc>=1.3.0"`, {
+            cwd: projectRoot,
+            stdio: 'inherit'
+        })
+
+        execSync(`"${venvPython}" scripts/tc2sc.py`, {
+            cwd: projectRoot,
+            stdio: 'inherit'
+        })
+        console.log('✅ Traditional to Simplified Chinese conversion completed\n')
+        console.log('💡 Tip: install `uv` (https://docs.astral.sh/uv/) for faster, pyproject-aware Python env management.\n')
     }
 } catch (error) {
     console.error('❌ Traditional to Simplified Chinese conversion failed:', error.message)

@@ -27,3 +27,7 @@ src/public/build-info.json
 
 # 总是使用最新 OpenCC，不考虑兼容性
 uv.lock
+
+# Python virtual environment (auto-created by scripts/prebuild.js when uv is unavailable)
+.venv/
+src/yu.egg-info/

@@ -32,6 +32,9 @@ hero:
     - theme: alt
       text: 測評
       link: https://ceping.shurufa.app
+    - theme: alt
+      text: 大觀
+      link: /zht/ime/gene
 
 ---
 

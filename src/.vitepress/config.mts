@@ -134,10 +134,6 @@ export default defineConfig({
               link: "/docs/concepts",
             },
             {
-              text: "汉字输入法系络图",
-              link: "/docs/gene",
-            },
-            {
               text: "常见输入法测评数据",
               link: "/docs/statistics",
             },
@@ -156,6 +152,10 @@ export default defineConfig({
         {
           text: "大观",
           items:[
+            {
+              text: "汉字输入法系络图",
+              link: "/ime/gene",
+            },
             {
               text: "宇浩诗韵拼音",
               link: "/ime/sypy",
@@ -560,10 +560,6 @@ export default defineConfig({
                   link: "/zht/docs/concepts",
                 },
                 {
-                  text: "漢字輸入法繫絡圖",
-                  link: "/zht/docs/gene",
-                },
-                {
                   text: "常見輸入法測評數據",
                   link: "/zht/docs/statistics",
                 },
@@ -582,6 +578,10 @@ export default defineConfig({
             {
               text: "大觀",
               items:[
+                {
+                  text: "漢字輸入法繫絡圖",
+                  link: "/zht/ime/gene",
+                },
                 {
                   text: "宇浩詩韻拼音",
                   link: "/zht/ime/sypy",

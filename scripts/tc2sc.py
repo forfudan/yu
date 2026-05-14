@@ -28,7 +28,7 @@ paths_of_docs = [
     "/docs/characteristics.md",
     "/docs/coverage.md",
     "/docs/faq.md",
-    "/docs/gene.md",
+    "/docs/gene.md", # 已遷移至 /ime/gene，保留重定向頁面
     # 教程
     "/learn/index.md",
     "/learn/division.md",
@@ -83,6 +83,7 @@ paths_of_docs = [
     "/diy/index.md",
     # 大觀
     "/ime/index.md",
+    "/ime/gene.md", # 系絡圖
     "/ime/sypy.md", # 宇浩詩韻拼音
     "/ime/sky.md", # 天碼
     "/ime/xuma.md", # 徐碼
