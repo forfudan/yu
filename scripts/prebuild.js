@@ -69,6 +69,11 @@ try {
             stdio: 'inherit'
         })
         console.log('✅ Traditional to Simplified Chinese conversion completed\n')
+    } else if (checkCommand('python3 -c "import opencc"') || checkCommand('python -c "import opencc"')) {
+        // System Python already has opencc (e.g. CI installed it globally).
+        const py = checkCommand('python3 -c "import opencc"') ? 'python3' : 'python'
+        execSync(`${py} scripts/tc2sc.py`, { cwd: projectRoot, stdio: 'inherit' })
+        console.log('✅ Traditional to Simplified Chinese conversion completed\n')
     } else {
         // Fallback: bootstrap a local .venv and install opencc with pip.
         const isWin = process.platform === 'win32'

@@ -16,7 +16,7 @@ import CharPlot from '@/plot/CharPlot.vue'
 
 `人生`：`人`的編碼爲 `Ree`，`生`的編碼爲 `Pss`。因此，`人生`的編碼爲 `RePs`。
 
-`事情`：`事`的編碼爲 `KLBj`，`情`的編碼爲 `RHWy`。因此，「事情」的編碼爲 `KLWy`。
+`事情`：`事`的編碼爲 `KLBj`，`情`的編碼爲 `RHWy`。因此，「事情」的編碼爲 `KLRH`。
 <div class="flex justify-left flex-wrap">
 <CharPlot char='事' :parts='[1,3,3,1]' :colors='[1,2,0,1]' />
 <CharPlot char='情' :parts='[3,4,4]' :colors='[3,4,0]' />
