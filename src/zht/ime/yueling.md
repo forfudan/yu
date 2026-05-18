@@ -28,12 +28,26 @@ aside: false
 * 臺標繁體字頻全碼當量： 1.2909；
 * 簡碼效率： 北語字頻 50 簡碼 3.071，100 簡碼 2.962，所有簡碼 2.714；
 
+## 映射
+
+a	←	a	er	en	ian
+e	←	e	ao	kua* ie	uo	üe	ong	uang	Ø
+u	←	u	an	ua*	eng	ing
+i	←	i	ia	ou	iang
+o	←	o	ü	in	ei	ai	iao	iou	uei	uan	uen	ang	iuan	iong
+
+特別注意：
+
+* q 聲母映射至 k ，z 聲母映射至 v ，零聲母聲碼爲 j；
+*  w 、y 聲母不變，僅“肀”：yù，聲碼取零聲母聲碼 j（yu = ü），全碼爲：gjo；
+* 當聲碼爲 k 時，韻母 ua 映射至 e，僅“㐄”、“𰀁”：dke；
+* “夂”、“攵”、“夊”歸併後，聲碼取：夂[zh]ǐ → v，韻碼取：攵p[ū] → u，全碼爲 mvu；
+
 ## 致謝
 
 * 感謝朱宇浩製作的優質拆分和日月、靈明優質方案；
 * 感謝 [@荒](https://github.com/hertz-hwang) 的[碼靈](https://github.com/hertz-hwang/code_genie)優化程序；
 * 感謝上述兩位作者的討論和指導，以及羣友及魔靈製作者 [@qq3qq](https://github.com/Dieken) 的多次指導与啓發；
-
 
 <script setup>
 import Search from '@/search/FetchSearch.vue'
