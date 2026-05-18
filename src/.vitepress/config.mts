@@ -180,6 +180,10 @@ export default defineConfig({
               text: "魔灵",
               link: "/ime/moling",
             },
+            {
+              text: "月灵",
+              link: "/ime/yueling",
+            },
           ],
         },
       ],
@@ -605,7 +609,11 @@ export default defineConfig({
                 {
                   text: "魔靈",
                   link: "/zht/ime/moling",
-                }
+                },
+                {
+                  text: "月靈",
+                  link: "/zht/ime/moling",
+                },
               ],
             },
           ],
@@ -640,7 +648,7 @@ export default defineConfig({
                 {
                   text: "特殊部件拆分",
                   link: "/zht/learn/radicals",
-                }
+                },
               ],
             },
             {
