@@ -30,11 +30,11 @@ aside: false
 
 ## 映射
 
-* A		←		a		er		en		ian
-* E		←		e		ao		kua*	ie		uo	üe	  ong  	uang	Ø
-* U		←		u		an		ua*		eng		ing
-*	I	  ←		i		ia		ou		iang
-* O		←		o		ü		  in    ei		ai	iao	  iou	  uei		uan		uen		ang		iuan  	iong
+* A		←		a,		er,		en,		ian
+* E		←		e,		ao,		kua*,	ie,		uo,	üe,	  ong,  	uang,	Ø
+* U		←		u,		an,		ua*,		eng,		ing
+*	I	  ←		i,		ia,		ou,		iang,
+* O		←		o,		ü,		  in,    ei,		ai,	iao,	  iou,	  uei,		uan,		uen,		ang,		iuan,  	iong
 
 特別注意：
 
