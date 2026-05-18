@@ -6,7 +6,7 @@ aside: false
 
 ## 簡介
 
-月靈輸入方案是以靈明爲基礎，專爲簡體性能優化的方案。結合了 90% [靈明](https://shurufa.app/docs/ling.html)和 10% [日月](https://shurufa.app/docs/ming.html)的設計：
+[月靈](https://github.com/PillowMonth/yueling-ime)輸入方案是以靈明爲基礎，專爲簡體性能優化的方案。結合了 90% [靈明](https://shurufa.app/docs/ling.html)和 10% [日月](https://shurufa.app/docs/ming.html)的設計：
 
 1. 參照日月、靈明，使用 25 鍵方案，聲母 z/zh 用 v 代替，ch 聲碼爲 c，sh 聲碼爲 s，零聲母用 j 代替，另外聲母 q 用 k 代替以降低 q 鍵壓力；
 2. 字根聚類程度接近靈明；
