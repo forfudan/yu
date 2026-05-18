@@ -6,15 +6,15 @@ aside: false
 
 ## 簡介
 
-[月靈]输入方案，結合了 90% 的[靈明](https://shurufa.app/docs/ling.html)和 10% 的[日月](https://shurufa.app/docs/ming.html)的設計：
+月靈輸入方案是以靈明爲基礎，專爲簡體性能優化的方案。結合了 90% [靈明](https://shurufa.app/docs/ling.html)和 10% [日月](https://shurufa.app/docs/ming.html)的設計：
 
-1. 參照日月、靈明，使用 25 鍵方案，聲母 z/zh 用 v 代替，零聲母用 j 代替，另外聲母 q 用 k 代替以降低 q 鍵壓力；
+1. 參照日月、靈明，使用 25 鍵方案，聲母 z/zh 用 v 代替，ch 聲碼爲 c，sh 聲碼爲 s，零聲母用 j 代替，另外聲母 q 用 k 代替以降低 q 鍵壓力；
 2. 字根聚類程度接近靈明；
-3. 大根聲碼與靈明相同，字根韻碼類日月映射到 A、E、U、I、O，記憶壓力較原版靈明稍高；
+3. 大根聲碼與靈明相同，字根韻碼類日月映射至 A、E、U、I、O，单元音除 ü -> E，其余不变，記憶壓力較原版靈明稍高；
 4. 爲簡體字頻優化，簡體字頻全碼當量及簡體動重大幅降低，繁體動重較高；
-5. 單字編碼规则同灵明，單字編碼限長四碼；
+5. 單字編碼規則同靈明，編碼限長四碼；
 
-月靈的設計初衷是因靈明爲簡繁通打，適棄了一部分簡體性能；同時因靈明爲易學而採用韻碼取韻腹的設計，導致當量較難降低。雖然月靈的簡體動態重碼率及當量有所提升，但在易學難忘性、繁體靜態重碼數、繁體動態重碼率上都距靈明甚遠，因此並不推薦一般用戶及有繁體輸入需求的用戶使用，僅推薦只有簡體輸入需求並對性能有極致追求的用戶使用。對自定碼感興趣的一般用戶應去學習宇浩輸入法系列的日月和靈明方案。
+月靈的設計初衷是因靈明爲了簡繁通打，舍棄了一部分簡體性能；同時因靈明爲易學而採用韻碼取韻腹的設計，導致當量較難降低。雖然月靈的簡體動態重碼率及當量有所提升，但在易學難忘性、繁體靜態重碼數、繁體動態重碼率上都距靈明甚遠，因此並不推薦一般用戶及有繁體輸入需求的用戶使用，僅推薦只有簡體輸入需求並對性能有極致追求的用戶使用。對自定碼感興趣的一般用戶應去學習宇浩輸入法系列的日月和靈明方案。
 
 使用[宇浩測評](https://ceping.shurufa.app)測得的性能指標：
 
@@ -30,11 +30,11 @@ aside: false
 
 ## 映射
 
-* a	←	a	er	en	ian
-* e	←	e	ao	kua* ie	uo	üe	ong	uang	Ø
-* u	←	u	an	ua*	eng	ing
-* i	←	i	ia	ou	iang
-* o	←	o	ü	in	ei	ai	iao	iou	uei	uan	uen	ang	iuan	iong
+* A		←		a		er		en		ian
+* E		←		e		ao		kua*	ie		uo	üe	  ong  	uang	Ø
+* U		←		u		an		ua*		eng		ing
+*	I		←		i		ia		ou		iang
+* O		←		o		ü		  in    ei		ai	iao	  iou	  uei		uan		uen		ang		iuan  	iong
 
 特別注意：
 
@@ -58,7 +58,7 @@ import ZigenMap from "@/zigen/ZigenMap.vue"
 ## 拆分
 
 <div class="zigen-font">
-<Search chaifenUrl="/chaifen.json" zigenUrl="/zigen-yueling.csv" rule="yueling" />
+<Search chaifenUrl="/chaifen.json" zigenUrl="/zigen-yueling.csv" rule="ling" />
 </div>
 
 ## 字根
