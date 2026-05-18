@@ -30,11 +30,11 @@ aside: false
 
 ## 映射
 
-a	←	a	er	en	ian
-e	←	e	ao	kua* ie	uo	üe	ong	uang	Ø
-u	←	u	an	ua*	eng	ing
-i	←	i	ia	ou	iang
-o	←	o	ü	in	ei	ai	iao	iou	uei	uan	uen	ang	iuan	iong
+* a	←	a	er	en	ian
+* e	←	e	ao	kua* ie	uo	üe	ong	uang	Ø
+* u	←	u	an	ua*	eng	ing
+* i	←	i	ia	ou	iang
+* o	←	o	ü	in	ei	ai	iao	iou	uei	uan	uen	ang	iuan	iong
 
 特別注意：
 
