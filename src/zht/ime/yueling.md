@@ -30,17 +30,17 @@ aside: false
 
 ## 映射
 
-| A     | E        | U         | I       | O      |
-| :---- | :------- | :-------- | :----- | :----- |
-| a     | e Ø       | u         | i       | o ü    |
-|       | ao        |          |         | ai       |
-| er     |           |          |        | ei        |
-|       | (k)ua üe uo | ua       |        | uei      |
-|       | ie         |           | ia     | iao iou    |
-|       |           |            | ou    |         |
-| en ian |           | an        |        | in uan uen iuan |
-|       | ong        | eng ing    |       | ang       |
-|       | uang       |           | iang   | iong         |
+| A      | E      | U      | I      | O      |
+| :----- | :----- | :----- | :----- | :----- |
+| a      | e Ø     | u      | i      | o ü    |
+|        | ao      |        |        | ai     |
+| er     |         |         |       | ei      |
+|        | (k)ua üe uo | ua   |       | uei     |
+|        | ie      |         | ia     | iao iou   |
+|        |         |        | ou     |         |
+| en ian  |         | an     |        | in uan uen iuan |
+|        | ong     | eng ing  |       | ang      |
+|        | uang    |         | iang   | iong      |
 
 特別注意：
 
