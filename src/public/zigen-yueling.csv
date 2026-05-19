@@ -1,399 +1,399 @@
 font,ma,pinyin
-又,so,yòu
-,se,
-,se,
-癶,so,
-卅,ga,sà
-卌,gi,xì
-,ge,
-,ge,
-,ge,
-艹,ye,
-廾,ye,
-犬,co,quǎn
-,cko,
-卯,mme,mǎo
-,mme,mǎo
-,me,
-,me,
-,me,
-,me,
-片,gpa,piàn
-爿,gu,pán
-之,li,zhī
-辶,le,
-⻍,le,
-乙,hi,yǐ
-亅,hi,yǐ
-,hi,yǐ
-,hi,yǐ
-,hi,yǐ
-,hi,yǐ
-,hi,yǐ
-,hi,yǐ
-,hi,yǐ
-乚,hi,
-,hi,
-,hi,
-,hi,
-,hi,
-飛,hfo,fēi
-二,cja,èr
-,cja,
-,cja,
-⺀,cja,
-亍,ccu,
-卜,fpu,bo
-,fpu,
-,fe,
-,fe,
+又,so,yòu = iou -> o 🈤不取聲母
+,se,Ø -> e 🈤不取聲母
+,se,Ø -> e 🈤不取聲母
+癶,so,bō 🈤不取聲母
+卅,ga,sà 🈤不取聲母
+卌,gi,xì 🈤不取聲母
+,ge,Ø -> e 🈤不取聲母
+,ge,㊟同歸併
+,ge,㊟同歸併
+艹,ye,cǎo -> e 🈤不取聲母
+廾,ye,cǎo -> e 🈤不取聲母
+犬,co,quǎn -> o 🈤不取聲母
+,cko,quǎn -> ko
+卯,mme,mǎo -> me
+,mme,mǎo -> me
+,me,Ø -> e 🈤不取聲母
+,me,Ø -> e 🈤不取聲母
+,me,Ø -> e 🈤不取聲母
+,me,Ø -> e 🈤不取聲母
+片,gpa,piàn -> pa
+爿,gu,pán -> u 🈤不取聲母
+之,li,ẑī 🈤不取聲母
+辶,le,ĉuò -> e 🈤不取聲母
+⻍,le,ĉuò -> e 🈤不取聲母
+乙,hi,yǐ 🈤不取聲母 ㊟一切折筆皆同碼
+乚,hi,yǐ 🈤不取聲母 ㊟一切折筆皆同碼
+亅,hi,㊟同乙歸併
+,hi,㊟同乙歸併
+,hi,㊟同乙歸併
+,hi,㊟同乙歸併
+,hi,㊟同乙歸併
+,hi,㊟同乙歸併
+,hi,㊟同乙歸併
+,hi,㊟同乙歸併
+,hi,㊟同乙歸併
+,hi,㊟同乙歸併
+,hi,㊟同乙歸併
+,hi,㊟同乙歸併
+飛,hfo,fēi -> fo
+二,cja,èr -> ja 🈤零聲母聲碼取J
+,cja,èr -> ja 🈤零聲母聲碼取J
+,cja,èr -> ja 🈤零聲母聲碼取J
+⺀,cja,èr -> ja 🈤零聲母聲碼取J
+亍,ccu,ĉù
+卜,fpu,pū 取生僻音
+,fpu,㊟同卜歸併
+,fe,Ø -> e 🈤不取聲母
+,fe,Ø -> e 🈤不取聲母
 鹵,flu,lǔ
 虎,bhu,hǔ
-虍,bhu,
-,bhu,
-皿,rmo,mǐn
-罒,rwe,
-羊,tyi,yáng
-,tyi,
-,tyi,
-,ti,
-丶,ga,
-乀,ga,
+虍,bhu,hǔ
+,bhu,hǔ
+皿,rmo,mǐn -> mo
+罒,rwe,wǎng = uang -> we
+羊,tyi,yáng = iang -> yi
+,tyi,yáng = iang -> yi
+,tyi,yáng = iang -> yi
+,ti,yáng = iang -> i 🈤不取聲母
+丶,ga,nà 🈤不取聲母
+乀,ga,nà 🈤不取聲母
 夫,lfu,fū
-,ldi,
-川,hco,chuān
-,ho,
-巛,hco,
-巜,hco,
-勹,ne,
-,ne,
-,ne,
-臼,vo,jiù
-,vo,
-鬼,to,guǐ
-,to,
-甶,tu,
-,tu,
-也,je,yě
-乜,jme,miē
-,dke,
-,dke,
-,gu,
-,ge,
-土,vu,dù
-士,vi,shì
-尤,wyo,yóu
-尢,we,
-豕,vsi,shǐ
-,vsi,
-鳥,yno,niǎo
-,yno,
+,ldi,dí
+川,hco,ĉuān -> co
+,ho,ĉuān -> o 🈤不取聲母
+巛,hco,ĉuān -> co
+巜,hco,ĉuān -> co
+勹,ne,bāo -> e 🈤不取聲母
+,ne,bāo -> e 🈤不取聲母
+,ne,bāo -> e 🈤不取聲母
+臼,vo,jiù -> o 🈤不取聲母
+,vo,jiù -> o 🈤不取聲母
+鬼,to,guǐ -> o 🈤不取聲母
+,to,guǐ -> o 🈤不取聲母
+甶,tu,fǔ 🈤不取聲母
+,tu,fǔ 🈤不取聲母
+也,je,yě = ie -> e 🈤不取聲母
+乜,jme,miē -> me
+,dke,kuà -> ke ㊟聲母在右手時韻碼取e
+,dke,㊟同歸併
+,gu,ŝēng -> u 🈤不取聲母
+,ge,Ø -> e 🈤不取聲母
+土,vu,tǔ 🈤不取聲母
+士,vi,ŝì 🈤不取聲母
+尤,wyo,yóu = iou -> yo
+尢,we,wāng = uang -> e 🈤不取聲母
+豕,vsi,ŝǐ
+,vsi,㊟同豕歸併
+鳥,yno,niǎo -> no
+,yno,㊟同鳥歸併
 烏,ywu,wū
-,ywu,
-口,di,kǒu
-〇,du,líng
-鸟,qno,niǎo
-,qno,
+,ywu,㊟同烏歸併
+口,di,kǒu -> i 🈤不取聲母
+〇,du,líng -> u 🈤不取聲母
+鸟,qno,niǎo -> no
+,qno,㊟同鸟歸併
 乌,qwu,wū
-曲,rko,qǔ
-,re,
-一,fi,yī
-厂,bu,chǎng
-丆,bu,
+曲,rko,qǔ -> ko
+,re,Ø -> e 🈤不取聲母
+一,fi,yī = i 🈤不取聲母
+厂,bu,hǎn[本音]-> u 🈤不取聲母
+丆,bu,㊟同厂歸併
 母,smu,mǔ
-,se,
-彑,sji,
-,si,
-,syi,
-,se,
-,se,
-,se,
-,ge,
-,ge,
-,ge,
-由,pyo,yóu
-申,psa,shēn
-电,pa,diàn
-艮,pga,gèn
-,pga,
+,se,Ø -> e 🈤不取聲母
+彑,sji,jì
+,si,jì 🈤不取聲母
+,syi,yī
+,se,Ø -> e 🈤不取聲母
+,se,Ø -> e 🈤不取聲母
+,se,Ø -> e 🈤不取聲母
+,ge,Ø -> e 🈤不取聲母
+,ge,Ø -> e 🈤不取聲母
+,ge,Ø -> e 🈤不取聲母
+由,pyo,yóu = iou -> yo
+申,psa,ŝēn -> sa
+电,pa,diàn -> a 🈤不取聲母
+艮,pga,gèn -> ga
+,pga,㊟同艮歸併
 馬,pma,mǎ
-,pma,
-丁,sdu,dīng
-丅,sdu,
-下,si,xià
-,se,
+,pma,㊟同馬歸併
+丁,sdu,dīng -> du
+丅,sdu,㊟同丁歸併
+下,si,xià -> i 🈤不取聲母
+,se,Ø -> e 🈤不取聲母
 了,dle,le
-子,dvi,zǐ
-孑,dje,jié
-予,do,yǔ
+子,dvi,zǐ -> vi
+孑,dji,古同“戟”jǐ
+予,do,yǔ = ü -> o 🈤不取聲母
 日,lri,rì
-曰,lye,yuē
-,lri,
-,lri,
-長,mco,cháng
-镸,mco,
-髟,mbo,
-凵,ne,
-丩,ne,
-,ne,
-屮,nce,
-丱,ngo,
-向,kxi,xiàng
-,ke,
-,ke,
-寸,jco,cùn
-,je,
-上,fo,shàng
-丄,fo,
-,fo,
-丑,jci,chǒu
-,jwu,
-丨,do,
-〢,de,
-〣,de,
-,xu,
-彡,xu,
-彳,xi,
-,xe,
-亡,twe,wáng
-,tle,
+,lri,㊟同日歸併
+,lri,㊟同日歸併
+曰,lye,yuē = üe -> ye
+長,mco,ĉáng -> co
+镸,mco,ĉáng -> co
+髟,mbo,biāo -> bo
+凵,ne,Ø -> e 🈤不取聲母
+丩,ne,Ø -> e 🈤不取聲母
+,ne,Ø -> e 🈤不取聲母
+屮,nce,cǎo -> ce
+丱,ngo,guān -> go
+向,kxi,xiàng -> xi
+,ke,Ø -> e 🈤不取聲母
+,ke,Ø -> e 🈤不取聲母
+寸,jco,cùn -> co
+,je,Ø -> e 🈤不取聲母
+上,fo,ŝàng -> o 🈤不取聲母
+丄,fo,ŝàng -> o 🈤不取聲母
+,fo,㊟同丄歸併
+丑,jci,ĉǒu -> ci
+,jwu,wǔ
+丨,do,gǔn -> o 🈤不取聲母
+〢,de,Ø -> e 🈤不取聲母
+〣,de,Ø -> e 🈤不取聲母
+,xu,ŝān -> u 🈤不取聲母
+彡,xu,ŝān -> u 🈤不取聲母
+彳,xi,ĉì 🈤不取聲母
+,xe,Ø -> e 🈤不取聲母
+亡,twe,wáng = uang -> we
+,tle,luó -> le
 几,rji,jǐ
-殳,ru,shū
-風,rfu,fēng
-㔾,vje,
-卩,vje,
-,vje,
-尚,pso,shàng
-,pso,
+殳,ru,ŝū 🈤不取聲母
+風,rfu,fēng -> fu
+㔾,vje,jié -> je 
+卩,vje,jié -> je 
+,vje,jié -> je 
+尚,pso,ŝàng -> so
+,pso,㊟同尚歸併
 骨,mgu,gǔ
-咼,mu,
-,mu,
-車,bce,chē
-,bce,
-,bce,
-白,kbo,bái
-,kdo,
-冂,qje,
-,qje,
-,qje,
-手,rsi,shǒu
-,rsi,
-,ri,
-未,kwo,wèi
+咼,mu,guǎ -> u 🈤不取聲母
+,mu,㊟同咼歸併
+車,bce,ĉē
+,bce,㊟同車歸併
+,bce,㊟同車歸併
+白,kbo,bái -> bo 
+,kdo,duī -> do‘𠂤’为‘堆’古字
+冂,qje,Ø -> je 🈤零聲母聲碼取J
+,qje,Ø -> je 🈤零聲母聲碼取J
+,qje,Ø -> je 🈤零聲母聲碼取J
+手,rsi,ŝǒu -> si
+,rsi,ŝǒu -> si
+,ri,ŝǒu -> i 🈤不取聲母
+未,kwo,wèi = uei -> wo
 末,kmo,mò
 户,whu,hù
-戶,wu,hù
+戶,wu,hù 🈤不取聲母
 戸,whu,hù
-月,ke,yuè
-,ke,
-,ke,
-止,nvi,zhǐ
-,nvi,
-齒,nci,chǐ
-木,ju,mù
-朩,ju,
-來,jlo,lái
-甲,sji,jiǎ
+月,ke,yuè = üe -> e 🈤不取聲母
+,ke,yuè = üe -> e 🈤不取聲母
+,ke,㊟同月歸併
+止,nvi,ẑǐ -> vi
+,nvi,ẑǐ -> vi
+齒,nci,ĉǐ
+木,ju,mù 🈤不取聲母
+朩,ju,mù 🈤不取聲母
+來,jlo,lái -> lo
+甲,sji,jiǎ -> ji
 里,sli,lǐ
-禺,syo,yú
-而,wja,ér
-面,wma,miàn
-丷,ve,
-,ve,
-,ve,
+禺,syo,yú = ü -> yo
+而,wja,ér -> ja 🈤零聲母聲碼取J
+面,wma,miàn -> ma
+丷,ve,cǎo -> e 🈤不取聲母
+,ve,cǎo -> e 🈤不取聲母
+,ve,cǎo -> e 🈤不取聲母
 兀,mwu,wù
-丌,mi,
-,mi,
+丌,mi,jì 🈤不取聲母
+,mi,㊟同丌歸併
 己,lji,jǐ
 已,lyi,yǐ
 巳,lsi,sì
 ,lsi,sì
-巴,la,bā
+巴,la,bā 🈤不取聲母
 鹿,tlu,lù
-,tlu,
-,gi,
-,gi,
-高,dge,gāo
-,dge,gāo
-,dge,
-,de,
-,de,
-,de,
-,de,
-且,qke,qiě
-,qe,
-水,qo,shuǐ
-氺,qo,shuǐ
-,qo,
-乂,wi,yì
-,wi,
-冖,we,
-,we,
-,we,
-彐,gji,
-,gji,
-肀,gjo,
-隶,gi,lì
-臣,ya,chén
-,yi,
-,yi,
+,tlu,㊟同鹿歸併
+,gi,sī 🈤不取聲母
+,gi,㊟同歸併
+高,dge,gāo -> ge
+,dge,㊟同高歸併
+,dge,㊟同高歸併
+,de,Ø -> e 🈤不取聲母
+,de,Ø -> e 🈤不取聲母
+,de,Ø -> e 🈤不取聲母
+,de,Ø -> e 🈤不取聲母
+且,qke,qiě -> ke
+,qe,Ø -> e 🈤不取聲母
+水,qo,ŝuǐ -> o 🈤不取聲母
+氺,qo,㊟同水歸併
+,qo,㊟同水歸併
+乂,wi,yì 🈤不取聲母
+,wi,㊟同乂歸併
+冖,we,Ø -> e 🈤不取聲母
+,we,Ø -> e 🈤不取聲母
+,we,Ø -> e 🈤不取聲母
+彐,gji,jì
+,gji,jì
+肀,gjo,㊟yù = ü -> jo 🈤零聲母聲碼取J
+隶,gi,lì 🈤不取聲母
+臣,ya,ĉén -> a 🈤不取聲母
+,yi,yí = i 🈤不取聲母
+,yi,yí = i 🈤不取聲母
 合,dhe,hé
-,dhe,
-僉,da,qiān
-,dhe,
-小,hxo,xiǎo
-⺌,hxo,
-,hxo,
-,ho,
-,ho,
-竹,su,zhú
-,su,
-,se,
-西,ri,xī
-酉,ryo,yǒu
-七,qi,qī
-,qi,qī
+,dhe,㊟同合歸併
+,dhe,㊟同合歸併
+僉,da,qiān -> a 🈤不取聲母
+小,hxo,xiǎo -> xo
+⺌,hxo,㊟同小歸併
+,hxo,㊟同小歸併
+,ho,xiǎo -> o 🈤不取聲母
+,ho,xiǎo -> o 🈤不取聲母
+竹,su,ẑú 🈤不取聲母
+,su,ẑú 🈤不取聲母
+,se,Ø -> e 🈤不取聲母
+西,ri,xī 🈤不取聲母
+酉,ryo,yǒu = iou -> yo
+七,qi,qī 🈤不取聲母
+,qi,qī 🈤不取聲母
 弋,qyi,yì
 戈,kge,gē
 戊,kwu,wù
-牛,tno,niú
-,to,
-生,tu,shēng
-尸,msi,shī
-,msi,shī
-,msi,
-爪,hu,zhǎo
-瓜,hgu,guā
-八,ha,bā
-,he,
-門,lma,mén
-鬥,ldi,dòu
-斤,kjo,jīn
-,ki,
-自,kvi,zì
-身,ksa,shēn
-乃,sno,nǎi
-廴,so,
-,so,
-习,bi,xí
-金,bo,jīn
-食,bsi,shí
-鱼,byo,yú
-貝,cbo,bèi
-亥,cho,hài
-匕,ci,bǐ
-,ci,bǐ
-毛,cme,máo
-,co,
-正,cu,zhèng
-豸,cvi,zhì
-,cvu,
-见,dja,jiàn
-气,dki,qì
+牛,tno,niú -> no
+,to,niú -> o 🈤不取聲母
+生,tu,ŝēng -> u 🈤不取聲母
+尸,msi,ŝī
+,msi,ŝī
+,msi,ŝī
+爪,hu,ẑuǎ -> u 🈤不取聲母
+瓜,hgu,guā -> gu
+八,ha,bā 🈤不取聲母
+,he,Ø -> e 🈤不取聲母
+門,lma,mén -> ma
+鬥,ldi,dòu -> di
+斤,kjo,jīn -> jo
+,ki,yì 🈤不取聲母
+自,kvi,zì -> vi
+身,ksa,ŝēn -> sa
+乃,sno,nǎi -> no
+廴,so,yǐn = in -> o 🈤不取聲母
+,so,wéi = uei -> o 🈤不取聲母
+习,bi,xí 🈤不取聲母
+金,bo,jīn -> o 🈤不取聲母
+食,bsi,ŝí
+鱼,byo,yú = ü -> yo
+貝,cbo,bèi -> bo
+亥,ĉo,hài -> ho
+匕,ci,bǐ 🈤不取聲母
+,ci,bǐ 🈤不取聲母
+毛,cme,máo -> me
+,co,jīn -> o 🈤不取聲母
+正,cu,ẑèng -> u 🈤不取聲母
+豸,cvi,ẑì -> vi
+,cvu,ẑù -> vu
+见,dja,jiàn -> ja
+气,dki,qì -> ki
 目,dmu,mù
-牙,dyi,yá
-夭,dyo,yāo
-言,fa,yán
-巾,fjo,jīn
-丂,fke,
-,fke,
-门,fma,mén
-舌,fse,shé
-,fu,
-隹,go,zhuī
-页,gye,yè
+牙,dyi,yá = ia -> yi
+夭,dyo,yāo = iao -> yo
+言,fa,yán -> a 🈤不取聲母
+巾,fjo,jīn -> jo
+丂,fke,kào -> ke
+,fke,㊟同丂歸併
+门,fma,mén -> ma
+舌,fse,ŝé
+,fu,fǔ 🈤不取聲母
+隹,go,ẑuī -> o 🈤不取聲母
+页,gye,yè = ie -> ye
 亦,gyi,yì
 ,gyi,yì
 大,hda,dà
-弓,hge,gōng
-,ho,
-石,hsi,shí
-舟,hvi,zhōu
-灬,jbo,
-丿,je,
-非,jfo,fēi
-示,jsi,shì
-,jsi,shì
-田,jta,tián
-,jve,
-走,jvi,zǒu
-文,jwo,wén
-人,ka,rén
-长,kco,cháng
-,kde,
+弓,hge,gōng -> ge
+,ho,xīn -> o 🈤不取聲母
+石,hsi,ŝí
+舟,hvi,ẑōu -> vi
+灬,jbo,biāo -> bo
+丿,je,piě -> e 🈤不取聲母
+非,jfo,fēi -> fo
+示,jsi,ŝì
+,jsi,ŝì
+田,jta,tián -> ta
+,jve,zuǒ -> ve
+走,jvi,zǒu -> vi
+文,jwo,wén = uen -> wo
+人,ka,rén -> a 🈤不取聲母
+长,kco,ĉáng -> co
+,kde,dāo -> de
 古,kgu,gǔ
-耳,kja,ěr
+耳,kja,ěr -> ja 🈤零聲母聲碼取J
 力,kli,lì
-三,ksu,sān
-囗,kwo,
-穴,kxe,xué
-,la,
-方,lfo,fāng
-广,lge,guǎng
-壬,lra,rén
+三,ksu,sān -> su
+囗,kwo,wéi = uei -> wo
+穴,kxe,xué -> xe
+,la,rén -> a 🈤不取聲母
+方,lfo,fāng -> fo
+广,lge,guǎng -> ge
+壬,lra,rén -> ra
 夕,lxi,xī
-车,mce,chē
-,me,
-王,me,wáng
+车,mce,ĉē
+,me,Ø -> e 🈤不取聲母
+王,me,wáng = uang -> e 🈤不取聲母
 入,mru,rù
-至,mvi,zhì
-夊,mvu,suī
-夂,mvu,zhǐ
-攵,mvu,pū
-魚,myo,yú
-儿,na,ér
-,na,ér
-,na,
-贝,nbo,bèi
+至,mvi,ẑì -> vi
+夊,mvu,㊟夂[ẑ]ǐ 攵p[ū] 歸併 -> vu
+夂,mvu,㊟夂[ẑ]ǐ 攵p[ū] 歸併 -> vu
+攵,mvu,㊟夂[ẑ]ǐ 攵p[ū] 歸併 -> vu
+魚,myo,yú = ü -> yo
+儿,na,ér -> a 🈤不取聲母
+,na,ér -> a 🈤不取聲母
+,na,yán = ian -> a 🈤不取聲母
+贝,nbo,bèi -> bo
 不,nbu,bù
 冊,nce,cè
 ,nce,cè
-匚,nfo,
-,nfo,
-干,ngu,gàn
-見,nja,jiàn
-山,nsu,shān
-辛,nxo,xīn
-宀,pa,
-工,pe,gōng
-亠,pi,
-糸,pi,sī
-,pi,sī
-矢,psi,shǐ
-心,pxo,xīn
-早,qe,zǎo
+匚,nfo,fāng -> fo
+,nfo,fāng -> fo
+干,ngu,gàn -> gu
+見,nja,jiàn -> ja
+山,nsu,ŝān -> su
+辛,nxo,xīn -> xo
+宀,pa,miǎn -> a 🈤不取聲母
+工,pe,gōng -> e 🈤不取聲母
+亠,pi,tóu -> i 🈤不取聲母
+糸,pi,sī 🈤不取聲母
+,pi,sī 🈤不取聲母
+矢,psi,ŝǐ
+心,pxo,xīn -> xo
+早,qe,zǎo -> e 🈤不取聲母
 立,qli,lì
-甫,qu,fǔ
-缶,rfi,fǒu
+甫,qu,fǔ 🈤不取聲母
+缶,rfi,fǒu -> fi
 麻,rma,má
-用,ro,yòng
+用,ro,yòng -> o 🈤不取聲母
 皮,rpi,pí
-頁,rye,yè
+頁,rye,yè = ie -> ye 
 革,sge,gé
-禾,she,hé
+禾,ŝe,hé
 米,smi,mǐ
-火,te,huǒ
-黑,tho,hēi
-十,ti,shí
+火,te,huǒ -> e 🈤不取聲母
+黑,tho,hēi -> ho
+十,ti,ŝí 🈤不取聲母
 马,tma,mǎ
-世,tsi,shì
-瓦,twu,wǎ
-,vsi,
-雨,vyo,yǔ
-九,wjo,jiǔ
-欠,wka,qiàn
-其,wki,qí
-疒,wne,
-女,wo,nǚ
-业,wye,yè
-丬,xi,
-厶,xi,
-千,xka,qiān
-,xka,qiān
-耂,xle,
-虫,xo,chóng
-丰,xu,fēng
-足,xvu,zú
-辰,yca,chén
-刀,ye,dāo
-幺,yyo,yāo
+世,tsi,ŝì
+瓦,twu,wǎ = ua -> wu
+,vsi,ŝí
+雨,vyo,yǔ = ü -> yo
+九,wjo,jiǔ = iou -> jo
+欠,wka,qiàn -> ka
+其,wki,qí -> ki
+疒,wne,nè
+女,wo,nǚ -> o 🈤不取聲母
+业,wye,yè = ie -> ye
+丬,xi,qiáng -> i 🈤不取聲母
+厶,xi,sī 🈤不取聲母
+千,xka,qiān -> ka
+,xka,qiān -> ka
+耂,xle,lǎo -> le
+虫,xo,huǐ[本音] -> o 🈤不取聲母
+丰,xu,fēng -> u 🈤不取聲母
+足,xvu,zú -> vu
+辰,yca,ĉén -> ca
+刀,ye,dāo -> e 🈤不取聲母
+幺,yyo,yāo = iao -> yo
