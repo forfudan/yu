@@ -91,6 +91,7 @@ paths_of_docs = [
     "/ime/sbmm.md",
     "/ime/moling.md", # 魔靈
     "/ime/yueling.md", # 月靈
+    "/ime/yaoling.md", # 妖靈
 ]
 
 for path_of_doc in paths_of_docs:
