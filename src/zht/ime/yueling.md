@@ -53,7 +53,7 @@ aside: false
 
 * 感謝朱宇浩製作的優質拆分和日月、靈明優質方案；
 * 感謝 [@荒](https://github.com/hertz-hwang) 的[碼靈](https://github.com/hertz-hwang/code_genie)優化程序；
-* 感謝上述兩位作者的討論和指導，以及羣友及魔靈製作者 [@qq3qq](https://github.com/Dieken) 的多次指導与啓發；
+* 感謝上述兩位作者的討論和指導，以及羣友及魔靈製作者 [@qq3qq](https://github.com/Dieken) 的多次指導與啓發；
 
 <script setup>
 import Search from '@/search/FetchSearch.vue'

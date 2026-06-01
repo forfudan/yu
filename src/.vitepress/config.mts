@@ -184,6 +184,10 @@ export default defineConfig({
               text: "月灵",
               link: "/ime/yueling",
             },
+            {
+              text: "妖灵",
+              link: "/ime/yaoling",
+            },
           ],
         },
       ],
