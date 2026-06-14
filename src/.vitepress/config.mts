@@ -188,6 +188,10 @@ export default defineConfig({
               text: "妖灵",
               link: "/ime/yaoling",
             },
+            {
+              text: "星月",
+              link: "ime/xingyue",
+            },
           ],
         },
       ],
@@ -621,6 +625,10 @@ export default defineConfig({
                 {
                   text: "妖靈",
                   link: "/zht/ime/yaoling",
+                },
+                {
+                  text: "星月",
+                  link: "/zht/ime/xingyue",
                 },
               ],
             },
