@@ -6,7 +6,7 @@ aside: false
 
 ## 簡介
 
-[星月](https://github.com/PillowMonth/starmoon-ime)輸入方案是以星陈爲基礎，拆部分聚类且小码乱序的方案：
+[星月](https://github.com/PillowMonth/starmoon-ime)輸入方案是以星陳爲基礎，拆部分聚类且小码乱序的方案：
 
 1. 使用 25 鍵方案，小碼基本亂序，低頻無讀音字根小碼取v，相對應的簡繁字根取相同小碼，無對應簡體字根的繁體字根小碼取聲母，字型相近且同音的字根大部分取相同小碼；
 2. 字根聚類程度接近靈明；
