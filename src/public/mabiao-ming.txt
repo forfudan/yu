@@ -35693,6 +35693,7 @@ dkdvd	𡋑
 dkdvd	𡼚
 dkdvd	𫪟
 dkdvf	𠿋
+dkdvg	𠴺
 dkdvg	𭍏
 dkdvi	𠱖
 dkdvi	𫩢
@@ -36875,7 +36876,6 @@ dklvd	𪢍
 dklvf	𪡽
 dklvg	𭍋
 dklvk	𠶁
-dklvl	𠴺
 dklvl	𡅍
 dklvl	𫫳
 dklvm	𥺔
@@ -40346,7 +40346,6 @@ ffglq	𣢕
 ffglr	𨗶
 ffglr	𰺴
 ffgme	𫧐
-ffgmo	𠑹
 ffgmo	𥁄
 ffgmo	𮕜
 ffgmr	𣄲
@@ -42097,7 +42096,6 @@ fpjto	𧞕
 fpjvg	𬼕
 fpjvs	𤮵
 fpjxo	㤁
-fpkck	𭀡
 fpkdi	𡗣
 fpkdk	𤘌
 fpkdk	𳎚
@@ -43238,6 +43236,7 @@ gflu	𰆖
 gfmci	㕃
 gfmci	𠩿
 gfmfi	𦌂
+gfmo	𠑹
 gfmo	𦊐
 gfo	𠨭
 gfpda	𦊊
@@ -45701,6 +45700,7 @@ gkkrg	𢹻
 gkkrh	𢷠
 gkkrj	㩛
 gkkrw	𫾙
+gkksa	𭀡
 gkksa	𰒼
 gkksf	𢯰
 gkksg	𢴧
@@ -47445,7 +47445,6 @@ gmffp	𭾫
 gmfgj	䁮
 gmfgm	𥅧
 gmfgm	𥈧
-gmfgm	𱲴
 gmfhd	䀽
 gmfhh	𰥢
 gmfhw	𥅙
@@ -47524,6 +47523,7 @@ gmgfh	𥊆
 gmgfh	𲲟
 gmgfl	𨘊
 gmgfm	𥈪
+gmgfm	𱲴
 gmgft	䁵
 gmgfv	𣃒
 gmggb	䁲
@@ -118241,7 +118241,6 @@ mdglr	逸
 mdgo	𛃔
 mdgwl	勉
 mdgwl	勉
-mdmo	⻕
 mdo	㠯
 mdo	
 mdtjo	🩠
@@ -122169,6 +122168,7 @@ vfvo	즞
 vfwo	즛
 vfwwo	즜
 vgmo	㍆
+vhmmo	⻕
 vhu	⼾
 vhvjo	𛁗
 vhvjo	𛁘

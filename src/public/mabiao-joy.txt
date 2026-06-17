@@ -23134,6 +23134,7 @@ etee	𮤈
 etej	僭
 etek	佢
 etek	佀
+etek	𠑹
 etek	𨳽
 etek	𪝏
 etel	𬿙
@@ -23985,6 +23986,7 @@ eyx	𰿚
 eyy	侈
 eyyo	𠝓
 eyyq	𪂄
+eyys	𭀡
 eyyv	倗
 eyyx	侈
 eyyx	𨴢
@@ -55536,9 +55538,9 @@ koc	𨾿
 koc	𫻼
 koca	𭋻
 kocb	𠹇
+koce	𠴺
 kocg	𭌚
 koci	𠱖
-koco	𠴺
 koct	𠻦
 kocx	𠱚
 kod	划
@@ -92813,6 +92815,7 @@ sesl	𪾫
 sesl	𰳾
 sesr	𩃥
 sess	𥆉
+sete	𱲴
 seu	袂
 seun	𤳶
 seur	袂
@@ -95646,7 +95649,6 @@ stdn	𧜐
 stdr	𥌹
 stds	𣫕
 stds	𲱌
-stee	𱲴
 stej	䁮
 stej	𧝆
 stej	𩅨
@@ -97660,7 +97662,6 @@ tee	𡰭
 tee	⺛
 teec	𥺣
 teei	𳅷
-teek	𠑹
 teek	𪩥
 teek	𲐮
 teek	𲞡
@@ -115300,6 +115301,7 @@ week	𨸏
 week	𨺵
 week	𨽡
 week	𱀉
+week	⻕
 weel	𨽴
 weel	𱀳
 weel	𗁏
@@ -115340,7 +115342,6 @@ wejd	𮱓
 wejj	𡤡
 wejq	𫰙
 wejr	𡢃
-wek	⻕
 weka	媬
 wekg	𢨒
 wekg	𥩱
@@ -119722,7 +119723,6 @@ wys	𘧈
 wysa	𭨾
 wysm	𥅕
 wytp	𡝺
-wyty	𭀡
 wyua	㰍
 wyuc	龒
 wyuc	驡
