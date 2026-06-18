@@ -47,7 +47,7 @@ export default defineConfig({
     nav: [
       { text: "介绍", link: "/docs/" },
       { text: "学习", link: "/learn/division" },
-      { text: "练习", link: "/practice/root" },
+      { text: "练习", link: "/practice/root_ling" },
       { text: "安装", link: "/docs/install" },
       { text: "体验", link: "/pad/ling" },
       { text: "跟打", link: "https://genda.shurufa.app" },
@@ -485,7 +485,7 @@ export default defineConfig({
         nav: [
           { text: "介紹", link: "/zht/docs/" },
           { text: "學習", link: "/zht/learn/division" },
-          { text: "練習", link: "/zht/practice/root" },
+          { text: "練習", link: "/zht/practice/root_ling" },
           { text: "安裝", link: "/zht/docs/install" },
           { text: "體驗", link: "/zht/pad/ling" },
           { text: "跟打", link: "https://genda.shurufa.app" },

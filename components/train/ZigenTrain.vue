@@ -5,6 +5,7 @@
     將相同編碼的字根歸為一組同時顯示。
     
     主要修改歷史:
+    - 2026-06-18: 優化字根分組邏輯，支持同碼與聚類兩種分組方式，自動識別字根表格式
     - 2025-12-31: 合併 TrainCardGroup.vue，統一為單一文件
     - 2025-09-01: 優化字根練習邏輯，支援同編碼字根分組顯示，改進記憶演算法
     - 之前: 單個字根練習模式
@@ -12,9 +13,10 @@
 
 <script setup lang="ts">
 /** 字根練習 - 優化版 */
-import { shallowRef, onMounted, ref, computed, nextTick, watch, onBeforeUnmount } from "vue";
+import { shallowRef, onMounted, ref, computed, nextTick, onBeforeUnmount, type Ref } from "vue";
 import { Card, cache, fetchChaifenOptimized, fetchZigen, makeCodesFromDivision, find8relativeChars, ChaifenMap } from "./share";
 import { AdvancedSchedule } from "./advancedSchedule";
+import SegmentedInput from "./SegmentedInput.vue";
 import {
     useCellWidth,
     useVisibleOffset,
@@ -24,11 +26,25 @@ import {
     isInVisibleRange as checkIsInVisibleRange
 } from "./cascadeStyles";
 
+interface ZigenItem {
+    font: string;
+    ma: string;
+    pinyin?: string;
+    /** 該字根的編碼（依練習模式由 ma 取得） */
+    code: string;
+}
+
 interface ZigenGroup {
-    /** 編碼 */
+    /** 分組鍵：同碼模式為編碼，聚類模式為聚類文字 */
+    key: string;
+    /** 聚類文字（僅聚類模式有值） */
+    julei?: string;
+    /** 是否為聚類模式：每個字根有獨立編碼與輸入框 */
+    isJulei: boolean;
+    /** 同碼模式下整組共享的編碼（聚類模式為空字串） */
     code: string;
     /** 字根列表 */
-    zigens: Array<{ font: string; ma: string; pinyin?: string }>;
+    zigens: ZigenItem[];
 }
 
 const p = defineProps<{
@@ -64,12 +80,25 @@ const chaifenMap = shallowRef<ChaifenMap>()
 
 // 練習相關狀態
 const currentIndex = ref(0);
-const inputElement = ref<HTMLInputElement>();
-const inputValue = ref<string>('');
+// 每個輸入框的當前輸入值（同碼模式長度為 1，聚類模式對應每個字根）
+const inputs = ref<string[]>([]);
+// 各分段輸入框組件的引用，用於協調焦點
+const inputRefs = ref<any[]>([]);
 const showAnswer = ref(false);
-const isCorrect = ref(true);
 const wrongInputCount = ref(0);
+// 當前組是否已出現過錯誤（用於只記錄一次失敗）
+const groupHadError = ref(false);
 const showResetConfirm = ref(false);
+
+function setSlotRef(el: any, i: number) {
+    if (el) inputRefs.value[i] = el;
+}
+
+function focusFirstInput() {
+    nextTick(() => {
+        inputRefs.value[0]?.focus?.();
+    });
+}
 // 用於強制更新進度條的響應式狀態
 const forceUpdate = ref(0);
 
@@ -186,64 +215,60 @@ function applySortOrder() {
         }
         // 確保響應式更新
         nextTick(() => {
-            console.log('排序更新完成，當前順序:', cardGroups.value.slice(0, 3).map(g => g.code))
+            console.log('排序更新完成，當前順序:', cardGroups.value?.slice(0, 3).map(g => g.code))
         })
     } else {
         console.warn('originalCardGroups 未初始化，無法應用排序')
     }
 }
 
-// 將字根按相同編碼分組，參考 ZigenMap.vue 的邏輯
-function groupZigensByCode(zigenValues: Array<{ font: string; ma: string }>) {
+// 依練習模式取得單個字根的編碼並組裝為 ZigenItem
+function makeZigenItem(z: { font: string; ma: string; pinyin?: string }, code: string): ZigenItem {
+    return { font: z.font, ma: z.ma, pinyin: z.pinyin, code };
+}
+
+// 同碼模式：將連續且編碼相同的字根歸為一組（原有邏輯）
+function buildCodeGroups(zigenValues: Array<{ font: string; ma: string; pinyin?: string }>): ZigenGroup[] {
     const groups: ZigenGroup[] = [];
-    let skippedCount = 0;
-    const skippedItems: Array<{ font: string; ma: string; reason: string }> = [];
-
-    console.log('=== 开始分组字根 ===');
-    console.log('输入字根总数:', zigenValues.length);
-    console.log('练习模式:', p.mode);
-
     for (let i = 0; i < zigenValues.length; i++) {
         const current = zigenValues[i];
-        const currentCode = getCode(current.ma)?.toLowerCase();
-
-        if (!currentCode) {
-            skippedCount++;
-            skippedItems.push({
-                font: current.font,
-                ma: current.ma,
-                reason: `getCode返回空值，mode=${p.mode}`
-            });
-            console.warn(`跳过字根 ${i}: ${current.font} (${current.ma}) - getCode返回: ${getCode(current.ma)}`);
-            continue;
-        }
-
-        // 檢查是否與前一個字根編碼相同且連續
-        const prev = i > 0 ? zigenValues[i - 1] : null;
-        const prevCode = prev ? getCode(prev.ma)?.toLowerCase() : null;
-
-        if (prevCode === currentCode && groups.length > 0 && groups[groups.length - 1].code === currentCode) {
-            // 添加到現有組
-            groups[groups.length - 1].zigens.push(current);
+        const code = getCode(current.ma)?.toLowerCase();
+        if (!code) continue;
+        const last = groups[groups.length - 1];
+        if (last && !last.isJulei && last.code === code) {
+            last.zigens.push(makeZigenItem(current, code));
         } else {
-            // 創建新組
-            groups.push({
-                code: currentCode,
-                zigens: [current]
-            });
+            groups.push({ key: code, isJulei: false, code, zigens: [makeZigenItem(current, code)] });
         }
     }
+    return groups;
+}
 
-    console.log('=== 分组完成 ===');
-    console.log('有效组数:', groups.length);
-    console.log('跳过的字根数:', skippedCount);
-    if (skippedCount > 0) {
-        console.log('跳过的字根详情:', skippedItems);
-        console.log('前10个跳过的字根原因统计:');
-        const reasons = skippedItems.slice(0, 10).map(item => `${item.font}(${item.ma}): ${item.reason}`);
-        reasons.forEach(reason => console.log(`  - ${reason}`));
+// 聚類模式：將「julei 值」且「ma 首字母（大碼）」皆相同的字根歸為一組
+// （全表收集，保留首次出現順序）。同 julei 但不同大碼者拆成不同組，避免「遊離字根」之類聚成過大一組。
+function buildJuleiGroups(zigenValues: Array<{ font: string; ma: string; pinyin?: string; julei?: string }>): ZigenGroup[] {
+    const order: string[] = [];
+    const map = new Map<string, { julei: string; items: ZigenItem[] }>();
+    for (const current of zigenValues) {
+        const code = getCode(current.ma)?.toLowerCase();
+        if (!code) continue;
+        const julei = (current.julei || '').trim() || '未分類';
+        const first = ((current.ma || '').trim()[0] || '').toLowerCase();
+        const key = `${first}\u0000${julei}`;
+        if (!map.has(key)) { map.set(key, { julei, items: [] }); order.push(key); }
+        map.get(key)!.items.push(makeZigenItem(current, code));
     }
+    return order.map(key => {
+        const g = map.get(key)!;
+        return { key, julei: g.julei, isJulei: true, code: '', zigens: g.items };
+    });
+}
 
+// 依字根表是否含 julei 欄位，自動選擇分組方式
+function buildGroups(zigenValues: Array<{ font: string; ma: string; pinyin?: string; julei?: string }>): ZigenGroup[] {
+    const hasJulei = zigenValues.some(z => (z.julei || '').trim() !== '');
+    const groups = hasJulei ? buildJuleiGroups(zigenValues) : buildCodeGroups(zigenValues);
+    console.log(`字根分組完成：${hasJulei ? '聚類模式' : '同碼模式'}，共 ${groups.length} 組`);
     return groups;
 }
 
@@ -262,13 +287,13 @@ function resetTraining() {
 
         // 重置組件狀態
         currentIndex.value = 0;
-        inputValue.value = '';
+        inputs.value = [];
         showAnswer.value = false;
-        isCorrect.value = true;
         wrongInputCount.value = 0;
+        groupHadError.value = false;
 
         // 重新初始化
-        schedule.initializeWithGroupCount(cardGroups.value.length);
+        schedule.initializeWithGroupCount(cardGroups.value?.length ?? 0);
         nextGroup();
 
         // 強制更新進度顯示
@@ -296,33 +321,54 @@ const cancelReset = () => {
     showResetConfirm.value = false;
 }
 
-// 計算字根大小類名
+// 計算字根大小類名 - 依字根數量自適應縮小，避免多字根時換行
+// 字號上限以「3 個字根」為準：1~3 個時統一用 3 根的尺寸，避免單字根過大
 const zigenSizeClass = computed(() => {
-    if (!currentGroup.value) return 'text-8xl';
+    if (!currentGroup.value) return 'text-7xl';
 
-    const zigenCount = currentGroup.value.zigens.length;
+    // 字號封頂：少於 3 個字根時，視同 3 個字根計算
+    const zigenCount = Math.max(currentGroup.value.zigens.length, 3);
     const isSmallScreen = windowWidth.value < 768; // sm breakpoint
-    const isMediumScreen = windowWidth.value < 720; // lg breakpoint
 
     if (isSmallScreen) {
-        // 小屏幕：按字根數量調整
-        if (zigenCount <= 2) return 'text-6xl';
-        if (zigenCount <= 4) return 'text-5xl';
-        return 'text-4xl';
-    } else if (isMediumScreen) {
-        // 中等屏幕：稍大一些
-        if (zigenCount <= 2) return 'text-8xl';
-        if (zigenCount <= 4) return 'text-7xl';
-        return 'text-6xl';
+        // 手機端：字根越多字體越小
+        if (zigenCount <= 4) return 'text-4xl';
+        if (zigenCount <= 6) return 'text-3xl';
+        if (zigenCount <= 8) return 'text-2xl';
+        return 'text-xl';
     } else {
-        // 大屏幕：最大字體
-        if (zigenCount <= 2) return 'text-9xl';
-        if (zigenCount <= 4) return 'text-8xl';
-        return 'text-7xl';
+        // 桌面端：字根越多字體越小
+        if (zigenCount <= 4) return 'text-7xl';
+        if (zigenCount <= 6) return 'text-5xl';
+        if (zigenCount <= 8) return 'text-4xl';
+        return 'text-3xl';
     }
 });
 
-// 計算間距類名
+// 分段輸入框尺寸 - 聚類模式下依字根數量自適應縮小
+const inputSize = computed<'xs' | 'sm' | 'md'>(() => {
+    const isSmallScreen = windowWidth.value < 768;
+    // 同碼模式只有單一輸入框，依螢幕決定即可
+    if (!isJuleiMode.value) return isSmallScreen ? 'sm' : 'md';
+
+    const zigenCount = currentGroup.value ? currentGroup.value.zigens.length : 1;
+    if (isSmallScreen) {
+        if (zigenCount <= 4) return 'sm';
+        return 'xs';
+    } else {
+        if (zigenCount <= 4) return 'md';
+        if (zigenCount <= 8) return 'sm';
+        return 'xs';
+    }
+});
+
+// 字根過多時隱藏相關漢字，避免每格過寬導致換行
+const showRelatedChars = computed(() => {
+    const zigenCount = currentGroup.value ? currentGroup.value.zigens.length : 1;
+    return windowWidth.value < 768 ? zigenCount <= 4 : zigenCount <= 6;
+});
+
+// 計算間距類名 - 依字根數量自適應縮小
 const zigenGapClass = computed(() => {
     if (!currentGroup.value) return 'gap-8 lg:gap-12';
 
@@ -330,22 +376,70 @@ const zigenGapClass = computed(() => {
     const isSmallScreen = windowWidth.value < 768;
 
     if (isSmallScreen) {
-        // 手機端進一步減少間距
-        return zigenCount > 4 ? 'gap-1' : zigenCount > 2 ? 'gap-2' : 'gap-3';
+        if (zigenCount <= 2) return 'gap-3';
+        if (zigenCount <= 4) return 'gap-2';
+        if (zigenCount <= 6) return 'gap-1.5';
+        return 'gap-1';
     } else {
-        return zigenCount > 4 ? 'gap-6' : 'gap-8 lg:gap-12';
+        if (zigenCount <= 2) return 'gap-8 lg:gap-12';
+        if (zigenCount <= 4) return 'gap-6';
+        if (zigenCount <= 6) return 'gap-4';
+        if (zigenCount <= 8) return 'gap-3';
+        return 'gap-2';
     }
+});
+
+// 字根字形格與相關字行的固定高度（px）。
+// 讓每個字根的「字形格」高度一致、且字形垂直置中，
+// 使下方輸入框排在同一水平線上（不受字形高矮或有無相關字影響）。
+const rootCellMetrics = computed(() => {
+    // 與 zigenSizeClass 的字號分級對齊：少於 3 個字根時視同 3 個
+    const count = currentGroup.value ? Math.max(currentGroup.value.zigens.length, 3) : 3;
+    const small = windowWidth.value < 768;
+    let glyph: number;
+    if (small) {
+        glyph = count <= 4 ? 56 : count <= 6 ? 44 : count <= 8 ? 36 : 30;
+    } else {
+        glyph = count <= 4 ? 100 : count <= 6 ? 76 : count <= 8 ? 60 : 52;
+    }
+    const related = small ? 18 : 26;
+    return { glyph, related };
 });
 
 const currentGroup = computed(() => cardGroups.value ? cardGroups.value[currentIndex.value] : null);
 const totalGroups = computed(() => cardGroups.value ? cardGroups.value.length : 0);
+
+// 是否為聚類模式
+const isJuleiMode = computed(() => currentGroup.value?.isJulei ?? false);
+
+// 當前組各輸入框對應的目標編碼（同碼模式長度為 1，聚類模式對應每個字根）
+const currentCodes = computed<string[]>(() => {
+    const g = currentGroup.value;
+    if (!g) return [];
+    if (g.isJulei) return g.zigens.map(z => z.code.toLowerCase());
+    return [g.code.toLowerCase()];
+});
+
+// 各輸入框狀態：idle / correct / wrong
+const slotStatus = computed<('idle' | 'correct' | 'wrong')[]>(() => {
+    return currentCodes.value.map((code, i) => {
+        const val = (inputs.value[i] || '').toLowerCase();
+        if (val === code) return 'correct';
+        if (val.length >= code.length) return 'wrong';
+        return 'idle';
+    });
+});
+
+// 整組是否無錯（供卡片與字根配色使用）
+const isCorrect = computed(() => !slotStatus.value.some(s => s === 'wrong'));
 
 // Cascade 展示：获取当前字根组前后的字根组 - 使用公用工具函數
 const visibleGroups = computed(() => {
     if (!cardGroups.value || cardGroups.value.length === 0) return [];
 
     // 使用公用工具函數生成可見項目，並轉換為原有的格式
-    const items = useVisibleItems(cardGroups, currentIndex).value;
+    // cardGroups 為 shallowRef<ZigenGroup[] | undefined>，函式內部已處理空值
+    const items = useVisibleItems(cardGroups as unknown as Ref<ZigenGroup[]>, currentIndex).value;
     return items.map(item => ({
         group: item.item,
         offset: item.offset,
@@ -414,56 +508,40 @@ const isCompleted = computed(() => {
     return schedule.isCompleted();
 });
 
-// 監聽輸入，自動處理正確答案或錯誤提示
-watch(inputValue, (newValue) => {
+// 某個輸入框填滿時的處理
+const onSlotComplete = (i: number) => {
     if (!currentGroup.value) return;
+    const code = currentCodes.value[i];
+    const val = (inputs.value[i] || '').toLowerCase();
 
-    const input = newValue.trim().toLowerCase();
-    const expectedCode = currentGroup.value.code.toLowerCase();
-
-    // 檢查輸入長度是否達到預期編碼長度
-    if (input.length >= expectedCode.length) {
-        if (input === expectedCode) {
-            // 正確答案，直接進入下一組
-            handleCorrectAnswer();
-        } else if (!showAnswer.value) {
-            // 錯誤答案且未顯示答案，顯示答案並記錄錯誤
-            handleWrongAnswer();
+    if (val === code) {
+        // 該格正確：若整組皆正確則完成，否則聚焦下一個未完成的輸入框
+        if (slotStatus.value.every(s => s === 'correct')) {
+            onGroupSuccess();
+        } else {
+            const next = currentCodes.value.findIndex((c, idx) => idx > i && (inputs.value[idx] || '').toLowerCase() !== c);
+            if (next !== -1) nextTick(() => inputRefs.value[next]?.focus?.());
         }
+    } else {
+        // 該格錯誤：揭示答案、計數，並只在本組第一次出錯時記錄失敗
+        wrongInputCount.value++;
+        showAnswer.value = true;
+        if (!groupHadError.value) {
+            groupHadError.value = true;
+            schedule.recordFailure(currentIndex.value);
+            forceUpdate.value++;
+        }
+        // 清空該格供重新輸入
+        inputs.value[i] = '';
+        nextTick(() => inputRefs.value[i]?.focus?.());
     }
-});
-
-const handleCorrectAnswer = () => {
-    if (!currentGroup.value) return;
-
-    isCorrect.value = true;
-
-    // 使用基於索引的調度演算法記錄成功
-    schedule.recordSuccess(currentIndex.value);
-    // 觸發進度條更新
-    forceUpdate.value++;
-
-    // 立即進入下一組，無延遲
-    nextGroup();
 };
 
-const handleWrongAnswer = () => {
-    if (!currentGroup.value) return;
-
-    isCorrect.value = false;
-    wrongInputCount.value++;
-    showAnswer.value = true;
-
-    // 使用基於索引的調度演算法記錄失敗
-    schedule.recordFailure(currentIndex.value);
-    // 觸發進度條更新
+// 整組答對
+const onGroupSuccess = () => {
+    schedule.recordSuccess(currentIndex.value);
     forceUpdate.value++;
-
-    // 清空輸入，等待用戶重新輸入
-    inputValue.value = '';
-    nextTick(() => {
-        inputElement.value?.focus();
-    });
+    nextGroup();
 };
 
 const nextGroup = () => {
@@ -478,20 +556,15 @@ const nextGroup = () => {
     }
 
     // 重置狀態
-    isCorrect.value = true;
     wrongInputCount.value = 0;
-    inputValue.value = '';
+    groupHadError.value = false;
+    // 依當前組輸入框數量重置輸入值
+    inputs.value = currentCodes.value.map(() => '');
 
     // 檢查是否為第一次見到此字根組，如果是則直接顯示答案
-    if (schedule.isFirstTime(currentIndex.value)) {
-        showAnswer.value = true;
-    } else {
-        showAnswer.value = false;
-    }
+    showAnswer.value = schedule.isFirstTime(currentIndex.value);
 
-    nextTick(() => {
-        inputElement.value?.focus();
-    });
+    focusFirstInput();
 };
 
 const restartTraining = () => {
@@ -501,7 +574,7 @@ const restartTraining = () => {
 const handleKeydown = (e: KeyboardEvent) => {
     if (e.key === 'Escape' && !showAnswer.value) {
         // 顯示答案
-        handleWrongAnswer();
+        showAnswer.value = true;
         e.preventDefault();
     }
 };
@@ -543,8 +616,8 @@ onMounted(async () => {
         zigenValues = zigenValues.slice(range[0], range[1])
     }
 
-    // 按編碼分組字根
-    const groups = groupZigensByCode(zigenValues);
+    // 按字根表是否含 julei 欄位自動分組
+    const groups = buildGroups(zigenValues);
     originalCardGroups.value = groups;
 
     // 根據保存的狀態應用排序
@@ -556,9 +629,6 @@ onMounted(async () => {
     if (typeof window !== 'undefined') {
         window.addEventListener('resize', handleResize);
     }
-    nextTick(() => {
-        inputElement.value?.focus();
-    });
     document.addEventListener('keydown', handleKeydown);
 
     // 初始化基於索引的調度系統
@@ -654,7 +724,7 @@ onBeforeUnmount(() => {
                         <div v-for="item in visibleGroups" :key="item.index"
                             class="cascade-item flex-shrink-0 transition-all duration-300" :style="{
                                 width: cellWidth + 'px',
-                                opacity: isInVisibleRange(item.offset) ? 1 : 0,
+                                opacity: isInVisibleRange(item.offset) ? (item.isCurrent ? 1 : 0.5) : 0,
                                 pointerEvents: isInVisibleRange(item.offset) ? 'auto' : 'none'
                             }">
                             <div class="h-10 md:h-12 px-2 flex items-center justify-center gap-1 md:gap-2 transition-all duration-300"
@@ -679,10 +749,10 @@ onBeforeUnmount(() => {
             <!-- 分隔线 -->
             <div class="border-b border-gray-200 dark:border-gray-700"></div>
 
-            <!-- 卡片內控制按鈕 -->
+            <!-- 卡片內控制按鈕：置於 cascade 條右端，避免遮擋下方編碼提示 -->
             <div :class="[
-                'absolute flex gap-2 z-10',
-                windowWidth < 768 ? 'bottom-2 right-2' : 'bottom-4 right-4'  // 手機端移到右下角
+                'absolute flex gap-2 z-20',
+                windowWidth < 768 ? 'top-2 right-2' : 'top-3 right-3'
             ]">
                 <!-- 排序切換按鈕 -->
                 <button @click="toggleSortOrder" :class="[
@@ -712,80 +782,90 @@ onBeforeUnmount(() => {
                 </button>
             </div>
 
-            <!-- 字根組顯示 -->
-            <div :class="[
-                'text-center flex items-center justify-center',
-                windowWidth < 768 ? 'h-32' : 'h-48'  // 固定高度：手機端128px，桌面端192px
+            <!-- 聚類文字（僅聚類模式） -->
+            <div v-if="isJuleiMode && currentGroup.julei && currentGroup.julei !== '未分類'" :class="[
+                'text-center text-gray-500 dark:text-gray-400 px-4',
+                windowWidth < 768 ? 'pt-2 text-xs' : 'pt-3 text-sm'
             ]">
+                {{ currentGroup.julei }}
+            </div>
+
+            <!-- 字根與輸入區域 -->
+            <div :class="['px-4', windowWidth < 768 ? 'py-3' : 'py-5']">
                 <!-- 字根組 - 響應式大小設計 -->
                 <div :class="[
-                    'flex justify-center items-center flex-wrap',
+                    'flex justify-center items-start flex-wrap',
                     zigenGapClass
                 ]">
                     <div v-for="(zigen, index) in currentGroup.zigens" :key="index"
                         class="flex flex-col items-center group">
-                        <div :class="[
-                            'zigen-font transform transition-all duration-300 group-hover:scale-110',
-                            windowWidth < 768 ? 'mb-1' : 'mb-4',  // 手機端減少字根下方間距
-                            zigenSizeClass,
-                            {
-                                'text-red-500 dark:text-red-400': !isCorrect,
-                                'text-blue-700 dark:text-blue-300': isCorrect
-                            }
-                        ]">
-                            {{ zigen.font }}
+                        <!-- 字根字形：固定高度、垂直置中，消除不同字形高度差異 -->
+                        <div class="flex items-center justify-center" :style="{ height: rootCellMetrics.glyph + 'px' }">
+                            <div :class="[
+                                'zigen-font leading-none transform transition-all duration-300 group-hover:scale-110',
+                                zigenSizeClass,
+                                {
+                                    'text-red-500 dark:text-red-400': isJuleiMode ? slotStatus[index] === 'wrong' : !isCorrect,
+                                    'text-green-600 dark:text-green-400': isJuleiMode && slotStatus[index] === 'correct',
+                                    'text-blue-700 dark:text-blue-300': isJuleiMode ? slotStatus[index] === 'idle' : isCorrect
+                                }
+                            ]">
+                                {{ zigen.font }}
+                            </div>
                         </div>
-                        <!-- 顯示相關漢字 - 響應式大小和間距，使用 zigen-font -->
-                        <div :class="[
-                            'text-gray-600 dark:text-gray-300 font-medium tracking-tight zigen-font',
-                            windowWidth < 768 ? 'mt-0.5' : 'mt-2',  // 手機端減少頂部間距
-                            {
-                                'text-xs': windowWidth < 768,  // 手機端更小的相關字
+                        <!-- 相關漢字：固定高度行（顯示時恒佔位，無相關字的字根也保持對齊） -->
+                        <div v-if="showRelatedChars"
+                            class="flex items-center justify-center zigen-font text-gray-600 dark:text-gray-300 font-medium tracking-tight"
+                            :class="{
+                                'text-xs': windowWidth < 768,
                                 'text-base': windowWidth >= 768 && windowWidth < 1024,
                                 'text-lg': windowWidth >= 1024
-                            }
-                        ]" v-if="getRelatedChars(zigen.font)">
+                            }" :style="{ height: rootCellMetrics.related + 'px' }">
                             {{ getRelatedChars(zigen.font) }}
+                        </div>
+                        <!-- 聚類模式：每字根一個分段輸入框 -->
+                        <div v-if="isJuleiMode" :class="windowWidth < 768 ? 'mt-1.5' : 'mt-2'">
+                            <SegmentedInput :ref="el => setSlotRef(el, index)" :length="zigen.code.length"
+                                v-model="inputs[index]" :status="slotStatus[index]"
+                                :size="inputSize" @complete="onSlotComplete(index)"
+                                @prev="index > 0 && inputRefs[index - 1]?.focus?.()" />
+                        </div>
+                        <!-- 聚類模式答案 -->
+                        <div v-if="isJuleiMode && showAnswer" :class="[
+                            'font-mono font-bold text-blue-600 dark:text-blue-400 mt-1',
+                            windowWidth < 768 ? 'text-sm' : 'text-base'
+                        ]">
+                            {{ zigen.code }}
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- 輸入區域 -->
-            <div :class="[
-                'flex justify-center',
-                windowWidth < 768 ? 'pt-1 pb-1' : 'pt-2 pb-2'  // 大幅减少上下间距
-            ]">
-                <input ref="inputElement" v-model="inputValue" type="text" placeholder="編碼" :class="[
-                    'text-center border-2 rounded-xl font-mono',
-                    'transition-all duration-300 focus:outline-none focus:ring-4',
-                    // 手機端縮小輸入框
-                    windowWidth < 768 ? 'px-3 py-2 text-lg w-32' : 'px-6 py-4 text-2xl w-48',
-                    {
-                        'border-red-300 focus:border-red-500 focus:ring-red-200 bg-red-50 dark:border-red-700 dark:focus:border-red-500 dark:focus:ring-red-900/50 dark:bg-red-900/20 dark:text-white': !isCorrect,
-                        'border-blue-300 focus:border-blue-500 focus:ring-blue-200 bg-white dark:border-blue-700 dark:focus:border-blue-500 dark:focus:ring-blue-900/50 dark:bg-gray-800 dark:text-white': isCorrect
-                    }
-                ]" />
-            </div>
+                <!-- 同碼模式：單一分段輸入框 -->
+                <div v-if="!isJuleiMode" :class="['flex justify-center', windowWidth < 768 ? 'mt-3' : 'mt-5']">
+                    <SegmentedInput :ref="el => setSlotRef(el, 0)" :length="currentGroup.code.length"
+                        v-model="inputs[0]" :status="slotStatus[0]" :size="inputSize"
+                        @complete="onSlotComplete(0)" />
+                </div>
 
-            <!-- 答案顯示區域 -->
-            <div :class="[
-                'text-center transition-all duration-300',
-                windowWidth < 768 ? 'pb-2' : 'pb-4',  // 压缩底部间距
-                { 'opacity-0 transform translate-y-2': !showAnswer, 'opacity-100': showAnswer }
-            ]">
-                <div :class="[
-                    'inline-block bg-gray-100 dark:bg-gray-800 rounded-lg',
-                    windowWidth < 768 ? 'px-2 py-1' : 'px-4 py-2'  // 手機端縮小答案框
+                <!-- 同碼模式答案 -->
+                <div v-if="!isJuleiMode" :class="[
+                    'text-center transition-all duration-300',
+                    windowWidth < 768 ? 'pt-2' : 'pt-3',
+                    { 'opacity-0 transform translate-y-2': !showAnswer, 'opacity-100': showAnswer }
                 ]">
-                    <span :class="[
-                        'text-gray-800 dark:text-gray-200',
-                        windowWidth < 768 ? 'text-sm' : ''  // 手機端縮小文字
-                    ]">答案是 </span>
-                    <span :class="[
-                        'font-mono font-bold text-blue-600 dark:text-blue-400',
-                        windowWidth < 768 ? 'text-lg' : 'text-xl'  // 手機端縮小答案文字
-                    ]">{{ currentGroup.code }}</span>
+                    <div :class="[
+                        'inline-block bg-gray-100 dark:bg-gray-800 rounded-lg',
+                        windowWidth < 768 ? 'px-2 py-1' : 'px-4 py-2'
+                    ]">
+                        <span :class="[
+                            'text-gray-800 dark:text-gray-200',
+                            windowWidth < 768 ? 'text-sm' : ''
+                        ]">答案是 </span>
+                        <span :class="[
+                            'font-mono font-bold text-blue-600 dark:text-blue-400',
+                            windowWidth < 768 ? 'text-lg' : 'text-xl'
+                        ]">{{ currentGroup.code }}</span>
+                    </div>
                 </div>
             </div>
         </div>
