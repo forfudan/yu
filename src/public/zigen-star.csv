@@ -85,7 +85,7 @@ font,ma,pinyin
 ,Ei,
 ,Ei,
 隹,Eh,ZHuī -> h ㊟取第二字母h
-,Er,rén -> r
+,Ee,rén -> e ㊟取韻e
 ,Ez,Zuǒ -> z
 風,Ef,Fēng -> f
 几,Ej,Jǐ -> j
@@ -174,9 +174,9 @@ font,ma,pinyin
 缶,Jf,Fǒu -> f
 矢,Ji,SHǐ -> i ㊟聲s被示佔用故取韻i
 卯,Km,Mǎo -> m
-,Km,Mǎo -> m
 ,Km,
 ,Km,
+,Km,Mǎo -> m
 ,Km,
 ,Km,
 ,Kj,JiǎoSī -> j ㊟特例取絞絲音j
