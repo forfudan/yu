@@ -192,10 +192,6 @@ export default defineConfig({
               text: "星月",
               link: "ime/xingyue",
             },
-            {
-              text: "灵乱",
-              link: "ime/lingluan",
-            },
           ],
         },
       ],
@@ -633,10 +629,6 @@ export default defineConfig({
                 {
                   text: "星月",
                   link: "/zht/ime/xingyue",
-                },
-                {
-                  text: "靈亂",
-                  link: "/zht/ime/lingluan",
                 },
               ],
             },
