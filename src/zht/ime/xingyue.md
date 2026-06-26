@@ -9,7 +9,7 @@ aside: false
 [星月](https://github.com/PillowMonth/starmoon-ime)輸入方案是以[星陳](https://shurufa.app/docs/star.html)爲基礎，拆部分聚類且小碼亂序的方案：
 
 1. 使用纯 25 鍵方案，小碼 90% 亂序，相對應的簡繁字根取相同小碼，無對應簡體字根的繁體字根小碼取聲母，字型相近且同音的字根大部分取相同小碼，低頻無讀音字根小碼取 v；
-2. 字根聚類程度超過[靈明](https://shurufa.app/docs/ling.html)，但遜於[星陳](https://shurufa.app/docs/star.html)；
+2. 字根聚類程度超過[靈明](https://shurufa.app/docs/ling.html)，略遜於[星陳](https://shurufa.app/docs/star.html)；
 3. 單字編碼規則同[星陳](https://shurufa.app/docs/star.html)，二根字全碼末回頭取首根小碼，編碼限長四碼；
 4. 支持簡繁通打。
 
