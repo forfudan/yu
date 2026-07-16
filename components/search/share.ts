@@ -4,9 +4,9 @@
  * Modification History:
  * - 2024-03-27 by 朱複丹: 初始化倉庫，創建共享工具函數
  * - 2024-03-27 by 朱複丹: 添加 supplement 開關以啟用補碼功能
- * - 2025-08-13 by 朱複丹: 為日月增加拆分查詢，添加 ming 參數支持
+ * - 2025-08-13 by 朱複丹: 爲日月增加拆分查詢，添加 ming 參數支持
  * - 2025-12-17 by 朱複丹: 增加靈明反查編碼邏輯，支持主根（兩碼字根）判斷和大碼大寫
- * - 2025-12-17 by 朱複丹: 重構參數系統，將 supplement, ming, wafel, ling 合併為單一 rule 參數
+ * - 2025-12-17 by 朱複丹: 重構參數系統，將 supplement, ming, wafel, ling 合併爲單一 rule 參數
  */
 
 import { withBase } from "vitepress";
@@ -26,7 +26,8 @@ export interface Zigen {
     font: string,
     ma: string,
     pinyin?: string,
-    examples?: string  // 字根的例字列表（逗號分隔）
+    examples?: string,  // 字根的例字列表（逗號分隔）
+    julei?: string  // 字根的聚類（同形/同源分組），用於分組練習
 }
 
 export type ZigenMap = Map<string, Zigen>
@@ -57,7 +58,7 @@ export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, rule
         const maA = getMa(rootA)
         const maZ = getMa(rootZ)
 
-        // 判斷是否為主根（兩碼字根）
+        // 判斷是否爲主根（兩碼字根）
         const isZhugen = (ma: string) => ma.length === 2
 
         // 提取大碼、聲碼、韻碼
@@ -226,7 +227,7 @@ export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, rule
 
 /**
  * 請求一個csv文件，並解析它，轉成map對象，
- * 類似python里的csv.DictReader，不過會按照第一列為鍵，轉成KV數據。
+ * 類似python里的csv.DictReader，不過會按照第一列爲鍵，轉成KV數據。
  */
 export async function fetchCsvAsMap(url: string) {
     if (url in cache) {
@@ -248,6 +249,10 @@ export async function fetchCsvAsMap(url: string) {
 function parseCsv(content: string): CsvMap {
     const lines = content.split('\n')
     const titleLine = lines.shift()
+    // 內容爲空時返回空表，避免 titleLine 爲 undefined
+    if (titleLine === undefined) {
+        return new Map()
+    }
     const titleList = titleLine.split(',').map(v => v.trim())
     const titleListLength = titleList.length
     const result = new Map()
@@ -262,7 +267,7 @@ function parseCsv(content: string): CsvMap {
 
         // 允許列數不足的情況，用空字符串填充缺失的列
         if (lineSplit.length < titleListLength) {
-            // 填充缺失的列為空字符串
+            // 填充缺失的列爲空字符串
             while (lineSplit.length < titleListLength) {
                 lineSplit.push('')
             }
@@ -304,7 +309,7 @@ export async function fetchChaifenOptimized(url: string): Promise<ChaifenMap> {
         const loader = ChaiDataLoader.getInstance(url);
         const optimizedData = await loader.loadData();
 
-        // 將優化格式轉換為ChaifenMap格式
+        // 將優化格式轉換爲ChaifenMap格式
         const chaifenMap = new Map<string, { char: string, division: string, division_tw: string, region: string }>();
 
         for (const [char, data] of Object.entries(optimizedData)) {
