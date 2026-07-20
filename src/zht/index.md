@@ -25,7 +25,7 @@ hero:
       link: /zht/docs/install
     - theme: alt
       text: 體驗
-      link: /zht/pad/ling
+      link: https://yume.shurufa.app
     - theme: alt
       text: 跟打
       link: https://genda.shurufa.app
