@@ -1,9 +1,5 @@
 a	就
-a	就是
-a	就业
 aa	林
-aa	林业
-aa	林立
 aaa	森
 aaaa	𣛧
 aaaa	𣡕
@@ -304,8 +300,6 @@ aayi	㭏
 aayp	楚
 aayp	𛁛
 ab	树
-ab	树立
-ab	树木
 abab	𰆼
 abag	楗
 abai	𪺂
@@ -467,8 +461,6 @@ abyf	𱣋
 abyl	梮
 abym	𭪐
 ac	刺
-ac	刺激
-ac	刺客
 aca	棘
 acaa	𪴖
 acac	棘
@@ -672,8 +664,6 @@ acyf	𲥼
 acyi	𗭘
 acys	𗭗
 ad	板
-ad	板块
-ad	板凳
 ada	欄
 adaj	𣟬
 adam	椞
@@ -888,8 +878,6 @@ adyf	𭪸
 adz	桎
 adzm	桎
 ae	机
-ae	机会
-ae	机器
 aeag	𭫚
 aeai	𡮎
 aeam	𣐾
@@ -1106,8 +1094,6 @@ aeyg	𧞗
 aeyi	𘢟
 aeys	𗭭
 af	本
-af	本来
-af	本人
 afau	𗇊
 afb	梧
 afbl	梧
@@ -1301,8 +1287,6 @@ afys	𘦊
 afyu	𘊮
 afyu	𘊯
 ag	高
-ag	高度
-ag	高峰
 agac	𭬂
 agag	㰏
 agaj	楖
@@ -1575,8 +1559,6 @@ agyt	衣
 agyt	𛀑
 agyt	𛀒
 ah	杜
-ah	杜绝
-ah	杜鹃
 aham	枒
 aham	𣓅
 aham	𲦆
@@ -1763,8 +1745,6 @@ ahyk	𣏛
 ahyt	𣝽
 ahzm	𱣙
 ai	京
-ai	京城
-ai	京剧
 aiam	橖
 aiam	𣖉
 aiam	𰗮
@@ -1973,8 +1953,6 @@ aiyf	𰻯
 aiyi	𣑒
 aiyq	𱹈
 aj	想
-aj	想法
-aj	想到
 aja	裹
 ajaa	𩏴
 ajaa	𬅔
@@ -2202,7 +2180,6 @@ ajqm	査
 ajqm	𪳑
 ajqq	𧓕
 ajqr	𢥦
-ajqt	直󠄆
 ajqt	𬽈
 ajqu	𱲡
 ajqw	𦏧
@@ -2289,7 +2266,6 @@ ajzg	𫘷
 ajzm	𣑬
 ajzt	𬺥
 ak	李
-ak	李白
 aka	六
 akaa	𪳻
 akaf	𠆞
@@ -2721,8 +2697,6 @@ akzm	杍
 akzm	李
 akzm	𛃳
 al	整
-al	整体
-al	整个
 alag	𰒝
 alai	𭶚
 alal	𣗥
@@ -2998,8 +2972,6 @@ alyp	𤴚
 alzl	𪴺
 alzm	柾
 am	木
-am	木马
-am	木材
 amam	𣙪
 amam	𪲝
 ambd	槺
@@ -3128,8 +3100,6 @@ amxx	𣘵
 amym	枖
 amyt	櫦
 an	充
-an	充分
-an	充满
 ana	玄
 anaf	𣒬
 anam	㭃
@@ -3333,7 +3303,6 @@ anxq	𲯚
 anxu	𣛯
 anyf	𮟴
 ao	椅
-ao	椅子
 aoa	棒
 aoak	棒
 aoam	𰗰
@@ -3519,8 +3488,6 @@ apxm	栖
 apyf	桏
 apym	梄
 aq	样
-aq	样子
-aq	样本
 aqak	柈
 aqb	梯
 aqba	𭫴
@@ -3795,8 +3762,6 @@ aqys	𗍣
 aqys	𘩡
 aqyu	𗇍
 ar	枪
-ar	枪声
-ar	枪毙
 araj	枪
 arao	𨔱
 arei	𭩟
@@ -3925,8 +3890,6 @@ arvt	𱤍
 arvv	㯓
 arwm	𣐎
 as	模
-as	模样
-as	模式
 asae	樧
 asae	榝
 asag	㯜
@@ -4254,8 +4217,6 @@ asxt	𣗦
 asxu	𰘀
 asym	𪱽
 at	格
-at	格局
-at	格外
 ataa	𪎂
 ataa	𭬑
 atab	𣁩
@@ -4553,8 +4514,6 @@ atxx	𪌫
 atyf	𣒒
 atyw	𪍳
 au	市
-au	市场
-au	市民
 auac	𣙓
 auag	𧜏
 aual	𬽖
@@ -4819,7 +4778,6 @@ auyy	𘋆
 auzl	𰠁
 auzm	枛
 av	杯
-av	杯子
 avaj	枙
 avaj	𫞒
 avam	㮟
@@ -4954,8 +4912,6 @@ avxk	畝
 avxq	𣢿
 avyf	𮠄
 aw	击
-aw	击败
-aw	击毙
 awab	棴
 awag	𣚝
 awaj	𬂦
@@ -5156,7 +5112,6 @@ awyg	膏
 awyg	𮌔
 awym	枂
 ax	栋
-ax	栋梁
 axaa	榤
 axaa	椉
 axaa	𦨀
@@ -5266,7 +5221,6 @@ axxx	𭩳
 axyf	桞
 axyk	𲥲
 ay	杨
-ay	杨柳
 ayaj	樄
 ayak	𬂤
 ayay	梛
@@ -5370,11 +5324,7 @@ ayxb	𬰷
 ayxx	𱂈
 ayye	𬽃
 b	对
-b	对于
-b	对手
 ba	建
-ba	建设
-ba	建议
 baad	𭕸
 baak	𫍉
 baam	諃
@@ -5529,8 +5479,6 @@ bawr	𮘈
 baws	𠣂
 bawt	𧩂
 bb	双
-bb	双方
-bb	双重
 bba	驿
 bbaf	𫌹
 bbag	𧙭
@@ -6462,8 +6410,6 @@ bbys	𗈄
 bbyy	誩
 bbyy	𧨟
 bc	观
-bc	观察
-bc	观众
 bcaj	骦
 bcaj	𥀸
 bcal	𗰩
@@ -6668,8 +6614,6 @@ bcyc	𗰠
 bcyi	𗰜
 bcyp	颇
 bd	屋
-bd	屋顶
-bd	屋子
 bdam	䛶
 bdaq	讕
 bdbo	䛀
@@ -6825,8 +6769,6 @@ bdzs	屋
 bdzs	𛃟
 bdzy	誈
 be	难
-be	难道
-be	难得
 beak	𘨫
 beam	䛙
 beam	𧧨
@@ -7007,8 +6949,6 @@ beyn	𗇯
 beyn	𗈠
 bezo	𘢮
 bf	登
-bf	登记
-bf	登陆
 bfak	𭕙
 bfam	㌞
 bfan	𗕭
@@ -7566,8 +7506,6 @@ bfyy	튺
 bfyy	𗕎
 bfyy	𗕐
 bg	群
-bg	群众
-bg	群体
 bgaj	𪠂
 bgak	𭽨
 bgam	𧧇
@@ -7814,8 +7752,6 @@ bgys	𘞳
 bgys	𘫐
 bgyy	𧥡
 bh	圣
-bh	圣地
-bh	圣经
 bha	訝
 bhay	訝
 bhbh	𧩆
@@ -8006,8 +7942,6 @@ bhxw	読
 bhyk	譸
 bhyk	𧥯
 bi	灵
-bi	灵感
-bi	灵活
 biag	𧫒
 biag	𧬵
 biai	𲟜
@@ -8311,8 +8245,6 @@ bixu	𧫺
 bixy	䛎
 biyf	𲆔
 bj	居
-bj	居然
-bj	居民
 bja	骒
 bjam	課
 bjam	骒
@@ -8985,8 +8917,6 @@ bjyy	죾
 bjyy	톢
 bjyy	툮
 bk	尽
-bk	尽管
-bk	尽快
 bka	弗
 bkag	弗
 bkag	𬡐
@@ -9245,8 +9175,6 @@ bkyy	𫴲
 bkzc	𡥆
 bkzs	㞌
 bl	强
-bl	强调
-bl	强化
 bla	韌
 blaa	韖
 blaa	韘
@@ -9661,8 +9589,6 @@ blyy	쥮
 blyy	튞
 blzy	証
 bm	马
-bm	马上
-bm	马克
 bmag	𡳝
 bmag	𭕧
 bmal	𰎄
@@ -9857,8 +9783,6 @@ bmxx	謻
 bmyi	𲏦
 bmyy	訞
 bn	张
-bn	张开
-bn	张力
 bna	弘
 bnaa	𡳭
 bnab	𢾂
@@ -10207,8 +10131,6 @@ boxi	䛉
 boxx	𧩫
 bozy	𳁬
 bp	皮
-bp	皮肤
-bp	皮球
 bpaw	巯
 bpbb	𢑰
 bpbo	𤼬
@@ -10323,8 +10245,6 @@ bpzo	𤼯
 bpzs	𧿃
 bpzy	䛤
 bq	弹
-bq	弹性
-bq	弹药
 bqak	詊
 bqak	𢏑
 bqau	𩱯
@@ -10508,8 +10428,6 @@ bqys	𡱝
 bqys	𘪊
 bqyy	詳
 br	验
-br	验证
-br	验收
 brbo	𢏀
 brc	診
 brce	讑
@@ -10615,8 +10533,6 @@ brvv	𦐋
 brvv	𧬈
 brwy	𧧀
 bs	通
-bs	通过
-bs	通道
 bsa	諜
 bsam	諜
 bsam	屟
@@ -10872,8 +10788,6 @@ btwn	謧
 btwr	𧧢
 btwy	𲁣
 bu	引
-bu	引发
-bu	引起
 buaj	即
 buam	𧬗
 buau	𬴹
@@ -11483,8 +11397,6 @@ bvwy	𩨅
 bvxs	𡰳
 bvyo	𨕛
 bw	屈
-bw	屈辱
-bw	屈服
 bwab	𫵜
 bwam	𭚲
 bwbb	𢐬
@@ -11626,8 +11538,6 @@ bwys	𫵔
 bwys	𬚳
 bwyy	䚴
 bx	欢
-bx	欢迎
-bx	欢乐
 bxaa	謋
 bxaj	䛄
 bxal	𢑤
@@ -11734,8 +11644,6 @@ bxxx	𢏜
 bxxx	𤿦
 bxxx	𬳾
 by	言
-by	言论
-by	言语
 byac	𗖸
 byak	𬢠
 byas	𗈅
@@ -11893,8 +11801,6 @@ byys	𗖳
 byys	𗗍
 byyy	𗖉
 c	好
-c	好友
-c	好奇
 ca	婷
 caa	霖
 caaa	𳉮
@@ -12056,7 +11962,6 @@ cawt	𢔚
 cayb	𬣀
 cayi	𫰍
 cb	妈
-cb	妈妈
 cba	律
 cbab	𲲊
 cbag	徤
@@ -12565,7 +12470,6 @@ ccwk	𪦦
 ccyp	须
 ccyy	𬱛
 cd	嫂
-cd	嫂子
 cda	嬝
 cdag	嬝
 cdag	𧞡
@@ -12868,8 +12772,6 @@ cexq	㱋
 ceyf	𡟳
 ceyf	𨟓
 cf	同
-cf	同意
-cf	同学
 cfb	衙
 cfbi	衙
 cfbi	𫟙
@@ -13086,8 +12988,6 @@ cfxx	𡛃
 cfyf	𨚿
 cfyf	𩄔
 cg	很
-cg	很多
-cg	很快
 cgaj	𮱍
 cgak	姩
 cgam	㛆
@@ -13236,8 +13136,6 @@ cgyo	赎
 cgyo	𪥿
 cgyp	𢌘
 ch	待
-ch	待遇
-ch	待命
 chaj	𢓦
 cham	𮦐
 chan	𫰎
@@ -13430,8 +13328,6 @@ chzc	𫹙
 chzc	𛁭
 chzn	㛸
 ci	行
-ci	行为
-ci	行动
 ciag	𡣖
 ciaj	𠕭
 ciam	𠕖
@@ -13698,8 +13594,6 @@ cixx	𠕝
 ciyf	𨙻
 ciyi	𗢆
 cj	得
-cj	得到
-cj	得分
 cjaa	𬰋
 cjag	𭒴
 cjag	𮖶
@@ -13916,8 +13810,6 @@ cjxv	雫
 cjyp	𡠕
 cjzn	𭑷
 ck	往
-ck	往往
-ck	往年
 ckaj	𡤅
 ckaj	𢓋
 ckaj	𮰺
@@ -14068,6 +13960,7 @@ ckra	𢔱
 ckrb	䨧
 ckri	恏
 ckrk	內
+ckrk	內
 ckrl	𢓾
 ckrl	𱙖
 ckrw	𢔍
@@ -14125,8 +14018,6 @@ ckzj	觃
 ckzn	好
 ckzn	🙆
 cl	如
-cl	如果
-cl	如何
 clag	䘫
 clak	𘣹
 clam	桇
@@ -14486,8 +14377,6 @@ cmwc	𩃻
 cmy	妖
 cmyn	妖
 cn	女
-cn	女子
-cn	女儿
 cnaa	䨬
 cnac	𮦺
 cnah	𮦿
@@ -14708,7 +14597,6 @@ cnxw	霃
 cnxw	𩄬
 cnxy	𬰆
 co	她
-co	她们
 coak	𡞗
 coak	𢔓
 coak	𩃳
@@ -14834,8 +14722,6 @@ coxi	姄
 coxj	㛰
 coxo	䒋
 cp	露
-cp	露出
-cp	露面
 cpbi	𨓶
 cpbp	𳉰
 cpbu	𨓼
@@ -14958,7 +14844,6 @@ cpzc	𭛬
 cpzn	娖
 cpzv	𩃈
 cq	赚
-cq	赚钱
 cqaa	𡢥
 cqak	姅
 cqak	𲃁
@@ -15097,8 +14982,6 @@ cqyc	徉
 cqyn	𫰧
 cqys	𗇃
 cr	内
-cr	内部
-cr	内心
 crai	𮊞
 craj	𬥳
 cram	𡜉
@@ -15118,7 +15001,6 @@ creh	𲊌
 crei	𠕈
 crek	内
 crek	𠔿
-crek	內
 cren	𘮑
 crep	𘢋
 crf	徐
@@ -15421,8 +15303,6 @@ crxs	𮊜
 crxw	𰭍
 crxx	𩂙
 cs	刚
-cs	刚才
-cs	刚刚
 csab	𳉠
 csac	𗦹
 csac	𗩛
@@ -16337,8 +16217,6 @@ csyy	𗨮
 csyy	𗨯
 csyy	𗩻
 ct	败
-ct	败仗
-ct	败坏
 cta	娴
 ctak	𡜠
 ctak	𢓤
@@ -16416,8 +16294,6 @@ ctwn	𮱓
 ctwr	𡜋
 ctwy	𱙗
 cu	贴
-cu	贴心
-cu	贴近
 cuaa	𩆱
 cuak	𲛕
 cuak	𲛞
@@ -16653,8 +16529,6 @@ cuyn	𗢜
 cuys	𗢝
 cuys	𗺔
 cv	雨
-cv	雨水
-cv	雨天
 cvaj	𡛖
 cvam	𩇆
 cvap	𮦷
@@ -16791,8 +16665,6 @@ cvyf	𫑪
 cvyk	𩂚
 cvyt	𡣜
 cw	购
-cw	购买
-cw	购物
 cwam	𫰩
 cwam	𫰯
 cwat	𡛓
@@ -16895,8 +16767,6 @@ cwyn	𫰒
 cwyp	𘥼
 cwyv	𫕟
 cx	彻
-cx	彻底
-cx	彻夜
 cxaj	𮦍
 cxbj	㛀
 cxbj	𩄉
@@ -17066,9 +16936,7 @@ cywc	𳉖
 cyy	页
 cyy	⻚
 d	的
-d	的确
 da	谅
-da	谅解
 daaa	𳄏
 daal	𤖧
 daal	𫬴
@@ -17225,8 +17093,6 @@ dayg	𤽰
 dayi	讳
 dayi	𮸯
 db	白
-db	白银
-db	白酒
 dba	译
 dbag	𨵭
 dbak	译
@@ -17583,8 +17449,6 @@ dcyg	𱆚
 dcyj	颀
 dcyo	𬱖
 dd	所
-dd	所以
-dd	所有
 ddaa	𬛷
 ddab	𮤑
 ddal	𬛶
@@ -17918,7 +17782,6 @@ ddzn	𪀒
 ddzz	臸
 ddzz	𬛳
 de	谁
-de	谁知
 deaf	𬌕
 deak	䑕
 deam	𮝨
@@ -18060,8 +17923,6 @@ deyc	𬌇
 deyd	鬭
 deyd	𨷖
 df	后
-df	后来
-df	后面
 dfag	𫘶
 dfaj	卮
 dfak	𠨗
@@ -18313,8 +18174,6 @@ dfyu	𠂰
 dfyu	𢁺
 dfyu	𤾤
 dg	许
-dg	许多
-dg	许可
 dgaa	𫏹
 dgak	𨴞
 dgak	𱀟
@@ -18545,8 +18404,6 @@ dgyo	牍
 dgyo	廸
 dgyq	𱝒
 dh	请
-dh	请求
-dh	请问
 dha	讶
 dhag	裝
 dham	閕
@@ -18810,8 +18667,6 @@ dhyk	𭷈
 dhyr	𢛀
 dhzm	𳈂
 di	谈
-di	谈判
-di	谈话
 dibb	輨
 dibb	䦡
 dibj	𨷚
@@ -18981,8 +18836,6 @@ dixl	𨍢
 dixn	鴥
 dixq	𨋰
 dj	让
-dj	让步
-dj	让路
 dja	课
 djag	𧚡
 djam	课
@@ -19233,8 +19086,6 @@ djyf	𨜔
 djzb	𰤖
 djzm	𨴝
 dk	试
-dk	试点
-dk	试图
 dkab	㒵
 dkaf	耒
 dkag	耲
@@ -19635,8 +19486,6 @@ dkyi	𱈨
 dkzg	𩲇
 dkzm	𨳕
 dl	话
-dl	话题
-dl	话说
 dlae	𪕇
 dlam	閆
 dlam	𣍀
@@ -19930,8 +19779,6 @@ dlzb	𤽢
 dlzc	𮝆
 dlzy	证
 dm	到
-dm	到期
-dm	到来
 dmab	𤾝
 dmam	栔
 dmam	𨌟
@@ -20114,8 +19961,6 @@ dmyg	𩲓
 dmyg	𮫜
 dmyy	𫍚
 dn	评
-dn	评估
-dn	评价
 dna	卽
 dnab	㿝
 dnaf	𠫢
@@ -20295,8 +20140,6 @@ dnxq	𣢵
 dnxq	𣢼
 dnyf	𨜩
 do	由
-do	由于
-do	由此
 doak	𮍣
 dobb	皅
 dobc	𨊹
@@ -20435,8 +20278,6 @@ doxs	𧤑
 doyi	𮞌
 dozi	𦥧
 dp	片
-dp	片子
-dp	片段
 dpaj	𪀃
 dpal	𣦨
 dpam	𨍫
@@ -20547,8 +20388,6 @@ dpzp	𤗁
 dpzq	𨀲
 dpzy	𬣹
 dq	说
-dq	说道
-dq	说明
 dqab	𨶔
 dqak	牉
 dqak	𩲯
@@ -20692,8 +20531,6 @@ dqyq	牂
 dqyy	详
 dqyy	𗘵
 dr	认
-dr	认为
-dr	认真
 drbb	𦥳
 drc	诊
 drce	𨷲
@@ -20846,8 +20683,6 @@ drwm	𩤺
 drxq	䶾
 drxq	𣢧
 ds	谋
-ds	谋求
-ds	谋杀
 dsa	谍
 dsae	𩴇
 dsak	𩳘
@@ -21093,7 +20928,6 @@ dsyf	𮠁
 dsyi	𰵖
 dsyk	𗘴
 dt	该
-dt	该死
 dtak	𨋪
 dtak	𫔤
 dtak	𬣺
@@ -21219,8 +21053,6 @@ dtxt	𫓓
 dtyp	𤴙
 dtyw	𦠷
 du	谣
-du	谣言
-du	谣传
 dub	叟
 dubb	㪢
 dubb	𨏝
@@ -21573,8 +21405,6 @@ dvwy	谓
 dvxe	𤾒
 dvyi	𩰜
 dw	调
-dw	调整
-dw	调查
 dwab	𨵟
 dwam	閫
 dwam	𲂋
@@ -21783,8 +21613,6 @@ dwym	𬮈
 dwyo	胄
 dwyq	𣌴
 dx	向
-dx	向上
-dx	向来
 dxaa	𰵼
 dxaa	𳏚
 dxaj	䳃
@@ -21923,8 +21751,6 @@ dxxx	𰚺
 dxxx	𰵥
 dxyk	𫍝
 dy	帮
-dy	帮助
-dy	帮忙
 dyak	𫡗
 dyas	𬨀
 dyc	畅
@@ -21984,16 +21810,11 @@ dyxr	𮙊
 dyy	讠
 dyy	⻈
 dz	至
-dz	至于
-dz	至少
 dzz	至
 dzz	⾄
 dzz	㉃
 e	你
-e	你们
 ea	体
-ea	体会
-ea	体验
 eaaa	𠎊
 eaaj	僸
 eaam	㑣
@@ -22135,8 +21956,6 @@ eaxt	𠎹
 eay	伟
 eayi	伟
 eb	信
-eb	信息
-eb	信任
 eba	健
 ebag	健
 ebak	侓
@@ -22331,8 +22150,6 @@ ebym	𧦥
 ebyp	𠈴
 ebyz	𬢚
 ec	侧
-ec	侧面
-ec	侧重
 ecaa	𫣼
 ecbb	𪝺
 ecbe	𱎡
@@ -22459,8 +22276,6 @@ ecyi	𘚀
 ecyk	𘩀
 ecyu	𘚁
 ed	倒
-ed	倒是
-ed	倒闭
 edag	𧝛
 edag	𱏕
 edb	伯
@@ -22612,8 +22427,6 @@ edyt	𠑨
 edz	侄
 edze	侄
 ee	似
-ee	似乎
-ee	似的
 eeam	𠍱
 eeam	𩗆
 eeb	雙
@@ -22809,8 +22622,6 @@ eezi	け
 eezi	ゖ
 eezm	毋
 ef	便
-ef	便宜
-ef	便利
 efb	伍
 efbj	늩
 efbl	俉
@@ -23057,7 +22868,6 @@ efyl	ぱ
 efyr	늓
 efyy	늒
 eg	什
-eg	什么
 egaf	𱏈
 egaj	㑡
 egak	𠇪
@@ -23270,8 +23080,6 @@ egyi	仡
 egyo	𰂏
 egyp	颴
 eh	偏
-eh	偏向
-eh	偏离
 ehae	伢
 ehaf	颬
 ehag	𲑂
@@ -23428,8 +23236,6 @@ ehyk	䬞
 ehze	𠊪
 ehze	𬾉
 ei	传
-ei	传统
-ei	传说
 eiam	俕
 eiam	㒉
 eiam	𩙆
@@ -23774,8 +23580,6 @@ eiyi	ぼ
 eiyk	𠇇
 eiyl	ぽ
 ej	但
-ej	但是
-ej	但愿
 ejai	𠎠
 ejaj	𰃉
 ejam	倮
@@ -23794,7 +23598,6 @@ ejdd	𫣨
 ejde	仃
 ejee	㑯
 ejeh	顀
-ejei	直󠄇
 ejei	논
 ejei	눈
 ejej	𩑏
@@ -24136,8 +23939,6 @@ ejyy	녺
 ejyy	눆
 ejze	𰁹
 ek	以
-ek	以及
-ek	以后
 eka	袋
 ekad	𫣩
 ekae	仈
@@ -24378,8 +24179,6 @@ ekzm	㝀
 ekzm	𡥘
 ekzz	𡥂
 el	保
-el	保护
-el	保持
 ela	仨
 elaa	𭫄
 elab	𮘧
@@ -24590,8 +24389,6 @@ elyr	뉷
 elyy	뉶
 elze	佂
 em	任
-em	任何
-em	任务
 emae	𠍨
 emag	𧙨
 emam	栠
@@ -24720,8 +24517,6 @@ emwk	𬿅
 emye	仸
 emze	𠉠
 en	化
-en	化解
-en	化工
 enae	仏
 enai	㍕
 enaj	𠘯
@@ -24851,7 +24646,6 @@ enyf	𨙿
 enyf	𰻥
 enyg	𗃖
 eo	他
-eo	他们
 eoa	俸
 eoak	俸
 eoak	𩗴
@@ -25032,8 +24826,6 @@ epyi	𰏇
 epz	促
 epze	促
 eq	伴
-eq	伴随
-eq	伴侣
 eqak	伴
 eqbb	𭀒
 eqbc	𩘭
@@ -25155,8 +24947,6 @@ eqyn	𗃭
 eqys	𗇇
 eqyy	𗃮
 er	价
-er	价格
-er	价值
 eraj	伧
 erak	𠇫
 erce	㒢
@@ -25286,8 +25076,6 @@ erwe	佤
 erxq	𠑁
 eryi	𲏏
 es	风
-es	风格
-es	风险
 esaa	𬱾
 esaa	𭪫
 esag	𩙮
@@ -25584,8 +25372,6 @@ etwy	𠉸
 etwy	𰂎
 etxq	𱏒
 eu	在
-eu	在于
-eu	在场
 euag	𪝢
 euag	𰳳
 eual	𱣦
@@ -26071,8 +25857,6 @@ euyy	낚
 euyy	냒
 euyy	닊
 ev	偶
-ev	偶尔
-ev	偶然
 evag	𪝬
 evaj	伌
 evaj	𠏣
@@ -26147,8 +25931,6 @@ evwy	䬑
 evwy	𲐸
 evyh	𠏂
 ew	有
-ew	有些
-ew	有关
 ewam	𠉍
 ewam	𲥸
 ewat	𫢌
@@ -26589,11 +26371,7 @@ ezz	㋤
 ezz	ナ
 ezz	
 f	一
-f	一个
-f	一定
 fa	报
-fa	报道
-fa	报告
 faaa	𢵳
 faab	𢴻
 faag	𢮯
@@ -26722,8 +26500,6 @@ fawt	𢮔
 faxg	𭢟
 fayi	𪭝
 fb	五
-fb	五月
-fb	五彩
 fba	择
 fbaa	𠄻
 fbag	揵
@@ -27577,8 +27353,6 @@ fbyi	㐏
 fbyl	挶
 fbys	𱠅
 fc	两
-fc	两国
-fc	两岸
 fcaj	𢹩
 fcan	𗍺
 fcas	𗎀
@@ -27900,8 +27674,6 @@ fcyy	𗟲
 fcyy	𗟴
 fcyy	𗟸
 fd	拍
-fd	拍摄
-fd	拍照
 fda	攔
 fdag	裚
 fdag	𢶑
@@ -28160,8 +27932,6 @@ fdyf	𢰗
 fdyi	乴
 fdzs	挃
 fe	推
-fe	推进
-fe	推出
 feam	挆
 feam	𡯦
 feam	𢫩
@@ -28343,8 +28113,6 @@ fexx	𫽎
 feyf	𨚎
 feyi	𭠚
 ff	无
-ff	无限
-ff	无法
 ffak	𢪙
 ffb	捷
 ffbd	𢰬
@@ -28472,8 +28240,6 @@ ffyk	𢴃
 ffyo	𭢾
 ffyu	𢸌
 fg	龙
-fg	龙头
-fg	龙虾
 fga	袭
 fgac	㩍
 fgaf	𱠬
@@ -28770,8 +28536,6 @@ fgyi	𭺛
 fgyp	𢭀
 fgys	𢌜
 fh	持
-fh	持续
-fh	持有
 fhaf	𠄯
 fhag	𢲙
 fham	𢬺
@@ -28942,8 +28706,6 @@ fhyi	㧖
 fhyk	擣
 fhzs	𪭴
 fi	抄
-fi	抄袭
-fi	抄写
 fiag	𢳤
 fiag	𲣈
 fiam	㧲
@@ -29151,8 +28913,6 @@ fiyi	挖
 fiyi	𰓦
 fiyk	𢷬
 fj	看
-fj	看见
-fj	看到
 fjae	𭿧
 fjai	撔
 fjam	捰
@@ -29369,7 +29129,6 @@ fjys	抇
 fjys	𗌲
 fjzs	𢫵
 fk	于
-fk	于是
 fka	扒
 fkaa	𱡈
 fkad	𭢭
@@ -29664,8 +29423,6 @@ fkyv	𤳡
 fkzs	𡥅
 fkzw	𡥒
 fl	远
-fl	远方
-fl	远离
 flag	𮖔
 flai	𠁱
 flal	𢴙
@@ -30117,8 +29874,6 @@ flyu	𗘿
 flzi	㱏
 flzs	𪭤
 fm	招
-fm	招标
-fm	招聘
 fmag	𫽲
 fmam	𢭩
 fmam	𪮾
@@ -30270,8 +30025,6 @@ fmys	扷
 fmyt	𪮿
 fmzs	𢭺
 fn	指
-fn	指出
-fn	指数
 fnai	𠫔
 fnai	𢆰
 fnam	𣏏
@@ -30478,8 +30231,6 @@ fnyf	𨚏
 fnyi	抝
 fnyp	𤴖
 fo	天
-fo	天下
-fo	天津
 foa	捧
 foaf	𲚿
 foaj	𲓲
@@ -30750,8 +30501,6 @@ fpzi	𧾸
 fpzs	捉
 fpzs	𱟻
 fq	来
-fq	来说
-fq	来自
 fqa	拌
 fqak	拌
 fqam	𡰆
@@ -30930,8 +30679,6 @@ fqys	𪭰
 fqys	𗸶
 fqys	𗸸
 fr	势
-fr	势头
-fr	势力
 fra	抢
 frag	𭡖
 fraj	抢
@@ -31074,8 +30821,6 @@ frwo	𪭹
 frws	㧚
 frxq	𢹦
 fs	手
-fs	手机
-fs	手段
 fsa	摋
 fsae	摋
 fsaj	𰓜
@@ -31561,8 +31306,6 @@ ftxd	𫾁
 ftxq	撳
 ftxw	𢵶
 fu	摇
-fu	摇头
-fu	摇摆
 fua	採
 fuab	𢱄
 fuaf	𗶛
@@ -32034,8 +31777,6 @@ fuyy	𨜃
 fuz	抓
 fuzs	抓
 fv	画
-fv	画面
-fv	画家
 fva	扼
 fvaj	扼
 fvap	𫾐
@@ -32156,8 +31897,6 @@ fvwy	𢯮
 fvxs	𱟬
 fvye	𢪜
 fw	万
-fw	万能
-fw	万物
 fwa	捆
 fwac	𗷘
 fwak	𘬟
@@ -33549,8 +33288,6 @@ fwys	𦙚
 fwys	𗷝
 fwys	𘩎
 fx	死
-fx	死亡
-fx	死者
 fxaa	搩
 fxaa	𩎳
 fxaa	𭪕
@@ -34083,8 +33820,6 @@ fxyf	𨚌
 fxyg	𭮖
 fxyk	拣
 fy	扬
-fy	扬州
-fy	扬帆
 fya	挪
 fyaj	𢴟
 fyak	𘣪
@@ -34231,11 +33966,7 @@ fyvt	𧰳
 fywj	𱠯
 fyyk	𪭣
 g	我
-g	我们
-g	我国
 ga	年
-ga	年度
-ga	年初
 gaaa	𰪗
 gaae	𥮕
 gaah	𱸜
@@ -34452,8 +34183,6 @@ gaxq	𣣝
 gayf	𨚶
 gayi	𫁳
 gb	第
-gb	第一
-gb	第二
 gba	筆
 gbad	𲶰
 gbag	𥯦
@@ -34633,8 +34362,6 @@ gbyf	𨙸
 gbyi	𥬁
 gbyz	䇾
 gc	南
-gc	南方
-gc	南京
 gcai	𥲋
 gcat	𥶄
 gcba	箻
@@ -34668,7 +34395,6 @@ gcgt	𥳇
 gcht	𥬕
 gchz	𥱰
 gcic	筕
-gcif	直󠄈
 gcig	𥭝
 gcij	𥅉
 gcin	䉙
@@ -34687,7 +34413,6 @@ gcki	𲓜
 gckj	𥯂
 gcko	𥱁
 gckz	𥫚
-gclf	直󠄅
 gclf	𥰪
 gclk	𪧡
 gclr	䉹
@@ -34772,7 +34497,6 @@ gcxi	𫂬
 gcyg	𫖱
 gcyq	𱂡
 gd	籍
-gd	籍贯
 gda	範
 gdah	𭐃
 gdaj	範
@@ -34918,8 +34642,6 @@ gdyi	𫂄
 gdys	𗹣
 gdzz	䇪
 ge	每
-ge	每年
-ge	每天
 gea	毓
 geaf	𥮋
 geai	𪵔
@@ -35123,8 +34845,6 @@ geuu	𣬁
 geuw	𮆀
 gevm	𱸠
 gf	笼
-gf	笼罩
-gf	笼子
 gfab	𱷾
 gfae	𮅑
 gfba	箨
@@ -35324,8 +35044,6 @@ gfxx	𣱚
 gfyi	𠂏
 gfyk	𮆔
 gg	午
-gg	午后
-gg	午餐
 gga	節
 ggag	𢆏
 ggaj	節
@@ -35571,8 +35289,6 @@ ggys	𗍰
 ggyy	𭚓
 ggzz	𮅋
 gh	等
-gh	等等
-gh	等待
 ghan	𱸆
 ghaq	𭯲
 ghaz	笌
@@ -35774,8 +35490,6 @@ ghyl	𥵽
 ghyr	𢥰
 ghyt	𭐑
 gi	十
-gi	十足
-gi	十月
 giag	𗢊
 giaj	𩓕
 giak	𗢌
@@ -35915,8 +35629,6 @@ gixa	黦
 gixj	𥴃
 giyk	𗎮
 gj	真
-gj	真实
-gj	真正
 gja	韩
 gjac	𥶩
 gjag	𥸒
@@ -35961,8 +35673,6 @@ gjeh	䉜
 gjeh	𪑸
 gjeh	𨿨
 gjei	乹
-gjei	直󠄁
-gjei	直󠄂
 gjei	𮅍
 gjej	𥬶
 gjej	𲑣
@@ -36030,7 +35740,6 @@ gjjr	𬕑
 gjjt	䥅
 gjjt	𥷍
 gjju	𫧩
-gjjv	直󠄃
 gjjv	𰥑
 gjjx	𥬷
 gjjy	𠄊
@@ -36123,7 +35832,6 @@ gjps	篂
 gjq	直
 gjqh	𪐵
 gjqi	直
-gjqi	直󠄄
 gjqi	直
 gjqi	直
 gjqp	𨢈
@@ -36230,8 +35938,6 @@ gjyi	𠃫
 gjzi	𠦝
 gjzi	龺
 gk	及
-gk	及其
-gk	及时
 gka	裁
 gkag	裁
 gkai	𲓝
@@ -36485,7 +36191,6 @@ gkzh	𪐣
 gkzn	孕
 gkzz	𥫞
 gl	囊
-gl	囊括
 glag	𮕷
 glai	𘣔
 glbb	𱸗
@@ -36655,8 +36360,6 @@ glyf	𥯘
 glyi	𬼟
 glzz	䇥
 gm	笑
-gm	笑容
-gm	笑话
 gmam	𬕌
 gmaz	𫂟
 gmbd	𫂞
@@ -36914,8 +36617,6 @@ gnxp	𤙋
 gnyc	𰩹
 gnyw	𥲌
 go	失
-go	失误
-go	失败
 goag	𧙍
 goah	𲏸
 goaj	𮅒
@@ -37040,8 +36741,6 @@ goz	乏
 gozp	乏
 gozz	𬔱
 gp	延
-gp	延续
-gp	延长
 gpaj	笻
 gpam	篥
 gpau	𬖀
@@ -37150,8 +36849,6 @@ gpyz	𥭛
 gpyz	𮠖
 gpzz	𥭽
 gq	气
-gq	气质
-gq	气温
 gqag	𧜚
 gqag	𮖈
 gqb	释
@@ -37362,8 +37059,6 @@ gqyj	𮔽
 gqyq	氧
 gqyz	𥬴
 gr	答
-gr	答应
-gr	答案
 gram	𣏻
 gras	䉰
 grb	筷
@@ -37498,8 +37193,6 @@ grtu	籢
 grum	𥲥
 grxq	籨
 gs	舞
-gs	舞台
-gs	舞蹈
 gsad	𪄐
 gsaj	䫙
 gsak	𠂯
@@ -37941,8 +37634,6 @@ gsyu	𗏚
 gsyu	𗐈
 gsyz	𰩵
 gt	简
-gt	简单
-gt	简称
 gtai	𲶪
 gtaj	𥴶
 gtak	䇨
@@ -38021,8 +37712,6 @@ gtwn	𪒔
 gtwz	笀
 gtxy	𮆸
 gu	怎
-gu	怎么
-gu	怎样
 guaj	卹
 guat	𰳩
 gub	乍
@@ -38361,7 +38050,6 @@ gvxb	𲶳
 gvxk	畞
 gvyp	𥵯
 gw	筋
-gw	筋骨
 gwaa	𥲢
 gwab	箙
 gwad	𪈣
@@ -38479,7 +38167,6 @@ gwsl	筋
 gwso	𡘻
 gwsr	𱞜
 gwtu	䇱
-gwuj	直󠄉
 gwus	𥳙
 gwvr	𥵖
 gww	黜
@@ -38504,8 +38191,6 @@ gwyp	𣍝
 gwyq	𣱙
 gwyz	𥬅
 gx	索
-gx	索赔
-gx	索取
 gxaa	𣓼
 gxaj	𮵯
 gxak	𥬫
@@ -38657,8 +38342,6 @@ gxxx	𥭋
 gxyf	𨙲
 gxyi	𫡐
 gy	卖
-gy	卖身
-gy	卖国
 gyay	𥭵
 gycy	𫖪
 gydn	𩾥
@@ -38738,8 +38421,6 @@ gyy	
 gyy	
 gyyk	𘮣
 gz	竹
-gz	竹子
-gz	竹林
 gzz	竹
 gzz	𠂉
 gzz	𥫗
@@ -38749,11 +38430,7 @@ gzz	🀤
 gzz	
 gzz	
 h	地
-h	地方
-h	地点
 ha	牙
-ha	牙齿
-ha	牙膏
 haa	牙
 haa	⽛
 haaa	𡑓
@@ -38921,8 +38598,6 @@ haww	𡐴
 haxk	𠥂
 hayi	𰉘
 hb	声
-hb	声音
-hb	声明
 hbaa	𪩦
 hbag	𪤞
 hbag	𫮑
@@ -39318,8 +38993,6 @@ hbyp	𥀼
 hbyq	狺
 hbyt	𫭷
 hc	责
-hc	责任
-hc	责令
 hcaa	𪤰
 hcb	狈
 hcba	𪻃
@@ -39695,7 +39368,6 @@ hdzq	𤞂
 hdzt	垤
 hdzt	耊
 he	雅
-he	雅兴
 hea	垛
 heal	𣝝
 heam	垛
@@ -39878,8 +39550,6 @@ hewy	𰉦
 hexe	𡑗
 hezk	𘬳
 hf	与
-hf	与其
-hf	与会
 hfaa	𣫓
 hfal	𣫎
 hfam	榖
@@ -40209,8 +39879,6 @@ hfyk	𰷾
 hfyr	듟
 hfyy	듞
 hg	表
-hg	表示
-hg	表演
 hga	垜
 hgak	𡋂
 hgam	垜
@@ -40523,8 +40191,6 @@ hgyo	𱮀
 hgys	表
 hgys	𫸑
 hh	考
-hh	考试
-hh	考虑
 hhaa	𤘆
 hhaj	𭅶
 hhaq	犽
@@ -41688,8 +41354,6 @@ hixt	坹
 hixu	𧰕
 hiyi	𡋉
 hj	都
-hj	都会
-hj	都市
 hjag	𡔒
 hjag	𧾉
 hjag	𱮱
@@ -42295,8 +41959,6 @@ hjyy	둒
 hjzq	𤞋
 hjzt	𭎓
 hk	城
-hk	城市
-hk	城镇
 hkae	𠤶
 hkaj	𡊁
 hkaj	𪭛
@@ -42720,8 +42382,6 @@ hkzt	孝
 hkzt	𡉗
 hkzz	𧺙
 hl	喜
-hl	喜欢
-hl	喜悦
 hlam	㙅
 hlam	𤞥
 hlb	趣
@@ -43068,8 +42728,6 @@ hlyk	𭐙
 hlyr	듃
 hlyy	듂
 hm	超
-hm	超过
-hm	超越
 hmag	𧞒
 hmag	𱗥
 hmam	𡓔
@@ -43240,8 +42898,6 @@ hmyt	𱖎
 hmzq	𤞝
 hmzz	𧼋
 hn	去
-hn	去年
-hn	去世
 hna	却
 hnab	叝
 hnai	𠬇
@@ -43519,8 +43175,6 @@ hnyi	𬼝
 hnyl	𦒽
 hnys	𠡺
 ho	起
-ho	起来
-ho	起诉
 hoag	𦆾
 hoak	埲
 hoak	𢩡
@@ -43753,8 +43407,6 @@ hpzq	㹱
 hpzt	𭎣
 hpzz	趗
 hq	幸
-hq	幸福
-hq	幸运
 hqa	報
 hqab	報
 hqab	報
@@ -43992,8 +43644,6 @@ hqyt	幸
 hqyt	垟
 hqyt	𦍒
 hr	志
-hr	志愿
-hr	志向
 hraj	𪺷
 hraj	𱖏
 hrbc	𫭵
@@ -44158,7 +43808,6 @@ hrwc	㼢
 hrwq	𱭵
 hrwt	𤬪
 hs	士
-hs	士兵
 hsag	𤢨
 hsam	堞
 hsam	𤞠
@@ -44390,8 +44039,6 @@ hsyn	𡓅
 hsyq	𰡆
 hsyt	𡊤
 ht	房
-ht	房子
-ht	房屋
 htag	𧞹
 htaj	𱋪
 htak	鿍
@@ -44627,7 +44274,6 @@ htxo	𲎑
 htxq	𮮅
 htyf	𲆒
 hu	狐
-hu	狐狸
 huag	𱘍
 huam	埰
 huam	𤟖
@@ -45085,8 +44731,6 @@ huyy	딖
 huzq	𤜶
 huzz	𲃊
 hv	坏
-hv	坏事
-hv	坏人
 hvaj	𤜸
 hvaj	𱭣
 hvaj	𲘴
@@ -45249,8 +44893,6 @@ hvwy	𧼫
 hvxw	𱮚
 hvyi	𫡭
 hw	静
-hw	静态
-hw	静静
 hwa	坍
 hwai	𣄴
 hwai	𣄷
@@ -45850,8 +45492,6 @@ hxxx	𭅚
 hxxy	𨜽
 hxyf	𡋓
 hy	场
-hy	场景
-hy	场所
 hyak	𤜾
 hyak	𫭤
 hyak	𬛣
@@ -45933,18 +45573,13 @@ hyww	𤞁
 hyxd	𲚁
 hyxq	𣢛
 hz	走
-hz	走势
-hz	走向
 hzz	走
 hzz	壴
 hzz	⾛
 hzz	🈰
 hzz	
 i	小
-i	小时
-i	小组
 ia	宋
-ia	宋朝
 iaaa	𠘆
 iaaa	𤏗
 iaab	𪧲
@@ -46116,8 +45751,6 @@ iay	炜
 iayf	𳅇
 iayi	炜
 ib	当
-ib	当时
-ib	当然
 ibag	煡
 ibag	𡩌
 ibak	冿
@@ -46335,8 +45968,6 @@ ibym	㝘
 ibys	𧨲
 ibyx	𧦱
 ic	安
-ic	安排
-ic	安慰
 ica	案
 icam	案
 ican	𗙳
@@ -46518,8 +46149,6 @@ icyf	䢿
 icyg	𗃿
 icyh	烦
 id	害
-id	害怕
-id	害羞
 ida	爛
 idaq	爛
 idaq	爛
@@ -46815,8 +46444,6 @@ idzh	𤈜
 idzm	室
 idzx	窒
 ie	准
-ie	准备
-ie	准确
 ieam	烌
 ieam	𪳙
 ieam	𪹯
@@ -47066,8 +46693,6 @@ ieyy	𘂤
 ieyy	𘂧
 ieyy	𘝡
 if	定
-if	定价
-if	定位
 ifag	𪨃
 ifbg	𥥫
 ifbk	𱷓
@@ -47326,8 +46951,6 @@ ifxr	𥧛
 ifxx	𡧒
 ifyk	𥧻
 ig	少
-ig	少年
-ig	少女
 igaj	𤊵
 igaj	𥅷
 igam	𪸨
@@ -47658,8 +47281,6 @@ igyo	𰃿
 igys	𫵅
 igyu	𡮴
 ih	火
-ih	火焰
-ih	火箭
 iha	穿
 ihag	𮖊
 ihah	𤆹
@@ -47900,8 +47521,6 @@ ihyk	燽
 ihyk	𠖱
 ihyl	𤏉
 ii	实
-ii	实现
-ii	实际
 iiae	𤒀
 iiag	𬡤
 iiai	𪹝
@@ -48220,8 +47839,6 @@ iiyg	㷀
 iiyk	𤐭
 iiyp	𬏙
 ij	宝
-ij	宝宝
-ij	宝贝
 ija	窠
 ijag	𤓢
 ijag	𧚵
@@ -48548,8 +48165,6 @@ ijyf	𨛯
 ijyf	𨛱
 ijzh	𱫁
 ik	进
-ik	进行
-ik	进步
 ika	井
 ikad	𪧭
 ikaj	寴
@@ -48776,8 +48391,6 @@ ikzs	𭓋
 ikzv	𮱡
 ikzx	𥤪
 il	光
-il	光芒
-il	光电
 ilae	𭀴
 ilag	𡪭
 ilah	𤆜
@@ -49774,8 +49387,6 @@ imyt	𲬫
 imyx	穾
 imzh	𤉒
 in	动
-in	动静
-in	动力
 ina	云
 inah	𘱯
 inam	梥
@@ -49957,8 +49568,6 @@ inxq	𫳎
 inyf	䢵
 inyi	𥥆
 io	头
-io	头发
-io	头号
 ioak	𤊡
 ioam	𣒓
 iobg	𤈙
@@ -50064,8 +49673,6 @@ ioxw	𡭻
 iozm	㝎
 iozs	𡭿
 ip	空
-ip	空间
-ip	空气
 ipab	𥧞
 ipam	凓
 ipam	𤌣
@@ -50365,8 +49972,6 @@ iqys	𘈜
 iqyx	𥥵
 iqyy	𘈞
 ir	二
-ir	二者
-ir	二月
 iraj	炝
 iraj	𰃷
 iram	𣓫
@@ -50646,8 +50251,6 @@ irwx	𥥟
 irwy	𡨪
 irxq	𱬬
 is	寒
-is	寒冬
-is	寒冷
 isae	𪹤
 isag	𲬈
 isaj	𰞍
@@ -50884,8 +50487,6 @@ isyh	㶲
 isyr	𠖿
 isyx	𥥝
 it	家
-it	家庭
-it	家族
 itag	𧝟
 itak	𤇺
 itam	𰩏
@@ -50999,8 +50600,6 @@ itxb	𪛆
 itxd	𫠝
 itxd	𰟘
 iu	常
-iu	常常
-iu	常规
 iuaa	𠘏
 iuag	𲬙
 iuam	寀
@@ -51204,7 +50803,6 @@ iuyi	𱶹
 iuyk	𗵺
 iuzx	𮃹
 iv	寡
-iv	寡妇
 ivae	𥒳
 ivaj	𲫐
 ivam	𥦼
@@ -51335,8 +50933,6 @@ ivyc	𡧘
 ivyc	𥥒
 ivyf	𮠈
 iw	烟
-iw	烟花
-iw	烟草
 iwac	烿
 iwam	焑
 iwam	𭩱
@@ -51504,8 +51100,6 @@ iwys	𲥟
 iwyv	肖
 iwyx	𥥃
 ix	次
-ix	次数
-ix	次日
 ixa	宛
 ixaa	𡩣
 ixaa	𤌴
@@ -51778,11 +51372,7 @@ iyuh	𫴧
 iyum	𡧾
 iyvt	𲫛
 j	是
-j	是否
-j	是非
 ja	景
-ja	景区
-ja	景观
 jaa	琳
 jaaa	𲯷
 jaag	𮖐
@@ -52099,8 +51689,6 @@ jayi	祎
 jayi	𬀩
 jayi	𮵆
 jb	缺
-jb	缺乏
-jb	缺少
 jbac	𤦯
 jbag	睷
 jbag	𤧣
@@ -52391,8 +51979,6 @@ jbyr	𧦊
 jbys	𫀎
 jbyw	琂
 jc	现
-jc	现在
-jc	现场
 jcaa	𪼬
 jcam	𮴳
 jcbb	𣌊
@@ -52589,8 +52175,6 @@ jcyf	𬪀
 jcyr	𮲟
 jcyw	顼
 jd	神
-jd	神秘
-jd	神奇
 jdag	𭧯
 jdam	𥉼
 jdam	𥊺
@@ -52937,8 +52521,6 @@ jdzr	晊
 jdzs	祬
 jdzw	𤥇
 je	礼
-je	礼物
-je	礼品
 jeaf	𱲺
 jeag	𬓓
 jeak	𣆎
@@ -53174,8 +52756,6 @@ jeyf	𥉝
 jeyi	丏
 jeyi	𬺶
 jf	量
-jf	量化
-jf	量子
 jfay	𳅎
 jfb	晤
 jfbg	𬑫
@@ -53567,8 +53147,6 @@ jfxn	𫪔
 jfxq	𭹷
 jfyu	𱯊
 jg	眼
-jg	眼睛
-jg	眼下
 jgac	𲯽
 jgaj	𣌸
 jgak	𪰟
@@ -54128,7 +53706,6 @@ jhzs	𥚧
 jhzs	𱵎
 jhzw	𮴙
 ji	叔
-ji	叔叔
 jiaj	𤪓
 jiam	𣇆
 jiam	𥊲
@@ -54510,8 +54087,6 @@ jixq	𰙏
 jixq	𱳞
 jixu	𥋕
 jj	祖
-jj	祖国
-jj	祖先
 jjaf	𤧆
 jjag	𣌝
 jjag	𰨕
@@ -55023,8 +54598,6 @@ jjzi	𥏅
 jjzr	𭥳
 jjzs	𮁲
 jk	时
-jk	时间
-jk	时候
 jka	具
 jkab	𧴩
 jkad	𬎖
@@ -55379,8 +54952,6 @@ jkzr	㫗
 jkzr	𰕳
 jkzw	㺭
 jl	可
-jl	可以
-jl	可能
 jlab	𣚤
 jlag	𧙑
 jlag	𮖑
@@ -55706,8 +55277,6 @@ jlzr	𰕸
 jlzs	𥘺
 jlzw	𰡴
 jm	目
-jm	目前
-jm	目标
 jmam	𥊚
 jmam	𣕰
 jmar	𣊍
@@ -55931,8 +55500,6 @@ jmys	祅
 jmyt	𲰍
 jmyw	𭸺
 jn	县
-jn	县城
-jn	县长
 jna	丟
 jnak	𭥿
 jnaq	县
@@ -56304,8 +55871,6 @@ joxj	𬁂
 joxq	𣣇
 jozm	𭾣
 jp	星
-jp	星星
-jp	星期
 jpaj	昻
 jpaj	𤤑
 jpam	瑮
@@ -56662,8 +56227,6 @@ jqys	𰧵
 jqys	祥
 jqyw	珜
 jr	日
-jr	日本
-jr	日子
 jraj	玱
 jrc	珍
 jrce	禴
@@ -56880,8 +56443,6 @@ jrxq	𣌋
 jrxq	𣢧
 jrxq	𱢴
 js	示
-js	示范
-js	示威
 jsae	𣉜
 jsae	𮂎
 jsag	𧚠
@@ -57266,8 +56827,6 @@ jsyg	𠳫
 jsyi	𰁂
 jsyw	𤤪
 jt	故
-jt	故事
-jt	故意
 jtak	𪰠
 jtak	𫞳
 jtak	𭹇
@@ -57429,8 +56988,6 @@ jtwr	𣆖
 jtwy	𰥨
 jtxo	𤧾
 ju	显
-ju	显示
-ju	显然
 jua	睬
 juaf	𳂟
 juai	𤪁
@@ -57854,8 +57411,6 @@ juzm	𥄄
 juzm	𲲞
 juzw	𤣺
 jv	上
-jv	上海
-jv	上面
 jvbb	𣇗
 jvbb	𰷅
 jvbo	𫩆
@@ -58027,8 +57582,6 @@ jvxi	𲯼
 jvxx	𲰅
 jvyt	𫝝
 jw	明
-jw	明显
-jw	明天
 jwa	睏
 jwah	𣒮
 jwak	𣇴
@@ -58356,8 +57909,6 @@ jwyv	𮌈
 jwyw	玥
 jwyw	玥
 jx	下
-jx	下去
-jx	下降
 jxaa	㻧
 jxaj	𭥦
 jxak	曻
@@ -58643,14 +58194,9 @@ jyy	⽈
 jyyi	𘬕
 jyyk	𱮵
 jz	早
-jz	早已
-jz	早晨
 jzz	早
 k	了
-k	了解
 ka	八
-ka	八卦
-ka	八月
 kaa	八
 kaa	⼋
 kaa	㈧
@@ -58798,8 +58344,6 @@ kayf	𮟵
 kayi	纬
 kayi	𫐚
 kb	经
-kb	经济
-kb	经过
 kba	绎
 kbag	䭈
 kbak	绎
@@ -58910,8 +58454,6 @@ kbyi	𰐐
 kbym	𮘃
 kbyz	𡥪
 kc	纳
-kc	纳入
-kc	纳税
 kcb	贸
 kcbb	𳋝
 kcbi	𰷞
@@ -59017,7 +58559,6 @@ kcy	预
 kcyf	𬪍
 kcyv	预
 kd	绵
-kd	绵羊
 kdb	飯
 kdba	㒶
 kdbo	飯
@@ -59171,8 +58712,6 @@ kdzi	𢎆
 kdzj	绖
 kdzs	䬹
 ke	维
-ke	维持
-ke	维护
 keak	𠝈
 keam	𦈜
 keam	𰩣
@@ -59305,8 +58844,6 @@ keyi	𡦹
 kez	戎
 kezg	戎
 kf	感
-kf	感觉
-kf	感到
 kfa	印
 kfab	𭓄
 kfae	𳋕
@@ -59504,8 +59041,6 @@ kfyl	𗄮
 kfyn	𗄯
 kfyu	㌫
 kg	才
-kg	才能
-kg	才是
 kga	柔
 kgab	𣠳
 kgab	𥍳
@@ -59967,8 +59502,6 @@ kgyo	𫵉
 kgys	鿥
 kgzi	𢎉
 kh	结
-kh	结果
-kh	结束
 khak	𠂵
 khba	𨐣
 khbh	𮩌
@@ -60069,8 +59602,6 @@ khyi	𩚬
 khyk	𩟕
 khzg	𫻿
 ki	乐
-ki	乐观
-ki	乐趣
 kiam	饓
 kib	绾
 kibb	館
@@ -60200,8 +59731,6 @@ kixq	𰬒
 kixu	𬼏
 kixw	𩝜
 kj	意
-kj	意见
-kj	意外
 kjag	𩟻
 kjag	𳁂
 kjai	䭘
@@ -60554,8 +60083,6 @@ kjz	章
 kjzg	𰒩
 kjzl	章
 kk	丝
-kk	丝绸
-kk	丝毫
 kkaa	𠔁
 kkaa	𘰬
 kkaa	
@@ -60741,8 +60268,6 @@ kkyi	𰬖
 kkza	𘰳
 kkzz	孖
 kl	事
-kl	事情
-kl	事件
 klai	弎
 klam	𩛴
 klb	亟
@@ -60945,8 +60470,6 @@ klyx	𣣱
 klyy	𥪼
 klzs	𩚫
 km	分
-km	分别
-km	分析
 kmab	𠔢
 kmaf	𰄱
 kmag	𮕮
@@ -61132,8 +60655,6 @@ kmyf	邠
 kmys	飫
 kmzj	𰬛
 kn	公
-kn	公司
-kn	公告
 knaa	公
 knaa	𘰭
 knag	𢦙
@@ -61262,8 +60783,6 @@ knwr	𨐑
 knwy	𪵵
 knyf	𮟭
 ko	过
-ko	过去
-ko	过程
 kobl	𥩙
 kobs	𩚥
 koc	辽
@@ -61338,8 +60857,6 @@ koxj	缗
 koxp	𰬮
 koxx	𬘲
 kp	红
-kp	红利
-kp	红色
 kpcn	𢧦
 kpcn	𪭏
 kpcn	𬘱
@@ -61391,8 +60908,6 @@ kpzl	䇍
 kpzr	𧾺
 kpzs	𱃨
 kq	继
-kq	继续
-kq	继承
 kqa	绊
 kqag	𗅎
 kqak	绊
@@ -61523,7 +61038,6 @@ kqys	䬺
 kqys	𗅀
 kqys	𗆺
 kr	给
-kr	给予
 kraj	𫧻
 krak	𠔎
 krcn	𩛅
@@ -61720,8 +61234,6 @@ krwg	𢦭
 krwi	𤬩
 krww	𤬹
 ks	为
-ks	为了
-ks	为主
 ksa	爷
 ksaj	爷
 ksam	䭎
@@ -61921,8 +61433,6 @@ ksyi	𩟘
 ksyo	𩞶
 ksys	𗏠
 kt	孩
-kt	孩子
-kt	孩童
 kta	绛
 ktak	绛
 ktam	绦
@@ -62000,8 +61510,6 @@ ktwn	缡
 ktxd	𬙁
 ktxi	𭓎
 ku	站
-ku	站台
-ku	站立
 kuak	𳋠
 kuam	䌽
 kuam	𩜓
@@ -62135,8 +61643,6 @@ kuyn	𗅘
 kuzg	𢦞
 kuzl	𮄨
 kv	留
-kv	留下
-kv	留学
 kvaj	𩚚
 kvbo	𫑕
 kvbp	𥀓
@@ -62234,8 +61740,6 @@ kvww	𰬄
 kvwy	𬔤
 kvyf	𨝯
 kw	约
-kw	约定
-kw	约束
 kwbp	𤿑
 kwby	𩜺
 kwck	𮶆
@@ -62410,8 +61914,6 @@ kwyi	𢎀
 kwyl	𦚎
 kwyl	𦚏
 kx	绝
-kx	绝对
-kx	绝望
 kxaa	𠓲
 kxaa	𣔕
 kxbj	绉
@@ -62562,8 +62064,6 @@ kxxx	𡥥
 kxy	练
 kxyk	练
 ky	成
-ky	成为
-ky	成功
 kyac	𗆖
 kyai	𗆘
 kyai	𗆪
@@ -62645,19 +62145,13 @@ kyyf	郕
 kyyg	㐧
 kyyr	𬲡
 kz	子
-kz	子女
-kz	子弹
 kzz	子
 kzz	孑
 kzz	⼦
 kzz	𛂘
 kzz	𘲰
 l	中
-l	中国
-l	中间
 la	三
-la	三星
-la	三亚
 laa	三
 laa	㆔
 laa	㈢
@@ -63133,7 +62627,6 @@ lbyl	𫪐
 lbys	𬜇
 lbyv	唁
 lc	员
-lc	员工
 lcag	𫬙
 lcaj	𭌽
 lcat	𡁛
@@ -63298,8 +62791,6 @@ lcys	𬱠
 lcyy	𭉺
 lcyz	𲊺
 ld	听
-ld	听说
-ld	听到
 ldag	𡀮
 ldam	嘄
 ldam	𠟾
@@ -63739,8 +63230,6 @@ lexa	𲖦
 lexi	𪡇
 lexx	𫪥
 lf	味
-lf	味道
-lf	味觉
 lfab	𱒧
 lfae	𡃵
 lfae	𫩽
@@ -64810,8 +64299,6 @@ lfyr	윿
 lfyy	믂
 lfyy	윾
 lg	吃
-lg	吃饭
-lg	吃亏
 lga	唧
 lgaf	𠼒
 lgaj	唧
@@ -65301,8 +64788,6 @@ lhyk	嚋
 lhzv	唗
 lhzv	𠷸
 li	吵
-li	吵架
-li	吵闹
 liae	𲕑
 liag	褧
 liaj	𱓾
@@ -65642,8 +65127,6 @@ liwy	𲹭
 lixa	啘
 lixl	𭉊
 lj	喝
-lj	喝酒
-lj	喝彩
 lja	巢
 ljaa	𢀌
 ljaa	𩫥
@@ -66395,8 +65878,6 @@ ljyy	욲
 ljzc	𰏄
 ljzv	𫩭
 lk	只
-lk	只有
-lk	只要
 lka	叭
 lkad	噺
 lkaj	嚫
@@ -66607,8 +66088,6 @@ lkzc	㜽
 lkzv	吇
 lkzv	𠯂
 ll	品
-ll	品牌
-ll	品种
 llac	𠷽
 llam	𠳳
 llam	𭩸
@@ -67635,8 +67114,6 @@ loyn	𠶫
 lozv	𠯣
 lozv	𫩝
 lp	嘴
-lp	嘴巴
-lp	嘴唇
 lpal	𭍐
 lpam	㗚
 lpam	𠵟
@@ -67738,8 +67215,6 @@ lpye	𨠧
 lpyv	唒
 lpzv	哫
 lq	虽
-lq	虽然
-lq	虽说
 lqag	𲗔
 lqak	𠰢
 lqam	𠹑
@@ -67882,7 +67357,6 @@ lqxy	𡂰
 lqyq	𮕊
 lqyv	咩
 lr	哈
-lr	哈哈
 lra	呛
 lrae	𫝜
 lrag	𡅬
@@ -68027,8 +67501,6 @@ lrxk	𱓓
 lrxq	𡁌
 lrxq	𡄥
 ls	别
-ls	别人
-ls	别墅
 lsa	喋
 lsaa	𭌖
 lsae	𠺽
@@ -68313,8 +67785,6 @@ lsyi	𭆾
 lsyp	𡄳
 lsyv	𠰩
 lt	政
-lt	政策
-lt	政府
 ltaf	𡀖
 ltaj	𱓵
 ltak	𠲓
@@ -68425,8 +67895,6 @@ ltxx	𠳻
 ltyi	𠰤
 ltyt	㘎
 lu	忠
-lu	忠实
-lu	忠诚
 luac	𭊑
 luae	𰈙
 luag	𡀢
@@ -69016,8 +68484,6 @@ luyy	앾
 luyy	읶
 luzv	𫩜
 lv	口
-lv	口袋
-lv	口碑
 lva	呃
 lvag	𠼊
 lvag	𡀬
@@ -69157,8 +68623,6 @@ lvxs	𰏆
 lvyf	䣎
 lvyp	𢀯
 lw	叫
-lw	叫做
-lw	叫卖
 lwam	𠳁
 lwas	㘐
 lwat	𦕃
@@ -69351,8 +68815,6 @@ lwys	䑚
 lwyv	肙
 lwyv	𠯲
 lx	吹
-lx	吹嘘
-lx	吹风
 lxaa	𠹳
 lxaa	𫫋
 lxai	𦖹
@@ -69540,17 +69002,11 @@ lyww	𠲫
 lyxd	𠽏
 lyxq	𱤷
 lz	正
-lz	正在
-lz	正式
 lzz	正
 lzz	𣥄
 lzz	㊣
 m	和
-m	和平
-m	和解
 ma	床
-ma	床位
-ma	床单
 maa	麻
 maa	⿇
 maa	麻
@@ -69744,8 +69200,6 @@ mawx	𪥀
 mayf	𰻮
 mayi	𮵠
 mb	痛
-mb	痛苦
-mb	痛哭
 mba	毽
 mbag	毽
 mbag	𢉆
@@ -69991,8 +69445,6 @@ mbyl	𤶹
 mbyl	𫀸
 mbym	𰚝
 mc	委
-mc	委托
-mc	委员
 mcat	𣰪
 mcat	𱱬
 mcbf	𤸻
@@ -70124,8 +69576,6 @@ mcxt	𣰓
 mcxx	𥠨
 mcyz	𬥈
 md	魔
-md	魔术
-md	魔法
 mdam	𢋝
 mdam	𣖄
 mdam	𤷲
@@ -70591,8 +70041,6 @@ meyc	𗐡
 meye	𗐢
 meys	𗐞
 mf	病
-mf	病毒
-mf	病人
 mfab	𲱛
 mfaj	𮃛
 mfbl	痦
@@ -70765,8 +70213,6 @@ mfxm	𰄧
 mfxw	𠜭
 mfxx	𪽨
 mg	广
-mg	广州
-mg	广东
 mgag	𲵛
 mgaj	𥠈
 mgaj	𥠗
@@ -70978,8 +70424,6 @@ mgyl	𪊘
 mgyq	𢌙
 mgyr	廷
 mh	庄
-mh	庄严
-mh	庄稼
 mhab	疨
 mhag	庌
 mhah	䄰
@@ -71167,8 +70611,6 @@ mhzg	𢈩
 mhzg	𭙤
 mhzz	𧼌
 mi	科
-mi	科技
-mi	科学
 miag	𧞯
 miaj	𮃢
 miaj	𰆒
@@ -71381,8 +70823,6 @@ miyf	𨞻
 miyi	𱎊
 miyj	𥢃
 mj	香
-mj	香港
-mj	香蕉
 mjai	𩡥
 mjaj	𲋰
 mjal	𮩩
@@ -71722,8 +71162,6 @@ mjyf	𮠂
 mjyf	𮷭
 mjzl	𳐩
 mk	底
-mk	底线
-mk	底部
 mka	乔
 mkab	𤴭
 mkab	𤴮
@@ -71989,8 +71427,6 @@ mkzh	秄
 mkzh	𥝔
 mkzm	𣬥
 ml	种
-ml	种子
-ml	种植
 mlab	𫾸
 mlag	𠾹
 mlah	𱖵
@@ -72234,8 +71670,6 @@ mlz	症
 mlzb	症
 mlzg	𪪎
 mm	利
-mm	利用
-mm	利润
 mma	梨
 mmad	𪅌
 mmag	㿆
@@ -72482,8 +71916,6 @@ mmyh	秗
 mmyl	䴠
 mmzb	𬏯
 mn	应
-mn	应该
-mn	应当
 mna	丢
 mnaa	麼
 mnad	𠚦
@@ -72644,8 +72076,6 @@ mnyf	𨛀
 mnyf	𨛻
 mnyi	𬏠
 mo	庆
-mo	庆祝
-mo	庆贺
 moag	𲱣
 moak	𤷰
 moak	𮃉
@@ -72858,8 +72288,6 @@ mpzb	𪽰
 mpzg	𫷭
 mpzh	𥞺
 mq	千
-mq	千克
-mq	千瓦
 mqak	秚
 mqb	廉
 mqbb	𣀃
@@ -73091,8 +72519,6 @@ mqys	𘪧
 mqyy	𠂷
 mqyy	𘝖
 mr	座
-mr	座位
-mr	座谈
 mra	疮
 mraj	疮
 mraj	𥟵
@@ -73350,8 +72776,6 @@ mrwl	㼾
 mrxq	𢌃
 mrxq	𤼏
 ms	度
-ms	度过
-ms	度假
 msak	𤶪
 msal	𥢇
 msam	𢋏
@@ -73645,8 +73069,6 @@ msyu	𘟙
 msyu	𘫤
 msyy	𘟚
 mt	疼
-mt	疼痛
-mt	疼爱
 mtak	𤵸
 mtak	𥞜
 mtam	痫
@@ -73744,8 +73166,6 @@ mtxq	廞
 mtxq	𤸺
 mtxq	𤺰
 mu	店
-mu	店铺
-mu	店面
 muam	𢌑
 muam	𤷕
 muam	𥟩
@@ -73985,8 +73405,6 @@ muza	𤔨
 muzb	𪽫
 muzz	䝖
 mv	重
-mv	重要
-mv	重大
 mvag	𤻒
 mvap	𭼰
 mvbb	𰼜
@@ -74185,8 +73603,6 @@ mvxu	𬪽
 mvxx	𬪼
 mvyf	𨟖
 mw	乌
-mw	乌云
-mw	乌龟
 mwam	稇
 mwam	𢈛
 mwam	𥢖
@@ -74379,8 +73795,6 @@ mwyl	𪊒
 mwym	𪵗
 mwyz	𧲩
 mx	称
-mx	称为
-mx	称号
 mxaa	𥠹
 mxaj	𠝽
 mxaj	𪎛
@@ -74568,11 +73982,7 @@ mz	豸
 mzz	豸
 mzz	⾘
 n	能
-n	能够
-n	能力
 na	流
-na	流量
-na	流程
 naa	幺
 naa	厶
 naa	ㄙ
@@ -74842,8 +74252,6 @@ naxw	𱨠
 naxw	𲩔
 nayi	𣲗
 nb	汉
-nb	汉字
-nb	汉族
 nba	泽
 nbac	𣸁
 nbaf	𱧃
@@ -75100,8 +74508,6 @@ nbys	𣵧
 nbys	𧥿
 nbyw	𣼇
 nc	长
-nc	长期
-nc	长沙
 ncaa	瀮
 ncai	𣻚
 ncaj	灀
@@ -75244,8 +74650,6 @@ ncyf	𱂩
 ncyg	顸
 ncyl	𫨪
 nd	派
-nd	派出
-nd	派遣
 nda	瀾
 ndag	𭲰
 ndaj	𤅆
@@ -75502,8 +74906,6 @@ ndxs	𲩄
 ndyf	𣵮
 ndzs	洷
 ne	没
-ne	没有
-ne	没收
 nead	𫠘
 neaf	𭰟
 neak	鼡
@@ -75666,7 +75068,6 @@ nexe	𬈼
 nexx	𣶘
 neyd	𤂊
 nf	浅
-nf	浅薄
 nfag	𲩹
 nfal	𣷵
 nfam	𱦙
@@ -75834,8 +75235,6 @@ nfxn	𱧱
 nfxx	𣲠
 nfyf	𱨪
 ng	海
-ng	海外
-ng	海域
 ngac	𣽤
 ngaj	𣹜
 ngak	𲩅
@@ -76056,8 +75455,6 @@ ngyo	渎
 ngyp	㳬
 ngzs	𲩇
 nh	法
-nh	法国
-nh	法律
 nhag	𤅑
 nhag	𧚚
 nhaj	𣳜
@@ -76297,8 +75694,6 @@ nhyk	濤
 nhyk	𣲐
 nhzs	𰜍
 ni	消
-ni	消息
-ni	消费
 niag	𣿈
 niag	𲪂
 niam	浨
@@ -76586,8 +75981,6 @@ nixu	𰜽
 nixw	𪶻
 nixx	𲩉
 nj	疑
-nj	疑问
-nj	疑虑
 njac	灏
 njac	𤂖
 njag	㶞
@@ -76918,8 +76311,6 @@ njyf	𰶺
 njys	汩
 njzb	㔬
 nk	兴
-nk	兴趣
-nk	兴奋
 nka	举
 nkad	澵
 nkaj	瀙
@@ -77171,8 +76562,6 @@ nkyi	𬇠
 nkyi	𲨴
 nkzs	汓
 nl	活
-nl	活动
-nl	活跃
 nlaa	䢄
 nlaa	𣜨
 nlab	𢻙
@@ -77582,8 +76971,6 @@ nmy	沃
 nmys	沃
 nmyt	𪷸
 nn	比
-nn	比赛
-nn	比例
 nnaa	厸
 nnaa	㕕
 nnaa	㵉
@@ -77775,7 +77162,6 @@ nnna	㕖
 nnna	𣛁
 nnna	𣳯
 nnnb	沘
-nnnb	㐂󠄁
 nnnb	𢿈
 nnnc	參
 nnnc	滲
@@ -77936,8 +77322,6 @@ nnyi	𬇚
 nnyi	𬼱
 nnyl	𣵍
 no	参
-no	参与
-no	参加
 noag	𣸳
 noak	淎
 noak	𣴰
@@ -78091,8 +77475,6 @@ noxq	𱧚
 noxr	𢛣
 noxw	𭱴
 np	酒
-np	酒店
-np	酒吧
 npag	𤂭
 npam	溧
 npcb	𲩌
@@ -78163,7 +77545,6 @@ nplt	𮳒
 nplu	𬇧
 nplu	𬻶
 nplv	浩
-nplv	浩󠄁
 nplv	浩
 nplx	𭊼
 npm	鸿
@@ -78235,8 +77616,6 @@ npys	𨠆
 npz	浞
 npzs	浞
 nq	平
-nq	平常
-nq	平台
 nqaf	灗
 nqak	泮
 nqam	㴪
@@ -78439,8 +77818,6 @@ nqys	𗍢
 nqys	𗕇
 nqys	𗕊
 nr	滑
-nr	滑雪
-nr	滑坡
 nra	染
 nraj	沧
 nram	染
@@ -78567,8 +77944,6 @@ nrxq	㶑
 nrxq	𣹱
 nryf	𫹸
 ns	水
-ns	水平
-ns	水果
 nsae	𣻑
 nsae	𣻑
 nsag	㵏
@@ -78923,8 +78298,6 @@ nsyn	𪷵
 nsys	𣳔
 nsyw	𣼏
 nt	游
-nt	游戏
-nt	游客
 nta	涤
 ntag	𣺒
 ntak	洚
@@ -79077,8 +78450,6 @@ ntwy	𬈀
 ntwy	𭰧
 ntxq	𣾠
 nu	浮
-nu	浮动
-nu	浮现
 nuaa	𲪑
 nuag	𤁆
 nuam	𣶶
@@ -79382,8 +78753,6 @@ nuyp	𣵕
 nuzs	沠
 nuzs	𪵯
 nv	源
-nv	源头
-nv	源泉
 nvag	𱩌
 nvai	𪸉
 nvaj	𣲣
@@ -79517,8 +78886,6 @@ nvwt	瀀
 nvwy	渭
 nvyt	厳
 nw	熊
-nw	熊猫
-nw	熊熊
 nwaa	𭲡
 nwab	𥀧
 nwac	浵
@@ -79700,8 +79067,6 @@ nwya	䏍
 nwys	㳉
 nwys	𣍤
 nx	学
-nx	学生
-nx	学习
 nxaa	滐
 nxaa	𣺉
 nxam	柒
@@ -79884,8 +79249,6 @@ nxxv	鲎
 nxxx	𣴙
 nxyi	𲨷
 ny	幻
-ny	幻想
-ny	幻觉
 nyai	𲜯
 nyaj	𣼼
 nyak	𫷖
@@ -79968,11 +79331,7 @@ nywy	𰛺
 nyxi	𮳈
 nyxr	𰝋
 o	大
-o	大家
-o	大概
 oa	奉
-oa	奉献
-oa	奉行
 oaai	𬗼
 oaaj	䌝
 oaam	綝
@@ -80098,8 +79457,6 @@ oawq	練
 oayf	𬪅
 oayi	𬬬
 ob	巴
-ob	巴西
-ob	巴黎
 oba	键
 obag	键
 obag	𦂩
@@ -80252,8 +79609,6 @@ obyd	𧥢
 obyl	锔
 obyl	𦀯
 oc	规
-oc	规模
-oc	规定
 ocaj	䌮
 ocam	椝
 ocba	𦂻
@@ -80527,8 +79882,6 @@ odyf	䦁
 odzj	铚
 odzs	絰
 oe	也
-oe	也许
-oe	也是
 oeam	䌖
 oeam	𡙸
 oeam	𦀉
@@ -80651,8 +80004,6 @@ oewy	铕
 oewy	絠
 oeyi	𫃝
 of	钱
-of	钱包
-of	钱财
 ofbj	릍
 ofbl	铻
 ofbl	𦀡
@@ -80893,8 +80244,6 @@ ofyi	륵
 ofyr	륷
 ofyy	륶
 og	铁
-og	铁路
-og	铁塔
 ogag	𧙐
 ogak	𦀅
 ogam	𥿰
@@ -81022,8 +80371,6 @@ ogyi	𱘭
 ogyp	𦀢
 ogyp	𫓷
 oh	奢
-oh	奢侈
-oh	奢望
 ohag	𡙤
 ohaj	䥺
 ohba	𦂘
@@ -81160,7 +80507,6 @@ ohyf	铘
 ohyk	䌧
 ohyk	𥾙
 oi	已
-oi	已经
 oiam	𰫧
 oib	铛
 oibb	綰
@@ -81815,8 +81161,6 @@ ojyy	롞
 ojyy	룪
 ojzs	𮈎
 ok	太
-ok	太阳
-ok	太原
 okab	𰃟
 okad	夰
 okad	𡗕
@@ -81995,8 +81339,6 @@ okzj	𫓦
 okzs	𥾌
 okzs	𰫙
 ol	钟
-ol	钟爱
-ol	钟表
 olab	𠀧
 olag	𳀲
 olaj	𘧈
@@ -82274,8 +81616,6 @@ omxj	𰾋
 omyj	𬬴
 omzs	絼
 on	泰
-on	泰国
-on	泰山
 onad	厺
 onad	𘭽
 onam	𭬏
@@ -82359,8 +81699,6 @@ onxa	𮈰
 onxl	𮉇
 onyc	铴
 oo	达
-oo	达到
-oo	达成
 ooaj	𪳭
 ooam	𭩿
 oobd	夿
@@ -82569,7 +81907,6 @@ opys	綇
 opzj	𰾃
 opzs	𫃥
 oq	夹
-oq	夹杂
 oqa	絆
 oqab	𡙈
 oqak	絆
@@ -82764,7 +82101,6 @@ oqyo	𦅬
 oqyr	𢡶
 oqys	絴
 or	忌
-or	忌讳
 orai	𪬧
 oraj	𬬰
 oraj	𱙀
@@ -82887,8 +82223,6 @@ orvs	𳇫
 orvv	𦅖
 oryf	𨛑
 os	错
-os	错误
-os	错过
 osaa	𡙻
 osae	𦃏
 osam	铩
@@ -83047,8 +82381,6 @@ osyi	𮷾
 osyj	𮸂
 osys	𮈉
 ot	改
-ot	改革
-ot	改变
 otak	絳
 otak	𦀮
 otaq	镧
@@ -83136,8 +82468,6 @@ otwn	縭
 otwr	𥿼
 otws	𰫘
 ou	套
-ou	套装
-ou	套路
 ouac	𬗹
 ouam	綵
 oub	铿
@@ -83462,8 +82792,6 @@ ouyy	랶
 ouyy	릮
 ouzj	𬬲
 ov	奋
-ov	奋斗
-ov	奋力
 ovag	𫄆
 ovaj	𰽞
 ovak	𬗽
@@ -83568,7 +82896,6 @@ ovwl	𬗟
 ovwt	纋
 ovwy	緭
 ow	钥
-ow	钥匙
 owa	綑
 owak	𰫴
 owam	綑
@@ -83668,8 +82995,6 @@ owwy	𬭖
 owyj	钥
 owys	𥾶
 ox	民
-ox	民族
-ox	民警
 oxaj	𥿎
 oxam	𥿴
 oxb	铮
@@ -83829,14 +83154,10 @@ oypw	縃
 oyqt	𦅭
 oyre	ㅩ
 oz	之
-oz	之后
-oz	之间
 ozz	之
 ozz	𛁄
 ozz	𛁅
 p	要
-p	要求
-p	要是
 pa	醉
 paaa	𨅾
 paaj	齽
@@ -84134,8 +83455,6 @@ pbyl	跼
 pbyx	𫌺
 pbyy	𨡄
 pc	制
-pc	制度
-pc	制定
 pcat	𨇂
 pcb	贾
 pcba	𳃘
@@ -84404,8 +83723,6 @@ pdxq	𮛧
 pdzc	𪗻
 pdzz	跮
 pe	恐
-pe	恐怕
-pe	恐怖
 pea	跺
 peaf	𪘠
 peam	跺
@@ -84565,7 +83882,6 @@ pewy	𣥯
 pewy	𪘃
 pexi	𲰰
 pf	践
-pf	践踏
 pfb	牾
 pfbg	𮗇
 pfbl	牾
@@ -84691,8 +84007,6 @@ pfxm	𨀺
 pfxm	𪗿
 pfye	𮠽
 pg	跟
-pg	跟踪
-pg	跟随
 pga	跥
 pgae	𨀫
 pgam	跥
@@ -84842,8 +84156,6 @@ pgyp	𨁁
 pgys	𭚕
 pgyx	廼
 ph	特
-ph	特别
-ph	特点
 phac	齖
 phag	𧚒
 phaz	𬦤
@@ -85014,8 +84326,6 @@ phyk	𧿓
 phzz	跿
 phzz	𧻻
 pi	步
-pi	步伐
-pi	步入
 piam	𨅨
 piam	𨠼
 pibb	䠉
@@ -85201,8 +84511,6 @@ pixq	𨀥
 pixu	𨣕
 piyf	𨛒
 pj	醒
-pj	醒来
-pj	醒目
 pja	踝
 pjam	踝
 pjam	𤚦
@@ -85636,8 +84944,6 @@ pkyi	𲏟
 pkyi	𳑫
 pkzx	𡥟
 pl	告
-pl	告诉
-pl	告知
 plag	𢀚
 plaj	𬦨
 plb	蹑
@@ -86110,8 +85416,6 @@ pnyf	𨚖
 pnyi	𲏞
 pnyw	𨢺
 po	配
-po	配置
-po	配套
 poaj	䙴
 poak	𨀗
 poak	𪽃
@@ -86219,8 +85523,6 @@ poxi	𰙣
 poxq	𲃶
 poxx	𮛰
 pp	酷
-pp	酷爱
-pp	酷热
 ppam	𨃙
 ppbj	𰐤
 ppcb	𳃓
@@ -86330,7 +85632,6 @@ ppzx	𬦭
 ppzz	踀
 ppzz	𳃔
 pq	蹲
-pq	蹲点
 pqak	跘
 pqam	𨃔
 pqbg	𨁃
@@ -86693,8 +85994,6 @@ prwy	𨠛
 prwz	𨀄
 pryw	𢟃
 ps	生
-ps	生产
-ps	生活
 psal	𨅼
 psam	蹀
 psam	𲃞
@@ -86887,8 +86186,6 @@ psyn	𱭫
 psyz	𤰉
 psyz	𨀍
 pt	路
-pt	路线
-pt	路上
 ptak	跭
 ptak	𭷟
 ptam	𬦹
@@ -87256,8 +86553,6 @@ pvwn	𨢄
 pvwt	𤛾
 pvwt	𨇄
 pw	先
-pw	先生
-pw	先后
 pwab	𧟱
 pwab	𧟵
 pwak	𧟮
@@ -87449,8 +86744,6 @@ pwys	𤯝
 pwyx	𧟩
 pwyz	跀
 px	西
-px	西安
-px	西方
 pxaa	𨃥
 pxaj	𮠣
 pxao	𳄭
@@ -87602,19 +86895,13 @@ pyxd	𨄽
 pyy	酉
 pyy	⾣
 pz	足
-pz	足球
-pz	足以
 pzz	足
 pzz	𧾷
 pzz	⻊
 pzz	⾜
 pzz	𲧱
 q	道
-q	道路
-q	道歉
 qa	半
-qa	半岛
-qa	半夜
 qaai	𰅼
 qaaj	𥽍
 qaaj	𭁙
@@ -87797,8 +87084,6 @@ qayi	𫃗
 qayi	𬙭
 qayi	𬼯
 qb	弟
-qb	弟弟
-qb	弟子
 qbag	䊕
 qbag	𲄨
 qbag	𲿃
@@ -88151,8 +87436,6 @@ qbyy	𧨁
 qbyy	𗐽
 qbyy	𗓄
 qc	数
-qc	数据
-qc	数量
 qcak	𲒁
 qcan	𘁯
 qcas	𘁢
@@ -88597,8 +87880,6 @@ qdxq	𨉻
 qdzc	蛭
 qdzs	𳃶
 qe	断
-qe	断裂
-qe	断言
 qea	躲
 qeal	𦎖
 qeam	躲
@@ -88814,8 +88095,6 @@ qeys	𗔰
 qeyu	𗮷
 qezk	𦍍
 qf	师
-qf	师傅
-qf	师生
 qfbf	𧑛
 qfbl	𧋋
 qfbp	蜨
@@ -89232,8 +88511,6 @@ qgyi	籺
 qgyi	𘱶
 qgyp	蜁
 qh	精
-qh	精神
-qh	精彩
 qha	装
 qhac	蚜
 qhag	装
@@ -89440,8 +88717,6 @@ qhyk	𦏟
 qhyk	𫋤
 qhzc	𧋨
 qi	自
-qi	自己
-qi	自然
 qiac	𬛮
 qiam	䊉
 qiam	𫋀
@@ -89701,8 +88976,6 @@ qiys	𘋕
 qiyu	𘋏
 qiyy	𘋒
 qj	着
-qj	着力
-qj	着手
 qja	粿
 qjai	𧑊
 qjai	𫃏
@@ -89897,8 +89170,6 @@ qjxt	𣀚
 qjyf	𧌴
 qjzm	𮇘
 qk	射
-qk	射门
-qk	射手
 qkac	𧈢
 qkaj	𥸾
 qkaj	𮜽
@@ -90140,8 +89411,6 @@ qkzc	虸
 qkzm	籽
 qkzq	𰠗
 ql	总
-ql	总额
-ql	总体
 qlac	𧈵
 qlaj	𮇍
 qlam	𮇅
@@ -90280,8 +89549,6 @@ qlyi	𰇈
 qlzc	𬟿
 qlzy	𫅏
 qm	米
-qm	米饭
-qm	米色
 qmac	䗫
 qmam	𫃎
 qmam	𫋇
@@ -90420,8 +89687,6 @@ qmyt	𥽝
 qmzc	𧋈
 qmzy	𦎋
 qn	北
-qn	北京
-qn	北部
 qnac	𧈥
 qnad	𥼔
 qnak	𠤖
@@ -90600,8 +89865,6 @@ qnxw	𠤥
 qnyf	邶
 qnyp	𥹼
 qo	美
-qo	美国
-qo	美丽
 qoa	卷
 qoaa	𢆤
 qoag	𧙯
@@ -90838,8 +90101,6 @@ qoxw	𬙴
 qoy	郑
 qoyf	郑
 qp	差
-qp	差距
-qp	差异
 qpag	𨢅
 qpbp	㿷
 qpby	𧪰
@@ -90968,8 +90229,6 @@ qpzc	𧋥
 qpzm	𮇟
 qpzs	𨉌
 qq	首
-qq	首次
-qq	首先
 qqae	𩠳
 qqak	䉽
 qqak	𧉻
@@ -91384,8 +90643,6 @@ qrwy	𦍭
 qrxq	𳀏
 qryf	鄎
 qs	身
-qs	身体
-qs	身边
 qsa	蝶
 qsae	䊛
 qsae	𧏫
@@ -91748,8 +91005,6 @@ qtwq	𭶿
 qtww	𮔮
 qtwy	𥺪
 qu	普
-qu	普遍
-qu	普通
 quac	𘋼
 quaf	𥻸
 quaf	𗭵
@@ -92429,8 +91684,6 @@ qvwt	𥽟
 qvwy	蝟
 qvyi	𮋒
 qw	前
-qw	前面
-qw	前期
 qwab	𲾴
 qwak	𧉳
 qwam	𧋕
@@ -92597,8 +91850,6 @@ qwyk	𘱧
 qwym	𱸶
 qwyy	𦍤
 qx	将
-qx	将军
-qx	将来
 qxa	粼
 qxaa	𧎩
 qxad	斴
@@ -92733,8 +91984,6 @@ qxxx	𥹠
 qxxx	𳃷
 qxyk	𬟾
 qy	羊
-qy	羊肉
-qy	羊毛
 qyaa	𗒐
 qyam	𲦟
 qyas	𗓆
@@ -93260,11 +92509,7 @@ qyy	
 qyy	
 qyyk	𘱣
 r	人
-r	人群
-r	人生
 ra	惊
-ra	惊喜
-ra	惊人
 raaj	㦗
 raam	惏
 raap	憷
@@ -93387,8 +92632,6 @@ rawq	𢛔
 raxg	𢡏
 rayi	𫹴
 rb	快
-rb	快乐
-rb	快速
 rbag	𫘳
 rbag	𱞻
 rbak	怿
@@ -93741,8 +92984,6 @@ rdxx	恦
 rdyf	𫺎
 rdzx	恎
 re	惯
-re	惯例
-re	惯性
 reag	𱞣
 ream	恘
 ream	𰒎
@@ -93867,8 +93108,6 @@ rewy	𭝣
 rexi	𲠄
 rexu	𫺟
 rf	命
-rf	命运
-rf	命令
 rfa	斜
 rfaa	厁
 rfaa	𠎳
@@ -94245,8 +93484,6 @@ rfyr	슧
 rfyu	𬐪
 rfyy	슦
 rg	必
-rg	必须
-rg	必要
 rgac	憡
 rgaj	𠨘
 rgak	𰑖
@@ -94404,8 +93641,6 @@ rgyf	邲
 rgyi	忔
 rgyi	𩨘
 rh	情
-rh	情况
-rh	情感
 rhag	𩨠
 rhai	𭞺
 rhax	㤉
@@ -94532,8 +93767,6 @@ rhxq	㦉
 rhyk	懤
 rhzx	𢜳
 ri	会
-ri	会议
-ri	会上
 riag	𢢒
 riaj	𢟞
 riam	𢚗
@@ -94741,8 +93974,6 @@ rixj	𢢾
 rixq	𢙊
 riyi	𠆭
 rj	全
-rj	全国
-rj	全球
 rja	憬
 rjaa	𣡰
 rjai	憬
@@ -95141,8 +94372,6 @@ rjyy	솎
 rjyy	숚
 rjzx	𭜬
 rk	今
-rk	今天
-rk	今年
 rka	介
 rkae	介
 rkae	𛀲
@@ -95430,8 +94659,6 @@ rkzh	𡥫
 rkzh	𪦻
 rkzx	𱞀
 rl	舍
-rl	舍弃
-rl	舍得
 rlam	𰑠
 rlb	慑
 rlbb	慑
@@ -95571,7 +94798,6 @@ rlyy	슊
 rlz	怔
 rlzx	怔
 rm	鸽
-rm	鸽子
 rmag	髍
 rmam	𢤭
 rmax	𢠩
@@ -95678,8 +94904,6 @@ rmyg	𳌙
 rmyx	㤇
 rmzx	𢚵
 rn	惨
-rn	惨败
-rn	惨案
 rnaj	厹
 rnaw	𬎤
 rnb	仑
@@ -95824,8 +95048,6 @@ rowk	𱞺
 roxi	怋
 roxj	惽
 rp	性
-rp	性能
-rp	性感
 rpa	慄
 rpam	慄
 rpam	慄
@@ -95897,7 +95119,6 @@ rpyx	𱞙
 rpze	𠈮
 rpzg	𩩔
 rq	悦
-rq	悦耳
 rqaf	𠊍
 rqak	怑
 rqak	𠵵
@@ -96001,8 +95222,6 @@ rqye	𦍐
 rqyi	𱻑
 rqyx	𰑘
 rr	从
-rr	从前
-rr	从来
 rra	怆
 rraj	怆
 rrbb	𰆿
@@ -96800,8 +96019,6 @@ rrxa	𣘑
 rrxd	𨍁
 rrxq	㰸
 rs	懂
-rs	懂得
-rs	懂事
 rsae	𢟌
 rsam	惵
 rsam	𢘹
@@ -96946,8 +96163,6 @@ rsxt	𤮠
 rsxt	懞
 rsyx	𢘭
 rt	忙
-rt	忙碌
-rt	忙于
 rtak	𢘸
 rtaq	𲠫
 rtcn	𢙗
@@ -97022,8 +96237,6 @@ rtwy	𰑥
 rtxj	𭟁
 rtxq	𰒏
 ru	个
-ru	个人
-ru	个别
 ruag	𢣆
 ruam	㥒
 ruam	𢡅
@@ -97370,8 +96583,6 @@ ruyy	샦
 ruyy	싞
 ruzg	𩨢
 rv	怀
-rv	怀疑
-rv	怀孕
 rvag	𢣃
 rvaj	𭜒
 rvdi	㥳
@@ -97455,8 +96666,6 @@ rvvy	𨝫
 rvwt	懮
 rvwy	㥜
 rw	瓦
-rw	瓦解
-rw	瓦砾
 rwam	悃
 rwat	𭜗
 rwbk	𲌍
@@ -97524,7 +96733,6 @@ rwwy	㥊
 rwyf	𨚐
 rwyh	𦚶
 rx	惭
-rx	惭愧
 rxaa	𢞼
 rxar	𭝭
 rxbi	𢢴
@@ -97613,11 +96821,7 @@ ryqt	𢢊
 rytp	㦕
 ryur	㦩
 s	而
-s	而且
-s	而是
 sa	杀
-sa	杀手
-sa	杀害
 saaa	𦼚
 saae	𰱓
 saaf	𰘞
@@ -98203,8 +97407,6 @@ sbyo	䓂
 sbyq	𫉴
 sbys	𗷀
 sc	英
-sc	英雄
-sc	英国
 scag	𦴣
 scai	𦸇
 scam	𦰕
@@ -98491,8 +97693,6 @@ scyo	鿒
 scys	𗞡
 scyy	𦶦
 sd	黄
-sd	黄色
-sd	黄河
 sda	蘭
 sdaj	𫈣
 sdam	䔵
@@ -98824,8 +98024,6 @@ sdyu	𲼝
 sdzg	𩊞
 sdzo	荎
 se	花
-se	花费
-se	花钱
 seag	𦲤
 seaj	𦬳
 seam	茠
@@ -99154,8 +98352,6 @@ seyw	𦯵
 seyy	𗚎
 seyy	𗚺
 sf	燕
-sf	燕窝
-sf	燕子
 sfaa	𣚨
 sfag	𦼸
 sfam	𣏼
@@ -99573,8 +98769,6 @@ sfys	𗛁
 sfys	𗛂
 sfys	𗞀
 sg	革
-sg	革命
-sg	革新
 sgaj	莭
 sgaj	莭
 sgak	𦮴
@@ -99771,8 +98965,6 @@ sgyo	𰱐
 sgyo	𱁷
 sgzo	𫇸
 sh	著
-sh	著名
-sh	著称
 sha	芽
 shag	蘾
 shaj	𰰰
@@ -100048,8 +99240,6 @@ shyf	䓉
 shyk	薵
 shyk	𦬤
 si	世
-si	世界
-si	世纪
 sia	某
 siaa	𦨂
 siad	𪃏
@@ -100408,8 +99598,6 @@ siyf	邯
 siyf	鄞
 siyk	𗜖
 sj	苦
-sj	苦苦
-sj	苦恼
 sjac	𭛙
 sjag	𱿉
 sjak	𣋄
@@ -100797,8 +99985,6 @@ sjyi	𲏰
 sjz	草
 sjzo	草
 sk	办
-sk	办法
-sk	办理
 ska	共
 skad	薪
 skaj	藽
@@ -101105,8 +100291,6 @@ skyn	𗛄
 skyu	𦼦
 skzo	芓
 sl	力
-sl	力度
-sl	力量
 sla	架
 slac	𬝸
 slag	袈
@@ -101416,8 +100600,6 @@ slyi	乫
 slyi	㔖
 slzo	𦭒
 sm	面
-sm	面子
-sm	面孔
 smae	𰱧
 smag	𧅼
 smaj	䕲
@@ -101709,8 +100891,6 @@ smyo	芺
 smyt	𧄆
 smyt	𲽥
 sn	落
-sn	落实
-sn	落后
 sna	范
 snaa	𦺁
 snag	薃
@@ -102079,8 +101259,6 @@ snyl	𦯗
 snyw	𦶷
 snyy	𗚈
 so	边
-so	边缘
-so	边境
 soak	菶
 soak	䩬
 soaw	𦼟
@@ -102637,8 +101815,6 @@ sqyy	𗞽
 sqyy	𗷆
 sqyy	𘚑
 sr	茶
-sr	茶叶
-sr	茶馆
 sra	苍
 srab	𦷨
 srad	𳏙
@@ -102854,8 +102030,6 @@ srwy	𩌒
 srxq	蘝
 sryi	𫇧
 ss	苏
-ss	苏州
-ss	苏联
 ssa	葉
 ssaa	𧄠
 ssab	𲲍
@@ -103128,7 +102302,6 @@ ssyo	苚
 ssyp	𤕟
 ssyy	𰢱
 st	芒
-st	芒果
 stak	𦮔
 stak	𦮧
 stam	𦰏
@@ -103253,8 +102426,6 @@ stxi	𦵖
 styk	𦮞
 styw	𧄙
 su	蓝
-su	蓝天
-su	蓝色
 sua	菜
 suaa	𱐶
 suab	𮓇
@@ -103584,8 +102755,6 @@ suyy	𗛇
 suyy	𗛧
 suzo	𦬔
 sv	苗
-sv	苗子
-sv	苗条
 svaa	𧅲
 svag	𬝻
 svag	𬞚
@@ -103741,8 +102910,6 @@ svyf	𨟂
 svyf	𮠆
 svyp	𦷃
 sw	散
-sw	散发
-sw	散步
 swaa	𧆘
 swab	菔
 swae	𩁩
@@ -104042,8 +103209,6 @@ swyg	䩗
 swyo	𮎟
 swyo	𘩅
 sx	带
-sx	带来
-sx	带动
 sxa	荣
 sxaa	𦵴
 sxaa	𰘓
@@ -104249,8 +103414,6 @@ sxxx	𩊥
 sxyf	茒
 sxyg	茕
 sy	用
-sy	用户
-sy	用于
 syaa	𗛒
 syaa	𗜈
 syad	𗝇
@@ -104414,11 +103577,7 @@ syxr	𦻕
 syy	用
 syy	⽤
 t	这
-t	这个
-t	这些
 ta	条
-ta	条件
-ta	条款
 taaa	𳆻
 taae	𰿽
 taaj	𨭺
@@ -104560,8 +103719,6 @@ tayf	𨛌
 tayi	闱
 tayi	𲏥
 tb	变
-tb	变化
-tb	变动
 tba	鍵
 tbag	鍵
 tbag	旔
@@ -104697,7 +103854,6 @@ tbyl	鋦
 tbym	訚
 tbyu	𮗺
 tc	赢
-tc	赢得
 tcak	𳇧
 tcbo	𧱊
 tcbw	赢
@@ -104937,8 +104093,6 @@ tdyl	𮢑
 tdzj	銍
 tdzm	𨸅
 te	文
-te	文章
-te	文字
 teai	𠅽
 teal	𮢇
 team	銝
@@ -105067,8 +104221,6 @@ texx	𫒬
 teyd	𨮕
 teyf	𨪐
 tf	方
-tf	方面
-tf	方式
 tfaj	𨪴
 tfbl	鋙
 tfbl	𬤿
@@ -105490,8 +104642,6 @@ tgyt	𪍧
 tgyu	𢄲
 tgzf	𭤨
 th	闺
-th	闺女
-th	闺房
 thae	𲭓
 thaj	釾
 tham	𰿩
@@ -105809,8 +104959,6 @@ tixr	𮢯
 tiyf	𨚟
 tiyi	㐑
 tj	间
-tj	间接
-tj	间隔
 tjag	𨰴
 tjai	鐛
 tjam	錁
@@ -105988,8 +105136,6 @@ tjxr	𨭂
 tjze	𣁌
 tjzj	𮡲
 tk	齐
-tk	齐全
-tk	齐声
 tkad	𨭩
 tkae	齐
 tkae	⻬
@@ -106181,8 +105327,6 @@ tkzm	𨸀
 tkzu	𡕕
 tkzu	𢻯
 tl	问
-tl	问题
-tl	问世
 tlag	𧜯
 tlaj	𮢄
 tlam	闫
@@ -106344,8 +105488,6 @@ tlze	𣁇
 tlze	𭤗
 tlzj	鉦
 tm	门
-tm	门槛
-tm	门口
 tmaj	𨬈
 tmam	𨧖
 tmbd	鏮
@@ -106471,7 +105613,6 @@ tmxx	𳆯
 tmyj	𨥜
 tmyt	𨯙
 tn	阔
-tn	阔别
 tnaf	𭤩
 tnbj	𨤽
 tnbo	𬫆
@@ -106563,7 +105704,6 @@ tnxa	𮢚
 tnxj	𨬥
 tnyp	𮡿
 to	迹
-to	迹象
 toak	𫒩
 toaw	𳇈
 tobg	銕
@@ -106835,8 +105975,6 @@ tqyj	𨦡
 tqyw	羸
 tqyw	𮊤
 tr	闪
-tr	闪电
-tr	闪耀
 traj	𠨛
 trc	鑰
 trce	鑰
@@ -106948,8 +106086,6 @@ trwj	𨥯
 trxq	𨰇
 trxx	𱞹
 ts	务
-ts	务必
-ts	务农
 tsae	鎩
 tsag	𲇥
 tsak	𨦾
@@ -107127,8 +106263,6 @@ tsyj	𬫉
 tsyn	𨯛
 tsyu	𤰅
 tt	放
-tt	放弃
-tt	放松
 tta	斓
 ttak	𨦟
 ttak	𫔳
@@ -107247,8 +106381,6 @@ ttwn	𨪡
 ttwn	𰽅
 ttwt	𮢥
 tu	处
-tu	处理
-tu	处于
 tuak	𨩞
 tuam	𨨫
 tubh	𮡸
@@ -107469,8 +106601,6 @@ tuyg	𨪬
 tuyp	𰣡
 tuzj	釽
 tv	备
-tv	备案
-tv	备查
 tvaj	鈪
 tvap	𮣙
 tvbg	𫸲
@@ -107568,7 +106698,6 @@ tvxe	𮣞
 tvxj	𮡦
 tvxm	𪯨
 tw	望
-tw	望见
 twam	阃
 twam	𰼮
 twat	𳅰
@@ -107701,7 +106830,6 @@ twym	𫔮
 twyu	𡕙
 twyw	肓
 tx	阎
-tx	阎王
 txab	𨧍
 txad	𨪿
 txaj	𮡯
@@ -107815,11 +106943,7 @@ tywu	𱲙
 tywu	𱲝
 tyyg	𮡪
 u	点
-u	点燃
-u	点名
 ua	彩
-ua	彩票
-ua	彩电
 uaaa	𡼨
 uaac	虨
 uaac	𧈇
@@ -108031,8 +107155,6 @@ uayi	帏
 uayi	𤔁
 uayi	𫵶
 ub	紧
-ub	紧张
-ub	紧急
 uba	肆
 ubac	𦩦
 ubag	𡺅
@@ -108356,7 +107478,6 @@ ubys	𗳀
 ubyu	𗳁
 ubyw	詈
 uc	舰
-uc	舰队
 ucab	𠭉
 ucat	𡽫
 ucb	贞
@@ -108569,7 +107690,6 @@ ucxs	𲁝
 ucyf	𨛖
 ucyq	𬱦
 ud	斯
-ud	斯文
 udag	㠢
 udam	𣑞
 udam	𣚄
@@ -109090,8 +108210,6 @@ ueyc	𗁐
 ueyn	𗁻
 ueys	𗂧
 uf	非
-uf	非常
-uf	非法
 ufaf	𭗦
 ufak	𘣱
 ufas	𗹜
@@ -109356,8 +108474,6 @@ ufyk	𗁩
 ufyn	𗁈
 ufyn	𗁓
 ug	置
-ug	置换
-ug	置身
 ugaj	𡸎
 ugam	䑮
 ugam	𡶲
@@ -109596,8 +108712,6 @@ ugyp	𦩂
 ugys	𢌚
 ugzs	𰀢
 uh	基
-uh	基本
-uh	基础
 uhae	𡷲
 uham	𣗆
 uhas	岈
@@ -109846,8 +108960,6 @@ uhyk	𩯦
 uhyk	𫇠
 uhyk	𭗇
 ui	崇
-ui	崇尚
-ui	崇拜
 uiam	𫶀
 uiam	𬴪
 uibb	𤌩
@@ -110101,8 +109213,6 @@ uixq	𱍞
 uixs	岤
 uiyi	𗂏
 uj	桌
-uj	桌子
-uj	桌面
 ujai	幜
 ujai	𡼩
 ujai	𡼮
@@ -110502,8 +109612,6 @@ ujyf	𨟜
 ujz	卓
 ujzb	卓
 uk	乳
-uk	乳房
-uk	乳头
 ukab	𩫵
 ukaj	岇
 ukaj	𡵙
@@ -110814,8 +109922,6 @@ ukzs	㞨
 ukzs	𡵇
 ukzz	孚
 ul	战
-ul	战争
-ul	战略
 ulaj	𢁚
 ulam	𡷵
 ulam	𨲃
@@ -111203,8 +110309,6 @@ umyc	镺
 umyj	𢁱
 umys	岆
 un	幽
-un	幽默
-un	幽灵
 unaa	𫶒
 unaj	𢆦
 unaj	𦨲
@@ -111405,8 +110509,6 @@ unws	㔥
 unxq	𣣴
 unyi	𡵿
 uo	爬
-uo	爬行
-uo	爬虫
 uoak	𪉪
 uoak	𳌣
 uobb	䯲
@@ -111702,8 +110804,6 @@ upyf	𦨰
 upys	𡷾
 upzs	𡷿
 uq	其
-uq	其中
-uq	其实
 uqak	𡶡
 uqam	嵲
 uqam	𡺼
@@ -112214,8 +111314,6 @@ urxq	𣣕
 uryf	𲋒
 uryi	𬲊
 us	山
-us	山东
-us	山西
 usae	𢄌
 usae	𩮫
 usag	𡽝
@@ -112582,8 +111680,6 @@ utxq	𡼲
 utyf	𨜻
 utyf	𨞙
 uu	虚
-uu	虚假
-uu	虚拟
 uuae	𧇠
 uuaf	𡽒
 uuam	䰂
@@ -113134,8 +112230,6 @@ uvye	𭂸
 uvyf	𬪣
 uvyt	𫶝
 uw	期
-uw	期待
-uw	期间
 uwab	𦋉
 uwal	𬋬
 uwam	𩭋
@@ -113389,8 +112483,6 @@ uwyw	𦊈
 uwyw	𦚋
 uwyz	𦙔
 ux	爱
-ux	爱情
-ux	爱心
 uxaa	嵥
 uxag	𣩻
 uxaj	𡶟
@@ -113849,7 +112941,6 @@ uyyu	𭾆
 uyyu	𭾋
 uyyu	𭾏
 uz	爪
-uz	爪牙
 uzz	爪
 uzz	爫
 uzz	𫜵
@@ -113860,11 +112951,7 @@ uzz	爫
 uzz	
 uzz	
 v	不
-v	不要
-v	不同
 va	顾
-va	顾客
-va	顾问
 vaa	礎
 vaaa	𡈹
 vaae	𫙤
@@ -114035,8 +113122,6 @@ vaxq	𠩱
 vayi	𠨼
 vayi	𮵊
 vb	破
-vb	破坏
-vb	破产
 vbag	鰎
 vbag	𮀴
 vbak	硉
@@ -114197,7 +113282,6 @@ vbyl	𩷐
 vbys	䂴
 vbyu	𰴪
 vc	厕
-vc	厕所
 vcaj	礵
 vcba	𠪍
 vcbg	𩻥
@@ -114296,8 +113380,6 @@ vcyi	𭻊
 vcys	硕
 vcyv	颙
 vd	原
-vd	原来
-vd	原谅
 vdak	𥑣
 vdam	𥔟
 vdam	𬵬
@@ -114650,8 +113732,6 @@ veww	𲔁
 vewy	鮪
 vewy	𥑿
 vf	厉
-vf	厉害
-vf	厉声
 vfae	𩷠
 vfal	𣓺
 vfbl	鯃
@@ -114972,8 +114052,6 @@ vgyi	𭆀
 vgyt	𪪮
 vgyt	𰢼
 vh	压
-vh	压力
-vh	压制
 vhah	厊
 vham	𰗜
 vhas	砑
@@ -115366,8 +114444,6 @@ vixs	𥑫
 vixv	𫙕
 viyi	𪿜
 vj	百
-vj	百姓
-vj	百货
 vjaa	𤾓
 vjag	𥘀
 vjai	𥖉
@@ -115648,8 +114724,6 @@ vjyi	𭆂
 vjyp	𰣠
 vjzs	𰦸
 vk	野
-vk	野心
-vk	野外
 vkad	𫚀
 vkaj	𥗒
 vkaj	𲳎
@@ -115832,8 +114906,6 @@ vkzs	矷
 vkzt	𡥔
 vkzv	䰵
 vl	里
-vl	里面
-vl	里边
 vlam	𮀛
 vlbb	𲳷
 vlbi	𩼦
@@ -115975,8 +115047,6 @@ vlz	歪
 vlzu	歪
 vlzv	𩶝
 vm	矿
-vm	矿山
-vm	矿石
 vmas	𪿳
 vmav	䲈
 vmbd	鱇
@@ -116284,8 +115354,6 @@ vnxq	𠩗
 vnxq	𣢭
 vnxq	𪴪
 vo	还
-vo	还是
-vo	还有
 voak	𩶮
 voak	𩸮
 voak	𪽙
@@ -116489,8 +115557,6 @@ vpzt	𤲊
 vpzu	𲃗
 vpzv	𬵔
 vq	碰
-vq	碰撞
-vq	碰到
 vqa	畔
 vqak	畔
 vqak	𥑍
@@ -116642,8 +115708,6 @@ vqys	𥒞
 vqys	𬒌
 vqyv	鮮
 vr	思
-vr	思考
-vr	思路
 vram	𱳼
 vrcp	畛
 vrcp	䂦
@@ -116782,8 +115846,6 @@ vrwv	𩶏
 vrxq	𠩦
 vryf	𨜐
 vs	男
-vs	男人
-vs	男子
 vsa	碟
 vsae	𩻈
 vsae	𰧖
@@ -117067,8 +116129,6 @@ vsys	砽
 vsyu	甭
 vsyy	𭻤
 vt	田
-vt	田野
-vt	田园
 vtak	䂫
 vtak	𩷄
 vtam	𥓃
@@ -117160,7 +116220,6 @@ vtwv	䰶
 vtxq	䃢
 vtxq	𠪢
 vu	厮
-vu	厮杀
 vubc	𰧇
 vubh	𬒎
 vubo	𮫱
@@ -117169,6 +116228,7 @@ vubs	𫙔
 vubt	𤰘
 vubu	𳍣
 vubv	𬵂
+vubv	𳍘
 vuch	𪠍
 vucl	𮡙
 vucn	鮾
@@ -117368,8 +116428,6 @@ vuxx	𬒓
 vuyl	𬐩
 vuzv	𤔝
 vv	羽
-vv	羽毛
-vv	羽绒
 vva	翠
 vvaa	𤳥
 vvad	𮭚
@@ -117705,7 +116763,6 @@ vvuv	𩵣
 vvv	魚
 vvv	禺
 vvv	⿂
-vvv	𳍘
 vvva	櫐
 vvva	𰘾
 vvvb	𣀜
@@ -117975,8 +117032,6 @@ vwyt	胃
 vwyt	𤰾
 vwyv	𩵺
 vx	确
-vx	确认
-vx	确定
 vxaa	磔
 vxaa	𫙮
 vxaq	𩻫
@@ -118124,11 +117179,7 @@ vysl	𳍊
 vytp	𱴶
 vyxr	𮁉
 w	出
-w	出现
-w	出口
 wa	服
-wa	服务
-wa	服装
 waac	𲺭
 waaj	𦡞
 waam	𦝃
@@ -118288,8 +117339,6 @@ wayf	𨚦
 wayi	围
 wayi	𮶔
 wb	发
-wb	发展
-wb	发现
 wba	腱
 wbag	腱
 wbag	騝
@@ -118470,8 +117519,6 @@ wbyy	䚻
 wbyy	𧦇
 wbyy	𧦗
 wc	忽
-wc	忽然
-wc	忽视
 wcaj	驦
 wcaj	𩓬
 wcat	𠤇
@@ -118614,7 +117661,6 @@ wcxq	𣢊
 wcxr	𢛦
 wcyi	𲏐
 wd	脾
-wd	脾气
 wdag	𩦫
 wdam	𦝆
 wdam	𦠯
@@ -118772,8 +117818,6 @@ wdzm	駤
 wdzw	𡇓
 wdzy	胵
 we	股
-we	股东
-we	股份
 weam	䏫
 weam	䮌
 weam	䮶
@@ -118870,7 +117914,6 @@ wewy	𦜴
 wewy	𩣋
 wezb	𠣌
 wf	园
-wf	园林
 wfbc	𣍲
 wfbl	圄
 wfbl	䏸
@@ -119154,8 +118197,6 @@ wgyo	𦛰
 wgyp	𦛔
 wgyy	𲟓
 wh	然
-wh	然而
-wh	然后
 whag	𡈂
 whbh	𡈭
 whbh	𮌲
@@ -119334,8 +118375,6 @@ whyk	𦡴
 whzy	䐍
 whzy	𦛣
 wi	逃
-wi	逃跑
-wi	逃避
 wiac	𤒗
 wiaj	𭾽
 wial	𤐬
@@ -119519,8 +118558,6 @@ wixr	𩥝
 wixu	𬳰
 wixy	𦙮
 wj	国
-wj	国家
-wj	国际
 wjag	𦣙
 wjai	𲺵
 wjaj	𦛪
@@ -119576,6 +118613,7 @@ wjj	ㄐ
 wjj	丩
 wjj	𠂈
 wjj	ㆢ
+wjj	
 wjj	
 wjj	
 wjjb	𦣒
@@ -119683,8 +118721,6 @@ wjyf	𣍭
 wjyf	𨝋
 wjzc	𡴐
 wk	团
-wk	团队
-wk	团体
 wkab	𰅛
 wkac	𣎵
 wkaj	䭹
@@ -119917,8 +118953,6 @@ wkyu	𩦝
 wkz	囝
 wkzw	囝
 wl	回
-wl	回答
-wl	回家
 wlab	𘮻
 wlag	𡈃
 wlb	驟
@@ -120106,7 +119140,6 @@ wlyi	𲏙
 wlzw	囸
 wlzy	𦙫
 wm	脏
-wm	脏话
 wmam	𦢵
 wmay	𦟟
 wmbd	𰯑
@@ -120222,8 +119255,6 @@ wmym	𩡻
 wmyt	𲺽
 wmyy	𬁷
 wn	勾
-wn	勾结
-wn	勾引
 wnab	勾
 wnab	𠣎
 wnac	𡴁
@@ -120343,8 +119374,6 @@ wnwy	胤
 wnwy	𩢺
 wnxe	𱼌
 wo	因
-wo	因为
-wo	因此
 woag	𧙘
 woak	䏾
 woak	𰮟
@@ -120476,8 +119505,6 @@ woxq	欭
 woxx	䐒
 woyf	𨚔
 wp	胜
-wp	胜利
-wp	胜负
 wpaj	𩢞
 wpam	𦞰
 wpam	𩤋
@@ -120544,8 +119571,6 @@ wpxm	𫘊
 wpxy	𦚵
 wpzy	𮌘
 wq	脱
-wq	脱离
-wq	脱落
 wqa	胖
 wqak	胖
 wqak	𩢔
@@ -120708,8 +119733,6 @@ wqym	𩣆
 wqyw	𪢪
 wqyy	羘
 wr	儿
-wr	儿子
-wr	儿女
 wraj	𬁸
 wraj	𭍜
 wram	𣐮
@@ -120844,7 +119867,6 @@ wrus	𭨦
 wrvh	𡒀
 wrwr	𡈶
 ws	胁
-ws	胁迫
 wsag	膵
 wsag	𩦗
 wsal	𫘗
@@ -121047,8 +120069,6 @@ wsxt	𩦺
 wsyi	𱄓
 wsyy	𦙸
 wt	收
-wt	收入
-wt	收购
 wtak	胮
 wtam	𪢮
 wtao	𮌨
@@ -121399,8 +120419,6 @@ wvwy	𦝩
 wvwy	𩤸
 wvyf	𰻫
 ww	四
-ww	四川
-ww	四周
 wwaa	𣞆
 wwaa	𦲬
 wwai	𪗊
@@ -121742,7 +120760,6 @@ wwym	𩢋
 wwyp	㽰
 wwyy	朋
 wx	脆
-wx	脆弱
 wxaa	䮪
 wxaa	𮌪
 wxaj	𱄖
@@ -121826,8 +120843,6 @@ wxxx	䮈
 wxxx	𡇘
 wxyi	𡴄
 wy	月
-wy	月光
-wy	月份
 wyay	𬛁
 wyc	肠
 wycp	肠
@@ -121874,11 +120889,7 @@ wyy	
 wyy	
 wyyk	𱕸
 x	多
-x	多少
-x	多么
 xa	较
-xa	较为
-xa	较量
 xaa	襟
 xaag	𪒍
 xaai	𤏷
@@ -122026,8 +121037,6 @@ xayi	袆
 xayi	𲅀
 xayi	𲏠
 xb	被
-xb	被迫
-xb	被告
 xbaf	𬡩
 xbag	𱄃
 xbak	𧙻
@@ -122187,8 +121196,6 @@ xbyw	𲊖
 xbyx	𧥧
 xbyy	𨛰
 xc	负
-xc	负担
-xc	负责
 xcaj	𳎥
 xcat	𠖢
 xcba	𳀿
@@ -122247,8 +121254,6 @@ xcsw	𬶻
 xcvx	𩁼
 xcxc	𠜌
 xd	饭
-xd	饭店
-xd	饭后
 xdam	椠
 xdaq	襴
 xdbo	饭
@@ -122587,8 +121592,6 @@ xfxt	𣀿
 xfyi	㌙
 xfyn	㌘
 xg	农
-xg	农民
-xg	农村
 xgaf	𳎣
 xgaj	鲫
 xgaj	𡖖
@@ -122719,8 +121722,6 @@ xgym	农
 xgyo	𰺌
 xgyp	𲀳
 xh	写
-xh	写真
-xh	写作
 xhav	𬶅
 xhay	𧘪
 xhbh	𧜶
@@ -122808,8 +121809,6 @@ xhwy	𰺉
 xhxq	𮩞
 xhyk	𮖻
 xi	东
-xi	东西
-xi	东部
 xial	𭵫
 xiam	𳋬
 xib	馆
@@ -122935,8 +121934,6 @@ xiyf	𰻨
 xiyu	𱲕
 xiyu	𱲖
 xj	车
-xj	车辆
-xj	车身
 xja	裸
 xjab	鼆
 xjac	𬢒
@@ -123081,8 +122078,6 @@ xjwy	𬶞
 xjxe	𩘠
 xjxy	𧘔
 xk	久
-xk	久久
-xk	久违
 xka	襯
 xkaa	𮰅
 xkab	𢽫
@@ -123257,8 +122252,6 @@ xkxx	𭐴
 xkyi	𲍒
 xkyk	𠖁
 xl	名
-xl	名字
-xl	名称
 xlag	𧝯
 xlak	𡖺
 xlbb	𫌇
@@ -123454,8 +122447,6 @@ xlyf	𨚷
 xlyf	𳎝
 xlzy	𧘿
 xm	切
-xm	切实
-xm	切断
 xmag	袃
 xmay	𳁉
 xmbd	𩾌
@@ -123554,7 +122545,6 @@ xmyf	𮠌
 xmys	饫
 xmyy	袄
 xn	轩
-xn	轩辕
 xnaa	𰃲
 xnbn	𩾆
 xnbp	𲲎
@@ -123619,8 +122609,6 @@ xnwn	褦
 xnwr	𮕯
 xnyq	𱸿
 xo	色
-xo	色彩
-xo	色情
 xoae	𮎝
 xoaw	𫌒
 xobg	𧙣
@@ -123750,8 +122738,6 @@ xpwr	𲍏
 xpwy	褃
 xpzy	𧚖
 xq	鲜
-xq	鲜花
-xq	鲜明
 xqak	袢
 xqak	𱃷
 xqbc	馐
@@ -123836,8 +122822,6 @@ xqxk	鳉
 xqyv	鲜
 xqyy	𬡘
 xr	轮
-xr	轮胎
-xr	轮换
 xrag	𧛄
 xraj	䲝
 xrbd	𩸺
@@ -123915,8 +122899,6 @@ xrwy	𮕰
 xrxi	𫙭
 xrxq	𲁈
 xs	解
-xs	解决
-xs	解放
 xsae	𧜁
 xsag	䚝
 xsag	𮗨
@@ -124338,8 +123320,6 @@ xtwe	䙰
 xtwn	褵
 xtwv	𲍈
 xu	外
-xu	外面
-xu	外援
 xub	鲈
 xubh	鲣
 xubh	𮖃
@@ -124483,8 +123463,6 @@ xuxx	𬡠
 xuxx	𮬝
 xuyi	𡖄
 xv	鱼
-xv	鱼类
-xv	鱼塘
 xva	危
 xvaa	𦤞
 xvaa	𭅻
@@ -124746,8 +123724,6 @@ xwym	肎
 xwyv	𬶈
 xwyy	𳀯
 xx	军
-xx	军事
-xx	军队
 xxae	𡗌
 xxaf	𫯐
 xxaj	卶
@@ -124970,11 +123946,7 @@ xyy	衤
 xyy	⻂
 xyyg	𭿶
 y	那
-y	那么
-y	那些
 ya	陆
-ya	陆续
-ya	陆军
 yaae	𗱂
 yaap	𨼪
 yaas	𗰺
@@ -125206,8 +124178,6 @@ ydwr	𨺙
 ydxr	𬯗
 ydyy	𘅿
 ye	随
-ye	随着
-ye	随便
 yeam	𨹄
 yeam	𮥢
 yeas	𗈾
@@ -125301,8 +124271,6 @@ yeyf	𨻉
 yeyy	𗈽
 yezi	𘲢
 yf	司
-yf	司机
-yf	司法
 yfbj	긑
 yfbl	𫕁
 yfbo	긎
@@ -126088,8 +125056,6 @@ yfyi	극
 yfyr	귻
 yfyy	귺
 yg	迅
-yg	迅速
-yg	迅猛
 ygac	𗉎
 ygac	𗉶
 ygag	𗉫
@@ -126279,7 +125245,6 @@ ygyk	𘲏
 ygyu	𗉚
 ygyu	𗉤
 yh	陵
-yh	陵墓
 yhew	𨼢
 yhfb	戼
 yhfj	𧶻
@@ -126346,8 +125311,6 @@ yhyk	隯
 yhz	陡
 yhzf	陡
 yi	飞
-yi	飞机
-yi	飞行
 yibi	𬯍
 yibj	𱎄
 yidb	𬲉
@@ -126545,8 +125508,6 @@ yixa	𨺋
 yiyi	𠃧
 yiyi	𮸽
 yj	阿
-yj	阿姨
-yj	阿婆
 yjam	𨺁
 yjbj	곹
 yjbj	궅
@@ -126865,8 +125826,6 @@ yjyr	굯
 yjyy	곢
 yjyy	굮
 yk	陪
-yk	陪伴
-yk	陪同
 ykac	𘇩
 ykaf	𗗚
 ykai	𘡔
@@ -127055,7 +126014,6 @@ ykyk	𬽡
 ykyu	𗗙
 ykzf	䦻
 yl	敢
-yl	敢于
 ylam	𨹦
 ylbb	𱁁
 ylbc	𗴁
@@ -127185,8 +126143,6 @@ ymsw	𨺪
 ymvl	隀
 ymwf	𬮻
 yn	承
-yn	承担
-yn	承认
 ynai	𠫕
 ynai	𢆱
 ynai	𭙉
@@ -127303,8 +126259,6 @@ youc	𳈩
 yoxi	𬼢
 yoxo	𨼎
 yp	蛋
-yp	蛋糕
-yp	蛋白
 ypa	疏
 ypal	疎
 ypaw	疏
@@ -127352,7 +126306,6 @@ ypwy	胥
 ypxf	䧈
 ypxi	𧟢
 yq	隧
-yq	隧道
 yqam	𨻄
 yqbg	𨹥
 yqbi	𱀶
@@ -127414,8 +126367,6 @@ yqxo	𮟠
 yqyf	𗃓
 yqys	𗃑
 yr	队
-yr	队员
-yr	队友
 yref	队
 yrei	ᆪ
 yrei	ㄳ
@@ -127859,8 +126810,6 @@ ysys	𘧐
 ysys	𘪿
 ysyw	𗱣
 yt	防
-yt	防守
-yt	防止
 yta	降
 ytah	𱗘
 ytak	降
@@ -128326,7 +127275,6 @@ yuyy	갂
 yuyy	갺
 yuyy	긲
 yv	陌
-yv	陌生
 yvaj	阨
 yvdi	𨻣
 yvfi	𨸹
@@ -128354,8 +127302,6 @@ yvvf	隅
 yvvy	𨼉
 yvwe	𨼘
 yw	阴
-yw	阴影
-yw	阴谋
 ywek	𬮽
 ywfi	𲏊
 ywfj	𨹐
@@ -128387,8 +127333,6 @@ ywyf	阴
 ywyi	𘥌
 ywyy	㌁
 yx	阵
-yx	阵容
-yx	阵营
 yxah	𱀧
 yxb	隐
 yxba	𬄩
@@ -128418,8 +127362,6 @@ yxvb	𨼮
 yxvl	𨼧
 yxxx	陊
 yy	书
-yy	书面
-yy	书记
 yyfb	껉
 yyfb	껒
 yyfb	껓
