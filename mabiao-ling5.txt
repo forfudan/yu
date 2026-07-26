@@ -893,7 +893,7 @@ dke	農
 dle	味
 dme	眼
 dne	唄
-dno	啥
+dno	吃饭
 dta	吹
 dve	而且
 dye	需
@@ -984,6 +984,7 @@ mji	爲什麽
 mli	怀疑
 mna	东
 mqu	懂得
+msa	劈
 mse	情
 mso	展
 mve	有没有
@@ -1052,6 +1053,7 @@ smi	城市
 sva	喜歡
 sye	龙
 tbu	接
+tci	拼
 tdu	拆
 tgi	良好
 tja	為什麼

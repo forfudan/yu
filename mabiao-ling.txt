@@ -562,7 +562,6 @@ dke	農
 dle	味
 dme	眼
 dne	唄
-dno	啥
 dta	吹
 dye	需
 fde	頭
@@ -629,6 +628,7 @@ mgi	或
 mgu	發
 mho	慢
 mna	东
+msa	劈
 mse	情
 mso	展
 mvu	在
@@ -666,6 +666,7 @@ sli	老
 slu	都
 sye	龙
 tbu	接
+tci	拼
 tdu	拆
 tri	摆
 vje	濟
