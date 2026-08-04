@@ -36214,7 +36214,6 @@ dkjkb	𧪖
 dkjkb	𭈋
 dkjkc	𡂏
 dkjkd	𪡛
-dkjke	𠀐
 dkjke	𠮵
 dkjke	𭆽
 dkjkf	𱔇
@@ -36534,6 +36533,7 @@ dklfe	㕫
 dklff	𠱂
 dklff	𭊿
 dklfg	㗂
+dklfi	𠀐
 dklfj	𡅩
 dklfk	𠷖
 dklfl	𠹀
@@ -43689,8 +43689,8 @@ ggmjp	𩌧
 ggmjs	𩊋
 ggmjx	𱁾
 ggmkb	𢈎
-ggmkc	𲟉
 ggmkf	𱁻
+ggmkf	𲟉
 ggmkg	𢋍
 ggmkj	䪇
 ggmkl	𢈘
@@ -50747,7 +50747,6 @@ hrqsm	𪘉
 hrqvd	𨑉
 hrqvm	𮈀
 hrrdc	𱌡
-hrrdj	𨪖
 hrre	𠣞
 hrrfc	𪙞
 hrrji	𪙨
@@ -83125,6 +83124,7 @@ rrhbh	𨐄
 rrhbh	𫐃
 rrhci	𨍜
 rrhdd	𬧺
+rrhdj	𨪖
 rrhdk	𨎂
 rrhfj	𲄸
 rrhfl	𰹙
@@ -109719,6 +109719,7 @@ dkjhc	喝
 dkjhc	喝
 dkjke	모
 dkjke	𘯊
+dkjke	
 dkjlc	뫽
 dkjlc	뫾
 dkjlc	묀
@@ -117212,6 +117213,7 @@ li	ㄠ
 li	ㆯ
 li	𘳍
 lka	⻠
+lkba	
 lkdi	𛁮
 lle	了
 lle	𘲬
@@ -117616,6 +117618,7 @@ lxci	𖿡
 lxci	𘢧
 lxci	𘢨
 lxci	𘮨
+lxci	
 lxcmc	𗯒
 lxcso	𘦤
 lxdo	𘮪
@@ -118051,7 +118054,6 @@ mdglr	逸
 mdgo	𛃔
 mdgwl	勉
 mdgwl	勉
-mdo	㠯
 mdo	
 mdtjo	🩠
 mdtjx	聰
@@ -119909,6 +119911,7 @@ rjo	⻬
 rjslg	ㆊ
 rjslo	ㆋ
 rjso	⻫
+rjxci	
 rka	⽯
 rkba	𘬌
 rkdpi	𛂤
@@ -120824,6 +120827,8 @@ sjbwo	탓
 sjbwo	턋
 sjbww	탔
 sjbww	턌
+sjci	
+sjci	
 sjdbb	凞
 sjfcc	튺
 sjfcd	튾
@@ -121232,6 +121237,7 @@ sjlfw	툣
 sjlfw	툤
 sjlfw	팂
 sjlgi	티
+sjlgi	
 sjlrf	팊
 sjlsd	팋
 sjlsj	팉
@@ -121341,6 +121347,7 @@ skkgu	𛄏
 skkxo	辞
 skkyt	履
 sklqq	𣪍
+skmo	㠯
 skrmi	𛄘
 skso	
 skssi	𛃟
@@ -123679,9 +123686,9 @@ wmjgi	𛀽
 wmjgi	𛀾
 wmkba	𛀮
 wmlgi	𘰙
-wncdk	㋿
 wncjx	念
 wnru	𘰓
+wnvdk	㋿
 wnvge	領
 wnvo	令
 wo	⼈

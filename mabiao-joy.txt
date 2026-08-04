@@ -54620,6 +54620,7 @@ klff	묲
 klff	욢
 klff	욬
 klff	욮
+klfi	𠀐
 klfi	𠰋
 klfi	묘
 klfi	요
@@ -55580,13 +55581,13 @@ korn	𭉨
 kors	𮖄
 kors	𰈙
 kos	哝
-kos	𠀐
 kos	𠮵
 kos	𭆽
 kos	𱒄
 kos	모
 kos	오
 kos	𘯊
+kos	
 kosi	哝
 kosj	㕴
 kosj	𩈌
@@ -60016,6 +60017,7 @@ llb	孭
 llb	賏
 llb	𫎎
 llb	賈
+llb	
 llbb	𬥔
 llbn	𧸵
 llc	賑
@@ -60579,6 +60581,7 @@ lmb	𧴩
 lmb	𬼹
 lmb	ふ
 lmb	𘱥
+lmb	
 lmbb	𭅑
 lmbm	𱅑
 lmc	賬
@@ -77931,6 +77934,7 @@ olay	𘆰
 olay	𘇉
 olb	負
 olb	𧵎
+olb	
 olc	缥
 olc	𩷩
 olc	𫤹
@@ -87609,7 +87613,6 @@ qyyc	𠕲
 qyyc	𱍢
 qyyo	𬒠
 qyyp	𨜽
-qyyt	𨪖
 qyyu	𨖢
 qyyv	硼
 qyyv	𪂙
@@ -97295,6 +97298,7 @@ tejv	𰍷
 tejw	𨫖
 tek	巨
 tek	㠯
+tek	㠯
 teka	𨩚
 tekg	䤦
 tekg	𲔬
@@ -104420,6 +104424,7 @@ udmb	𨉍
 udmb	𮜲
 udmg	𫇑
 udmg	𫸄
+udmh	𲟉
 udmi	䌴
 udmi	䌴
 udml	𢊹
@@ -104430,7 +104435,6 @@ udmt	馂
 udmt	𢈡
 udmt	𢊋
 udmt	𦀷
-udmt	𲟉
 udmy	𫃰
 udn	𢌯
 udn	𢍁
@@ -105438,6 +105442,7 @@ uidi	𦆼
 uidi	令
 uidk	翎
 uidk	𫅜
+uidk	㋿
 uidm	领
 uidm	𰫛
 uidm	𳃴
@@ -105489,7 +105494,6 @@ uig	𬲷
 uig	𰫤
 uig	𲓬
 uige	𦂛
-uigk	㋿
 uign	縼
 uign	𩠍
 uihc	𥿾
@@ -111292,6 +111296,7 @@ vlrt	𣀅
 vlrt	𥽿
 vlrt	𪓋
 vls	티
+vls	
 vlsl	㔜
 vlsw	𗄝
 vlt	乳
@@ -111710,6 +111715,8 @@ voi	钇
 voi	㐍
 voi	𤓱
 voi	𬼳
+voi	
+voi	
 void	𩜂
 void	𭐕
 void	𰆜
@@ -114475,7 +114482,6 @@ wcyy	𘚼
 wcz	𡜍
 wd	么
 wd	𠂤
-wd	㠯
 wd	
 wda	媒
 wdaa	媒
@@ -125895,6 +125901,7 @@ yyqh	𡖝
 yyqn	鵬
 yyqn	𪀩
 yyqs	𲳛
+yyqt	𨪖
 yyrc	𲚺
 yyrd	㩼
 yyre	𡖻

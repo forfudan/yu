@@ -6169,6 +6169,7 @@ bbos	㠯
 bbos	㞋
 bbos	𠬩
 bbos	𠬮
+bbos	㠯
 bbou	𱻚
 bbpg	弪
 bbpg	㢰
@@ -11142,6 +11143,7 @@ busg	𢎟
 busg	𢎠
 busj	㞪
 busj	티
+busj	
 buso	지
 buso	𘲐
 buso	𘲔
@@ -11723,6 +11725,8 @@ bygs	𗰳
 bygu	𗰵
 bygy	𗰯
 byih	𰍳
+byij	
+byij	
 byio	𘡑
 byio	𘡒
 byir	𮹂
@@ -13692,7 +13696,6 @@ cjjr	娼
 cjjr	䞎
 cjjr	𢔒
 cjjr	𣊛
-cjjt	𨪖
 cjjv	䨘
 cjjv	𰴒
 cjjx	𭒖
@@ -17486,7 +17489,6 @@ ddcm	閳
 ddcn	㜞
 ddd	电
 ddd	𠂤
-ddd	㠯
 ddd	
 ddd	
 ddd	
@@ -54143,6 +54145,7 @@ jjcn	𰥤
 jjcn	𲛣
 jjcr	𦢆
 jjcr	𭺩
+jjct	𨪖
 jjcw	𦦿
 jjcx	𣤵
 jjcy	𨟙
@@ -65817,13 +65820,13 @@ ljuy	윍
 ljva	
 ljvl	오
 ljvu	𲔻
-ljvv	𠀐
 ljvv	𠮵
 ljvv	𠹥
 ljvv	𦧭
 ljvv	𭆽
 ljvv	모
 ljvv	𘯊
+ljvv	
 ljw	呈
 ljwb	𡅜
 ljwc	舓
@@ -67265,6 +67268,7 @@ lqjk	𱔩
 lqjw	𠹡
 lqka	㍉
 lqkd	𠯁
+lqkj	
 lqku	嗌
 lqku	𫆌
 lqkw	㍊
@@ -68008,6 +68012,7 @@ lufg	噮
 lufh	囐
 lufh	묟
 lufh	욛
+lufi	𠀐
 lufi	묘
 lufi	요
 lufk	嚱
@@ -72945,7 +72950,7 @@ mska	𭼊
 mska	𰣧
 mskc	𩃽
 mskc	𱱘
-mske	𲟉
+mskd	𲟉
 mskh	𣰾
 mskj	𢋍
 mskt	𢊋
@@ -94401,6 +94406,7 @@ rkbl	倉
 rkbl	𠏓
 rkbl	𠑐
 rkbl	𫅜
+rkbl	㋿
 rkbm	創
 rkbm	鸰
 rkbm	刢
@@ -94525,7 +94531,6 @@ rklx	𢘮
 rkmd	瓰
 rkmd	㤋
 rkmj	𢠈
-rkml	㋿
 rkmn	𮭡
 rkmr	𭝗
 rkmu	𢞂
@@ -109619,6 +109624,7 @@ ukaj	𘯎
 ukaj	𲻚
 ukas	𠔂
 ukas	𘮡
+ukas	
 ukas	𲝃
 ukaw	𦉵
 ukcj	𢁜
@@ -110905,6 +110911,7 @@ uqkm	𪩋
 uqko	𨗩
 uqko	𨘗
 uqkr	懟
+uqks	
 uqkt	𨮝
 uqku	艗
 uqku	𡺬

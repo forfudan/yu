@@ -355,7 +355,7 @@ ssl	峪
 ssm	嵋
 ssn	崙
 ssq	㠓
-ssr	崍
+ssr	巘
 sss	櫫
 ssw	嵊
 syc	魢
@@ -363,7 +363,7 @@ syg	鮐
 syh	堾
 syk	鰤
 sym	䲁
-syn	鱠
+syn	鰮
 syp	鮈
 syr	鮜
 sys	鱚
@@ -29886,7 +29886,6 @@ djyt	𮶑
 djyv	𦘂
 djyw	𫆄
 djyy	䏈
-dka	𠀐
 dka	𠮵
 dka	𭆽
 dkba	㕷
@@ -29938,6 +29937,7 @@ dkfg	𠾙
 dkfg	𩤰
 dkfg	𪡣
 dkfh	𩁑
+dkfi	𠀐
 dkfj	𠱶
 dkfj	𫾺
 dkfk	𠙫
@@ -43769,6 +43769,7 @@ hgqf	𫛻
 hgqf	𲟁
 hgqg	𢉱
 hgqg	𢋭
+hgqg	𲟉
 hgqh	𢌎
 hgqj	𢊋
 hgqj	𢊰
@@ -43816,7 +43817,6 @@ hgqw	𨖓
 hgqw	𫸐
 hgqw	𭙿
 hgqw	𰐄
-hgqw	𲟉
 hgqy	㢍
 hgqy	𢊗
 hgra	㢇
@@ -57964,7 +57964,6 @@ ljyb	𪓛
 ljyb	𪚻
 ljyb	𫊭
 ljyb	𮮤
-ljyc	𨪖
 ljyd	㿮
 ljyd	𦟑
 ljyd	𫩣
@@ -102640,6 +102639,7 @@ yyhw	𪯥
 yyjr	𫃪
 yykg	𭹸
 yykt	𤪵
+yylc	𨪖
 yyll	䋾
 yylm	𤦖
 yymm	𭌐
@@ -103054,6 +103054,7 @@ bkfx	툗
 bki	𖿰
 bki	티
 bki	
+bki	
 bkji	冗
 bkkb	툁
 bkkb	툍
@@ -103420,6 +103421,8 @@ btu	𘱍
 btvs	🈖
 bvji	𘦸
 bwfi	𘲊
+bwi	
+bwi	
 bxcn	閷
 bxi	⾟
 bxks	𪄅
@@ -103455,6 +103458,7 @@ cbro	𗏏
 cbti	𗯞
 cbvw	𘁽
 cbwb	𗏠
+cca	
 ccbb	𗔃
 cccb	𗅢
 cccb	𗔜
@@ -106769,6 +106773,7 @@ dju	叫
 dka	모
 dka	오
 dka	𘯊
+dka	
 dkbo	뫁
 dkbo	밑
 dkbo	옽
@@ -111972,6 +111977,7 @@ kbxf	𦞵
 kbyx	翺
 kca	⻓
 kca	𘬷
+kca	
 kcbb	𗂂
 kcbi	𗀳
 kcbi	
@@ -112076,7 +112082,6 @@ kcww	𗂳
 kcww	𗂴
 kddo	ㆃ
 kddo	𘯐
-kdi	㠯
 kdi	
 kdli	⾩
 kdne	ㆂ
@@ -112419,6 +112424,7 @@ kkws	𗢏
 kkws	𗢒
 kkwt	𗢜
 kkwt	𗢠
+kla	
 klcb	𗁦
 klcb	𘉨
 klcr	𘉧
@@ -113255,6 +113261,7 @@ msrj	
 mssh	屠
 mssu	𘲩
 msvi	尿
+msvo	㠯
 msvs	犀
 msvw	遲
 msvw	𛁨
@@ -114636,9 +114643,9 @@ nssa	𘰿
 nsu	𘰂
 nsu	𘰸
 nswd	飼
+ntqd	㋿
 ntqf	領
 ntqo	令
-ntwd	㋿
 ntwm	念
 ntwo	䈧
 nu	⽵
