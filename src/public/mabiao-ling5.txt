@@ -682,7 +682,7 @@ ssl	峪
 ssm	嵋
 ssn	崙
 ssq	㠓
-ssr	崍
+ssr	巘
 sss	櫫
 ssw	嵊
 syc	魢
@@ -690,7 +690,7 @@ syg	鮐
 syh	堾
 syk	鰤
 sym	䲁
-syn	鱠
+syn	鰮
 syp	鮈
 syr	鮜
 sys	鱚
@@ -30298,7 +30298,6 @@ djytu	𮶑
 djykv	𦘂
 djyhw	𫆄
 djyyi	䏈
-dka	𠀐
 dka	𠮵
 dka	𭆽
 dkba	㕷
@@ -30350,6 +30349,7 @@ dkfgt	𠾙
 dkflg	𩤰
 dkfgy	𪡣
 dkfdh	𩁑
+dkfi	𠀐
 dkfjo	𠱶
 dkfjv	𫾺
 dkfdk	𠙫
@@ -44181,6 +44181,7 @@ hgqff	𫛻
 hgqfi	𲟁
 hgqgt	𢉱
 hgqwg	𢋭
+hgqlg	𲟉
 hgqkh	𢌎
 hgqlj	𢊋
 hgqlj	𢊰
@@ -44228,7 +44229,6 @@ hgqfw	𨖓
 hgqgw	𫸐
 hgqwy	𭙿
 hgqfw	𰐄
-hgqlw	𲟉
 hgqly	㢍
 hgqhy	𢊗
 hgra	㢇
@@ -58376,7 +58376,6 @@ ljyrb	𪓛
 ljykb	𪚻
 ljybo	𫊭
 ljybb	𮮤
-ljyyc	𨪖
 ljydp	㿮
 ljydo	𦟑
 ljydo	𫩣
@@ -103052,6 +103051,7 @@ yyhwe	𪯥
 yyjrj	𫃪
 yykgo	𭹸
 yyktk	𤪵
+yylci	𨪖
 yyllx	䋾
 yylma	𤦖
 yymmi	𭌐
@@ -103822,6 +103822,7 @@ bkgu	鄆󠄀
 bki	𖿰
 bki	티
 bki	
+bki	
 bkji	冗︀
 bkji	冗󠄀
 bkji	冗󠄁
@@ -104947,6 +104948,8 @@ bwddo	蟜󠄀
 bwfi	𘲊
 bwfu	蜲󠄀
 bwi	虬󠄀
+bwi	
+bwi	
 bwlle	蝑󠄀
 bwmtu	蚳󠄀
 bwo	逮󠄀
@@ -105124,6 +105127,7 @@ cbxku	鎩󠄀
 cbxli	鐘󠄀
 cbxli	鐘󠄁
 cbxli	鐘󠄂
+cca	
 ccbbi	𗔃
 ccbla	鎌󠄀
 ccbla	鎌󠄁
@@ -110499,6 +110503,7 @@ dka	耏󠄀
 dka	모
 dka	오
 dka	𘯊
+dka	
 dkbo	뫁
 dkbo	밑
 dkbo	옽
@@ -117801,6 +117806,7 @@ gvmxi	恝󠄀
 gvmxi	恝󠄁
 gvmxi	恝󠄂
 gvmxi	恝󠄃
+gvnbe	貿󠄂
 gvpsi	䂮󠄀
 gvpsi	䂮󠄁
 gvsnu	㸷󠄀
@@ -122624,6 +122630,7 @@ kbylx	翱󠄁
 kbylx	翺
 kca	⻓
 kca	𘬷
+kca	
 kcbbi	𗂂
 kcbi	𗀳
 kcbi	
@@ -122955,7 +122962,6 @@ kdfvj	師󠄁
 kdfvj	師󠄂
 kdfvj	師󠄃
 kdfvj	師󠄄
-kdi	㠯
 kdi	
 kdjo	宮󠄀
 kdlfu	寠󠄀
@@ -123699,6 +123705,7 @@ kla	穴󠄁
 kla	穴󠄂
 kla	穴󠄃
 kla	穴󠄄
+kla	
 klbo	蠃󠄀
 klbo	蠃󠄁
 klbo	蠃󠄂
@@ -127690,6 +127697,7 @@ msvo	㠯󠄀
 msvo	㠯󠄁
 msvo	㠯󠄂
 msvo	㠯󠄃
+msvo	㠯
 msvqo	㕞󠄀
 msvsn	犀︀
 msvsn	犀󠄀
@@ -130781,6 +130789,7 @@ ntgge	食󠄄
 ntha	笇󠄀
 ntka	歛󠄀
 ntna	籡󠄀
+ntqdo	㋿
 ntqfy	領
 ntqhr	簎󠄀
 ntqo	令󠄂
@@ -130791,7 +130800,6 @@ ntrro	籜󠄀
 ntrro	籜󠄁
 ntrro	籜󠄂
 ntvli	篺󠄀
-ntwdo	㋿
 ntwfy	頷󠄀
 ntwgt	籀󠄀
 ntwhi	䨄󠄀
@@ -148881,7 +148889,6 @@ wmkti	卿
 wmli	氒󠄀
 wmnbe	貿󠄀
 wmnbe	貿󠄁
-wmnbe	貿󠄂
 wmngu	鄮󠄀
 wmngu	鄮󠄁
 wmngu	鄮󠄂
