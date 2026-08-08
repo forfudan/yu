@@ -192,6 +192,10 @@ export default defineConfig({
               text: "星月",
               link: "ime/xingyue",
             },
+            {
+              text: "未央",
+              link: "ime/weiyang",
+            },
           ],
         },
       ],
@@ -629,6 +633,10 @@ export default defineConfig({
                 {
                   text: "星月",
                   link: "/zht/ime/xingyue",
+                },
+                {
+                  text: "未央",
+                  link: "/zht/ime/weiyang",
                 },
               ],
             },
