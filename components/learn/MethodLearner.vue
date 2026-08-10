@@ -142,7 +142,7 @@ function splitParagraphs(text: string) {
                         <span class="text-xl my-1 text-gray-400">↓</span>
                         <span class="text-xs text-gray-500 dark:text-gray-400 mb-1">取碼</span>
                         <span class="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-200 rounded-md font-mono text-sm">
-                            {{ ((idx == currentStage.bianMa.length - 1 && idx < currentStage.chaiFen.length - 1)) ? "-" : currentStage.bianMa[Math.min(idx, currentStage.bianMa.length - 1)] }}
+                            {{ ((idx >= currentStage.bianMa.length - 1 && idx < currentStage.chaiFen.length - 1)) ? "-" : currentStage.bianMa[Math.min(idx, currentStage.bianMa.length - 1)] }}
                         </span>
                     </div>
                 </div>
