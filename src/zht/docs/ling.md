@@ -1,3 +1,89 @@
+<script setup>
+import MethodLearner from '@/learn/MethodLearner.vue'
+import ZigenMap from "@/zigen/ZigenMap.vue"
+
+const stages = [
+    {
+        type: "chaiFen",
+        descriptionTop: "我們知道，要使用形碼輸入法輸入單字，首先得將單字拆成多個組成字根。" +
+                        "这里我们以“猹”作为例子，其拆分如下：",
+        plotZi: "猹",
+        chaiFen: ["犭 Wka", "木 Xu", "日 Hri", "一 Fi"],
+        descriptionBottom: "因為本教程的重點不在于單字的拆分，我們姑且將這個拆法當作既定事實，不予深究。"
+    },
+    {
+        type: "bianMa",
+        descriptionTop: "既然我們已經明白「猹」的字根是什麽，接下來要學習的便是如何將「猹」轉換成靈明的編碼了。" +
+                        "靈明的單字編碼鐵律有二：（一）長度為四個字母，或結尾為韻碼（二）必須包含單字的首根與末根。" +
+                        "輸入首根時，我們取用除韻碼之外的所有編碼。輸入中間的字根時，只取用其大碼。" +
+                        "而輸入末根時，則依次取用大碼、聲碼、韻碼，直至滿足第一條鐵律。",
+        plotZi: "猹",
+        chaiFen: ["Wka", "Xu", "Hri", "Fi"],
+        bianMa: ["Wk", "X", "F"],
+        descriptionBottom: "可以發現，在取用了首根與次根後，我們距離四個字母，只剩下一個可用碼位了。" +
+                           "因此，為了滿足「編碼必須包含末根信息」的要求，最後一碼我們直接輸入末根，並且按順序從大碼開始。"
+    },
+    {
+        type: "practice",
+        descriptionTop: "試試看把「幾」轉換成單字編碼吧。",
+        chaiFen: ["幺 Gya", "幺 Gya", "戈 Mge", "人 Ne"],
+        bianMa: ["Gy", "G", "N"],
+        plotZi: "幾"
+    },
+    {
+        type: "bianMa",
+        descriptionTop: "之前我們提到，輸入末根時會依次取用大碼、聲碼、韻碼，直至滿足第一條鐵律。" +
+                        "這裏我們會透過「时」這個字，具體了解這個機制。",
+        plotZi: "时",
+        chaiFen: ["日 Hri", "寸 Jcu"],
+        bianMa: ["Hr", "Jc"],
+        descriptionBottom: "可以看到，輸入了首根後，我們距離四個字母，還有兩個碼位。" +
+                           "我們的次根也是我們的末根，而輸入了末根大碼後，我們依然還有閑置的碼位。" +
+                           "按大、聲、韻的順序，我們這時需要補上末根的聲碼。"
+    },
+    {
+        type: "practice",
+        descriptionTop: "試試看把「引」轉換成單字編碼吧。",
+        chaiFen: ["弓 Ggo", "丨 Ki"],
+        bianMa: ["Gg", "Ki"],
+        plotZi: "引"
+    },
+    {
+        type: "bianMa",
+        descriptionTop: "截至目前，我們輸入的單字，其首字根都是帶有聲碼的大字根。" +
+                        "那要是首字根沒有聲碼，只有大碼與韻碼呢？既然首根只取用韻碼以外的編碼，那我們就只有大碼可以取用。",
+        plotZi: "籍",
+        chaiFen: ["竹 Nu", "丰 Ge", "八 La", "龷 Qi", "日 Hri"],
+        bianMa: ["N", "G", "L", "H"],
+        descriptionBottom: "可以發現，在這個情況下輸入了首根與次根後，我們距離四個字母，還有兩個可用碼位。" +
+                           "這意味著我們還可以再多取一個字根，以盡可能地描述這個單字的特徵。" +
+                           "直到我們進入最後一個碼位時，我們像往常那樣，直接輸入末根。"
+    },
+    {
+        type: "practice",
+        descriptionTop: "試試看把「第」轉換成單字編碼吧。",
+        chaiFen: ["竹 Nu", "弓 Ggo", "丨 Ki", "丿 Ke"],
+        bianMa: ["N", "G", "K", "K"],
+        plotZi: "第"
+    },
+    {
+        type: "practice",
+        descriptionTop: "之前我們了解到，未滿足第一條鐵律「長度為四個字母，或結尾為韻碼」時，" +
+                        "我們要依次補上末根大碼、聲碼、韻碼。試試看把「芙」轉換成單字編碼吧。",
+        chaiFen: ["艹 Qi", "夫 Yfu"],
+        bianMa: ["Q", "Yfu"],
+        plotZi: "芙"
+    },
+    {
+        type: "practice",
+        descriptionTop: "之前我們了解到，未滿足第一條鐵律「長度為四個字母，或結尾為韻碼」時，" +
+                        "我們要依次補上末根大碼、聲碼、韻碼。試試看把「从」轉換成單字編碼吧。",
+        chaiFen: ["人 Ne", "人 Ne"],
+        bianMa: ["N", "Ne"],
+        plotZi: "从"
+    },
+];
+</script>
 # 靈明輸入法
 
 ::: warning 注意
@@ -52,6 +138,8 @@
 詳細教程和例子請參考[《靈明輸入法字根編碼》](../learn/roots_ling.md)。
 
 ## 單字的編碼
+
+<MethodLearner :stages="stages" />
 
 單字的編碼，是將字根編碼用一定規律組合起來的。它最多不超過四個字母。
 
@@ -359,7 +447,4 @@
 
 ## 字根鍵位圖
 
-<script setup>
-import ZigenMap from "@/zigen/ZigenMap.vue"
-</script>
 <ZigenMap :default-scheme="'ling'" :column-min-width="'1.0rem'" />
