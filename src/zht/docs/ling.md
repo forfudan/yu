@@ -6,7 +6,7 @@ const stages = [
     {
         type: "chaiFen",
         descriptionTop: "我們知道，要使用形碼輸入法輸入單字，首先得將單字拆成多個組成字根。" +
-                        "这里我们以“猹”作为例子，其拆分如下：",
+                        "这里我们以“猹”作为例子，其拆法如下：",
         plotZi: "猹",
         chaiFen: ["犭 Wka", "木 Xu", "日 Hri", "一 Fi"],
         descriptionBottom: "因為本教程的重點不在于單字的拆分，我們姑且將這個拆法當作既定事實，不予深究。"
@@ -21,22 +21,23 @@ const stages = [
         chaiFen: ["Wka", "Xu", "Hri", "Fi"],
         bianMa: ["Wk", "X", "F"],
         descriptionBottom: "可以發現，在取用了首根與次根後，我們距離四個字母，只剩下一個可用碼位了。" +
-                           "因此，為了滿足「編碼必須包含末根信息」的要求，最後一碼我們直接輸入末根，並且按順序從大碼開始。"
+                           "因此，為了滿足「編碼必須包含末根信息」的要求，最後一碼我們跳過其他字根，" +
+                           "直接輸入末根，並且按順序從末根的大碼開始。"
     },
     {
         type: "practice",
-        descriptionTop: "試試看把「幾」轉換成單字編碼吧。",
-        chaiFen: ["幺 Gya", "幺 Gya", "戈 Mge", "人 Ne"],
-        bianMa: ["Gy", "G", "N"],
-        plotZi: "幾"
+        descriptionTop: "試試看把「韶」轉換成單字編碼吧。",
+        chaiFen: ["立 Bli", "日 Hri", "刀 Va", "口 Do"],
+        bianMa: ["Bl", "H", "D"],
+        plotZi: "韶"
     },
     {
         type: "bianMa",
         descriptionTop: "之前我們提到，輸入末根時會依次取用大碼、聲碼、韻碼，直至滿足第一條鐵律。" +
-                        "這裏我們會透過「时」這個字，具體了解這個機制。",
-        plotZi: "时",
-        chaiFen: ["日 Hri", "寸 Jcu"],
-        bianMa: ["Hr", "Jc"],
+                        "這裏我們會透過「拿」這個字，具體了解這個機制。",
+        plotZi: "拿",
+        chaiFen: ["合 Nhe", "手 Lso"],
+        bianMa: ["Nh", "Ls"],
         descriptionBottom: "可以看到，輸入了首根後，我們距離四個字母，還有兩個碼位。" +
                            "我們的次根也是我們的末根，而輸入了末根大碼後，我們依然還有閑置的碼位。" +
                            "按大、聲、韻的順序，我們這時需要補上末根的聲碼。"
@@ -77,10 +78,10 @@ const stages = [
     {
         type: "practice",
         descriptionTop: "之前我們了解到，未滿足第一條鐵律「長度為四個字母，或結尾為韻碼」時，" +
-                        "我們要依次補上末根大碼、聲碼、韻碼。試試看把「从」轉換成單字編碼吧。",
-        chaiFen: ["人 Ne", "人 Ne"],
-        bianMa: ["N", "Ne"],
-        plotZi: "从"
+                        "我們要依次補上末根大碼、聲碼、韻碼。試試看把「林」轉換成單字編碼吧。",
+        chaiFen: ["木 Xu", "木 Xu"],
+        bianMa: ["X", "Xu"],
+        plotZi: "林"
     },
 ];
 </script>
