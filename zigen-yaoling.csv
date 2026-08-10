@@ -121,7 +121,7 @@ font,ma,pinyin
 王,ja,Wáŋ  𡆧不取声码
 长,jcu,Ĉáŋ  🈤映射：c->cu
 日,jdi,Rì  🈤映射：r->di
-曰,ke,Yuē  𡆧不取声码
+曰,re,Yuē  𡆧不取声码
 ,jdi,㊟同「日」归并
 ,jdi,㊟同「日」归并
 儿,je,ér  🈤映射：零声母->je
@@ -322,19 +322,19 @@ font,ma,pinyin
 ,tu,Fǔ  𡆧不取声码
 匚,two,Fāŋ  🈤映射：f->wo
 ,two,㊟同「匚」归并
-巴,va,Bā  𡆧不取声码
+巴,ra,Bā  𡆧不取声码
 長,vcu,Ĉáŋ  🈤映射：c->cu
 镸,vcu,㊟同「長」归并
 髟,vsi,Biāo  🈤映射：b->si
 身,vdo,Ŝēn  🈤映射：s->do
-夭,vgu,yāo  🈤映射：y->gu
+夭,va,yāo  𡆧不取声码
 之,vi,Ẑī  𡆧不取声码
 ,vke,Zuǒ  🈤映射：z->ke
 走,vke,Zǒu  🈤映射：z->ke
 戶,vla,Hù  🈤映射：h->la
 田,vme,Tián  🈤映射：t->me
 斤,vne,Jīn  🈤映射：j->ne
-,vo,🈤无读音取o
+,mo,🈤无读音取o
 辶,vo,Ĉuò  𡆧不取声码
 ⻍,vo,㊟同「辶」归并
 木,vu,Mù  𡆧不取声码
