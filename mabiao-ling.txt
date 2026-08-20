@@ -648,12 +648,13 @@ nxo	当
 nye	醒
 pbi	學
 pdi	够
-pso	周
+pso	确
 qji	花
 qme	藏
 qsi	著
 qwa	获
 rco	讓
+rdu	訴
 rjo	进
 rle	話
 rpa	点
