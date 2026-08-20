@@ -1018,7 +1018,7 @@ pdi	够
 pgo	毁灭
 pko	忽略
 ppi	兒子
-pso	周
+pso	确
 pvu	鼠标
 qji	花
 qlo	共同
@@ -1028,6 +1028,7 @@ qwa	获
 qwu	获得
 rco	讓
 rcu	記得
+rdu	訴
 rjo	进
 rle	話
 rme	證明
