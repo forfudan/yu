@@ -1,3 +1,20 @@
+# Normalise line endings so a macOS/Windows switch never shows a whole-file
+# diff, and so regenerated tables (scripts write LF) stay clean on Windows.
+* text=auto eol=lf
+
+# Windows-native scripts keep CRLF
+*.ps1  text eol=crlf
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+
+# Never touch binaries
+*.png  binary
+*.webp binary
+*.woff binary
+*.ttf  binary
+*.zip  binary
+
+# LFS-tracked assets (must come last: -text overrides the text=auto above)
 src/public/fonts/*.woff filter=lfs diff=lfs merge=lfs -text
 src/public/*.jpeg filter=lfs diff=lfs merge=lfs -text
 src/public/*.mp4 filter=lfs diff=lfs merge=lfs -text
