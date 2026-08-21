@@ -677,6 +677,7 @@ vnu	海
 vsi	法
 vte	浪
 vti	泳
+vyo	变
 wha	利
 wle	话
 wqu	谋

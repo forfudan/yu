@@ -1077,6 +1077,7 @@ vsi	法
 vte	浪
 vti	泳
 vvi	決定
+vyo	变
 wcu	记得
 wfa	语言
 wha	利
