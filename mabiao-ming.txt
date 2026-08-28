@@ -43693,11 +43693,11 @@ ggmkf	𱁻
 ggmkf	𲟉
 ggmkg	𢋍
 ggmkj	䪇
-ggmkl	𢈘
 ggmkl	𲟐
 ggmkp	𩃽
 ggmkt	𢊋
 ggmlg	𫎚
+ggmlk	𢈘
 ggmll	𩌟
 ggmlr	𢊅
 ggmlr	𩌝

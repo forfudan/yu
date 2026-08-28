@@ -69306,7 +69306,6 @@ mbkk	𥢨
 mbko	𥣦
 mbkq	瘙
 mbkq	㲧
-mbku	𢈘
 mbkx	稺
 mbl	癖
 mbla	稦
@@ -69411,6 +69410,7 @@ mbsy	𭙡
 mbtc	𫱤
 mbuc	瘬
 mbuc	𢊜
+mbuk	𢈘
 mbuk	𭙧
 mbul	唐
 mbum	𢋟

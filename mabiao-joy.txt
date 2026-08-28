@@ -1066,7 +1066,7 @@ afej	𲦣
 afem	杅
 afem	𫤿
 afen	𬄚
-aff	甫
+aff	樱
 aff	棑
 aff	𣔉
 aff	𲐆
@@ -8505,7 +8505,6 @@ bxuc	慩
 bxue	𬔕
 bxuo	㦬
 bxup	𫁛
-bxx	穴
 bxxh	𮎀
 bxy	囿
 bxyd	𥨋
@@ -8847,7 +8846,6 @@ cdak	译
 cdb	𥙃
 cdcd	𩤙
 cdcl	𫘗
-cdd	丁
 cdda	䮣
 cdda	𥛋
 cddd	䄌
@@ -9440,7 +9438,6 @@ cihk	騆
 cihs	𩥜
 cihs	𬆰
 ciht	𥙰
-cii	乂
 ciic	䗝
 ciic	𧑉
 ciid	礿
@@ -9899,7 +9896,6 @@ ckxz	𮁱
 ckyv	駽
 ckyw	䄇
 ckyx	𱵈
-cl	诉
 cl	來
 cl	來
 cl	
@@ -9945,6 +9941,7 @@ clgx	𱵥
 clhc	𥛑
 clht	禋
 clht	𬤇
+cli	诉
 cli	𥙫
 clid	诉
 clid	𮁪
@@ -9977,7 +9974,6 @@ clkn	𲋼
 clku	禭
 clku	𲂖
 clky	𱵭
-cll	來
 cllh	𬤢
 clli	禉
 clll	䯀
@@ -10098,7 +10094,7 @@ cmlk	𥛶
 cmlk	𩦐
 cmlk	𮪐
 cmls	𥚓
-cmm	馬
+cmm	谈
 cmma	䮼
 cmma	𲴿
 cmmb	禚
@@ -18092,7 +18088,7 @@ dsq	薟
 dsqi	𭕓
 dsqn	鶓
 dsri	𱾳
-dss	卅
+dss	蕾
 dss	芟
 dss	毃
 dss	癹
@@ -19965,7 +19961,6 @@ ecam	闑
 ecar	𮤤
 ecbi	𠐈
 ecbu	𠑟
-ecc	丑
 eccc	𨵰
 eccy	𬾝
 ecd	仃
@@ -20039,7 +20034,6 @@ edb	伯
 edc	𨳡
 edcd	停
 edcs	𨶋
-edd	鬥
 eddc	𫣦
 eddd	䦤
 eddd	𬾧
@@ -22030,7 +22024,6 @@ emlm	𠏗
 emls	傄
 emls	𪝄
 emly	𠋚
-emm	門
 emma	儝
 emmb	𨶅
 emmd	𲐾
@@ -23987,7 +23980,6 @@ fba	捆
 fbam	捆
 fbam	𣕔
 fbb	批
-fbb	贝
 fbb	𘠴
 fbbb	批
 fbbb	𢪲
@@ -32593,7 +32585,6 @@ ghg	𰤱
 ghgp	𱸅
 ghgx	𥵈
 ghh	等
-ghh	禾
 ghha	𮆩
 ghhc	等
 ghhc	秲
@@ -33244,7 +33235,6 @@ gjix	轹
 gjiy	𩡈
 gjiy	𩡜
 gjiy	𫗽
-gjj	見
 gjj	𰤞
 gjje	𣱁
 gjjj	䭯
@@ -36439,7 +36429,6 @@ hdci	㘷
 hdck	𠳌
 hdcl	𫨬
 hdd	壤
-hdd	电
 hdda	𪤌
 hddd	㙍
 hddd	䞵
@@ -38258,7 +38247,6 @@ hlks	𱙾
 hlku	𡑞
 hlku	𲌓
 hlkv	𱗜
-hll	鹿
 hllh	墫
 hllh	壿
 hlli	趥
@@ -41674,7 +41662,6 @@ igfm	𪯶
 igfr	旆
 igfr	𬀂
 igfv	𩝩
-igg	艮
 iggg	𡪣
 iggj	𡪳
 iggm	旄
@@ -46033,7 +46020,6 @@ jdcd	嵉
 jdcd	𡺣
 jdcd	𮲥
 jdcl	𪱉
-jdd	刀
 jdda	𣉕
 jdda	𫶐
 jddd	𣇽
@@ -47442,7 +47428,7 @@ jiht	𡉔
 jiht	𣌷
 jiht	𱛣
 jihx	𩔓
-jii	幺
+jii	卵
 jiic	𧌣
 jiic	𮓵
 jiid	卵
@@ -50646,7 +50632,6 @@ jvuc	𲅧
 jvur	昃
 jvur	𲝅
 jvuu	𱢧
-jvv	曰
 jvv	嵎
 jvv	㬂
 jvv	𡺥
@@ -53241,7 +53226,7 @@ kihk	𩈮
 kiht	𡋊
 kiht	𲚌
 kihx	𫖨
-kii	弋
+kii	啷
 kiic	蠠
 kiic	蟸
 kiid	𠮭
@@ -57885,7 +57870,6 @@ lcbb	𗯞
 lcbf	𩠲
 lcbj	𮩡
 lcbu	𲱻
-lcc	辰
 lcci	𨟿
 lccl	𨡆
 lccl	𨢀
@@ -63735,7 +63719,7 @@ mcas	𪹤
 mcbi	䰓
 mcbi	𨲾
 mcbu	𤓋
-mcc	長
+mcc	爽
 mccc	爽
 mccc	𲬟
 mcch	䫪
@@ -64942,7 +64926,6 @@ mihs	𥆴
 miht	㷐
 miht	𭶔
 mii	灼
-mii	羊
 miic	𧐧
 miic	𧒃
 miid	灼
@@ -72144,7 +72127,6 @@ nrq	䶞
 nrqm	湳
 nrqm	𰛬
 nrqq	𮳖
-nrr	壬
 nrri	𱨟
 nrrr	𱍡
 nrs	汁
@@ -80959,7 +80941,6 @@ owvg	𩻥
 owvj	響
 owvs	飨
 owvy	𤔕
-oww	兀
 oww	鮇
 oww	𠃥
 owwc	𘥒
@@ -86079,7 +86060,6 @@ qnlc	䃩
 qnlc	𪇌
 qnmz	𤟷
 qnmz	𮀬
-qnn	鳥
 qnng	𪀤
 qnnn	𤡧
 qnnn	𥖋
@@ -87455,7 +87435,6 @@ qwun	𪅜
 qwus	𥒶
 qwuz	𥔊
 qwva	𪻃
-qww	烏
 qww	𥑘
 qww	𰡃
 qwwi	𢑛
@@ -104616,6 +104595,7 @@ uel	𪜽
 uela	縧
 uela	𦁂
 uelh	𬘒
+uelm	𢈘
 uelm	𦃺
 uelq	𪪦
 uelu	𮉎
@@ -104625,7 +104605,6 @@ uely	𦃬
 uem	𦁺
 uemh	廛
 uemh	𭚌
-ueml	𢈘
 uemp	鄽
 uemq	𪇮
 uems	𲟒
@@ -116627,7 +116606,6 @@ wlkv	𭈝
 wlkv	림
 wlkw	𫱧
 wlky	𡢨
-wll	立
 wllb	𗢦
 wllc	𗢕
 wllc	𗺓
@@ -120969,7 +120947,6 @@ xmlk	𨄘
 xmlk	𮜖
 xmls	𨂍
 xmls	𪒂
-xmm	皿
 xmma	𨆴
 xmma	𨏍
 xmma	𨏏
