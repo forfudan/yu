@@ -1,6 +1,6 @@
 <!--
   FetchSearch.vue - 搜索數據獲取和輸入管理組件
-  
+
   Modification History:
   - 2024-03-27 by yb6b: 製作拆分查詢的組件初版
   - 2024-03-27 by 朱複丹: 增加參數 supplement，判斷是否需要回頭碼
@@ -8,10 +8,12 @@
   - 2025-08-14 by 朱複丹: 實現懶惰加载和輸入框管理，优化拆分文件加载性能
   - 2025-08-14 by 朱複丹: 重寫本組件並進行優化，使用壓縮JSON文件和ChaiDataLoader提升性能
   - 2025-12-16 by 朱複丹: 增加靈明方案
+  - 2026-08-28 by 朱複丹: 搜索欄加截圖圖標，有卡片時才顯示
 -->
 
 <script setup lang="ts">
-import { shallowRef, watch, onMounted, computed } from "vue";
+import { shallowRef, ref, watch, onMounted, computed } from "vue";
+import CaptureLogo from "./assets/capture.svg";
 import Search from "./Search.vue";
 import { ZigenMap, ChaifenMap, fetchZigen } from "./share";
 import ChaiDataLoader from "./ChaiDataLoader";
@@ -26,6 +28,9 @@ const p = defineProps<{
 const emit = defineEmits<{
     'update:modelValue': [value: string]
 }>()
+
+// 截圖圖標長在搜索欄上，動作在 Search 裏（卡片在那兒），靠這個 ref 調過去
+const searchRef = ref<InstanceType<typeof Search> | null>(null)
 
 const chaifenMap = shallowRef<ChaifenMap>()
 const zigenMap = shallowRef<ZigenMap>()
@@ -162,6 +167,13 @@ function quickSearch(query: string) {
         <!-- Always show the input field -->
         <label class="input input-bordered bg-gray-100 dark:bg-slate-800 flex items-center gap-2 mt-2">
             <input v-model="userInput" type="text" class="grow" placeholder="查詢十萬一千九百八十四個漢字之拆分編碼" />
+            <!-- 有卡片才出現：一次把下面所有卡片截成一張圖 -->
+            <button v-if="searchRef?.cardCount" type="button" @click.prevent.stop="searchRef?.captureAll()"
+                :disabled="searchRef?.isCapturingAll"
+                :title="searchRef?.isCapturingAll ? '截圖中……' : `截圖全部 ${searchRef?.cardCount} 張`"
+                class="shrink-0 cursor-pointer opacity-60 transition-opacity hover:opacity-100 disabled:opacity-30">
+                <img :src="CaptureLogo" alt="截圖全部" class="h-4 w-4 dark:invert" />
+            </button>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
                 <path fill-rule="evenodd"
                     d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
@@ -188,8 +200,8 @@ function quickSearch(query: string) {
         </div>
 
         <!-- Search component (only when data is loaded) -->
-        <Search v-if="isDataLoaded && chaifenMap && zigenMap" :chaifenMap="chaifenMap" :zigenMap="zigenMap"
-            :rule="p.rule" v-model:userInput="userInput" />
+        <Search v-if="isDataLoaded && chaifenMap && zigenMap" ref="searchRef" :chaifenMap="chaifenMap"
+            :zigenMap="zigenMap" :rule="p.rule" v-model:userInput="userInput" />
 
         <!-- Show poetry when no input and no data loaded yet -->
         <div v-else-if="!userInput.trim() && !isLoading && !loadError"

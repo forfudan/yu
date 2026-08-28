@@ -12,10 +12,11 @@
 -->
 
 <script setup lang="ts">
-import { shallowRef, ref, watch } from "vue";
+import { shallowRef, ref, computed, watch, nextTick } from "vue";
 import { watchThrottled, useUrlSearchParams } from "@vueuse/core";
 import Card from "./Card.vue";
 import LingCard from "./LingCard.vue";
+import { captureElement } from "./capture";
 import { ChaifenMap, ZigenMap } from "./share";
 const p = defineProps<{
     chaifenMap: ChaifenMap,
@@ -55,6 +56,55 @@ watchThrottled(localUserInput, () => {
     searchZigens.value = [...user].filter(zi => p.chaifenMap.has(zi))
 }, { throttle: 300, immediate: true })
 
+const cardsRef = ref<HTMLElement | null>(null)
+const isCapturingAll = shallowRef(false)
+
+/** 一次截下結果區裏的所有卡片，所見即所得 */
+async function captureAll() {
+    const el = cardsRef.value
+    if (!el || isCapturingAll.value) return
+    const cards = [...el.children] as HTMLElement[]
+    if (!cards.length) return
+
+    isCapturingAll.value = true
+    try {
+        // 卡片上的圖標欄本來就要懸停才顯示，截圖時鼠標在按鈕上，不必額外隱藏
+        await nextTick()
+        await new Promise(resolve => setTimeout(resolve, 100))
+
+        // 卡片是居中排的，容器兩側常留大片空白，按卡片的實際範圍裁掉
+        const base = el.getBoundingClientRect()
+        const pad = 8
+        let left = Infinity, top = Infinity, right = -Infinity, bottom = -Infinity
+        for (const card of cards) {
+            const r = card.getBoundingClientRect()
+            left = Math.min(left, r.left); top = Math.min(top, r.top)
+            right = Math.max(right, r.right); bottom = Math.max(bottom, r.bottom)
+        }
+
+        await captureElement(el, {
+            filename: `宇浩反查_${(localUserInput as unknown as string) || ''}`.slice(0, 60),
+            backgroundColor: getComputedStyle(document.body).backgroundColor,
+            crop: {
+                x: left - base.left - pad,
+                y: top - base.top - pad,
+                width: right - left + pad * 2,
+                height: bottom - top + pad * 2,
+            },
+        })
+    } catch (err) {
+        console.error('截圖失敗:', err)
+        alert('截圖失敗')
+    } finally {
+        isCapturingAll.value = false
+    }
+}
+
+/** 卡片張數，搜索欄靠它決定顯不顯示截圖圖標 */
+const cardCount = computed(() => searchZigens.value?.length ?? 0)
+
+defineExpose({ captureAll, cardCount, isCapturingAll })
+
 let poets: string[] =
     ["小樓一夜聽春雨　深巷明朝賣杏花",
         "休對故人思故國　且將新火試新茶",
@@ -80,15 +130,17 @@ const poet: string = poets[ind];
 
 <template>
     <div v-if="!localUserInput" class="opacity-40 text-center p-9 tracking-widest">{{ poet }}</div>
-    <div class="flex justify-center flex-wrap my-8" v-else>
-        <!-- 靈明用畫對應關係的新卡片，其餘方案照舊 -->
-        <template v-if="p.rule === 'ling'">
-            <LingCard v-for="zigen in searchZigens" :key="zigen" :chaifen="chaifenMap.get(zigen)" :zigenMap />
-        </template>
-        <template v-else>
-            <Card v-for="zigen in searchZigens" :key="zigen" :chaifen="chaifenMap.get(zigen)" :zigenMap
-                :rule="p.rule" />
-        </template>
+    <div v-else>
+        <div ref="cardsRef" class="flex justify-center flex-wrap my-8">
+            <!-- 靈明用畫對應關係的新卡片，其餘方案照舊 -->
+            <template v-if="p.rule === 'ling'">
+                <LingCard v-for="zigen in searchZigens" :key="zigen" :chaifen="chaifenMap.get(zigen)" :zigenMap />
+            </template>
+            <template v-else>
+                <Card v-for="zigen in searchZigens" :key="zigen" :chaifen="chaifenMap.get(zigen)" :zigenMap
+                    :rule="p.rule" />
+            </template>
+        </div>
     </div>
 
 </template>

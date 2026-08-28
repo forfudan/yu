@@ -7,7 +7,7 @@ import HandianLogo from "./assets/handian.png";
 import CaptureLogo from "./assets/capture.svg";
 import { computed, ref, nextTick } from "vue";
 import { Chaifen, ZigenMap, makeCodesFromDivision } from "./share";
-import html2canvas from "html2canvas-pro";
+import { captureElement } from "./capture";
 
 const p = defineProps<{
     chaifen: Chaifen,
@@ -46,59 +46,21 @@ const rootCodes_tw = computed(() => {
 // 拍照並複製到剪貼板，失敗時下載圖片
 async function captureCard() {
     if (!cardRef.value || isCapturing.value) return
-    
+
     isCapturing.value = true
-    
+
     // 隱藏logo區域並收縮卡片
     showLogoArea.value = false
     shrinkCard.value = true
-    
+
     // 等待 Vue 的 DOM 更新完成
     await nextTick()
-    
+
     // 額外等待瀏覽器重排
     await new Promise(resolve => setTimeout(resolve, 100))
-    
+
     try {
-        const canvas = await html2canvas(cardRef.value, {
-            backgroundColor: null,
-            scale: 2, // 提高清晰度
-            logging: false,
-        })
-        
-        // 將 canvas 轉換為 blob
-        canvas.toBlob(async (blob) => {
-            if (!blob) {
-                alert('生成圖片失敗')
-                return
-            }
-            
-            try {
-                // 嘗試複製到剪貼板
-                await navigator.clipboard.write([
-                    new ClipboardItem({
-                        'image/png': blob
-                    })
-                ])
-                
-                console.log('卡片已複製到剪貼板')
-            } catch (err) {
-                console.error('複製到剪貼板失敗，改為下載:', err)
-                
-                // 複製失敗時，自動下載圖片
-                const url = URL.createObjectURL(blob)
-                const a = document.createElement('a')
-                a.href = url
-                a.download = `${p.chaifen.char}_${unicode.value}.png`
-                document.body.appendChild(a)
-                a.click()
-                document.body.removeChild(a)
-                URL.revokeObjectURL(url)
-                
-                console.log('圖片已下載')
-            }
-        }, 'image/png')
-        
+        await captureElement(cardRef.value, { filename: `${p.chaifen.char}_${unicode.value}` })
     } catch (err) {
         console.error('截圖失敗:', err)
         alert('截圖失敗')

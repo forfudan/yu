@@ -16,7 +16,7 @@ import HandianLogo from "./assets/handian.png";
 import CaptureLogo from "./assets/capture.svg";
 import { computed, ref, shallowRef, nextTick, onMounted, onBeforeUnmount, watch } from "vue";
 import { Chaifen, ZigenMap, MaPart, traceLingCode } from "./share";
-import html2canvas from "html2canvas-pro";
+import { captureElement } from "./capture";
 
 const p = defineProps<{
     chaifen: Chaifen,
@@ -163,42 +163,11 @@ async function captureCard() {
 
     // 額外等待瀏覽器重排
     await new Promise(resolve => setTimeout(resolve, 100))
+    // 卡片收縮過，箭頭端點得重算
     measure()
 
     try {
-        const canvas = await html2canvas(cardRef.value, {
-            backgroundColor: null,
-            scale: 2, // 提高清晰度
-            logging: false,
-        })
-
-        canvas.toBlob(async (blob) => {
-            if (!blob) {
-                alert('生成圖片失敗')
-                return
-            }
-
-            try {
-                await navigator.clipboard.write([
-                    new ClipboardItem({ 'image/png': blob })
-                ])
-                console.log('卡片已複製到剪貼板')
-            } catch (err) {
-                console.error('複製到剪貼板失敗，改為下載:', err)
-
-                const url = URL.createObjectURL(blob)
-                const a = document.createElement('a')
-                a.href = url
-                a.download = `${p.chaifen.char}_${unicode.value}.png`
-                document.body.appendChild(a)
-                a.click()
-                document.body.removeChild(a)
-                URL.revokeObjectURL(url)
-
-                console.log('圖片已下載')
-            }
-        }, 'image/png')
-
+        await captureElement(cardRef.value, { filename: `${p.chaifen.char}_${unicode.value}` })
     } catch (err) {
         console.error('截圖失敗:', err)
         alert('截圖失敗')
