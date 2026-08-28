@@ -363,9 +363,9 @@ syg	鮐
 syh	堾
 syk	鰤
 sym	䲁
-syn	鰮
+syn	鱠
 syp	鮈
-syr	鮜
+syr	鮎
 sys	鱚
 syw	鱂
 tfs	捱
@@ -679,6 +679,7 @@ vte	浪
 vti	泳
 vyo	变
 wha	利
+wko	獲
 wle	话
 wqu	谋
 wro	讲
@@ -13319,7 +13320,6 @@ qjmg	茷
 qjmx	怼
 qjnl	萃
 qjnr	莋
-qjo	丼
 qjpt	莵
 qjrj	苳
 qjrj	芢
@@ -14260,6 +14260,7 @@ rjcn	凉
 rjco	井
 rjcs	冸
 rjcs	坓
+rjct	丼
 rjcu	討
 rjcv	諦
 rjcv	汬
@@ -25248,7 +25249,6 @@ cfhh	𨩿
 cfhv	𬫓
 cfi	𮯰
 cfja	𳁓
-cfjo	𠂁
 cfjr	𬫢
 cfjv	𮢙
 cfkl	𬫂
@@ -27477,7 +27477,6 @@ cqjl	𲇥
 cqjm	𰭁
 cqjt	𢆣
 cqjv	𢼶
-cqjv	𨦿
 cqka	𰐨
 cqkc	𢆗
 cqkd	𨮥
@@ -27570,6 +27569,7 @@ crcl	𠁟
 crcl	𨬚
 crco	𨥙
 crcv	𨦕
+crcv	𨦿
 crda	𳆬
 crdh	𨬷
 crdl	𨭴
@@ -27688,6 +27688,7 @@ crtl	𨩈
 crtl	𮣪
 crtm	𮢯
 crtp	𮣤
+crtu	𠂁
 crvi	䤽
 crvk	𬫖
 crvp	𭵠
@@ -40524,7 +40525,6 @@ glqg	䣢
 glqg	𦓷
 glqg	𦔒
 glqh	𦔢
-glqj	𦓮
 glqj	𦔚
 glqj	𨺪
 glqk	𦓿
@@ -40548,6 +40548,7 @@ glrp	𲬯
 glrr	𦔥
 glrr	𰭲
 glrt	䎱
+glrt	𦓮
 glrw	𦓪
 glsc	𱻴
 glsg	䏻
@@ -43919,7 +43920,7 @@ hgvf	𫷹
 hgvi	𢇤
 hgvi	𰾁
 hgvk	㡹
-hgvk	𢈘
+hgvl	𢈘
 hgvm	𢈍
 hgvs	𭙸
 hgvw	𨕁
@@ -70210,7 +70211,6 @@ ppbh	𤒎
 ppbi	𤇾
 ppbi	𬊇
 ppbj	𤈤
-ppbj	𤍧
 ppbj	𤯵
 ppbj	𲬢
 ppbk	𠣁
@@ -70231,6 +70231,7 @@ ppbs	𬷷
 ppbs	𮭖
 ppbs	𲬥
 ppbt	𠙦
+ppbt	𤍧
 ppbt	𮗵
 ppbv	𠠜
 ppbv	𢄋
@@ -73517,7 +73518,6 @@ qjgl	𦿤
 qjgl	𮑒
 qjgm	𱟨
 qjgq	𦿪
-qjgu	𨚢
 qjgx	𱿊
 qjgy	𦬾
 qjgy	𦽝
@@ -73546,7 +73546,6 @@ qjju	𦬥
 qjjv	𦯎
 qjjv	𭐢
 qjjy	𮏻
-qjka	㣋
 qjkb	𦯉
 qjkb	𧃎
 qjkd	𫈆
@@ -73598,7 +73597,6 @@ qjnt	𦰍
 qjnv	𦸄
 qjnw	𦼹
 qjnx	𦷞
-qjo	𠂀
 qjpf	𮐀
 qjpm	𦱘
 qjps	𦰒
@@ -73637,12 +73635,10 @@ qjts	𱾇
 qjtu	𠀪
 qjtv	𠝐
 qju	𦫶
-qjvd	𠛜
 qjvd	𦯐
 qjvh	𧆀
 qjvi	䒘
 qjvk	𦯣
-qjvs	𡌁
 qjvv	𠮇
 qjvw	𨕷
 qjwf	䔀
@@ -76853,12 +76849,14 @@ rjcf	𠄺
 rjcf	𠗪
 rjcf	𫥍
 rjcg	𨙷
+rjcg	𨚢
 rjcg	𪞰
 rjch	𨶄
 rjch	𪞨
 rjch	𭂓
 rjch	𭂠
 rjch	𭂡
+rjck	㣋
 rjck	𢒈
 rjck	𰅉
 rjck	𰅑
@@ -76875,6 +76873,7 @@ rjcp	𨴙
 rjcp	𬑽
 rjcr	䜞
 rjcr	𭂚
+rjcs	𡌁
 rjcs	𡌒
 rjcs	𩾺
 rjcs	𪞯
@@ -76882,6 +76881,7 @@ rjcs	𫡳
 rjct	𠛝
 rjct	𭂣
 rjcv	㓝
+rjcv	𠛜
 rjcv	𠜚
 rjcv	𠝆
 rjcv	𣲜
@@ -77076,6 +77076,7 @@ rjkr	𠖺
 rjkr	𠗅
 rjkr	𠘦
 rjkr	𭘀
+rjkt	𠂀
 rjkt	𪞖
 rjkv	𠗯
 rjkv	𭂝
@@ -110376,7 +110377,6 @@ gda	
 gda	
 ge	𘡡
 ge	
-ge	
 gfkf	㌈
 gfkk	𗍧
 gflw	陋
@@ -112710,6 +112710,7 @@ ksi	⽮
 ksi	𘰌
 ksjf	𛃜
 kska	𘢄
+kska	
 ksnu	牢
 kssi	𛀢
 kssu	𛁞

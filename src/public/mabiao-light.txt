@@ -69459,6 +69459,7 @@ ubmb	𢊟
 ubna	𦎾
 ubnb	𤆿
 ubnb	𧦾
+ubnt	𢈘
 ubnt	𣍄
 ubnu	𤌐
 ubop	𧭋
@@ -69476,7 +69477,6 @@ ubsi	𤆾
 ubsq	𤊳
 ubsq	𦎮
 ubsw	𦆁
-ubtn	𢈘
 ubue	𠬠
 ubue	𠬧
 ubuo	𤆌

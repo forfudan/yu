@@ -690,9 +690,9 @@ syg	鮐
 syh	堾
 syk	鰤
 sym	䲁
-syn	鰮
+syn	鱠
 syp	鮈
-syr	鮜
+syr	鮎
 sys	鱚
 syw	鱂
 tfs	捱
@@ -1081,6 +1081,7 @@ vyo	变
 wcu	记得
 wfa	语言
 wha	利
+wko	獲
 wle	话
 wnu	认为
 wqu	谋
@@ -13731,7 +13732,6 @@ qjmge	茷
 qjmxi	怼
 qjnli	萃
 qjnro	莋
-qjo	丼
 qjptu	莵
 qjrje	苳
 qjrje	芢
@@ -14672,6 +14672,7 @@ rjcnx	凉
 rjco	井
 rjcsk	冸
 rjcsu	坓
+rjctu	丼
 rjcu	討
 rjcvj	諦
 rjcvi	汬
@@ -25660,7 +25661,6 @@ cfhhv	𨩿
 cfhvi	𬫓
 cfi	𮯰
 cfja	𳁓
-cfjo	𠂁
 cfjrm	𬫢
 cfjvi	𮢙
 cfkli	𬫂
@@ -27889,7 +27889,6 @@ cqjli	𲇥
 cqjmx	𰭁
 cqjtu	𢆣
 cqjvi	𢼶
-cqjvd	𨦿
 cqka	𰐨
 cqkco	𢆗
 cqkdo	𨮥
@@ -27982,6 +27981,7 @@ crcla	𠁟
 crcla	𨬚
 crco	𨥙
 crcvd	𨦕
+crcvd	𨦿
 crda	𳆬
 crdhv	𨬷
 crdls	𨭴
@@ -28100,6 +28100,7 @@ crtle	𨩈
 crtla	𮣪
 crtmx	𮢯
 crtpb	𮣤
+crtu	𠂁
 crvi	䤽
 crvke	𬫖
 crvpb	𭵠
@@ -40936,7 +40937,6 @@ glqgu	䣢
 glqgi	𦓷
 glqgy	𦔒
 glqhr	𦔢
-glqjo	𦓮
 glqjr	𦔚
 glqja	𨺪
 glqki	𦓿
@@ -40960,6 +40960,7 @@ glrpo	𲬯
 glrro	𦔥
 glrro	𰭲
 glrti	䎱
+glrtu	𦓮
 glrwi	𦓪
 glscb	𱻴
 glsgi	䏻
@@ -44331,7 +44332,7 @@ hgvfu	𫷹
 hgvi	𢇤
 hgvi	𰾁
 hgvke	㡹
-hgvlk	𢈘
+hgvkl	𢈘
 hgvmi	𢈍
 hgvls	𭙸
 hgvwo	𨕁
@@ -70622,7 +70623,6 @@ ppbhv	𤒎
 ppbi	𤇾
 ppbi	𬊇
 ppbja	𤈤
-ppbjo	𤍧
 ppbje	𤯵
 ppbjc	𲬢
 ppbkl	𠣁
@@ -70643,6 +70643,7 @@ ppbsn	𬷷
 ppbsn	𮭖
 ppbss	𲬥
 ppbtu	𠙦
+ppbtu	𤍧
 ppbto	𮗵
 ppbvd	𠠜
 ppbvj	𢄋
@@ -73929,7 +73930,6 @@ qjgli	𦿤
 qjglw	𮑒
 qjgmf	𱟨
 qjgqi	𦿪
-qjgu	𨚢
 qjgxl	𱿊
 qjgya	𦬾
 qjgyi	𦽝
@@ -73958,7 +73958,6 @@ qjju	𦬥
 qjjvi	𦯎
 qjjvi	𭐢
 qjjyd	𮏻
-qjka	㣋
 qjkba	𦯉
 qjkbx	𧃎
 qjkdo	𫈆
@@ -74010,7 +74009,6 @@ qjntu	𦰍
 qjnvd	𦸄
 qjnwh	𦼹
 qjnxu	𦷞
-qjo	𠂀
 qjpfo	𮐀
 qjpmf	𦱘
 qjpsi	𦰒
@@ -74049,12 +74047,10 @@ qjtsu	𱾇
 qjtu	𠀪
 qjtvd	𠝐
 qju	𦫶
-qjvda	𠛜
 qjvdo	𦯐
 qjvhi	𧆀
 qjvi	䒘
 qjvke	𦯣
-qjvsu	𡌁
 qjvvj	𠮇
 qjvwo	𨕷
 qjwfu	䔀
@@ -77265,12 +77261,14 @@ rjcfj	𠄺
 rjcfo	𠗪
 rjccf	𫥍
 rjcgu	𨙷
+rjctg	𨚢
 rjcgm	𪞰
 rjchi	𨶄
 rjchd	𪞨
 rjchv	𭂓
 rjchr	𭂠
 rjchh	𭂡
+rjctk	㣋
 rjcka	𢒈
 rjckl	𰅉
 rjcgk	𰅑
@@ -77287,6 +77285,7 @@ rjcpo	𨴙
 rjcps	𬑽
 rjcrj	䜞
 rjclr	𭂚
+rjcts	𡌁
 rjcks	𡌒
 rjcsn	𩾺
 rjcss	𪞯
@@ -77294,6 +77293,7 @@ rjcws	𫡳
 rjcvt	𠛝
 rjcyt	𭂣
 rjcvd	㓝
+rjctv	𠛜
 rjcsv	𠜚
 rjcyv	𠝆
 rjcvi	𣲜
@@ -77488,6 +77488,7 @@ rjkrp	𠖺
 rjkrm	𠗅
 rjkbr	𠘦
 rjkrr	𭘀
+rjktu	𠂀
 rjktu	𪞖
 rjkvi	𠗯
 rjkvj	𭂝
@@ -106238,6 +106239,7 @@ chjvi	敦󠄀
 chjvi	敦󠄁
 chjvi	敦󠄂
 chkdo	鐍󠄀
+chki	酋󠄄
 chkxu	鍒󠄀
 chla	亨󠄀
 chla	亨󠄁
@@ -106388,6 +106390,7 @@ cjfkf	릪
 cjfkf	ᆵ
 cjfkf	ㄿ
 cjfi	並︀
+cjfi	並󠄃
 cjfi	르
 cjfkj	럷
 cjfkj	럽
@@ -106464,7 +106467,6 @@ cjgle	錥󠄀
 cjgpe	銃󠄀
 cjgpe	銃󠄁
 cjgpe	銃󠄂
-cjgu	邔︀
 cjgu	邔
 cjgwo	鏠󠄀
 cjgwo	鏠󠄁
@@ -107212,7 +107214,6 @@ ckgdo	鎋󠄂
 ckgdo	鎋󠄃
 ckge	𘨌
 ckggu	郷󠄀
-ckggu	郷󠄁
 ckgke	𗮹
 ckglg	𘕭
 ckgta	鐺󠄀
@@ -107274,6 +107275,7 @@ ckkfi	𘕠
 ckkfi	𘕹
 ckkfi	𘕻
 ckkfi	𘨄
+ckkgu	郷󠄁
 ckkgu	鄕󠄀
 ckkgu	鄕󠄁
 ckkgu	鄕󠄂
@@ -107492,6 +107494,9 @@ ckwo	鏈󠄁
 ckwo	鏈󠄂
 ckwo	鐹󠄀
 ckwo	鐹󠄁
+ckwqo	鈒󠄀
+ckwqo	鈒󠄁
+ckwqo	鈒󠄂
 ckwrj	𗑋
 ckwrj	𗑙
 ckwrj	𗭯
@@ -107875,6 +107880,7 @@ cmke	鉍󠄀
 cmkgi	麽󠄀
 cmkgi	麽󠄁
 cmkgi	麽󠄂
+cmkwq	𨳛󠄀
 cmkds	闈󠄀
 cmkds	闈󠄁
 cmkds	闈󠄂
@@ -108010,7 +108016,6 @@ cmwi	鋮󠄁
 cmwi	鋮󠄂
 cmwdj	闞󠄀
 cmwpe	𨴐󠄀
-cmwtu	𨳛󠄀
 cmwtu	𨳛󠄁
 cmxnc	闌󠄀
 cmxhr	䦨󠄀
@@ -108177,11 +108182,7 @@ cnygu	鄭󠄁
 cnygu	鄭󠄂
 cnygu	鄭󠄃
 cnyo	酋󠄀
-cnyo	酋󠄁
 cnyo	酋󠄂
-cnyo	酋󠄃
-cnyo	酋󠄄
-cnyo	酋󠄅
 co	𘠐
 co	
 co	
@@ -108260,8 +108261,6 @@ cqgla	鐄󠄂
 cqgta	錨󠄀
 cqgta	錨󠄁
 cqgta	錨󠄂
-cqgu	郱︀
-cqgu	郱󠄀
 cqgu	郱󠄁
 cqgu	郱
 cqhqo	鑊󠄀
@@ -108412,8 +108411,6 @@ cryda	鎂󠄀
 crye	並󠄀
 crye	並󠄁
 crye	並󠄂
-crye	並󠄃
-crye	並󠄄
 crye	並
 cryhi	鑼󠄀
 cscbi	𗅭
@@ -109291,9 +109288,6 @@ cwtti	𗓌
 cwttu	𘗣
 cwtti	𘗥
 cwttu	𘦭
-cwtu	鈒󠄀
-cwtu	鈒󠄁
-cwtu	鈒󠄂
 cwtu	𘱴
 cwtwi	𗒘
 cwvda	鋓󠄀
@@ -109378,12 +109372,9 @@ cyco	养󠄁
 cyco	养󠄂
 cyda	关󠄀
 cyda	关󠄁
-cyda	关󠄂
 cyda	釱󠄀
 cyda	𘱺
-cydmu	眷󠄀
 cydmu	眷󠄁
-cydmu	眷󠄂
 cydmu	眷󠄃
 cye	⻚
 cyfrk	銙󠄀
@@ -109398,6 +109389,7 @@ cyggo	銕󠄁
 cyggo	銕󠄂
 cygma	駦󠄀
 cygma	駦󠄁
+cygu	邔︀
 cyhdo	錡󠄀
 cyhri	𨩃󠄀
 cyhsi	䄅󠄀
@@ -109599,9 +109591,7 @@ dcwwi	윢
 dcxfa	뮫
 dcxfa	윧
 dcyda	咲󠄀
-dcyda	咲󠄁
 dcyda	咲󠄂
-dcyda	咲󠄃
 ddbdo	嚚󠄀
 ddbli	斝󠄀
 ddcwo	遻󠄀
@@ -110923,6 +110913,8 @@ dkwo	㗻󠄀
 dkwo	㗻󠄁
 dkwo	䢗󠄀
 dkwo	䢗󠄁
+dkwqo	吸󠄁
+dkwqo	吸󠄃
 dkwwi	몪
 dkwwi	믺
 dkwwi	옦
@@ -110972,6 +110964,8 @@ dldqo	𢿘󠄁
 dle	肙󠄀
 dlfdo	哃󠄀
 dlfu	哺󠄀
+dlfyd	咲󠄁
+dlfyd	咲󠄃
 dlgu	咕󠄀
 dli	叶󠄀
 dljru	吶󠄀
@@ -112080,9 +112074,7 @@ dwpvi	嚟󠄀
 dwsgu	哪󠄀
 dwtu	吸︀
 dwtu	吸󠄀
-dwtu	吸󠄁
 dwtu	吸󠄂
-dwtu	吸󠄃
 dwtu	吸
 dwvda	唎󠄀
 dwwna	唀󠄀
@@ -112568,7 +112560,6 @@ fdo	石󠄀
 fdo	石󠄁
 fdo	石󠄂
 fdo	ㆆ
-fdpfi	酉󠄀
 fdqo	娵󠄀
 fdsna	鴽󠄀
 fdwi	𦣽󠄀
@@ -112682,17 +112673,12 @@ fgrrj	嫋󠄁
 fgrrj	嫋󠄂
 fgsu	至󠄀
 fgxpe	厩󠄀
-fgxpe	厩󠄁
 fgxpe	厩󠄂
 fgxpe	厩󠄃
-fgxpe	厩󠄄
 fgxpe	厩󠄅
 fgxpe	厩󠄆
 fgxpe	厩󠄇
 fgxpe	厩󠄈
-fgxpe	厩󠄉
-fgxpe	厩󠄊
-fgxpe	厩󠄋
 fgxpe	厩󠄌
 fgxpe	厩󠄍
 fgya	𢆰󠄀
@@ -114044,7 +114030,6 @@ fjwo	迂󠄁
 fjwo	迂󠄂
 fjwo	迂󠄃
 fjxfa	ㅳ
-fka	士󠄀
 fka	媧󠄀
 fkbbi	𗄢
 fkbbi	𗡢
@@ -114351,6 +114336,11 @@ fkssi	嫁󠄀
 fkssi	嫁󠄁
 fkssi	嫁󠄂
 fktmg	娥󠄀
+fktpe	厩󠄁
+fktpe	厩󠄄
+fktpe	厩󠄉
+fktpe	厩󠄊
+fktpe	厩󠄋
 fktu	𘬆
 fkvi	厔󠄀
 fkvi	厡󠄀
@@ -114364,6 +114354,7 @@ fkwco	𗸤
 fkwke	姊󠄀
 fkwki	𗸡
 fkwki	𗸥
+fkwqo	㚫󠄀
 fkwti	𗸢
 fkwti	𗸣
 fkwtu	𘣣
@@ -114423,6 +114414,8 @@ flfcl	麗󠄂
 flfcl	麗󠄃
 flfcl	麗
 flfcl	𛄁
+flffi	丽︀
+flffi	丽󠄀
 flffi	殭󠄀
 flffi	丽
 flffj	𧢮
@@ -114439,6 +114432,7 @@ flfke	𗟠
 flfki	𗟡
 flfke	𗟢
 flfki	𘚕
+flflj	丽󠄁
 flflj	𘚖
 flflj	𘩍
 flfmg	残󠄀
@@ -114482,6 +114476,8 @@ fljlj	𗷘
 fljo	𘠮
 fljo	𘠯
 fljo	𘬜
+fljru	丙󠄁
+fljru	丙󠄃
 fljsa	𘥤
 fljti	𗍺
 fljtu	𘈦
@@ -114550,10 +114546,6 @@ fllga	姸󠄀
 fllga	姸󠄁
 fllga	姸󠄂
 flli	𘬘
-flljo	丽︀
-flljo	丽󠄀
-flljo	丽󠄁
-flljo	丽󠄂
 fllka	𘬎
 fllro	婻󠄀
 fllry	𫞔󠄀
@@ -114576,9 +114568,7 @@ flnbe	貫󠄂
 flnbe	貫󠄃
 flnbe	貫󠄄
 flne	丙󠄀
-flne	丙󠄁
 flne	丙󠄂
-flne	丙󠄃
 flne	丙󠄄
 flne	妠󠄀
 flne	妠󠄁
@@ -114944,6 +114934,7 @@ fpsdo	婤󠄁
 fpsi	妬󠄀
 fpska	𘬟
 fpsu	坙󠄀
+fpttu	丽󠄂
 fptu	妁󠄀
 fptu	妁󠄁
 fptu	妁󠄂
@@ -116313,8 +116304,8 @@ fwla	𘮇
 fwla	𘮉
 fwljo	ㆱ
 fwlle	婿󠄀
+fwmfi	厎󠄀
 fwmhr	婚󠄀
-fwmtu	厎󠄀
 fwna	奶󠄀
 fwne	𘬫
 fwnxa	𘬖
@@ -116379,7 +116370,6 @@ fwttu	𗀟
 fwttu	𘡳
 fwttu	𘣭
 fwtu	夨󠄀
-fwtu	㚫󠄀
 fwtu	㚫󠄁
 fwtu	ぉ
 fwtu	お
@@ -116619,6 +116609,8 @@ fykha	裃󠄀
 fykkc	裄󠄀
 fykll	褷󠄀
 fyktm	𧚄󠄀
+fykwq	衱󠄀
+fykwq	衱󠄁
 fykds	褘󠄀
 fykds	褘󠄁
 fykds	褘󠄂
@@ -116753,8 +116745,6 @@ fywo	迓󠄀
 fywo	迓󠄁
 fywo	迓󠄂
 fywo	迓󠄃
-fywtu	衱󠄀
-fywtu	衱󠄁
 fywtu	衱󠄂
 fywmt	袛󠄀
 fywmv	𧚓󠄀
@@ -116859,12 +116849,9 @@ gdwo	迨󠄂
 gdxu	枲󠄀
 gdyda	陾󠄀
 ge	丰󠄀
-ge	丰󠄁
 ge	丰󠄂
-ge	丰󠄃
 ge	𘡡
 ge	
-ge	
 gfcje	阨󠄀
 gfdki	隔󠄀
 gfdki	隔󠄁
@@ -117076,12 +117063,8 @@ ggxpb	䇒󠄁
 ggxdd	彄󠄀
 ggxdd	彄󠄁
 ggxdd	彄󠄂
-ggxpe	既︀
-ggxpe	既󠄀
 ggxpe	既󠄁
 ggxpe	既󠄂
-ggxpe	既󠄃
-ggxpe	既󠄄
 ggxpe	既󠄅
 ggxpe	既
 ggxpe	旣
@@ -117424,6 +117407,9 @@ gmka	騧󠄀
 gmkhs	騌󠄀
 gmkll	騈󠄀
 gmkmi	馲󠄀
+gmkwq	馺󠄀
+gmkwq	馺󠄁
+gmkwq	馺󠄂
 gmkti	駝󠄀
 gmldo	駉󠄀
 gmlfd	駧󠄀
@@ -117527,9 +117513,6 @@ gmwo	䧦
 gmwpe	駪󠄀
 gmwpa	𩢝󠄀
 gmwpa	𩢝󠄁
-gmwtu	馺󠄀
-gmwtu	馺󠄁
-gmwtu	馺󠄂
 gmxbi	駆󠄀
 gmxdd	驅󠄀
 gmxdd	驅󠄁
@@ -120355,7 +120338,6 @@ jjjmx	傯󠄂
 jjka	俢󠄀
 jjkji	伉󠄀
 jjkji	伉󠄁
-jjkji	伉󠄂
 jjku	段󠄀
 jjlbi	佼󠄀
 jjlbi	佼󠄁
@@ -120386,6 +120368,7 @@ jjnfi	儃󠄀
 jjnfi	儃󠄁
 jjnfi	儃󠄂
 jjnli	倅󠄀
+jjpe	伉󠄂
 jjqo	𠬝󠄀
 jjrhr	偺︀
 jjrhr	偺
@@ -120605,6 +120588,8 @@ jkwlj	𘟴
 jkwo	迒󠄀
 jkwo	迒󠄁
 jkwo	迒󠄂
+jkwqo	伋󠄀
+jkwqo	伋󠄁
 jkwtu	𘭐
 jkwtu	𘭒
 jkwwi	𗭤
@@ -121304,6 +121289,7 @@ jvi	タ
 jvi	𘯟
 jvi	
 jvji	市󠄀
+jvkdo	咎󠄃
 jvke	伹󠄀
 jvki	𘯣
 jvki	𘰙
@@ -121318,7 +121304,10 @@ jvlsk	僯󠄀
 jvlsk	僯󠄁
 jvlsk	僯󠄂
 jvmi	侎󠄀
+jvndo	咎󠄀
+jvndo	咎󠄁
 jvne	𘯡
+jvnhr	昝󠄀
 jvo	直󠄆
 jvo	𘭍
 jvqi	𭚘󠄀
@@ -121327,11 +121316,7 @@ jvrbb	螽󠄀
 jvrbb	螽󠄁
 jvrbb	螽󠄂
 jvrbb	螽󠄃
-jvrdo	咎󠄀
-jvrdo	咎󠄁
 jvrdo	咎󠄂
-jvrdo	咎󠄃
-jvrhr	昝󠄀
 jvrhr	昝󠄁
 jvrhr	昝󠄂
 jvrje	冬︀
@@ -121446,8 +121431,6 @@ jwrrp	㌣
 jwtne	似󠄀
 jwtne	似󠄁
 jwtne	似󠄂
-jwtu	伋󠄀
-jwtu	伋󠄁
 jwtu	伋󠄂
 jwtu	𘰝
 jwtu	𘰠
@@ -122261,6 +122244,11 @@ kbro	
 kbrtp	兠󠄀
 kbrtp	兠󠄁
 kbrtp	兠󠄂
+kbrpe	既︀
+kbrpe	既󠄀
+kbrpe	既󠄃
+kbrpe	既󠄄
+kbrpe	旣︀
 kbrqo	皈󠄀
 kbrrj	𗏉
 kbrrj	𗣛
@@ -122334,7 +122322,6 @@ kbtjj	卽
 kbtku	𣪘󠄀
 kbtki	𘳔
 kbtlj	𗬝
-kbtxp	旣︀
 kbtxp	旣󠄀
 kbtxp	旣󠄁
 kbtxp	旣󠄂
@@ -123602,6 +123589,8 @@ kkfbi	𗢘
 kkffi	𗢔
 kkfi	𘢇
 kkflj	𗺑
+kkfro	丵󠄀
+kkfro	丵󠄁
 kkfwi	𗢓
 kkhsi	徖󠄀
 kki	丯󠄀
@@ -123873,6 +123862,8 @@ kljca	㌋
 kljo	𘢊
 klkbi	𗁆
 klkcu	衎󠄀
+klkgu	郱︀
+klkgu	郱󠄀
 klkkl	劦󠄀
 klklg	幷󠄀
 klkkl	脅󠄀
@@ -124339,7 +124330,6 @@ ksgu	䣊󠄀
 ksgu	䣊󠄁
 kshi	雉󠄀
 kshvi	宯󠄀
-ksi	壬󠄀
 ksi	⽮
 ksi	𘰌
 ksjcu	待󠄀
@@ -124360,8 +124350,11 @@ ksjvi	敞󠄀
 ksjvi	敞󠄁
 ksjvi	敞󠄂
 ksjvi	敞󠄃
+kska	丰󠄁
+kska	丰󠄃
 kska	牛󠄀
 kska	𘢄
+kska	
 kskcu	鵆󠄀
 ksle	寈󠄀
 ksle	寈󠄁
@@ -124702,9 +124695,17 @@ kwpbs	舝󠄁
 kwpbs	舝󠄂
 kwqbi	𗃍
 kwqi	𗀼
+kwqo	及󠄁
+kwqo	及󠄃
 kwqrj	𗁡
 kwqro	𗃁
 kwqtu	𗁺
+kwqwo	﨤󠄀
+kwqwo	﨤󠄁
+kwqwo	﨤󠄂
+kwqwo	﨤󠄅
+kwqwo	﨤󠄆
+kwqwo	﨤󠄇
 kwrje	ど
 kwrje	ヷ
 kwsbi	𗁠
@@ -125252,6 +125253,8 @@ ldfi	𥄂󠄀
 ldfi	𥄂󠄁
 ldfi	𥄂󠄂
 ldfdj	鬪󠄀
+ldfla	真︀
+ldfla	真󠄂
 ldfyd	脵󠄀
 ldfyd	脵󠄁
 ldfyd	脵󠄂
@@ -125274,6 +125277,7 @@ ldkrb	鬮󠄃
 ldkrb	鬮󠄄
 ldkrb	鬮󠄅
 ldkrb	鬮󠄆
+ldkla	真󠄄
 ldksk	韓󠄀
 ldksk	韓󠄁
 ldksk	韓󠄂
@@ -125337,6 +125341,10 @@ ldwi	直󠄀
 ldwi	直󠄁
 ldwi	直󠄂
 ldwdj	鬫󠄀
+ldwla	真︁
+ldwla	真󠄁
+ldwla	真󠄅
+ldwla	真󠄇
 ldwla	真
 ldwmx	悳󠄀
 ldwmx	悳󠄁
@@ -125391,6 +125399,7 @@ lfna	㌬
 lfpgo	脛󠄀
 lfrje	ざ
 lfrmi	盙󠄀
+lfrye	並󠄄
 lfvji	肺󠄀
 lfvji	肺󠄁
 lfvji	肺󠄂
@@ -125401,6 +125410,7 @@ lfwo	逋󠄁
 lfwo	逋󠄂
 lfwpe	㌭
 lfwrp	㌫
+lfyda	关󠄂
 lga	⼲
 lga	𘠨
 lga	𘬃
@@ -126018,6 +126028,7 @@ lkwo	迁󠄂
 lkwo	遙󠄀
 lkwo	遙󠄁
 lkwo	遙󠄂
+lkwqo	䏜󠄀
 lkxkl	動󠄀
 lkxli	重󠄀
 lkxli	重󠄁
@@ -126237,6 +126248,7 @@ lnhjv	腹󠄁
 lnhjv	腹󠄂
 lnhka	膓󠄀
 lnhsi	膘󠄀
+lni	酋󠄅
 lnka	胗󠄀
 lnka	𘰴
 lnmfi	膕󠄀
@@ -126248,6 +126260,8 @@ lnrgi	脍󠄀
 lnro	胙󠄀
 lntqo	朎󠄂
 lnyda	胭󠄀
+lnyo	酋󠄁
+lnyo	酋󠄃
 lpa	肥󠄀
 lpbja	胸󠄀
 lpcfo	褜󠄀
@@ -126374,6 +126388,7 @@ lrbbo	𣎜︀
 lrbbo	𣎜
 lrcdo	膳󠄀
 lrce	脤󠄀
+lre	壬󠄀
 lrfmx	𢛳󠄀
 lrfmx	𢛳󠄁
 lrfmx	𢛳󠄂
@@ -126493,16 +126508,8 @@ lvkht	𫞓󠄃
 lvkht	𫞓󠄄
 lvkht	𫞓󠄅
 lvkht	𫞓󠄆
-lvla	真︀
-lvla	真︁
 lvla	真󠄀
-lvla	真󠄁
-lvla	真󠄂
 lvla	真󠄃
-lvla	真󠄄
-lvla	真󠄅
-lvla	真󠄆
-lvla	真󠄇
 lvla	真󠄈
 lvla	真󠄉
 lvla	真
@@ -126675,7 +126682,6 @@ lwpba	然󠄄
 lwpba	然󠄅
 lwrti	𗎈
 lwrti	𗎑
-lwtu	䏜󠄀
 lwtu	䏜󠄁
 lwvke	𗎇
 lwvti	𗎏
@@ -126758,6 +126764,8 @@ lxxka	膠󠄁
 lxxka	膠󠄂
 lxxli	臎󠄀
 lyda	𘰲
+lydmu	眷󠄀
+lydmu	眷󠄂
 lyfe	腓󠄀
 lyfe	腓󠄁
 lyfe	腓󠄂
@@ -127267,6 +127275,7 @@ mkwa	忙󠄃
 mkwo	遥󠄀
 mkwo	遥󠄁
 mkwo	遥󠄂
+mkwqo	忣󠄀
 mkya	惶󠄀
 mkyfu	怢󠄀
 mlbfu	悽󠄀
@@ -127756,6 +127765,7 @@ mva	忉󠄀
 mva	切
 mvca	𘭮
 mvdhi	䧺󠄀
+mvdfl	真󠄆
 mvdo	右󠄀
 mvdo	怊󠄀
 mvdo	㊨
@@ -127954,7 +127964,6 @@ mwo	爲󠄄
 mwo	𛄐
 mwpo	愀󠄀
 mwrje	慬󠄀
-mwtu	忣󠄀
 mwtu	忣󠄁
 mwtu	戍󠄀
 mwvda	悧󠄀
@@ -129218,6 +129227,9 @@ nkwne	싡
 nkwo	簻󠄀
 nkwo	簻󠄁
 nkwpe	篼󠄀
+nkwqo	笈󠄁
+nkwqo	笈󠄂
+nkwqo	笈󠄄
 nkwwi	솎
 nkwwi	싞
 nkxfa	솓
@@ -131130,10 +131142,7 @@ nwssi	豗󠄁
 nwssi	豗󠄂
 nwttu	𘰑
 nwtu	笈󠄀
-nwtu	笈󠄁
-nwtu	笈󠄂
 nwtu	笈󠄃
-nwtu	笈󠄄
 nwtu	笈󠄅
 nwtu	ㄖ
 nwtu	𘰐
@@ -131449,9 +131458,7 @@ nychr	醕󠄀
 nychr	醕󠄁
 nychr	醕󠄂
 nycji	配󠄀
-nycji	配󠄁
 nycji	配󠄂
-nycji	配󠄃
 nycji	配󠄄
 nycji	配󠄅
 nycji	配󠄆
@@ -131462,6 +131469,7 @@ nycje	䙴󠄃
 nycje	𮅒󠄀
 nycje	𮅒󠄁
 nycji	🈻
+nycsi	配󠄃
 nycwo	遷󠄀
 nycwo	遷󠄁
 nycwo	遷󠄂
@@ -131473,6 +131481,7 @@ nycwo	遷󠄇
 nycwo	遷󠄈
 nycwo	遷󠄉
 nycwo	遷󠄊
+nycyi	配󠄁
 nycyi	醿󠄀
 nycyf	釄󠄀
 nyda	矢󠄀
@@ -131560,13 +131569,14 @@ nynro	酢󠄁
 nynro	酢󠄂
 nynnr	醞󠄀
 nynfx	酴󠄀
+nyo	酉󠄀
 nyo	⾣
+nypfi	酌󠄁
+nypfi	酌󠄃
 nypkq	醙︀
 nypkq	醙
 nyptu	酌󠄀
-nyptu	酌󠄁
 nyptu	酌󠄂
-nyptu	酌󠄃
 nyqhr	醋󠄀
 nyqi	筭󠄀
 nyqi	筭󠄁
@@ -131855,9 +131865,7 @@ pjnli	焠󠄀
 pjnwh	凜
 pjo	丹︀
 pjo	丹󠄀
-pjo	丹󠄁
 pjo	丹󠄂
-pjo	丹󠄃
 pjo	丹
 pjo	𛂇
 pjpdp	皺󠄀
@@ -131875,6 +131883,7 @@ pjti	炛󠄀
 pjvyd	燠󠄀
 pjvyd	燠󠄁
 pjvyd	燠󠄂
+pka	丹󠄁
 pka	勿󠄀
 pka	𘱰
 pkce	𠣞︀
@@ -131958,6 +131967,7 @@ plfva	釁󠄆
 plhu	炉󠄀
 plhu	炉󠄁
 plhu	炉󠄂
+pli	丹󠄃
 pli	𘱱
 plldo	烱󠄀
 plne	㶧󠄀
@@ -132393,6 +132403,7 @@ pskjc	磚󠄀
 pskli	劯󠄀
 pskfl	碇󠄀
 psktm	硪󠄀
+pskwq	砐󠄀
 pskri	砭󠄀
 pskti	砣󠄀
 psku	毀󠄀
@@ -132578,7 +132589,6 @@ pswi	乭󠄀
 pswi	乭󠄁
 pswjc	燽󠄀
 pswjc	燽󠄁
-pswtu	砐󠄀
 pswtu	砐󠄁
 pswmt	砥󠄀
 pswmt	𛁼
@@ -134246,7 +134256,6 @@ qjnli	萃󠄄
 qjnnx	𦾱
 qjnro	莋󠄀
 qjnro	莋󠄁
-qjo	丼󠄀
 qjpe	㍄
 qjptu	莵󠄀
 qjptu	莵󠄁
@@ -134854,6 +134863,9 @@ qkwo	薖󠄁
 qkwo	𨗲󠄀
 qkwo	𨗲󠄁
 qkwo	蓮
+qkwqo	芨󠄀
+qkwqo	芨󠄁
+qkwqo	芨󠄂
 qkwrj	𗚧
 qkwwi	졲
 qkwwi	짂
@@ -137216,9 +137228,6 @@ qwtne	苡󠄁
 qwtne	苡󠄂
 qwtti	𗝋
 qwtti	𘜴
-qwtu	芨󠄀
-qwtu	芨󠄁
-qwtu	芨󠄂
 qwvda	莉󠄀
 qwvda	莉󠄁
 qwvda	莉󠄂
@@ -137867,6 +137876,7 @@ rjco	𛄍
 rjco	𛄎
 rjckr	𘈙
 rjcsk	冸󠄀
+rjctu	丼󠄀
 rjcwt	𗄁
 rjcwt	𗄔
 rjcwt	𘈛
@@ -138900,6 +138910,7 @@ rku	設󠄀
 rkvgt	譒󠄀
 rkvke	誼󠄀
 rkwo	謰󠄀
+rkwqo	訯󠄀
 rkxe	䛎󠄀
 rkxe	䛎󠄁
 rla	來
@@ -139906,7 +139917,6 @@ rwsro	睪󠄂
 rwssr	罫󠄀
 rwssu	罣󠄀
 rwsrt	歝󠄀
-rwtu	訯󠄀
 rwtya	罜󠄀
 rwvbi	𗡾
 rwvda	誗󠄀
@@ -140080,8 +140090,6 @@ ryrla	業󠄁
 ryrla	業󠄂
 ryrjm	懟󠄀
 ryrmi	盖󠄀
-ryro	丵󠄀
-ryro	丵󠄁
 ryro	丵󠄂
 ryrdq	叢󠄀
 ryrdq	叢󠄁
@@ -140339,6 +140347,7 @@ sdya	埕󠄀
 sdya	埕󠄁
 sdya	埕󠄂
 sdyda	堧󠄀
+se	主󠄃
 se	𛃝
 se	𛃞
 se	𘭝
@@ -140519,6 +140528,7 @@ shxxi	塌󠄀
 shxxi	塌󠄁
 shxxi	塌󠄂
 shygd	黤󠄀
+si	士󠄀
 si	廴󠄀
 si	廴󠄁
 si	廴󠄂
@@ -140657,6 +140667,7 @@ skwqc	𘟲
 skwi	⻙
 skwo	𡑟󠄀
 skwo	𡑟󠄁
+skwqo	圾󠄀
 skxe	坹󠄀
 skya	堭󠄀
 sla	⺹
@@ -140700,11 +140711,8 @@ slgxi	塕󠄀
 slhfj	覩󠄀
 slhfj	覩󠄁
 slhfj	覩󠄂
-slhgu	都︀
-slhgu	都󠄀
 slhgu	都󠄁
 slhgu	都󠄂
-slhgu	都󠄃
 slhgu	都
 slhgu	𛁬
 slhjv	教󠄀
@@ -140822,6 +140830,9 @@ slswo	逵󠄅
 slswo	逵󠄆
 slswo	逵󠄇
 sltpd	耈󠄀
+slthg	都︀
+slthg	都󠄀
+slthg	都󠄃
 slthr	耆󠄀
 slti	老︀
 slti	老󠄀
@@ -141425,6 +141436,9 @@ sskli	屴󠄀
 ssknl	豵󠄀
 ssktm	峨󠄀
 ssktm	峩󠄀
+sskwq	岋󠄀
+sskwq	岌󠄀
+sskwq	岌󠄁
 sskbs	嵂󠄀
 ssku	豛󠄀
 ssklv	巋󠄀
@@ -141656,10 +141670,7 @@ sswo	逐󠄁
 sswo	逐󠄂
 sswo	逐󠄃
 sswo	逐󠄄
-sswtu	岋󠄀
 sswtu	岋󠄁
-sswtu	岌󠄀
-sswtu	岌󠄁
 sswtu	岌󠄂
 sswrt	嵊󠄀
 sswu	塢󠄀
@@ -141810,7 +141821,6 @@ swrje	𘭠
 swsu	𡉵󠄀
 swsu	𡉵󠄁
 swtka	歍󠄀
-swtu	圾󠄀
 swtu	𘭟
 swtwi	𘭡
 swu	
@@ -142009,6 +142019,8 @@ sykkv	鰘󠄀
 sykql	龚󠄀
 sykql	龚󠄁
 sykfn	鯇󠄀
+sykwq	魥󠄀
+sykwq	魥󠄁
 syksi	𩶇󠄀
 syksi	𩶇󠄁
 sykti	鮀󠄀
@@ -142219,8 +142231,6 @@ sywhe	穌󠄁
 sywhe	穌󠄂
 sywpa	魸󠄀
 sywpo	鰍󠄀
-sywtu	魥󠄀
-sywtu	魥󠄁
 sywtu	魥󠄂
 sywvd	鯏󠄀
 syxnc	鰊󠄀
@@ -142666,6 +142676,7 @@ tkce	捙󠄀
 tkco	扭󠄀
 tke	丷󠄀
 tkffi	揎󠄀
+tkfi	为󠄀
 tkflv	掟󠄀
 tkfnb	擯󠄀
 tkfnb	擯󠄁
@@ -142714,7 +142725,6 @@ tksu	摚󠄀
 tkti	拕󠄀
 tktjj	揤
 tktka	欵󠄀
-tktu	为󠄀
 tktu	为󠄁
 tku	投󠄀
 tku	投󠄁
@@ -142738,6 +142748,8 @@ tkwo	撾󠄁
 tkwo	撾󠄂
 tkwpe	㨮︀
 tkwpe	㨮
+tkwqo	扱󠄁
+tkwqo	扱󠄃
 tkyfu	抶󠄀
 tla	扒󠄀
 tlbfu	捿󠄀
@@ -143204,9 +143216,7 @@ twsgu	挪󠄀
 twttu	𘤯
 twtu	之󠄀
 twtu	扱󠄀
-twtu	扱󠄁
 twtu	扱󠄂
-twtu	扱󠄃
 twvfi	拯󠄀
 twwi	𘱝
 twwke	㐧󠄀
@@ -143244,7 +143254,6 @@ txxkb	摺󠄃
 tya	主󠄀
 tya	主󠄁
 tya	主󠄂
-tya	主󠄃
 tya	抂󠄀
 tya	𘱔
 tyca	挟󠄀
@@ -143393,6 +143402,7 @@ vchdi	渟󠄀
 vchjv	潡󠄀
 vchri	湻󠄀
 vchri	澗󠄀
+vchri	酒󠄃
 vchvi	淳󠄀
 vchvi	淳󠄁
 vchvi	淳󠄂
@@ -144393,6 +144403,8 @@ vkwo	濄󠄁
 vkwo	䢐󠄀
 vkwo	䢐󠄁
 vkwo	漣
+vkwqo	汲󠄁
+vkwqo	汲󠄃
 vkxe	泬󠄀
 vkya	湟󠄀
 vkyca	㴱󠄀
@@ -145004,7 +145016,6 @@ vnyda	洇󠄀
 vnyo	酒󠄀
 vnyo	酒󠄁
 vnyo	酒󠄂
-vnyo	酒󠄃
 vo	㋙
 vo	㋴
 vo	コ
@@ -145688,9 +145699,7 @@ vwshr	潴󠄂
 vwshr	潴󠄃
 vwski	𗈓
 vwtu	汲󠄀
-vwtu	汲󠄁
 vwtu	汲󠄂
-vwtu	汲󠄃
 vwvbi	𗖲
 vwvbi	𗖹
 vwvbi	𗖻
@@ -146967,6 +146976,8 @@ wgkli	勒󠄂
 wgkli	勒
 wgkgm	𩍹󠄀
 wgkgm	𩍹󠄁
+wgkwq	靸󠄀
+wgkwq	靸󠄁
 wgksu	鞺󠄀
 wgktu	𘆁
 wgktu	𘆈
@@ -147083,8 +147094,6 @@ wgwke	𘆃
 wgwke	𘆆
 wgwke	𘆇
 wgwpo	鞦󠄀
-wgwtu	靸󠄀
-wgwtu	靸󠄁
 wgwtu	靸󠄂
 wgwwi	𘅿
 wgyfr	𩊓󠄀
@@ -148944,21 +148953,13 @@ wntrm	𫞯󠄀
 wnttu	𘯷
 wntu	及︀
 wntu	及󠄀
-wntu	及󠄁
 wntu	及󠄂
-wntu	及󠄃
 wntu	及󠄄
 wntu	及
 wntu	𘯶
 wntwo	﨤
-wntwo	﨤󠄀
-wntwo	﨤󠄁
-wntwo	﨤󠄂
 wntwo	﨤󠄃
 wntwo	﨤󠄄
-wntwo	﨤󠄅
-wntwo	﨤󠄆
-wntwo	﨤󠄇
 wnvpe	㌴
 wnwo	辸󠄀
 wnxa	𘲦
@@ -152879,6 +152880,8 @@ xkwo	槤󠄁
 xkwo	檛󠄀
 xkwo	檛󠄁
 xkwo	檛󠄂
+xkwqo	极󠄀
+xkwqo	极󠄁
 xkxe	柼󠄀
 xkxe	柼󠄁
 xkxe	柼󠄂
@@ -153587,8 +153590,6 @@ xwsgu	梛󠄂
 xwsgu	梛󠄃
 xwsi	梉󠄀
 xwsi	梉󠄁
-xwtu	极󠄀
-xwtu	极󠄁
 xwtu	极󠄂
 xwxu	桗󠄀
 xwya	枖󠄀
@@ -153674,6 +153675,7 @@ xxknw	翫󠄁
 xxknw	翫󠄂
 xxknw	翫󠄃
 xxknw	翫󠄄
+xxkqo	𦐅󠄀
 xxktu	梵󠄀
 xxktu	梵󠄁
 xxktu	梵󠄂
@@ -153728,7 +153730,6 @@ xxvo	柜󠄁
 xxvo	柜󠄂
 xxwlv	楚󠄀
 xxwlv	𛁛
-xxwtu	𦐅󠄀
 xxwtu	𦐅󠄁
 xxxhi	櫂󠄀
 xxxhi	櫂󠄁
@@ -154522,6 +154523,8 @@ ykwo	縺󠄂
 ykwo	𤧫󠄀
 ykwo	𤧫󠄁
 ykwo	璉
+ykwqo	級󠄁
+ykwqo	級󠄃
 ykya	瑝󠄀
 ykydo	轡󠄀
 yla	玐󠄀
@@ -155045,9 +155048,7 @@ ywrje	瑾󠄃
 ywrje	瑾󠄄
 ywrqo	瓪󠄀
 ywtu	級󠄀
-ywtu	級󠄁
 ywtu	級󠄂
-ywtu	級󠄃
 ywwi	𥾆︀
 ywwi	𥾆󠄀
 ywwi	𥾆󠄁
