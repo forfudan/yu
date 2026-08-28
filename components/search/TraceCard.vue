@@ -1,11 +1,13 @@
 <!--
-  LingCard.vue - 靈明反查卡片
+  TraceCard.vue - 畫出對應關係的反查卡片
 
   把字根編碼到單字編碼的對應關係直接畫出來：取用的字母拉一根箭頭到它佔的碼位，
-  沒取用的字根和字母留在原地變灰。卡片上不寫規則，字母的大碼/聲碼/韻碼掛在 tooltip 裏。
+  沒取用的字根和字母留在原地變灰。卡片上不寫規則，字母是大碼還是小碼掛在 tooltip 裏。
+  星陳的回頭碼要繞回首根、線會交叉，單獨畫成虛線。
 
   Modification History:
   - 2026-08-28: 初版。僅用於靈明，其餘方案仍走 Card.vue
+  - 2026-08-28: 適配星陳，由 LingCard.vue 更名而來。支持的方案見 share.ts 的 TRACE_RULES
 -->
 
 <script setup lang="ts">
@@ -15,12 +17,14 @@ import CtextLogo from "./assets/ctext.png";
 import HandianLogo from "./assets/handian.png";
 import CaptureLogo from "./assets/capture.svg";
 import { computed, ref, shallowRef, nextTick, onMounted, onBeforeUnmount, watch } from "vue";
-import { Chaifen, ZigenMap, MaPart, traceLingCode } from "./share";
+import { Chaifen, ZigenMap, MaPart, traceCode } from "./share";
 import { captureElement } from "./capture";
 
 const p = defineProps<{
     chaifen: Chaifen,
     zigenMap: ZigenMap,
+    /** 方案 id，決定取碼規則。取值見 share.ts 的 TRACE_RULES */
+    rule: string,
 }>()
 
 const cardRef = ref<HTMLElement | null>(null)
@@ -32,25 +36,11 @@ const shrinkCard = ref(false) // 用於臨時收縮卡片
 const uriText = computed(() => encodeURIComponent(p.chaifen.char))
 const unicode = computed(() => p.chaifen.char.codePointAt(0).toString(16).toUpperCase())
 
-const trace = computed(() => traceLingCode(p.chaifen.division, p.zigenMap))
+const trace = computed(() => traceCode(p.chaifen.division, p.zigenMap, p.rule))
 const trace_tw = computed(() =>
-    p.chaifen.division_tw ? traceLingCode(p.chaifen.division_tw, p.zigenMap) : null)
+    p.chaifen.division_tw ? traceCode(p.chaifen.division_tw, p.zigenMap, p.rule) : null)
 
-/** 字母在字根編碼裏的位置 → 它是大碼、聲碼還是韻碼 */
-function letterPart(ma: string, j: number): MaPart {
-    if (j === 0) return 'da'
-    if (j === ma.length - 1) return 'yun'
-    return 'sheng'
-}
-
-/** 反過來：某一部分在字根編碼裏排第幾個字母 */
-function partIndex(ma: string, part: MaPart) {
-    if (part === 'da') return 0
-    if (part === 'yun') return Math.max(ma.length - 1, 0)
-    return 1
-}
-
-const PART_NAME: Record<MaPart, string> = { da: '大碼', sheng: '聲碼', yun: '韻碼' }
+const PART_NAME: Record<MaPart, string> = { da: '大碼', sheng: '聲碼', yun: '韻碼', xiao: '小碼' }
 
 /** 每個字根拆成一列，字母逐個成格，好讓箭頭有落點 */
 const columns = computed(() => trace.value.roots.map((root, i) => ({
@@ -59,15 +49,14 @@ const columns = computed(() => trace.value.roots.map((root, i) => ({
     letters: [...(root.ma || '?')].map((ch, j) => ({
         // 字根編碼首字母大寫，同舊卡片
         text: j === 0 ? ch.toUpperCase() : ch,
-        part: letterPart(root.ma, j),
-        used: trace.value.slots.some(
-            s => s.rootIndex === i && partIndex(root.ma, s.part) === j),
+        part: root.parts[j] || 'da',
+        used: trace.value.slots.some(s => s.rootIndex === i && s.letterIndex === j),
     })),
 })))
 
 /** 碼位 k 的來源字母，鍵名同 letterKey */
-const slotSources = computed(() => trace.value.slots.map(
-    s => `${s.rootIndex}-${partIndex(trace.value.roots[s.rootIndex].ma, s.part)}`))
+const slotSources = computed(() =>
+    trace.value.slots.map(s => `${s.rootIndex}-${s.letterIndex}`))
 
 const letterKey = (i: number, j: number) => `${i}-${j}`
 
@@ -76,7 +65,7 @@ const letterKey = (i: number, j: number) => `${i}-${j}`
 
 const letterEls: Record<string, HTMLElement> = {}
 const slotEls: Record<number, HTMLElement> = {}
-const arrows = shallowRef<{ d: string, head: string }[]>([])
+const arrows = shallowRef<{ d: string, head: string, dashed: boolean }[]>([])
 const boxSize = shallowRef({ w: 0, h: 0 })
 
 function setLetterEl(i: number, j: number, el: HTMLElement | null) {
@@ -93,7 +82,7 @@ function measure() {
     if (!box.width) return
     boxSize.value = { w: box.width, h: box.height }
 
-    arrows.value = trace.value.slots.map((_, k) => {
+    arrows.value = trace.value.slots.map((slot, k) => {
         const from = letterEls[slotSources.value[k]]
         const to = slotEls[k]
         if (!from || !to) return null
@@ -108,6 +97,8 @@ function measure() {
             d: `M ${x1} ${y1} C ${x1} ${y1 + dy * 0.55}, ${x2} ${y2 - dy * 0.55}, ${x2} ${y2}`,
             // 曲線末端是垂直的，箭頭直接朝下畫即可
             head: `M ${x2 - 3.6} ${y2 - 4.4} L ${x2} ${y2 + 1} L ${x2 + 3.6} ${y2 - 4.4}`,
+            // 回頭碼繞回首根，必然同別的線交叉，畫成虛線區分開
+            dashed: !!slot.isHuitou,
         }
     }).filter(Boolean)
 }
@@ -221,7 +212,8 @@ async function captureCard() {
             <svg v-if="arrows.length" class="arrow-layer" :viewBox="`0 0 ${boxSize.w} ${boxSize.h}`"
                 :width="boxSize.w" :height="boxSize.h" fill="none" aria-hidden="true">
                 <g v-for="(arrow, k) in arrows" :key="k" :class="{ 'is-active': activeSlot === k }">
-                    <path :d="arrow.d" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+                    <path :d="arrow.d" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                        :stroke-dasharray="arrow.dashed ? '4 3.5' : undefined" />
                     <path :d="arrow.head" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
                         stroke-linejoin="round" />
                 </g>

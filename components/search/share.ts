@@ -8,6 +8,7 @@
  * - 2025-12-17 by 朱複丹: 增加靈明反查編碼邏輯，支持主根（兩碼字根）判斷和大碼大寫
  * - 2025-12-17 by 朱複丹: 重構參數系統，將 supplement, ming, wafel, ling 合併爲單一 rule 參數
  * - 2026-08-28: 抽出 traceLingCode，讓靈明編碼帶上逐碼位的出處，供反查卡片畫對應關係
+ * - 2026-08-28: 抽出 traceStarCode，星陳的回頭碼單獨標記，卡片上畫成虛線
  */
 
 import { withBase } from "vitepress";
@@ -35,8 +36,8 @@ export type ZigenMap = Map<string, Zigen>
 
 export type ChaifenMap = Map<string, Chaifen>
 
-/** 字根編碼的三個部分：大碼、聲碼、韻碼 */
-export type MaPart = 'da' | 'sheng' | 'yun'
+/** 字根編碼的組成部分。靈明分大、聲、韻，星陳一系只有大、小 */
+export type MaPart = 'da' | 'sheng' | 'yun' | 'xiao'
 
 /** 單字編碼裏的一個碼位，記錄它是從哪個字根的哪一部分取來的 */
 export interface CodeSlot {
@@ -44,13 +45,19 @@ export interface CodeSlot {
     letter: string
     /** 來源字根在拆分裏的位置，從 0 起算 */
     rootIndex: number
+    /** 取的是該字根編碼的第幾個字母，從 0 起算 */
+    letterIndex: number
     part: MaPart
+    /** 回頭碼：首根小碼後置到編碼末尾。星陳的一根字、兩根字會出現 */
+    isHuitou?: boolean
 }
 
 export interface RootTrace {
     char: string
     ma: string
-    /** 兩碼字根。靈明術語裏又叫小根 */
+    /** 每個字母各是哪一部分，長度同 ma */
+    parts: MaPart[]
+    /** 兩碼字根。靈明術語裏又叫小根。星陳無此概念，恆為 false */
     isZhugen: boolean
 }
 
@@ -71,8 +78,12 @@ export function traceLingCode(division: string, zigenMap: ZigenMap): CodeTrace {
 
     const roots: RootTrace[] = divisionArray.map(char => {
         const ma = zigenMap.get(char)?.ma || ''
+        // 兩碼字根是大、韻；三碼字根是大、聲、韻
+        const parts: MaPart[] = ma.length === 2
+            ? ['da', 'yun']
+            : [...ma].map((_, j) => j === 0 ? 'da' : j === ma.length - 1 ? 'yun' : 'sheng')
         // 判斷是否爲主根（兩碼字根）
-        return { char, ma, isZhugen: ma.length === 2 }
+        return { char, ma, parts, isZhugen: ma.length === 2 }
     })
 
     const slots: CodeSlot[] = []
@@ -80,12 +91,16 @@ export function traceLingCode(division: string, zigenMap: ZigenMap): CodeTrace {
     /** 取第 rootIndex 根的某一部分，推入碼位。大碼一律大寫 */
     const take = (rootIndex: number, part: MaPart) => {
         const ma = roots[rootIndex]?.ma || ''
-        const letter =
-            part === 'da' ? (ma[0] || '') :
-            part === 'sheng' ? (ma.length === 3 ? ma[1] : '') :
-            (ma[ma.length - 1] || '')
+        const letterIndex =
+            part === 'da' ? 0 :
+            part === 'sheng' ? (ma.length === 3 ? 1 : -1) :
+            ma.length - 1
+        const letter = letterIndex < 0 ? '' : (ma[letterIndex] || '')
         if (!letter) return
-        slots.push({ letter: part === 'da' ? letter.toUpperCase() : letter, rootIndex, part })
+        slots.push({
+            letter: part === 'da' ? letter.toUpperCase() : letter,
+            rootIndex, letterIndex, part,
+        })
     }
 
     const A = 0, B = 1, C = 2, Z = lenRoots - 1
@@ -129,6 +144,59 @@ export function traceLingCode(division: string, zigenMap: ZigenMap): CodeTrace {
     }
 
     return { code: slots.map(s => s.letter).join(''), roots, slots }
+}
+
+/**
+ * 星陳一系的取碼，逐碼位記下出處。
+ * 依次取各根大碼；不足四碼補末根小碼；仍不足且允許回頭時，補首根小碼（回頭碼）。
+ * 規則同 makeCodesFromDivision 的默認分支，後者現已轉調本函數，兩者不會分叉。
+ *
+ * @param supplement 是否取回頭碼。星陳、光華為真，卿雲等為假
+ */
+export function traceStarCode(division: string, zigenMap: ZigenMap, supplement: boolean): CodeTrace {
+    const divisionArray = [...division]
+
+    const roots: RootTrace[] = divisionArray.map(char => {
+        const ma = zigenMap.get(char)?.ma || ''
+        // 星陳的字根編碼就是大碼加小碼，沒有聲韻之分
+        const parts: MaPart[] = [...ma].map((_, j) => j === 0 ? 'da' : 'xiao')
+        return { char, ma, parts, isZhugen: false }
+    })
+
+    const slots: CodeSlot[] = []
+
+    /** 取第 rootIndex 根的第 letterIndex 個字母。取不到時同原邏輯，用 ? 佔位 */
+    const take = (rootIndex: number, letterIndex: number, isHuitou?: boolean) => {
+        const root = roots[rootIndex]
+        slots.push({
+            letter: root?.ma?.[letterIndex] || '?',
+            rootIndex,
+            letterIndex,
+            part: root?.parts[letterIndex] || (letterIndex === 0 ? 'da' : 'xiao'),
+            ...(isHuitou ? { isHuitou } : {}),
+        })
+    }
+
+    // 依次取一、二、三、末根大碼
+    divisionArray.forEach((_, i) => take(i, 0))
+
+    // 不足四碼時，補上末根小碼
+    if (slots.length < 4) take(divisionArray.length - 1, 1)
+
+    // 仍然不足四碼時，補上首根小碼。這一碼要繞回首根，卡片上畫成虛線
+    if (slots.length < 4 && supplement) take(0, 1, true)
+
+    return { code: slots.map(s => s.letter).join(''), roots, slots }
+}
+
+/** 反查卡片能畫出對應關係的方案。其餘方案仍用舊卡片 */
+export const TRACE_RULES = ['ling', 'star']
+
+/** 按方案取帶溯源的編碼。不支持的方案返回 null */
+export function traceCode(division: string, zigenMap: ZigenMap, rule: string): CodeTrace | null {
+    if (rule === 'ling') return traceLingCode(division, zigenMap)
+    if (rule === 'star') return traceStarCode(division, zigenMap, true)
+    return null
 }
 
 /** 根據拆分表生成編碼 */
@@ -223,22 +291,8 @@ export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, rule
 
 
     else {
-        // 依次取一、二、三、末根大碼
-        let result = divisionArray.map(zigen => zigenMap.get(zigen)?.ma?.[0] || '?')
-
-        // 不足四碼時，補上末根小碼。
-        if (result.length < 4) {
-            const lastZigen = divisionArray[divisionArray.length - 1]
-            result.push(zigenMap.get(lastZigen)?.ma?.[1] || '?')
-        }
-
-        // 仍然不足四碼時，補上首根小碼。
-        if ((result.length < 4) && supplement) {
-            const firstZigen = divisionArray[0]
-            result.push(zigenMap.get(firstZigen)?.ma?.[1] || '?')
-        }
-
-        return result.join('')
+        // 星陳一系。逐碼位的出處見 traceStarCode，反查卡片靠它畫箭頭
+        return traceStarCode(division, zigenMap, supplement).code
     }
 }
 
