@@ -15,6 +15,7 @@
 import { shallowRef, ref, watch } from "vue";
 import { watchThrottled, useUrlSearchParams } from "@vueuse/core";
 import Card from "./Card.vue";
+import LingCard from "./LingCard.vue";
 import { ChaifenMap, ZigenMap } from "./share";
 const p = defineProps<{
     chaifenMap: ChaifenMap,
@@ -80,7 +81,14 @@ const poet: string = poets[ind];
 <template>
     <div v-if="!localUserInput" class="opacity-40 text-center p-9 tracking-widest">{{ poet }}</div>
     <div class="flex justify-center flex-wrap my-8" v-else>
-        <Card v-for="zigen in searchZigens" :key="zigen" :chaifen="chaifenMap.get(zigen)" :zigenMap :rule="p.rule" />
+        <!-- 靈明用畫對應關係的新卡片，其餘方案照舊 -->
+        <template v-if="p.rule === 'ling'">
+            <LingCard v-for="zigen in searchZigens" :key="zigen" :chaifen="chaifenMap.get(zigen)" :zigenMap />
+        </template>
+        <template v-else>
+            <Card v-for="zigen in searchZigens" :key="zigen" :chaifen="chaifenMap.get(zigen)" :zigenMap
+                :rule="p.rule" />
+        </template>
     </div>
 
 </template>

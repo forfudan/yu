@@ -7,6 +7,7 @@
  * - 2025-08-13 by 朱複丹: 爲日月增加拆分查詢，添加 ming 參數支持
  * - 2025-12-17 by 朱複丹: 增加靈明反查編碼邏輯，支持主根（兩碼字根）判斷和大碼大寫
  * - 2025-12-17 by 朱複丹: 重構參數系統，將 supplement, ming, wafel, ling 合併爲單一 rule 參數
+ * - 2026-08-28: 抽出 traceLingCode，讓靈明編碼帶上逐碼位的出處，供反查卡片畫對應關係
  */
 
 import { withBase } from "vitepress";
@@ -34,6 +35,102 @@ export type ZigenMap = Map<string, Zigen>
 
 export type ChaifenMap = Map<string, Chaifen>
 
+/** 字根編碼的三個部分：大碼、聲碼、韻碼 */
+export type MaPart = 'da' | 'sheng' | 'yun'
+
+/** 單字編碼裏的一個碼位，記錄它是從哪個字根的哪一部分取來的 */
+export interface CodeSlot {
+    /** 已定好大小寫的字母 */
+    letter: string
+    /** 來源字根在拆分裏的位置，從 0 起算 */
+    rootIndex: number
+    part: MaPart
+}
+
+export interface RootTrace {
+    char: string
+    ma: string
+    /** 兩碼字根。靈明術語裏又叫小根 */
+    isZhugen: boolean
+}
+
+/** 帶溯源的編碼結果，供反查卡片畫字根到編碼的對應關係 */
+export interface CodeTrace {
+    code: string
+    roots: RootTrace[]
+    slots: CodeSlot[]
+}
+
+/**
+ * 靈明取碼，逐碼位記下出處。
+ * 規則同 makeCodesFromDivision 的 ling 分支，後者現已轉調本函數，兩者不會分叉。
+ */
+export function traceLingCode(division: string, zigenMap: ZigenMap): CodeTrace {
+    const divisionArray = [...division]
+    const lenRoots = divisionArray.length
+
+    const roots: RootTrace[] = divisionArray.map(char => {
+        const ma = zigenMap.get(char)?.ma || ''
+        // 判斷是否爲主根（兩碼字根）
+        return { char, ma, isZhugen: ma.length === 2 }
+    })
+
+    const slots: CodeSlot[] = []
+
+    /** 取第 rootIndex 根的某一部分，推入碼位。大碼一律大寫 */
+    const take = (rootIndex: number, part: MaPart) => {
+        const ma = roots[rootIndex]?.ma || ''
+        const letter =
+            part === 'da' ? (ma[0] || '') :
+            part === 'sheng' ? (ma.length === 3 ? ma[1] : '') :
+            (ma[ma.length - 1] || '')
+        if (!letter) return
+        slots.push({ letter: part === 'da' ? letter.toUpperCase() : letter, rootIndex, part })
+    }
+
+    const A = 0, B = 1, C = 2, Z = lenRoots - 1
+    const aIsZhugen = roots[A]?.isZhugen ?? false
+    const zIsZhugen = roots[Z]?.isZhugen ?? false
+
+    if (aIsZhugen) {
+        // 首根是主根
+        if (lenRoots === 1) {
+            // 1根: AdAy
+            take(A, 'da'); take(A, 'yun')
+        } else if (lenRoots === 2) {
+            // 2根: AdZd[Zs]Zy
+            take(A, 'da'); take(Z, 'da')
+            // 末根是主根: AdZdZy；末根不是主根: AdZdZsZy
+            if (!zIsZhugen) take(Z, 'sheng')
+            take(Z, 'yun')
+        } else if (lenRoots === 3) {
+            // 3根: AdBdZd[Zs][Zy]
+            take(A, 'da'); take(B, 'da'); take(Z, 'da')
+            // 末根是主根: AdBdZdZy；末根不是主根: AdBdZdZs
+            take(Z, zIsZhugen ? 'yun' : 'sheng')
+        } else {
+            // 4+根: AdBdCdZd
+            take(A, 'da'); take(B, 'da'); take(C, 'da'); take(Z, 'da')
+        }
+    } else {
+        // 首根不是主根
+        if (lenRoots === 1) {
+            // 1根: AdAsAy
+            take(A, 'da'); take(A, 'sheng'); take(A, 'yun')
+        } else if (lenRoots === 2) {
+            // 2根: AdAsZd[Zs][Zy]
+            take(A, 'da'); take(A, 'sheng'); take(Z, 'da')
+            // 末根是主根: AdAsZdZy；末根不是主根: AdAsZdZs
+            take(Z, zIsZhugen ? 'yun' : 'sheng')
+        } else {
+            // 3+根: AdAsBdZd
+            take(A, 'da'); take(A, 'sheng'); take(B, 'da'); take(Z, 'da')
+        }
+    }
+
+    return { code: slots.map(s => s.letter).join(''), roots, slots }
+}
+
 /** 根據拆分表生成編碼 */
 export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, rule: string) {
     const divisionArray = [...division]
@@ -46,88 +143,8 @@ export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, rule
     const moling = rule === 'moling'
 
     if (ling) {
-        // 靈明編碼邏輯
-        const lenRoots = divisionArray.length
-        const rootA = divisionArray[0]
-        const rootB = divisionArray[1] || ''
-        const rootC = divisionArray[2] || ''
-        const rootZ = divisionArray[lenRoots - 1]
-
-        // 提取各個字根的編碼
-        const getMa = (root: string) => zigenMap.get(root)?.ma || ''
-        const maA = getMa(rootA)
-        const maZ = getMa(rootZ)
-
-        // 判斷是否爲主根（兩碼字根）
-        const isZhugen = (ma: string) => ma.length === 2
-
-        // 提取大碼、聲碼、韻碼
-        const getDama = (ma: string) => ma[0] || ''
-        const getShengma = (ma: string) => ma.length === 3 ? ma[1] : ''
-        const getYunma = (ma: string) => ma[ma.length - 1] || ''
-
-        const aIsZhugen = isZhugen(maA)
-        const zIsZhugen = isZhugen(maZ)
-
-        const aD = getDama(maA)
-        const aS = getShengma(maA)
-        const aY = getYunma(maA)
-        const bD = getDama(getMa(rootB))
-        const cD = getDama(getMa(rootC))
-        const zD = getDama(maZ)
-        const zS = getShengma(maZ)
-        const zY = getYunma(maZ)
-
-        let code = ''
-
-        if (aIsZhugen) {
-            // 首根是主根
-            if (lenRoots === 1) {
-                // 1根: AdAy
-                code = aD.toUpperCase() + aY
-            } else if (lenRoots === 2) {
-                // 2根: AdZd[Zs]Zy
-                if (zIsZhugen) {
-                    // 末根是主根: AdZdZy
-                    code = aD.toUpperCase() + zD.toUpperCase() + zY
-                } else {
-                    // 末根不是主根: AdZdZsZy
-                    code = aD.toUpperCase() + zD.toUpperCase() + zS + zY
-                }
-            } else if (lenRoots === 3) {
-                // 3根: AdBdZd[Zs][Zy]
-                if (zIsZhugen) {
-                    // 末根是主根: AdBdZdZy
-                    code = aD.toUpperCase() + bD.toUpperCase() + zD.toUpperCase() + zY
-                } else {
-                    // 末根不是主根: AdBdZdZs
-                    code = aD.toUpperCase() + bD.toUpperCase() + zD.toUpperCase() + zS
-                }
-            } else {
-                // 4+根: AdBdCdZd
-                code = aD.toUpperCase() + bD.toUpperCase() + cD.toUpperCase() + zD.toUpperCase()
-            }
-        } else {
-            // 首根不是主根
-            if (lenRoots === 1) {
-                // 1根: AdAsAy
-                code = aD.toUpperCase() + aS + aY
-            } else if (lenRoots === 2) {
-                // 2根: AdAsZd[Zs][Zy]
-                if (zIsZhugen) {
-                    // 末根是主根: AdAsZdZy
-                    code = aD.toUpperCase() + aS + zD.toUpperCase() + zY
-                } else {
-                    // 末根不是主根: AdAsZdZs
-                    code = aD.toUpperCase() + aS + zD.toUpperCase() + zS
-                }
-            } else {
-                // 3+根: AdAsBdZd
-                code = aD.toUpperCase() + aS + bD.toUpperCase() + zD.toUpperCase()
-            }
-        }
-
-        return code
+        // 靈明編碼邏輯。逐碼位的出處見 traceLingCode，反查卡片靠它畫箭頭
+        return traceLingCode(division, zigenMap).code
     }
 
     else if (ming) {
