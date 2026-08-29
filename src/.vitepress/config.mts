@@ -22,7 +22,7 @@ export default defineConfig({
     },
   },
   head: [
-    ["link", { rel: "icon", href: "/logo_blue.png", type: "image/png" }],
+    ["link", { rel: "icon", href: "/img/logo_blue.png", type: "image/png" }],
     ["meta", { name: "cf-edge-cache", content: "no-transform" }],
     ["meta", { "http-equiv": "Cache-Control", content: "no-transform" }]
   ],
@@ -43,12 +43,12 @@ export default defineConfig({
     },
   },
   themeConfig: {
-    logo: "/logo_blue.png",
+    logo: "/img/logo_blue.png",
     nav: [
       { text: "介绍", link: "/docs/" },
       { text: "学习", link: "/learn/division" },
       { text: "练习", link: "/practice/root_ling" },
-      { text: "安装", link: "/docs/install" },
+      { text: "安装", link: "/docs/yume" },
       { text: "体验", link: "https://yume.shurufa.app" },
       { text: "跟打", link: "https://genda.shurufa.app" },
       { text: "测评", link: "https://ceping.shurufa.app" },
@@ -86,6 +86,14 @@ export default defineConfig({
             {
               text: "吉旦饼输入法",
               link: "/docs/wafel",
+            },
+            {
+              text: "YUME·宇梦输入系统",
+              link: "/docs/yume",
+            },
+            {
+              text: "各平台下载和安装",
+              link: "/docs/install",
             },
             {
               text: "常见问题",
@@ -485,12 +493,12 @@ export default defineConfig({
       title: "宇浩系列輸入法",
       description: "情繫漢字 溝通古今",
       themeConfig: {
-        logo: "/logo_purple.png",
+        logo: "/img/logo_purple.png",
         nav: [
           { text: "介紹", link: "/zht/docs/" },
           { text: "學習", link: "/zht/learn/division" },
           { text: "練習", link: "/zht/practice/root_ling" },
-          { text: "安裝", link: "/zht/docs/install" },
+          { text: "安裝", link: "/zht/docs/yume" },
           { text: "體驗", link: "https://yume.shurufa.app" },
           { text: "跟打", link: "https://genda.shurufa.app" },
           { text: "測評", link: "https://ceping.shurufa.app" },
@@ -528,6 +536,14 @@ export default defineConfig({
                 {
                   text: "吉旦餅輸入法",
                   link: "/zht/docs/wafel",
+                },
+                {
+                  text: "YUME·宇夢輸入系統",
+                  link: "/zht/docs/yume",
+                },
+                {
+                  text: "各平臺下載和安裝",
+                  link: "/zht/docs/install",
                 },
                 {
                   text: "常見問題",

@@ -168,7 +168,7 @@ const results = {
 
 以下視頻展示了使用宇浩單字全碼輸入**繁簡混合**版本的《洛神賦》的片段節選。可以看到，全文都沒有進行過選重。因此，宇浩輸入法特別適合任意文本空間下的盲打，以及古漢語輸入。
 
-<video src='/yuhao-example.mp4' loop controls muted/>
+<video src='https://raw.githubusercontent.com/forfudan/yuhao-assess-data/main/yu-website/figures/yuhao-example.mp4' loop controls muted/>
 <!--
 ## 靜重和動重
 

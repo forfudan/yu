@@ -264,8 +264,8 @@ Tab 鍵或 Ctrl + Shift + D （D 指單字）隱藏或打開全碼詞語。
 
 日月發佈正式版後的第五天，2025年7月14日，靈感浮出水面，我在老群中寫下：
 
-![QQ聊天記錄](/qq_history_20250714_01.jpeg)
-![QQ聊天記錄](/qq_history_20250714_02.jpeg)
+![QQ聊天記錄](https://raw.githubusercontent.com/forfudan/yuhao-assess-data/main/yu-website/figures/qq_history_20250714_01.jpeg)
+![QQ聊天記錄](https://raw.githubusercontent.com/forfudan/yuhao-assess-data/main/yu-website/figures/qq_history_20250714_02.jpeg)
 
 ### 純形碼新手適合學習靈明嗎
 

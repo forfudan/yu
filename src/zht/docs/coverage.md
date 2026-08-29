@@ -77,4 +77,4 @@
 - `kk`。
 - （Rime中）`/`引導：`ß = /ss`。
 
-![符號輸入](/fuhaoshuru.webp)
+![符號輸入](https://raw.githubusercontent.com/forfudan/yuhao-assess-data/main/yu-website/figures/fuhaoshuru.webp)

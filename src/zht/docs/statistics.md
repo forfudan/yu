@@ -484,7 +484,7 @@ $$N_{d} = \sum\limits_{i \in I, j \in J_i/\{1\}} p(w_{ij}).$$
 
 此項數據可以粗略地反映出設定某個速度當量的目標，會犧牲多少編碼空間。比如說，一個輸入法的**目標**速度當量爲 1.20，查表得到累計空間利用率 61.834%，這意味著有大約38%的編碼空間無法有效利用。
 
-![速度當量等效空間利用率](/equiv_space.png)
+![速度當量等效空間利用率](https://raw.githubusercontent.com/forfudan/yuhao-assess-data/main/yu-website/figures/equiv_space.png)
 
 ::: details 詳細表格
 

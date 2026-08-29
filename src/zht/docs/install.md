@@ -128,7 +128,7 @@
 
 反查字典中，繁簡體同權重，繁體字形包括大陸古籍、臺灣繁體、香港繁體、OpenCC 繁體四套字形標準。
 
-![反查](/fancha.webp)
+![反查](https://raw.githubusercontent.com/forfudan/yuhao-assess-data/main/yu-website/figures/fancha.webp)
 
 #### 使用 Z 鍵上屏歷史輸入
 
@@ -147,7 +147,7 @@
 - `kk`引導其他符號。
 - `/`引導所有符號。
 
-![符號輸入](/fuhaoshuru.webp)
+![符號輸入](https://raw.githubusercontent.com/forfudan/yuhao-assess-data/main/yu-website/figures/fuhaoshuru.webp)
 
 ### 精確造詞
 

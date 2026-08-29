@@ -7,8 +7,8 @@ hero:
   text: "情繫漢字 溝通古今"
   tagline: 全漢字字形輸入・繁簡通打・極低選重
   image:
-    dark: /logo_purple.png
-    light: /logo_blue.png
+    dark: /img/logo_purple.png
+    light: /img/logo_blue.png
     alt: yuhao-logo
   actions:
     - theme: alt
@@ -22,7 +22,7 @@ hero:
       link: /zht/practice/root_ling
     - theme: alt
       text: 安裝
-      link: /zht/docs/install
+      link: /zht/docs/yume
     - theme: alt
       text: 體驗
       link: https://yume.shurufa.app

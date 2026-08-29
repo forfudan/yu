@@ -75,6 +75,7 @@ paths_of_docs = [
     "/practice/root_sky.md",
     # 安裝
     "/docs/install.md",
+    "/docs/yume.md",  # YUME·宇夢輸入系統
     # 在線輸入
     "/pad/ling.md",
     "/pad/ling5.md",
@@ -104,7 +105,15 @@ for path_of_doc in paths_of_docs:
         or doc.startswith("<!-- verbatim -->")
     ):
         pat = re.compile(
-            r"((?:<!-- do not translate -->[\S\s]+?<!-- do not translate -->)|(?:<!-- verbatim -->[\S\s]+?<!-- verbatim -->)|(?:`.+?`)|(?:<.+?>)|(?:[^`<>]+)|(?:[\r\n]+)|(?:[<>]))+?"
+            # ``…`` 這一條**必須排在 `…` 之前**。
+            #
+            # 手冊裏寫反引號本身要用雙反引號裹起來（`` ` ``）。單反引號那一條先匹配
+            # 時，會從錯誤的位置配對：`` ` `` 被切成「`` `」和「``…」，後半截以反引
+            # 號開頭，於是被當成代碼**整段跳過不轉**，而落單的那個反引號被丟掉。
+            #
+            # 症狀是簡體頁上冒出半句繁體，以及表格單元格破損。實測受影響九處
+            # （yume.md:172, 232, 489, 544, 548, 552, 794, 802, 804）。
+            r"((?:<!-- do not translate -->[\S\s]+?<!-- do not translate -->)|(?:<!-- verbatim -->[\S\s]+?<!-- verbatim -->)|(?:``.+?``)|(?:`.+?`)|(?:<.+?>)|(?:[^`<>]+)|(?:[\r\n]+)|(?:[<>]))+?"
         )
         res = re.findall(pat, doc)
         res_zht = []
