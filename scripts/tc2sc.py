@@ -28,7 +28,6 @@ paths_of_docs = [
     "/docs/characteristics.md",
     "/docs/coverage.md",
     "/docs/faq.md",
-    "/docs/gene.md", # 已遷移至 /ime/gene，保留重定向頁面
     # 教程
     "/learn/index.md",
     "/learn/division.md",
@@ -76,15 +75,13 @@ paths_of_docs = [
     # 安裝
     "/docs/install.md",
     "/docs/yume.md",  # YUME·宇夢輸入系統
-    # 在線輸入
-    "/pad/ling.md",
-    "/pad/ling5.md",
-    "/pad/ming.md",
+    # 在線輸入那三頁（/pad/…）2026-08-30 刪了：體驗已經搬到 yume.shurufa.app，
+    # 站內那三份是沒人連的孤兒頁，還占着 ling／ling5／ming 三個短鏈名。
     # DIY
     "/diy/index.md",
     # 大觀
     "/ime/index.md",
-    "/ime/gene.md", # 系絡圖
+    "/ime/gene.md", # 系絡圖（`/docs/gene` 那個跳轉樁同日刪掉，舊鏈接不再有效）
     "/ime/sypy.md", # 宇浩詩韻拼音
     "/ime/sky.md", # 天碼
     "/ime/xuma.md", # 徐碼

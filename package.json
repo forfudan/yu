@@ -23,7 +23,7 @@
   "type": "module",
   "scripts": {
     "prebuild": "node scripts/prebuild.js",
-    "postbuild": "node scripts/verify-build.js",
+    "postbuild": "node scripts/short-links.js && node scripts/verify-build.js",
     "dev": "npm run prebuild && vitepress dev src",
     "dev:fast": "vitepress dev src",
     "build": "npm run prebuild && vitepress build src && npm run postbuild",
