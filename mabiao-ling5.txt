@@ -401,7 +401,7 @@ cpt	釣
 cqr	绀
 crf	鐶
 csd	𨭎
-csh	鑥
+csh	鍺
 csl	𬘬
 css	𬙊
 cvd	鉊
@@ -538,7 +538,7 @@ kcl	軲
 kql	謇
 kve	至少
 kvk	徂
-kwd	韍
+kwd	韝
 kxm	窀
 kxs	窵
 kyh	徛
@@ -35483,7 +35483,6 @@ fhksu	𰀔
 fhktu	𤩯
 fhku	㱾
 fhku	𭮩
-fhla	𡤼
 fhldp	𥀬
 fhldm	𥌅
 fhle	𡝭
@@ -44721,6 +44720,7 @@ hldqm	𢚣
 hldqp	𤊅
 hldqw	𬨲
 hldwi	𲈕
+hlfi	𡤼
 hlfi	𬼶
 hlfi	𰽧
 hlfna	𱉉
@@ -47320,7 +47320,6 @@ hvfyf	𧾓
 hvfgy	𧺦
 hvfdg	𭓏
 hvfrh	𡦌
-hvfhl	𧺖
 hvfhr	𧻙
 hvfi	𡤽
 hvfja	𧼊
@@ -47401,6 +47400,7 @@ hvhdo	𫩼
 hvhdi	𭒶
 hvhfi	䞡
 hvhfi	𧺐
+hvhfi	𧺖
 hvhkf	𧽉
 hvhhv	𡥦
 hvhhr	𡥨
