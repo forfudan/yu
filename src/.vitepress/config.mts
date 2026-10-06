@@ -204,6 +204,10 @@ export default defineConfig({
               text: "未央",
               link: "ime/weiyang",
             },
+            {
+              text: "瀟明",
+              link: "/ime/xiaoming",
+            },
           ],
         },
       ],
@@ -653,6 +657,10 @@ export default defineConfig({
                 {
                   text: "未央",
                   link: "/zht/ime/weiyang",
+                },
+                {
+                  text: "瀟明",
+                  link: "/zht/ime/xiaoming",
                 },
               ],
             },
