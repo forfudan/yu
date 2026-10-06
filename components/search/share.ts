@@ -209,6 +209,7 @@ export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, rule
     const wafel = rule === 'wafel'
     const ling = rule === 'ling'
     const moling = rule === 'moling'
+    const xiaoming = rule === 'xiaoming'
 
     if (ling) {
         // 靈明編碼邏輯。逐碼位的出處見 traceLingCode，反查卡片靠它畫箭頭
@@ -289,6 +290,30 @@ export function makeCodesFromDivision(division: string, zigenMap: ZigenMap, rule
         return result.join('')
     }
 
+    else if (xiaoming) {
+        let result: string[] = []
+
+        // A1S1
+        result.push(zigenMap.get(divisionArray[0])?.ma?.[0].toUpperCase() || '?')
+        result.push(zigenMap.get(divisionArray[0])?.ma?.[1] || '?')
+
+        if (divisionArray.length == 1) {            // A1S1 + B1
+            result.push(zigenMap.get(divisionArray[0])?.ma?.[2] || '?')
+        } else if (divisionArray.length == 2) {     // A1S1 + A2S2
+            result.push(zigenMap.get(divisionArray[1])?.ma?.[0].toUpperCase() || '?')
+            result.push(zigenMap.get(divisionArray[1])?.ma?.[1] || '?')
+        } else if (divisionArray.length == 3) {     // A1S1 + A2A3S3
+            result.push(zigenMap.get(divisionArray[1])?.ma?.[0].toUpperCase() || '?')
+            result.push(zigenMap.get(divisionArray[2])?.ma?.[0].toUpperCase() || '?')
+            result.push(zigenMap.get(divisionArray[2])?.ma?.[1] || '?')
+        } else {                                    // A1S1 + A2A3Az
+            result.push(zigenMap.get(divisionArray[1])?.ma?.[0].toUpperCase() || '?')
+            result.push(zigenMap.get(divisionArray[2])?.ma?.[0].toUpperCase() || '?')
+            result.push(zigenMap.get(divisionArray[divisionArray.length - 1])?.ma?.[0].toUpperCase() || '?')
+        }
+
+        return result.join('')
+    }
 
     else {
         // 星陳一系。逐碼位的出處見 traceStarCode，反查卡片靠它畫箭頭
