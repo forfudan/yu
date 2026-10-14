@@ -205,7 +205,7 @@ export default defineConfig({
               link: "ime/weiyang",
             },
             {
-              text: "瀟明",
+              text: "潇明",
               link: "/ime/xiaoming",
             },
           ],
