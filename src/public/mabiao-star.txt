@@ -11322,7 +11322,6 @@ buyy	탺
 buyy	틲
 buzs	𫵕
 buzy	𧦐
-bv	詡
 bvag	𡳥
 bvaj	𧦠
 bvdi	𫘪
@@ -17302,7 +17301,6 @@ dbyo	𰻷
 dbyq	𪺞
 dbyr	慇
 dbyy	𲂍
-dc	讷
 dcbj	轌
 dcbo	𰵠
 dcbo	𳌱
@@ -17427,6 +17425,7 @@ dcqt	𫍬
 dcqu	𨏨
 dcqu	𬴰
 dcqu	𮝚
+dcr	讷
 dcrb	𤖜
 dcrb	𤾨
 dcre	讷
@@ -22985,7 +22984,7 @@ eglj	𩘉
 egln	𪝁
 eglv	𠱧
 egmn	𱊛
-egn	仍
+egn	隽
 egna	仫
 egna	𠇓
 egne	仍
@@ -26366,7 +26365,6 @@ eyys	𗌐
 eyys	𗌛
 eyys	𗌥
 eyyy	𗌏
-ez	𠂇
 ezz	𠂇
 ezz	㋤
 ezz	ナ
@@ -37998,7 +37996,6 @@ guys	𗢃
 guyt	𧗐
 guyw	𧖾
 guzz	笊
-gv	箅
 gvdg	𥵔
 gvdi	𬇒
 gvdi	𳑎
@@ -49264,7 +49261,6 @@ ilzh	炡
 ilzm	𡧡
 ilzs	𬆅
 ilzx	䆙
-im	窎
 imah	𤎎
 imak	𱬉
 imam	𠘡
@@ -51311,8 +51307,8 @@ ixy	炼
 ixyi	乲
 ixyk	炼
 ixyk	𠗭
-iy	炀
 iyay	𭴴
+iyc	炀
 iyci	𘧞
 iycp	炀
 iycs	𡧝
@@ -72199,7 +72195,6 @@ moxi	𤵤
 moxi	𥞔
 moxj	𤸅
 moxq	𫷷
-mp	疵
 mpam	麜
 mpam	𥠲
 mpcb	𤻽
@@ -72252,6 +72247,7 @@ mplv	𱋯
 mpml	𰷿
 mpmp	𣦴
 mpmp	𧾭
+mpn	疵
 mpna	犘
 mpna	㾹
 mpna	𢉪
@@ -73989,7 +73985,6 @@ mywy	𫷮
 mywy	𲱟
 myxr	瘾
 myy	夭
-mz	豸
 mzz	豸
 mzz	⾘
 n	能
@@ -78568,6 +78563,7 @@ nuik	𤄔
 nuim	𣹨
 nuit	𱩟
 nuiw	㴥
+nuj	淖
 nuja	𢁔
 nujb	湞
 nujb	㵋
@@ -83132,7 +83128,6 @@ oxxx	奓
 oxxx	𥿫
 oxxx	𰽹
 oxyk	𮸀
-oy	锕
 oyay	𦀨
 oycp	钖
 oyff	邞
@@ -83598,7 +83593,7 @@ pcwo	𨣙
 pcwy	𦝫
 pcy	项
 pcyg	项
-pd	醴
+pd	踌
 pdam	𨅽
 pdaq	躝
 pdbg	𲞟
@@ -83659,7 +83654,6 @@ pdjv	躢
 pdjw	𤚝
 pdjy	𨠇
 pdjz	𧿧
-pdk	踌
 pdka	𨀤
 pdkc	踌
 pdkc	𨄔
@@ -84879,6 +84873,7 @@ pklx	𲕊
 pkly	𰠸
 pkly	𱌡
 pklz	𨀎
+pkm	酚
 pkmd	酚
 pkmd	㸮
 pkmd	𧿚
@@ -86463,7 +86458,6 @@ puyi	𪗚
 puzc	𪗢
 puzy	𮠜
 puzz	𬦦
-pv	蹶
 pvaj	𮛊
 pvaj	𰠪
 pvbb	𲃲
@@ -86507,6 +86501,7 @@ pvns	𨂽
 pvok	𮛳
 pvos	㹎
 pvos	𨄱
+pvq	蹶
 pvqx	蹶
 pvqx	𤛦
 pvqy	𨇤
@@ -86855,7 +86850,6 @@ pxxj	𲃡
 pxxx	跢
 pxxx	𮠨
 pxxy	𲆦
-py	邛
 pyaf	𢭤
 pyak	𢀜
 pyaq	𧋳
@@ -87732,7 +87726,6 @@ qcym	𱂧
 qcys	𗔗
 qcys	𘁤
 qcyy	𘁙
-qd	蛐
 qdag	𧒬
 qdam	蟂
 qdaq	𥽭
@@ -87841,6 +87834,7 @@ qdpc	𧈼
 qdpe	𥼹
 qdpm	𥸺
 qdpn	𥼏
+qdq	蛐
 qdqc	蛐
 qdqm	粬
 qdqs	𬧣
@@ -88288,7 +88282,6 @@ qfys	𗑴
 qfys	𗓕
 qfys	𗔶
 qfyu	𗑄
-qg	蟠
 qga	躱
 qgaj	蝍
 qgak	𮜵
@@ -88404,7 +88397,7 @@ qgoz	𧊉
 qgp	蜒
 qgpg	蜒
 qgpk	
-qgq	蟋
+qgq	蟠
 qgqa	𥽊
 qgqc	𫊨
 qgqk	䉿
@@ -93875,6 +93868,7 @@ rilo	𠌑
 rilw	恍
 rilw	䯑
 rilw	𠈑
+rin	恸
 rina	会
 rina	忶
 rinb	𩨭
@@ -94990,13 +94984,13 @@ rnxa	𱟃
 rnxc	𱞶
 rnxj	𱟌
 rnyi	𱞇
-ro	過
 roak	𢜗
 roak	𱅯
 robg	恞
 robg	𩨜
 robh	𠉲
 robx	𢗌
+roc	過
 roch	䢔
 rocj	𨑍
 rock	過
@@ -105791,7 +105785,6 @@ toxi	氓
 toxi	鈱
 toxi	𣱅
 toxj	鍲
-tp	銑
 tpam	𨫊
 tpcb	𳈕
 tpcj	鑡
@@ -106914,7 +106907,6 @@ txwo	𡚃
 txwr	鈂
 txxj	釸
 txxx	鉹
-ty	阚
 tyay	𰼴
 tyeo	𨯝
 tyew	䝐
@@ -106936,6 +106928,7 @@ tyjc	鐊
 tyjl	錒
 tyjl	𬮰
 tyku	𱲗
+tyl	阚
 tylt	阚
 tylt	𨬒
 tynf	𰼬
@@ -110714,7 +110707,6 @@ uoxx	𩮅
 uozq	𰢪
 uozs	㞫
 uozw	𱺻
-up	髭
 upam	㟳
 upam	𱬻
 upbj	𤔌
@@ -110771,6 +110763,7 @@ uplv	峼
 uplv	艁
 uplv	䯻
 uplv	𩇸
+upn	髭
 upnb	髭
 upnb	𨱲
 upnf	㹃
@@ -112780,7 +112773,6 @@ uxxx	𫯔
 uxxx	𫯘
 uxxx	𭖚
 uxxz	𤓵
-uy	崡
 uyac	𡢁
 uyak	𠧝
 uyak	𫤱
@@ -113896,7 +113888,6 @@ vfxn	𣨀
 vfxq	𠩼
 vfxq	𠪶
 vfyf	邳
-vg	磻
 vgag	𲴔
 vgaj	鯽
 vgaj	𥔝
@@ -115471,7 +115462,6 @@ voxl	𥔇
 voxq	𰧎
 voxx	䃎
 voyi	𲏶
-vp	硒
 vpal	𣦚
 vpam	𩺤
 vpao	𬩓
@@ -117133,7 +117123,6 @@ vxxx	𥒥
 vxxx	𩶰
 vxxx	𱍚
 vxyk	𬒃
-vy	乭
 vyaj	𮁂
 vyan	𗄠
 vyay	𪿣
@@ -120163,7 +120152,6 @@ wtwy	𦜂
 wtwy	𦜢
 wtwy	𲺆
 wtxu	𪯊
-wu	圜
 wuag	𦢄
 wuam	䐆
 wuba	𱄵
@@ -122710,7 +122698,6 @@ xowo	𧛍
 xoxi	𮕸
 xoxx	𦫓
 xoyf	𨛉
-xp	鳔
 xpcm	𧚳
 xpcn	䙅
 xpcn	𳎞
@@ -123280,7 +123267,6 @@ xsyi	𰳵
 xsym	角
 xsym	⻆
 xsyt	𧥃
-xt	鲂
 xtak	袶
 xtam	鲦
 xtao	𧜨
@@ -123920,7 +123906,6 @@ xxyf	郓
 xxyf	𨛅
 xxyi	𲏜
 xxyr	𲚻
-xy	衤
 xyak	𡖊
 xyay	𮖍
 xycb	𪥯
@@ -124058,7 +124043,6 @@ yays	𫖂
 yayu	𬪄
 yayv	𪽖
 yayw	𭉔
-yb	陉
 ybag	𨺩
 ybak	𢌤
 ybak	𲉏
@@ -124123,7 +124107,6 @@ ycrr	𨹌
 ycsk	𨹻
 ycsr	隭
 ycyc	𦏲
-yd	隗
 ydal	𘆊
 ydam	𨼝
 ydas	𘆄
@@ -126116,7 +126099,6 @@ ylyl	𗳿
 ylyr	귟
 ylyy	귞
 ylzf	阷
-ym	阡
 ymbd	𨻷
 ymbi	𫕏
 ymbj	𨽔
@@ -126140,6 +126122,7 @@ ymna	𫡧
 ymna	𮤾
 ymoc	䧪
 ymoc	𡣀
+ymq	阡
 ymqf	阡
 ymrw	𨺭
 yms	陲
@@ -126232,7 +126215,7 @@ ynwx	𣣖
 ynwy	𨹆
 ynwy	𪱝
 ynxq	𬯃
-yo	陝
+yo	陕
 yobg	䧅
 yobh	𫕇
 yocf	𨕗
@@ -126245,10 +126228,10 @@ yofk	𱀍
 yojl	陭
 yojr	𨹞
 yojr	𬯌
+yok	陝
 yokc	𡟨
 yokk	陝
 yooj	𱀱
-yoq	陕
 yoqb	𨺕
 yoqd	𨻚
 yoqh	𨺈
@@ -126428,7 +126411,6 @@ yrrr	𨹊
 yruc	隂
 yruf	𱂍
 yrus	𱀾
-ys	陑
 ysan	𗲲
 ysas	𗲆
 ysas	𗲖
@@ -126868,7 +126850,6 @@ ytuj	𨹓
 ytwh	𲉠
 ytwk	𮥅
 ytxq	𨼌
-yu	阽
 yuaa	𘆣
 yuaa	𘇂
 yuab	𘆟
